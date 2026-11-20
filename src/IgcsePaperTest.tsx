@@ -42,7 +42,27 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
 
   const [leftWidth, setLeftWidth] = useState(50); 
   const [isDragging, setIsDragging] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(() => typeof window !== 'undefined' ? window.innerWidth >= 768 : true);
+  const [isFullscreen, setIsFullscreen] = useState(() => typeof document !== 'undefined' ? !!document.fullscreenElement : false);
   const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const onResize = () => setIsDesktop(window.innerWidth >= 768);
+    const onFsChange = () => setIsFullscreen(!!document.fullscreenElement);
+    window.addEventListener('resize', onResize);
+    document.addEventListener('fullscreenchange', onFsChange);
+    return () => {
+      window.removeEventListener('resize', onResize);
+      document.removeEventListener('fullscreenchange', onFsChange);
+    };
+  }, []);
+
+  const handleSafeExit = () => {
+    if (!isReviewMode && !gradeResult) {
+      if (!window.confirm('Bạn đang làm bài thi IGCSE. Bạn có chắc muốn thoát ra ngoài không?')) return;
+    }
+    if (onBack) onBack();
+  };
 
   // Drawing on PDF
   const [drawMode, setDrawMode] = useState<'pen'|'eraser'|'line'|'rect'|'circle'|'triangle'|'text'|null>(null);
@@ -632,26 +652,26 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
   return (
     <div className="h-screen w-screen flex flex-col bg-white font-sans text-slate-900 overflow-hidden">
       {/* Header */}
-      <header className="h-14 w-full bg-white border-b border-slate-300 flex items-center justify-between px-4 sm:px-6 shrink-0 z-20 box-border">
-        <div className="flex items-center gap-3 sm:gap-4 overflow-hidden">
-          <button onClick={onBack} className="text-slate-600 hover:text-black font-bold text-sm transition-colors whitespace-nowrap">← Quay lại</button>
+      <header className="h-14 w-full bg-white border-b border-slate-300 flex items-center justify-between px-3 sm:px-6 shrink-0 z-20 box-border gap-2">
+        <div className="flex items-center gap-2.5 sm:gap-4 overflow-hidden min-w-0">
+          <button type="button" onClick={handleSafeExit} className="text-slate-600 hover:text-[#0a5482] font-bold text-sm transition-colors whitespace-nowrap cursor-pointer">← Quay lại</button>
           <div className="h-5 w-px bg-slate-300 hidden sm:block"></div>
-          <div className="truncate flex items-baseline gap-2">
-            <h1 className="font-bold text-black text-[15px] leading-tight truncate">{isReviewMode ? `[REVIEW] ${testData.title}` : testData.title}</h1>
+          <div className="truncate flex items-baseline gap-2 min-w-0">
+            <h1 className="font-bold text-slate-900 text-[14px] sm:text-[15px] leading-tight truncate">{isReviewMode ? `[REVIEW] ${testData.title}` : testData.title}</h1>
             {!isReviewMode && (
-              <span className="text-xs text-slate-400 whitespace-nowrap">({answeredCount}/{allSubQuestions.length} câu)</span>
+              <span className="text-xs text-slate-400 whitespace-nowrap hidden xs:inline">({answeredCount}/{allSubQuestions.length} câu)</span>
             )}
           </div>
         </div>
         {!gradeResult && !isReviewMode && (
-          <div className="flex items-center gap-2 sm:gap-4 shrink-0">
-             <div className={`font-bold flex items-center gap-2 px-3 py-1 rounded ${testData.content_json?.basicInfo?.category === 'exercise' ? 'text-[#0ea5e9] bg-[#0ea5e9]/10' : (timeLeft <= 300 ? 'text-red-600 bg-red-50 animate-pulse' : 'text-slate-600')}`}>
-               {testData.content_json?.basicInfo?.category === 'exercise' ? 'BÀI TẬP' : <><span>⏱️</span> <span className="hidden sm:inline font-mono tracking-widest">{formatTime(timeLeft)}</span></>}
+          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+             <div className={`font-bold flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-lg text-xs sm:text-sm ${testData.content_json?.basicInfo?.category === 'exercise' ? 'text-[#0a5482] bg-sky-50 border border-sky-200' : (timeLeft <= 300 ? 'text-rose-600 bg-rose-50 border border-rose-200 animate-pulse' : 'text-slate-700 bg-slate-100')}`}>
+               {testData.content_json?.basicInfo?.category === 'exercise' ? 'BÀI TẬP' : <><span>⏱️</span> <span className="font-mono tracking-wider tabular-nums">{formatTime(timeLeft)}</span></>}
              </div>
-             <button onClick={() => { if (!document.fullscreenElement) document.documentElement.requestFullscreen().catch(()=>{}); else document.exitFullscreen(); }} className="text-slate-500 hover:text-black transition-colors text-lg px-1" title="Toàn màn hình">
-               {document.fullscreenElement ? '🔲' : '⛶'}
+             <button type="button" onClick={() => { if (!document.fullscreenElement) document.documentElement.requestFullscreen().catch(()=>{}); else document.exitFullscreen(); }} className="hidden sm:inline-flex text-slate-500 hover:text-[#0a5482] transition-colors text-lg px-1 cursor-pointer" title={isFullscreen ? 'Thoát toàn màn hình' : 'Toàn màn hình'}>
+               {isFullscreen ? '🔲' : '⛶'}
              </button>
-             <button onClick={handleSubmit} disabled={isSubmitting} className="bg-[#1e88e5] hover:bg-blue-700 text-white font-bold text-sm px-6 py-1.5 rounded transition-colors active:scale-95 disabled:opacity-50 whitespace-nowrap">
+             <button type="button" onClick={handleSubmit} disabled={isSubmitting} className="bg-[#0a5482] hover:bg-[#084266] text-white font-bold text-xs sm:text-sm px-4 sm:px-6 py-1.5 rounded-lg transition-colors active:scale-95 disabled:opacity-50 whitespace-nowrap shadow-sm cursor-pointer">
                {isSubmitting ? 'Đang chấm...' : 'Nộp Bài'}
              </button>
           </div>
@@ -668,25 +688,25 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
       )}
 
       {/* Split Screen */}
-      <div ref={containerRef} className="flex-1 flex overflow-hidden w-full select-none bg-[#525659]">
+      <div ref={containerRef} className="flex-1 flex flex-col md:flex-row overflow-hidden w-full select-none bg-[#525659]">
         {/* Left: PDF Viewer with Drawing Canvas */}
-        <div style={{ width: `${leftWidth}%` }} className="h-full flex flex-col shrink-0 bg-[#525659]">
-          <div className="bg-[#323639] border-b border-[#202224] px-4 flex justify-between items-center h-10 shrink-0 shadow-sm">
-            <span className="font-bold text-slate-300 text-[11px] uppercase tracking-widest">📄 Đề thi Cambridge</span>
+        <div style={{ width: isDesktop ? `${leftWidth}%` : '100%' }} className="h-[46vh] md:h-full flex flex-col shrink-0 bg-[#525659] border-b md:border-b-0 border-slate-700">
+          <div className="bg-[#323639] border-b border-[#202224] px-3 sm:px-4 flex justify-between items-center gap-2 h-10 shrink-0 shadow-sm overflow-x-auto no-scrollbar">
+            <span className="font-bold text-slate-300 text-[11px] uppercase tracking-widest shrink-0">📄 Đề thi Cambridge</span>
             {!isReviewMode && (
-              <div className="flex items-center gap-1">
-                <button onClick={() => setDrawMode(prev => prev === 'pen' ? null : 'pen')} className={`px-2 py-1 rounded text-[11px] font-bold transition-all ${drawMode === 'pen' ? 'bg-[#1e88e5] text-white' : 'text-slate-400 hover:text-white'}`} title="Bút vẽ">✏️</button>
-                <button onClick={() => setDrawMode(prev => prev === 'line' ? null : 'line')} className={`px-2 py-1 rounded text-[11px] font-bold transition-all ${drawMode === 'line' ? 'bg-[#1e88e5] text-white' : 'text-slate-400 hover:text-white'}`} title="Đường thẳng">📏</button>
-                <button onClick={() => setDrawMode(prev => prev === 'rect' ? null : 'rect')} className={`px-2 py-1 rounded text-[11px] font-bold transition-all ${drawMode === 'rect' ? 'bg-[#1e88e5] text-white' : 'text-slate-400 hover:text-white'}`} title="Hình chữ nhật">▬</button>
-                <button onClick={() => setDrawMode(prev => prev === 'circle' ? null : 'circle')} className={`px-2 py-1 rounded text-[11px] font-bold transition-all ${drawMode === 'circle' ? 'bg-[#1e88e5] text-white' : 'text-slate-400 hover:text-white'}`} title="Hình elip">⬭</button>
-                <button onClick={() => setDrawMode(prev => prev === 'triangle' ? null : 'triangle')} className={`px-2 py-1 rounded text-[11px] font-bold transition-all ${drawMode === 'triangle' ? 'bg-[#1e88e5] text-white' : 'text-slate-400 hover:text-white'}`} title="Tam giác">△</button>
-                <button onClick={() => setDrawMode(prev => prev === 'text' ? null : 'text')} className={`px-2 py-1 rounded text-[11px] font-bold transition-all ${drawMode === 'text' ? 'bg-[#1e88e5] text-white' : 'text-slate-400 hover:text-white'}`} title="Chữ">T</button>
+              <div className="flex items-center gap-1 shrink-0">
+                <button onClick={() => setDrawMode(prev => prev === 'pen' ? null : 'pen')} className={`px-2 py-1 rounded text-[11px] font-bold transition-all ${drawMode === 'pen' ? 'bg-[#0a5482] text-white' : 'text-slate-400 hover:text-white'}`} title="Bút vẽ">✏️</button>
+                <button onClick={() => setDrawMode(prev => prev === 'line' ? null : 'line')} className={`px-2 py-1 rounded text-[11px] font-bold transition-all ${drawMode === 'line' ? 'bg-[#0a5482] text-white' : 'text-slate-400 hover:text-white'}`} title="Đường thẳng">📏</button>
+                <button onClick={() => setDrawMode(prev => prev === 'rect' ? null : 'rect')} className={`px-2 py-1 rounded text-[11px] font-bold transition-all ${drawMode === 'rect' ? 'bg-[#0a5482] text-white' : 'text-slate-400 hover:text-white'}`} title="Hình chữ nhật">▬</button>
+                <button onClick={() => setDrawMode(prev => prev === 'circle' ? null : 'circle')} className={`px-2 py-1 rounded text-[11px] font-bold transition-all ${drawMode === 'circle' ? 'bg-[#0a5482] text-white' : 'text-slate-400 hover:text-white'}`} title="Hình elip">⬭</button>
+                <button onClick={() => setDrawMode(prev => prev === 'triangle' ? null : 'triangle')} className={`px-2 py-1 rounded text-[11px] font-bold transition-all ${drawMode === 'triangle' ? 'bg-[#0a5482] text-white' : 'text-slate-400 hover:text-white'}`} title="Tam giác">△</button>
+                <button onClick={() => setDrawMode(prev => prev === 'text' ? null : 'text')} className={`px-2 py-1 rounded text-[11px] font-bold transition-all ${drawMode === 'text' ? 'bg-[#0a5482] text-white' : 'text-slate-400 hover:text-white'}`} title="Chữ">T</button>
                 <button onClick={() => setDrawMode(prev => prev === 'eraser' ? null : 'eraser')} className={`px-2 py-1 rounded text-[11px] font-bold transition-all ${drawMode === 'eraser' ? 'bg-orange-500 text-white' : 'text-slate-400 hover:text-white'}`} title="Tẩy">🧹</button>
                 {drawMode && (
                   <>
                     <div className="w-px h-4 bg-slate-600 mx-1"></div>
-                    {['#ff3333','#1e88e5','#22c55e','#f59e0b','#ffffff'].map(c => (
-                      <button key={c} onClick={() => setPenColor(c)} className={`w-5 h-5 rounded-full border-2 transition-transform ${penColor === c ? 'border-white scale-110' : 'border-slate-600'}`} style={{ backgroundColor: c }} />
+                    {['#ff3333','#2ab4e8','#22c55e','#f59e0b','#ffffff'].map(c => (
+                      <button key={c} onClick={() => setPenColor(c)} className={`w-5 h-5 rounded-full border-2 transition-transform shrink-0 ${penColor === c ? 'border-white scale-110' : 'border-slate-600'}`} style={{ backgroundColor: c }} />
                     ))}
                     <div className="w-px h-4 bg-slate-600 mx-1"></div>
                     <button onClick={() => { const cv = drawCanvasRef.current; if (cv) { const ctx = cv.getContext('2d'); ctx?.clearRect(0,0,cv.width,cv.height); } }} className="px-2 py-1 rounded text-[11px] text-slate-400 hover:text-red-400 font-bold" title="Xóa tất cả">🗑️</button>
@@ -781,13 +801,13 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
           </div>
         </div>
 
-        {/* Drag Handle */}
-        <div onMouseDown={() => setIsDragging(true)} onTouchStart={() => setIsDragging(true)} className={`w-[6px] h-full bg-[#202224] hover:bg-[#1e88e5] cursor-col-resize flex items-center justify-center shrink-0 z-10 transition-colors ${isDragging ? 'bg-[#1e88e5]' : ''}`}>
+        {/* Drag Handle (Desktop only) */}
+        <div onMouseDown={() => setIsDragging(true)} onTouchStart={() => setIsDragging(true)} className={`hidden md:flex w-[6px] h-full bg-[#202224] hover:bg-[#2ab4e8] cursor-col-resize items-center justify-center shrink-0 z-10 transition-colors ${isDragging ? 'bg-[#2ab4e8]' : ''}`}>
           <div className="flex flex-col gap-1"><div className="w-[2px] h-[2px] bg-slate-500"></div><div className="w-[2px] h-[2px] bg-slate-500"></div><div className="w-[2px] h-[2px] bg-slate-500"></div></div>
         </div>
 
         {/* Right: Answer Sheet */}
-        <div style={{ width: `calc(${100 - leftWidth}% - 6px)` }} className="h-full flex flex-col shrink-0 bg-[#f8fafc]">
+        <div style={{ width: isDesktop ? `calc(${100 - leftWidth}% - 6px)` : '100%' }} className="flex-1 md:flex-none md:h-full min-h-0 flex flex-col shrink-0 bg-[#f8fafc]">
           <div className="bg-[#323639] border-b border-[#202224] px-6 flex justify-between items-center h-10 shrink-0 shadow-sm">
             <span className="font-bold text-slate-300 text-[11px] uppercase tracking-widest flex items-center gap-2">
               {gradeResult ? <><span>✅</span> Kết quả chấm điểm IGCSE</> : <><span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> Answer Sheet (Phiếu trả lời)</>}
@@ -831,15 +851,15 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
           <div onScroll={handleContainerScroll} className={`flex-1 overflow-y-auto p-4 sm:p-8 ${isDragging ? 'pointer-events-none' : ''} custom-scrollbar`}>
             {/* Score Summary */}
             {gradeResult && (
-                <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-6 mb-8 text-center">
-                    <h2 className="text-2xl font-black text-slate-800 mb-2">Total Score</h2>
-                    <div className="text-5xl font-black text-[#1e88e5] mb-4">
+                <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 mb-8 text-center">
+                    <h2 className="text-xl font-black text-slate-800 mb-2">Total Score</h2>
+                    <div className="text-5xl font-black text-[#0a5482] mb-4 tabular-nums">
                         {gradeResult.total_student_score} <span className="text-2xl text-slate-400">/ {gradeResult.total_max_score}</span>
                     </div>
                     <div className="w-full bg-slate-200 rounded-full h-3 mb-4">
-                      <div className="bg-gradient-to-r from-[#1e88e5] to-emerald-400 h-3 rounded-full transition-all" style={{ width: `${Math.min(100, (gradeResult.total_student_score / gradeResult.total_max_score) * 100)}%` }}></div>
+                      <div className="bg-gradient-to-r from-[#0a5482] via-[#2ab4e8] to-emerald-400 h-3 rounded-full transition-all" style={{ width: `${Math.min(100, (gradeResult.total_student_score / gradeResult.total_max_score) * 100)}%` }}></div>
                     </div>
-                    <p className="text-[14px] text-slate-600 bg-slate-50 p-4 rounded-lg italic text-left">{gradeResult.general_feedback}</p>
+                    <p className="text-[14px] text-slate-600 bg-slate-50 p-4 rounded-xl italic text-left">{gradeResult.general_feedback}</p>
                 </div>
             )}
 

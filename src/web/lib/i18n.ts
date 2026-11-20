@@ -239,6 +239,13 @@ export const translations: Record<'vi' | 'en', Record<string, string>> = {
     'Contact us': 'Contact Mr. Tony',
     'Openning Class': '1-on-1 Tutoring',
     'Study at TonyEnglish': 'Tutoring with Mr. Tony',
+    'Lastest News': 'Latest News',
+    'Lastest news': 'Latest News',
+    'Words In The news': 'Words in the News',
+    'Look up dictionary': 'Look up dictionary',
+    'TonyEnglish.vn search': 'Search TonyEnglish.vn',
+    'Google translate': 'Google Translate',
+    'Other learning materials': 'Other Learning Materials',
     'Thank you for contacting us. We will respond to you as soon as possible.': 'Thank you for reaching out. Mr. Tony will respond as soon as possible.',
     'We will contact you soon about the Time-table and Avaibility of The course.': 'Mr. Tony will contact you soon regarding suitable tutoring schedules.',
     'Please feel free to contact us at anytime': 'Please feel free to contact Mr. Tony directly at any time'

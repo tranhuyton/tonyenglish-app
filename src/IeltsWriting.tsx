@@ -74,8 +74,24 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
 
   // Resize Left/Right Column logic
   const [leftWidth, setLeftWidth] = useState(50);
+  const [isDesktop, setIsDesktop] = useState(() => typeof window !== 'undefined' ? window.innerWidth >= 768 : true);
+  const [editorFontSize, setEditorFontSize] = useState<'S' | 'M' | 'L'>('M');
   const containerRef = useRef<HTMLElement>(null);
   const isDragging = useRef(false);
+
+  useEffect(() => {
+    const onResize = () => setIsDesktop(window.innerWidth >= 768);
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, []);
+
+  const handleSafeExit = () => {
+    const hasDraft = Object.values(answers).some((v) => String(v || '').trim().length > 0);
+    if (!isSubmitted && hasDraft) {
+      if (!window.confirm('Bạn đang có bài viết chưa nộp. Bạn có chắc muốn thoát không?')) return;
+    }
+    if (onBack) onBack();
+  };
 
   const startDrag = () => { 
       isDragging.current = true; 
@@ -252,56 +268,63 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
           .format-passage br { display: block; content: ""; margin-bottom: 0.25rem; }
       `}</style>
 
-      {/* HEADER MÀU ĐEN BRUTALIST */}
-      <header className="h-[46px] bg-[#222222] text-white flex justify-between items-center px-4 shrink-0 select-none z-20 border-b border-slate-700 relative">
-        <div className="flex items-center gap-2">
+      {/* HEADER */}
+      <header className="h-[52px] bg-[#1e293b] text-white flex justify-between items-center gap-3 px-4 shrink-0 select-none z-20 border-b border-slate-700">
+        <div className="flex items-center gap-2 min-w-0 flex-1">
           <UserIcon />
-          <span className="font-bold text-[14px] truncate max-w-[200px] md:max-w-xs text-white">{basicInfo.title}</span>
+          <span className="font-bold text-[14px] truncate text-white">{basicInfo.title}</span>
         </div>
         
-        <div className={`absolute left-1/2 -translate-x-1/2 font-bold text-[15px] tracking-widest ${timeLeft <= 300 ? 'text-red-500' : 'text-white'}`}>
+        <div className={`font-bold text-[14px] sm:text-[15px] tracking-wider shrink-0 tabular-nums px-3 py-1 rounded-lg bg-white/10 ${timeLeft <= 300 && !isSubmitted ? 'text-rose-400 animate-pulse' : 'text-white'}`}>
            {isSubmitted ? 'TEST FINISHED' : formatTime(timeLeft)}
         </div>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center justify-end gap-3 shrink-0 flex-1">
            {isSubmitted ? (
-              <button onClick={onBack} className="text-[13px] font-bold border border-white px-3 py-1 rounded-none hover:bg-white/10 transition text-white">Return to Home</button>
+              <button type="button" onClick={onBack} className="text-[13px] font-bold bg-[#2ab4e8] hover:bg-[#1fa0d4] text-white px-4 py-1.5 rounded-lg transition cursor-pointer">
+                Quay lại Góc Học Viên
+              </button>
            ) : (
-              <div className="flex items-center gap-5">
-                 <button onClick={onBack} className="hover:text-white text-slate-300 transition text-[13px] font-bold tracking-wide">Exit</button>
-                 <button className="hover:text-white text-slate-300 transition" title="Settings">
-                   <SettingsIcon />
-                 </button>
-              </div>
+              <button type="button" onClick={handleSafeExit} className="text-[13px] font-bold px-3.5 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-slate-100 border border-white/15 transition cursor-pointer">
+                Thoát
+              </button>
            )}
         </div>
       </header>
 
       {isGrading && (
         <div className="flex-1 flex flex-col items-center justify-center bg-white/95 z-50 absolute inset-0 pt-10">
-          <div className="relative flex items-center justify-center w-32 h-32 mb-6">
-             <svg className="absolute inset-0 w-full h-full animate-spin text-black" viewBox="0 0 100 100">
+          <div className="relative flex items-center justify-center w-28 h-28 mb-6">
+             <svg className="absolute inset-0 w-full h-full animate-spin text-[#0a5482]" viewBox="0 0 100 100">
                <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" strokeWidth="8" strokeDasharray="200" strokeLinecap="round" />
              </svg>
-             <span className="font-bold text-xl text-black">AI</span>
+             <span className="font-black text-xl text-[#0a5482]">AI</span>
           </div>
-          <h2 className="text-xl font-bold text-black mb-2">Grading in Progress</h2>
-          <p className="text-slate-600 text-sm font-medium">Please wait while the AI examiner analyzes your essay...</p>
+          <h2 className="text-xl font-black text-slate-800 mb-2">Đang chấm điểm IELTS Writing...</h2>
+          <p className="text-slate-500 text-sm font-medium">Vui lòng đợi trong giây lát để giám khảo AI phân tích bài viết của bạn.</p>
         </div>
       )}
 
-      {!isSubmitted && !isGrading && currentTask && (
+      {!isSubmitted && !isGrading && currentTask && (() => {
+        const currentWordCount = getWordCount(answers[currentTask.id]);
+        const minTargetWords = currentTaskIndex === 0 && allQuestions.length > 1 ? 150 : 250;
+        const meetsTarget = currentWordCount >= minTargetWords;
+        const fontSizeClass = editorFontSize === 'S' ? 'text-[14px]' : editorFontSize === 'L' ? 'text-[18px]' : 'text-[16px]';
+        return (
         <div className="flex-1 flex flex-col overflow-hidden bg-[#eeeeee]">
 
-          <main className="flex-1 flex flex-col md:flex-row overflow-hidden relative" ref={containerRef as any}>
+          <main className="flex-1 flex flex-col md:flex-row overflow-y-auto md:overflow-hidden relative" ref={containerRef as any}>
             
             {/* CỘT TRÁI - ĐỀ BÀI (CHUẨN UI IDP/BC) */}
-            <section className="p-8 md:p-12 overflow-y-auto custom-scrollbar border-r border-slate-400 flex flex-col bg-white" style={{ width: window.innerWidth > 768 ? `${leftWidth}%` : '100%', flex: 'none' }}>
-              <div className="format-passage max-w-none text-[15px] leading-[1.6] text-black font-serif break-words">
+            <section
+              className="p-5 sm:p-8 md:p-10 md:overflow-y-auto custom-scrollbar border-b md:border-b-0 md:border-r border-slate-300 flex flex-col bg-white shrink-0"
+              style={{ width: isDesktop ? `${leftWidth}%` : '100%' }}
+            >
+              <div className={`format-passage max-w-none leading-[1.7] text-slate-900 font-serif break-words ${fontSizeClass}`}>
                 
                 {/* Chỉ giữ lại Tên Section (Task) và Nội Dung */}
                 {currentTask.secTitle && (
-                    <p className="font-bold text-[16px] text-black mb-4">[{currentTask.secTitle}]</p>
+                    <p className="font-bold text-[16px] text-[#0a5482] mb-4">[{currentTask.secTitle}]</p>
                 )}
 
                 {currentTask.secContent && (
@@ -313,15 +336,15 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
                 )}
 
                 {currentTask.imageUrl && (
-                  <img src={currentTask.imageUrl} alt="Diagram" className="w-full max-w-[700px] h-auto mt-6 block" />
+                  <img src={currentTask.imageUrl} alt="Diagram" className="w-full max-w-[700px] h-auto mt-6 block rounded-xl border border-slate-200" />
                 )}
 
               </div>
-              <div className="h-[100px]" />
+              <div className="h-8 md:h-[100px]" />
             </section>
 
-            {/* THANH KÉO DÃN Ở GIỮA */}
-            <div className="w-4 bg-[#e8e8e8] hover:bg-[#d4d4d4] cursor-col-resize flex flex-col justify-center items-center z-10 border-x border-slate-400 transition-colors shrink-0" onMouseDown={startDrag}>
+            {/* THANH KÉO DÃN Ở GIỮA (Desktop only) */}
+            <div className="hidden md:flex w-4 bg-[#e8e8e8] hover:bg-[#d4d4d4] cursor-col-resize flex-col justify-center items-center z-10 border-x border-slate-300 transition-colors shrink-0" onMouseDown={startDrag}>
                <div className="flex flex-col gap-1.5 opacity-40">
                   <div className="w-1 h-1 bg-black"></div>
                   <div className="w-1 h-1 bg-black"></div>
@@ -331,67 +354,86 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
             </div>
 
             {/* CỘT PHẢI - BÀI VIẾT CỦA HỌC SINH */}
-            <section className="p-8 md:p-10 flex flex-col overflow-hidden relative bg-[#f4f4f4]" style={{ width: `${100 - leftWidth}%`, flex: 'none' }}>
+            <section
+              className="p-4 sm:p-6 md:p-8 flex flex-col md:overflow-hidden relative bg-slate-100 flex-1 md:flex-none min-h-[380px] md:min-h-0"
+              style={{ width: isDesktop ? `calc(${100 - leftWidth}% - 16px)` : '100%' }}
+            >
               
-              <div className="flex-1 bg-white border border-slate-400 rounded-none flex flex-col overflow-hidden">
-                {/* THANH TOOLBAR CỦA TEXTAREA */}
-                <div className="h-12 border-b border-slate-300 flex items-center px-4 gap-6 shrink-0 bg-[#e0e0e0]">
-                   <div className="flex gap-4 border-r border-slate-400 pr-6 text-slate-700">
-                      <button className="hover:text-black transition" title="Undo"><UndoIcon /></button>
-                      <button className="hover:text-black transition" title="Redo"><RedoIcon /></button>
+              <div className="flex-1 bg-white border border-slate-300 rounded-xl shadow-sm flex flex-col overflow-hidden">
+                {/* THANH TOOLBAR THỰC DỤNG CỦA TEXTAREA */}
+                <div className="min-h-[44px] border-b border-slate-200 flex items-center justify-between flex-wrap gap-2 px-4 py-2 shrink-0 bg-slate-50">
+                   <div className="flex items-center gap-2">
+                      <span className="px-2.5 py-0.5 rounded-md bg-[#0a5482] text-white text-xs font-extrabold">
+                        Task {currentTaskIndex + 1}
+                      </span>
+                      <span className={`text-xs font-bold px-2.5 py-0.5 rounded-full border ${meetsTarget ? 'bg-emerald-50 text-emerald-700 border-emerald-200' : 'bg-amber-50 text-amber-800 border-amber-200'}`}>
+                        {currentWordCount} / {minTargetWords}+ từ
+                      </span>
                    </div>
-                   <div className="flex items-center gap-4 text-slate-700">
-                      <span className="font-serif font-bold text-[14px] cursor-pointer hover:text-black">A <span className="text-[10px] text-slate-500">▼</span></span>
-                      <button className="w-7 h-7 hover:bg-slate-300 flex items-center justify-center rounded-none transition"><BoldIcon /></button>
-                      <button className="w-7 h-7 hover:bg-slate-300 flex items-center justify-center rounded-none transition"><ItalicIcon /></button>
-                      <button className="w-7 h-7 hover:bg-slate-300 flex items-center justify-center rounded-none transition"><UnderlineIcon /></button>
+                   <div className="flex items-center gap-1 bg-white border border-slate-200 rounded-lg p-0.5">
+                      {(['S', 'M', 'L'] as const).map((sz) => (
+                        <button
+                          key={sz}
+                          type="button"
+                          onClick={() => setEditorFontSize(sz)}
+                          className={`px-2 py-0.5 rounded text-xs font-extrabold transition cursor-pointer ${
+                            editorFontSize === sz
+                              ? 'bg-[#0a5482] text-white'
+                              : 'text-slate-600 hover:bg-slate-100'
+                          }`}
+                          title={`Cỡ chữ ${sz}`}
+                        >
+                          {sz === 'S' ? 'A-' : sz === 'M' ? 'A' : 'A+'}
+                        </button>
+                      ))}
                    </div>
                 </div>
                 
-                {/* Giảm line-height xuống 1.6 cho cân bằng */}
                 <textarea 
-                  className="flex-1 w-full p-8 outline-none resize-none text-[15px] text-black font-serif custom-scrollbar leading-[1.6] bg-white"
-                  placeholder=""
+                  className={`flex-1 w-full p-5 sm:p-7 outline-none resize-none text-slate-900 font-serif custom-scrollbar leading-[1.7] bg-white min-h-[260px] ${fontSizeClass}`}
+                  placeholder="Start typing your essay here..."
                   value={answers[currentTask.id] || ''}
                   onChange={(e) => handleAnswerChange(currentTask.id, e.target.value)}
                   spellCheck="false"
                 />
               </div>
               
-              <div className="mt-3 text-[14px] text-slate-700 font-bold tracking-wide">
-                Word Count: {getWordCount(answers[currentTask.id])}
+              <div className="mt-2.5 flex items-center justify-between text-[13px] text-slate-600 font-bold tracking-wide">
+                <span>Word Count: <strong className={meetsTarget ? 'text-emerald-700' : 'text-slate-900'}>{currentWordCount}</strong></span>
+                <span className="text-xs font-medium text-slate-500">Mục tiêu tối thiểu: {minTargetWords} từ</span>
               </div>
 
             </section>
           </main>
 
-          {/* THANH FOOTER BRUTALIST */}
-          <footer className="h-[60px] bg-white border-t border-slate-400 flex justify-between items-center px-6 shrink-0 select-none">
+          {/* THANH FOOTER */}
+          <footer className="h-[60px] bg-white border-t border-slate-300 flex justify-between items-center px-4 sm:px-6 shrink-0 select-none">
              
-             <div className="flex items-center h-full">
-                <div className="flex items-center gap-2 h-full pr-6 border-r border-slate-400 shrink-0 min-w-max">
+             <div className="flex items-center h-full min-w-0">
+                <div className="flex items-center gap-2 h-full pr-4 sm:pr-6 border-r border-slate-200 shrink-0">
                   <input 
                     type="checkbox" 
                     id="review" 
-                    className="w-4 h-4 cursor-pointer accent-black" 
+                    className="w-4 h-4 cursor-pointer accent-[#0a5482]" 
                     checked={!!reviewFlags[currentTaskIndex]}
                     onChange={handleReviewToggle}
                   />
-                  <label htmlFor="review" className="text-[14px] font-bold text-black cursor-pointer mt-0.5 whitespace-nowrap">Review</label>
+                  <label htmlFor="review" className="text-[13px] sm:text-[14px] font-bold text-slate-700 cursor-pointer whitespace-nowrap">Review</label>
                 </div>
                 
-                <div className="flex-1 flex justify-start sm:justify-center items-center gap-1.5 overflow-x-auto px-6 py-1 custom-scrollbar min-w-0">
+                <div className="flex-1 flex justify-start items-center gap-2 overflow-x-auto px-4 py-1 custom-scrollbar min-w-0">
                    {allQuestions.map((q, idx) => {
                       const isActive = idx === currentTaskIndex;
                       const isReview = reviewFlags[idx];
                       
-                      const shapeClass = isReview ? 'rounded-full' : 'rounded-none';
-                      const bgClass = isActive ? 'bg-slate-900 text-white border-black shadow-inner' : 'bg-white text-black border-slate-400 hover:bg-slate-200 cursor-pointer';
+                      const shapeClass = isReview ? 'rounded-full' : 'rounded-lg';
+                      const bgClass = isActive ? 'bg-[#0a5482] text-white border-[#0a5482] shadow-sm' : 'bg-white text-slate-700 border-slate-300 hover:bg-slate-100 cursor-pointer';
 
                       return (
-                        <div key={q.id} className="flex items-center gap-3 h-full">
-                           <span className="text-[14px] font-bold text-black hidden sm:block">Part {idx + 1}:</span>
+                        <div key={q.id} className="flex items-center gap-2 h-full shrink-0">
+                           <span className="text-[13px] font-bold text-slate-600 hidden sm:block">Task {idx + 1}:</span>
                            <button 
+                             type="button"
                              onClick={() => setCurrentTaskIndex(idx)}
                              className={`w-9 h-9 flex items-center justify-center font-bold text-[14px] border transition-all ${shapeClass} ${bgClass}`}
                            >
@@ -403,17 +445,16 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
                 </div>
              </div>
 
-             <div className="flex items-center gap-4 shrink-0 pl-6 border-l border-slate-400">
-                <button className="text-slate-500 hover:text-black transition text-lg px-2 hidden md:block" title="Minimize/Maximize">↙</button>
-                
-                <div className="flex items-center gap-2 hidden sm:flex ml-2">
-                   <button onClick={() => setCurrentTaskIndex(prev => Math.max(0, prev - 1))} disabled={currentTaskIndex === 0} className="w-8 h-8 flex items-center justify-center text-black hover:bg-slate-200 border border-slate-400 bg-white rounded-none transition disabled:opacity-30">←</button>
-                   <button onClick={() => setCurrentTaskIndex(prev => Math.min(allQuestions.length - 1, prev + 1))} disabled={currentTaskIndex === allQuestions.length - 1} className="w-8 h-8 flex items-center justify-center text-black hover:bg-slate-200 border border-slate-400 bg-white rounded-none transition disabled:opacity-30">→</button>
+             <div className="flex items-center gap-3 shrink-0 pl-4 border-l border-slate-200">
+                <div className="hidden sm:flex items-center gap-1.5">
+                   <button type="button" onClick={() => setCurrentTaskIndex(prev => Math.max(0, prev - 1))} disabled={currentTaskIndex === 0} className="w-8 h-8 flex items-center justify-center text-slate-700 hover:bg-slate-100 border border-slate-300 bg-white rounded-lg transition disabled:opacity-30 cursor-pointer">←</button>
+                   <button type="button" onClick={() => setCurrentTaskIndex(prev => Math.min(allQuestions.length - 1, prev + 1))} disabled={currentTaskIndex === allQuestions.length - 1} className="w-8 h-8 flex items-center justify-center text-slate-700 hover:bg-slate-100 border border-slate-300 bg-white rounded-lg transition disabled:opacity-30 cursor-pointer">→</button>
                 </div>
                 
                 <button 
+                  type="button"
                   onClick={handleSubmit}
-                  className="bg-slate-900 hover:bg-black text-white px-6 py-2 rounded-none text-[14px] font-bold transition ml-2 uppercase tracking-wide"
+                  className="bg-[#0a5482] hover:bg-[#084266] text-white px-5 sm:px-6 py-2 rounded-xl text-[13px] sm:text-[14px] font-black transition uppercase tracking-wide shadow-sm cursor-pointer"
                 >
                   Nộp bài
                 </button>
@@ -422,51 +463,59 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
           </footer>
 
         </div>
-      )}
+        );
+      })()}
 
       {isSubmitted && aiResult && (
-        <main className="flex-1 overflow-y-auto p-4 md:p-8 custom-scrollbar bg-[#f4f4f4]">
-          <div className="max-w-6xl mx-auto space-y-8">
+        <main className="flex-1 overflow-y-auto p-4 md:p-8 custom-scrollbar bg-slate-50">
+          <div className="max-w-5xl mx-auto space-y-6">
             
-            <div className="bg-white p-8 rounded-none border border-slate-400 flex flex-col md:flex-row gap-8 items-center justify-center">
-              <div className="text-center">
-                <span className="text-sm font-bold text-slate-600 uppercase tracking-widest block mb-2">Overall Band Score</span>
-                <span className="text-6xl font-black text-black border-4 border-black px-8 py-4 rounded-none block">{aiResult.overall}</span>
+            <div className="bg-gradient-to-br from-[#073b5c] via-[#0a5482] to-[#0f172a] p-7 sm:p-9 rounded-3xl shadow-xl border border-sky-400/20 text-white relative overflow-hidden">
+              <div className="absolute -top-16 -right-16 w-56 h-56 bg-[#2ab4e8]/20 blur-3xl rounded-full pointer-events-none" />
+              <div className="relative z-10 flex flex-col sm:flex-row items-center justify-between gap-6">
+                <div className="text-center sm:text-left">
+                  <span className="inline-flex items-center gap-1.5 text-xs font-extrabold uppercase tracking-widest text-[#2ab4e8] mb-2">
+                    ✍️ IELTS Writing AI Evaluation
+                  </span>
+                  <h2 className="text-2xl sm:text-3xl font-black tracking-tight mb-1">{basicInfo.title}</h2>
+                  <p className="text-sky-100/80 text-sm">Kết quả đánh giá theo 4 tiêu chí chuẩn giám khảo IELTS</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl px-8 py-4 text-center shrink-0">
+                  <span className="text-[11px] font-extrabold text-sky-200 uppercase tracking-widest block mb-1">Overall Band</span>
+                  <span className="text-5xl sm:text-6xl font-black text-white tabular-nums">{aiResult.overall}</span>
+                </div>
               </div>
             </div>
 
-            <div className="bg-white p-8 rounded-none border border-slate-400">
-                <h3 className="font-black text-xl text-black mb-4 flex items-center gap-2">💡 Nhận xét tổng quan</h3>
-                {/* Đã sửa font-serif thành font-sans */}
-                <div className="p-5 bg-[#e0e0e0] border border-slate-400 rounded-none text-[15px] leading-[1.8] font-bold text-black font-sans">
+            <div className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/90 shadow-sm">
+                <h3 className="font-black text-lg text-[#0a5482] mb-3.5 flex items-center gap-2">💡 Nhận xét tổng quan</h3>
+                <div className="p-5 bg-sky-50/70 border border-sky-200/70 rounded-xl text-[15px] leading-[1.8] font-medium text-slate-800 font-sans">
                   {aiResult.generalFeedback}
                 </div>
             </div>
 
             {Array.isArray(aiResult.tasks) && aiResult.tasks.map((task: any, idx: number) => (
-              <div className="bg-white p-8 rounded-none border border-slate-400" key={idx}>
-                <div className="flex justify-between items-center mb-6 pb-4 border-b border-slate-400">
-                  <h3 className="font-black text-2xl text-black">{task.task_name}</h3>
-                  <span className="font-black text-xl text-white bg-black px-4 py-1.5 rounded-none">Band {task.score}</span>
+              <div className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/90 shadow-sm space-y-6" key={idx}>
+                <div className="flex flex-wrap justify-between items-center gap-3 pb-4 border-b border-slate-200">
+                  <h3 className="font-black text-xl sm:text-2xl text-slate-900">{task.task_name}</h3>
+                  <span className="font-black text-base text-white bg-[#0a5482] px-4 py-1.5 rounded-xl shadow-sm">Band {task.score}</span>
                 </div>
                 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {Array.isArray(task.criteria) && task.criteria.map((c: any, i: number) => (
-                    <div key={i} className="bg-[#f4f4f4] p-4 rounded-none border border-slate-400">
+                    <div key={i} className="bg-slate-50 p-4 rounded-xl border border-slate-200/80">
                       <div className="flex justify-between items-center mb-2">
-                        <span className="font-bold text-black">{c.name}</span>
-                        <span className="font-black text-black text-lg">{c.score}</span>
+                        <span className="font-bold text-slate-800 text-sm">{c.name}</span>
+                        <span className="font-black text-[#0a5482] bg-sky-100 px-2.5 py-0.5 rounded-lg text-sm tabular-nums">{c.score}</span>
                       </div>
-                      {/* Đã sửa font-serif thành font-sans */}
-                      <p className="text-sm text-slate-800 font-medium leading-relaxed font-sans">{c.comment}</p>
+                      <p className="text-sm text-slate-600 font-medium leading-relaxed font-sans">{c.comment}</p>
                     </div>
                   ))}
                 </div>
 
                 <div>
-                  <h4 className="font-black text-lg text-black mb-4">✍️ Bài làm & Gợi ý sửa lỗi</h4>
-                  {/* Đã sửa font-serif thành font-sans */}
-                  <div className="p-6 bg-[#e0e0e0] border border-slate-400 rounded-none text-[16px] leading-[1.8] font-sans text-black" dangerouslySetInnerHTML={{__html: task.feedback}} />
+                  <h4 className="font-black text-base text-slate-800 mb-3">✍️ Bài làm &amp; Gợi ý sửa lỗi chi tiết</h4>
+                  <div className="p-5 sm:p-6 bg-slate-50 border border-slate-200/80 rounded-xl text-[15.5px] leading-[1.85] font-sans text-slate-800" dangerouslySetInnerHTML={{__html: task.feedback}} />
                 </div>
               </div>
             ))}

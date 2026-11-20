@@ -1350,17 +1350,30 @@ const handleFinish = async () => {
                                localStorage.removeItem(`standard_mark_${safeData.id}`);
                                localStorage.removeItem(`standard_endtime_${safeData.id}`);
                            }
+                           try {
+                               const saved = sessionStorage.getItem('lms_current_test');
+                               if (saved) {
+                                   const parsed = JSON.parse(saved);
+                                   if (parsed?.testData) {
+                                       delete parsed.testData.isReview;
+                                       delete parsed.testData.past_answers;
+                                       delete parsed.testData.past_score;
+                                       delete parsed.testData.past_total;
+                                       sessionStorage.setItem('lms_current_test', JSON.stringify(parsed));
+                                   }
+                               }
+                           } catch (_) {}
                            window.location.reload();
                        }
                    }} 
-                   className="text-[13px] font-bold px-4 py-2 rounded-lg transition-colors flex items-center gap-2 shadow-sm border bg-emerald-600 text-white border-emerald-500 hover:bg-emerald-800"
+                   className="text-[13px] font-bold px-3.5 py-2 rounded-lg transition-colors flex items-center gap-1.5 shadow-sm border bg-amber-500 text-white border-amber-400 hover:bg-amber-600 cursor-pointer"
                >
                  ↺ Làm lại
                </button>
             )}
             <button 
                 onClick={handleExit} 
-                className={`text-[13px] font-bold px-4 py-2 rounded-lg transition-colors flex items-center gap-2 shadow-sm border ${isReviewMode ? 'bg-emerald-600 text-white border-emerald-500 hover:bg-emerald-800' : 'bg-white hover:bg-slate-50 text-slate-600 border-slate-200'}`}
+                className={`text-[13px] font-bold px-4 py-2 rounded-lg transition-colors flex items-center gap-2 shadow-sm border cursor-pointer ${isReviewMode ? 'bg-white/15 hover:bg-white/25 text-white border-white/30' : 'bg-white hover:bg-slate-50 text-slate-600 border-slate-200'}`}
             >
               Thoát
             </button>
@@ -1386,7 +1399,7 @@ const handleFinish = async () => {
         )}
 
         <main
-          className="flex flex-1 overflow-hidden relative bg-[#eeeeee]"
+          className="flex flex-col md:flex-row flex-1 overflow-hidden relative bg-[#eeeeee]"
           ref={containerRef}
           onLoadCapture={(e) => {
             const target = e.target as HTMLElement;
@@ -1408,20 +1421,52 @@ const handleFinish = async () => {
           {/* PANEL TRÁI (BÀI ĐỌC) - ẨN ĐI NẾU LÀ BÀI LISTENING */}
           {!isListening && (
             <React.Fragment>
-              <div className="flex flex-col h-full bg-white relative" style={{ width: window.innerWidth > 768 ? `${leftWidth}%` : '100%', flex: 'none' }}>
+              <div
+                className="flex flex-col max-h-[46vh] md:max-h-none md:h-full bg-white relative border-b md:border-b-0 border-slate-300 shrink-0"
+                style={{ width: !isMobile ? `${leftWidth}%` : '100%' }}
+              >
                 <section 
-                    className={`p-8 md:p-10 overflow-y-auto custom-scrollbar flex-1 relative ${fontSize === 'S' ? 'text-[14px]' : fontSize === 'L' ? 'text-[18px]' : 'text-[16px]'}`} 
+                    className={`p-4 sm:p-6 md:p-10 overflow-y-auto custom-scrollbar flex-1 relative ${fontSize === 'S' ? 'text-[14px]' : fontSize === 'L' ? 'text-[18px]' : 'text-[16px]'}`} 
                     ref={leftPaneRef as any} 
                     onMouseUp={handleTextSelection}
                 >
-                  {isReviewMode && (
-                    <div className="bg-emerald-50 rounded-2xl shadow-sm border border-emerald-100 p-6 mb-8 text-center relative">
-                       <h3 className="text-emerald-700 font-bold uppercase tracking-widest text-xs mb-2">Kết quả bài làm</h3>
-                       <div className="text-5xl font-black text-emerald-600">
-                           {scoreResult.score} <span className="text-2xl text-emerald-400">/ {scoreResult.total}</span>
+                  {isReviewMode && (() => {
+                    const pct = scoreResult.total > 0 ? Math.round((scoreResult.score / scoreResult.total) * 100) : 0;
+                    const wrongCount = Math.max(0, scoreResult.total - scoreResult.score);
+                    const accentGrad = pct >= 80 ? 'from-emerald-400 to-teal-300' : pct >= 50 ? 'from-amber-400 to-yellow-300' : 'from-rose-400 to-orange-400';
+                    const badgeStyle = pct >= 80 ? 'bg-emerald-400/20 text-emerald-200 border-emerald-400/35' : pct >= 50 ? 'bg-amber-400/20 text-amber-200 border-amber-400/35' : 'bg-rose-400/20 text-rose-200 border-rose-400/35';
+                    return (
+                    <div className="bg-gradient-to-br from-[#073b5c] via-[#0a5482] to-[#0f172a] rounded-2xl shadow-lg border border-sky-400/20 p-5 sm:p-6 mb-6 text-white relative overflow-hidden">
+                       <div className="absolute -top-10 -right-10 w-36 h-36 bg-[#2ab4e8]/20 blur-2xl rounded-full pointer-events-none" />
+                       <div className="relative z-10 flex flex-wrap items-center justify-between gap-3">
+                         <div>
+                           <div className="inline-flex items-center gap-1.5 text-[11px] font-extrabold uppercase tracking-widest text-[#2ab4e8] mb-1">
+                             <span>📊</span>
+                             <span>Kết quả bài làm</span>
+                           </div>
+                           <div className="flex items-baseline gap-2.5">
+                             <span className="text-4xl font-black tracking-tight tabular-nums">
+                               {scoreResult.score}
+                               <span className="text-xl text-sky-200/70 font-bold"> / {scoreResult.total}</span>
+                             </span>
+                             <span className={`px-2.5 py-0.5 rounded-full text-xs font-black border ${badgeStyle}`}>
+                               {pct}%
+                             </span>
+                           </div>
+                         </div>
+                         <div className="flex flex-wrap items-center gap-2 text-xs font-bold">
+                           <span className="px-2.5 py-1 rounded-lg bg-emerald-500/15 border border-emerald-400/25 text-emerald-200">
+                             ✅ Đúng: {scoreResult.score}
+                           </span>
+                           <span className="px-2.5 py-1 rounded-lg bg-rose-500/15 border border-rose-400/25 text-rose-200">
+                             ❌ Sai/Trống: {wrongCount}
+                           </span>
+                         </div>
                        </div>
-                       
-                       <div className="mt-4 md:hidden">
+                       <div className="relative z-10 mt-3.5 h-2 bg-white/15 rounded-full overflow-hidden">
+                         <div className={`h-full bg-gradient-to-r ${accentGrad} rounded-full transition-all duration-500`} style={{ width: `${pct}%` }} />
+                       </div>
+                       <div className="mt-4 md:hidden relative z-10">
                           <button 
                               onClick={() => {
                                 const tutorContext = {
@@ -1434,13 +1479,14 @@ const handleFinish = async () => {
                                 sessionStorage.setItem('tony_auto_start', 'true');
                                 window.dispatchEvent(new CustomEvent('tony-navigate', { detail: 'live-test' }));
                               }}
-                              className="bg-emerald-600 text-white px-5 py-2 rounded-full text-[13px] font-bold shadow flex items-center justify-center gap-2 mx-auto"
+                              className="bg-[#2ab4e8] hover:bg-[#1fa0d4] text-white px-5 py-2 rounded-full text-[13px] font-bold shadow flex items-center justify-center gap-2 mx-auto"
                           >
                               📞 Gọi Gia Sư AI
                           </button>
                        </div>
                     </div>
-                  )}
+                    );
+                  })()}
 
                   {parts?.map((part: any, pIdx: number) => {
                     if (parts.length > 1 && !isListening && pIdx !== currentPartIndex) return null;
@@ -1474,11 +1520,11 @@ const handleFinish = async () => {
                 </section>
               </div>
 
-              {/* THANH KÉO THẢ RESIZER */}
+              {/* THANH KÉO THẢ RESIZER (Desktop only) */}
               <div 
                 onMouseDown={startDrag}
                 onTouchStart={startDrag}
-                className="w-4 bg-[#e8e8e8] border-x border-[#c0c0c0] hover:bg-[#d4d4d4] cursor-col-resize flex flex-col justify-center items-center z-10 shrink-0 transition-colors shadow-sm"
+                className="hidden md:flex w-4 bg-[#e8e8e8] border-x border-[#c0c0c0] hover:bg-[#d4d4d4] cursor-col-resize flex-col justify-center items-center z-10 shrink-0 transition-colors shadow-sm"
                 title="Kéo để điều chỉnh độ rộng"
               >
                  <div className="flex flex-col gap-1.5 opacity-40">
@@ -1493,12 +1539,12 @@ const handleFinish = async () => {
 
           {/* PANEL PHẢI (CÂU HỎI VÀ NỘI DUNG LISTENING) */}
           <section 
-              className={`p-8 md:p-10 overflow-y-auto custom-scrollbar html-content-renderer scroll-smooth ${isReviewMode ? 'bg-[#f4f4f4]' : 'bg-[#f4f4f4]'}`} 
+              className={`p-4 sm:p-6 md:p-10 overflow-y-auto custom-scrollbar html-content-renderer scroll-smooth flex-1 md:flex-none bg-[#f4f4f4]`} 
               id="questions-container" 
               ref={rightPaneRef as any} 
-              style={{ width: !isListening ? `calc(${100 - leftWidth}% - 16px)` : '100%', flex: 'none' }}
+              style={{ width: (!isListening && !isMobile) ? `calc(${100 - leftWidth}% - 16px)` : '100%' }}
           >
-             <div className={`mx-auto relative ${!isListening ? 'pr-8' : ''} ${fontSize === 'S' ? 'text-[14px]' : fontSize === 'L' ? 'text-[18px]' : 'text-[16px]'}`} style={{ width: !isListening ? '100%' : '768px', maxWidth: '100%' }}>
+             <div className={`mx-auto relative ${!isListening && !isMobile ? 'pr-4' : ''} ${fontSize === 'S' ? 'text-[14px]' : fontSize === 'L' ? 'text-[18px]' : 'text-[16px]'}`} style={{ width: !isListening ? '100%' : '768px', maxWidth: '100%' }}>
                
                {/* 🎬 TOOLBAR KHU VỰC LÀM BÀI / VIDEO HƯỚNG DẪN */}
                <div className="mb-6 flex items-center justify-between bg-white border border-slate-200 rounded-xl p-3 px-4 shadow-sm">

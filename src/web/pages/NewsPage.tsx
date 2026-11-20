@@ -1153,22 +1153,16 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
           )}
         </div>
 
-        <button
-          type="button"
-          onClick={() => setSidebarCollapsed((prev) => !prev)}
-          className="hidden lg:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white hover:bg-sky-50 text-slate-600 hover:text-[#0a5482] font-bold text-xs border border-slate-200/90 shadow-2xs transition cursor-pointer"
-        >
-          <span>{sidebarCollapsed ? '📚' : '⛶'}</span>
-          <span>
-            {sidebarCollapsed
-              ? lang === 'vi'
-                ? 'Hiện danh mục trái'
-                : 'Show sidebar'
-              : lang === 'vi'
-              ? 'Ẩn danh mục (Tập trung đọc)'
-              : 'Focus reading mode'}
-          </span>
-        </button>
+        {sidebarCollapsed && (
+          <button
+            type="button"
+            onClick={() => setSidebarCollapsed(false)}
+            className="hidden lg:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white hover:bg-sky-50 text-slate-600 hover:text-[#0a5482] font-bold text-xs border border-slate-200/90 shadow-sm transition cursor-pointer"
+          >
+            <span>📚</span>
+            <span>{lang === 'vi' ? 'Hiện danh mục trái' : 'Show sidebar'}</span>
+          </button>
+        )}
       </nav>
 
       <div className="flex flex-col lg:flex-row gap-4 sm:gap-8 xl:gap-10 items-start">
@@ -1549,7 +1543,7 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
 
                   {newsList.length > 0 ? (
                     <div className="space-y-5">
-                      {newsList.map((item) => {
+                      {newsList.map((item, idx) => {
                         const itemUrl = `/news/view/${(item.news_title_url || '').trim()}`;
                         const isChartThumb = [59, 60, 61, 62, 73].includes(Number(item.news_cc_id));
                         return (
@@ -1566,6 +1560,7 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                               <img
                                 src={resolveUploadUrl(item.news_thumb)}
                                 alt={item.news_title}
+                                loading={idx < 2 ? 'eager' : 'lazy'}
                                 onError={(e) => {
                                   (e.currentTarget as HTMLImageElement).src = '/uploads/No_Image_Wide.svg_1.png';
                                 }}
@@ -1645,7 +1640,11 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                             type="button"
                             disabled={pageParam <= 1}
                             onClick={() => {
-                              if (pageParam > 1) setSearchParams({ page: String(pageParam - 1) });
+                              if (pageParam > 1) {
+                                const next = new URLSearchParams(searchParams);
+                                next.set('page', String(pageParam - 1));
+                                setSearchParams(next);
+                              }
                             }}
                             className="px-4 py-2 rounded-xl border border-slate-200 text-sm font-bold text-slate-600 hover:bg-slate-100 disabled:opacity-40"
                           >
@@ -1660,7 +1659,11 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                               <button
                                 key={p}
                                 type="button"
-                                onClick={() => setSearchParams({ page: String(p) })}
+                                onClick={() => {
+                                  const next = new URLSearchParams(searchParams);
+                                  next.set('page', String(p));
+                                  setSearchParams(next);
+                                }}
                                 className={`w-10 h-10 rounded-xl text-sm font-black transition ${
                                   p === pageParam
                                     ? 'bg-[#0a5482] text-white shadow-sm'
@@ -1676,7 +1679,11 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                             type="button"
                             disabled={pageParam >= totalPages}
                             onClick={() => {
-                              if (pageParam < totalPages) setSearchParams({ page: String(pageParam + 1) });
+                              if (pageParam < totalPages) {
+                                const next = new URLSearchParams(searchParams);
+                                next.set('page', String(pageParam + 1));
+                                setSearchParams(next);
+                              }
                             }}
                             className="px-4 py-2 rounded-xl border border-slate-200 text-sm font-bold text-slate-600 hover:bg-slate-100 disabled:opacity-40"
                           >
@@ -1771,7 +1778,7 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                         onError={(e) => {
                           (e.currentTarget as HTMLImageElement).src = '/uploads/No_Image_Wide.svg_1.png';
                         }}
-                        className="w-full h-auto max-h-[820px] object-contain mx-auto block cursor-zoom-in rounded-xl"
+                        className="w-full h-auto max-h-[420px] sm:max-h-[460px] object-contain mx-auto block cursor-zoom-in rounded-xl"
                       />
                       {article.news_desc_thumb && (
                         <figcaption className="pt-3 text-center text-sm italic text-slate-500">
@@ -1857,7 +1864,7 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                                       : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
                                   }`}
                                 >
-                                  <span className={`px-1 py-0.2 rounded text-[9.5px] font-black ${camMode === 'english' ? 'bg-white/20 text-white' : 'bg-sky-100 text-[#0a5482]'}`}>EN</span>
+                                  <span className={`px-1 py-0.5 rounded text-[9.5px] font-black ${camMode === 'english' ? 'bg-white/20 text-white' : 'bg-sky-100 text-[#0a5482]'}`}>EN</span>
                                   <span>Tiếng Anh</span>
                                 </button>
                               </div>

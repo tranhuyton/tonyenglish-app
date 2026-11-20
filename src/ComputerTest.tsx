@@ -209,6 +209,15 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
   const [reviewFlags, setReviewFlags] = useState<Record<string, boolean>>({});
   const [activeQuestionId, setActiveQuestionId] = useState<string>('');
   const [draggedOption, setDraggedOption] = useState<string | null>(null);
+  const [showSettings, setShowSettings] = useState(false);
+  const [fontSize, setFontSize] = useState<'S' | 'M' | 'L'>('M');
+  const [isDesktop, setIsDesktop] = useState(() => typeof window !== 'undefined' ? window.innerWidth >= 768 : true);
+
+  useEffect(() => {
+    const onResize = () => setIsDesktop(window.innerWidth >= 768);
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, []);
 
   useEffect(() => {
       if (testStarted && !isReviewMode && isListening && globalAudioRef.current && audioPlaylist[currentAudioIndex]) {
@@ -1212,47 +1221,50 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
             </div>
           )}
 
-          <header className={`h-[46px] ${isReviewMode ? 'bg-[#064e3b]' : 'bg-[#222222]'} text-white flex justify-between items-center px-4 z-20 shrink-0 border-b border-slate-700 relative font-sans`}>
-            <div className="flex items-center gap-2">
+          <header className={`min-h-[48px] ${isReviewMode ? 'bg-[#064e3b]' : 'bg-[#222222]'} text-white flex justify-between items-center gap-2 sm:gap-4 px-3 sm:px-4 z-20 shrink-0 border-b border-slate-700 relative font-sans`}>
+            <div className="flex items-center gap-2 min-w-0 flex-1">
               <UserIcon />
-              <span className="font-bold text-[14px] truncate max-w-[200px] md:max-w-xs text-white">
+              <span className="font-bold text-[13px] sm:text-[14px] truncate text-white">
                  {isReviewMode ? `[REVIEW] ${safeTestData?.title || basicInfo.title || "IELTS"}` : (safeTestData?.title || basicInfo.title || "IELTS Test")}
               </span>
             </div>
             
             {isReviewMode ? (
-               <div className="absolute left-1/2 -translate-x-1/2 flex items-center gap-3">
-                  <div className="font-bold text-[14px] tracking-wide text-white bg-black px-4 py-1 border border-[#10b981] rounded-none">
-                     Điểm: {scoreResult.score}/{scoreResult.total} (Band {scoreResult.band})
+               <div className="flex items-center gap-2 shrink-0">
+                  <div className="font-bold text-[12px] sm:text-[13.5px] tracking-wide text-white bg-black/50 px-2.5 sm:px-3.5 py-1 border border-emerald-400/60 rounded-lg whitespace-nowrap">
+                     {scoreResult.score}/{scoreResult.total} • Band {scoreResult.band}
                   </div>
                </div>
             ) : (
-               <div className={`absolute left-1/2 -translate-x-1/2 font-bold text-[15px] tracking-widest ${basicInfo?.category === 'exercise' ? 'text-[#0ea5e9]' : (timeLeft <= 300 ? 'text-red-500 animate-pulse' : 'text-white')}`}>
+               <div className={`font-bold text-[14px] sm:text-[15px] tracking-widest shrink-0 tabular-nums ${basicInfo?.category === 'exercise' ? 'text-[#2ab4e8]' : (timeLeft <= 300 ? 'text-rose-400 animate-pulse' : 'text-white')}`}>
                   {basicInfo?.category === 'exercise' ? 'BÀI TẬP' : formatTime(timeLeft)}
                </div>
             )}
 
-            <div className="flex items-center gap-4 shrink-0">
+            <div className="flex items-center justify-end gap-2 sm:gap-3 shrink-0 flex-1">
                {!isReviewMode && (
-                   <button onClick={clearDraft} className="text-[12px] text-slate-300 hover:text-white font-bold transition mr-2 hidden sm:block">
+                   <button type="button" onClick={clearDraft} className="text-[12px] text-slate-300 hover:text-white font-bold transition hidden lg:block cursor-pointer">
                        Clear Draft
                    </button>
                )}
                
                {isReviewMode ? (
-                  <div className="flex items-center gap-4">
-                     <button onClick={toggleFullscreen} className="hover:text-white text-slate-300 transition" title="Toàn màn hình">
+                  <div className="flex items-center gap-2 sm:gap-2.5">
+                     <button type="button" onClick={toggleFullscreen} className="hidden sm:inline-flex hover:text-white text-slate-300 transition cursor-pointer" title="Toàn màn hình">
                         {isFullscreen ? <ExitFullscreenIcon /> : <FullscreenIcon />}
                      </button>
-                     <button onClick={() => window.dispatchEvent(new CustomEvent('tony-open-standalone-dictionary'))} className="text-[12px] font-bold border border-white px-3 py-1 rounded-none hover:bg-white/10 transition text-white cursor-pointer">📖 Từ điển</button>
-                     <button onClick={resetTest} className="text-[12px] font-bold border border-white px-3 py-1 rounded-none hover:bg-white/10 transition text-white">
-                         Retake Test
+                     <button type="button" onClick={() => window.dispatchEvent(new CustomEvent('tony-open-standalone-dictionary'))} className="text-[12px] font-bold border border-white/30 bg-white/10 px-2.5 py-1 rounded-lg hover:bg-white/20 transition text-white cursor-pointer whitespace-nowrap">📖 Từ điển</button>
+                     <button type="button" onClick={resetTest} className="text-[12px] font-bold bg-amber-500 hover:bg-amber-600 text-white px-2.5 sm:px-3 py-1 rounded-lg transition cursor-pointer whitespace-nowrap">
+                         ↺ Làm lại
+                     </button>
+                     <button type="button" onClick={handleExit} className="text-[12px] font-bold border border-white/40 bg-white/15 hover:bg-white/25 px-2.5 sm:px-3 py-1 rounded-lg transition text-white cursor-pointer whitespace-nowrap">
+                         Thoát
                      </button>
                   </div>
                ) : (
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-center gap-2.5 sm:gap-3.5 relative">
                      {isListening && globalAudio && (
-                        <div className="flex items-center gap-2 mr-2 bg-black/40 px-2 py-1 rounded-none border border-slate-500 hidden sm:flex" title="Chỉnh âm lượng">
+                        <div className="items-center gap-2 bg-black/40 px-2 py-1 rounded-lg border border-slate-500 hidden md:flex" title="Chỉnh âm lượng">
                          <span className="text-sm">🔈</span>
                          <input 
                              type="range" min="0" max="1" step="0.05" defaultValue="1" 
@@ -1265,13 +1277,41 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                          />
                        </div>
                      )}
-                     <button onClick={toggleFullscreen} className="hover:text-white text-slate-300 transition" title="Toàn màn hình">
+                     <button type="button" onClick={toggleFullscreen} className="hidden sm:inline-flex hover:text-white text-slate-300 transition cursor-pointer" title="Toàn màn hình">
                         {isFullscreen ? <ExitFullscreenIcon /> : <FullscreenIcon />}
                      </button>
-                     <button onClick={handleExit} className="hover:text-white text-slate-300 transition text-[13px] font-bold tracking-wide">Exit</button>
-                     <button className="hover:text-white text-slate-300 transition" title="Settings">
-                        <SettingsIcon />
-                     </button>
+                     <div className="relative">
+                       <button
+                         type="button"
+                         onClick={() => setShowSettings((prev) => !prev)}
+                         className={`hover:text-white transition cursor-pointer p-1 rounded ${showSettings ? 'text-[#2ab4e8] bg-white/10' : 'text-slate-300'}`}
+                         title="Cài đặt cỡ chữ"
+                       >
+                          <SettingsIcon />
+                       </button>
+                       {showSettings && (
+                         <div className="absolute right-0 top-full mt-2 w-48 bg-white text-slate-800 rounded-xl shadow-2xl border border-slate-200 p-3 z-50">
+                           <div className="text-[11px] font-extrabold uppercase tracking-wider text-slate-500 mb-2">Cỡ chữ hiển thị</div>
+                           <div className="grid grid-cols-3 gap-1.5">
+                             {(['S', 'M', 'L'] as const).map((sz) => (
+                               <button
+                                 key={sz}
+                                 type="button"
+                                 onClick={() => { setFontSize(sz); setShowSettings(false); }}
+                                 className={`py-1.5 rounded-lg text-xs font-black border transition cursor-pointer ${
+                                   fontSize === sz
+                                     ? 'bg-[#0a5482] text-white border-[#0a5482]'
+                                     : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'
+                                 }`}
+                               >
+                                 {sz === 'S' ? 'Nhỏ' : sz === 'M' ? 'Vừa' : 'Lớn'}
+                               </button>
+                             ))}
+                           </div>
+                         </div>
+                       )}
+                     </div>
+                     <button type="button" onClick={handleExit} className="hover:text-white text-slate-200 bg-white/10 hover:bg-white/20 px-3 py-1 rounded-lg transition text-[12.5px] font-bold tracking-wide cursor-pointer">Thoát</button>
                   </div>
                )}
             </div>
@@ -1292,11 +1332,22 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
             })}
           </div>
 
-          <main className="flex flex-1 overflow-hidden relative bg-[#eeeeee]" ref={containerRef} onMouseUp={handleMouseUp} onClick={handleContentClick}>
+          <main
+            className={`flex flex-col md:flex-row flex-1 overflow-hidden relative bg-[#eeeeee] ${fontSize === 'S' ? 'text-[14px]' : fontSize === 'L' ? 'text-[18px]' : 'text-[16px]'}`}
+            ref={containerRef}
+            onMouseUp={handleMouseUp}
+            onClick={(e) => {
+              if (showSettings) setShowSettings(false);
+              handleContentClick(e);
+            }}
+          >
             
             {showLeftColumn && (
               <React.Fragment>
-                <div className="flex flex-col h-full bg-white relative" style={{ width: window.innerWidth > 768 ? `${leftWidth}%` : '100%', flex: 'none' }}>
+                <div
+                  className="flex flex-col max-h-[45vh] md:max-h-none md:h-full bg-white relative border-b md:border-b-0 border-slate-300 shrink-0"
+                  style={{ width: isDesktop ? `${leftWidth}%` : '100%' }}
+                >
                     
                     {isReviewMode && isListening && currentPart?.audioUrl && (
                       <div className="bg-[#f4f4f4] p-4 border-b border-slate-400 flex items-center gap-4 shrink-0 shadow-sm z-10 font-sans">
@@ -1307,9 +1358,9 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                       </div>
                     )}
                     
-                    <section className="p-8 md:p-10 overflow-y-auto custom-scrollbar flex-1 relative" ref={leftPaneRef as any}>
+                    <section className="p-5 sm:p-8 md:p-10 overflow-y-auto custom-scrollbar flex-1 relative" ref={leftPaneRef as any}>
                       {currentPart?.content ? (
-                        <div className={`format-passage html-content-renderer max-w-none text-[16px] text-black break-words font-sans selection:bg-yellow-200 ${isReviewMode ? 'leading-[2.8]' : 'leading-[1.8]'}`}>
+                        <div className={`format-passage html-content-renderer max-w-none text-black break-words font-sans selection:bg-yellow-200 ${isReviewMode ? 'leading-[2.6]' : 'leading-[1.8]'}`}>
                           {isReviewMode && isListening && (
                               <div className="bg-slate-200 text-black p-4 rounded-none font-bold font-sans text-[14px] mb-6 border border-slate-400">
                                   🎙️ TRANSCRIPT CHỮA BÀI
@@ -1323,12 +1374,12 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                            <p className="font-bold text-[15px]">Blank Passage</p>
                         </div>
                       )}
-                      <div className="h-[200px]" />
+                      <div className="h-[120px] md:h-[200px]" />
                     </section>
                 </div>
                 
                 <div 
-                    className="w-4 bg-[#e8e8e8] border-x border-[#c0c0c0] hover:bg-[#d4d4d4] cursor-col-resize flex flex-col justify-center items-center z-10 shrink-0 transition-colors shadow-sm" 
+                    className="hidden md:flex w-4 bg-[#e8e8e8] border-x border-[#c0c0c0] hover:bg-[#d4d4d4] cursor-col-resize flex-col justify-center items-center z-10 shrink-0 transition-colors shadow-sm" 
                     onMouseDown={startDrag}
                     onTouchStart={startDrag}
                 >
@@ -1344,8 +1395,8 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
 
             <section 
               ref={rightPaneRef as any}
-              className={`p-8 md:p-10 overflow-y-auto custom-scrollbar html-content-renderer ${isReviewMode ? 'bg-[#f4f4f4]' : 'bg-[#f4f4f4]'}`} 
-              style={{ width: showLeftColumn ? `${100 - leftWidth}%` : '100%', flex: 'none' }}
+              className="p-5 sm:p-8 md:p-10 overflow-y-auto custom-scrollbar html-content-renderer bg-[#f4f4f4] flex-1 md:flex-none"
+              style={{ width: (showLeftColumn && isDesktop) ? `calc(${100 - leftWidth}% - 16px)` : '100%' }}
             >
               <div 
                  className={`mx-auto relative ${!showLeftColumn ? 'pr-8' : ''}`}

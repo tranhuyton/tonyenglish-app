@@ -1335,17 +1335,30 @@ const handleFinish = async () => {
                                localStorage.removeItem(`standard_mark_${safeData.id}`);
                                localStorage.removeItem(`standard_endtime_${safeData.id}`);
                            }
+                           try {
+                               const saved = sessionStorage.getItem('lms_current_test');
+                               if (saved) {
+                                   const parsed = JSON.parse(saved);
+                                   if (parsed?.testData) {
+                                       delete parsed.testData.isReview;
+                                       delete parsed.testData.past_answers;
+                                       delete parsed.testData.past_score;
+                                       delete parsed.testData.past_total;
+                                       sessionStorage.setItem('lms_current_test', JSON.stringify(parsed));
+                                   }
+                               }
+                           } catch (_) {}
                            window.location.reload();
                        }
                    }} 
-                   className="text-[13px] font-bold px-4 py-2 rounded-lg transition-colors flex items-center gap-2 shadow-sm border bg-emerald-600 text-white border-emerald-500 hover:bg-emerald-800"
+                   className="text-[13px] font-bold px-3.5 py-2 rounded-lg transition-colors flex items-center gap-1.5 shadow-sm border bg-amber-500 text-white border-amber-400 hover:bg-amber-600 cursor-pointer"
                >
                  ↺ Làm lại
                </button>
             )}
             <button 
                 onClick={handleExit} 
-                className={`text-[13px] font-bold px-4 py-2 rounded-lg transition-colors flex items-center gap-2 shadow-sm border ${isReviewMode ? 'bg-emerald-600 text-white border-emerald-500 hover:bg-emerald-800' : 'bg-white hover:bg-slate-50 text-slate-600 border-slate-200'}`}
+                className={`text-[13px] font-bold px-4 py-2 rounded-lg transition-colors flex items-center gap-2 shadow-sm border cursor-pointer ${isReviewMode ? 'bg-white/15 hover:bg-white/25 text-white border-white/30' : 'bg-white hover:bg-slate-50 text-slate-600 border-slate-200'}`}
             >
               Thoát
             </button>
@@ -1735,7 +1748,7 @@ const handleFinish = async () => {
 
                              {/* NỘI DUNG SECTION */}
                              <div className="mb-6">
-                                {displaySecTitle && <h4 className="font-bold text-[16px] text-slate-800 mb-4">{displaySecTitle}</h4>}
+                                {isListening && displaySecTitle && <h4 className="font-bold text-[16px] text-slate-800 mb-4">{displaySecTitle}</h4>}
                                 {sec?.imageUrl && <img src={sec.imageUrl} className="mcq-cropped-img mb-4" alt="Section Image" />}
                                 {sec?.content && !( ["Điền từ", "Kéo thả vào Part", "Kéo thả", "Matching", "Droplist"].includes(sec?.questionType) && /\[\s*\d+\s*\]/.test(String(sec.content || '')) ) && (
                                     <div className="text-[15px] text-slate-600 leading-relaxed mb-6 format-passage html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(sec.content) }} />
@@ -2775,11 +2788,11 @@ const handleFinish = async () => {
                   <aside className="hidden md:flex md:w-[280px] lg:w-[320px] shrink-0 flex-col bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden z-20 md:mx-0 md:my-0 md:absolute md:right-4 md:top-4 md:bottom-4 md:h-[calc(100%-2rem)] min-h-0">
                     <div className="p-5 border-b border-slate-200 flex flex-col items-center shrink-0">
                       {isReviewMode ? (
-                        <div className="bg-emerald-50 text-emerald-700 p-6 rounded-2xl border border-emerald-100 w-full text-center shadow-sm mb-4">
-                          <p className="text-[12px] font-bold uppercase tracking-widest mb-2">Kết quả của bạn</p>
-                          <p className="text-5xl font-black mb-4">
-                              {scoreResult.score} <span className="text-2xl text-emerald-400">/ {scoreResult.total}</span>
-                          </p>
+                        <div className="bg-sky-50 text-[#0a5482] px-4 py-2.5 rounded-xl border border-sky-200/80 w-full flex items-center justify-between shadow-2xs mb-4">
+                          <span className="text-[11px] font-extrabold uppercase tracking-wider">Điểm số</span>
+                          <span className="text-lg font-black tabular-nums">
+                            {scoreResult.score} <span className="text-xs font-bold text-slate-400">/ {scoreResult.total}</span>
+                          </span>
                         </div>
                       ) : basicInfo?.category === 'exercise' ? (
                         <div className="bg-emerald-50 text-emerald-600 px-6 py-2.5 rounded-lg font-black text-[18px] mb-4 border border-emerald-200 flex items-center justify-center gap-2 w-full shadow-sm tracking-widest uppercase">

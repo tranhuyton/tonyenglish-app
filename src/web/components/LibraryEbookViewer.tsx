@@ -445,7 +445,7 @@ export const LibraryEbookViewer: React.FC<LibraryEbookViewerProps> = ({
                 renderTextLayer={true}
                 renderAnnotationLayer={true}
                 onRenderSuccess={() => setIsLoadingPage(false)}
-                className={`bg-white rounded-xs overflow-hidden ${
+                className={`bg-white rounded-sm overflow-hidden ${
                   isTwoPageMode && containerWidth >= 900 ? 'ebook-page-left' : 'ebook-page-single'
                 }`}
                 loading={null}
@@ -461,7 +461,7 @@ export const LibraryEbookViewer: React.FC<LibraryEbookViewerProps> = ({
                     renderTextLayer={true}
                     renderAnnotationLayer={true}
                     onRenderSuccess={() => setIsLoadingPage(false)}
-                    className="bg-white rounded-xs overflow-hidden hidden lg:block ebook-page-right"
+                    className="bg-white rounded-sm overflow-hidden hidden lg:block ebook-page-right"
                     loading={null}
                   />
                 )}

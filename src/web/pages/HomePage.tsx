@@ -38,16 +38,19 @@ function normalizeInternalLink(rawUrl: string | null | undefined, fallback = '/c
     .trim()
     .replace(/^https?:\/\/(?:www\.)?tonyenglish\.vn/i, '')
     .replace(/^\/(?:vi|en)(?=\/|$)/i, '')
-    .replace(/\/news\/index$/i, '/news');
+    .replace(/\/news\/index$/i, '/news')
+    .replace(/\.html$/i, '');
   if (!cleaned) return fallback;
   return cleaned.startsWith('/') ? cleaned : `/${cleaned}`;
 }
 
 function getBalancedGridClass(count: number): string {
   if (count <= 1) return 'grid grid-cols-1 gap-6';
-  if (count === 2) return 'grid grid-cols-1 lg:grid-cols-2 gap-6';
-  if (count === 4) return 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5';
-  return 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6';
+  const mobileSnap =
+    'flex sm:grid overflow-x-auto sm:overflow-visible snap-x snap-mandatory pb-2 sm:pb-0 -mx-4 px-4 sm:mx-0 sm:px-0 custom-scrollbar [&>*]:w-[84vw] [&>*]:max-w-[340px] [&>*]:shrink-0 sm:[&>*]:w-auto sm:[&>*]:max-w-none sm:[&>*]:shrink [&>*]:snap-start';
+  if (count === 2) return `${mobileSnap} sm:grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6`;
+  if (count === 4) return `${mobileSnap} sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5`;
+  return `${mobileSnap} sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6`;
 }
 
 function getCardVariantForCount(count: number): CardVariant {
@@ -86,7 +89,10 @@ function parseTestimonialCard(
   const imgMatch = rawHtml.match(/<img\b[^>]*\bsrc=["']([^"']+)["'][^>]*>/i);
   const imageUrl = imgMatch?.[1] ? resolveUploadUrl(imgMatch[1]) : null;
   const isDiagram = Boolean(
-    imageUrl && /\.(png|svg)(?:\?|$)/i.test(imageUrl) && /(venn|blended|diagram|chart)/i.test(imageUrl)
+    imageUrl &&
+      (idx === 0 ||
+        /\.(png|svg)(?:\?|$)/i.test(imageUrl) ||
+        /(venn|blended|diagram|chart|method|hoc-tai)/i.test(imageUrl))
   );
 
   const linkMatch = rawHtml.match(/<a\b[^>]*\bhref=["']([^"']+)["'][^>]*>/i);
@@ -158,6 +164,7 @@ export const HomePage: React.FC = () => {
   }, []);
 
   const [ads, setAds] = useState<any[]>([]);
+  const [adsLoaded, setAdsLoaded] = useState(false);
   const [bannerIdx, setBannerIdx] = useState(0);
 
   const [stickyNews, setStickyNews] = useState<any[]>([]);
@@ -230,6 +237,7 @@ export const HomePage: React.FC = () => {
       ]);
 
       if (adsRes.data) setAds(adsRes.data);
+      setAdsLoaded(true);
       if (stickyRes.data) setStickyNews(stickyRes.data);
 
       if (newsCateRes.data) {
@@ -554,13 +562,16 @@ export const HomePage: React.FC = () => {
     );
   };
 
+  const fixHeroCopyTypos = (text: string) =>
+    text.replace(/\bhộ trợ\b/gi, (m) => (m[0] === 'H' ? 'Hỗ trợ' : 'hỗ trợ'));
+
   const curAd = ads[bannerIdx];
   const curAdLink = curAd ? normalizeInternalLink(curAd.link, '/courses') : '/courses';
   const curAdMetaText = curAd
-    ? stripTags(lang === 'vi' ? curAd.meta_vi || curAd.meta : curAd.meta || curAd.meta_vi)
+    ? fixHeroCopyTypos(stripTags(lang === 'vi' ? curAd.meta_vi || curAd.meta : curAd.meta || curAd.meta_vi))
     : '';
   const curAdDescText = curAd
-    ? stripTags(lang === 'vi' ? curAd.desc_vi || curAd.desc : curAd.desc || curAd.desc_vi)
+    ? fixHeroCopyTypos(stripTags(lang === 'vi' ? curAd.desc_vi || curAd.desc : curAd.desc || curAd.desc_vi))
     : '';
   const showDistinctAdDesc =
     Boolean(curAdDescText) &&
@@ -759,9 +770,15 @@ export const HomePage: React.FC = () => {
                         {curAdMetaText || curAdDescText || (lang === 'vi' ? 'Khám phá lộ trình học tại TonyEnglish' : 'Explore TonyEnglish Programs')}
                       </Link>
 
-                      {showDistinctAdDesc && (
-                        <p className="text-xs sm:text-[13px] text-slate-300/85 leading-relaxed line-clamp-2">
+                      {showDistinctAdDesc ? (
+                        <p className="text-xs sm:text-[13px] text-slate-300/85 leading-relaxed line-clamp-2 min-h-[2.5rem]">
                           {curAdDescText}
+                        </p>
+                      ) : (
+                        <p className="text-xs sm:text-[13px] text-slate-300/80 leading-relaxed line-clamp-2 min-h-[2.5rem]">
+                          {lang === 'vi'
+                            ? 'Lộ trình cá nhân hóa 1 kèm 1 cùng Thầy Tony, kết hợp hệ sinh thái Bài giảng & Phòng thi AI 24/7.'
+                            : 'Personalized 1-on-1 roadmap with Mr. Tony, combining bilingual lectures & 24/7 AI Exam Lab.'}
                         </p>
                       )}
                     </div>
@@ -789,6 +806,24 @@ export const HomePage: React.FC = () => {
                           ))}
                         </div>
                       )}
+                    </div>
+                  </div>
+                </div>
+              ) : !adsLoaded ? (
+                <div className="w-full rounded-3xl overflow-hidden bg-slate-900/80 backdrop-blur-md border border-white/15 shadow-2xl flex flex-col animate-pulse">
+                  <div className="aspect-[16/9] bg-slate-800/80 shrink-0" />
+                  <div className="p-5 flex-1 flex flex-col justify-between gap-3">
+                    <div className="space-y-3">
+                      <div className="flex items-center justify-between">
+                        <div className="h-5 w-32 rounded-full bg-white/10" />
+                        <div className="h-4 w-24 rounded-full bg-white/10" />
+                      </div>
+                      <div className="h-5 w-11/12 rounded-lg bg-white/15" />
+                      <div className="h-4 w-3/4 rounded-lg bg-white/10" />
+                    </div>
+                    <div className="pt-3 border-t border-white/10 flex items-center justify-between">
+                      <div className="h-3.5 w-36 rounded bg-white/10" />
+                      <div className="h-2 w-16 rounded-full bg-white/10" />
                     </div>
                   </div>
                 </div>
@@ -979,8 +1014,9 @@ export const HomePage: React.FC = () => {
                         className="w-full h-full object-cover object-[50%_20%] group-hover:scale-105 transition-transform duration-500"
                       />
                     </Link>
-                    <span className="absolute top-3 left-3 bg-[#2ab4e8] text-white text-xs font-extrabold px-3 py-1 rounded-full shadow-md">
-                      ⚡ {t('Lastest News')}
+                    <span className="absolute top-3 left-3 bg-[#0a5482]/95 backdrop-blur-xs text-white text-xs font-extrabold px-3 py-1 rounded-full shadow-md border border-white/15 inline-flex items-center gap-1">
+                      <Sparkles className="w-3 h-3 text-amber-300 shrink-0" />
+                      <span>{t('Lastest News')}</span>
                     </span>
                   </div>
 
@@ -1262,9 +1298,9 @@ export const HomePage: React.FC = () => {
                   >
                     {/* Identical Media Box for Symmetrical Visual Height */}
                     <div
-                      className={`relative h-52 sm:h-auto sm:w-56 md:w-60 sm:min-h-[240px] shrink-0 overflow-hidden ${
+                      className={`relative h-56 sm:h-auto sm:w-56 md:w-60 sm:min-h-[240px] shrink-0 overflow-hidden ${
                         parsed.isDiagram
-                          ? 'bg-gradient-to-br from-sky-50/80 via-white to-slate-50 flex items-center justify-center p-4 border-b sm:border-b-0 sm:border-r border-slate-100'
+                          ? 'bg-gradient-to-br from-sky-50/80 via-white to-slate-50 flex items-center justify-center p-4 pt-12 sm:pt-11 border-b sm:border-b-0 sm:border-r border-slate-100'
                           : 'bg-slate-100'
                       }`}
                     >
@@ -1277,7 +1313,7 @@ export const HomePage: React.FC = () => {
                           }}
                           className={
                             parsed.isDiagram
-                              ? 'max-h-44 w-auto object-contain group-hover:scale-105 transition-transform duration-500'
+                              ? 'max-h-40 sm:max-h-44 w-full object-contain group-hover:scale-105 transition-transform duration-500'
                               : 'w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500'
                           }
                         />

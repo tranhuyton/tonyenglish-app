@@ -183,6 +183,46 @@ export default function IeltsSpeaking({
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
   const audioChunksRef = useRef<Blob[]>([]);
   const timerRef = useRef<any>(null);
+  const playbackAudioRef = useRef<HTMLAudioElement | null>(null);
+  const [isPlayingRecording, setIsPlayingRecording] = useState(false);
+
+  const stopRecordingPlayback = () => {
+    if (playbackAudioRef.current) {
+      playbackAudioRef.current.pause();
+      playbackAudioRef.current.currentTime = 0;
+      playbackAudioRef.current = null;
+    }
+    setIsPlayingRecording(false);
+  };
+
+  useEffect(() => {
+    stopRecordingPlayback();
+    return () => stopRecordingPlayback();
+  }, [currentQIndex]);
+
+  const toggleRecordingPlayback = (url: string) => {
+    if (isPlayingRecording && playbackAudioRef.current) {
+      stopRecordingPlayback();
+      return;
+    }
+    stopRecordingPlayback();
+    const audio = new Audio(url);
+    playbackAudioRef.current = audio;
+    audio.onended = () => {
+      setIsPlayingRecording(false);
+      playbackAudioRef.current = null;
+    };
+    audio.play().then(() => setIsPlayingRecording(true)).catch(() => setIsPlayingRecording(false));
+  };
+
+  const handleSafeExit = () => {
+    const hasProgress = liveStatus !== 'IDLE' || Object.keys(recordedBlobs).length > 0;
+    if (!isSubmitted && hasProgress) {
+      if (!window.confirm('Bạn đang có bản ghi âm chưa nộp. Bạn có chắc muốn thoát không?')) return;
+    }
+    stopRecordingPlayback();
+    if (onBack) onBack();
+  };
   
   const [isGrading, setIsGrading] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -586,32 +626,27 @@ export default function IeltsSpeaking({
     <div className="h-screen flex flex-col bg-[#eeeeee] font-sans text-black overflow-hidden">
       
       {/* HEADER */}
-      <header className="h-[46px] bg-[#222222] text-white flex justify-between items-center px-4 shrink-0 select-none z-20 border-b border-slate-700 relative">
-        <div className="flex items-center gap-2">
+      <header className="h-[52px] bg-[#1e293b] text-white flex justify-between items-center gap-3 px-4 shrink-0 select-none z-20 border-b border-slate-700">
+        <div className="flex items-center gap-2 min-w-0 flex-1">
           <UserIcon />
-          <span className="font-bold text-[14px] truncate max-w-[200px] md:max-w-xs text-white">
+          <span className="font-bold text-[14px] truncate text-white">
               {basicInfo.title}
           </span>
         </div>
         
-        <div className={`absolute left-1/2 -translate-x-1/2 font-bold text-[15px] tracking-widest ${timeLeft <= 300 ? 'text-red-500' : 'text-white'}`}>
+        <div className={`font-bold text-[14px] sm:text-[15px] tracking-wider shrink-0 tabular-nums px-3 py-1 rounded-lg bg-white/10 ${timeLeft <= 300 && !isSubmitted ? 'text-rose-400 animate-pulse' : 'text-white'}`}>
            {isSubmitted ? 'TEST FINISHED' : formatTotalTime(timeLeft)}
         </div>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center justify-end gap-3 shrink-0 flex-1">
            {isSubmitted ? (
-              <button onClick={onBack} className="text-[13px] font-bold border border-white px-3 py-1 rounded-none hover:bg-white/10 transition text-white">
-                  Return to Home
+              <button type="button" onClick={onBack} className="text-[13px] font-bold bg-[#2ab4e8] hover:bg-[#1fa0d4] text-white px-4 py-1.5 rounded-lg transition cursor-pointer">
+                  Quay lại Góc Học Viên
               </button>
            ) : (
-              <div className="flex items-center gap-5">
-                 <button onClick={onBack} className="hover:text-white text-slate-300 transition text-[13px] font-bold tracking-wide">
-                     Exit
-                 </button>
-                 <button className="hover:text-white text-slate-300 transition" title="Settings">
-                   <SettingsIcon />
-                 </button>
-              </div>
+              <button type="button" onClick={handleSafeExit} className="text-[13px] font-bold px-3.5 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-slate-100 border border-white/15 transition cursor-pointer">
+                  Thoát
+              </button>
            )}
         </div>
       </header>
@@ -619,14 +654,14 @@ export default function IeltsSpeaking({
       {/* OVERLAY ĐANG CHẤM ĐIỂM */}
       {isGrading && (
         <div className="flex-1 flex flex-col items-center justify-center bg-white/95 z-50 absolute inset-0 pt-10">
-          <div className="relative flex items-center justify-center w-32 h-32 mb-6">
-             <svg className="absolute inset-0 w-full h-full animate-spin text-black" viewBox="0 0 100 100">
+          <div className="relative flex items-center justify-center w-28 h-28 mb-6">
+             <svg className="absolute inset-0 w-full h-full animate-spin text-[#0a5482]" viewBox="0 0 100 100">
                <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" strokeWidth="8" strokeDasharray="200" strokeLinecap="round" />
              </svg>
-             <span className="font-bold text-xl text-black">AI</span>
+             <span className="font-black text-xl text-[#0a5482]">AI</span>
           </div>
-          <h2 className="text-xl font-bold text-black mb-2">Grading in Progress</h2>
-          <p className="text-slate-600 font-medium text-sm">Please wait while the AI examiner analyzes your responses...</p>
+          <h2 className="text-xl font-black text-slate-800 mb-2">Đang chấm điểm IELTS Speaking...</h2>
+          <p className="text-slate-500 font-medium text-sm">Vui lòng đợi trong giây lát để giám khảo AI phân tích bài nói của bạn.</p>
         </div>
       )}
 
@@ -634,24 +669,24 @@ export default function IeltsSpeaking({
       {!isSubmitted && !isGrading && currentQ && (
         <div className="flex-1 flex flex-col overflow-hidden bg-[#eeeeee]">
           
-          <div className="h-[54px] bg-white border-b border-slate-400 flex items-center px-8 shrink-0">
-            <h2 className="font-bold text-[18px] text-black">
-                {currentQ.partTitle}:
+          <div className="h-[52px] bg-white border-b border-slate-300 flex items-center px-5 sm:px-8 shrink-0">
+            <h2 className="font-black text-[16px] sm:text-[18px] text-[#0a5482] truncate">
+                {currentQ.partTitle}
             </h2>
           </div>
 
-          <main className="flex-1 flex flex-col md:flex-row overflow-hidden relative">
+          <main className="flex-1 flex flex-col md:flex-row overflow-y-auto md:overflow-hidden relative">
             
             {/* Cột trái: Đề bài */}
-            <section className="w-full md:w-1/2 p-8 md:p-10 overflow-y-auto custom-scrollbar border-r border-slate-400 flex flex-col bg-white">
-              <div className="max-w-2xl text-[16px] leading-[1.8] text-black font-sans break-words">
+            <section className="w-full md:w-1/2 p-5 sm:p-8 md:p-10 md:overflow-y-auto custom-scrollbar border-b md:border-b-0 md:border-r border-slate-300 flex flex-col bg-white shrink-0">
+              <div className="max-w-2xl text-[16px] leading-[1.8] text-slate-900 font-sans break-words">
                 {currentQ.partContent && (
                   <div className="mb-6 text-[15px] font-medium" dangerouslySetInnerHTML={{__html: currentQ.partContent}} />
                 )}
                 {currentQ.content && (
-                  <div className={`mb-6 text-black text-[16px] tracking-tight leading-[1.8] ${currentQ.isPart2 ? 'bg-[#f4f4f4] p-6 border border-slate-400 rounded-none' : ''}`}>
+                  <div className={`mb-6 text-slate-900 text-[16px] tracking-tight leading-[1.8] ${currentQ.isPart2 ? 'bg-slate-50 p-5 sm:p-6 border border-slate-200 rounded-2xl' : ''}`}>
                     {currentQ.secTitle && currentQ.secTitle.toLowerCase() !== 'section 1' && (
-                        <div className="font-bold mb-3">{currentQ.secTitle}</div>
+                        <div className="font-bold text-[#0a5482] mb-3">{currentQ.secTitle}</div>
                     )}
                     <div dangerouslySetInnerHTML={{__html: currentQ.content}} />
                   </div>
@@ -660,33 +695,33 @@ export default function IeltsSpeaking({
             </section>
 
             {/* Cột phải: Ghi chú & Điều khiển Gọi điện */}
-            <section className="w-full md:w-1/2 bg-[#f4f4f4] flex flex-col overflow-hidden relative">
+            <section className="w-full md:w-1/2 bg-slate-100 flex flex-col md:overflow-hidden relative shrink-0 md:shrink">
               
-              <div className="flex-1 p-8 md:p-10 pb-0 flex flex-col gap-6 overflow-hidden">
+              <div className="flex-1 p-5 sm:p-8 md:p-10 pb-0 flex flex-col gap-5 md:overflow-hidden">
                   
                   {/* 🚀 KHUNG TRANSCRIPT LIVE: HIỆN LÊN KHI ĐANG GỌI */}
                   {(liveStatus !== 'IDLE' || liveTranscript) && (
-                     <div className="flex-1 bg-slate-900 border border-slate-400 rounded-none flex flex-col overflow-hidden shadow-inner">
-                        <div className="h-12 border-b border-slate-700 flex items-center px-4 gap-3 shrink-0 bg-slate-800">
+                     <div className="flex-1 min-h-[200px] bg-slate-900 border border-slate-700 rounded-2xl flex flex-col overflow-hidden shadow-inner">
+                        <div className="h-11 border-b border-slate-700 flex items-center px-4 gap-3 shrink-0 bg-slate-800">
                            <div className={`w-2.5 h-2.5 rounded-full ${isMicSending ? 'bg-emerald-500 animate-pulse' : 'bg-slate-500'}`}></div>
                            <span className="text-[12px] font-bold text-emerald-400 uppercase tracking-widest">
                                {liveStatus === 'CONNECTING' ? 'Connecting...' : 'Live Interview Transcript'}
                            </span>
                         </div>
-                        <div className="flex-1 p-6 overflow-y-auto custom-scrollbar text-[15px] text-slate-300 font-mono leading-[1.8]">
+                        <div className="flex-1 p-5 overflow-y-auto custom-scrollbar text-[14.5px] text-slate-200 font-mono leading-[1.8]">
                            {liveTranscript || <span className="opacity-50 italic">AI Examiner is listening...</span>}
                         </div>
                      </div>
                   )}
 
                   {/* KHUNG NOTES: TỰ THU GỌN KHI CÓ LIVE TRANSCRIPT */}
-                  <div className={`bg-white border border-slate-400 rounded-none flex flex-col overflow-hidden transition-all duration-300 ${liveStatus === 'IDLE' && !liveTranscript ? 'flex-1' : 'h-40 shrink-0'}`}>
-                    <div className="h-12 border-b border-slate-300 flex items-center px-4 gap-2 shrink-0 bg-[#e0e0e0]">
+                  <div className={`bg-white border border-slate-200/90 rounded-2xl shadow-sm flex flex-col overflow-hidden transition-all duration-300 ${liveStatus === 'IDLE' && !liveTranscript ? 'flex-1 min-h-[220px]' : 'h-40 shrink-0'}`}>
+                    <div className="h-11 border-b border-slate-200 flex items-center px-4 gap-2 shrink-0 bg-slate-50">
                        <NoteIcon />
-                       <span className="text-[13px] font-bold text-slate-800 uppercase tracking-widest">Notes</span>
+                       <span className="text-[12.5px] font-extrabold text-slate-700 uppercase tracking-widest">Notes</span>
                     </div>
                     <textarea 
-                      className="flex-1 w-full p-6 outline-none resize-none text-[15px] text-black font-sans custom-scrollbar leading-[1.8]"
+                      className="flex-1 w-full p-5 outline-none resize-none text-[15px] text-slate-900 font-sans custom-scrollbar leading-[1.8]"
                       placeholder="You can make some notes here..."
                       value={notes[currentQ.id] || ''}
                       onChange={(e) => setNotes(prev => ({...prev, [currentQ.id]: e.target.value}))}
@@ -695,26 +730,42 @@ export default function IeltsSpeaking({
                   </div>
               </div>
 
-              <div className="p-8 md:p-10 shrink-0">
-                  <div className="h-[90px] bg-white border border-slate-400 rounded-none flex items-center justify-between px-6">
+              <div className="p-5 sm:p-8 md:p-10 shrink-0">
+                  <div className="min-h-[82px] bg-white border border-slate-200/90 rounded-2xl shadow-sm flex items-center justify-between px-4 sm:px-6 py-3">
                       
                       {audioUrls[currentQ.id] ? (
-                         <div className="flex items-center gap-4 w-full">
-                            <button onClick={() => { const audio = new Audio(audioUrls[currentQ.id]); audio.play(); }} className="w-10 h-10 bg-slate-200 border border-slate-400 rounded-none flex items-center justify-center hover:bg-slate-300 text-black transition">
-                               <PlayIcon />
+                         <div className="flex items-center gap-3 sm:gap-4 w-full">
+                            <button
+                              type="button"
+                              onClick={() => toggleRecordingPlayback(audioUrls[currentQ.id])}
+                              className={`w-10 h-10 rounded-xl flex items-center justify-center transition cursor-pointer shrink-0 ${
+                                isPlayingRecording
+                                  ? 'bg-[#0a5482] text-white shadow-sm'
+                                  : 'bg-sky-50 border border-sky-200 hover:bg-sky-100 text-[#0a5482]'
+                              }`}
+                              title={isPlayingRecording ? 'Dừng phát' : 'Nghe lại bản ghi'}
+                            >
+                               {isPlayingRecording ? <span className="text-xs font-black">❚❚</span> : <PlayIcon />}
                             </button>
-                            <div className="flex-1 h-2 bg-slate-300 rounded-none overflow-hidden border border-slate-400">
-                               <div className="h-full bg-black w-full rounded-none"></div>
+                            <div className="flex-1 h-2 bg-slate-200 rounded-full overflow-hidden">
+                               <div className={`h-full rounded-full transition-all ${isPlayingRecording ? 'bg-[#2ab4e8] animate-pulse w-full' : 'bg-[#0a5482] w-full'}`}></div>
                             </div>
-                            <span className="text-[13px] font-bold text-black hidden sm:block">Interview Saved</span>
-                            <button onClick={deleteRecording} className="w-10 h-10 rounded-none text-black hover:text-white hover:bg-red-600 transition flex items-center justify-center ml-2 border border-slate-400" title="Delete & Retake">
+                            <span className="text-[13px] font-bold text-slate-700 hidden sm:block">
+                              {isPlayingRecording ? 'Đang phát...' : 'Interview Saved'}
+                            </span>
+                            <button
+                              type="button"
+                              onClick={() => { stopRecordingPlayback(); deleteRecording(); }}
+                              className="w-10 h-10 rounded-xl text-slate-600 hover:text-white hover:bg-rose-600 transition flex items-center justify-center border border-slate-200 cursor-pointer shrink-0"
+                              title="Xóa & Ghi lại"
+                            >
                                <TrashIcon />
                             </button>
                          </div>
                       ) : (
-                         <div className="flex items-center gap-6 w-full">
+                         <div className="flex items-center flex-wrap gap-3 sm:gap-5 w-full">
                             {liveStatus === 'IDLE' ? (
-                               <button onClick={startLiveCall} className="px-8 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-none flex items-center gap-3 transition active:scale-95 text-[15px] shadow-lg shadow-emerald-500/20">
+                               <button type="button" onClick={startLiveCall} className="px-6 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl flex items-center gap-2.5 transition active:scale-95 text-[14.5px] shadow-md shadow-emerald-600/20 cursor-pointer">
                                  📞 Bắt đầu gọi Giám khảo
                                </button>
                             ) : liveStatus === 'CONNECTING' ? (
@@ -722,18 +773,18 @@ export default function IeltsSpeaking({
                                   Đang kết nối...
                                </div>
                             ) : (
-                               <button onClick={stopLiveCall} className="px-8 py-3 bg-red-600 hover:bg-red-700 text-white font-bold rounded-none flex items-center gap-3 transition active:scale-95 text-[15px] shadow-lg shadow-red-500/20">
+                               <button type="button" onClick={stopLiveCall} className="px-6 py-2.5 bg-rose-600 hover:bg-rose-700 text-white font-bold rounded-xl flex items-center gap-2.5 transition active:scale-95 text-[14.5px] shadow-md shadow-rose-600/20 cursor-pointer">
                                  🛑 Kết thúc cuộc gọi
                                </button>
                             )}
                             
                             {liveStatus === 'CONNECTED' ? (
-                               <div className="font-mono text-[16px] text-emerald-600 font-bold tracking-widest tabular-nums flex items-center gap-2 ml-auto">
+                               <div className="font-mono text-[15px] text-emerald-600 font-bold tracking-wider tabular-nums flex items-center gap-2 ml-auto">
                                  <span className="w-2.5 h-2.5 bg-emerald-500 rounded-full animate-ping"></span>
-                                 {formatTime(recordingTime)} <span className="text-black">/ {formatTime(currentQ.maxTime)}</span>
+                                 {formatTime(recordingTime)} <span className="text-slate-700">/ {formatTime(currentQ.maxTime)}</span>
                                </div>
                             ) : liveStatus === 'IDLE' && (
-                               <div className="text-[13px] text-slate-800 font-bold tracking-widest uppercase ml-auto">Max time: {formatTime(currentQ.maxTime)}</div>
+                               <div className="text-[12.5px] text-slate-600 font-bold tracking-wider uppercase ml-auto">Max: {formatTime(currentQ.maxTime)}</div>
                             )}
                          </div>
                       )}
@@ -745,39 +796,40 @@ export default function IeltsSpeaking({
           </main>
 
           {/* Footer Navigation */}
-          <footer className="h-[60px] bg-white border-t border-slate-400 flex justify-between items-center px-6 shrink-0 select-none overflow-x-auto custom-scrollbar">
+          <footer className="h-[60px] bg-white border-t border-slate-300 flex justify-between items-center px-4 sm:px-6 shrink-0 select-none overflow-x-auto custom-scrollbar">
              
              <div className="flex items-center h-full shrink-0">
-                <label className="flex items-center gap-2 cursor-pointer h-full pr-6 border-r border-slate-400">
+                <label className="flex items-center gap-2 cursor-pointer h-full pr-4 sm:pr-6 border-r border-slate-200">
                    <input 
                      type="checkbox" 
-                     className="w-4 h-4 cursor-pointer accent-black" 
+                     className="w-4 h-4 cursor-pointer accent-[#0a5482]" 
                      checked={!!reviewFlags[currentQIndex]}
                      onChange={handleReviewToggle}
                    />
-                   <span className="text-[14px] font-bold text-black mt-0.5 whitespace-nowrap">Review</span>
+                   <span className="text-[13px] sm:text-[14px] font-bold text-slate-700 whitespace-nowrap">Review</span>
                 </label>
                 
-                <div className="flex items-center gap-3 h-full pl-6">
+                <div className="flex items-center gap-2 h-full pl-4 sm:pl-6">
                    {allQuestions.map((q, idx) => {
                       const isActive = idx === currentQIndex;
                       const isReview = reviewFlags[idx];
                       const isAnswered = !!recordedBlobs[q.id];
                       
-                      const shapeClass = isReview ? 'rounded-full' : 'rounded-none';
+                      const shapeClass = isReview ? 'rounded-full' : 'rounded-lg';
                       
-                      let bgClass = 'bg-white text-black border-slate-400 hover:bg-slate-200';
+                      let bgClass = 'bg-white text-slate-700 border-slate-300 hover:bg-slate-100';
                       if (isActive) {
-                          bgClass = 'bg-slate-900 text-white border-black shadow-inner';
+                          bgClass = 'bg-[#0a5482] text-white border-[#0a5482] shadow-sm';
                       } else if (isAnswered) {
-                          bgClass = 'bg-emerald-100 text-emerald-800 border-emerald-500 font-black';
+                          bgClass = 'bg-emerald-100 text-emerald-800 border-emerald-400 font-black';
                       }
 
                       return (
                         <button 
-                          key={q.id} 
+                          key={q.id}
+                          type="button"
                           onClick={() => goToQuestion(idx)}
-                          className={`w-8 h-9 flex items-center justify-center font-bold text-[13px] border transition-all ${shapeClass} ${bgClass}`}
+                          className={`w-8 h-9 flex items-center justify-center font-bold text-[13px] border transition-all cursor-pointer ${shapeClass} ${bgClass}`}
                           title={`Part ${q.partIndex + 1} - Question ${idx + 1}`}
                         >
                           {idx + 1}
@@ -787,15 +839,16 @@ export default function IeltsSpeaking({
                 </div>
              </div>
 
-             <div className="flex items-center gap-6 shrink-0 pl-6">
-                <div className="flex items-center gap-3">
-                   <button onClick={goToPrev} disabled={currentQIndex === 0} className="w-9 h-9 flex items-center justify-center text-black hover:bg-slate-200 border border-slate-400 bg-white rounded-none transition disabled:opacity-30">←</button>
-                   <button onClick={goToNext} disabled={currentQIndex === totalQuestions - 1} className="w-9 h-9 flex items-center justify-center text-black hover:bg-slate-200 border border-slate-400 bg-white rounded-none transition disabled:opacity-30">→</button>
+             <div className="flex items-center gap-3 sm:gap-5 shrink-0 pl-4">
+                <div className="flex items-center gap-2">
+                   <button type="button" onClick={goToPrev} disabled={currentQIndex === 0} className="w-9 h-9 flex items-center justify-center text-slate-700 hover:bg-slate-100 border border-slate-300 bg-white rounded-lg transition disabled:opacity-30 cursor-pointer">←</button>
+                   <button type="button" onClick={goToNext} disabled={currentQIndex === totalQuestions - 1} className="w-9 h-9 flex items-center justify-center text-slate-700 hover:bg-slate-100 border border-slate-300 bg-white rounded-lg transition disabled:opacity-30 cursor-pointer">→</button>
                 </div>
                 
                 <button 
+                  type="button"
                   onClick={handleFinalSubmit}
-                  className="bg-slate-900 hover:bg-black text-white px-8 py-2.5 rounded-none text-[14px] font-bold transition active:scale-95 uppercase tracking-wide"
+                  className="bg-[#0a5482] hover:bg-[#084266] text-white px-6 sm:px-7 py-2 rounded-xl text-[13px] sm:text-[14px] font-black transition active:scale-95 uppercase tracking-wide shadow-sm cursor-pointer"
                 >
                   Nộp bài
                 </button>
@@ -808,83 +861,90 @@ export default function IeltsSpeaking({
 
       {/* MÀN HÌNH HIỂN THỊ KẾT QUẢ CHẤM ĐIỂM */}
       {isSubmitted && aiResult && (
-        <main className="flex-1 overflow-y-auto p-4 md:p-8 custom-scrollbar bg-[#f4f4f4]">
-          <div className="max-w-6xl mx-auto space-y-8">
+        <main className="flex-1 overflow-y-auto p-4 md:p-8 custom-scrollbar bg-slate-50">
+          <div className="max-w-5xl mx-auto space-y-6">
             
-            <div className="bg-white p-8 rounded-none border border-slate-400 flex flex-col md:flex-row gap-8 items-center justify-center relative">
-              <div className="text-center w-full">
-                <span className="text-sm font-bold text-slate-600 uppercase tracking-widest block mb-2">
-                    Overall Band Score
-                </span>
-                <span className="text-6xl font-black text-black border-4 border-black px-8 py-4 rounded-none inline-block mx-auto">
-                    {aiResult.overall}
-                </span>
-                
-                {/* 🚀 NÚT GỌI GIA SƯ CHỮA BÀI XỊN SÒ */}
-                <button 
-                  onClick={() => {
-                    const tutorContext = {
-                      transcript: aiResult.transcript,
-                      criteria: aiResult.criteria,
-                      feedback: JSON.stringify(aiResult.detailedFeedback || aiResult.feedback),
-                      overall: aiResult.overall
-                    };
-                    sessionStorage.setItem('tony_live_mode', 'TUTOR');
-                    sessionStorage.setItem('tony_tutor_data', JSON.stringify(tutorContext));
-                    sessionStorage.setItem('tony_auto_start', 'true');
-                    window.dispatchEvent(new CustomEvent('tony-navigate', { detail: 'live-test' }));
-                  }}
-                  className="mt-8 mx-auto bg-slate-900 hover:bg-emerald-600 text-white font-bold py-3 px-8 rounded-none transition-all flex items-center justify-center gap-2 shadow-lg hover:scale-105 active:scale-95"
-                >
-                  <span className="text-xl">📞</span> Gọi Gia sư giải thích lỗi sai
-                </button>
-
+            <div className="bg-gradient-to-br from-[#073b5c] via-[#0a5482] to-[#0f172a] p-7 sm:p-9 rounded-3xl shadow-xl border border-sky-400/20 text-white relative overflow-hidden">
+              <div className="absolute -top-16 -right-16 w-56 h-56 bg-[#2ab4e8]/20 blur-3xl rounded-full pointer-events-none" />
+              <div className="relative z-10 flex flex-col md:flex-row gap-6 items-center justify-between">
+                <div className="text-center md:text-left">
+                  <span className="inline-flex items-center gap-1.5 text-xs font-extrabold uppercase tracking-widest text-[#2ab4e8] mb-2">
+                    🎙️ IELTS Speaking AI Evaluation
+                  </span>
+                  <h2 className="text-2xl sm:text-3xl font-black tracking-tight mb-2">{basicInfo.title}</h2>
+                  <button 
+                    type="button"
+                    onClick={() => {
+                      const tutorContext = {
+                        transcript: aiResult.transcript,
+                        criteria: aiResult.criteria,
+                        feedback: JSON.stringify(aiResult.detailedFeedback || aiResult.feedback),
+                        overall: aiResult.overall
+                      };
+                      sessionStorage.setItem('tony_live_mode', 'TUTOR');
+                      sessionStorage.setItem('tony_tutor_data', JSON.stringify(tutorContext));
+                      sessionStorage.setItem('tony_auto_start', 'true');
+                      window.dispatchEvent(new CustomEvent('tony-navigate', { detail: 'live-test' }));
+                    }}
+                    className="mt-2 inline-flex items-center justify-center gap-2 bg-[#2ab4e8] hover:bg-[#1fa0d4] text-white font-black py-2.5 px-6 rounded-xl transition-all shadow-lg active:scale-95 cursor-pointer text-sm"
+                  >
+                    <span>📞</span> Gọi Gia sư AI giải thích lỗi sai
+                  </button>
+                </div>
+                <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl px-8 py-4 text-center shrink-0">
+                  <span className="text-[11px] font-extrabold text-sky-200 uppercase tracking-widest block mb-1">
+                      Overall Band
+                  </span>
+                  <span className="text-5xl sm:text-6xl font-black text-white tabular-nums">
+                      {aiResult.overall}
+                  </span>
+                </div>
               </div>
             </div>
 
-            <div className="bg-white p-8 rounded-none border border-slate-400">
-                <h3 className="font-black text-xl text-black mb-4 flex items-center gap-2">💡 Nhận xét tổng quan</h3>
-                <div className="p-5 bg-[#e0e0e0] border border-slate-400 rounded-none text-[15px] leading-[1.8] font-bold text-black font-sans">
+            <div className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/90 shadow-sm">
+                <h3 className="font-black text-lg text-[#0a5482] mb-3.5 flex items-center gap-2">💡 Nhận xét tổng quan</h3>
+                <div className="p-5 bg-sky-50/70 border border-sky-200/70 rounded-xl text-[15px] leading-[1.8] font-medium text-slate-800 font-sans">
                   {aiResult.generalFeedback || 'Hệ thống đã ghi nhận bài thi Speaking của bạn.'}
                 </div>
             </div>
 
-            <div className="bg-white p-8 rounded-none border border-slate-400">
-                <div className="flex justify-between items-center mb-6 pb-4 border-b border-slate-400">
-                  <h3 className="font-black text-2xl text-black">Chi tiết các tiêu chí</h3>
+            <div className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/90 shadow-sm space-y-6">
+                <div className="flex justify-between items-center pb-4 border-b border-slate-200">
+                  <h3 className="font-black text-xl text-slate-900">Chi tiết các tiêu chí</h3>
                 </div>
                 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-                   <div className="bg-[#f4f4f4] p-5 rounded-none border border-slate-400 text-center">
-                      <div className="text-[12px] text-slate-800 font-bold uppercase mb-2">Pronunciation</div>
-                      <div className="text-3xl font-black text-black">{aiResult.criteria?.pronunciation || 0.0}</div>
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                   <div className="bg-slate-50 p-5 rounded-2xl border border-slate-200/80 text-center">
+                      <div className="text-[11px] text-slate-500 font-extrabold uppercase tracking-wider mb-1.5">Pronunciation</div>
+                      <div className="text-3xl font-black text-[#0a5482] tabular-nums">{aiResult.criteria?.pronunciation || 0.0}</div>
                    </div>
-                   <div className="bg-[#f4f4f4] p-5 rounded-none border border-slate-400 text-center">
-                      <div className="text-[12px] text-slate-800 font-bold uppercase mb-2">Grammar</div>
-                      <div className="text-3xl font-black text-black">{aiResult.criteria?.grammar || 0.0}</div>
+                   <div className="bg-slate-50 p-5 rounded-2xl border border-slate-200/80 text-center">
+                      <div className="text-[11px] text-slate-500 font-extrabold uppercase tracking-wider mb-1.5">Grammar</div>
+                      <div className="text-3xl font-black text-[#0a5482] tabular-nums">{aiResult.criteria?.grammar || 0.0}</div>
                    </div>
-                   <div className="bg-[#f4f4f4] p-5 rounded-none border border-slate-400 text-center">
-                      <div className="text-[12px] text-slate-800 font-bold uppercase mb-2">Lexical Resource</div>
-                      <div className="text-3xl font-black text-black">{aiResult.criteria?.lexicalResource || 0.0}</div>
+                   <div className="bg-slate-50 p-5 rounded-2xl border border-slate-200/80 text-center">
+                      <div className="text-[11px] text-slate-500 font-extrabold uppercase tracking-wider mb-1.5">Lexical Resource</div>
+                      <div className="text-3xl font-black text-[#0a5482] tabular-nums">{aiResult.criteria?.lexicalResource || 0.0}</div>
                    </div>
-                   <div className="bg-[#f4f4f4] p-5 rounded-none border border-slate-400 text-center">
-                      <div className="text-[12px] text-slate-800 font-bold uppercase mb-2">Fluency</div>
-                      <div className="text-3xl font-black text-black">{aiResult.criteria?.fluency || 0.0}</div>
+                   <div className="bg-slate-50 p-5 rounded-2xl border border-slate-200/80 text-center">
+                      <div className="text-[11px] text-slate-500 font-extrabold uppercase tracking-wider mb-1.5">Fluency</div>
+                      <div className="text-3xl font-black text-[#0a5482] tabular-nums">{aiResult.criteria?.fluency || 0.0}</div>
                    </div>
                 </div>
 
-                <div className="space-y-6 mt-8">
+                <div className="space-y-5 pt-2">
                    <div>
-                      <h4 className="font-black text-black mb-3 uppercase tracking-widest text-[13px]">🎧 Bóc băng (Transcript)</h4>
-                      <div className="p-5 bg-white border border-slate-400 rounded-none text-[15px] leading-[1.8] font-sans text-black italic whitespace-pre-wrap">
+                      <h4 className="font-black text-slate-800 mb-2.5 uppercase tracking-widest text-[12px]">🎧 Bóc băng (Transcript)</h4>
+                      <div className="p-5 bg-amber-50/70 border border-amber-200/80 rounded-xl text-[15px] leading-[1.8] font-sans text-slate-800 italic whitespace-pre-wrap">
                          "{aiResult.transcript}"
                       </div>
                    </div>
                    
                    {aiResult.detailedFeedback && (
                    <div>
-                      <h4 className="font-black text-black mb-3 uppercase tracking-widest text-[13px]">💡 Gợi ý sửa lỗi</h4>
-                      <div className="p-5 bg-[#e0e0e0] border border-slate-400 rounded-none text-[15px] leading-[1.8] font-medium text-black whitespace-pre-wrap font-sans">
+                      <h4 className="font-black text-slate-800 mb-2.5 uppercase tracking-widest text-[12px]">💡 Gợi ý sửa lỗi chi tiết</h4>
+                      <div className="p-5 bg-slate-50 border border-slate-200/80 rounded-xl text-[15px] leading-[1.8] font-medium text-slate-800 whitespace-pre-wrap font-sans">
                          {aiResult.detailedFeedback}
                       </div>
                    </div>

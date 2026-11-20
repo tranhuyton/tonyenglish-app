@@ -1362,8 +1362,8 @@ export default function StudentManagement({ mode = 'offline', onStartTest, autoS
                   {studentHistory.length === 0 ? (
                     <div className="py-16 text-center border-2 border-dashed border-slate-200 rounded-xl text-slate-400 font-medium">Học viên này chưa nộp bài thi nào.</div>
                   ) : (
-                    <div className="border border-slate-200 rounded-xl overflow-hidden">
-                      <table className="w-full text-left border-collapse">
+                    <div className="border border-slate-200 rounded-xl overflow-x-auto">
+                      <table className="w-full min-w-[640px] text-left border-collapse">
                         <thead className="bg-[#f8fafc] text-[11px] font-black uppercase tracking-wider text-slate-500 border-b border-slate-200">
                           <tr>
                             <th className="px-5 py-3">Tên bài thi</th>

@@ -1350,7 +1350,7 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
                      )}
                      <button 
                          onClick={handleUserHangUp} 
-                         className="flex-1 bg-slate-800 hover:bg-red-50 text-slate-300 hover:text-white font-bold py-2 rounded-xl text-[12px] md:text-[13px] transition-all flex items-center justify-center gap-2 border border-slate-600 hover:border-red-500"
+                         className="flex-1 bg-slate-800 hover:bg-red-600 text-slate-300 hover:text-white font-bold py-2 rounded-xl text-[12px] md:text-[13px] transition-all flex items-center justify-center gap-2 border border-slate-600 hover:border-red-500"
                      >
                          🛑 Dập máy
                      </button>

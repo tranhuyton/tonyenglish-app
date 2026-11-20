@@ -1,38 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
+import {
+  Home,
+  GraduationCap,
+  Phone,
+  MessageCircle,
+  BookOpen,
+  History,
+  ChevronDown,
+  ChevronUp,
+} from 'lucide-react';
 import { supabase } from '../lib/supabase';
 import { useApp } from '../context/AppContext';
 import { fixLegacyHtmlContent, updatePageSeo } from '../lib/utils';
-import {
-  trackTonyContact,
-  trackTonyVerifiedCallbackLead,
-} from '../../lib/googleAnalytics';
-
-interface SyllabusPackageItem {
-  id: string;
-  category: 'comm' | 'office' | 'ielts' | 'igcse' | 'sat';
-  courseSlug: string;
-  badge: string;
-  title: string;
-  subtitle: string;
-  icon: string;
-  gradient: string;
-  accentColor: string;
-  stats: string[];
-  highlights: string[];
-  lmsCourseTitles: string[];
-}
+import { trackTonyContact } from '../../lib/googleAnalytics';
 
 const CONTACT_ZALO_URL = 'https://zalo.me/0935058688';
-const CONTACT_MESSENGER_PAGE = 'TonyEnglish.vn';
 const CONTACT_PHONE = '0935058688';
 const CONTACT_PHONE_DISPLAY = '0935 058 688';
-
-const buildMessengerConsultUrl = (courseName: string) => {
-  const cleanTitle = (courseName || 'IELTS / IGCSE').trim();
-  const prefill = `Chào thầy Tony, chị muốn hỏi lộ trình, học phí & lịch học thử khóa ${cleanTitle} tại R2B Royal City cho con ạ.`;
-  return `https://m.me/${CONTACT_MESSENGER_PAGE}?text=${encodeURIComponent(prefill)}`;
-};
 
 // Button tap fires Contact only (prevents premature Lead inflation from cancelled calls / blocked WebView popups)
 const trackCourseConversion = (method: 'Zalo' | 'Phone' | 'Messenger', courseName: string) => {
@@ -49,176 +34,12 @@ const trackCourseConversion = (method: 'Zalo' | 'Phone' | 'Messenger', courseNam
   } catch (e) {}
 };
 
-// Verified Lead fires ONLY when parent submits a real 10-digit Vietnamese phone number
-const trackVerifiedLead = (courseName: string) => {
-  trackTonyVerifiedCallbackLead(courseName);
-  try {
-    const w = window as any;
-    if (typeof w.fbq === 'function') {
-      w.fbq('track', 'Lead', {
-        site_domain: 'tonyenglish.vn',
-        content_name: courseName,
-        contact_method: 'CallbackForm',
-      });
-      w.fbq('track', 'CompleteRegistration', {
-        site_domain: 'tonyenglish.vn',
-        content_name: courseName,
-      });
-    }
-  } catch (e) {}
-};
-
-const normalizeVnPhone = (raw: string): string | null => {
-  const digits = (raw || '').replace(/[\s\.\-\(\)]/g, '').replace(/^\+84/, '0').replace(/^84(?=\d{9}$)/, '0');
-  if (/^0[35789]\d{8}$/.test(digits)) {
-    return digits;
-  }
-  return null;
-};
-
-// Helper to strip [color:...] tags and optional leading numbers (e.g. "1. ")
-const cleanCurriculumTitle = (raw: string, stripLeadingNumber = false): string => {
-  let text = (raw || '')
-    .replace(/\s*\[color:[^\]]*\]/gi, '')
-    .replace(/\s*\[bg:[^\]]*\]/gi, '')
+// Normalize legacy course naming typos / spacing for cleaner display
+const normalizeCourseDisplayName = (raw: string): string =>
+  (raw || '')
+    .replace(/IGCSE\s*\/\s*Alevel/gi, 'IGCSE / A-Level')
+    .replace(/Giao Tiếp Căn bản/g, 'Giao tiếp Căn bản')
     .trim();
-  if (stripLeadingNumber) {
-    text = text.replace(/^\d+[\.\)]\s*/, '').trim();
-  }
-  return text;
-};
-
-const COURSE_SYLLABUS_PACKAGES: SyllabusPackageItem[] = [
-  {
-    id: 'ielts-premium',
-    category: 'ielts',
-    courseSlug: 'ielts',
-    badge: 'LUYỆN THI IELTS 1 KÈM 1 & LMS',
-    title: 'IELTS Premium Toàn Diện (4 Kỹ Năng)',
-    subtitle:
-      'Lộ trình bài bản từ nền tảng đến Band 7.0+ tích hợp phòng thi máy tính chuẩn IDP/BC & AI chấm chữa 24/7',
-    icon: '🏆',
-    gradient: 'from-sky-600 via-[#0a5482] to-indigo-900',
-    accentColor: 'text-sky-600 bg-sky-50 border-sky-200',
-    stats: ['9 Học phần chuyên sâu', '70+ Bài giảng tương tác', '367+ Đề luyện thi thực chiến'],
-    highlights: [
-      'Giao diện thi thử trên máy tính giống 100% phòng thi thật (Highlight, Note, Audio chuẩn)',
-      'AI Giám khảo chấm chữa chi tiết IELTS Writing Task 1, Task 2 & Luyện phản xạ Speaking 1-1',
-      'Video bài giảng & hệ thống bài tập thực hành gắn liền ngay trong từng bài học',
-      'Kết hợp kèm cặp 1 kèm 1 cá nhân hóa theo đúng mục tiêu Band điểm và thời gian thi của học viên',
-    ],
-    lmsCourseTitles: ['IELTS Premium'],
-  },
-  {
-    id: 'reflex-communication',
-    category: 'comm',
-    courseSlug: 'english-communication 1',
-    badge: 'GIAO TIẾP & PHẢN XẠ 1 KÈM 1',
-    title: 'Giao Tiếp & Phản Xạ Thực Chiến Cùng AI',
-    subtitle:
-      'Xóa bỏ nỗi sợ nói tiếng Anh với 160+ bài giảng Phát âm IPA, tình huống giao tiếp, Podcast hội thoại & phòng luyện nói 1-1',
-    icon: '🎙️',
-    gradient: 'from-indigo-600 via-violet-700 to-purple-900',
-    accentColor: 'text-indigo-600 bg-indigo-50 border-indigo-200',
-    stats: ['20 Học phần chủ đề', '160+ Bài giảng & Podcast', '102 Bài luyện phản xạ'],
-    highlights: [
-      'Chuẩn hóa phát âm bảng IPA, trọng âm, ngữ điệu và nối âm tự nhiên như người bản xứ (Pronunciation Mastery)',
-      'Luyện nghe - nói qua các tình huống giao tiếp đời sống, công việc và thảo luận chủ đề xã hội',
-      'Đàm thoại trực tiếp 1 kèm 1 cùng Thầy Tony & AI Tutor thông minh, sửa lỗi phát âm & ngữ pháp tức thì',
-      'Hệ thống Podcast hội thoại song ngữ giúp tắm ngôn ngữ và hình thành phản xạ tự nhiên',
-    ],
-    lmsCourseTitles: ['Phát Âm', 'Pronunciation', 'Giao tiếp và phản xạ'],
-  },
-  {
-    id: 'office-english',
-    category: 'office',
-    courseSlug: 'advanced-english-communication',
-    badge: 'TIẾNG ANH CÔNG SỞ & THƯƠNG MẠI',
-    title: 'Tiếng Anh Văn Phòng & Giao Tiếp Nâng Cao',
-    subtitle:
-      'Làm chủ tiếng Anh nơi công sở với 13 chuyên đề văn phòng, kỹ năng viết Email chuyên nghiệp và Thành ngữ giao tiếp',
-    icon: '💼',
-    gradient: 'from-emerald-600 via-teal-700 to-cyan-900',
-    accentColor: 'text-emerald-700 bg-emerald-50 border-emerald-200',
-    stats: ['15 Học phần chuyên sâu', '100+ Bài giảng tình huống', '3 Bước luyện trí nhớ độc quyền'],
-    highlights: [
-      'Trọn bộ 13 chuyên đề Tiếng Anh văn phòng: Công sở, Ngân hàng, Kinh doanh, Đàm phán, Công tác, Nhân sự, Mua hàng...',
-      'Phương pháp 3 bước trên mỗi bài học: Nghe & Đọc hiểu — Đối chiếu Song ngữ — Learn by Heart (Luyện trí nhớ)',
-      'Chuyên đề Viết thư tín & Email tiếng Anh thương mại chuyên nghiệp cho người đi làm',
-      'Hệ thống Thành ngữ & Cụm từ thông dụng (Idioms & Phrases) giúp giao tiếp tự nhiên, thuyết phục',
-    ],
-    lmsCourseTitles: ['Tiếng Anh văn phòng', 'Giao tiếp và phản xạ'],
-  },
-  {
-    id: 'igcse-sciences',
-    category: 'igcse',
-    courseSlug: 'luyen-thi-igcse-alevel-cap-toc',
-    badge: 'CAMBRIDGE IGCSE 1 KÈM 1',
-    title: 'Tổ Hợp Khoa Học Quốc Tế Cambridge IGCSE Sciences',
-    subtitle: 'Bao gồm: Co-ordinated Sciences (0654), Biology (0610), Chemistry (0620), Physics (0625)',
-    icon: '🧬',
-    gradient: 'from-blue-700 via-indigo-800 to-slate-900',
-    accentColor: 'text-blue-700 bg-blue-50 border-blue-200',
-    stats: ['Song ngữ Anh - Việt', '60+ Bài giảng & Mô phỏng', '600+ Đề Past Papers & Topical'],
-    highlights: [
-      'Bài giảng thiết kế trực quan kèm bản dịch song ngữ Anh - Việt & Audio giảng bài từng mục',
-      'Mô phỏng thí nghiệm khoa học tương tác trực tiếp ngay trên trang bài giảng',
-      'Kho đề thi Past Papers (Paper 2, Paper 4, Paper 6) phân loại theo chuyên đề & năm thi',
-      'AI chấm điểm câu hỏi tự luận bám sát Marking Scheme chuẩn Cambridge kết hợp kèm 1-1',
-    ],
-    lmsCourseTitles: [
-      'IGCSE Co-ordinated Sciences (0654)',
-      'IGCSE Biology (0610)',
-      'IGCSE Chemistry (0620)',
-      'IGCSE Physics (0625)',
-    ],
-  },
-  {
-    id: 'igcse-business-econ',
-    category: 'igcse',
-    courseSlug: 'luyen-thi-igcse-alevel-cap-toc',
-    badge: 'CAMBRIDGE IGCSE 1 KÈM 1',
-    title: 'Kinh Tế & Kinh Doanh Quốc Tế (Economics 0455 & Business 0450)',
-    subtitle:
-      'Làm chủ thuật ngữ kinh tế, phân tích Case Study và kỹ năng viết luận đạt điểm A/A* kỳ thi Cambridge IGCSE',
-    icon: '📈',
-    gradient: 'from-amber-600 via-orange-700 to-rose-900',
-    accentColor: 'text-amber-700 bg-amber-50 border-amber-200',
-    stats: ['14 Học phần chuyên đề', '69 Bài giảng song ngữ', '155+ Đề thi & Case Study'],
-    highlights: [
-      'Cấu trúc bài giảng 4 trang độc quyền: Bản tiếng Anh, Bản tiếng Việt, Câu hỏi mẫu Paper 2 & Syllabus',
-      'Tích hợp Audio Podcast giảng giải khái niệm kinh tế - doanh nghiệp dễ hiểu, sinh động',
-      'Luyện tập Case Study chia đôi màn hình (Split-Screen) kèm AI chấm chữa theo Rubric Cambridge',
-      'Lộ trình kèm 1-1 cá nhân hóa giúp học sinh nắm chắc kiến thức và kỹ thuật làm bài đạt A/A*',
-    ],
-    lmsCourseTitles: ['IGCSE Economics (0455)', 'IGCSE Business Studies (0450)'],
-  },
-  {
-    id: 'igcse-geo-math-esl',
-    category: 'igcse',
-    courseSlug: 'luyen-thi-igcse-alevel-cap-toc',
-    badge: 'CAMBRIDGE IGCSE 1 KÈM 1',
-    title: 'IGCSE Geography (0460), Maths (0580 / 0606) & ESL (0510)',
-    subtitle:
-      'Trọn bộ bài giảng tương tác, Podcast học thuật và kho đề luyện thi chuyên sâu cho học sinh trường Quốc tế & Song ngữ',
-    icon: '🌍',
-    gradient: 'from-cyan-700 via-sky-800 to-slate-900',
-    accentColor: 'text-cyan-700 bg-cyan-50 border-cyan-200',
-    stats: ['15+ Học phần', '65+ Bài giảng & Podcast', '160+ Đề luyện chuyên sâu'],
-    highlights: [
-      'Geography 0460: Đầy đủ 11 chuyên đề kèm bản đồ, biểu đồ, Case Study & Podcast song ngữ',
-      'Mathematics 0580 & Additional Maths 0606: Hệ thống công thức, ví dụ minh họa từng bước dễ hiểu',
-      'English as a Second Language (0510): Luyện chuyên sâu Reading, Writing, Listening chuẩn format mới',
-      'Hỗ trợ lộ trình kèm 1-1 cá nhân hóa và lịch báo bài tự động theo mục tiêu kỳ thi',
-    ],
-    lmsCourseTitles: [
-      'IGCSE Geography (0460)',
-      'IGCSE Mathematics (0580)',
-      'IGCSE Additional Mathematics (0606)',
-      'IGCSE English as a Second Language (0510)',
-    ],
-  },
-];
 
 // Hidden course IDs ("Ngữ pháp và Từ vựng" / Grammar and Vocabulary)
 const isHiddenCourseCategory = (c: any) => {
@@ -246,11 +67,12 @@ export const CoursesPage: React.FC = () => {
   };
 
   const [allCategories, setAllCategories] = useState<any[]>([]);
+  const [categoriesLoaded, setCategoriesLoaded] = useState(false);
   const [currentCourse, setCurrentCourse] = useState<any | null>(null);
-  const [lectureCount, setLectureCount] = useState(0);
   const [openParentId, setOpenParentId] = useState<number | null>(null);
   const [mobileCateOpen, setMobileCateOpen] = useState(false);
   const [showMobileStickyBar, setShowMobileStickyBar] = useState(false);
+  const [showLegacyGallery, setShowLegacyGallery] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -261,90 +83,42 @@ export const CoursesPage: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // LMS Curriculum data (for course syllabus modal)
-  const [lmsCoursesWithModules, setLmsCoursesWithModules] = useState<
-    Array<{
-      id: string;
-      title: string;
-      modules: Array<{ id: string; title: string; lectures: Array<{ id: string; title: string }> }>;
-    }>
-  >([]);
-  const [expandedModuleIds, setExpandedModuleIds] = useState<Record<string, boolean>>({});
-
-  // Syllabus popup modal state
-  const [showSyllabusModal, setShowSyllabusModal] = useState(false);
-  const [showLegacyGallery, setShowLegacyGallery] = useState(false);
-
-  // Load course categories & LMS curriculum once on mount so switching courses is instant
+  // Load course categories once on mount (removed 3 unused LMS curriculum queries for faster landing page load)
   useEffect(() => {
-    async function loadCoursesAndCurriculum() {
-      const [cateRes, lmsCourseRes, lmsModRes, lmsLecRes] = await Promise.all([
-        supabase
+    async function loadCourseCategories() {
+      try {
+        const { data } = await supabase
           .from('te_course_category')
           .select('*')
           .eq('deleted', 0)
           .eq('cc_status', 1)
-          .order('cc_order', { ascending: true }),
-        supabase.from('courses').select('id, title, order_index').order('order_index', { ascending: true }),
-        supabase
-          .from('lecture_modules')
-          .select('id, course_id, title, order_index')
-          .order('order_index', { ascending: true }),
-        supabase
-          .from('lectures')
-          .select('id, module_id, title, order_index')
-          .order('order_index', { ascending: true }),
-      ]);
+          .order('cc_order', { ascending: true });
 
-      // Build structured LMS curriculum tree (excluding Grammar and Vocabulary, stripping [color:...] tags)
-      if (lmsCourseRes.data && lmsModRes.data) {
-        const lecsByMod: Record<string, Array<{ id: string; title: string }>> = {};
-        (lmsLecRes.data || []).forEach((l: any) => {
-          if (!lecsByMod[l.module_id]) lecsByMod[l.module_id] = [];
-          lecsByMod[l.module_id].push({
-            id: l.id,
-            title: cleanCurriculumTitle(l.title, true),
-          });
-        });
-
-        const modsByCourse: Record<
-          string,
-          Array<{ id: string; title: string; lectures: Array<{ id: string; title: string }> }>
-        > = {};
-        (lmsModRes.data || []).forEach((m: any) => {
-          if (!modsByCourse[m.course_id]) modsByCourse[m.course_id] = [];
-          modsByCourse[m.course_id].push({
-            id: m.id,
-            title: cleanCurriculumTitle(m.title, true),
-            lectures: lecsByMod[m.id] || [],
-          });
-        });
-
-        const structured = (lmsCourseRes.data || [])
-          .filter((c: any) => (c.title || '').trim().toLowerCase() !== 'grammar and vocabulary')
-          .map((c: any) => ({
-            id: c.id,
-            title: cleanCurriculumTitle(c.title, false),
-            modules: modsByCourse[c.id] || [],
-          }))
-          .filter((c) => c.modules.length > 0);
-
-        setLmsCoursesWithModules(structured);
-      }
-
-      if (cateRes.data) {
-        const visibleCategories = cateRes.data.filter((c: any) => !isHiddenCourseCategory(c));
-        setAllCategories(visibleCategories);
+        if (data) {
+          const visibleCategories = data.filter((c: any) => !isHiddenCourseCategory(c));
+          setAllCategories(visibleCategories);
+        }
+      } finally {
+        setCategoriesLoaded(true);
       }
     }
-    loadCoursesAndCurriculum();
+    loadCourseCategories();
   }, []);
 
   // Jump to top immediately whenever user navigates to a different course slug
   useEffect(() => {
-    setShowSyllabusModal(false);
     scrollToCourseTop();
   }, [slug, location.pathname, location.search]);
+
+  const hasRequestedCourseSlug = (() => {
+    if (slug && slug.toLowerCase() !== 'online') return true;
+    try {
+      const params = new URLSearchParams(location.search);
+      return Boolean(params.get('course'));
+    } catch {
+      return false;
+    }
+  })();
 
   // Resolve currentCourse synchronously from loaded categories whenever slug changes
   useEffect(() => {
@@ -373,13 +147,6 @@ export const CoursesPage: React.FC = () => {
       if (found) {
         setCurrentCourse(found);
         setOpenParentId(found.cc_parent === 0 ? found.cc_id : found.cc_parent);
-        supabase
-          .from('te_lecture')
-          .select('lecture_id', { count: 'exact', head: true })
-          .eq('deleted', 0)
-          .eq('lecture_status', 1)
-          .eq('cc_id', found.cc_id)
-          .then(({ count }) => setLectureCount(count || 0));
       } else {
         setCurrentCourse(null);
       }
@@ -390,157 +157,21 @@ export const CoursesPage: React.FC = () => {
     }
   }, [slug, location.search, allCategories]);
 
+  const isResolvingSpecificCourse = hasRequestedCourseSlug && !categoriesLoaded;
+
   const homeParents = allCategories.filter(
     (c) => Number(c.cc_parent) === 0 && Number(c.cc_homedisplay) === 1 && !isHiddenCourseCategory(c)
   );
   const subCategories = (parentId: number) =>
     allCategories.filter((c) => Number(c.cc_parent) === Number(parentId) && !isHiddenCourseCategory(c));
 
-  const hasSubCategories = currentCourse
-    ? allCategories.some((c) => Number(c.cc_parent) === Number(currentCourse.cc_id) && !isHiddenCourseCategory(c))
-    : false;
-
-  // Match current course to its Online Syllabus Packages & LMS Curriculum Modules
-  const getMatchedSyllabusData = (course: any | null) => {
-    if (!course) {
-      return {
-        packages: COURSE_SYLLABUS_PACKAGES,
-        lmsCourses: lmsCoursesWithModules,
-      };
-    }
-
-    const cid = Number(course.cc_id);
-    const pid = Number(course.cc_parent);
-
-    // 1. Giao tiếp căn bản (111) & children: Phát âm (114), Luyện phản xạ (115), Tình huống giao tiếp (116)
-    if (cid === 111 || pid === 111) {
-      const pkgs = COURSE_SYLLABUS_PACKAGES.filter((p) => p.category === 'comm');
-      if (cid === 114) {
-        return {
-          packages: pkgs,
-          lmsCourses: lmsCoursesWithModules.filter((c) => c.title === 'Phát Âm' || c.title === 'Pronunciation'),
-        };
-      }
-      if (cid === 115) {
-        return {
-          packages: pkgs,
-          lmsCourses: lmsCoursesWithModules
-            .filter((c) => c.title === 'Giao tiếp và phản xạ')
-            .map((c) => ({
-              ...c,
-              modules: c.modules.filter((_, idx) => idx < 5),
-            })),
-        };
-      }
-      if (cid === 116) {
-        return {
-          packages: pkgs,
-          lmsCourses: lmsCoursesWithModules
-            .filter((c) => c.title === 'Giao tiếp và phản xạ')
-            .map((c) => ({
-              ...c,
-              modules: c.modules.filter((_, idx) => idx >= 5 && idx < 11),
-            })),
-        };
-      }
-      return {
-        packages: pkgs,
-        lmsCourses: lmsCoursesWithModules
-          .filter((c) => c.title === 'Phát Âm' || c.title === 'Pronunciation' || c.title === 'Giao tiếp và phản xạ')
-          .map((c) =>
-            c.title === 'Giao tiếp và phản xạ' ? { ...c, modules: c.modules.filter((_, idx) => idx < 11) } : c
-          ),
-      };
-    }
-
-    // 2. Giao tiếp nâng cao (129) & children: Tiếng Anh văn phòng (123), Học viết Email (124), Thành ngữ (128)
-    if (cid === 129 || pid === 129) {
-      const pkgs = COURSE_SYLLABUS_PACKAGES.filter((p) => p.category === 'office');
-      if (cid === 123) {
-        return {
-          packages: pkgs,
-          lmsCourses: lmsCoursesWithModules.filter((c) => c.title === 'Tiếng Anh văn phòng'),
-        };
-      }
-      if (cid === 124) {
-        return {
-          packages: pkgs,
-          lmsCourses: lmsCoursesWithModules
-            .filter((c) => c.title === 'Giao tiếp và phản xạ' || c.title === 'Tiếng Anh văn phòng')
-            .map((c) =>
-              c.title === 'Giao tiếp và phản xạ'
-                ? { ...c, modules: c.modules.filter((m) => m.title.toLowerCase().includes('email')) }
-                : c
-            ),
-        };
-      }
-      if (cid === 128) {
-        return {
-          packages: pkgs,
-          lmsCourses: lmsCoursesWithModules
-            .filter((c) => c.title === 'Giao tiếp và phản xạ')
-            .map((c) => ({
-              ...c,
-              modules: c.modules.filter((m) => m.title.toLowerCase().includes('thành ngữ')),
-            })),
-        };
-      }
-      return {
-        packages: pkgs,
-        lmsCourses: lmsCoursesWithModules
-          .filter((c) => c.title === 'Tiếng Anh văn phòng' || c.title === 'Giao tiếp và phản xạ')
-          .map((c) =>
-            c.title === 'Giao tiếp và phản xạ' ? { ...c, modules: c.modules.filter((_, idx) => idx >= 11) } : c
-          ),
-      };
-    }
-
-    // 3. Luyện thi IELTS (127)
-    if (cid === 127) {
-      return {
-        packages: COURSE_SYLLABUS_PACKAGES.filter((p) => p.category === 'ielts'),
-        lmsCourses: lmsCoursesWithModules.filter((c) => c.title === 'IELTS Premium'),
-      };
-    }
-
-    // 4. Luyện thi IGCSE / A-Level (132)
-    if (cid === 132) {
-      return {
-        packages: COURSE_SYLLABUS_PACKAGES.filter((p) => p.category === 'igcse'),
-        lmsCourses: lmsCoursesWithModules.filter((c) => c.title.toUpperCase().includes('IGCSE')),
-      };
-    }
-
-    return {
-      packages: [],
-      lmsCourses: [],
-    };
-  };
-
-  const matchedSyllabus = getMatchedSyllabusData(currentCourse);
-  const totalMatchedLectures = matchedSyllabus.lmsCourses.reduce(
-    (sum, c) => sum + c.modules.reduce((mSum, m) => mSum + m.lectures.length, 0),
-    0
-  );
-  const displayLectureCount = totalMatchedLectures > 0 ? totalMatchedLectures : lectureCount;
-
-  const toggleModuleExpand = (modId: string) => {
-    setExpandedModuleIds((prev) => ({ ...prev, [modId]: !prev[modId] }));
-  };
-
   const courseTitle = currentCourse
-    ? lang === 'vi'
-      ? currentCourse.cc_name_vi || currentCourse.cc_name
-      : currentCourse.cc_name
+    ? normalizeCourseDisplayName(
+        lang === 'vi' ? currentCourse.cc_name_vi || currentCourse.cc_name : currentCourse.cc_name
+      )
     : t('Study at TonyEnglish');
 
-  // Quick Trial & Consultation Callback Form states (saves directly to te_contact & fires verified Pixel Lead)
-  const [leadName, setLeadName] = useState('');
-  const [leadPhone, setLeadPhone] = useState('');
-  const [leadNote, setLeadNote] = useState('');
-  const [leadSubmitting, setLeadSubmitting] = useState(false);
-  const [leadSubmittedPhone, setLeadSubmittedPhone] = useState('');
-  const [leadError, setLeadError] = useState('');
+  // Zalo fallback modal & clipboard states
   const [zaloFallbackHint, setZaloFallbackHint] = useState(false);
   const [showZaloModal, setShowZaloModal] = useState(false);
   const [copiedPhone, setCopiedPhone] = useState(false);
@@ -574,17 +205,6 @@ export const CoursesPage: React.FC = () => {
   const handleCopyPhone = () => {
     copyPhoneToClipboard();
     setCopiedPhone(true);
-  };
-
-  const scrollToLeadBox = () => {
-    const el = document.getElementById('khung-dang-ky-tu-van');
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
-    setTimeout(() => {
-      const input = document.getElementById('lead-phone-input') as HTMLInputElement | null;
-      if (input) input.focus();
-    }, 350);
   };
 
   const handleZaloClick = (e: React.MouseEvent<HTMLElement>, cTitle: string) => {
@@ -626,103 +246,6 @@ export const CoursesPage: React.FC = () => {
       e.preventDefault();
       navigate(internalMatch[1]);
       scrollToCourseTop();
-    }
-  };
-
-  const handleMessengerClick = (e: React.MouseEvent<HTMLAnchorElement>, cTitle: string) => {
-    trackCourseConversion('Messenger', cTitle);
-    const url = buildMessengerConsultUrl(cTitle);
-    const ua = typeof navigator !== 'undefined' ? navigator.userAgent || '' : '';
-    const isMobileOrInApp = /FBAN|FBIOS|Instagram|TikTok|Line|iPhone|iPad|iPod|Android/i.test(ua);
-    if (isMobileOrInApp) {
-      e.preventDefault();
-      window.location.assign(url);
-    }
-  };
-
-  const handleLeadSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLeadError('');
-    const validPhone = normalizeVnPhone(leadPhone);
-    if (!validPhone) {
-      setLeadError(
-        lang === 'vi'
-          ? 'Vui lòng nhập đúng Số điện thoại Việt Nam (10 chữ số, ví dụ: 0912345678).'
-          : 'Please enter a valid 10-digit Vietnam phone number.'
-      );
-      return;
-    }
-
-    setLeadSubmitting(true);
-    try {
-      const { data: maxRow } = await supabase
-        .from('te_contact')
-        .select('contact_id')
-        .order('contact_id', { ascending: false })
-        .limit(1);
-      const nextId = maxRow && maxRow.length > 0 ? Number(maxRow[0].contact_id) + 1 : Math.floor(Date.now() / 1000);
-      const displayName = leadName.trim() || 'Phụ huynh / Học viên';
-      const msgLines = [
-        `[ĐĂNG KÝ HỌC THỬ & TƯ VẤN]`,
-        `Khóa quan tâm: ${courseTitle}`,
-        `Họ tên: ${displayName}`,
-        `SĐT / Zalo: ${validPhone}`,
-        leadNote.trim() ? `Ghi chú: ${leadNote.trim()}` : '',
-        typeof window !== 'undefined' ? `Link: ${window.location.href}` : '',
-      ]
-        .filter(Boolean)
-        .join('\n');
-
-      const { error } = await supabase.from('te_contact').insert({
-        contact_id: nextId,
-        contact_name: `[ADS] ${displayName} (${courseTitle})`,
-        contact_phone: validPhone,
-        contact_email: '',
-        contact_title: `Đăng ký học thử: ${courseTitle}`,
-        contact_message: msgLines,
-        contact_created_at: Math.floor(Date.now() / 1000),
-        contact_status: 1,
-        deleted: 0,
-      });
-
-      if (error) {
-        setLeadError(
-          lang === 'vi'
-            ? 'Kết nối tạm gián đoạn, vui lòng gọi trực tiếp 0935 058 688 giúp thầy nhé!'
-            : error.message
-        );
-      } else {
-        trackVerifiedLead(courseTitle);
-        const noteSnapshot = leadNote.trim();
-        setLeadSubmittedPhone(validPhone);
-        setLeadPhone('');
-        setLeadNote('');
-        // Fire instant email notification to tranhuyton@gmail.com in background
-        try {
-          fetch('/api/notify-lead', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            keepalive: true,
-            body: JSON.stringify({
-              contactId: nextId,
-              name: displayName,
-              phone: validPhone,
-              course: courseTitle,
-              note: noteSnapshot,
-              pageUrl: typeof window !== 'undefined' ? window.location.href : 'https://tonyenglish.vn/courses',
-              sourceType: 'CallbackForm',
-            }),
-          }).catch(() => {});
-        } catch (_) {}
-      }
-    } catch (err) {
-      setLeadError(
-        lang === 'vi'
-          ? 'Kết nối tạm gián đoạn, vui lòng gọi trực tiếp 0935 058 688 giúp thầy nhé!'
-          : 'Submission error, please call 0935 058 688.'
-      );
-    } finally {
-      setLeadSubmitting(false);
     }
   };
 
@@ -887,175 +410,12 @@ export const CoursesPage: React.FC = () => {
     };
   };
 
-  const currentVisual = getCourseVisualConfig(currentCourse);
-
-  // Renderer for Syllabus Modal Content
-  const renderSyllabusModalContent = () => {
-    const { packages, lmsCourses } = matchedSyllabus;
-
-    return (
-      <div className="space-y-6">
-        {/* 1. Package Overview & Highlights */}
-        {packages.length > 0 && (
-          <div className="space-y-5">
-            {packages.map((pkg) => (
-              <div
-                key={pkg.id}
-                className="bg-white rounded-3xl border border-slate-200/90 shadow-xs flex flex-col overflow-hidden"
-              >
-                <div className={`bg-gradient-to-br ${pkg.gradient} p-5 sm:p-6 text-white relative`}>
-                  <div className="flex items-center justify-between gap-2 mb-2.5">
-                    <span className="bg-white/20 backdrop-blur-md text-white text-[11px] font-black uppercase tracking-wider px-3 py-1 rounded-full border border-white/25">
-                      {pkg.badge}
-                    </span>
-                    <span className="text-2xl sm:text-3xl">{pkg.icon}</span>
-                  </div>
-                  <h3 className="text-lg sm:text-xl font-black leading-snug mb-1.5">{pkg.title}</h3>
-                  <p className="text-xs sm:text-sm text-white/90 font-medium leading-relaxed">{pkg.subtitle}</p>
-                </div>
-
-                <div className="bg-slate-50 px-5 py-3 border-b border-slate-100 flex flex-wrap items-center justify-between gap-2">
-                  <div className="flex flex-wrap gap-2">
-                    {pkg.stats.map((st, idx) => (
-                      <span
-                        key={idx}
-                        className={`text-xs font-bold px-2.5 py-1 rounded-lg border ${pkg.accentColor}`}
-                      >
-                        {st}
-                      </span>
-                    ))}
-                  </div>
-                  <span className="text-xs font-black text-[#0a5482] bg-sky-50 border border-sky-200 px-3 py-1 rounded-lg">
-                    💳 Học phí: Liên hệ
-                  </span>
-                </div>
-
-                <div className="p-5 sm:p-6">
-                  <ul className="space-y-2.5">
-                    {pkg.highlights.map((item, i) => (
-                      <li
-                        key={i}
-                        className="flex items-start gap-2.5 text-sm sm:text-[15px] text-slate-700 font-medium leading-relaxed"
-                      >
-                        <span className="text-emerald-500 font-black mt-0.5 shrink-0">✔</span>
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
-
-        {/* 2. Detailed LMS Curriculum Modules & Lectures */}
-        {lmsCourses.length > 0 && (
-          <div className="space-y-5">
-            {lmsCourses.map((lmsCourse) => {
-              const totalLecs = lmsCourse.modules.reduce((s, m) => s + m.lectures.length, 0);
-              return (
-                <div
-                  key={lmsCourse.id}
-                  className="bg-slate-50/80 rounded-2xl border border-slate-200/90 overflow-hidden"
-                >
-                  <div className="bg-white px-5 py-4 border-b border-slate-200/80 flex flex-wrap items-center justify-between gap-2">
-                    <div className="flex items-center gap-2.5">
-                      <span className="w-8 h-8 rounded-lg bg-sky-100 text-[#0a5482] flex items-center justify-center font-black text-base">
-                        📚
-                      </span>
-                      <div>
-                        <h4 className="font-black text-slate-800 text-base sm:text-lg">
-                          Đề cương chi tiết: {lmsCourse.title}
-                        </h4>
-                        <p className="text-xs text-slate-500 font-semibold">
-                          {lmsCourse.modules.length} học phần • {totalLecs} bài giảng chuyên sâu
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="p-4 sm:p-5 space-y-2.5">
-                    {lmsCourse.modules.map((mod, mIdx) => {
-                      const isExpanded =
-                        expandedModuleIds[mod.id] !== undefined ? expandedModuleIds[mod.id] : mIdx === 0;
-                      return (
-                        <div
-                          key={mod.id}
-                          className="bg-white rounded-xl border border-slate-200/80 overflow-hidden shadow-2xs"
-                        >
-                          <button
-                            type="button"
-                            onClick={() => toggleModuleExpand(mod.id)}
-                            className="w-full px-4 py-3 text-left flex items-center justify-between gap-3 hover:bg-sky-50/50 transition cursor-pointer"
-                          >
-                            <div className="flex items-center gap-2.5 min-w-0">
-                              <span className="w-6 h-6 rounded-md bg-[#0a5482] text-white text-xs font-black flex items-center justify-center shrink-0">
-                                {mIdx + 1}
-                              </span>
-                              <span className="font-extrabold text-sm sm:text-[15px] text-slate-800 truncate">
-                                {mod.title}
-                              </span>
-                            </div>
-                            <div className="flex items-center gap-2 shrink-0">
-                              <span className="text-xs font-bold text-slate-500 bg-slate-100 px-2.5 py-0.5 rounded-full">
-                                {mod.lectures.length} bài học
-                              </span>
-                              <span className="text-xs text-[#0a5482] font-black">
-                                {isExpanded ? '▲' : '▼'}
-                              </span>
-                            </div>
-                          </button>
-
-                          {isExpanded && mod.lectures.length > 0 && (
-                            <div className="px-4 pb-3.5 pt-1 border-t border-slate-100 bg-slate-50/40">
-                              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 pt-2">
-                                {mod.lectures.map((lec, lIdx) => (
-                                  <li
-                                    key={lec.id}
-                                    className="flex items-start gap-2 text-xs sm:text-[13.5px] text-slate-700 bg-white px-3 py-2 rounded-lg border border-slate-200/60"
-                                  >
-                                    <span className="text-[#2ab4e8] font-black shrink-0">
-                                      {lIdx + 1}.
-                                    </span>
-                                    <span className="font-medium leading-snug">{lec.title}</span>
-                                  </li>
-                                ))}
-                              </ul>
-                            </div>
-                          )}
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        )}
-
-        {/* Fallback legacy outline if any course has no matched package */}
-        {packages.length === 0 && lmsCourses.length === 0 && currentCourse && (
-          <div
-            className="legacy-prose course-tab-prose"
-            dangerouslySetInnerHTML={{
-              __html: fixLegacyHtmlContent(
-                currentCourse.cc_Outline ||
-                  (lang === 'vi' ? currentCourse.cc_desc_vi : currentCourse.cc_desc) ||
-                  'Đang cập nhật đề cương.'
-              ),
-            }}
-          />
-        )}
-      </div>
-    );
-  };
-
   return (
     <div className="max-w-7xl mx-auto px-3.5 sm:px-6 py-4 sm:py-8">
       {/* BREADCRUMB */}
       <nav className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-[15px] font-semibold text-slate-500 mb-3.5 sm:mb-6 flex-wrap">
-        <Link to="/" className="hover:text-[#0a5482] flex items-center gap-1">
-          <span>🏠</span>
+        <Link to="/" className="hover:text-[#0a5482] inline-flex items-center gap-1.5">
+          <Home className="w-3.5 h-3.5 text-[#0a5482]" />
           <span>{t('Home')}</span>
         </Link>
         <span>/</span>
@@ -1063,7 +423,9 @@ export const CoursesPage: React.FC = () => {
           {t('Courses')}
         </Link>
         <span>/</span>
-        <span className="text-[#0a5482] font-bold">{courseTitle}</span>
+        <span className="text-[#0a5482] font-bold">
+          {isResolvingSpecificCourse ? (lang === 'vi' ? 'Đang tải khóa học...' : 'Loading course...') : courseTitle}
+        </span>
       </nav>
 
       <div className="flex flex-col lg:flex-row gap-4 sm:gap-8 xl:gap-12 items-start">
@@ -1075,13 +437,13 @@ export const CoursesPage: React.FC = () => {
             className="w-full bg-slate-100/80 px-4 py-3 border-b border-slate-200/70 flex items-center justify-between lg:pointer-events-none cursor-pointer text-left"
           >
             <h2 className="text-slate-600 lg:text-slate-500 font-bold text-xs uppercase tracking-widest flex items-center gap-2 min-w-0">
-              <span className="opacity-80 shrink-0">🎓</span>
+              <GraduationCap className="w-4 h-4 text-[#0a5482] shrink-0" />
               <span className="hidden lg:inline shrink-0">{t('Courses')}</span>
               <span className="lg:hidden font-bold text-[#0a5482] text-[13px] normal-case tracking-normal truncate">
-                {courseTitle}
+                {isResolvingSpecificCourse ? (lang === 'vi' ? 'Đang tải...' : 'Loading...') : courseTitle}
               </span>
             </h2>
-            <span className="lg:hidden text-[11px] font-bold text-[#0a5482] bg-white px-2.5 py-1 rounded-lg border border-slate-200/80 shadow-2xs flex items-center gap-1 shrink-0 ml-2">
+            <span className="lg:hidden text-[11px] font-bold text-[#0a5482] bg-white px-2.5 py-1 rounded-lg border border-slate-200/80 shadow-2xs inline-flex items-center gap-1 shrink-0 ml-2">
               <span>
                 {mobileCateOpen
                   ? lang === 'vi'
@@ -1091,7 +453,7 @@ export const CoursesPage: React.FC = () => {
                   ? 'Danh mục'
                   : 'Categories'}
               </span>
-              <span>{mobileCateOpen ? '▲' : '▼'}</span>
+              {mobileCateOpen ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
             </span>
           </button>
 
@@ -1128,7 +490,9 @@ export const CoursesPage: React.FC = () => {
                   openParentId === parent.cc_id ||
                   (currentCourse &&
                     (currentCourse.cc_id === parent.cc_id || currentCourse.cc_parent === parent.cc_id));
-                const parentName = lang === 'vi' ? parent.cc_name_vi || parent.cc_name : parent.cc_name;
+                const parentName = normalizeCourseDisplayName(
+                  lang === 'vi' ? parent.cc_name_vi || parent.cc_name : parent.cc_name
+                );
                 const isCurrentParent = currentCourse && currentCourse.cc_id === parent.cc_id;
 
                 return (
@@ -1204,10 +568,26 @@ export const CoursesPage: React.FC = () => {
                 <div className="text-[11px] sm:text-sm font-extrabold uppercase tracking-widest text-[#2ab4e8] mb-0.5 sm:mb-1">
                   {lang === 'vi' ? 'Lớp Gia Sư 1 Kèm 1 Cùng Thầy Tony' : '1-on-1 Private Tutoring with Mr. Tony'}
                 </div>
-                <h1 className="text-xl sm:text-3xl font-black tracking-tight">{courseTitle}</h1>
+                {isResolvingSpecificCourse ? (
+                  <div className="h-8 sm:h-9 w-64 sm:w-80 bg-white/15 rounded-xl animate-pulse mt-1" />
+                ) : (
+                  <h1 className="text-xl sm:text-3xl font-black tracking-tight">{courseTitle}</h1>
+                )}
               </div>
             </div>
 
+            {isResolvingSpecificCourse ? (
+              <div className="p-4 sm:p-8 space-y-5 animate-pulse">
+                <div className="h-28 rounded-2xl bg-sky-50 border border-sky-100" />
+                <div className="space-y-3 max-w-[74ch]">
+                  <div className="h-6 bg-slate-100 rounded-lg w-2/3" />
+                  <div className="h-4 bg-slate-100 rounded w-full" />
+                  <div className="h-4 bg-slate-100 rounded w-11/12" />
+                  <div className="h-4 bg-slate-100 rounded w-4/5" />
+                  <div className="h-44 bg-slate-100 rounded-2xl w-full mt-4" />
+                </div>
+              </div>
+            ) : (
             <div className="p-4 sm:p-8 space-y-6">
 
               {/* Subcategory Quick Cards if parent category has children */}
@@ -1275,7 +655,7 @@ export const CoursesPage: React.FC = () => {
                       onClick={() => trackCourseConversion('Phone', courseTitle)}
                       className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs sm:text-sm px-4 py-2.5 rounded-xl shadow-xs transition whitespace-nowrap"
                     >
-                      <span>📞</span>
+                      <Phone className="w-4 h-4 shrink-0" />
                       <span>{lang === 'vi' ? `Gọi: ${CONTACT_PHONE_DISPLAY}` : `Call: ${CONTACT_PHONE_DISPLAY}`}</span>
                     </a>
 
@@ -1286,7 +666,7 @@ export const CoursesPage: React.FC = () => {
                       onClick={(e) => handleZaloClick(e, courseTitle)}
                       className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 bg-[#0068ff] hover:bg-[#0057d6] text-white font-extrabold text-xs sm:text-sm px-4 py-2.5 rounded-xl shadow-xs transition whitespace-nowrap"
                     >
-                      <span>💬</span>
+                      <MessageCircle className="w-4 h-4 shrink-0" />
                       <span>{lang === 'vi' ? `Zalo: ${CONTACT_PHONE_DISPLAY}` : `Zalo: ${CONTACT_PHONE_DISPLAY}`}</span>
                     </a>
                   </div>
@@ -1344,21 +724,24 @@ export const CoursesPage: React.FC = () => {
                   <button
                     type="button"
                     onClick={() => setShowLegacyGallery((prev) => !prev)}
-                    className="w-full px-5 py-3.5 flex items-center justify-between gap-3 text-left hover:bg-amber-100/50 transition cursor-pointer"
+                    className="w-full px-4 sm:px-5 py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 sm:gap-3 text-left hover:bg-amber-100/50 transition cursor-pointer"
                   >
-                    <div className="flex items-center gap-2.5 min-w-0">
-                      <span className="text-lg shrink-0">🕰️</span>
-                      <div>
-                        <div className="font-extrabold text-xs sm:text-sm text-amber-950">
+                    <div className="flex items-start sm:items-center gap-2.5 min-w-0">
+                      <span className="w-8 h-8 rounded-xl bg-amber-100 border border-amber-200/80 text-amber-800 flex items-center justify-center shrink-0 mt-0.5 sm:mt-0">
+                        <History className="w-4 h-4" />
+                      </span>
+                      <div className="min-w-0">
+                        <div className="font-extrabold text-[13px] sm:text-sm text-amber-950 leading-snug">
                           Góc Kỷ Niệm: Giao diện TonyEnglish phiên bản đầu tiên (2013 – 2017)
                         </div>
-                        <div className="text-[11px] text-amber-800/80 font-medium">
+                        <div className="text-[11.5px] text-amber-800/85 font-medium leading-relaxed mt-0.5">
                           Lưu trữ 10 hình ảnh chụp màn hình kỷ niệm của trang web TonyEnglish thế hệ cũ
                         </div>
                       </div>
                     </div>
-                    <span className="px-3 py-1 rounded-lg bg-white border border-amber-200 text-amber-900 font-bold text-xs shrink-0 shadow-2xs">
-                      {showLegacyGallery ? 'Thu gọn ▲' : 'Xem ảnh kỷ niệm ▼'}
+                    <span className="self-start sm:self-center inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-white border border-amber-200 text-amber-900 font-bold text-xs shrink-0 shadow-2xs">
+                      <span>{showLegacyGallery ? 'Thu gọn' : 'Xem ảnh kỷ niệm'}</span>
+                      {showLegacyGallery ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
                     </span>
                   </button>
 
@@ -1395,9 +778,9 @@ export const CoursesPage: React.FC = () => {
                 <a
                   href={`tel:${CONTACT_PHONE}`}
                   onClick={() => trackCourseConversion('Phone', courseTitle)}
-                  className="bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-sm px-5 py-3 rounded-xl shadow-md transition flex items-center gap-2"
+                  className="bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-sm px-5 py-3 rounded-xl shadow-md transition inline-flex items-center gap-2"
                 >
-                  <span>📞</span>
+                  <Phone className="w-4 h-4 shrink-0" />
                   <span>
                     {lang === 'vi'
                       ? `Gọi trực tiếp: ${CONTACT_PHONE_DISPLAY}`
@@ -1410,9 +793,9 @@ export const CoursesPage: React.FC = () => {
                   target="_blank"
                   rel="noreferrer"
                   onClick={(e) => handleZaloClick(e, courseTitle)}
-                  className="bg-[#0068ff] hover:bg-[#0057d6] text-white font-extrabold text-sm px-5 py-3 rounded-xl shadow-md transition flex items-center gap-2"
+                  className="bg-[#0068ff] hover:bg-[#0057d6] text-white font-extrabold text-sm px-5 py-3 rounded-xl shadow-md transition inline-flex items-center gap-2"
                 >
-                  <span>💬</span>
+                  <MessageCircle className="w-4 h-4 shrink-0" />
                   <span>
                     {lang === 'vi'
                       ? `Tư vấn qua Zalo: ${CONTACT_PHONE_DISPLAY}`
@@ -1425,8 +808,10 @@ export const CoursesPage: React.FC = () => {
               {homeParents.length > 0 && (
                 <div className="pt-6 border-t border-slate-200">
                   <div className="bg-slate-50 rounded-2xl border border-slate-200/90 overflow-hidden shadow-xs">
-                    <div className="bg-gradient-to-r from-[#0a5482] to-[#0f172a] px-5 py-4 text-white flex items-center gap-2.5">
-                      <span className="text-xl">📚</span>
+                    <div className="bg-gradient-to-r from-[#0a5482] to-[#0f172a] px-5 py-4 text-white flex items-center gap-3">
+                      <span className="w-9 h-9 rounded-xl bg-white/10 border border-white/15 text-[#2ab4e8] flex items-center justify-center shrink-0">
+                        <BookOpen className="w-4 h-4" />
+                      </span>
                       <div>
                         <h2 className="text-base sm:text-lg font-black tracking-tight">
                           {lang === 'vi'
@@ -1444,8 +829,9 @@ export const CoursesPage: React.FC = () => {
                     <div className="divide-y divide-slate-200/80 bg-white">
                       {homeParents.map((parent) => {
                         const subs = subCategories(parent.cc_id);
-                        const parentName =
-                          lang === 'vi' ? parent.cc_name_vi || parent.cc_name : parent.cc_name;
+                        const parentName = normalizeCourseDisplayName(
+                          lang === 'vi' ? parent.cc_name_vi || parent.cc_name : parent.cc_name
+                        );
                         const parentUrl = `/courses/${(parent.cc_name_url || '').trim()}`;
                         const isActiveRow =
                           currentCourse &&
@@ -1562,6 +948,7 @@ export const CoursesPage: React.FC = () => {
                 </div>
               )}
             </div>
+            )}
           </div>
         </div>
       </div>
@@ -1577,7 +964,7 @@ export const CoursesPage: React.FC = () => {
           onClick={() => trackCourseConversion('Phone', courseTitle)}
           className="inline-flex items-center justify-center gap-1.5 bg-emerald-600 active:bg-emerald-700 text-white font-extrabold text-xs py-2.5 px-3 rounded-xl shadow-xs whitespace-nowrap"
         >
-          <span>📞</span>
+          <Phone className="w-3.5 h-3.5 shrink-0" />
           <span>{lang === 'vi' ? `Gọi: ${CONTACT_PHONE_DISPLAY}` : `Call: ${CONTACT_PHONE_DISPLAY}`}</span>
         </a>
         <a
@@ -1587,7 +974,7 @@ export const CoursesPage: React.FC = () => {
           onClick={(e) => handleZaloClick(e, courseTitle)}
           className="inline-flex items-center justify-center gap-1.5 bg-[#0068ff] active:bg-[#0057d6] text-white font-extrabold text-xs py-2.5 px-3 rounded-xl shadow-xs whitespace-nowrap"
         >
-          <span>💬</span>
+          <MessageCircle className="w-3.5 h-3.5 shrink-0" />
           <span>Zalo: {CONTACT_PHONE_DISPLAY}</span>
         </a>
       </div>

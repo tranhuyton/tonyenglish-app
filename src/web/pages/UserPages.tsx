@@ -73,9 +73,13 @@ export const LoginPage: React.FC = () => {
             <Link to="/courses" className="text-[#0a5482] hover:underline">
               {t('Register')}
             </Link>
-            <a href="https://lms.tonyenglish.vn" className="text-[#2ab4e8] hover:underline">
-              🎓 Cổng LMS mới →
-            </a>
+            <button
+              type="button"
+              onClick={() => window.dispatchEvent(new CustomEvent('tony-open-lms'))}
+              className="text-[#0a5482] hover:text-[#2ab4e8] hover:underline cursor-pointer"
+            >
+              Góc Học Viên LMS →
+            </button>
           </div>
         </form>
       </div>

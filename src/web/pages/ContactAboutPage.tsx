@@ -1,5 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import {
+  Home,
+  Info,
+  Calendar,
+  Map as MapIcon,
+  Phone,
+  Mic,
+  Trophy,
+  Globe,
+  ChevronDown,
+  ChevronUp,
+  ArrowRight,
+  BookOpen,
+  GraduationCap,
+} from 'lucide-react';
 import { supabase } from '../lib/supabase';
 import { useApp } from '../context/AppContext';
 import { fixLegacyHtmlContent, updatePageSeo } from '../lib/utils';
@@ -140,7 +155,7 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
       {/* BREADCRUMB */}
       <nav className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-[15px] font-semibold text-slate-500 mb-3.5 sm:mb-6 flex-wrap">
         <Link to="/" className="hover:text-[#0a5482] flex items-center gap-1">
-          <span>🏠</span>
+          <Home className="w-3.5 h-3.5 shrink-0" />
           <span>{t('Home')}</span>
         </Link>
         <span>/</span>
@@ -149,20 +164,20 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
 
       <div className="flex flex-col lg:flex-row gap-4 sm:gap-8 xl:gap-12 items-start">
         {/* LEFT SIDEBAR: SUBTLE, NON-COMPETING ABOUT MENU */}
-        <aside className="w-full lg:w-[260px] xl:w-[270px] shrink-0 bg-white rounded-2xl border border-slate-200/80 shadow-2xs overflow-hidden lg:sticky lg:top-24">
+        <aside className="w-full lg:w-[260px] xl:w-[270px] shrink-0 bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden lg:sticky lg:top-24">
           <button
             type="button"
             onClick={() => setMobileCateOpen((prev) => !prev)}
             className="w-full bg-slate-100/80 px-4 py-3 border-b border-slate-200/70 flex items-center justify-between lg:pointer-events-none cursor-pointer text-left"
           >
             <h2 className="text-slate-600 lg:text-slate-500 font-bold text-xs uppercase tracking-widest flex items-center gap-2 min-w-0">
-              <span className="opacity-80 shrink-0">ℹ️</span>
+              <Info className="w-4 h-4 opacity-80 shrink-0 text-[#0a5482]" />
               <span className="hidden lg:inline shrink-0">{t('About us')}</span>
               <span className="lg:hidden font-bold text-[#0a5482] text-[13px] normal-case tracking-normal truncate">
                 {pageHeading}
               </span>
             </h2>
-            <span className="lg:hidden text-[11px] font-bold text-[#0a5482] bg-white px-2.5 py-1 rounded-lg border border-slate-200/80 shadow-2xs flex items-center gap-1 shrink-0 ml-2">
+            <span className="lg:hidden text-[11px] font-bold text-[#0a5482] bg-white px-2.5 py-1 rounded-lg border border-slate-200/80 shadow-sm flex items-center gap-1 shrink-0 ml-2">
               <span>
                 {mobileCateOpen
                   ? lang === 'vi'
@@ -172,7 +187,7 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
                   ? 'Danh mục'
                   : 'Menu'}
               </span>
-              <span>{mobileCateOpen ? '▲' : '▼'}</span>
+              {mobileCateOpen ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
             </span>
           </button>
 
@@ -210,13 +225,14 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
               <Link
                 to="/opening"
                 onClick={() => setMobileCateOpen(false)}
-                className={`block px-3.5 py-3 rounded-xl transition-colors relative ${
+                className={`flex items-center gap-2 px-3.5 py-3 rounded-xl transition-colors relative ${
                   mode === 'opening'
                     ? "bg-sky-50/90 text-[#0a5482] font-semibold pl-4 before:content-[''] before:absolute before:left-1.5 before:top-2 before:bottom-2 before:w-1 before:rounded-full before:bg-[#2ab4e8]"
                     : 'text-slate-600 font-medium hover:bg-slate-50 hover:text-[#0a5482]'
                 }`}
               >
-                📅 {t('Openning Class')}
+                <Calendar className="w-4 h-4 shrink-0" />
+                <span>{t('Openning Class')}</span>
               </Link>
             </li>
 
@@ -224,13 +240,14 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
               <Link
                 to="/sitemap"
                 onClick={() => setMobileCateOpen(false)}
-                className={`block px-3.5 py-3 rounded-xl transition-colors relative ${
+                className={`flex items-center gap-2 px-3.5 py-3 rounded-xl transition-colors relative ${
                   mode === 'sitemap'
                     ? "bg-sky-50/90 text-[#0a5482] font-semibold pl-4 before:content-[''] before:absolute before:left-1.5 before:top-2 before:bottom-2 before:w-1 before:rounded-full before:bg-[#2ab4e8]"
                     : 'text-slate-600 font-medium hover:bg-slate-50 hover:text-[#0a5482]'
                 }`}
               >
-                🗺️ {t('Site map')}
+                <MapIcon className="w-4 h-4 shrink-0" />
+                <span>{t('Site map')}</span>
               </Link>
             </li>
 
@@ -238,13 +255,14 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
               <Link
                 to="/contact"
                 onClick={() => setMobileCateOpen(false)}
-                className={`block px-3.5 py-3 rounded-xl transition-colors relative ${
+                className={`flex items-center gap-2 px-3.5 py-3 rounded-xl transition-colors relative ${
                   mode === 'contact'
                     ? "bg-sky-50/90 text-[#0a5482] font-semibold pl-4 before:content-[''] before:absolute before:left-1.5 before:top-2 before:bottom-2 before:w-1 before:rounded-full before:bg-[#2ab4e8]"
                     : 'text-slate-600 font-medium hover:bg-slate-50 hover:text-[#0a5482]'
                 }`}
               >
-                📞 {t('Contact')}
+                <Phone className="w-4 h-4 shrink-0" />
+                <span>{t('Contact')}</span>
               </Link>
             </li>
           </ul>
@@ -285,7 +303,7 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
                 <div className="space-y-6">
                   <div className="bg-sky-50 border border-sky-200 rounded-2xl p-5 sm:p-6">
                     <div className="inline-flex items-center gap-2 bg-[#0a5482] text-white text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full mb-3">
-                      <span>📅</span>
+                      <Calendar className="w-3.5 h-3.5" />
                       <span>{lang === 'vi' ? 'Nhận học viên Gia sư 1 kèm 1' : '1-on-1 Private Tutoring'}</span>
                     </div>
                     <h2 className="text-xl sm:text-2xl font-black text-slate-800 mb-2">
@@ -301,66 +319,75 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-                    <div className="bg-white rounded-2xl border border-slate-200 p-5 flex flex-col justify-between shadow-2xs hover:shadow-md transition">
+                    <div className="bg-white rounded-2xl border border-slate-200 p-5 flex flex-col justify-between shadow-sm hover:shadow-md transition">
                       <div>
-                        <span className="inline-block bg-indigo-50 text-indigo-700 border border-indigo-200 text-xs font-black px-3 py-1 rounded-full mb-3">
-                          🎙️ GIA SƯ GÓI HỌC 1 KÈM 1
+                        <span className="inline-flex items-center gap-1.5 bg-indigo-50 text-indigo-700 border border-indigo-200 text-xs font-black px-3 py-1 rounded-full mb-3">
+                          <Mic className="w-3.5 h-3.5" />
+                          <span>{lang === 'vi' ? 'GIA SƯ GÓI HỌC 1 KÈM 1' : '1-ON-1 PRIVATE PACKAGE'}</span>
                         </span>
                         <h3 className="text-lg font-black text-slate-800 mb-2">
-                          Giao tiếp Tiếng Anh &amp; Văn phòng
+                          {lang === 'vi' ? 'Giao tiếp Tiếng Anh & Văn phòng' : 'English Communication & Workplace'}
                         </h3>
                         <p className="text-sm text-slate-600 leading-relaxed mb-4">
-                          Chuẩn hóa phát âm IPA, luyện phản xạ giao tiếp đời sống, tiếng Anh văn phòng công sở và viết Email chuyên nghiệp.
+                          {lang === 'vi'
+                            ? 'Chuẩn hóa phát âm IPA, luyện phản xạ giao tiếp đời sống, tiếng Anh văn phòng công sở và viết Email chuyên nghiệp.'
+                            : 'Standardize IPA pronunciation, build everyday speaking reflexes, master office communication and professional email writing.'}
                         </p>
                       </div>
                       <Link
                         to="/courses/english-communication 1"
-                        className="text-sm font-black text-[#0a5482] hover:text-[#2ab4e8] inline-flex items-center gap-1"
+                        className="text-sm font-black text-[#0a5482] hover:text-[#2ab4e8] inline-flex items-center gap-1.5"
                       >
-                        <span>Xem đề cương khóa học</span>
-                        <span>→</span>
+                        <span>{lang === 'vi' ? 'Xem đề cương khóa học' : 'View course syllabus'}</span>
+                        <ArrowRight className="w-4 h-4" />
                       </Link>
                     </div>
 
-                    <div className="bg-white rounded-2xl border border-slate-200 p-5 flex flex-col justify-between shadow-2xs hover:shadow-md transition">
+                    <div className="bg-white rounded-2xl border border-slate-200 p-5 flex flex-col justify-between shadow-sm hover:shadow-md transition">
                       <div>
-                        <span className="inline-block bg-sky-50 text-[#0a5482] border border-sky-200 text-xs font-black px-3 py-1 rounded-full mb-3">
-                          🏆 GIA SƯ GÓI HỌC 1 KÈM 1
+                        <span className="inline-flex items-center gap-1.5 bg-sky-50 text-[#0a5482] border border-sky-200 text-xs font-black px-3 py-1 rounded-full mb-3">
+                          <Trophy className="w-3.5 h-3.5" />
+                          <span>{lang === 'vi' ? 'GIA SƯ GÓI HỌC 1 KÈM 1' : '1-ON-1 PRIVATE PACKAGE'}</span>
                         </span>
                         <h3 className="text-lg font-black text-slate-800 mb-2">
-                          Luyện thi IELTS 4 Kỹ Năng
+                          {lang === 'vi' ? 'Luyện thi IELTS 4 Kỹ Năng' : 'IELTS 4-Skill Preparation'}
                         </h3>
                         <p className="text-sm text-slate-600 leading-relaxed mb-4">
-                          Lộ trình cá nhân hóa từ nền tảng đến Band 7.0+, kèm sát Speaking &amp; Writing 1-1 kết hợp phòng thi máy tính chuẩn IDP/BC.
+                          {lang === 'vi'
+                            ? 'Lộ trình cá nhân hóa từ nền tảng đến Band 7.0+, kèm sát Speaking & Writing 1-1 kết hợp phòng thi máy tính chuẩn IDP/BC.'
+                            : 'Personalized roadmap from foundation to Band 7.0+, intensive 1-on-1 Speaking & Writing coaching plus IDP/BC-style computer mock tests.'}
                         </p>
                       </div>
                       <Link
                         to="/courses/ielts"
-                        className="text-sm font-black text-[#0a5482] hover:text-[#2ab4e8] inline-flex items-center gap-1"
+                        className="text-sm font-black text-[#0a5482] hover:text-[#2ab4e8] inline-flex items-center gap-1.5"
                       >
-                        <span>Xem đề cương khóa học</span>
-                        <span>→</span>
+                        <span>{lang === 'vi' ? 'Xem đề cương khóa học' : 'View course syllabus'}</span>
+                        <ArrowRight className="w-4 h-4" />
                       </Link>
                     </div>
 
-                    <div className="bg-white rounded-2xl border border-slate-200 p-5 flex flex-col justify-between shadow-2xs hover:shadow-md transition">
+                    <div className="bg-white rounded-2xl border border-slate-200 p-5 flex flex-col justify-between shadow-sm hover:shadow-md transition">
                       <div>
-                        <span className="inline-block bg-amber-50 text-amber-800 border border-amber-200 text-xs font-black px-3 py-1 rounded-full mb-3">
-                          🌍 GIA SƯ GÓI HỌC 1 KÈM 1
+                        <span className="inline-flex items-center gap-1.5 bg-amber-50 text-amber-800 border border-amber-200 text-xs font-black px-3 py-1 rounded-full mb-3">
+                          <Globe className="w-3.5 h-3.5" />
+                          <span>{lang === 'vi' ? 'GIA SƯ GÓI HỌC 1 KÈM 1' : '1-ON-1 PRIVATE PACKAGE'}</span>
                         </span>
                         <h3 className="text-lg font-black text-slate-800 mb-2">
-                          Chương trình Quốc tế Cambridge IGCSE
+                          {lang === 'vi' ? 'Chương trình Quốc tế Cambridge IGCSE' : 'Cambridge IGCSE International Program'}
                         </h3>
                         <p className="text-sm text-slate-600 leading-relaxed mb-4">
-                          Kèm sát các môn Sciences (0654/0610/0620/0625), Maths (0580/0606), Economics (0455), Business (0450), Geography (0460) &amp; ESL (0510).
+                          {lang === 'vi'
+                            ? 'Kèm sát các môn Sciences (0654/0610/0620/0625), Maths (0580/0606), Economics (0455), Business (0450), Geography (0460) & ESL (0510).'
+                            : '1-on-1 mastery across Sciences (0654/0610/0620/0625), Maths (0580/0606), Economics (0455), Business (0450), Geography (0460) & ESL (0510).'}
                         </p>
                       </div>
                       <Link
                         to="/courses/luyen-thi-igcse-alevel-cap-toc"
-                        className="text-sm font-black text-[#0a5482] hover:text-[#2ab4e8] inline-flex items-center gap-1"
+                        className="text-sm font-black text-[#0a5482] hover:text-[#2ab4e8] inline-flex items-center gap-1.5"
                       >
-                        <span>Xem đề cương khóa học</span>
-                        <span>→</span>
+                        <span>{lang === 'vi' ? 'Xem đề cương khóa học' : 'View course syllabus'}</span>
+                        <ArrowRight className="w-4 h-4" />
                       </Link>
                     </div>
                   </div>
@@ -368,8 +395,9 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
               ) : mode === 'sitemap' ? (
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   <div className="bg-slate-50 rounded-2xl p-5 border border-slate-200/80">
-                    <h3 className="font-black text-base text-[#0a5482] mb-3 pb-2 border-b border-slate-200">
-                      📚 {t('Library')}
+                    <h3 className="font-black text-base text-[#0a5482] mb-3 pb-2 border-b border-slate-200 flex items-center gap-2">
+                      <BookOpen className="w-4 h-4" />
+                      <span>{t('Library')}</span>
                     </h3>
                     <ul className="space-y-2 text-sm">
                       {footerNewsCates.map((nc) => (
@@ -386,8 +414,9 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
                   </div>
 
                   <div className="bg-slate-50 rounded-2xl p-5 border border-slate-200/80">
-                    <h3 className="font-black text-base text-[#0a5482] mb-3 pb-2 border-b border-slate-200">
-                      🎓 {t('Courses')}
+                    <h3 className="font-black text-base text-[#0a5482] mb-3 pb-2 border-b border-slate-200 flex items-center gap-2">
+                      <GraduationCap className="w-4 h-4" />
+                      <span>{t('Courses')}</span>
                     </h3>
                     <ul className="space-y-2 text-sm">
                       {footerCourses.map((c) => (
@@ -404,8 +433,9 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
                   </div>
 
                   <div className="bg-slate-50 rounded-2xl p-5 border border-slate-200/80">
-                    <h3 className="font-black text-base text-[#0a5482] mb-3 pb-2 border-b border-slate-200">
-                      ℹ️ {t('About us')}
+                    <h3 className="font-black text-base text-[#0a5482] mb-3 pb-2 border-b border-slate-200 flex items-center gap-2">
+                      <Info className="w-4 h-4" />
+                      <span>{t('About us')}</span>
                     </h3>
                     <ul className="space-y-2 text-sm">
                       {footerAboutItems.map((ab) => {

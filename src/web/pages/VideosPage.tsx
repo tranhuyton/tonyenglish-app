@@ -1,5 +1,18 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
+import {
+  Home,
+  Video,
+  Play,
+  Tv,
+  Subtitles,
+  HelpCircle,
+  ChevronDown,
+  ChevronUp,
+  ArrowRight,
+  Film,
+  CheckCircle2,
+} from 'lucide-react';
 import { supabase } from '../lib/supabase';
 import { useApp } from '../context/AppContext';
 import { resolveUploadUrl, getYoutubeEmbedUrl, fixLegacyHtmlContent, updatePageSeo } from '../lib/utils';
@@ -199,7 +212,7 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
       {/* BREADCRUMB */}
       <nav className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-[15px] font-semibold text-slate-500 mb-3.5 sm:mb-6 flex-wrap">
         <Link to="/" className="hover:text-[#0a5482] flex items-center gap-1">
-          <span>🏠</span>
+          <Home className="w-3.5 h-3.5 shrink-0" />
           <span>{t('Home')}</span>
         </Link>
         <span>/</span>
@@ -224,20 +237,20 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
 
       <div className="flex flex-col lg:flex-row gap-4 sm:gap-8 xl:gap-12 items-start">
         {/* LEFT SIDEBAR: SUBTLE, NON-COMPETING VIDEO MENU */}
-        <aside className="w-full lg:w-[260px] xl:w-[270px] shrink-0 bg-white rounded-2xl border border-slate-200/80 shadow-2xs overflow-hidden lg:sticky lg:top-24">
+        <aside className="w-full lg:w-[260px] xl:w-[270px] shrink-0 bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden lg:sticky lg:top-24">
           <button
             type="button"
             onClick={() => setMobileCateOpen((prev) => !prev)}
             className="w-full bg-slate-100/80 px-4 py-3 border-b border-slate-200/70 flex items-center justify-between lg:pointer-events-none cursor-pointer text-left"
           >
             <h2 className="text-slate-600 lg:text-slate-500 font-bold text-xs uppercase tracking-widest flex items-center gap-2 min-w-0">
-              <span className="opacity-80 shrink-0">🎬</span>
+              <Video className="w-4 h-4 opacity-80 shrink-0 text-[#0a5482]" />
               <span className="hidden lg:inline shrink-0">{t('Video Menu')}</span>
               <span className="lg:hidden font-bold text-[#0a5482] text-[13px] normal-case tracking-normal truncate">
                 {activeCate ? mainHeading : t('Video Category')}
               </span>
             </h2>
-            <span className="lg:hidden text-[11px] font-bold text-[#0a5482] bg-white px-2.5 py-1 rounded-lg border border-slate-200/80 shadow-2xs flex items-center gap-1 shrink-0 ml-2">
+            <span className="lg:hidden text-[11px] font-bold text-[#0a5482] bg-white px-2.5 py-1 rounded-lg border border-slate-200/80 shadow-sm flex items-center gap-1 shrink-0 ml-2">
               <span>
                 {mobileCateOpen
                   ? lang === 'vi'
@@ -247,7 +260,7 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
                   ? 'Danh mục'
                   : 'Categories'}
               </span>
-              <span>{mobileCateOpen ? '▲' : '▼'}</span>
+              {mobileCateOpen ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
             </span>
           </button>
 
@@ -256,13 +269,14 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
               <Link
                 to="/videos"
                 onClick={() => setMobileCateOpen(false)}
-                className={`block px-3.5 py-2.5 rounded-xl transition-colors relative ${
+                className={`flex items-center gap-2 px-3.5 py-2.5 rounded-xl transition-colors relative ${
                   !cateSlug
                     ? "bg-sky-50/90 text-[#0a5482] font-semibold pl-4 before:content-[''] before:absolute before:left-1.5 before:top-2 before:bottom-2 before:w-1 before:rounded-full before:bg-[#2ab4e8]"
                     : 'text-slate-600 font-medium hover:bg-slate-50 hover:text-[#0a5482]'
                 }`}
               >
-                📺 {t('Video Category')}
+                <Tv className="w-4 h-4 shrink-0" />
+                <span>{t('Video Category')}</span>
               </Link>
             </li>
             {topCategories.length === 0 && (
@@ -345,27 +359,32 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
                           <img
                             src={resolveUploadUrl(imgPath)}
                             alt={subTitle}
+                            loading={sIdx < 3 ? 'eager' : 'lazy'}
                             onError={(e) => {
                               (e.currentTarget as HTMLImageElement).src = '/uploads/No_Image_Wide.svg_1.png';
                             }}
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 brightness-105"
                           />
-                          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/55 via-slate-900/10 to-transparent flex items-center justify-center">
-                            <span className="w-12 h-12 rounded-full bg-white/95 text-[#0a5482] flex items-center justify-center text-base shadow-lg group-hover:scale-110 transition-transform">
-                              ▶
-                            </span>
+                          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 via-transparent to-transparent pointer-events-none" />
+                          <span className="absolute bottom-3 right-3 w-10 h-10 rounded-full bg-white/95 text-[#0a5482] flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:bg-[#2ab4e8] group-hover:text-white transition-all">
+                            <Play className="w-4 h-4 fill-current ml-0.5" />
+                          </span>
+                        </div>
+                        <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between gap-2.5">
+                          <div className="flex items-start justify-between gap-2">
+                            <h3 className="font-extrabold text-[15px] sm:text-base text-slate-800 group-hover:text-[#0a5482] line-clamp-2 leading-snug">
+                              {subTitle}
+                            </h3>
+                            <ArrowRight className="w-4 h-4 text-[#2ab4e8] shrink-0 mt-0.5 group-hover:translate-x-0.5 transition-transform" />
                           </div>
                           {childVideos.length > 0 && (
-                            <span className="absolute top-3 left-3 bg-[#0a5482]/90 backdrop-blur-xs text-white text-[11px] font-extrabold px-2.5 py-1 rounded-full shadow-sm">
-                              {childVideos.length} {lang === 'vi' ? 'chủ đề' : 'topics'}
-                            </span>
+                            <div className="flex items-center gap-1.5">
+                              <span className="inline-flex items-center gap-1 bg-sky-50 text-[#0a5482] border border-sky-200/80 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                                <Film className="w-3 h-3" />
+                                <span>{childVideos.length} {lang === 'vi' ? 'chủ đề' : 'topics'}</span>
+                              </span>
+                            </div>
                           )}
-                        </div>
-                        <div className="p-4 sm:p-5 flex-1 flex items-center justify-between gap-2">
-                          <h3 className="font-extrabold text-[15px] sm:text-base text-slate-800 group-hover:text-[#0a5482] line-clamp-2 leading-snug">
-                            {subTitle}
-                          </h3>
-                          <span className="text-[#2ab4e8] font-black shrink-0 group-hover:translate-x-0.5 transition-transform">→</span>
                         </div>
                       </Link>
                     );
@@ -413,8 +432,11 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
                               onClick={() => setShowSubtitles(!showSubtitles)}
                               className="w-full px-5 py-4 flex items-center justify-between text-left font-bold text-[15.5px] sm:text-base text-[#0a5482] hover:bg-sky-50/80 transition"
                             >
-                              <span>💬 {t('Same video with subtitles')}</span>
-                              <span className="text-xs">{showSubtitles ? '▲' : '▼'}</span>
+                              <span className="inline-flex items-center gap-2">
+                                <Subtitles className="w-4 h-4 shrink-0 text-[#0a5482]" />
+                                <span>{t('Same video with subtitles')}</span>
+                              </span>
+                              {showSubtitles ? <ChevronUp className="w-4 h-4 shrink-0" /> : <ChevronDown className="w-4 h-4 shrink-0" />}
                             </button>
                             {showSubtitles && (
                               <div
@@ -493,8 +515,11 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
                                   }}
                                   className="w-full px-5 py-4 flex items-center justify-between text-left font-bold text-[15.5px] sm:text-base text-[#0a5482] hover:bg-sky-50/80 transition"
                                 >
-                                  <span>❓ {t('View Question')}</span>
-                                  <span className="text-xs">{showQuestion ? '▲' : '▼'}</span>
+                                  <span className="inline-flex items-center gap-2">
+                                    <HelpCircle className="w-4 h-4 shrink-0 text-[#0a5482]" />
+                                    <span>{t('View Question')}</span>
+                                  </span>
+                                  {showQuestion ? <ChevronUp className="w-4 h-4 shrink-0" /> : <ChevronDown className="w-4 h-4 shrink-0" />}
                                 </button>
 
                                 {showQuestion && (
@@ -541,9 +566,10 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
                                               }
                                             }
                                           }}
-                                          className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm px-4 py-2 rounded-xl transition"
+                                          className="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm px-4 py-2 rounded-xl transition"
                                         >
-                                          ✅ {t('View Answer')}
+                                          <CheckCircle2 className="w-4 h-4" />
+                                          <span>{t('View Answer')}</span>
                                         </button>
                                         {showAnswer && (
                                           <div
@@ -575,7 +601,7 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
           {mode !== 'cate' && videosInCate.length > 1 && (
             <div className="bg-white/70 rounded-2xl border border-slate-200/60 px-6 py-5 sm:px-8 sm:py-6">
               <h3 className="text-xs sm:text-[13px] font-bold uppercase tracking-widest text-slate-400 mb-4 flex items-center gap-2">
-                <span className="opacity-70 text-sm">🎞️</span>
+                <Film className="w-4 h-4 opacity-70 text-[#0a5482]" />
                 <span>{t('Video List')}</span>
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">

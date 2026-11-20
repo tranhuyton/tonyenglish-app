@@ -3394,6 +3394,7 @@ export default function LectureViewer({
   };
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [lockedTrialLecture, setLockedTrialLecture] = useState<{ id: string; title: string } | null>(null);
   const [isVideoCollapsed, setIsVideoCollapsed] = useState(false);
   const [selectedVideoSubIndex, setSelectedVideoSubIndex] = useState<number>(0);
 
@@ -5121,137 +5122,36 @@ export default function LectureViewer({
 
 
 
-         {/* 📖 THANH TRA TỪ ĐIỂN - CHÍNH GIỮA */}
+         {/* 📖 NÚT MỞ TỪ ĐIỂN - CHÍNH GIỮA */}
          <div className="hidden lg:flex flex-1 justify-center mx-3 max-w-sm relative" ref={dictRef}>
-           <div className="relative w-full max-w-[320px]">
-             <div onClick={() => window.dispatchEvent(new CustomEvent('tony-open-standalone-dictionary'))} className="flex items-center bg-white/12 hover:bg-white/20 focus-within:bg-white/25 rounded-xl border border-white/20 transition-all px-3 h-9 cursor-pointer" title="Mở Từ điển Anh-Việt / Việt-Anh">
-               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4 text-white/70 shrink-0">
+           <button
+             type="button"
+             onClick={() => window.dispatchEvent(new CustomEvent('tony-open-standalone-dictionary'))}
+             className="w-full max-w-[320px] flex items-center justify-between bg-white/12 hover:bg-white/20 rounded-xl border border-white/20 transition-all px-3.5 h-9 cursor-pointer group"
+             title="Mở Từ điển Anh-Việt / Việt-Anh (hoặc click đúp bất kỳ từ nào trong bài)"
+           >
+             <span className="flex items-center gap-2 min-w-0">
+               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4 text-sky-200 group-hover:text-white shrink-0">
                  <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                </svg>
-               <input
-                 type="text"
-                 value={dictQuery}
-                 onChange={(e) => handleDictInput(e.target.value)}
-                 readOnly onClick={() => window.dispatchEvent(new CustomEvent('tony-open-standalone-dictionary'))} onFocus={(e) => { e.target.blur(); window.dispatchEvent(new CustomEvent('tony-open-standalone-dictionary')); }}
-                 onKeyDown={(e) => { if (e.key === 'Enter') { e.preventDefault(); lookupDictionary(dictQuery); } }}
-                 placeholder="Tra từ điển EN ↔ VI..."
-                 className="flex-1 bg-transparent text-white placeholder-white/70 text-[13px] font-medium px-2 py-1 outline-none border-none min-w-0 cursor-pointer"
-               />
-               {isDictLoading && (
-                 <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin shrink-0"></div>
-               )}
-               {dictQuery && !isDictLoading && (
-                 <button onClick={() => { setDictQuery(''); setDictResults(null); setIsDictOpen(false); }} className="text-white/50 hover:text-white shrink-0">
-                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.28 7.22a.75.75 0 00-1.06 1.06L8.94 10l-1.72 1.72a.75.75 0 101.06 1.06L10 11.06l1.72 1.72a.75.75 0 101.06-1.06L11.06 10l1.72-1.72a.75.75 0 00-1.06-1.06L10 8.94 8.28 7.22z" clipRule="evenodd" /></svg>
-                 </button>
-               )}
-             </div>
-
-             {/* DROPDOWN KẾT QUẢ */}
-             {false && isDictOpen && dictResults && (
-               <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[380px] max-h-[420px] overflow-y-auto bg-white rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.2)] border border-slate-100 z-[100] animate-in slide-in-from-top-2 duration-200 custom-scrollbar">
-                 
-                 {dictResults.type === 'error' && (
-                   <div className="p-5 text-center text-slate-400 text-[14px]">
-                     <span className="text-2xl block mb-2">🔍</span>
-                     {dictResults.message}
-                   </div>
-                 )}
-
-                 {dictResults.type === 'en-vi' && (
-                   <div className="p-5">
-                     {/* TỪ + PHIÊN ÂM */}
-                     <div className="flex items-center gap-3 mb-4">
-                       <h3 className="text-[20px] font-black text-slate-800">{dictResults.word}</h3>
-                       {dictResults.phonetic && (
-                         <span className="text-[13px] text-slate-400 font-medium">{dictResults.phonetic}</span>
-                       )}
-                       {dictResults.audioUrl && (
-                         <button
-                           onClick={() => { const a = new Audio(dictResults.audioUrl); a.play(); }}
-                           className="w-7 h-7 rounded-full bg-[#0ea5e9]/10 hover:bg-[#0ea5e9]/20 flex items-center justify-center text-[#0ea5e9] transition-colors"
-                         >
-                           🔊
-                         </button>
-                       )}
-                     </div>
-
-                     {/* NGHĨA TIẾNG VIỆT */}
-                     {dictResults.viTranslation && (
-                       <div className="bg-[#0ea5e9]/5 rounded-xl px-4 py-3 mb-4 border border-[#0ea5e9]/10">
-                         <span className="text-[10px] font-bold uppercase tracking-widest text-[#0ea5e9] block mb-1">Nghĩa tiếng Việt</span>
-                         <span className="text-[16px] font-bold text-slate-800">{dictResults.viTranslation}</span>
-                       </div>
-                     )}
-
-                     {/* ĐỊNH NGHĨA TIẾNG ANH + VÍ DỤ */}
-                     {dictResults.definitions?.length > 0 && (
-                       <div className="space-y-3">
-                         {dictResults.definitions.map((m: any, i: number) => (
-                           <div key={i}>
-                             <span className="inline-block bg-slate-100 text-slate-500 text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-md mb-1.5">{m.partOfSpeech}</span>
-                             {m.defs.map((d: any, j: number) => (
-                               <div key={j} className="ml-1 mb-2">
-                                 <p className="text-[13px] text-slate-700 leading-relaxed">• {d.definition}</p>
-                                 {d.example && (
-                                   <p className="text-[12px] text-slate-400 italic ml-3 mt-0.5">"{d.example}"</p>
-                                 )}
-                               </div>
-                             ))}
-                           </div>
-                         ))}
-                       </div>
-                     )}
-
-                     {!dictResults.viTranslation && dictResults.definitions?.length === 0 && (
-                       <div className="text-center text-slate-400 text-[14px] py-4">
-                         <span className="text-2xl block mb-2">📚</span>
-                         Không tìm thấy từ "<strong>{dictResults.word}</strong>"
-                       </div>
-                     )}
-                   </div>
-                 )}
-
-                 {dictResults.type === 'vi-en' && (
-                   <div className="p-5">
-                     <h3 className="text-[20px] font-black text-slate-800 mb-3">{dictResults.word}</h3>
-                     {dictResults.translation && (
-                       <div className="bg-emerald-50 rounded-xl px-4 py-3 mb-4 border border-emerald-100">
-                         <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-600 block mb-1">English Translation</span>
-                         <span className="text-[16px] font-bold text-slate-800">{dictResults.translation}</span>
-                       </div>
-                     )}
-                     {dictResults.alternatives?.length > 0 && (
-                       <div>
-                         <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-2">Gợi ý khác</span>
-                         <div className="flex flex-wrap gap-2">
-                           {dictResults.alternatives.map((alt: string, i: number) => (
-                             <span key={i} className="bg-slate-50 border border-slate-200 text-slate-600 text-[12px] font-medium px-3 py-1.5 rounded-lg">{alt}</span>
-                           ))}
-                         </div>
-                       </div>
-                     )}
-                     {!dictResults.translation && (
-                       <div className="text-center text-slate-400 text-[14px] py-4">
-                         <span className="text-2xl block mb-2">📚</span>
-                         Không tìm thấy nghĩa cho "<strong>{dictResults.word}</strong>"
-                       </div>
-                     )}
-                   </div>
-                 )}
-               </div>
-             )}
-           </div>
+               <span className="text-white/80 group-hover:text-white text-[13px] font-semibold truncate">
+                 Tra từ điển EN ↔ VI...
+               </span>
+             </span>
+             <span className="text-[10px] font-black uppercase tracking-wider px-1.5 py-0.5 rounded bg-white/15 text-sky-100 shrink-0">
+               TonyDict
+             </span>
+           </button>
          </div>
 
           <div className="flex items-center gap-1.5 sm:gap-3 shrink-0 ml-2">
-              {/* 📱 NÚT MENU THAO TÁC NHANH CHO DI ĐỘNG (< sm) */}
-              <div className="relative sm:hidden">
+              {/* 📱 NÚT MENU THAO TÁC NHANH CHO DI ĐỘNG & TABLET (< lg) */}
+              <div className="relative lg:hidden">
                 <button
                   type="button"
                   onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                  className="w-9 h-9 rounded-full flex items-center justify-center bg-white/15 hover:bg-white/25 text-white font-black text-base transition-all active:scale-95 border border-white/20 shadow-xs"
-                  title="Menu chức năng"
+                  className="w-9 h-9 rounded-xl flex items-center justify-center bg-white/15 hover:bg-white/25 text-white font-black text-base transition-all active:scale-95 border border-white/20 shadow-xs cursor-pointer"
+                  title="Menu chức năng & điều hướng"
                 >
                   ⋯
                 </button>
@@ -5259,7 +5159,18 @@ export default function LectureViewer({
                 {isMobileMenuOpen && (
                   <>
                     <div className="fixed inset-0 z-40" onClick={() => setIsMobileMenuOpen(false)} />
-                    <div className="absolute right-0 top-full mt-2 w-52 bg-white rounded-2xl shadow-2xl border border-slate-100 py-1.5 z-50 text-slate-800 animate-in fade-in slide-in-from-top-2 duration-150">
+                    <div className="absolute right-0 top-full mt-2 w-56 bg-white rounded-2xl shadow-2xl border border-slate-100 py-1.5 z-50 text-slate-800 animate-in fade-in slide-in-from-top-2 duration-150">
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setIsMobileMenuOpen(false);
+                          window.dispatchEvent(new CustomEvent('tony-open-standalone-dictionary'));
+                        }}
+                        className="w-full text-left px-4 py-2.5 text-[13px] font-bold text-[#0a5482] hover:bg-sky-50 flex items-center gap-2.5 transition-colors cursor-pointer"
+                      >
+                        <span>📖</span> Tra từ điển EN ↔ VI
+                      </button>
+                      <div className="h-px bg-slate-100 my-1" />
                       <button
                         onClick={() => {
                           setIsMobileMenuOpen(false);
@@ -5268,7 +5179,7 @@ export default function LectureViewer({
                           sessionStorage.setItem('lms_portal_tab', 'calendar');
                           onBack();
                         }}
-                        className="w-full text-left px-4 py-2.5 text-[13px] font-semibold text-slate-700 hover:bg-sky-50 hover:text-[#0ea5e9] flex items-center gap-2.5 transition-colors"
+                        className="w-full text-left px-4 py-2.5 text-[13px] font-semibold text-slate-700 hover:bg-sky-50 hover:text-[#0a5482] flex items-center gap-2.5 transition-colors cursor-pointer"
                       >
                         <span>📅</span> Lịch báo bài
                       </button>
@@ -5280,7 +5191,7 @@ export default function LectureViewer({
                           sessionStorage.setItem('lms_portal_tab', 'board');
                           onBack();
                         }}
-                        className="w-full text-left px-4 py-2.5 text-[13px] font-semibold text-slate-700 hover:bg-sky-50 hover:text-[#0ea5e9] flex items-center gap-2.5 transition-colors"
+                        className="w-full text-left px-4 py-2.5 text-[13px] font-semibold text-slate-700 hover:bg-sky-50 hover:text-[#0a5482] flex items-center gap-2.5 transition-colors cursor-pointer"
                       >
                         <span>📋</span> Bảng công việc
                       </button>
@@ -5293,7 +5204,7 @@ export default function LectureViewer({
                           sessionStorage.setItem('lms_portal_tab', 'library');
                           onBack();
                         }}
-                        className="w-full text-left px-4 py-2.5 text-[13px] font-semibold text-slate-700 hover:bg-sky-50 hover:text-[#0ea5e9] flex items-center gap-2.5 transition-colors"
+                        className="w-full text-left px-4 py-2.5 text-[13px] font-semibold text-slate-700 hover:bg-sky-50 hover:text-[#0a5482] flex items-center gap-2.5 transition-colors cursor-pointer"
                       >
                         <span>📚</span> Kho đề bài tập
                       </button>
@@ -5303,22 +5214,12 @@ export default function LectureViewer({
                             setIsMobileMenuOpen(false);
                             setIsStudyCoachModalOpen(true);
                           }}
-                          className="w-full text-left px-4 py-2.5 text-[13px] font-bold text-[#0a5482] bg-sky-50/70 hover:bg-sky-100 flex items-center gap-2.5 transition-colors"
+                          className="sm:hidden w-full text-left px-4 py-2.5 text-[13px] font-bold text-[#0a5482] bg-sky-50/70 hover:bg-sky-100 flex items-center gap-2.5 transition-colors cursor-pointer"
                         >
                           <span>🧭</span> Lộ trình học AI Tutor
                         </button>
                       )}
-                      <div className="h-px bg-slate-100 my-1" />
-                      <button
-                        onClick={() => {
-                          setIsMobileMenuOpen(false);
-                          setIsLectureThemeModalOpen(true);
-                        }}
-                        className="w-full text-left px-4 py-2.5 text-[13px] font-semibold text-slate-700 hover:bg-purple-50 hover:text-purple-600 flex items-center gap-2.5 transition-colors"
-                      >
-                        <span>🎨</span> Đổi màu nền bài giảng
-                      </button>
-                      <div className="px-4 py-2 border-t border-slate-100 flex items-center justify-between gap-2">
+                      <div className="sm:hidden px-4 py-2 border-t border-slate-100 flex items-center justify-between gap-2 mt-1">
                         <span className="text-[12px] font-bold text-slate-600">🔤 Cỡ chữ</span>
                         <div className="flex items-center gap-1 bg-slate-100 rounded-lg p-0.5">
                           <button
@@ -5648,9 +5549,7 @@ export default function LectureViewer({
                                    key={lec.id} 
                                    onClick={() => {
                                      if (isLocked) {
-                                       alert(
-                                         `🔒 Bài giảng "${lec.title}" thuộc chương trình chính thức của khóa ${course?.title || 'IGCSE'}.\n\n💡 Bạn đang ở chế độ Học Thử miễn phí. Vui lòng liên hệ Zalo/Hotline TonyEnglish (0935 058 688) hoặc bấm "Mở khóa" ở Góc Học Viên để mở khóa 100% bài giảng và kho đề nhé!`
-                                       );
+                                       setLockedTrialLecture({ id: lec.id, title: lec.title });
                                        return;
                                      }
                                      handleSelectLecture(lec.id);
@@ -6617,6 +6516,73 @@ export default function LectureViewer({
         initialTab={wt1VocabModal.tab}
         onClose={() => setWt1VocabModal((prev) => ({ ...prev, open: false }))}
       />
+
+      {/* 🔒 MODAL MỞ KHÓA BÀI GIẢNG HỌC THỬ (Thay thế window.alert) */}
+      {lockedTrialLecture && (
+        <div
+          className="fixed inset-0 z-[120] bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4 animate-in fade-in duration-150"
+          onClick={() => setLockedTrialLecture(null)}
+        >
+          <div
+            className="bg-white rounded-3xl w-full max-w-md shadow-2xl border border-slate-200 overflow-hidden animate-in zoom-in-95 duration-150"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="bg-gradient-to-r from-[#0a5482] to-[#0f172a] px-6 py-5 text-white flex items-start justify-between gap-3">
+              <div>
+                <span className="inline-flex items-center gap-1.5 text-[11px] font-black uppercase tracking-widest text-[#2ab4e8] mb-1">
+                  🔒 Chương trình chính thức
+                </span>
+                <h3 className="text-lg font-black leading-snug">
+                  Mở khóa toàn bộ khóa học
+                </h3>
+              </div>
+              <button
+                type="button"
+                onClick={() => setLockedTrialLecture(null)}
+                className="w-8 h-8 rounded-xl bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition cursor-pointer shrink-0"
+                title="Đóng"
+              >
+                ✕
+              </button>
+            </div>
+            <div className="p-6 space-y-4">
+              <div className="p-3.5 rounded-2xl bg-amber-50 border border-amber-200/80 text-sm text-amber-950 leading-relaxed">
+                Bài giảng <strong className="font-extrabold">"{lockedTrialLecture.title}"</strong> thuộc chương trình chính thức của khóa{' '}
+                <strong className="font-extrabold">{course?.title || 'IGCSE'}</strong>.
+              </div>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Bạn đang ở chế độ <strong className="text-slate-800">Học Thử miễn phí</strong>. Liên hệ Thầy Tony để mở khóa 100% bài giảng tương tác, kho đề luyện thi &amp; trợ lý AI 24/7:
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
+                <a
+                  href="https://zalo.me/0935058688"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center justify-center gap-2 bg-[#0a5482] hover:bg-[#084266] text-white font-black text-sm py-3 px-4 rounded-xl shadow-md transition"
+                >
+                  <span>💬 Nhắn Zalo Thầy Tony</span>
+                </a>
+                <a
+                  href="tel:0935058688"
+                  className="flex items-center justify-center gap-2 bg-sky-50 hover:bg-sky-100 text-[#0a5482] border border-sky-200 font-black text-sm py-3 px-4 rounded-xl transition"
+                >
+                  <span>📞 0935 058 688</span>
+                </a>
+              </div>
+              <button
+                type="button"
+                onClick={() => {
+                  setLockedTrialLecture(null);
+                  onBack();
+                }}
+                className="w-full py-2.5 rounded-xl text-xs font-bold text-slate-500 hover:text-[#0a5482] hover:bg-slate-100 transition cursor-pointer"
+              >
+                Quay lại Góc Học Viên →
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -1985,7 +1985,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   );
 
   return (
-    <div className="min-h-[100dvh] bg-slate-50 font-sans text-slate-800 overscroll-none w-full flex flex-col pb-16 md:pb-0">
+    <div className={`bg-slate-50 font-sans text-slate-800 overscroll-none w-full flex flex-col pb-16 lg:pb-0 ${activeTab === 'board' ? 'h-[100dvh] overflow-hidden' : 'min-h-[100dvh]'}`}>
       {/* UNIFIED MODERN GLASSMORPHIC LMS HEADER (Single-Bar Clean App Workspace) */}
       <header className="bg-white/90 backdrop-blur-lg border-b border-slate-200/80 sticky top-0 z-40 shadow-2xs shrink-0">
         <div className="max-w-7xl w-full mx-auto px-3.5 sm:px-6 h-16 sm:h-[72px] flex items-center justify-between gap-2 sm:gap-4 transition-all">
@@ -2017,8 +2017,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             </div>
           </div>
 
-          {/* Desktop Navigation Tabs (Synchronized with Layout.tsx navItems) */}
-          <div className="hidden md:flex items-center gap-1 lg:gap-1.5">
+          {/* Desktop Navigation Tabs (Synchronized with Layout.tsx navItems; lg+ to avoid tablet overflow) */}
+          <div className="hidden lg:flex items-center gap-1 xl:gap-1.5">
             <button 
               onClick={() => { 
                 resetWorkspaceAndChat(); 
@@ -2126,40 +2126,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                   </button>
                   <button onClick={() => { 
                     resetWorkspaceAndChat(); 
-                    setActiveTab('library'); 
-                    setActiveView('dashboard'); 
-                    setSelectedCourseId(null); 
-                    setCurrentFolderId(null); 
-                    setIsDropdownOpen(false); 
-                  }} className="md:hidden w-full text-left px-5 py-3 text-sm font-semibold text-slate-700 hover:bg-sky-50 hover:text-[#0a5482] flex items-center gap-2 transition-colors">
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg> Học tập &amp; Kho đề
-                  </button>
-                  <button onClick={() => { 
-                    resetWorkspaceAndChat(); 
-                    setActiveTab('calendar'); 
-                    setIsDropdownOpen(false); 
-                  }} className="md:hidden w-full text-left px-5 py-3 text-sm font-semibold text-slate-700 hover:bg-sky-50 hover:text-[#0a5482] flex items-center gap-2 transition-colors">
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg> Lịch báo bài
-                  </button>
-                  <button onClick={() => { 
-                    resetWorkspaceAndChat(); 
-                    setActiveTab('board'); 
-                    setIsDropdownOpen(false); 
-                  }} className="md:hidden w-full text-left px-5 py-3 text-sm font-semibold text-slate-700 hover:bg-sky-50 hover:text-[#0a5482] flex items-center gap-2 transition-colors">
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" /></svg> Bảng công việc
-                  </button>
-                  <button onClick={() => { 
-                    resetWorkspaceAndChat(); 
-                    setActiveTab('analytics'); 
-                    setIsDropdownOpen(false); 
-                  }} className="md:hidden w-full text-left px-5 py-3 text-sm font-semibold text-slate-700 hover:bg-sky-50 hover:text-[#0a5482] flex items-center gap-2 transition-colors">
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg> Báo cáo
-                  </button>
-                  <button onClick={() => { 
-                    resetWorkspaceAndChat(); 
                     setActiveTab('profile'); 
                     setIsDropdownOpen(false); 
-                  }} className="w-full text-left px-5 py-2.5 text-sm font-semibold text-slate-700 hover:bg-sky-50 hover:text-[#0a5482] transition-colors flex items-center gap-2 md:border-t-0 border-t border-slate-100 cursor-pointer">
+                  }} className="w-full text-left px-5 py-2.5 text-sm font-semibold text-slate-700 hover:bg-sky-50 hover:text-[#0a5482] transition-colors flex items-center gap-2 cursor-pointer">
                     👤 Cấu hình tài khoản
                   </button>
                   {userProfile?.role === 'admin' && (
@@ -4220,7 +4189,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
       </main>
 
-      {/* UNIFIED COMPACT FOOTER (Đồng bộ với TonyEnglish.vn) */}
+      {/* UNIFIED COMPACT FOOTER (Ẩn khi ở tab Kanban Board để có không gian làm việc gọn nhất) */}
+      {activeTab !== 'board' && (
       <footer className="bg-[#0f172a] text-slate-400 py-8 border-t border-slate-800 mt-12 shrink-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
@@ -4296,6 +4266,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
           </div>
         </div>
       </footer>
+      )}
 
       {/* POPUP CHI TIẾT LỊCH SỬ */}
       {viewingHistoryDetail && (
@@ -4495,10 +4466,10 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
           );
         })()}
 
-      {/* 📱 STICKY MOBILE BOTTOM NAVIGATION BAR */}
+      {/* 📱 STICKY MOBILE & TABLET BOTTOM NAVIGATION BAR (< lg) */}
       <nav 
         aria-label="Mobile Navigation"
-        className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-lg border-t border-slate-200/90 shadow-[0_-4px_20px_rgba(0,0,0,0.06)] px-2 py-1 flex items-center justify-around"
+        className="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-lg border-t border-slate-200/90 shadow-[0_-4px_20px_rgba(0,0,0,0.06)] px-2 py-1 flex items-center justify-around"
         style={{ paddingBottom: 'calc(env(safe-area-inset-bottom, 0px) + 6px)' }}
       >
         <button

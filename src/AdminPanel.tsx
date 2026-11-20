@@ -1823,22 +1823,54 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
 
       <aside className={`fixed md:relative inset-y-0 left-0 z-50 h-[100dvh] w-[260px] md:w-64 bg-[#1e293b] text-slate-300 flex flex-col shrink-0 shadow-2xl md:shadow-xl transition-transform duration-300 ease-in-out ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'}`}>
         <div className="h-16 md:h-20 flex items-center justify-between px-6 bg-[#0f172a] border-b border-slate-800 shrink-0">
-          <div className="font-black text-xl tracking-tight text-white uppercase mt-1 cursor-pointer" onClick={() => onNavigate?.('home')}>TONY<span className="text-[#2bd6eb]">ADMIN</span></div>
+          <div className="font-black text-xl tracking-tight text-white uppercase mt-1 cursor-pointer" onClick={() => onNavigate?.('home')}>TONY<span className="text-[#2ab4e8]">ADMIN</span></div>
           <button onClick={() => setIsSidebarOpen(false)} className="md:hidden text-slate-400 hover:text-white text-2xl font-bold">&times;</button>
         </div>
         <div className="p-4 space-y-1 flex-1 overflow-y-auto custom-scrollbar" style={{ WebkitOverflowScrolling: 'touch' }}>
           <p className="text-[10px] font-black uppercase text-slate-500 tracking-widest ml-3 mb-2 mt-4">Hệ thống LMS</p>
-          <button onClick={() => {setActiveTab('courses'); setSelectedCourse(null); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'courses' || activeTab === 'course-detail' ? 'bg-[#2bd6eb]/10 text-[#2bd6eb]' : 'hover:bg-slate-800 hover:text-white'}`}>📁 Khóa học & Lớp</button>
-          <button onClick={() => {setActiveTab('library'); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'library' ? 'bg-[#2bd6eb]/10 text-[#2bd6eb]' : 'hover:bg-slate-800 hover:text-white'}`}>📚 Kho Đề thi & Bài tập</button>
-          <button onClick={() => {setActiveTab('lectures-library'); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'lectures-library' ? 'bg-[#2bd6eb]/10 text-[#2bd6eb]' : 'hover:bg-slate-800 hover:text-white'}`}>📖 Kho Bài giảng</button>
-          <button onClick={() => {setActiveTab('documents'); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'documents' ? 'bg-[#2bd6eb]/10 text-[#2bd6eb]' : 'hover:bg-slate-800 hover:text-white'}`}>☁️ Quản lý Tài Liệu (PDF)</button>
-          <button onClick={() => {setActiveTab('assignments-mgmt'); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'assignments-mgmt' ? 'bg-[#2bd6eb]/10 text-[#2bd6eb]' : 'hover:bg-slate-800 hover:text-white'}`}>📝 Giao bài học viên</button>
-          <button onClick={() => {setActiveTab('students'); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'students' ? 'bg-[#2bd6eb]/10 text-[#2bd6eb]' : 'hover:bg-slate-800 hover:text-white'}`}>👨‍🎓 Quản lý học viên</button>
+          <button onClick={() => {setActiveTab('courses'); setSelectedCourse(null); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'courses' || activeTab === 'course-detail' ? 'bg-[#2ab4e8]/10 text-[#2ab4e8]' : 'hover:bg-slate-800 hover:text-white'}`}>📁 Khóa học & Lớp</button>
+          <button onClick={() => {setActiveTab('library'); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'library' ? 'bg-[#2ab4e8]/10 text-[#2ab4e8]' : 'hover:bg-slate-800 hover:text-white'}`}>📚 Kho Đề thi & Bài tập</button>
+          <button onClick={() => {setActiveTab('lectures-library'); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'lectures-library' ? 'bg-[#2ab4e8]/10 text-[#2ab4e8]' : 'hover:bg-slate-800 hover:text-white'}`}>📖 Kho Bài giảng</button>
+          <button onClick={() => {setActiveTab('documents'); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'documents' ? 'bg-[#2ab4e8]/10 text-[#2ab4e8]' : 'hover:bg-slate-800 hover:text-white'}`}>☁️ Quản lý Tài Liệu (PDF)</button>
+          <button onClick={() => {setActiveTab('assignments-mgmt'); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'assignments-mgmt' ? 'bg-[#2ab4e8]/10 text-[#2ab4e8]' : 'hover:bg-slate-800 hover:text-white'}`}>📝 Giao bài học viên</button>
+          <button onClick={() => {setActiveTab('students'); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'students' ? 'bg-[#2ab4e8]/10 text-[#2ab4e8]' : 'hover:bg-slate-800 hover:text-white'}`}>👨‍🎓 Quản lý học viên</button>
           <button onClick={() => {setActiveTab('online-students'); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'online-students' ? 'bg-amber-400/15 text-amber-300 border border-amber-400/30' : 'hover:bg-slate-800 hover:text-white'}`}>🌐 Học viên Online (IGCSE)</button>
           <div className="pt-4 mt-4 border-t border-slate-800">
-            <p className="text-[10px] font-black uppercase text-[#2bd6eb] tracking-widest ml-3 mb-2">Cổng thông tin & Web</p>
-            <button onClick={() => {setActiveTab('web-cms'); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'web-cms' ? 'bg-[#2bd6eb]/10 text-[#2bd6eb]' : 'hover:bg-slate-800 hover:text-white'}`}>🌐 Quản trị Web (tonyenglish.vn)</button>
+            <p className="text-[10px] font-black uppercase text-[#2ab4e8] tracking-widest ml-3 mb-2">Cổng thông tin & Web</p>
+            <button onClick={() => {setActiveTab('web-cms'); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'web-cms' ? 'bg-[#2ab4e8]/10 text-[#2ab4e8]' : 'hover:bg-slate-800 hover:text-white'}`}>🌐 Quản trị Web (tonyenglish.vn)</button>
           </div>
+        </div>
+        {/* Sidebar Footer Quick Links */}
+        <div className="p-3 bg-[#0f172a]/90 border-t border-slate-800 shrink-0 space-y-1">
+          <div className="grid grid-cols-2 gap-1.5">
+            <button
+              type="button"
+              onClick={() => { setIsSidebarOpen(false); onNavigate?.('portal'); }}
+              className="flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-xl text-[12px] font-bold text-sky-200 bg-white/5 hover:bg-white/10 hover:text-white transition cursor-pointer"
+              title="Chuyển sang Góc Học Viên"
+            >
+              <span>🎓</span><span>Góc HV</span>
+            </button>
+            <button
+              type="button"
+              onClick={() => { setIsSidebarOpen(false); window.history.pushState({}, '', '/'); onNavigate?.('home'); }}
+              className="flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-xl text-[12px] font-bold text-slate-300 bg-white/5 hover:bg-white/10 hover:text-white transition cursor-pointer"
+              title="Về trang chủ công khai"
+            >
+              <span>🏠</span><span>Trang chủ</span>
+            </button>
+          </div>
+          <button
+            type="button"
+            onClick={async () => {
+              if (!window.confirm('Bạn có chắc muốn đăng xuất khỏi tài khoản Quản trị?')) return;
+              await supabase.auth.signOut();
+              window.location.href = '/';
+            }}
+            className="w-full flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl text-[12px] font-bold text-rose-300 hover:bg-rose-500/15 hover:text-rose-200 transition cursor-pointer"
+          >
+            <span>🚪</span><span>Đăng xuất</span>
+          </button>
         </div>
       </aside>
 
@@ -1856,7 +1888,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
           
           <div className="flex items-center gap-2 md:gap-4 shrink-0">
             <div className="relative shrink-0 mr-2" ref={notifRef}>
-                <button onClick={() => { setShowNotifications(!showNotifications); if(!showNotifications) markNotificationsAsRead(); }} className="relative p-2 text-slate-400 hover:text-[#2bd6eb] transition-colors">
+                <button onClick={() => { setShowNotifications(!showNotifications); if(!showNotifications) markNotificationsAsRead(); }} className="relative p-2 text-slate-400 hover:text-[#2ab4e8] transition-colors">
                     <span className="text-xl md:text-2xl">🔔</span>
                     {unreadCount > 0 && <span className="absolute top-1 right-1 w-4 h-4 bg-red-500 text-white text-[10px] font-bold rounded-full flex items-center justify-center animate-pulse">{unreadCount}</span>}
                 </button>
@@ -1910,12 +1942,12 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
             </div>
 
             {activeTab === 'courses' && <button onClick={() => setShowCreateCourseModal(true)} className="bg-[#0a5482] text-white font-black px-3 py-1.5 md:px-6 md:py-2.5 rounded-lg md:rounded-xl shadow-md text-[11px] md:text-sm transition hover:bg-[#084266] whitespace-nowrap">+ THÊM</button>}
-            {activeTab === 'lectures-library' && <button onClick={() => setEditingLecture({ id: 'new', title: '', course_id: null })} className="bg-[#00a651] text-white font-black px-3 py-1.5 md:px-6 md:py-2.5 rounded-lg md:rounded-xl shadow-md text-[11px] md:text-sm transition hover:bg-[#008f45] whitespace-nowrap">+ BÀI GIẢNG</button>}
+            {activeTab === 'lectures-library' && <button onClick={() => setEditingLecture({ id: 'new', title: '', course_id: null })} className="bg-[#059669] text-white font-black px-3 py-1.5 md:px-6 md:py-2.5 rounded-lg md:rounded-xl shadow-md text-[11px] md:text-sm transition hover:bg-[#047857] whitespace-nowrap">+ BÀI GIẢNG</button>}
             
             {activeTab === 'documents' && (
                 <div>
                    <input type="file" accept="application/pdf" multiple className="hidden" ref={fileInputRef} onChange={handleFileUpload} />
-                   <button disabled={isUploadingPdf} onClick={() => fileInputRef.current?.click()} className="bg-[#2bd6eb] text-white font-black px-3 py-1.5 md:px-6 md:py-2.5 rounded-lg md:rounded-xl shadow-md text-[11px] md:text-sm transition hover:bg-[#1bc1d6] whitespace-nowrap disabled:opacity-50">
+                   <button disabled={isUploadingPdf} onClick={() => fileInputRef.current?.click()} className="bg-[#2ab4e8] text-white font-black px-3 py-1.5 md:px-6 md:py-2.5 rounded-lg md:rounded-xl shadow-md text-[11px] md:text-sm transition hover:bg-[#1bc1d6] whitespace-nowrap disabled:opacity-50">
                       {isUploadingPdf ? '⏳ ĐANG TẢI...' : '+ UPLOAD PDF'}
                    </button>
                 </div>
@@ -1923,7 +1955,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
 
             {activeTab === 'library' && (
               <div className="relative shrink-0" ref={dropdownRef}>
-                <button onClick={() => setShowCreateDropdown(!showCreateDropdown)} className="bg-[#2bd6eb] text-white font-black px-3 py-1.5 md:px-6 md:py-2.5 rounded-lg md:rounded-xl shadow-md flex items-center gap-1.5 md:gap-2 text-[11px] md:text-sm transition hover:bg-[#1bc1d6] whitespace-nowrap">+ TẠO MỚI <span className={`text-[9px] md:text-[10px] transition-transform ${showCreateDropdown ? 'rotate-180' : ''}`}>▼</span></button>
+                <button onClick={() => setShowCreateDropdown(!showCreateDropdown)} className="bg-[#2ab4e8] text-white font-black px-3 py-1.5 md:px-6 md:py-2.5 rounded-lg md:rounded-xl shadow-md flex items-center gap-1.5 md:gap-2 text-[11px] md:text-sm transition hover:bg-[#1bc1d6] whitespace-nowrap">+ TẠO MỚI <span className={`text-[9px] md:text-[10px] transition-transform ${showCreateDropdown ? 'rotate-180' : ''}`}>▼</span></button>
                 {showCreateDropdown && (
                   <div className="absolute right-0 mt-2 w-56 md:w-64 max-w-[calc(100vw-2rem)] bg-white border border-slate-200 rounded-2xl shadow-2xl z-50 py-2 animate-in fade-in zoom-in-95">
                     <button onClick={() => handleInitiateTest('manual')} className="w-full text-left px-4 md:px-5 py-2.5 md:py-3 hover:bg-slate-50 font-bold text-[12px] md:text-[13px] border-b border-slate-100">✍️ Tạo thủ công (Standard)</button>
@@ -1975,7 +2007,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                          <h3 className="font-black text-[16px] md:text-lg text-slate-800 line-clamp-2 leading-snug">{course.title}</h3> 
                        )}
                     </div>
-                    <button onClick={() => handleViewCourseDetail(course)} className="w-full bg-[#f8fafc] hover:bg-[#2bd6eb] hover:text-white text-slate-600 border border-slate-200 font-bold py-2 md:py-2.5 rounded-xl transition shadow-sm text-[12px] md:text-sm">Quản lý Lớp & Nội dung ➜</button>
+                    <button onClick={() => handleViewCourseDetail(course)} className="w-full bg-[#f8fafc] hover:bg-[#2ab4e8] hover:text-white text-slate-600 border border-slate-200 font-bold py-2 md:py-2.5 rounded-xl transition shadow-sm text-[12px] md:text-sm">Quản lý Lớp & Nội dung ➜</button>
                   </div>
                 ))
               )}
@@ -2681,7 +2713,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                             const isExpanded = expandedBoardCardId === card.id;
                             
                             return (
-                              <div key={card.id} className="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden transition-all hover:border-[#2bd6eb]/50">
+                              <div key={card.id} className="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden transition-all hover:border-[#2ab4e8]/50">
                                 <div className="p-3 cursor-pointer group flex items-start gap-2" onClick={() => setExpandedBoardCardId(isExpanded ? null : card.id)}>
                                   <div className="flex-1 min-w-0">
                                     <h5 className="font-bold text-[13px] text-slate-700 leading-tight">{card.title}</h5>
@@ -2815,7 +2847,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                         course_id: boardCourseId, board_template_id: activeBoardTemplateId, title: title.trim(), order_index: nextOrder
                       }]).select();
                       if (data) setBoardColumns([...boardColumns, ...data]);
-                    }} className="w-full h-full rounded-2xl border-2 border-dashed border-slate-300 text-[13px] font-bold text-slate-500 hover:border-[#2bd6eb] hover:text-[#0a5482] hover:bg-[#2bd6eb]/5 transition-all flex items-center justify-center gap-2">
+                    }} className="w-full h-full rounded-2xl border-2 border-dashed border-slate-300 text-[13px] font-bold text-slate-500 hover:border-[#2ab4e8] hover:text-[#0a5482] hover:bg-[#2ab4e8]/5 transition-all flex items-center justify-center gap-2">
                       <span className="text-lg">+</span> Thêm cột
                     </button>
                   </div>
@@ -3271,7 +3303,8 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                     <button onClick={() => setDetailSortMode('date')} className={`text-[12px] px-3 py-1 rounded-lg font-bold ${detailSortMode === 'date' ? 'bg-[#0a5482] text-white' : 'bg-slate-100 text-slate-600'}`}>Thời gian</button>
                   </div>
                   {/* Student list table */}
-                  <table className="w-full text-sm">
+                  <div className="overflow-x-auto">
+                  <table className="w-full min-w-[520px] text-sm">
                     <thead>
                       <tr className="border-b border-slate-200 text-left">
                         <th className="py-2 px-3 text-slate-500 font-bold text-xs w-12">STT</th>
@@ -3319,6 +3352,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                       )}
                     </tbody>
                   </table>
+                  </div>
                 </div>
               </div>
             )}
@@ -3343,9 +3377,9 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                         </div>
                         <div className="flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
                             {!isSearchingPdf && (
-                                <button onClick={() => setShowPdfFolderModal(true)} className="bg-[#00a651] text-white px-3 py-1.5 md:px-4 md:py-2 rounded-xl font-black text-[10px] md:text-xs shadow-sm hover:bg-[#008f45] whitespace-nowrap">+ THƯ MỤC</button>
+                                <button onClick={() => setShowPdfFolderModal(true)} className="bg-[#059669] text-white px-3 py-1.5 md:px-4 md:py-2 rounded-xl font-black text-[10px] md:text-xs shadow-sm hover:bg-[#047857] whitespace-nowrap">+ THƯ MỤC</button>
                             )}
-                            <select value={pdfSortOrder} onChange={(e) => setPdfSortOrder(e.target.value)} className="w-full sm:w-32 px-2 md:px-3 py-2 rounded-xl border border-slate-200 outline-none focus:border-[#2bd6eb] text-[11px] md:text-xs font-bold text-slate-600 shadow-sm bg-white cursor-pointer">
+                            <select value={pdfSortOrder} onChange={(e) => setPdfSortOrder(e.target.value)} className="w-full sm:w-32 px-2 md:px-3 py-2 rounded-xl border border-slate-200 outline-none focus:border-[#2ab4e8] text-[11px] md:text-xs font-bold text-slate-600 shadow-sm bg-white cursor-pointer">
                                 <option value="date-desc">Mới nhất trước</option>
                                 <option value="date-asc">Cũ nhất trước</option>
                                 <option value="name-asc">Tên (A-Z)</option>
@@ -3353,7 +3387,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                                 <option value="size-desc">Size (Lớn nhất)</option>
                                 <option value="size-asc">Size (Nhỏ nhất)</option>
                             </select>
-                            <input type="text" placeholder="Tìm tên file..." value={pdfSearchQuery} onChange={(e) => setPdfSearchQuery(e.target.value)} className="w-full sm:w-48 px-4 py-2 rounded-xl border border-slate-200 outline-none focus:border-[#2bd6eb] text-xs shadow-sm font-medium" />
+                            <input type="text" placeholder="Tìm tên file..." value={pdfSearchQuery} onChange={(e) => setPdfSearchQuery(e.target.value)} className="w-full sm:w-48 px-4 py-2 rounded-xl border border-slate-200 outline-none focus:border-[#2ab4e8] text-xs shadow-sm font-medium" />
                         </div>
                     </div>
 
@@ -3363,7 +3397,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                                {currentPdfSubFolders.map(sf => (
                                   <div key={sf.id} className="relative group h-[100px] md:h-[120px]">
                                      {editingPdfFolderId === sf.id ? (
-                                         <div className="bg-white border-2 border-[#2bd6eb] p-2 md:p-3 rounded-xl md:rounded-2xl shadow-sm h-full flex flex-col items-center justify-center">
+                                         <div className="bg-white border-2 border-[#2ab4e8] p-2 md:p-3 rounded-xl md:rounded-2xl shadow-sm h-full flex flex-col items-center justify-center">
                                             <form className="w-full flex flex-col items-center" onSubmit={(e) => handleUpdatePdfFolderName(sf.id, new FormData(e.currentTarget).get('name') as string)}>
                                                <input name="name" autoFocus defaultValue={sf.name} className="w-full border border-slate-300 rounded px-2 py-1 text-[11px] md:text-xs font-bold mb-2 text-center outline-none focus:border-[#0a5482]" />
                                                <div className="flex gap-2">
@@ -3373,7 +3407,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                                             </form>
                                          </div>
                                      ) : (
-                                         <div onClick={() => setCurrentPdfFolderId(sf.id)} className="bg-white border-2 border-slate-100 hover:border-[#2bd6eb] p-3 md:p-4 rounded-xl md:rounded-2xl shadow-sm cursor-pointer h-full flex flex-col items-center justify-center text-center relative overflow-hidden transition-all">
+                                         <div onClick={() => setCurrentPdfFolderId(sf.id)} className="bg-white border-2 border-slate-100 hover:border-[#2ab4e8] p-3 md:p-4 rounded-xl md:rounded-2xl shadow-sm cursor-pointer h-full flex flex-col items-center justify-center text-center relative overflow-hidden transition-all">
                                              <div className="text-3xl md:text-4xl mb-2 group-hover:scale-110 transition-transform">📁</div>
                                              <h4 className="font-black text-slate-700 text-[11px] md:text-[13px] line-clamp-2 px-1">{sf.name}</h4>
                                              <button onClick={(e) => { e.stopPropagation(); setEditingPdfFolderId(sf.id); }} className="absolute top-2 right-2 text-blue-400 opacity-0 group-hover:opacity-100 bg-blue-50 p-1 md:p-1.5 rounded text-[10px] md:text-xs transition-opacity">✏️</button>
@@ -3428,7 +3462,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
               
               <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 bg-white p-4 md:p-5 rounded-xl md:rounded-2xl border border-slate-200 shadow-sm">
                 <div className="flex flex-wrap items-center gap-2 text-[12px] md:text-sm font-bold text-slate-500">
-                  <button onClick={() => setActiveTab('courses')} className="hover:text-[#2bd6eb] transition-colors">Khóa học</button> 
+                  <button onClick={() => setActiveTab('courses')} className="hover:text-[#2ab4e8] transition-colors">Khóa học</button> 
                   <span className="text-slate-300">/</span> 
                   <span className="text-slate-800 font-black">{selectedCourse.title}</span>
                 </div>
@@ -3437,9 +3471,9 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
 
               <div className="flex items-center justify-between gap-4 border-b border-slate-200 px-1 md:px-2 overflow-x-auto custom-scrollbar whitespace-nowrap" style={{ WebkitOverflowScrolling: 'touch' }}>
                  <div className="flex gap-4 md:gap-6">
-                   <button onClick={() => setCourseViewMode('classes')} className={`pb-2 md:pb-3 font-black text-[11px] md:text-[13px] uppercase tracking-widest px-2 border-b-[3px] transition-colors ${courseViewMode === 'classes' ? 'border-[#2bd6eb] text-[#0a5482]' : 'border-transparent text-slate-400 hover:text-slate-600'}`}>👨‍🏫 LỚP HỌC</button>
-                   <button onClick={() => setCourseViewMode('modules')} className={`pb-2 md:pb-3 font-black text-[11px] md:text-[13px] uppercase tracking-widest px-2 border-b-[3px] transition-colors ${courseViewMode === 'modules' ? 'border-[#2bd6eb] text-[#0a5482]' : 'border-transparent text-slate-400 hover:text-slate-600'}`}>📚 GIÁO TRÌNH</button>
-                   <button onClick={() => setCourseViewMode('tests')} className={`pb-2 md:pb-3 font-black text-[11px] md:text-[13px] uppercase tracking-widest px-2 border-b-[3px] transition-colors ${courseViewMode === 'tests' ? 'border-[#2bd6eb] text-[#0a5482]' : 'border-transparent text-slate-400 hover:text-slate-600'}`}>📁 KHO ĐỀ & BÀI TẬP</button>
+                   <button onClick={() => setCourseViewMode('classes')} className={`pb-2 md:pb-3 font-black text-[11px] md:text-[13px] uppercase tracking-widest px-2 border-b-[3px] transition-colors ${courseViewMode === 'classes' ? 'border-[#2ab4e8] text-[#0a5482]' : 'border-transparent text-slate-400 hover:text-slate-600'}`}>👨‍🏫 LỚP HỌC</button>
+                   <button onClick={() => setCourseViewMode('modules')} className={`pb-2 md:pb-3 font-black text-[11px] md:text-[13px] uppercase tracking-widest px-2 border-b-[3px] transition-colors ${courseViewMode === 'modules' ? 'border-[#2ab4e8] text-[#0a5482]' : 'border-transparent text-slate-400 hover:text-slate-600'}`}>📚 GIÁO TRÌNH</button>
+                   <button onClick={() => setCourseViewMode('tests')} className={`pb-2 md:pb-3 font-black text-[11px] md:text-[13px] uppercase tracking-widest px-2 border-b-[3px] transition-colors ${courseViewMode === 'tests' ? 'border-[#2ab4e8] text-[#0a5482]' : 'border-transparent text-slate-400 hover:text-slate-600'}`}>📁 KHO ĐỀ & BÀI TẬP</button>
                  </div>
                  <a
                    href={`/khoa-hoc?course=${encodeURIComponent(selectedCourse?.title || '')}`}
@@ -3468,7 +3502,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                             classes.map(cls => {
                                const clsCfg = parseClassConfig(cls.name);
                                return (
-                               <div key={cls.id} onClick={() => { setSelectedClass(cls); fetchClassDetails(cls.id); }} className={`p-3 md:p-4 border rounded-xl cursor-pointer transition-all flex justify-between items-center group ${selectedClass?.id === cls.id ? (clsCfg.isTrial ? 'bg-amber-50/70 border-amber-400' : 'bg-blue-50 border-blue-400') : 'bg-white border-slate-200 hover:border-[#2bd6eb]'}`}>
+                               <div key={cls.id} onClick={() => { setSelectedClass(cls); fetchClassDetails(cls.id); }} className={`p-3 md:p-4 border rounded-xl cursor-pointer transition-all flex justify-between items-center group ${selectedClass?.id === cls.id ? (clsCfg.isTrial ? 'bg-amber-50/70 border-amber-400' : 'bg-blue-50 border-blue-400') : 'bg-white border-slate-200 hover:border-[#2ab4e8]'}`}>
                                   <div className="flex-1 mr-2 min-w-0">
                                      {editingClassId === cls.id ? (
                                         <form onClick={(e) => e.stopPropagation()} onSubmit={(e) => { e.preventDefault(); e.stopPropagation(); handleUpdateClassName(cls.id, new FormData(e.currentTarget).get('name') as string); }}>
@@ -3755,7 +3789,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                                    </div>
                                    <div className="flex flex-wrap gap-2 w-full lg:w-auto">
                                       <button onClick={() => setShowAssignLectureModal({show: true, moduleId: mod.id})} className="flex-1 lg:flex-none bg-white border border-slate-300 text-blue-600 px-2 md:px-4 py-1.5 rounded-lg text-[10px] md:text-xs font-bold hover:border-blue-400 transition whitespace-nowrap">+ Nhặt Từ Kho</button>
-                                      <button onClick={() => setEditingLecture({ id: 'new', title: '', course_id: selectedCourse.id, module_id: mod.id })} className="flex-1 lg:flex-none bg-[#00a651] hover:bg-[#008f45] transition text-white px-2 md:px-4 py-1.5 rounded-lg text-[10px] md:text-xs font-bold whitespace-nowrap">+ Tạo Mới</button>
+                                      <button onClick={() => setEditingLecture({ id: 'new', title: '', course_id: selectedCourse.id, module_id: mod.id })} className="flex-1 lg:flex-none bg-[#059669] hover:bg-[#047857] transition text-white px-2 md:px-4 py-1.5 rounded-lg text-[10px] md:text-xs font-bold whitespace-nowrap">+ Tạo Mới</button>
                                       <button onClick={() => handleDeleteLectureModule(mod.id)} className="bg-white border border-slate-300 text-red-500 hover:bg-red-50 hover:border-red-300 px-3 py-1.5 rounded-lg text-[10px] md:text-xs transition shrink-0">✖</button>
                                    </div>
                                 </div>
@@ -3764,7 +3798,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                                       moduleLectures.map((lec) => (
                                          <div key={lec.id} className="flex flex-col sm:flex-row sm:justify-between sm:items-center p-2.5 md:p-3 hover:bg-blue-50 rounded-lg group border border-transparent hover:border-blue-100 transition-colors gap-2">
                                             <div className="flex items-center gap-2 md:gap-3 flex-1 min-w-0">
-                                               <input type="number" defaultValue={lec.order_index || 0} onBlur={e => handleUpdateLectureOrder(lec.id, parseInt(e.target.value) || 0)} className="w-8 md:w-10 h-6 text-center text-[10px] md:text-[11px] font-bold border border-slate-200 rounded outline-none focus:border-[#2bd6eb] shrink-0" title="Thứ tự hiển thị" />
+                                               <input type="number" defaultValue={lec.order_index || 0} onBlur={e => handleUpdateLectureOrder(lec.id, parseInt(e.target.value) || 0)} className="w-8 md:w-10 h-6 text-center text-[10px] md:text-[11px] font-bold border border-slate-200 rounded outline-none focus:border-[#2ab4e8] shrink-0" title="Thứ tự hiển thị" />
                                                <span className="font-semibold text-slate-700 text-[13px] md:text-sm truncate">{lec.title}</span>
                                             </div>
                                             <div className="flex gap-2 sm:opacity-0 group-hover:opacity-100 transition-opacity w-full sm:w-auto justify-end">
@@ -3794,7 +3828,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                        }} className="text-slate-400 hover:text-black font-bold mr-1 md:mr-2 transition text-[11px] md:text-[13px]">← Trở về</button>}
                        <p className="font-black text-slate-500 text-[10px] md:text-xs uppercase tracking-widest truncate max-w-[150px] md:max-w-none">{currentFolderId ? `Mục: ${breadcrumbs[breadcrumbs.length-1]?.title}` : 'Thư mục gốc'}</p>
                     </div>
-                    <button onClick={() => setShowFolderModal(true)} className="bg-[#00a651] hover:bg-[#008f45] transition text-white px-3 py-1.5 md:px-6 md:py-2.5 rounded-lg md:rounded-xl font-black text-[10px] md:text-xs shadow-md whitespace-nowrap">+ THƯ MỤC</button>
+                    <button onClick={() => setShowFolderModal(true)} className="bg-[#059669] hover:bg-[#047857] transition text-white px-3 py-1.5 md:px-6 md:py-2.5 rounded-lg md:rounded-xl font-black text-[10px] md:text-xs shadow-md whitespace-nowrap">+ THƯ MỤC</button>
                   </div>
                   <div className="p-4 md:p-8">
                     {currentSubFolders.length > 0 && (
@@ -3807,7 +3841,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                             </div>
 
                             {editingFolderId === sf.id ? (
-                               <div className="bg-white border-2 border-[#2bd6eb] p-3 md:p-4 rounded-xl md:rounded-2xl shadow-sm h-full flex flex-col justify-center items-center" onClick={e => e.stopPropagation()}>
+                               <div className="bg-white border-2 border-[#2ab4e8] p-3 md:p-4 rounded-xl md:rounded-2xl shadow-sm h-full flex flex-col justify-center items-center" onClick={e => e.stopPropagation()}>
                                   <form className="w-full flex flex-col items-center" onSubmit={(e) => { e.preventDefault(); handleUpdateFolderName(sf.id, new FormData(e.currentTarget).get('title') as string); }}>
                                      <input name="title" autoFocus defaultValue={sf.title} className="w-full border border-slate-300 rounded px-2 py-1.5 text-[12px] md:text-sm font-bold outline-none mb-2 text-center focus:border-[#0a5482]" />
                                      <div className="flex gap-1.5 md:gap-2">
@@ -3817,7 +3851,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                                   </form>
                                </div>
                             ) : (
-                               <div onClick={() => setCurrentFolderId(sf.id)} className="bg-white border-2 border-slate-100 hover:border-[#2bd6eb] p-4 md:p-6 rounded-xl md:rounded-2xl shadow-sm cursor-pointer transition-all flex flex-col items-center justify-center text-center h-full relative overflow-hidden">
+                               <div onClick={() => setCurrentFolderId(sf.id)} className="bg-white border-2 border-slate-100 hover:border-[#2ab4e8] p-4 md:p-6 rounded-xl md:rounded-2xl shadow-sm cursor-pointer transition-all flex flex-col items-center justify-center text-center h-full relative overflow-hidden">
                                   <div className="text-3xl md:text-4xl mb-2 md:mb-3 group-hover:scale-110 transition-transform relative z-10">📁</div>
                                   <h4 className="font-black text-slate-700 text-[12px] md:text-sm line-clamp-2 relative z-10 px-1">{sf.title}</h4>
                                   <button onClick={(e) => { e.stopPropagation(); setEditingFolderId(sf.id); }} className="absolute top-1 right-1 md:top-2 md:right-2 text-blue-400 hover:text-blue-600 md:opacity-0 group-hover:opacity-100 transition-opacity bg-blue-50 p-1 md:p-1.5 rounded text-[10px] md:text-xs z-10">✏️</button>
@@ -3835,7 +3869,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                       <div className="border-t-2 border-dashed border-slate-200 pt-6 md:pt-8 mt-2">
                          <div className="flex justify-between items-center mb-4 md:mb-6">
                             <h3 className="font-black text-slate-800 text-[14px] md:text-lg">📝 Đề thi / Bài tập</h3>
-                            <button onClick={() => setShowAssignModal(true)} className="bg-[#2bd6eb] hover:bg-[#1bc1d6] transition text-white px-3 py-1.5 md:px-5 md:py-2 rounded-lg font-bold text-[10px] md:text-xs shadow-sm whitespace-nowrap">+ GÁN THÊM</button>
+                            <button onClick={() => setShowAssignModal(true)} className="bg-[#2ab4e8] hover:bg-[#1bc1d6] transition text-white px-3 py-1.5 md:px-5 md:py-2 rounded-lg font-bold text-[10px] md:text-xs shadow-sm whitespace-nowrap">+ GÁN THÊM</button>
                          </div>
                          {currentTests.length === 0 ? (
                            <div className="text-center py-8 md:py-10 border-2 border-dashed border-slate-200 rounded-xl md:rounded-2xl text-slate-400 font-medium text-[12px] md:text-[14px]">Chưa có mục nào. Bấm nút + Gán thêm từ Kho tổng.</div>
@@ -3844,14 +3878,14 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                              {currentTests.map(t => (
                                <div key={t.id} className="bg-slate-50 border border-slate-200 p-3 md:p-4 rounded-xl flex justify-between items-center group hover:bg-white transition-colors">
                                  <div className="flex items-center gap-2 md:gap-3 flex-1 min-w-0 pr-2">
-                                   <input type="number" defaultValue={t.order_index || 0} onBlur={e => handleUpdateTestOrder(t.id, parseInt(e.target.value) || 0)} className="w-8 md:w-10 h-6 text-center text-[10px] md:text-[11px] font-bold border border-slate-200 rounded outline-none focus:border-[#2bd6eb] shrink-0" title="Thứ tự hiển thị" />
+                                   <input type="number" defaultValue={t.order_index || 0} onBlur={e => handleUpdateTestOrder(t.id, parseInt(e.target.value) || 0)} className="w-8 md:w-10 h-6 text-center text-[10px] md:text-[11px] font-bold border border-slate-200 rounded outline-none focus:border-[#2ab4e8] shrink-0" title="Thứ tự hiển thị" />
                                    <div className="flex flex-col min-w-0">
                                         <span className="font-bold text-[13px] md:text-[14px] text-slate-700 truncate">{t.title}</span>
                                    </div>
                                  </div>
                                  <div className="flex gap-2 md:gap-3 shrink-0">
                                    <button onClick={() => handleToggleTestVisibility(t)} className={`${t.is_published ? 'text-emerald-500 hover:text-emerald-600' : 'text-slate-400 hover:text-slate-600'} font-bold text-[10px] md:text-xs transition-colors`}>{t.is_published ? '👁️ Hiện' : 'Ẩn'}</button>
-                                   <button onClick={() => { if (t.test_type === 'IGCSE-Science' || t.test_type === 'IGCSE-Math' || t.test_type === 'IGCSE-Direct') { setIgcseEditingTestId(t.id); setIgcseEditorOpen(true); } else { setEditingTest(t); } }} className="text-[#2bd6eb] font-bold text-[10px] md:text-xs hover:underline md:opacity-0 group-hover:opacity-100 transition-opacity">Sửa</button>
+                                   <button onClick={() => { if (t.test_type === 'IGCSE-Science' || t.test_type === 'IGCSE-Math' || t.test_type === 'IGCSE-Direct') { setIgcseEditingTestId(t.id); setIgcseEditorOpen(true); } else { setEditingTest(t); } }} className="text-[#2ab4e8] font-bold text-[10px] md:text-xs hover:underline md:opacity-0 group-hover:opacity-100 transition-opacity">Sửa</button>
                                    <button onClick={() => handleUnassignTest(t.id)} className="text-red-400 font-bold text-[10px] md:text-xs hover:underline md:opacity-0 group-hover:opacity-100 transition-opacity">Gỡ ✖</button>
                                  </div>
                                </div>
@@ -3893,7 +3927,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                  </div>
 
                  <div className="flex flex-col sm:flex-row gap-3 flex-1 justify-end w-full xl:w-auto">
-                   <input type="text" placeholder="Tìm kiếm tên bài giảng..." defaultValue={searchQuery} onChange={e => { clearTimeout(adminSearchTimer); adminSearchTimer = setTimeout(() => setSearchQuery(e.target.value), 350); }} className="w-full sm:max-w-[250px] pl-3 pr-3 py-2 md:py-2.5 border border-slate-200 rounded-lg md:rounded-xl outline-none focus:border-[#2bd6eb] text-[13px] md:text-sm transition-colors" />
+                   <input type="text" placeholder="Tìm kiếm tên bài giảng..." defaultValue={searchQuery} onChange={e => { clearTimeout(adminSearchTimer); adminSearchTimer = setTimeout(() => setSearchQuery(e.target.value), 350); }} className="w-full sm:max-w-[250px] pl-3 pr-3 py-2 md:py-2.5 border border-slate-200 rounded-lg md:rounded-xl outline-none focus:border-[#2ab4e8] text-[13px] md:text-sm transition-colors" />
                    <select value={filterLectureCourse} onChange={e => setFilterLectureCourse(e.target.value)} className="w-full sm:w-auto px-3 py-2 md:py-2.5 border border-slate-200 rounded-lg md:rounded-xl text-[13px] md:text-sm font-bold text-slate-600 outline-none bg-white">
                       <option value="all">Tất cả khóa học</option>
                       <option value="none">-- Chung --</option>
@@ -3940,9 +3974,9 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                             <td className="px-4 md:px-6 py-4 text-center text-[11px] md:text-[12px] font-bold text-slate-500">HTML</td>
                             <td className="px-4 md:px-6 py-4"><div className="text-[10px] md:text-[11px] text-slate-500 font-medium">{formatDateTime(lec.created_at)}</div></td>
                             <td className="px-4 md:px-6 py-4 text-center"><button onClick={() => handleToggleLectureStatus(lec.id, lec.is_published)} className={`text-[10px] md:text-[12px] font-bold px-2 py-1 md:px-3 rounded transition-colors ${lec.is_published ? 'text-emerald-600 bg-emerald-50 hover:bg-emerald-100' : 'text-slate-500 bg-slate-100 hover:bg-slate-200'}`}>{lec.is_published ? 'Hiển thị' : 'Đang ẩn'}</button></td>
-                            <td className="px-4 md:px-6 py-4 text-center"><input type="number" defaultValue={lec.order_index || 0} onBlur={e => handleUpdateLectureOrder(lec.id, parseInt(e.target.value) || 0)} className="w-10 md:w-12 text-center text-[12px] md:text-[13px] font-bold border border-slate-200 rounded py-1 outline-none focus:border-[#2bd6eb]" /></td>
+                            <td className="px-4 md:px-6 py-4 text-center"><input type="number" defaultValue={lec.order_index || 0} onBlur={e => handleUpdateLectureOrder(lec.id, parseInt(e.target.value) || 0)} className="w-10 md:w-12 text-center text-[12px] md:text-[13px] font-bold border border-slate-200 rounded py-1 outline-none focus:border-[#2ab4e8]" /></td>
                             <td className="px-4 md:px-6 py-4 text-left space-x-1 md:space-x-2 whitespace-nowrap">
-                               <button onClick={() => setEditingLecture(lec)} className="text-[#2bd6eb] font-bold text-[10px] md:text-xs bg-white border border-[#2bd6eb] px-2 md:px-3 py-1 md:py-1.5 rounded hover:bg-blue-50 transition">Sửa</button>
+                               <button onClick={() => setEditingLecture(lec)} className="text-[#2ab4e8] font-bold text-[10px] md:text-xs bg-white border border-[#2ab4e8] px-2 md:px-3 py-1 md:py-1.5 rounded hover:bg-blue-50 transition">Sửa</button>
                                <button onClick={() => handleDuplicateLecture(lec)} className="text-emerald-600 font-bold text-[10px] md:text-xs bg-white border border-emerald-300 px-2 md:px-3 py-1 md:py-1.5 rounded hover:bg-emerald-50 transition">Nhân bản</button>
                                <button onClick={() => handlePermanentDeleteLecture(lec.id)} className="text-red-500 font-bold text-[10px] md:text-xs bg-white border border-red-200 px-2 md:px-3 py-1 md:py-1.5 rounded hover:bg-red-50 transition md:opacity-0 group-hover:opacity-100">Xóa</button>
                             </td>
@@ -4009,15 +4043,15 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                 
                 {/* Dòng tìm kiếm và filter chuyển xuống dưới, phóng to và căn giữa */}
                 <div className="flex flex-col sm:flex-row gap-3 w-full justify-center items-center mt-2 border-t border-slate-100 pt-4">
-                  <input type="text" placeholder="Tìm kiếm tên đề thi, bài tập..." defaultValue={searchQuery} onChange={e => { clearTimeout(adminSearchTimer); adminSearchTimer = setTimeout(() => setSearchQuery(e.target.value), 350); }} className="w-full sm:flex-1 max-w-[400px] px-4 py-2.5 md:py-3 border border-slate-300 shadow-sm rounded-lg md:rounded-xl outline-none focus:border-[#2bd6eb] focus:ring-2 focus:ring-blue-100 text-[13px] md:text-sm transition-all" />
+                  <input type="text" placeholder="Tìm kiếm tên đề thi, bài tập..." defaultValue={searchQuery} onChange={e => { clearTimeout(adminSearchTimer); adminSearchTimer = setTimeout(() => setSearchQuery(e.target.value), 350); }} className="w-full sm:flex-1 max-w-[400px] px-4 py-2.5 md:py-3 border border-slate-300 shadow-sm rounded-lg md:rounded-xl outline-none focus:border-[#2ab4e8] focus:ring-2 focus:ring-blue-100 text-[13px] md:text-sm transition-all" />
                   
-                  <select value={filterCourse} onChange={e => setFilterCourse(e.target.value)} className="w-full sm:w-auto px-4 py-2.5 md:py-3 border border-slate-300 shadow-sm rounded-lg md:rounded-xl text-[13px] md:text-sm font-bold text-slate-600 outline-none bg-white focus:border-[#2bd6eb] focus:ring-2 focus:ring-blue-100 transition-all cursor-pointer">
+                  <select value={filterCourse} onChange={e => setFilterCourse(e.target.value)} className="w-full sm:w-auto px-4 py-2.5 md:py-3 border border-slate-300 shadow-sm rounded-lg md:rounded-xl text-[13px] md:text-sm font-bold text-slate-600 outline-none bg-white focus:border-[#2ab4e8] focus:ring-2 focus:ring-blue-100 transition-all cursor-pointer">
                     <option value="all">Tất cả khóa học</option>
                     <option value="none">-- Chung --</option>
                     {courses.map(c => <option key={c.id} value={c.id}>{c.title}</option>)}
                   </select>
 
-                  <select value={sortTest} onChange={e => setSortTest(e.target.value)} className="w-full sm:w-auto px-4 py-2.5 md:py-3 border border-slate-300 shadow-sm rounded-lg md:rounded-xl text-[13px] md:text-sm font-bold text-slate-600 outline-none bg-white focus:border-[#2bd6eb] focus:ring-2 focus:ring-blue-100 transition-all cursor-pointer">
+                  <select value={sortTest} onChange={e => setSortTest(e.target.value)} className="w-full sm:w-auto px-4 py-2.5 md:py-3 border border-slate-300 shadow-sm rounded-lg md:rounded-xl text-[13px] md:text-sm font-bold text-slate-600 outline-none bg-white focus:border-[#2ab4e8] focus:ring-2 focus:ring-blue-100 transition-all cursor-pointer">
                     <option value="date-desc">🕐 Mới nhất</option>
                     <option value="date-asc">🕐 Cũ nhất</option>
                     <option value="name-asc">🔤 Tên A → Z</option>
@@ -4064,9 +4098,9 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                             <td className="px-4 md:px-6 py-4 md:py-5"><span className="px-2 py-1 bg-indigo-50 border border-indigo-200 text-indigo-700 rounded text-[10px] md:text-[11px] font-bold whitespace-nowrap">{test.test_type || '---'}</span></td>
                             <td className="px-4 md:px-6 py-4 md:py-5"><div className="text-[10px] md:text-[11px] text-slate-500 font-medium">{formatDateTime(test.created_at)}</div></td>
                             <td className="px-4 md:px-6 py-4 md:py-5 text-center"><button onClick={() => handleToggleTestVisibility(test)} className={`text-[10px] md:text-[12px] font-bold px-2 md:px-3 py-1 rounded transition-colors ${test.is_published ? 'text-emerald-600 bg-emerald-50 hover:bg-emerald-100' : 'text-slate-500 bg-slate-100 hover:bg-slate-200'}`}>{test.is_published ? 'Hiển thị' : 'Đang ẩn'}</button></td>
-                            <td className="px-4 md:px-6 py-4 md:py-5 text-center"><input type="number" defaultValue={test.order_index || 0} onBlur={e => handleUpdateTestOrder(test.id, parseInt(e.target.value) || 0)} className="w-10 md:w-12 text-center text-[12px] md:text-[13px] font-bold border border-slate-200 rounded py-1 outline-none focus:border-[#2bd6eb]" /></td>
+                            <td className="px-4 md:px-6 py-4 md:py-5 text-center"><input type="number" defaultValue={test.order_index || 0} onBlur={e => handleUpdateTestOrder(test.id, parseInt(e.target.value) || 0)} className="w-10 md:w-12 text-center text-[12px] md:text-[13px] font-bold border border-slate-200 rounded py-1 outline-none focus:border-[#2ab4e8]" /></td>
                             <td className="px-4 md:px-6 py-4 md:py-5 text-left space-x-1 md:space-x-2 whitespace-nowrap">
-                                 <button onClick={async () => { if (test.test_type === 'IGCSE-Science' || test.test_type === 'IGCSE-Math' || test.test_type === 'IGCSE-Direct') { setIgcseEditingTestId(test.id); setIgcseEditorOpen(true); } else { const { data: fullTest } = await supabase.from('tests').select('*').eq('id', test.id).single(); if (fullTest) setEditingTest(fullTest); else alert('Lỗi tải dữ liệu đề thi!'); } }} className="text-[#2bd6eb] bg-white border border-[#2bd6eb] px-2 md:px-3 py-1 md:py-1.5 rounded hover:bg-blue-50 font-bold text-[10px] md:text-xs transition shadow-sm">Sửa</button>
+                                 <button onClick={async () => { if (test.test_type === 'IGCSE-Science' || test.test_type === 'IGCSE-Math' || test.test_type === 'IGCSE-Direct') { setIgcseEditingTestId(test.id); setIgcseEditorOpen(true); } else { const { data: fullTest } = await supabase.from('tests').select('*').eq('id', test.id).single(); if (fullTest) setEditingTest(fullTest); else alert('Lỗi tải dữ liệu đề thi!'); } }} className="text-[#2ab4e8] bg-white border border-[#2ab4e8] px-2 md:px-3 py-1 md:py-1.5 rounded hover:bg-blue-50 font-bold text-[10px] md:text-xs transition shadow-sm">Sửa</button>
                                  <button onClick={() => handleDuplicateTest(test)} className="text-emerald-600 font-bold text-[10px] md:text-xs bg-white border border-emerald-300 px-2 md:px-3 py-1 md:py-1.5 rounded hover:bg-emerald-50 transition shadow-sm">Nhân bản</button>
                                  <button onClick={() => handleDeleteTest(test.id)} className="text-red-500 font-bold text-[10px] md:text-xs bg-white border border-red-200 px-2 md:px-3 py-1 md:py-1.5 rounded hover:bg-red-50 transition md:opacity-0 group-hover:opacity-100 shadow-sm">Xóa</button>
                             </td>
@@ -4245,7 +4279,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                     <input name="name" required autoFocus placeholder="VD: Sách Reading, Ngữ pháp..." className="w-full border border-slate-200 rounded-lg md:rounded-xl px-3 md:px-4 py-2.5 md:py-3 outline-none focus:border-emerald-500 text-[14px]" />
                     <div className="flex gap-3 md:gap-4">
                         <button type="button" onClick={() => setShowPdfFolderModal(false)} className="flex-1 font-bold py-2.5 md:py-3 text-slate-400 hover:bg-slate-50 rounded-lg md:rounded-xl transition text-[13px] md:text-base">Hủy</button>
-                        <button type="submit" className="flex-1 bg-[#00a651] hover:bg-[#008f45] transition text-white font-black py-2.5 md:py-3 rounded-lg md:rounded-xl shadow-lg text-[13px] md:text-base">TẠO</button>
+                        <button type="submit" className="flex-1 bg-[#059669] hover:bg-[#047857] transition text-white font-black py-2.5 md:py-3 rounded-lg md:rounded-xl shadow-lg text-[13px] md:text-base">TẠO</button>
                     </div>
                 </form>
             </div>
@@ -4260,11 +4294,11 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                         📄 {showMoveFileModal}
                     </p>
                     <div className="max-h-[40vh] overflow-y-auto border border-slate-200 rounded-xl p-2 space-y-1 custom-scrollbar">
-                        <button onClick={() => handleMovePdfFile(showMoveFileModal, null)} className={`w-full text-left px-3 md:px-4 py-2 md:py-3 rounded-lg text-[13px] md:text-sm font-bold flex items-center gap-2 ${!pdfFileMapping[showMoveFileModal] ? 'bg-[#2bd6eb] text-white' : 'hover:bg-slate-100 text-slate-700'}`}>
+                        <button onClick={() => handleMovePdfFile(showMoveFileModal, null)} className={`w-full text-left px-3 md:px-4 py-2 md:py-3 rounded-lg text-[13px] md:text-sm font-bold flex items-center gap-2 ${!pdfFileMapping[showMoveFileModal] ? 'bg-[#2ab4e8] text-white' : 'hover:bg-slate-100 text-slate-700'}`}>
                             📁 Thư mục gốc (Mặc định)
                         </button>
                         {pdfFolders.map(f => (
-                            <button key={f.id} onClick={() => handleMovePdfFile(showMoveFileModal, f.id)} className={`w-full text-left px-3 md:px-4 py-2 md:py-3 rounded-lg text-[13px] md:text-sm font-bold flex items-center gap-2 ${pdfFileMapping[showMoveFileModal] === f.id ? 'bg-[#2bd6eb] text-white' : 'hover:bg-slate-100 text-slate-700'}`}>
+                            <button key={f.id} onClick={() => handleMovePdfFile(showMoveFileModal, f.id)} className={`w-full text-left px-3 md:px-4 py-2 md:py-3 rounded-lg text-[13px] md:text-sm font-bold flex items-center gap-2 ${pdfFileMapping[showMoveFileModal] === f.id ? 'bg-[#2ab4e8] text-white' : 'hover:bg-slate-100 text-slate-700'}`}>
                                 📁 {f.name}
                             </button>
                         ))}
@@ -4360,7 +4394,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                             </p>
                           )}
                         </div>
-                        <button onClick={() => setShowAssignClassModuleModal(false)} className="text-xl md:text-2xl hover:text-[#2bd6eb] transition-colors ml-3">&times;</button>
+                        <button onClick={() => setShowAssignClassModuleModal(false)} className="text-xl md:text-2xl hover:text-[#2ab4e8] transition-colors ml-3">&times;</button>
                     </div>
 
                     {selCfg.isTrial && (
@@ -4533,7 +4567,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                         <h2 className="font-black uppercase text-[11px] md:text-sm tracking-widest">
                           Thêm Học Sinh Vào {parseClassConfig(selectedClass.name).cleanName}
                         </h2>
-                        <button onClick={() => setShowAssignStudentModal(false)} className="text-xl md:text-2xl hover:text-[#2bd6eb] transition-colors">&times;</button>
+                        <button onClick={() => setShowAssignStudentModal(false)} className="text-xl md:text-2xl hover:text-[#2ab4e8] transition-colors">&times;</button>
                     </div>
                     <div className="p-3 md:p-4 border-b border-slate-100 bg-slate-50 shrink-0">
                         <input
@@ -4577,7 +4611,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                 <div className="bg-white rounded-2xl md:rounded-3xl w-full max-w-[95vw] md:max-w-xl shadow-2xl overflow-hidden animate-in fade-in">
                     <div className="bg-[#0f172a] p-4 md:p-6 text-white flex justify-between items-center">
                         <h2 className="font-black uppercase text-[11px] md:text-sm tracking-widest">Chọn bài giảng từ Kho</h2>
-                        <button onClick={() => setShowAssignLectureModal({show: false, moduleId: null})} className="text-xl md:text-2xl hover:text-[#2bd6eb] transition-colors">&times;</button>
+                        <button onClick={() => setShowAssignLectureModal({show: false, moduleId: null})} className="text-xl md:text-2xl hover:text-[#2ab4e8] transition-colors">&times;</button>
                     </div>
                     <div className="p-4 md:p-6 max-h-[60vh] overflow-y-auto space-y-2 md:space-y-3 custom-scrollbar">
                         {globalLectures.filter(l => !l.module_id && l.course_id === selectedCourse.id).map(lec => (
@@ -4675,7 +4709,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                     <input name="title" required autoFocus placeholder="Tên thư mục..." className="w-full border border-slate-200 rounded-lg md:rounded-xl px-3 md:px-4 py-2.5 md:py-3 outline-none focus:border-emerald-500 transition-colors text-[14px]" />
                     <div className="flex gap-3 md:gap-4">
                         <button type="button" onClick={() => setShowFolderModal(false)} className="flex-1 font-bold py-2.5 md:py-3 text-slate-400 hover:bg-slate-50 rounded-lg md:rounded-xl transition text-[13px] md:text-base">Hủy</button>
-                        <button type="submit" className="flex-1 bg-[#00a651] hover:bg-[#008f45] transition text-white font-black py-2.5 md:py-3 rounded-lg md:rounded-xl shadow-lg text-[13px] md:text-base">TẠO MỚI</button>
+                        <button type="submit" className="flex-1 bg-[#059669] hover:bg-[#047857] transition text-white font-black py-2.5 md:py-3 rounded-lg md:rounded-xl shadow-lg text-[13px] md:text-base">TẠO MỚI</button>
                     </div>
                 </form>
             </div> 
@@ -4687,16 +4721,16 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                 <div className="bg-white rounded-2xl md:rounded-3xl w-full max-w-[95vw] md:max-w-xl shadow-2xl overflow-hidden animate-in fade-in">
                     <div className="bg-[#0f172a] p-4 md:p-6 text-white flex justify-between items-center">
                         <h2 className="font-black uppercase text-[11px] md:text-sm tracking-widest">Gán từ Kho chung</h2>
-                        <button onClick={() => setShowAssignModal(false)} className="text-xl md:text-2xl hover:text-[#2bd6eb] transition-colors">&times;</button>
+                        <button onClick={() => setShowAssignModal(false)} className="text-xl md:text-2xl hover:text-[#2ab4e8] transition-colors">&times;</button>
                     </div>
                     <div className="p-4 md:p-6 max-h-[60vh] overflow-y-auto space-y-2 md:space-y-3 custom-scrollbar">
                         {libraryTests.filter(t => t.course_id === selectedCourse.id && (!t.folder_id || t.folder_id === allFolders.find(f => f.id === currentFolderId)?.parent_id)).map(test => (
-                            <div key={test.id} className="flex justify-between items-center p-3 md:p-4 border border-slate-100 rounded-xl md:rounded-2xl hover:border-[#2bd6eb] transition bg-slate-50 group">
+                            <div key={test.id} className="flex justify-between items-center p-3 md:p-4 border border-slate-100 rounded-xl md:rounded-2xl hover:border-[#2ab4e8] transition bg-slate-50 group">
                                 <div className="min-w-0 pr-2">
                                     <p className="font-black text-slate-700 text-[13px] md:text-sm truncate">{test.title}</p>
                                     {test.folder_id && <p className="text-[10px] text-slate-400 mt-0.5 truncate uppercase font-bold tracking-tight">Đang ở: {allFolders.find(f => f.id === test.folder_id)?.title || 'Thư mục khác'}</p>}
                                 </div>
-                                <button onClick={() => handleAssignTest(test.id)} className="bg-white md:group-hover:bg-[#2bd6eb] md:group-hover:text-white px-3 md:px-5 py-1.5 md:py-2 rounded-lg md:rounded-xl font-bold text-[10px] md:text-xs transition border border-slate-200 shadow-sm shrink-0 whitespace-nowrap">GÁN ➜</button>
+                                <button onClick={() => handleAssignTest(test.id)} className="bg-white md:group-hover:bg-[#2ab4e8] md:group-hover:text-white px-3 md:px-5 py-1.5 md:py-2 rounded-lg md:rounded-xl font-bold text-[10px] md:text-xs transition border border-slate-200 shadow-sm shrink-0 whitespace-nowrap">GÁN ➜</button>
                             </div>
                         ))}
                         {libraryTests.filter(t => t.course_id === selectedCourse.id && (!t.folder_id || t.folder_id === allFolders.find(f => f.id === currentFolderId)?.parent_id)).length === 0 && <p className="text-center text-slate-400 text-[13px] md:text-sm italic">Không có đề thi chờ gán.</p>}

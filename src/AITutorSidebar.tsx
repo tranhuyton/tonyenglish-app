@@ -831,7 +831,7 @@ Câu hỏi của học sinh: "${userMsg}"`;
               `fixed top-0 md:top-[64px] bottom-0 right-0 w-full ` + 
               `${isExpanded ? 'md:w-[800px]' : theme.width} ` + 
               `bg-[#f8fafc] shadow-[-12px_0_40px_rgba(15,23,42,0.12)] ` + 
-              `z-[100000] flex flex-col transition-all duration-400 ease-out border-l border-slate-200/90 ` + 
+              `z-[100000] flex flex-col transition-all duration-300 ease-out border-l border-slate-200/90 ` + 
               `${isOpen && !isMinimized ? 'translate-x-0' : 'translate-x-full'}`
           }
       >
@@ -1014,7 +1014,7 @@ Câu hỏi của học sinh: "${userMsg}"`;
                <div 
                    className={
                        `max-w-[85%] p-3.5 md:p-4 text-[13.5px] md:text-[14.5px] leading-relaxed ` +
-                       `${msg.role === 'user' ? `${theme.userBg} text-white rounded-2xl rounded-tr-xs shadow-sm` : `${theme.aiBg} border ${theme.aiBorder} text-slate-700 rounded-2xl rounded-tl-xs shadow-xs`}`
+                       `${msg.role === 'user' ? `${theme.userBg} text-white rounded-2xl rounded-tr-sm shadow-sm` : `${theme.aiBg} border ${theme.aiBorder} text-slate-700 rounded-2xl rounded-tl-sm shadow-xs`}`
                    }
                >
                   {msg.role === 'user' ? (
@@ -1058,7 +1058,7 @@ Câu hỏi của học sinh: "${userMsg}"`;
                  <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-[#0a5482] to-[#073b5c] text-white border border-sky-200/50 flex items-center justify-center shrink-0 mr-2.5 mt-0.5 shadow-xs text-xs md:text-sm opacity-80">
                      {theme.icon}
                  </div>
-                 <div className="bg-white border border-slate-200/90 px-4 py-3 rounded-2xl rounded-tl-xs flex items-center gap-1.5 shadow-xs">
+                 <div className="bg-white border border-slate-200/90 px-4 py-3 rounded-2xl rounded-tl-sm flex items-center gap-1.5 shadow-xs">
                      <span className="w-2 h-2 bg-[#2ab4e8] rounded-full animate-bounce"></span>
                      <span className="w-2 h-2 bg-[#0a5482] rounded-full animate-bounce delay-100"></span>
                      <span className="w-2 h-2 bg-[#2ab4e8] rounded-full animate-bounce delay-200"></span>

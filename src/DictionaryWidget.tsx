@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { X, BookOpen, Maximize2 } from 'lucide-react';
 
 const TEST_VIEWS = [
   'computer',
@@ -177,134 +178,112 @@ export default function DictionaryWidget({ currentView, initialIsReview = false 
 
   return (
     <>
-      {/* POPUP TRA NHANH KHI CLICK ĐÚP CHUỘT (CHUẨN GIAO DIỆN LOGO TONYENGLISH WEB CŨ) */}
+      {/* POPUP TRA NHANH KHI CLICK ĐÚP CHUỘT (TONYDICT MODERN) */}
       {quickDict && (
         <div
           id="tony-quick-dict-popup"
           ref={popupRef}
+          className="fixed z-[999999] bg-white rounded-2xl border border-slate-200/90 shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-150"
           style={{
-            background: '#FFF',
-            position: 'fixed',
-            border: '1px solid #CCC',
             left: `${quickDict.x}px`,
             top: `${quickDict.y}px`,
-            width: '310px',
+            width: '320px',
             maxWidth: 'calc(100vw - 24px)',
-            padding: '2px',
-            zIndex: 999999,
-            boxShadow: '0 6px 24px rgba(0,0,0,0.18)',
           }}
         >
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              background: '#ffffff',
-              padding: '3px 4px 4px 6px',
-              borderBottom: '1px solid #CCC',
-            }}
-          >
-            <div
+          <div className="bg-gradient-to-r from-[#0a5482] to-[#0f172a] px-3 py-2 flex items-center justify-between gap-2 text-white">
+            <button
+              type="button"
               onClick={() => {
                 setStandaloneOpen(true);
                 setQuickDict(null);
               }}
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '5px',
-                cursor: 'pointer',
-              }}
+              className="flex items-center gap-2 min-w-0 hover:opacity-90 transition cursor-pointer text-left"
               title="Bấm để mở Từ điển lớn"
             >
               <img
-                src="/logo-text.png"
-                alt="TONYENGLISH"
-                style={{ height: '20px', width: 'auto', objectFit: 'contain' }}
+                src="/logo-shield.png"
+                alt="TonyDict"
+                className="h-5 w-auto object-contain shrink-0"
               />
-              <img
-                src="/logo-shield-old.png"
-                alt="TonyEnglish Shield"
-                style={{ height: '20px', width: 'auto', objectFit: 'contain' }}
-              />
-            </div>
-
-            <button
-              type="button"
-              onClick={() => setQuickDict(null)}
-              style={{
-                border: 'none',
-                background: 'transparent',
-                padding: 0,
-                cursor: 'pointer',
-                display: 'flex',
-                alignItems: 'center',
-              }}
-              title="Đóng (Esc)"
-            >
-              <img
-                src="https://dic.tienganh123.com/image/close.gif"
-                alt="Close"
-                style={{ width: '16px', height: '16px', display: 'block' }}
-              />
+              <span className="font-black text-xs tracking-tight truncate">
+                <span className="text-[#2ab4e8]">TONY</span>DICT
+              </span>
+              <span className="text-[11px] font-semibold text-sky-200/90 truncate max-w-[120px]">
+                • {quickDict.word}
+              </span>
             </button>
+
+            <div className="flex items-center gap-1 shrink-0">
+              <button
+                type="button"
+                onClick={() => {
+                  setStandaloneOpen(true);
+                  setQuickDict(null);
+                }}
+                className="w-6 h-6 rounded-lg flex items-center justify-center text-white/75 hover:text-white hover:bg-white/15 transition cursor-pointer"
+                title="Mở toàn màn hình Từ điển"
+              >
+                <Maximize2 className="w-3.5 h-3.5" />
+              </button>
+              <button
+                type="button"
+                onClick={() => setQuickDict(null)}
+                className="w-6 h-6 rounded-lg flex items-center justify-center text-white/75 hover:text-white hover:bg-white/15 transition cursor-pointer"
+                title="Đóng (Esc)"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </div>
           </div>
 
-          <div style={{ background: '#fff', width: '100%', height: '205px' }}>
+          <div className="bg-white w-full h-[210px]">
             <iframe
               key={quickDict.word}
               src={`https://dic.tienganh123.com/fast_dict.php?word=${encodeURIComponent(quickDict.word)}&dict=ev_ve&m=yes`}
-              style={{
-                width: '100%',
-                height: '205px',
-                border: 0,
-              }}
+              className="w-full h-[210px] border-0 block"
               title={`Tra từ: ${quickDict.word}`}
             />
           </div>
         </div>
       )}
 
-      {/* MODAL TỪ ĐIỂN RIÊNG BIỆT (STANDALONE DICTIONARY - DIC.TIENGANH123.COM/V2/) */}
+      {/* MODAL TỪ ĐIỂN RIÊNG BIỆT (STANDALONE DICTIONARY - TONYDICT MODERN) */}
       {standaloneOpen && (
         <div
           id="tony-standalone-dict-modal"
-          className="fixed inset-0 z-[99998] bg-slate-900/20 flex items-center justify-center p-3 sm:p-6 animate-in fade-in duration-150"
+          className="fixed inset-0 z-[99998] bg-slate-900/55 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6 animate-in fade-in duration-150"
           onClick={() => setStandaloneOpen(false)}
         >
           <div
-            className="bg-white rounded-xl shadow-2xl border-2 border-slate-300 w-full max-w-[920px] h-[82vh] max-h-[720px] flex flex-col overflow-hidden animate-in zoom-in-95 duration-150"
+            className="bg-white rounded-2xl shadow-2xl border border-slate-200/90 w-full max-w-[940px] h-[84vh] max-h-[740px] flex flex-col overflow-hidden animate-in zoom-in-95 duration-150"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="bg-white border-b border-slate-300 px-5 py-2.5 flex items-center justify-between gap-4 shrink-0">
+            <div className="bg-gradient-to-r from-[#0a5482] to-[#0f172a] px-4 sm:px-5 py-3 flex items-center justify-between gap-3 text-white shrink-0">
               <div className="flex items-center gap-2.5 min-w-0">
                 <img
-                  src="/logo-text.png"
-                  alt="TONYENGLISH"
-                  className="h-6 w-auto object-contain"
+                  src="/logo-shield.png"
+                  alt="TonyDict"
+                  className="h-7 w-auto object-contain shrink-0"
                 />
-                <img
-                  src="/logo-shield-old.png"
-                  alt="TonyEnglish Shield"
-                  className="h-6 w-auto object-contain"
-                />
-                <span className="hidden sm:inline-block text-slate-300 mx-1">|</span>
-                <span className="hidden sm:inline-block text-xs font-bold text-slate-600">
-                  Từ điển Anh - Việt / Việt - Anh / Đồng nghĩa
-                </span>
+                <div className="flex items-center gap-2 min-w-0">
+                  <span className="font-black text-base tracking-tight shrink-0">
+                    <span className="text-[#2ab4e8]">TONY</span>DICT
+                  </span>
+                  <span className="hidden sm:inline-block text-white/30">|</span>
+                  <span className="hidden sm:inline-flex items-center gap-1.5 text-xs font-semibold text-sky-100/90 truncate">
+                    <BookOpen className="w-3.5 h-3.5 text-[#2ab4e8] shrink-0" />
+                    <span>Từ điển Anh - Việt / Việt - Anh / Đồng nghĩa</span>
+                  </span>
+                </div>
               </div>
               <button
                 type="button"
                 onClick={() => setStandaloneOpen(false)}
-                className="p-1 hover:opacity-80 transition-opacity cursor-pointer shrink-0"
+                className="w-8 h-8 rounded-xl bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition cursor-pointer shrink-0"
                 title="Đóng (Esc)"
               >
-                <img
-                  src="https://dic.tienganh123.com/image/close.gif"
-                  alt="Close"
-                  className="w-5 h-5 block"
-                />
+                <X className="w-4 h-4" />
               </button>
             </div>
 

@@ -33,6 +33,13 @@ interface Props {
 
 const WEEKDAYS = ['CN', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7'];
 
+const getLocalDateStr = (d: Date = new Date()) => {
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${y}-${m}-${day}`;
+};
+
 const formatDateVN = (dateStr?: string | null) => {
   if (!dateStr) return '';
   const clean = dateStr.split('T')[0];
@@ -68,7 +75,7 @@ export default function AssignmentCalendar({
   const effectiveLectures = (lectures && lectures.length > 0) ? lectures : internalLectures;
 
   const [currentMonth, setCurrentMonth] = useState(new Date());
-  const [selectedDate, setSelectedDate] = useState<string | null>(new Date().toISOString().split('T')[0]);
+  const [selectedDate, setSelectedDate] = useState<string | null>(() => getLocalDateStr());
   const [calendarMode, setCalendarMode] = useState<'day' | 'month' | 'all'>('day');
   const [isUpdating, setIsUpdating] = useState<string | null>(null);
   const [latestTestScores, setLatestTestScores] = useState<Map<string, { score: number; total_score: number; percent: number; isPassed: boolean; completedAt: string | null }>>(new Map());
@@ -160,14 +167,16 @@ export default function AssignmentCalendar({
 
     // Padding trước
     const prevMonth = new Date(year, month, 0);
+    const prevY = prevMonth.getFullYear();
+    const prevM = prevMonth.getMonth() + 1;
     for (let i = startPad - 1; i >= 0; i--) {
       const d = prevMonth.getDate() - i;
-      const dateStr = `${year}-${String(month).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
+      const dateStr = `${prevY}-${String(prevM).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
       days.push({ date: dateStr, day: d, isCurrentMonth: false, isToday: false });
     }
 
     // Ngày trong tháng
-    const today = new Date().toISOString().split('T')[0];
+    const today = getLocalDateStr();
     for (let d = 1; d <= lastDay.getDate(); d++) {
       const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
       days.push({ date: dateStr, day: d, isCurrentMonth: true, isToday: dateStr === today });
@@ -247,7 +256,7 @@ export default function AssignmentCalendar({
   // ============================================
   const dateStatusMap = useMemo(() => {
     const map: Record<string, 'blue' | 'green' | 'red'> = {};
-    const today = new Date().toISOString().split('T')[0];
+    const today = getLocalDateStr();
 
     // Group assignments by effective date
     const byDate: Record<string, Assignment[]> = {};
@@ -348,7 +357,7 @@ export default function AssignmentCalendar({
 
     setIsUpdating(task.id);
     const newVal = !task.student_completed;
-    const today = new Date().toISOString().split('T')[0];
+    const today = getLocalDateStr();
     
     // Nếu hoàn thành sớm hơn ngày giao thì lấy ngày hoàn thành làm ngày giao
     let targetDueDate = task.due_date;
@@ -381,7 +390,7 @@ export default function AssignmentCalendar({
 
   const prevMonth = () => setCurrentMonth(new Date(currentMonth.getFullYear(), currentMonth.getMonth() - 1));
   const nextMonth = () => setCurrentMonth(new Date(currentMonth.getFullYear(), currentMonth.getMonth() + 1));
-  const goToday = () => { setCalendarMode('day'); setCurrentMonth(new Date()); setSelectedDate(new Date().toISOString().split('T')[0]); };
+  const goToday = () => { setCalendarMode('day'); setCurrentMonth(new Date()); setSelectedDate(getLocalDateStr()); };
 
   const handleSelectCalendarTheme = (theme: BoardTheme) => {
     setCalendarTheme(theme);

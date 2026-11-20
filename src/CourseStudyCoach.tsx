@@ -807,8 +807,8 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
                   <div
                     className={`max-w-[92%] sm:max-w-[88%] rounded-2xl p-4 text-[13.5px] sm:text-[14.5px] leading-relaxed ${
                       msg.role === 'user'
-                        ? 'bg-[#0a5482] text-white rounded-tr-xs font-semibold shadow-xs'
-                        : 'bg-slate-50/90 border border-slate-200/90 text-slate-800 rounded-tl-xs shadow-2xs'
+                        ? 'bg-[#0a5482] text-white rounded-tr-sm font-semibold shadow-xs'
+                        : 'bg-slate-50/90 border border-slate-200/90 text-slate-800 rounded-tl-sm shadow-2xs'
                     }`}
                   >
                     {msg.role === 'user' ? (

@@ -13,6 +13,7 @@ import {
   Video,
   Calendar,
   MapPin,
+  Map as MapIcon,
   Gift,
   Lock,
   Mail,
@@ -304,14 +305,20 @@ export const Layout: React.FC<{
   };
 
   const path = location.pathname;
-  const isHome = path === '/' || path === '/vi' || path === '/en';
-  const isCourses = path.includes('/courses');
-  const isNews = path.includes('/news') || path.includes('/view/');
-  const isVideos = path.includes('/videos') || path.includes('/video') || path.includes('/videocate');
-  const isAbout = path.includes('/about') || path.includes('/opening') || path.includes('/sitemap');
-  const isContact = path.includes('/contact');
-  const isLecture = path.startsWith('/user/lecture') || path.startsWith('/trial');
-  const isAdminCp = path.startsWith('/admincp');
+  const lowerRoutePath = path.toLowerCase();
+  const isHome = lowerRoutePath === '/' || lowerRoutePath === '/vi' || lowerRoutePath === '/en';
+  const isCourses =
+    lowerRoutePath.includes('/courses') ||
+    lowerRoutePath.startsWith('/khoa-hoc') ||
+    lowerRoutePath.startsWith('/hoc-thu') ||
+    lowerRoutePath.startsWith('/dang-ky') ||
+    lowerRoutePath.startsWith('/promo');
+  const isNews = lowerRoutePath.includes('/news') || lowerRoutePath.includes('/view/');
+  const isVideos = lowerRoutePath.includes('/videos') || lowerRoutePath.includes('/video') || lowerRoutePath.includes('/videocate');
+  const isAbout = lowerRoutePath.includes('/about') || lowerRoutePath.includes('/opening') || lowerRoutePath.includes('/sitemap');
+  const isContact = lowerRoutePath.includes('/contact');
+  const isLecture = lowerRoutePath.startsWith('/user/lecture') || lowerRoutePath.startsWith('/trial');
+  const isAdminCp = lowerRoutePath.startsWith('/admincp');
 
   const handleSearchSubmit = (e?: React.FormEvent) => {
     if (e) e.preventDefault();
@@ -462,16 +469,30 @@ export const Layout: React.FC<{
   const phoneText = options['company_tel'] || options['company_phone'] || '0935 058 688';
   const emailText = options['company_email'] || 'tranhuyton@gmail.com';
   const lowerPath = location.pathname.toLowerCase();
-  const registerTrialTitle = lowerPath.includes('igcse')
-    ? 'Đăng ký học thử IGCSE'
-    : lowerPath.includes('ielts')
-    ? 'Đăng ký học thử IELTS'
-    : 'Đăng ký học thử miễn phí';
-  const registerTrialSub = lowerPath.includes('igcse')
-    ? 'Tạo tài khoản miễn phí để học thử Bài giảng & Kho đề IGCSE Online'
-    : lowerPath.includes('ielts')
-    ? 'Tạo tài khoản miễn phí để trải nghiệm Phòng thi IELTS & AI Chấm bài'
-    : 'Tạo tài khoản miễn phí để trải nghiệm Bài giảng, Kho đề & Phòng thi AI';
+  const registerTrialTitle =
+    lang === 'en'
+      ? lowerPath.includes('igcse')
+        ? 'IGCSE Free Trial Sign Up'
+        : lowerPath.includes('ielts')
+        ? 'IELTS Free Trial Sign Up'
+        : 'Start Your Free Trial'
+      : lowerPath.includes('igcse')
+      ? 'Đăng ký học thử IGCSE'
+      : lowerPath.includes('ielts')
+      ? 'Đăng ký học thử IELTS'
+      : 'Đăng ký học thử miễn phí';
+  const registerTrialSub =
+    lang === 'en'
+      ? lowerPath.includes('igcse')
+        ? 'Create a free account to try Bilingual IGCSE Lectures & Past Papers'
+        : lowerPath.includes('ielts')
+        ? 'Create a free account to try IELTS Mock Tests & 24/7 AI Grading'
+        : 'Create a free account to explore Lectures, Past Papers & AI Exam Lab'
+      : lowerPath.includes('igcse')
+      ? 'Tạo tài khoản miễn phí để học thử Bài giảng & Kho đề IGCSE Online'
+      : lowerPath.includes('ielts')
+      ? 'Tạo tài khoản miễn phí để trải nghiệm Phòng thi IELTS & AI Chấm bài'
+      : 'Tạo tài khoản miễn phí để trải nghiệm Bài giảng, Kho đề & Phòng thi AI';
 
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 text-slate-800 font-sans">
@@ -513,7 +534,19 @@ export const Layout: React.FC<{
                 title="Chọn chế độ tra cứu"
               >
                 {searchMode === 'dic' ? <BookOpen className="w-3.5 h-3.5" /> : searchMode === 'web' ? <Search className="w-3.5 h-3.5" /> : <Globe className="w-3.5 h-3.5" />}
-                <span>{searchMode === 'dic' ? 'Từ điển' : searchMode === 'web' ? 'Tìm bài' : 'Dịch'}</span>
+                <span>
+                  {searchMode === 'dic'
+                    ? lang === 'vi'
+                      ? 'Từ điển'
+                      : 'Dict'
+                    : searchMode === 'web'
+                    ? lang === 'vi'
+                      ? 'Tìm bài'
+                      : 'Search'
+                    : lang === 'vi'
+                    ? 'Dịch'
+                    : 'Translate'}
+                </span>
                 <ChevronDown className="w-3 h-3 opacity-75" />
               </button>
               <input
@@ -758,10 +791,10 @@ export const Layout: React.FC<{
                     setForgotPasswordMode(false);
                     setLoginModalOpen(true);
                   }}
-                  className="hidden sm:inline-flex items-center gap-1.5 bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200/90 text-[13px] font-extrabold px-3.5 py-2 rounded-xl transition active:scale-95 whitespace-nowrap cursor-pointer"
+                  className="inline-flex items-center gap-1 sm:gap-1.5 bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200/90 text-[12px] sm:text-[13px] font-extrabold px-2.5 sm:px-3.5 min-h-[40px] py-2 rounded-xl transition active:scale-95 whitespace-nowrap cursor-pointer"
                 >
-                  <Gift className="w-3.5 h-3.5 text-amber-600" />
-                  <span>{lang === 'vi' ? 'Học thử' : 'Free Trial'}</span>
+                  <Gift className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+                  <span>{lang === 'vi' ? 'Học thử' : 'Trial'}</span>
                 </button>
                 <button
                   type="button"
@@ -770,7 +803,7 @@ export const Layout: React.FC<{
                     setForgotPasswordMode(false);
                     setLoginModalOpen(true);
                   }}
-                  className="bg-[#0a5482] hover:bg-[#084266] text-white text-xs sm:text-[14px] font-extrabold px-3.5 py-2 sm:px-4.5 sm:py-2.5 rounded-xl transition shadow-sm active:scale-95 whitespace-nowrap cursor-pointer"
+                  className="bg-[#0a5482] hover:bg-[#084266] text-white text-[12.5px] sm:text-[14px] font-extrabold px-3.5 sm:px-4.5 min-h-[40px] py-2 sm:py-2.5 rounded-xl transition shadow-sm active:scale-95 whitespace-nowrap cursor-pointer"
                 >
                   {t('Login')}
                 </button>
@@ -781,7 +814,7 @@ export const Layout: React.FC<{
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 rounded-xl text-slate-600 hover:bg-slate-100 cursor-pointer"
+              className="lg:hidden min-w-[42px] min-h-[42px] flex items-center justify-center rounded-xl text-slate-600 hover:bg-slate-100 cursor-pointer"
               aria-label="Menu"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -795,43 +828,88 @@ export const Layout: React.FC<{
           </div>
         </div>
 
-        {/* Mobile Dropdown Menu (Includes Compact Search + Language Switcher) */}
+        {/* Mobile Dropdown Menu (Includes Search Mode Switcher + Language + Trial CTA) */}
         {mobileMenuOpen && (
-          <div className="lg:hidden bg-white border-b border-slate-200 px-4 py-3.5 space-y-2 shadow-xl animate-in fade-in slide-in-from-top-2">
-            {/* Mobile Quick Dictionary / Search */}
-            <div className="flex items-center gap-2 pb-2 border-b border-slate-100">
-              <div className="flex-1 flex items-center bg-slate-100 border border-slate-200 rounded-xl px-3 py-2 focus-within:border-[#2ab4e8] focus-within:bg-white">
-                <Search className="w-4 h-4 text-slate-400 shrink-0" />
+          <div className="lg:hidden bg-white border-b border-slate-200 px-4 py-3.5 space-y-2.5 shadow-xl animate-in fade-in slide-in-from-top-2">
+            {/* Mobile Quick Dictionary / Article Search / Translate */}
+            <div className="space-y-2 pb-2.5 border-b border-slate-100">
+              <div className="flex items-center justify-between gap-2">
+                <div className="inline-flex items-center bg-slate-100 rounded-xl p-0.5 border border-slate-200/80 gap-0.5">
+                  <button
+                    type="button"
+                    onClick={() => setSearchMode('dic')}
+                    className={`px-2.5 py-1 rounded-lg text-[11.5px] font-bold transition cursor-pointer ${
+                      searchMode === 'dic' ? 'bg-white text-[#0a5482] shadow-2xs' : 'text-slate-500'
+                    }`}
+                  >
+                    {lang === 'vi' ? 'Từ điển' : 'Dict'}
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setSearchMode('web')}
+                    className={`px-2.5 py-1 rounded-lg text-[11.5px] font-bold transition cursor-pointer ${
+                      searchMode === 'web' ? 'bg-white text-[#0a5482] shadow-2xs' : 'text-slate-500'
+                    }`}
+                  >
+                    {lang === 'vi' ? 'Tìm bài' : 'Articles'}
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setSearchMode('trans')}
+                    className={`px-2.5 py-1 rounded-lg text-[11.5px] font-bold transition cursor-pointer ${
+                      searchMode === 'trans' ? 'bg-white text-[#0a5482] shadow-2xs' : 'text-slate-500'
+                    }`}
+                  >
+                    {lang === 'vi' ? 'Dịch' : 'Translate'}
+                  </button>
+                </div>
+
+                <div className="flex items-center bg-slate-100 rounded-xl p-0.5 border border-slate-200 shrink-0">
+                  <button
+                    type="button"
+                    onClick={() => setLang('vi')}
+                    className={`px-2 py-1 rounded-lg text-xs font-bold cursor-pointer ${lang === 'vi' ? 'bg-[#0a5482] text-white' : 'text-slate-500'}`}
+                  >
+                    VN
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setLang('en')}
+                    className={`px-2 py-1 rounded-lg text-xs font-bold cursor-pointer ${lang === 'en' ? 'bg-[#0a5482] text-white' : 'text-slate-500'}`}
+                  >
+                    EN
+                  </button>
+                </div>
+              </div>
+
+              <form
+                onSubmit={(e) => {
+                  handleSearchSubmit(e);
+                  setMobileMenuOpen(false);
+                }}
+                className="flex items-center bg-slate-100 border border-slate-200 rounded-xl overflow-hidden focus-within:border-[#2ab4e8] focus-within:bg-white transition-colors"
+              >
+                <Search className="w-4 h-4 text-slate-400 shrink-0 ml-3" />
                 <input
                   type="text"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  onKeyDown={(e) => {
-                    if (e.key === 'Enter') {
-                      handleSearchSubmit(e);
-                      setMobileMenuOpen(false);
-                    }
-                  }}
-                  placeholder={t('Look up dictionary')}
-                  className="bg-transparent text-slate-800 placeholder-slate-400 text-sm px-2.5 flex-1 min-w-0 focus:outline-none"
+                  placeholder={
+                    searchMode === 'dic'
+                      ? t('Look up dictionary')
+                      : searchMode === 'web'
+                      ? t('TonyEnglish.vn search')
+                      : t('Google translate')
+                  }
+                  className="bg-transparent text-slate-800 placeholder-slate-400 text-sm px-2.5 py-2.5 flex-1 min-w-0 focus:outline-none"
                 />
-              </div>
-              <div className="flex items-center bg-slate-100 rounded-xl p-1 border border-slate-200 shrink-0">
                 <button
-                  type="button"
-                  onClick={() => setLang('vi')}
-                  className={`px-2 py-1 rounded-lg text-xs font-bold ${lang === 'vi' ? 'bg-[#0a5482] text-white' : 'text-slate-500'}`}
+                  type="submit"
+                  className="px-3.5 py-2.5 bg-[#0a5482] hover:bg-[#084266] text-white text-xs font-extrabold shrink-0 cursor-pointer"
                 >
-                  VN
+                  {lang === 'vi' ? 'Tìm' : 'Go'}
                 </button>
-                <button
-                  type="button"
-                  onClick={() => setLang('en')}
-                  className={`px-2 py-1 rounded-lg text-xs font-bold ${lang === 'en' ? 'bg-[#0a5482] text-white' : 'text-slate-500'}`}
-                >
-                  EN
-                </button>
-              </div>
+              </form>
             </div>
 
             {navItems.map((item) => (
@@ -867,12 +945,30 @@ export const Layout: React.FC<{
               </>
             )}
 
+            {!lmsRole && !user && (
+              <div className="pt-1">
+                <button
+                  type="button"
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    setAuthTab('register');
+                    setForgotPasswordMode(false);
+                    setLoginModalOpen(true);
+                  }}
+                  className="w-full py-2.5 px-4 rounded-xl bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 text-slate-950 font-extrabold text-sm shadow-xs inline-flex items-center justify-center gap-2 cursor-pointer"
+                >
+                  <Gift className="w-4 h-4 shrink-0" />
+                  <span>{lang === 'vi' ? 'Đăng ký Học thử Miễn phí' : 'Start Free Trial'}</span>
+                </button>
+              </div>
+            )}
+
             <div className="pt-2 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-slate-500 px-1">
               <a href="tel:0935058688" className="inline-flex items-center gap-1.5 text-[#0a5482] font-bold">
                 <Phone className="w-3.5 h-3.5" /> {phoneText}
               </a>
               <a href="https://zalo.me/0935058688" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-sky-600 font-bold">
-                <MessageCircle className="w-3.5 h-3.5" /> Zalo tư vấn
+                <MessageCircle className="w-3.5 h-3.5" /> {lang === 'vi' ? 'Zalo tư vấn' : 'Zalo Chat'}
               </a>
             </div>
           </div>
@@ -902,30 +998,32 @@ export const Layout: React.FC<{
                 </div>
               </Link>
               <p className="text-[15px] text-slate-300 leading-relaxed">
-                Trang học liệu cá nhân &amp; Lớp gia sư 1 kèm 1 cùng Thầy Tony (Tiếng Anh Giao Tiếp, IELTS, Cambridge IGCSE) tại nhà riêng R2B Royal City &amp; Online.
+                {lang === 'vi'
+                  ? 'Trang học liệu cá nhân & Lớp gia sư 1 kèm 1 cùng Thầy Tony (Tiếng Anh Giao Tiếp, IELTS, Cambridge IGCSE) tại nhà riêng R2B Royal City & Online.'
+                  : 'Personal English resource hub & 1-on-1 private tutoring with Mr. Tony (Communication, IELTS & Cambridge IGCSE) at R2B Royal City Hanoi & Online.'}
               </p>
-              <div className="space-y-2 text-sm text-slate-300 pt-1">
-                <p className="flex items-start gap-2">
-                  <span className="text-[#2ab4e8] mt-0.5">📍</span>
+              <div className="space-y-2.5 text-sm text-slate-300 pt-1">
+                <p className="flex items-start gap-2.5">
+                  <MapPin className="w-4 h-4 text-[#2ab4e8] shrink-0 mt-0.5" />
                   <span>
                     {t('Address')}: {addressText}
                   </span>
                 </p>
-                <p className="flex items-center gap-2">
-                  <span className="text-[#2ab4e8]">📞</span>
+                <p className="flex items-center gap-2.5">
+                  <Phone className="w-4 h-4 text-[#2ab4e8] shrink-0" />
                   <a href="tel:0935058688" className="hover:text-white transition">
                     {t('Contact')}: {phoneText}
                   </a>
                 </p>
-                <p className="flex items-center gap-2">
-                  <span className="text-[#2ab4e8]">💬</span>
+                <p className="flex items-center gap-2.5">
+                  <MessageCircle className="w-4 h-4 text-cyan-400 shrink-0" />
                   <a
                     href="https://zalo.me/0935058688"
                     target="_blank"
                     rel="noreferrer"
                     className="text-cyan-400 hover:text-cyan-300 font-semibold transition"
                   >
-                    Zalo tư vấn: 0935 058 688
+                    {lang === 'vi' ? 'Zalo tư vấn: 0935 058 688' : 'Zalo Consultation: 0935 058 688'}
                   </a>
                 </p>
               </div>
@@ -967,8 +1065,9 @@ export const Layout: React.FC<{
                   </li>
                 ))}
                 <li>
-                  <Link to="/videos" className="text-[#2ab4e8] font-semibold hover:underline">
-                    🎬 {t('Videos Store')} →
+                  <Link to="/videos" className="inline-flex items-center gap-1.5 text-[#2ab4e8] font-semibold hover:underline">
+                    <Video className="w-4 h-4 shrink-0" />
+                    <span>{t('Videos Store')} →</span>
                   </Link>
                 </li>
               </ul>
@@ -990,13 +1089,15 @@ export const Layout: React.FC<{
                   );
                 })}
                 <li>
-                  <Link to="/opening" className="hover:text-[#2ab4e8] transition-colors">
-                    📅 {t('Openning Class')}
+                  <Link to="/opening" className="inline-flex items-center gap-1.5 hover:text-[#2ab4e8] transition-colors">
+                    <Calendar className="w-3.5 h-3.5 text-[#2ab4e8] shrink-0" />
+                    <span>{t('Openning Class')}</span>
                   </Link>
                 </li>
                 <li>
-                  <Link to="/sitemap" className="hover:text-[#2ab4e8] transition-colors">
-                    🗺️ {t('Site map')}
+                  <Link to="/sitemap" className="inline-flex items-center gap-1.5 hover:text-[#2ab4e8] transition-colors">
+                    <MapIcon className="w-3.5 h-3.5 text-[#2ab4e8] shrink-0" />
+                    <span>{t('Site map')}</span>
                   </Link>
                 </li>
                 <li className="pt-2 flex flex-wrap gap-2">
@@ -1005,14 +1106,16 @@ export const Layout: React.FC<{
                     onClick={() => window.dispatchEvent(new CustomEvent('tony-open-lms'))}
                     className="inline-flex items-center gap-1.5 bg-slate-800 hover:bg-slate-700 text-white text-xs font-bold px-3 py-1.5 rounded-lg border border-slate-700 transition cursor-pointer"
                   >
-                    🎓 {lang === 'vi' ? 'Góc Học Viên' : 'Student Portal'}
+                    <GraduationCap className="w-3.5 h-3.5 text-[#2ab4e8]" />
+                    <span>{lang === 'vi' ? 'Góc Học Viên' : 'Student Portal'}</span>
                   </button>
                   <button
                     type="button"
                     onClick={() => onNavigateLms?.(lmsRole === 'admin' ? 'admin' : 'admin-login')}
                     className="inline-flex items-center gap-1.5 bg-slate-800/70 hover:bg-slate-700 text-slate-300 text-xs font-bold px-3 py-1.5 rounded-lg border border-slate-700 transition cursor-pointer"
                   >
-                    ⚙️ {lang === 'vi' ? 'Quản Trị' : 'Admin Setting'}
+                    <Settings className="w-3.5 h-3.5 text-slate-400" />
+                    <span>{lang === 'vi' ? 'Quản Trị' : 'Admin Setting'}</span>
                   </button>
                 </li>
               </ul>
@@ -1057,7 +1160,9 @@ export const Layout: React.FC<{
                       </h2>
                       <p className="text-xs text-slate-500 mt-1 leading-relaxed">
                         {authTab === 'login'
-                          ? 'Đăng nhập vào Góc Học Viên & Hệ thống Luyện Thi TonyEnglish'
+                          ? lang === 'vi'
+                            ? 'Đăng nhập vào Góc Học Viên & Hệ thống Luyện Thi TonyEnglish'
+                            : 'Sign in to TonyEnglish Student Portal & AI Exam Lab'
                           : registerTrialSub}
                       </p>
                     </div>
@@ -1085,7 +1190,7 @@ export const Layout: React.FC<{
                       }`}
                     >
                       <Lock className="w-3.5 h-3.5" />
-                      <span>Đăng nhập</span>
+                      <span>{lang === 'vi' ? 'Đăng nhập' : 'Sign in'}</span>
                     </button>
                     <button
                       type="button"
@@ -1100,16 +1205,16 @@ export const Layout: React.FC<{
                       }`}
                     >
                       <Gift className="w-3.5 h-3.5 text-amber-600 shrink-0" />
-                      <span className="whitespace-nowrap">Đăng ký học thử</span>
+                      <span className="whitespace-nowrap">{lang === 'vi' ? 'Đăng ký học thử' : 'Free Trial'}</span>
                     </button>
                   </div>
                 </div>
 
                 {authTab === 'login' ? (
-                  <form onSubmit={handleLoginSubmit} className="p-8 space-y-5">
+                  <form onSubmit={handleLoginSubmit} className="p-7 sm:p-8 space-y-5">
                     <div className="space-y-1.5">
                       <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">
-                        Email Học Viên / Username
+                        {lang === 'vi' ? 'Email Học Viên / Username' : 'Student Email / Username'}
                       </label>
                       <input
                         type="text"
@@ -1134,9 +1239,9 @@ export const Layout: React.FC<{
                             setResetSentSuccess(false);
                             setResetError('');
                           }}
-                          className="text-xs font-bold text-[#2ab4e8] hover:text-[#0a5482] transition-colors"
+                          className="text-xs font-bold text-[#2ab4e8] hover:text-[#0a5482] transition-colors cursor-pointer"
                         >
-                          Quên mật khẩu?
+                          {lang === 'vi' ? 'Quên mật khẩu?' : 'Forgot password?'}
                         </button>
                       </div>
                       <input
@@ -1160,20 +1265,26 @@ export const Layout: React.FC<{
                       disabled={loginLoading}
                       className="w-full bg-[#0a5482] hover:bg-[#084266] disabled:bg-slate-400 text-white font-black py-3.5 rounded-xl shadow-lg transition-transform active:scale-95 text-sm cursor-pointer"
                     >
-                      {loginLoading ? '⏳ ĐANG XỬ LÝ...' : 'ĐĂNG NHẬP VÀO GÓC HỌC VIÊN ➜'}
+                      {loginLoading
+                        ? lang === 'vi'
+                          ? 'ĐANG XỬ LÝ...'
+                          : 'SIGNING IN...'
+                        : lang === 'vi'
+                        ? 'ĐĂNG NHẬP VÀO GÓC HỌC VIÊN →'
+                        : 'SIGN IN TO STUDENT PORTAL →'}
                     </button>
                   </form>
                 ) : (
-                  <form onSubmit={handleRegisterSubmit} className="p-8 space-y-4">
+                  <form onSubmit={handleRegisterSubmit} className="p-7 sm:p-8 space-y-4">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       <div className="space-y-1">
                         <label className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">
-                          Họ và tên *
+                          {lang === 'vi' ? 'Họ và tên *' : 'Full Name *'}
                         </label>
                         <input
                           type="text"
                           required
-                          placeholder="Nguyễn Văn A"
+                          placeholder={lang === 'vi' ? 'Nguyễn Văn A' : 'Your full name'}
                           value={regFullName}
                           onChange={(e) => setRegFullName(e.target.value)}
                           className="w-full border border-slate-300 rounded-xl px-3.5 py-2.5 outline-none focus:ring-2 focus:ring-[#2ab4e8] text-sm font-medium bg-white"
@@ -1181,7 +1292,7 @@ export const Layout: React.FC<{
                       </div>
                       <div className="space-y-1">
                         <label className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">
-                          Số điện thoại *
+                          {lang === 'vi' ? 'Số điện thoại *' : 'Phone Number *'}
                         </label>
                         <input
                           type="tel"
@@ -1199,7 +1310,7 @@ export const Layout: React.FC<{
 
                     <div className="space-y-1">
                       <label className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">
-                        Email đăng nhập *
+                        {lang === 'vi' ? 'Email đăng nhập *' : 'Email Address *'}
                       </label>
                       <input
                         type="email"
@@ -1213,7 +1324,7 @@ export const Layout: React.FC<{
 
                     <div className="space-y-1">
                       <label className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">
-                        Mật khẩu (tối thiểu 6 ký tự) *
+                        {lang === 'vi' ? 'Mật khẩu (tối thiểu 6 ký tự) *' : 'Password (min 6 characters) *'}
                       </label>
                       <input
                         type="password"
@@ -1235,9 +1346,18 @@ export const Layout: React.FC<{
                     <button
                       type="submit"
                       disabled={loginLoading}
-                      className="w-full bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 disabled:bg-slate-400 text-slate-950 font-black py-3.5 rounded-xl shadow-lg transition-transform active:scale-95 text-sm cursor-pointer"
+                      className="w-full bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 disabled:bg-slate-400 text-slate-950 font-black py-3.5 rounded-xl shadow-lg transition-transform active:scale-95 text-sm cursor-pointer inline-flex items-center justify-center gap-2"
                     >
-                      {loginLoading ? '⏳ ĐANG TẠO TÀI KHOẢN...' : '🎁 ĐĂNG KÝ & VÀO HỌC THỬ NGAY ➜'}
+                      <Gift className="w-4 h-4 shrink-0" />
+                      <span>
+                        {loginLoading
+                          ? lang === 'vi'
+                            ? 'ĐANG TẠO TÀI KHOẢN...'
+                            : 'CREATING ACCOUNT...'
+                          : lang === 'vi'
+                          ? 'ĐĂNG KÝ & VÀO HỌC THỬ NGAY →'
+                          : 'CREATE FREE TRIAL ACCOUNT →'}
+                      </span>
                     </button>
                   </form>
                 )}
@@ -1246,8 +1366,12 @@ export const Layout: React.FC<{
               <>
                 <div className="bg-slate-50 px-8 py-6 border-b border-slate-200 flex justify-between items-center">
                   <div>
-                    <h2 className="text-xl font-black text-slate-800">Khôi phục mật khẩu</h2>
-                    <p className="text-xs text-slate-500 mt-0.5">Nhận liên kết đặt lại mật khẩu qua Email</p>
+                    <h2 className="text-xl font-black text-slate-800">
+                      {lang === 'vi' ? 'Khôi phục mật khẩu' : 'Reset Password'}
+                    </h2>
+                    <p className="text-xs text-slate-500 mt-0.5">
+                      {lang === 'vi' ? 'Nhận liên kết đặt lại mật khẩu qua Email' : 'Receive a password reset link via email'}
+                    </p>
                   </div>
                   <button
                     type="button"
@@ -1255,7 +1379,7 @@ export const Layout: React.FC<{
                       setForgotPasswordMode(false);
                       setLoginModalOpen(false);
                     }}
-                    className="text-slate-400 hover:text-red-500 text-2xl font-bold transition-colors"
+                    className="text-slate-400 hover:text-red-500 text-2xl font-bold transition-colors cursor-pointer"
                   >
                     &times;
                   </button>
@@ -1263,15 +1387,27 @@ export const Layout: React.FC<{
 
                 {resetSentSuccess ? (
                   <div className="p-8 text-center space-y-5">
-                    <div className="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto text-3xl">
-                      ✉️
+                    <div className="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto">
+                      <Mail className="w-7 h-7" />
                     </div>
                     <div className="space-y-2">
-                      <h3 className="text-lg font-black text-slate-800">Đã gửi Email khôi phục!</h3>
+                      <h3 className="text-lg font-black text-slate-800">
+                        {lang === 'vi' ? 'Đã gửi Email khôi phục!' : 'Recovery Email Sent!'}
+                      </h3>
                       <p className="text-sm text-slate-600 leading-relaxed">
-                        Hệ thống đã gửi liên kết đặt lại mật khẩu tới{' '}
-                        <span className="font-bold text-[#0a5482]">{resetEmail.trim()}</span>. Vui lòng kiểm tra hộp thư
-                        đến (hoặc mục Spam/Quảng cáo).
+                        {lang === 'vi' ? (
+                          <>
+                            Hệ thống đã gửi liên kết đặt lại mật khẩu tới{' '}
+                            <span className="font-bold text-[#0a5482]">{resetEmail.trim()}</span>. Vui lòng kiểm tra hộp thư
+                            đến (hoặc mục Spam/Quảng cáo).
+                          </>
+                        ) : (
+                          <>
+                            We have sent a password reset link to{' '}
+                            <span className="font-bold text-[#0a5482]">{resetEmail.trim()}</span>. Please check your inbox
+                            (or Spam folder).
+                          </>
+                        )}
                       </p>
                     </div>
                     <button
@@ -1280,18 +1416,22 @@ export const Layout: React.FC<{
                         setForgotPasswordMode(false);
                         setResetSentSuccess(false);
                       }}
-                      className="w-full bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold py-3.5 rounded-xl transition text-sm"
+                      className="w-full bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold py-3.5 rounded-xl transition text-sm cursor-pointer"
                     >
-                      ← Quay lại Đăng nhập
+                      {lang === 'vi' ? '← Quay lại Đăng nhập' : '← Back to Sign In'}
                     </button>
                   </div>
                 ) : (
                   <form onSubmit={handleForgotPassword} className="p-8 space-y-5">
                     <p className="text-sm text-slate-600 leading-relaxed">
-                      Nhập địa chỉ Email tài khoản học viên của bạn. Hệ thống sẽ gửi đường dẫn để bạn tạo mật khẩu mới.
+                      {lang === 'vi'
+                        ? 'Nhập địa chỉ Email tài khoản học viên của bạn. Hệ thống sẽ gửi đường dẫn để bạn tạo mật khẩu mới.'
+                        : 'Enter your student account email address and we will send you a link to set a new password.'}
                     </p>
                     <div className="space-y-1.5">
-                      <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Email của bạn</label>
+                      <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">
+                        {lang === 'vi' ? 'Email của bạn' : 'Your Email'}
+                      </label>
                       <input
                         type="email"
                         required
@@ -1309,16 +1449,22 @@ export const Layout: React.FC<{
                     <button
                       type="submit"
                       disabled={isResetting}
-                      className="w-full bg-[#0a5482] hover:bg-[#084266] disabled:bg-slate-400 text-white font-black py-3.5 rounded-xl shadow-lg transition-transform active:scale-95 text-sm"
+                      className="w-full bg-[#0a5482] hover:bg-[#084266] disabled:bg-slate-400 text-white font-black py-3.5 rounded-xl shadow-lg transition-transform active:scale-95 text-sm cursor-pointer"
                     >
-                      {isResetting ? '⏳ ĐANG GỬI EMAIL...' : 'GỬI LIÊN KẾT ĐẶT LẠI MẬT KHẨU'}
+                      {isResetting
+                        ? lang === 'vi'
+                          ? 'ĐANG GỬI EMAIL...'
+                          : 'SENDING EMAIL...'
+                        : lang === 'vi'
+                        ? 'GỬI LIÊN KẾT ĐẶT LẠI MẬT KHẨU'
+                        : 'SEND PASSWORD RESET LINK'}
                     </button>
                     <button
                       type="button"
                       onClick={() => setForgotPasswordMode(false)}
-                      className="w-full text-center text-sm font-bold text-slate-500 hover:text-slate-800 transition-colors pt-1"
+                      className="w-full text-center text-sm font-bold text-slate-500 hover:text-slate-800 transition-colors pt-1 cursor-pointer"
                     >
-                      ← Quay lại màn hình Đăng nhập
+                      {lang === 'vi' ? '← Quay lại màn hình Đăng nhập' : '← Back to Sign In'}
                     </button>
                   </form>
                 )}
