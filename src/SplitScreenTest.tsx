@@ -44,7 +44,15 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
 
   const [leftWidth, setLeftWidth] = useState(50); 
   const [isDragging, setIsDragging] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(() => typeof window !== 'undefined' ? window.innerWidth >= 768 : true);
+  const [mobileTab, setMobileTab] = useState<'pdf' | 'answers'>(initIsReview ? 'answers' : 'pdf');
   const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const onResize = () => setIsDesktop(window.innerWidth >= 768);
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, []);
 
   // 📎 Toggle PDF: Question Paper vs Insert 1 vs Insert 2
   const [leftPdfView, setLeftPdfView] = useState<'question' | 'insert' | 'insert2'>('question');
@@ -145,28 +153,34 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
     setAnswers(prev => ({ ...prev, [inputId]: value }));
   };
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (forceAutoSubmit: any = false) => {
+    const isForced = forceAutoSubmit === true;
+    if (isFinishingRef.current || isSubmitting) return;
     const currentAnswers = answersRef.current;
-    const isExercise = testData?.content_json?.basicInfo?.category === 'exercise';
-    if (Object.keys(currentAnswers).length === 0) {
+    const isExerciseMode = testData?.content_json?.basicInfo?.category === 'exercise';
+    if (!isForced && Object.keys(currentAnswers).length === 0) {
       alert("⚠️ Bạn chưa điền câu trả lời nào cả!");
       return;
     }
 
-    if (!isExercise && timeLeft > 0 && !window.confirm("Bạn có chắc chắn muốn nộp bài thi?")) {
-      return; 
+    if (!isForced) {
+      if (!isExerciseMode && timeLeft > 0 && !window.confirm("Bạn có chắc chắn muốn nộp bài thi?")) {
+        return; 
+      }
+      if (isExerciseMode && !window.confirm("Bạn có chắc chắn muốn nộp bài tập?")) {
+        return;
+      }
     }
-    if (isExercise && !window.confirm("Bạn có chắc chắn muốn nộp bài tập?")) {
-      return;
-    }
+
+    const rawTime = testData.content_json?.basicInfo?.timeLimit || testData.timeLimit;
+    const initialSeconds = (parseInt(rawTime) || 90) * 60;
+    const savedEnd = testData?.id ? getSavedEndTime(testData.id) : null;
+    const computedTimeSpent = savedEnd
+      ? Math.max(0, initialSeconds - Math.max(0, Math.floor((savedEnd - Date.now()) / 1000)))
+      : Math.max(0, initialSeconds - timeLeft);
 
     setIsSubmitting(true);
     isFinishingRef.current = true;
-    
-    if (testData?.id) {
-       localStorage.removeItem(`case_study_endtime_${testData.id}`);
-       localStorage.removeItem(`case_study_ans_${testData.id}`);
-    }
 
     try {
       // 🚀 AI đọc được PDF đề thi + Insert/Resource + JSON Marking Scheme
@@ -217,15 +231,12 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
 
       setGradeResult(gradedData);
       setIsReviewMode(true);
+      setMobileTab('answers');
 
       // 🚀 LƯU DB & BẮN PHÁO HIỆU CHO ADMIN
       try {
         const { data: { user } } = await supabase.auth.getSession().then(({data}) => ({ data: { user: data.session?.user } }));
         if (user) {
-          const rawTime = testData.content_json?.basicInfo?.timeLimit || testData.timeLimit;
-          const initialSeconds = (parseInt(rawTime) || 90) * 60;
-          const timeSpentSecs = initialSeconds - timeLeft;
-          
           await supabase.from('test_results').insert([{
             user_id: user.id,
             course_id: testData.course_id,
@@ -233,7 +244,7 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
             test_type: testData.test_type || 'Case-Study',
             score: gradedData.total_student_score,
             total_score: gradedData.total_max_score,
-            time_spent: timeSpentSecs > 0 ? timeSpentSecs : 0,
+            time_spent: computedTimeSpent,
             details: { test_id: testData.id, userAnswers: currentAnswers, aiFeedback: gradedData }
           }]);
 
@@ -261,7 +272,14 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
         console.error("Lỗi lưu DB:", dbError);
       }
 
+      // Chỉ xóa nháp sau khi chấm & lưu thành công
+      if (testData?.id) {
+         localStorage.removeItem(`case_study_endtime_${testData.id}`);
+         localStorage.removeItem(`case_study_ans_${testData.id}`);
+      }
+
     } catch (err: any) {
+      isFinishingRef.current = false;
       if (err.message && err.message.includes("Unexpected end of JSON input")) {
         alert("❌ Không thể nộp bài do kết nối gián đoạn hoặc file PDF quá nặng. Vui lòng thử nộp lại.");
       } else {
@@ -272,6 +290,9 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
       setIsSubmitting(false);
     }
   };
+
+  const handleSubmitRef = useRef(handleSubmit);
+  handleSubmitRef.current = handleSubmit;
 
   // Đồng hồ chạy liên tục
   useEffect(() => {
@@ -286,10 +307,18 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
             if (remaining <= 0) {
                 clearInterval(timer);
                 alert("⏰ Hết giờ làm bài! Hệ thống tự động nộp bài.");
-                handleSubmit();
+                handleSubmitRef.current(true);
             }
         } else {
-            setTimeLeft(prev => prev - 1);
+            setTimeLeft(prev => {
+                if (prev <= 1) {
+                    clearInterval(timer);
+                    alert("⏰ Hết giờ làm bài! Hệ thống tự động nộp bài.");
+                    handleSubmitRef.current(true);
+                    return 0;
+                }
+                return prev - 1;
+            });
         }
     }, 1000);
     
@@ -316,7 +345,7 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
 
   if (isLoading) {
     return (
-      <div className="h-screen w-screen flex flex-col items-center justify-center bg-[#525659] text-white font-bold">
+      <div className="h-[100dvh] w-screen flex flex-col items-center justify-center bg-[#525659] text-white font-bold">
         <div className="animate-spin text-4xl mb-4">⏳</div>
         <p>Đang tải đề thi và tài liệu...</p>
       </div>
@@ -325,12 +354,26 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
 
   if (!testData || (!isReviewMode && (!testData.json_config || !testData.json_config.questions))) {
     return (
-      <div className="h-screen w-screen flex flex-col items-center justify-center bg-[#525659] text-white font-bold gap-4">
+      <div className="h-[100dvh] w-screen flex flex-col items-center justify-center bg-[#525659] text-white font-bold gap-4">
         <p>⚠️ Chưa có đề thi nào trong hệ thống hoặc dữ liệu bị lỗi.</p>
         <button onClick={onBack} className="bg-[#1e88e5] text-white px-6 py-2 rounded-none">Quay lại</button>
       </div>
     );
   }
+
+  const findStudentAnswer = (qn: any): string | null => {
+    const qnStr = String(qn ?? '').trim();
+    if (!qnStr) return null;
+    const directKey = `${qnStr}_input_0`;
+    if (answers[directKey]) return answers[directKey];
+    if (answers[qnStr]) return answers[qnStr];
+    const matchEntry = Object.entries(answers).find(([k]) => k === qnStr || k.startsWith(qnStr + '_'));
+    return matchEntry?.[1] || null;
+  };
+
+  const activePdfUrl = leftPdfView === 'insert2' && insert2PdfUrl ? insert2PdfUrl 
+    : leftPdfView === 'insert' && insertPdfUrl ? insertPdfUrl 
+    : questionPdfUrl;
 
   // 🚀 GỌI GIA SƯ AI (VOICE) CHO TỪNG CÂU HỎI
   const callAiTutor = (questionText: string, studentAns: string, feedback: string) => {
@@ -346,15 +389,15 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
   };
 
   return (
-    <div className="h-screen w-screen flex flex-col bg-white font-sans text-slate-900 overflow-hidden">
+    <div className="h-[100dvh] w-screen flex flex-col bg-white font-sans text-slate-900 overflow-hidden">
       
       {/* HEADER TỔNG */}
-      <header className="h-14 w-full bg-white border-b border-slate-300 flex items-center justify-between px-4 sm:px-6 shrink-0 z-20 box-border">
-        <div className="flex items-center gap-3 sm:gap-4 overflow-hidden">
+      <header className="h-14 w-full bg-white border-b border-slate-300 flex items-center justify-between px-3 sm:px-6 shrink-0 z-20 box-border gap-2">
+        <div className="flex items-center gap-2.5 sm:gap-4 overflow-hidden min-w-0">
           <button onClick={onBack} className="text-slate-600 hover:text-black font-bold text-sm transition-colors whitespace-nowrap">← Quay lại</button>
           <div className="h-5 w-px bg-slate-300 hidden sm:block"></div>
-          <div className="truncate flex items-baseline gap-2">
-            <h1 className="font-bold text-black text-[15px] leading-tight truncate">
+          <div className="truncate flex items-baseline gap-2 min-w-0">
+            <h1 className="font-bold text-black text-[14px] sm:text-[15px] leading-tight truncate">
               {isReviewMode ? `[REVIEW] ${testData.title || 'Bài thi Case Study'}` : testData.title || 'Bài thi Case Study'}
             </h1>
             <p className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider hidden md:block">Phân loại: {testData.test_type || 'Case-Study'}</p>
@@ -362,13 +405,13 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
         </div>
         {!gradeResult && !isReviewMode && (
           <div className="flex items-center gap-2 sm:gap-4 shrink-0">
-             <div className={`font-bold flex items-center gap-2 px-3 py-1 rounded ${testData.content_json?.basicInfo?.category === 'exercise' ? 'text-[#0ea5e9] bg-[#0ea5e9]/10' : (timeLeft <= 300 ? 'text-red-600 bg-red-50 animate-pulse' : 'text-slate-600')}`}>
-               {testData.content_json?.basicInfo?.category === 'exercise' ? 'BÀI TẬP' : <><span>⏱️</span> <span className="hidden sm:inline font-mono tracking-widest">{formatTime(timeLeft)}</span></>}
+             <div className={`font-bold flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded text-xs sm:text-sm ${testData.content_json?.basicInfo?.category === 'exercise' ? 'text-[#0ea5e9] bg-[#0ea5e9]/10' : (timeLeft <= 300 ? 'text-red-600 bg-red-50 animate-pulse' : 'text-slate-600 bg-slate-100')}`}>
+               {testData.content_json?.basicInfo?.category === 'exercise' ? 'BÀI TẬP' : <><span>⏱️</span> <span className="font-mono tracking-wider sm:tracking-widest tabular-nums">{formatTime(timeLeft)}</span></>}
              </div>
              <button 
-               onClick={handleSubmit} 
+               onClick={() => handleSubmit(false)} 
                disabled={isSubmitting}
-               className="bg-[#1e88e5] hover:bg-blue-700 text-white font-bold text-sm px-6 py-1.5 rounded-none transition-colors active:scale-95 disabled:opacity-50 whitespace-nowrap"
+               className="bg-[#1e88e5] hover:bg-blue-700 text-white font-bold text-xs sm:text-sm px-4 sm:px-6 py-1.5 rounded-none transition-colors active:scale-95 disabled:opacity-50 whitespace-nowrap"
              >
                {isSubmitting ? 'Đang nộp...' : 'Nộp Bài'}
              </button>
@@ -376,14 +419,35 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
         )}
       </header>
 
+      {/* MOBILE VIEW SWITCHER (< md) */}
+      <div className="md:hidden flex border-b border-slate-300 bg-slate-100 shrink-0 z-10">
+        <button
+          type="button"
+          onClick={() => setMobileTab('pdf')}
+          className={`flex-1 py-2.5 text-xs font-bold uppercase tracking-wider transition-colors border-b-2 ${mobileTab === 'pdf' ? 'bg-white text-[#1e88e5] border-[#1e88e5]' : 'text-slate-600 border-transparent'}`}
+        >
+          📄 Đề bài
+        </button>
+        <button
+          type="button"
+          onClick={() => setMobileTab('answers')}
+          className={`flex-1 py-2.5 text-xs font-bold uppercase tracking-wider transition-colors border-b-2 ${mobileTab === 'answers' ? 'bg-white text-[#1e88e5] border-[#1e88e5]' : 'text-slate-600 border-transparent'}`}
+        >
+          {gradeResult ? '✅ Kết quả' : '✏️ Bài làm'}
+        </button>
+      </div>
+
       {/* WORKSPACE - SPLIT SCREEN */}
-      <div ref={containerRef} className="flex-1 flex overflow-hidden w-full select-none bg-[#525659]">
+      <div ref={containerRef} className={`flex-1 flex overflow-hidden w-full bg-[#525659] ${isDragging ? 'select-none' : ''}`}>
         
         {/* NỬA TRÁI: PDF HOẶC TEXT */}
-        <div style={{ width: `${leftWidth}%` }} className="h-full flex flex-col shrink-0 bg-[#525659]">
-          <div className="bg-[#323639] border-b border-[#202224] px-4 flex justify-between items-center h-10 shrink-0 shadow-sm">
+        <div
+          style={{ width: isDesktop ? `${leftWidth}%` : '100%' }}
+          className={`${!isDesktop && mobileTab !== 'pdf' ? 'hidden' : 'flex'} h-full flex-col shrink-0 bg-[#525659]`}
+        >
+          <div className="bg-[#323639] border-b border-[#202224] px-3 sm:px-4 flex justify-between items-center gap-2 h-10 shrink-0 shadow-sm overflow-x-auto no-scrollbar">
             {hasAnyInsert ? (
-              <div className="flex items-center gap-1">
+              <div className="flex items-center gap-1 shrink-0">
                 <button 
                   onClick={() => setLeftPdfView('question')} 
                   className={`px-3 py-1.5 rounded text-[10px] font-bold uppercase tracking-wider transition-all ${leftPdfView === 'question' ? 'bg-[#1e88e5] text-white shadow-sm' : 'text-slate-400 hover:text-white hover:bg-white/10'}`}
@@ -408,7 +472,18 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
                 )}
               </div>
             ) : (
-              <span className="font-bold text-slate-300 text-[11px] uppercase tracking-widest">Đề thi</span>
+              <span className="font-bold text-slate-300 text-[11px] uppercase tracking-widest shrink-0">Đề thi</span>
+            )}
+            {activePdfUrl && !(leftPdfView === 'question' && testData?.content_json?.basicInfo?.leftPaneType === 'text') && (
+              <a
+                href={activePdfUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-2.5 py-1 rounded bg-white/10 hover:bg-white/20 text-slate-200 hover:text-white text-[11px] font-bold transition shrink-0 whitespace-nowrap"
+                title="Mở file PDF trong tab mới (khuyên dùng trên iPad/Mobile)"
+              >
+                ↗ Mở PDF
+              </a>
             )}
           </div>
           <div className={`flex-1 w-full h-full overflow-hidden ${isDragging ? 'pointer-events-none' : ''}`}>
@@ -416,7 +491,7 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
                // Ưu tiên hiển thị text nếu đang xem Question Paper và có cấu hình text
                if (leftPdfView === 'question' && testData?.content_json?.basicInfo?.leftPaneType === 'text') {
                  return (
-                   <div className="w-full h-full bg-white overflow-y-auto p-8 custom-scrollbar">
+                   <div className="w-full h-full bg-white overflow-y-auto p-6 sm:p-8 custom-scrollbar">
                      <div 
                        className="prose max-w-none prose-slate"
                        dangerouslySetInnerHTML={{ __html: testData.content_json.basicInfo.left_text_content || '' }}
@@ -425,9 +500,6 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
                  );
                }
 
-               const activePdfUrl = leftPdfView === 'insert2' && insert2PdfUrl ? insert2PdfUrl 
-                 : leftPdfView === 'insert' && insertPdfUrl ? insertPdfUrl 
-                 : questionPdfUrl;
                if (activePdfUrl) {
                  return <iframe key={activePdfUrl} src={`${activePdfUrl}#toolbar=0&navpanes=0&scrollbar=0&view=FitH`} className="w-full h-full border-none bg-transparent" title={leftPdfView === 'insert2' ? 'PDF Insert 2' : leftPdfView === 'insert' ? 'PDF Insert 1' : 'PDF Question Paper'} />;
                }
@@ -436,15 +508,18 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
           </div>
         </div>
 
-        {/* THANH KÉO (RESIZER) */}
-        <div onMouseDown={() => setIsDragging(true)} className={`w-[6px] h-full bg-[#202224] hover:bg-[#1e88e5] cursor-col-resize flex items-center justify-center shrink-0 z-10 transition-colors ${isDragging ? 'bg-[#1e88e5]' : ''}`}>
+        {/* THANH KÉO (RESIZER - Desktop only) */}
+        <div onMouseDown={() => setIsDragging(true)} className={`hidden md:flex w-[6px] h-full bg-[#202224] hover:bg-[#1e88e5] cursor-col-resize items-center justify-center shrink-0 z-10 transition-colors ${isDragging ? 'bg-[#1e88e5]' : ''}`}>
           <div className="flex flex-col gap-1">
             <div className="w-[2px] h-[2px] bg-slate-500"></div><div className="w-[2px] h-[2px] bg-slate-500"></div><div className="w-[2px] h-[2px] bg-slate-500"></div>
           </div>
         </div>
 
         {/* NỬA PHẢI: KHU VỰC LÀM BÀI / KẾT QUẢ CHẤM */}
-        <div style={{ width: `calc(${100 - leftWidth}% - 6px)` }} className="h-full flex flex-col shrink-0 bg-[#525659]">
+        <div
+          style={{ width: isDesktop ? `calc(${100 - leftWidth}% - 6px)` : '100%' }}
+          className={`${!isDesktop && mobileTab !== 'answers' ? 'hidden' : 'flex'} h-full flex-col shrink-0 bg-[#525659]`}
+        >
           
           <div className="bg-[#323639] border-b border-[#202224] px-6 flex justify-between items-center h-10 shrink-0 shadow-sm">
             <span className="font-bold text-slate-300 text-[11px] uppercase tracking-widest flex items-center gap-2">
@@ -507,8 +582,8 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
                 </div>
 
                 <div className="space-y-10">
-                  {gradeResult.details.map((item: any, idx: number) => (
-                    <div key={idx} className="border border-slate-300 p-8 shadow-sm relative">
+                  {(gradeResult.details || []).map((item: any, idx: number) => (
+                    <div key={idx} className="border border-slate-300 p-6 sm:p-8 shadow-sm relative">
                       <div className="flex justify-between items-center mb-6 border-b border-slate-200 pb-4">
                         <h4 className="font-black text-xl text-black">Câu {item.question_number}</h4>
                         <span className={`font-black px-4 py-2 text-[15px] ${item.student_score === item.max_score ? 'bg-emerald-100 text-emerald-700 border border-emerald-300' : item.student_score === 0 ? 'bg-red-100 text-red-700 border border-red-300' : 'bg-orange-100 text-orange-700 border border-orange-300'}`}>
@@ -519,16 +594,7 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
                       <div className="mb-4">
                          <span className="font-bold text-slate-500 uppercase text-[11px] tracking-widest block mb-2">Bài làm của bạn:</span>
                          <div className="bg-slate-50 p-4 border border-slate-200 text-[14px] text-slate-600 italic whitespace-pre-wrap">
-                            {(() => {
-                              const qn = item.question_number || item.id || '';
-                              // Try multiple key patterns to find student answer
-                              const directKey = `${qn}_input_0`;
-                              const found = answers[directKey] 
-                                || answers[qn]
-                                || Object.entries(answers).find(([k]) => k.startsWith(qn))?.[1]
-                                || null;
-                              return found || "Không có câu trả lời...";
-                            })()}
+                            {findStudentAnswer(item.question_number || item.id) || "Không có câu trả lời..."}
                          </div>
                       </div>
 
@@ -549,8 +615,8 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
                       {item.student_score < item.max_score && (
                         <div className="flex items-center gap-2 mt-5">
                           <button onClick={() => {
-                              const qn = item.question_number || '';
-                              const studentAns = answers[`${qn}_input_0`] || answers[qn] || Object.entries(answers).find(([k]) => k.startsWith(qn))?.[1] || 'Bỏ trống';
+                              const qn = item.question_number || item.id || '';
+                              const studentAns = findStudentAnswer(qn) || 'Bỏ trống';
                               const query = `Câu hỏi số ${qn}\nĐáp án học sinh: "${studentAns}"\nĐiểm: ${item.student_score}/${item.max_score}\nNhận xét: "${item.examiner_comment}"${item.correct_answer ? `\nĐáp án đúng: "${item.correct_answer}"` : ''}\n\nThầy giải thích chi tiết giúp em tại sao em bị trừ điểm ạ!`;
                               const btn = document.createElement('button');
                               btn.className = 'btn-ai-trigger';
@@ -563,8 +629,8 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
                               💬 Chat Thầy AI
                           </button>
                           <button onClick={() => {
-                              const qn = item.question_number || '';
-                              const studentAns = answers[`${qn}_input_0`] || answers[qn] || Object.entries(answers).find(([k]) => k.startsWith(qn))?.[1] || 'Bỏ trống';
+                              const qn = item.question_number || item.id || '';
+                              const studentAns = findStudentAnswer(qn) || 'Bỏ trống';
                               callAiTutor(`Câu ${qn}`, studentAns, item.examiner_comment || '');
                           }} className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-amber-400 to-orange-400 text-white font-bold text-[12px] rounded-lg shadow-md hover:shadow-lg transition-all active:scale-95">
                               📞 Gọi Gia Sư
@@ -630,7 +696,7 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
                 {!isReviewMode && (
                   <div className="w-full bg-white shadow-xl px-8 py-8 sm:px-16 flex justify-end mb-12 border-t border-slate-100">
                      <button 
-                       onClick={handleSubmit} 
+                       onClick={() => handleSubmit(false)} 
                        disabled={isSubmitting}
                        className="bg-[#1e88e5] hover:bg-blue-700 text-white font-bold px-10 py-3 rounded-none transition-transform active:scale-95 flex items-center gap-2 shadow-md disabled:opacity-50"
                      >

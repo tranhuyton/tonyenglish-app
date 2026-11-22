@@ -219,11 +219,23 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
   // Tự động phát file tiếp theo khi Playlist chuyển bài
   useEffect(() => {
       if (testStarted && !isReviewMode && isListening && globalAudioRef.current && audioPlaylist[currentAudioIndex]) {
-          setTimeout(() => {
+          const timer = window.setTimeout(() => {
              globalAudioRef.current?.play().catch(e => console.log("Auto-play next track blocked", e));
           }, 100);
+          return () => window.clearTimeout(timer);
       }
   }, [currentAudioIndex, testStarted, isReviewMode, isListening, audioPlaylist]);
+
+  // Dọn dẹp audio khi unmount
+  useEffect(() => {
+      return () => {
+          if (globalAudioRef.current) {
+              try {
+                  globalAudioRef.current.pause();
+              } catch {}
+          }
+      };
+  }, []);
 
   // Lưu bản nháp
   useEffect(() => {
@@ -269,12 +281,20 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
   };
 
 // NỘP BÀI VÀ TÍNH ĐIỂM
-const handleFinish = async () => {
+const handleFinish = async (forceAutoSubmit: any = false) => {
+  const isForced = forceAutoSubmit === true;
   if (!isReviewMode) {
-    if (!window.confirm("Bạn có chắc chắn muốn nộp bài thi?")) return;
+    if (isFinishingRef.current) return;
+    if (!isForced && !window.confirm("Bạn có chắc chắn muốn nộp bài thi?")) return;
     isFinishingRef.current = true;
     // 🔒 Đọc answers từ ref để chống stale closure khi timer hết giờ gọi
     const currentAnswers = answersRef.current;
+    const savedEnd = getSavedEndTime();
+    const initialSecs = parseInitialTime(basicInfo.timeLimit);
+    const computedTimeSpent = savedEnd
+      ? Math.max(0, initialSecs - Math.max(0, Math.floor((savedEnd - Date.now()) / 1000)))
+      : Math.max(0, initialSecs - timeLeft);
+
     if (safeTestData?.id) {
       localStorage.removeItem(`ielts_paper_ans_${safeTestData.id}`);
       localStorage.removeItem(`ielts_paper_endtime_${safeTestData.id}`);
@@ -346,7 +366,7 @@ const handleFinish = async () => {
     try {
       const { data: { user } } = await supabase.auth.getUser();
       if (user) {
-        const timeSpentSecs = parseInitialTime(basicInfo.timeLimit) - timeLeft;
+        const timeSpentSecs = computedTimeSpent;
         await supabase.from('test_results').insert([{
           user_id: user.id, 
           course_id: safeTestData?.course_id || safeTestData?.content_json?.basicInfo?.courseId || null,
@@ -396,9 +416,16 @@ const handleFinish = async () => {
   }
 };
 
+  const handleFinishRef = useRef(handleFinish);
+  handleFinishRef.current = handleFinish;
+
   const resetTest = () => {
     if (window.confirm("Làm lại từ đầu? Mọi đáp án sẽ bị xóa.")) { 
-      if (safeTestData?.id) localStorage.removeItem(`ielts_paper_endtime_${safeTestData.id}`);
+      isFinishingRef.current = false;
+      if (safeTestData?.id) {
+        localStorage.removeItem(`ielts_paper_ans_${safeTestData.id}`);
+        localStorage.removeItem(`ielts_paper_endtime_${safeTestData.id}`);
+      }
       setAnswers({}); 
       setReviewFlags({});
       setIsReviewMode(false); 
@@ -469,10 +496,18 @@ const handleFinish = async () => {
             if (remaining <= 0) {
                 clearInterval(timer);
                 alert("⏰ Hết giờ!");
-                handleFinish();
+                handleFinishRef.current(true);
             }
         } else { 
-            setTimeLeft(prev => prev - 1); 
+            setTimeLeft(prev => {
+                if (prev <= 1) {
+                    clearInterval(timer);
+                    alert("⏰ Hết giờ!");
+                    handleFinishRef.current(true);
+                    return 0;
+                }
+                return prev - 1;
+            }); 
         }
     }, 1000);
     return () => clearInterval(timer);
@@ -859,36 +894,22 @@ const handleFinish = async () => {
         setTimeLeft(remaining);
         if (remaining <= 0 && basicInfo?.category !== 'exercise') {
             alert("⏰ Bài thi này đã hết thời gian làm bài!");
-            handleFinish();
+            handleFinishRef.current(true);
             return;
         }
     }
     if (globalAudioRef.current && isListening) { 
-        // Thay vì chỉ play(), thêm sự kiện lắng nghe để chuyển bài kế tiếp
-        const audioEl = globalAudioRef.current;
-        const handleEnded = () => {
-            if (currentAudioIndex < audioPlaylist.length - 1) {
-                setCurrentAudioIndex(prev => prev + 1);
-            }
-        };
-        audioEl.addEventListener('ended', handleEnded);
-        
-        audioEl.play().catch(e => { 
+        globalAudioRef.current.play().catch(e => { 
             console.error("Autoplay blocked:", e); 
             alert("Trình duyệt chặn phát âm thanh. Vui lòng bấm Bắt Đầu lại."); 
         });
-
-        // Dọn dẹp sự kiện
-        return () => {
-            audioEl.removeEventListener('ended', handleEnded);
-        };
     }
   };
 
   // MÀN HÌNH CHƯA BẮT ĐẦU THI
   if (!testStarted) {
     return (
-      <div className="flex flex-col h-screen items-center justify-center bg-[#f3f4f6] font-serif">
+      <div className="flex flex-col h-[100dvh] items-center justify-center bg-[#f3f4f6] font-serif">
         {isListening && audioPlaylist.length > 0 && <audio ref={globalAudioRef} src={audioPlaylist[0]} preload="auto" className="hidden" />}
         <div className="bg-white p-10 rounded-2xl shadow-xl text-center max-w-lg border border-gray-200 w-full font-sans">
           <div className="text-6xl mb-6">{isListening ? '🎧' : '📝'}</div>
@@ -917,7 +938,7 @@ const handleFinish = async () => {
 
   // MÀN HÌNH LÀM BÀI CHÍNH THỨC
   return (
-    <div className="flex flex-col h-screen bg-[#f3f4f6] font-serif text-gray-900 relative">
+    <div className="flex flex-col h-[100dvh] bg-[#f3f4f6] font-serif text-gray-900 relative">
       
       {/* CSS fix giao diện vỡ bảng, Bullet Point & Excel */}
       <style>{`
@@ -1100,7 +1121,17 @@ const handleFinish = async () => {
 
       {/* CHỈ PHÁT AUDIO NGẦM KHI ĐANG LÀM BÀI LISTENING VÀ KHÔNG PHẢI CHẾ ĐỘ REVIEW */}
       {isListening && !isReviewMode && audioPlaylist.length > 0 && ( 
-         <audio ref={globalAudioRef} src={audioPlaylist[currentAudioIndex]} preload="auto" className="hidden" /> 
+         <audio
+           ref={globalAudioRef}
+           src={audioPlaylist[currentAudioIndex]}
+           preload="auto"
+           className="hidden"
+           onEnded={() => {
+             if (currentAudioIndex < audioPlaylist.length - 1) {
+               setCurrentAudioIndex(prev => prev + 1);
+             }
+           }}
+         /> 
       )}
 
       {/* Menu Highlight */}
@@ -1139,15 +1170,15 @@ const handleFinish = async () => {
       )}
 
       {/* HEADER PAPER */}
-      <header className="bg-white border-b border-gray-300 px-6 py-3 flex justify-between items-center shadow-sm z-20 shrink-0 font-sans">
-        <div className="flex items-center gap-4">
+      <header className="relative bg-white border-b border-gray-300 px-3 sm:px-6 py-3 flex flex-wrap lg:flex-nowrap justify-between items-center gap-2 sm:gap-4 shadow-sm z-20 shrink-0 font-sans">
+        <div className="flex items-center gap-2 sm:gap-4 min-w-0">
           <button onClick={onBack} className="text-gray-600 hover:bg-gray-100 text-sm px-3 py-1.5 rounded-lg font-bold border border-gray-300 transition shrink-0">⬅ Thoát</button>
-          <div className="font-bold text-lg text-gray-800 border-l border-gray-300 pl-4 truncate max-w-[200px] md:max-w-md">{isReviewMode ? `[CHỮA BÀI] ${safeTestData?.title || basicInfo.title}` : (safeTestData?.title || basicInfo.title)}</div>
+          <div className="font-bold text-base sm:text-lg text-gray-800 border-l border-gray-300 pl-3 sm:pl-4 truncate max-w-[180px] sm:max-w-xs md:max-w-md">{isReviewMode ? `[CHỮA BÀI] ${safeTestData?.title || basicInfo.title}` : (safeTestData?.title || basicInfo.title)}</div>
         </div>
 
         {/* THIẾT KẾ LẠI HEADER CHO LISTENING */}
         {isListening && !isReviewMode && (
-          <div className="flex-1 max-w-lg mx-8 flex items-center justify-center">
+          <div className="flex-1 max-w-lg mx-2 sm:mx-8 flex items-center justify-center">
              <div className="flex items-center gap-3 bg-gray-100 px-4 py-1.5 rounded-full border border-gray-200">
                 <span className="text-lg" title="Chỉnh âm lượng">🔊</span>
                 <input type="range" min="0" max="1" step="0.05" defaultValue="1" onChange={(e) => { if(globalAudioRef.current) globalAudioRef.current.volume = parseFloat(e.target.value) }} className="w-32 accent-blue-500 cursor-pointer" />
@@ -1156,7 +1187,7 @@ const handleFinish = async () => {
         )}
 
         {isReviewMode && (
-          <div className="absolute left-1/2 -translate-x-1/2 flex items-center gap-4">
+          <div className="lg:absolute lg:left-1/2 lg:-translate-x-1/2 flex items-center gap-2 sm:gap-4 order-last lg:order-none w-full lg:w-auto justify-center">
              {/* 🚀 NÚT GỌI GIA SƯ XỊN SÒ Ở GIỮA HEADER */}
              <button 
                 onClick={() => {
@@ -1170,17 +1201,17 @@ const handleFinish = async () => {
                   sessionStorage.setItem('tony_auto_start', 'true');
                   window.dispatchEvent(new CustomEvent('tony-navigate', { detail: 'live-test' }));
                 }}
-                className="bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-1.5 rounded-full text-[13px] font-bold transition uppercase tracking-wider shadow flex items-center gap-2"
+                className="bg-emerald-600 hover:bg-emerald-500 text-white px-4 sm:px-5 py-1.5 rounded-full text-[12px] sm:text-[13px] font-bold transition uppercase tracking-wider shadow flex items-center gap-2 whitespace-nowrap"
              >
                  📞 Gọi Gia Sư AI
              </button>
           </div>
         )}
 
-        <div className="flex items-center gap-4 shrink-0">
-          {!isReviewMode && <button onClick={clearDraft} className="text-sm text-gray-500 hover:text-red-500 font-medium">Xóa nháp</button>}
-          {isReviewMode && <button onClick={resetTest} className="text-sm bg-gray-100 hover:bg-gray-200 px-3 py-1.5 rounded font-bold transition border border-gray-300">🔄 Làm Lại</button>}
-          <div className={`font-mono text-xl px-4 py-1 rounded-md shadow-inner tracking-wider font-bold ${isReviewMode ? 'bg-emerald-600 text-white' : (basicInfo?.category === 'exercise' ? 'bg-[#0ea5e9] text-white' : 'bg-gray-800 text-white')}`}>
+        <div className="flex items-center gap-2 sm:gap-4 shrink-0">
+          {!isReviewMode && <button onClick={clearDraft} className="text-sm text-gray-500 hover:text-red-500 font-medium whitespace-nowrap">Xóa nháp</button>}
+          {isReviewMode && <button onClick={resetTest} className="text-xs sm:text-sm bg-gray-100 hover:bg-gray-200 px-2.5 sm:px-3 py-1.5 rounded font-bold transition border border-gray-300 whitespace-nowrap">🔄 Làm Lại</button>}
+          <div className={`font-mono text-base sm:text-xl px-3 sm:px-4 py-1 rounded-md shadow-inner tracking-wider font-bold whitespace-nowrap ${isReviewMode ? 'bg-emerald-600 text-white' : (basicInfo?.category === 'exercise' ? 'bg-[#0ea5e9] text-white' : 'bg-gray-800 text-white')}`}>
               {isReviewMode ? `Band ${scoreResult.band}` : (basicInfo?.category === 'exercise' ? 'BÀI TẬP' : formatTime(timeLeft))}
           </div>
         </div>
@@ -2107,7 +2138,7 @@ const handleFinish = async () => {
         </div>
 
         <div className="ml-4 shrink-0 flex items-center gap-3 border-l border-gray-300 pl-4">
-          <button onClick={handleFinish} className={`font-bold text-sm px-8 py-2.5 rounded shadow-md transition ${isReviewMode ? 'bg-emerald-600 hover:bg-emerald-500 text-white' : 'bg-blue-600 hover:bg-blue-500 text-white'}`}>
+          <button onClick={() => handleFinish(false)} className={`font-bold text-sm px-8 py-2.5 rounded shadow-md transition ${isReviewMode ? 'bg-emerald-600 hover:bg-emerald-500 text-white' : 'bg-blue-600 hover:bg-blue-500 text-white'}`}>
             {isReviewMode ? 'Thoát' : 'Nộp Bài Thi'}
           </button>
         </div>

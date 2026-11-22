@@ -256,7 +256,14 @@ export default function LiveSpeakingTest({
   const [isChatBubbleVisible, setIsChatBubbleVisible] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [splitWidthVw, setSplitWidthVw] = useState(50);
+  const [isDesktop, setIsDesktop] = useState(() => typeof window !== 'undefined' ? window.innerWidth >= 768 : true);
   const isSplitDraggingRef = useRef(false);
+
+  useEffect(() => {
+    const onResize = () => setIsDesktop(window.innerWidth >= 768);
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, []);
 
   // 🧭 Chế độ đàm thoại & chủ đề (Khai báo sớm để useMemo & functions dùng an toàn, không bị TDZ)
   const currentMode = (typeof window !== 'undefined' ? sessionStorage.getItem('tony_live_mode') : null) || 'EXAMINER';
@@ -282,6 +289,7 @@ export default function LiveSpeakingTest({
   const isRecordingRef = useRef<boolean>(false); 
   const interruptedRef = useRef<boolean>(false); // Flag: đang trong trạng thái ngắt lời AI
   const recordingTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null); // Auto-stop sau 30s
+  const typingIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null); // Cleanup typing effect
   const transcriptRef = useRef<string>('');
   const callStartTimeRef = useRef<number>(0);
   const isTextOnlyModeRef = useRef<boolean>(false); 
@@ -310,6 +318,14 @@ export default function LiveSpeakingTest({
   // 🚀 DỌN DẸP TOÀN BỘ KHI COMPONENT BỊ UNMOUNT (ĐÓNG HẲN WIDGET TRÁNH TRÔI LỆNH)
   useEffect(() => {
       return () => {
+          if (recordingTimeoutRef.current) {
+              clearTimeout(recordingTimeoutRef.current);
+              recordingTimeoutRef.current = null;
+          }
+          if (typingIntervalRef.current) {
+              clearInterval(typingIntervalRef.current);
+              typingIntervalRef.current = null;
+          }
           if (stopCallRef.current) {
               stopCallRef.current();
           }
@@ -387,13 +403,20 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
           // 🚀 HIỆU ỨNG VIẾT PHẤN LÊN BẢNG (TYPING EFFECT)
           let currentIndex = 0;
           setLiveTranscript('');
+          if (typingIntervalRef.current) {
+              clearInterval(typingIntervalRef.current);
+              typingIntervalRef.current = null;
+          }
           
-          const typingInterval = setInterval(() => {
+          typingIntervalRef.current = setInterval(() => {
               setLiveTranscript(prev => prev + resultText.charAt(currentIndex));
               currentIndex++;
               
               if (currentIndex >= resultText.length) {
-                  clearInterval(typingInterval);
+                  if (typingIntervalRef.current) {
+                      clearInterval(typingIntervalRef.current);
+                      typingIntervalRef.current = null;
+                  }
                   setMessages(prev => [...prev, { role: 'model', text: resultText }]);
                   setLiveTranscript('');
               }
@@ -1014,11 +1037,18 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
               // 🚀 Lại kích hoạt hiệu ứng viết phấn
               let currentIndex = 0;
               setLiveTranscript('');
-              const typingInterval = setInterval(() => {
+              if (typingIntervalRef.current) {
+                  clearInterval(typingIntervalRef.current);
+                  typingIntervalRef.current = null;
+              }
+              typingIntervalRef.current = setInterval(() => {
                   setLiveTranscript(prev => prev + resultText.charAt(currentIndex));
                   currentIndex++;
                   if (currentIndex >= resultText.length) {
-                      clearInterval(typingInterval);
+                      if (typingIntervalRef.current) {
+                          clearInterval(typingIntervalRef.current);
+                          typingIntervalRef.current = null;
+                      }
                       setMessages(prev => [...prev, { role: 'model', text: resultText }]);
                       setLiveTranscript('');
                   }
@@ -1049,7 +1079,7 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
   const handleToggleRecording = () => {
       if (isSpeaking) stopAIAudio(); 
       
-      if (isRecording) {
+      if (isRecordingRef.current) {
           // ====== DỪNG GHI ÂM ======
           isMicOpenRef.current = false;
           isRecordingRef.current = false;
@@ -1136,7 +1166,12 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
               
               // ⏱️ AUTO-TIMEOUT 30s: tự động dừng ghi âm nếu user quên thả nút
               // Tránh tốn token audio khi im lặng
+              if (recordingTimeoutRef.current) {
+                  clearTimeout(recordingTimeoutRef.current);
+                  recordingTimeoutRef.current = null;
+              }
               recordingTimeoutRef.current = setTimeout(() => {
+                  recordingTimeoutRef.current = null;
                   if (isRecordingRef.current) {
                       console.log('⏱️ Auto-stop recording sau 30s');
                       handleToggleRecording(); // Tự động bấm "Xong"
@@ -1149,6 +1184,14 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
   };
 
   const stopCall = () => {
+    if (recordingTimeoutRef.current) {
+        clearTimeout(recordingTimeoutRef.current);
+        recordingTimeoutRef.current = null;
+    }
+    if (typingIntervalRef.current) {
+        clearInterval(typingIntervalRef.current);
+        typingIntervalRef.current = null;
+    }
     if (typeof window !== 'undefined') {
         (window as any).tonyPendingImage = null;
     }
@@ -1374,7 +1417,7 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
           {status === 'IDLE' && <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[99998]" onClick={onMinimize} />}
           <div 
             className="fixed top-0 right-0 h-[100dvh] w-full bg-[#1a1c21] shadow-[-30px_0_60px_rgba(0,0,0,0.8)] z-[100000] flex flex-row animate-in slide-in-from-right duration-500"
-            style={{ width: `${splitWidthVw}vw` }}
+            style={{ width: isDesktop ? `${splitWidthVw}vw` : '100%' }}
           >
             {/* Drag handle */}
             <div 

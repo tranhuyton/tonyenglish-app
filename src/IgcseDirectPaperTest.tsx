@@ -4,7 +4,13 @@ import { Document, Page, pdfjs } from 'react-pdf';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
 
-pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
+pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
+
+const escapeHtml = (str: string): string =>
+  String(str || '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
 
 // LaTeX converters
 const latexToText = (text: string): string => {
@@ -42,9 +48,9 @@ const latexToText = (text: string): string => {
 
 const renderLatex = (text: string): string => {
   if (!text) return '';
+  let r = escapeHtml(text);
   const hasLatex = text.includes('\\') || /[\^_]\{/.test(text) || /[\^_]\(/.test(text);
-  if (!hasLatex) return text;
-  let r = text;
+  if (!hasLatex) return r;
   const m: [RegExp, string][] = [
     [/\\alpha/g,'α'],[/\\beta/g,'β'],[/\\gamma/g,'γ'],[/\\delta/g,'δ'],[/\\theta/g,'θ'],
     [/\\lambda/g,'λ'],[/\\mu/g,'μ'],[/\\pi/g,'π'],[/\\sigma/g,'σ'],[/\\omega/g,'ω'],
@@ -73,11 +79,13 @@ const renderLatex = (text: string): string => {
   return r;
 };
 
-const DrawingPage = ({ pageNum, drawMode, penColor, scale }: any) => {
+const DrawingPage = ({ pageNum, drawMode, penColor, scale, onStrokeDrawn }: any) => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
-    const [isDrawing, setIsDrawing] = useState(false);
-    const [shapeStart, setShapeStart] = useState<{x:number,y:number}|null>(null);
+    const isDrawingRef = useRef(false);
+    const shapeStartRef = useRef<{x:number,y:number}|null>(null);
     const canvasSnapshot = useRef<ImageData|null>(null);
+    const onStrokeDrawnRef = useRef(onStrokeDrawn);
+    onStrokeDrawnRef.current = onStrokeDrawn;
     const [drawText, setDrawText] = useState('');
     const [textPos, setTextPos] = useState<{x:number,y:number}|null>(null);
 
@@ -124,7 +132,8 @@ const DrawingPage = ({ pageNum, drawMode, penColor, scale }: any) => {
 
     useEffect(() => {
         // trigger resize on scale change
-        setTimeout(resizeCanvas, 200);
+        const timer = window.setTimeout(resizeCanvas, 200);
+        return () => window.clearTimeout(timer);
     }, [scale]);
 
     useEffect(() => {
@@ -149,9 +158,9 @@ const DrawingPage = ({ pageNum, drawMode, penColor, scale }: any) => {
                 setDrawText('');
                 return;
             }
-            setIsDrawing(true);
+            isDrawingRef.current = true;
             if (['line','rect','circle','triangle'].includes(drawMode)) {
-                setShapeStart({x, y});
+                shapeStartRef.current = {x, y};
                 canvasSnapshot.current = ctx.getImageData(0, 0, cv.width, cv.height);
             } else {
                 ctx.beginPath(); ctx.moveTo(x, y);
@@ -163,7 +172,7 @@ const DrawingPage = ({ pageNum, drawMode, penColor, scale }: any) => {
             // Ngăn cuộn trang
             e.preventDefault();
             
-            if (!isDrawing) return;
+            if (!isDrawingRef.current) return;
             const ctx = cv.getContext('2d'); if (!ctx) return;
             const rect = cv.getBoundingClientRect();
             const scaleX = cv.width / rect.width;
@@ -172,29 +181,32 @@ const DrawingPage = ({ pageNum, drawMode, penColor, scale }: any) => {
             const y = (e.clientY - rect.top) * scaleY;
             
             const dpr = window.devicePixelRatio || 1;
-            if (['line','rect','circle','triangle'].includes(drawMode) && shapeStart && canvasSnapshot.current) {
+            const start = shapeStartRef.current;
+            if (['line','rect','circle','triangle'].includes(drawMode) && start && canvasSnapshot.current) {
                 ctx.putImageData(canvasSnapshot.current, 0, 0);
                 ctx.strokeStyle = penColor; ctx.lineWidth = 2 * scale * dpr; ctx.lineCap = 'round';
                 ctx.globalCompositeOperation = 'source-over';
                 ctx.beginPath();
-                if (drawMode === 'line') { ctx.moveTo(shapeStart.x, shapeStart.y); ctx.lineTo(x, y); }
-                else if (drawMode === 'rect') { ctx.rect(shapeStart.x, shapeStart.y, x - shapeStart.x, y - shapeStart.y); }
-                else if (drawMode === 'circle') { const rx = Math.abs(x-shapeStart.x)/2, ry = Math.abs(y-shapeStart.y)/2; ctx.ellipse(shapeStart.x+(x-shapeStart.x)/2, shapeStart.y+(y-shapeStart.y)/2, rx, ry, 0, 0, Math.PI*2); }
-                else if (drawMode === 'triangle') { ctx.moveTo(shapeStart.x+(x-shapeStart.x)/2, shapeStart.y); ctx.lineTo(x, y); ctx.lineTo(shapeStart.x, y); ctx.closePath(); }
+                if (drawMode === 'line') { ctx.moveTo(start.x, start.y); ctx.lineTo(x, y); }
+                else if (drawMode === 'rect') { ctx.rect(start.x, start.y, x - start.x, y - start.y); }
+                else if (drawMode === 'circle') { const rx = Math.abs(x-start.x)/2, ry = Math.abs(y-start.y)/2; ctx.ellipse(start.x+(x-start.x)/2, start.y+(y-start.y)/2, rx, ry, 0, 0, Math.PI*2); }
+                else if (drawMode === 'triangle') { ctx.moveTo(start.x+(x-start.x)/2, start.y); ctx.lineTo(x, y); ctx.lineTo(start.x, y); ctx.closePath(); }
                 ctx.stroke();
+                onStrokeDrawnRef.current?.();
             } else if (drawMode === 'pen' || drawMode === 'eraser') {
                 ctx.strokeStyle = drawMode === 'eraser' ? 'rgba(0,0,0,1)' : penColor;
                 ctx.lineWidth = drawMode === 'eraser' ? 20 * scale * dpr : 2 * scale * dpr;
                 ctx.lineCap = 'round';
                 ctx.globalCompositeOperation = drawMode === 'eraser' ? 'destination-out' : 'source-over';
                 ctx.lineTo(x, y); ctx.stroke();
+                onStrokeDrawnRef.current?.();
             }
         };
 
         const handlePointerUp = (e: PointerEvent) => {
             if (!drawMode) return;
             e.preventDefault();
-            setIsDrawing(false); setShapeStart(null); canvasSnapshot.current = null;
+            isDrawingRef.current = false; shapeStartRef.current = null; canvasSnapshot.current = null;
         };
 
         const handleContextMenu = (e: Event) => {
@@ -230,9 +242,7 @@ const DrawingPage = ({ pageNum, drawMode, penColor, scale }: any) => {
             cv.removeEventListener('touchstart', handleTouch);
             cv.removeEventListener('touchmove', handleTouch);
         };
-    }, [drawMode, isDrawing, penColor, scale, shapeStart, textPos]);
-
-    const stopDrawing = () => { setIsDrawing(false); setShapeStart(null); canvasSnapshot.current = null; };
+    }, [drawMode, penColor, scale]);
 
     return (
         <div 
@@ -267,6 +277,7 @@ const DrawingPage = ({ pageNum, drawMode, penColor, scale }: any) => {
                                 ctx.fillStyle = penColor; 
                                 // Phải nhân tọa độ CSS với DPR để vẽ đúng vị trí thật trên canvas
                                 ctx.fillText(drawText, textPos.x * dpr, (textPos.y + 16 * scale) * dpr); 
+                                onStrokeDrawnRef.current?.();
                             }
                             setTextPos(null); setDrawText('');
                         } else if (e.key === 'Escape') { setTextPos(null); setDrawText(''); }
@@ -323,12 +334,26 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
     if (onBack) onBack();
   };
   const [numPages, setNumPages] = useState<number | null>(null);
+  const [pdfError, setPdfError] = useState<string | null>(null);
+  const [pdfReloadKey, setPdfReloadKey] = useState(0);
   const [zoomLevel, setZoomLevel] = useState<number>(1.2);
   
   const [timeLeft, setTimeLeft] = useState(7200); 
   const isFinishingRef = useRef(false);
+  const hasUnsavedDrawingsRef = useRef(false);
 
   const [isRightPanelOpen, setIsRightPanelOpen] = useState(initIsReview);
+
+  useEffect(() => {
+    const handleBeforeUnload = (e: BeforeUnloadEvent) => {
+      if (!isReviewMode && !gradeResult && hasUnsavedDrawingsRef.current) {
+        e.preventDefault();
+        e.returnValue = '';
+      }
+    };
+    window.addEventListener('beforeunload', handleBeforeUnload);
+    return () => window.removeEventListener('beforeunload', handleBeforeUnload);
+  }, [isReviewMode, gradeResult]);
 
   const getSavedEndTime = (testId: string) => {
     if (!testId) return null;
@@ -371,23 +396,31 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
   };
 
   const handleDocumentLoadSuccess = ({ numPages }: { numPages: number }) => {
+      setPdfError(null);
       setNumPages(numPages);
   };
 
   const handleZoomIn = () => setZoomLevel(prev => Math.min(prev + 0.2, 3.0));
   const handleZoomOut = () => setZoomLevel(prev => Math.max(prev - 0.2, 0.6));
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (forceAutoSubmit: any = false) => {
+    const isForced = forceAutoSubmit === true;
+    if (isFinishingRef.current || isSubmitting) return;
     const isExercise = testData?.content_json?.basicInfo?.category === 'exercise';
-    if (!isExercise && timeLeft > 0 && !window.confirm("Bạn có chắc chắn muốn nộp bài thi? AI sẽ phân tích hình ảnh mất khoảng 10-20 giây.")) { return; }
-    if (isExercise && !window.confirm("Bạn có chắc chắn muốn nộp bài?")) { return; }
+    if (!isForced) {
+      if (!isExercise && timeLeft > 0 && !window.confirm("Bạn có chắc chắn muốn nộp bài thi? AI sẽ phân tích hình ảnh mất khoảng 10-20 giây.")) { return; }
+      if (isExercise && !window.confirm("Bạn có chắc chắn muốn nộp bài?")) { return; }
+    }
+
+    const rawTime = testData.json_config?.timeLimit || testData.timeLimit || testData.time_limit || 120;
+    const initialSeconds = (parseInt(rawTime) || 120) * 60;
+    const savedEnd = testData?.id ? getSavedEndTime(testData.id) : null;
+    const computedTimeSpent = savedEnd
+      ? Math.max(0, initialSeconds - Math.max(0, Math.floor((savedEnd - Date.now()) / 1000)))
+      : Math.max(0, initialSeconds - timeLeft);
 
     setIsSubmitting(true);
     isFinishingRef.current = true;
-    
-    if (testData?.id) {
-       localStorage.removeItem(`igcse_endtime_${testData.id}`);
-    }
 
     try {
       const imageAnswers: { questionId: string, base64: string }[] = [];
@@ -492,18 +525,15 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
       setIsReviewMode(true);
       setIsRightPanelOpen(true);
       setDrawMode(null);
+      hasUnsavedDrawingsRef.current = false;
 
       try {
         const { data: { user } } = await supabase.auth.getUser();
         if (user) {
-          const rawTime = testData.json_config?.timeLimit || testData.timeLimit || testData.time_limit || 120;
-          const initialSeconds = parseInt(rawTime) * 60;
-          const timeSpentSecs = initialSeconds - timeLeft;
-          
           await supabase.from('test_results').insert([{
             user_id: user.id, course_id: testData.course_id, test_title: testData.title || "IGCSE Direct Paper",
             test_type: 'IGCSE-Science', score: gradedData.total_student_score, total_score: gradedData.total_max_score,
-            time_spent: timeSpentSecs > 0 ? timeSpentSecs : 0,
+            time_spent: computedTimeSpent,
             details: { test_id: testData.id, userAnswers: {}, aiFeedback: gradedData }
           }]);
 
@@ -522,7 +552,12 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
         }
       } catch (dbError) { console.error("DB save error:", dbError); }
 
+      if (testData?.id) {
+         localStorage.removeItem(`igcse_endtime_${testData.id}`);
+      }
+
     } catch (err: any) {
+      isFinishingRef.current = false;
       if (err.message && err.message.includes("Unexpected end of JSON input")) {
           alert("❌ Không thể nộp bài do kết nối gián đoạn hoặc file ảnh quá nặng. Vui lòng thử nộp lại.");
       } else {
@@ -533,6 +568,9 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
     }
   };
 
+  const handleSubmitRef = useRef(handleSubmit);
+  handleSubmitRef.current = handleSubmit;
+
   useEffect(() => {
     if (isLoading || !testData || gradeResult || isFinishingRef.current || isReviewMode) return;
     if (testData.content_json?.basicInfo?.category === 'exercise') return;
@@ -541,8 +579,18 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
         if (currentEndTime) {
             const remaining = Math.max(0, Math.floor((currentEndTime - Date.now()) / 1000));
             setTimeLeft(remaining);
-            if (remaining <= 0) { clearInterval(timer); alert("⏰ Hết giờ làm bài!"); handleSubmit(); }
-        } else { setTimeLeft(prev => Math.max(0, prev - 1)); }
+            if (remaining <= 0) { clearInterval(timer); alert("⏰ Hết giờ làm bài!"); handleSubmitRef.current(true); }
+        } else {
+            setTimeLeft(prev => {
+                if (prev <= 1) {
+                    clearInterval(timer);
+                    alert("⏰ Hết giờ làm bài!");
+                    handleSubmitRef.current(true);
+                    return 0;
+                }
+                return prev - 1;
+            });
+        }
     }, 1000);
     return () => clearInterval(timer);
   }, [isLoading, testData, gradeResult, isReviewMode]);
@@ -560,14 +608,14 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
   };
 
   if (isLoading) return (
-    <div className="h-screen w-screen flex flex-col items-center justify-center bg-[#525659] text-white font-bold">
+    <div className="h-[100dvh] w-screen flex flex-col items-center justify-center bg-[#525659] text-white font-bold">
       <div className="animate-spin text-4xl mb-4">⏳</div>
       <p>Đang tải đề thi IGCSE (Direct)...</p>
     </div>
   );
 
   if (!testData || (!isReviewMode && (!testData.json_config || !testData.json_config.questions))) return (
-    <div className="h-screen w-screen flex flex-col items-center justify-center bg-[#525659] text-white font-bold gap-4">
+    <div className="h-[100dvh] w-screen flex flex-col items-center justify-center bg-[#525659] text-white font-bold gap-4">
       <p>⚠️ Chưa có cấu hình đề thi trong hệ thống.</p>
       <button onClick={onBack} className="bg-[#1e88e5] px-6 py-2 rounded hover:bg-blue-700 transition-colors">Quay lại</button>
     </div>
@@ -584,7 +632,7 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
 
   return (
     <div 
-      className="h-screen w-screen flex flex-col bg-[#e5e7eb] font-sans text-slate-900 overflow-hidden select-none"
+      className="h-[100dvh] w-screen flex flex-col bg-[#e5e7eb] font-sans text-slate-900 overflow-hidden select-none"
       style={{ WebkitUserSelect: 'none', WebkitTouchCallout: 'none' } as React.CSSProperties}
     >
       {/* Header */}
@@ -605,7 +653,7 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
              <button type="button" onClick={() => { if (!document.fullscreenElement) document.documentElement.requestFullscreen().catch(()=>{}); else document.exitFullscreen(); }} className="hidden sm:inline-flex text-slate-500 hover:text-[#0a5482] transition-colors text-lg px-1 cursor-pointer" title={isFullscreen ? 'Thoát toàn màn hình' : 'Toàn màn hình'}>
                {isFullscreen ? '🔲' : '⛶'}
              </button>
-             <button type="button" onClick={handleSubmit} disabled={isSubmitting || !numPages} className="bg-[#0a5482] hover:bg-[#084266] text-white font-bold text-xs sm:text-sm px-4 sm:px-6 py-1.5 rounded-lg transition-colors active:scale-95 disabled:opacity-50 whitespace-nowrap shadow-sm cursor-pointer">
+             <button type="button" onClick={() => handleSubmit(false)} disabled={isSubmitting || !numPages} className="bg-[#0a5482] hover:bg-[#084266] text-white font-bold text-xs sm:text-sm px-4 sm:px-6 py-1.5 rounded-lg transition-colors active:scale-95 disabled:opacity-50 whitespace-nowrap shadow-sm cursor-pointer">
                {isSubmitting ? 'Đang chấm...' : 'Nộp Bài'}
              </button>
           </div>
@@ -657,6 +705,7 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
                                 const ctx = (c as HTMLCanvasElement).getContext('2d');
                                 if (ctx) ctx.clearRect(0, 0, (c as HTMLCanvasElement).width, (c as HTMLCanvasElement).height);
                             });
+                            hasUnsavedDrawingsRef.current = false;
                         }
                     }} className="px-3 py-1.5 rounded text-[12px] text-slate-400 hover:text-white hover:bg-red-500 font-bold bg-slate-800 whitespace-nowrap" title="Xóa tất cả">🗑️ Xóa hết</button>
                   </>
@@ -677,10 +726,35 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
                   <p className="font-bold">Không có file PDF đề thi.</p>
                   <p className="text-sm mt-2">Vui lòng kiểm tra lại cấu hình bài giảng.</p>
                 </div>
+             ) : pdfError ? (
+                <div className="flex flex-col items-center justify-center h-full text-white p-8 text-center bg-[#525659] gap-4">
+                  <span className="text-5xl">⚠️</span>
+                  <p className="font-bold text-lg">Không thể tải file PDF đề thi</p>
+                  <p className="text-sm text-slate-300 max-w-md">{pdfError}</p>
+                  <div className="flex flex-wrap items-center justify-center gap-3 mt-2">
+                    <button
+                      type="button"
+                      onClick={() => { setPdfError(null); setPdfReloadKey(k => k + 1); }}
+                      className="px-4 py-2 rounded-lg bg-[#0a5482] hover:bg-[#084266] text-white text-sm font-bold transition"
+                    >
+                      🔄 Thử tải lại
+                    </button>
+                    <a
+                      href={pdfUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-2 rounded-lg bg-white/15 hover:bg-white/25 text-white text-sm font-bold transition"
+                    >
+                      ↗ Mở PDF trong tab mới
+                    </a>
+                  </div>
+                </div>
              ) : (
                 <Document 
+                    key={pdfReloadKey}
                     file={pdfUrl} 
                     onLoadSuccess={handleDocumentLoadSuccess} 
+                    onLoadError={(err: any) => setPdfError(err?.message || 'Lỗi kết nối hoặc định dạng PDF không hợp lệ.')}
                     loading={<div className="text-white text-center py-20 animate-pulse">Đang tải file PDF...</div>}
                 >
                     {Array.from(new Array(numPages || 0), (el, index) => (
@@ -690,6 +764,7 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
                             drawMode={drawMode} 
                             penColor={penColor}
                             scale={zoomLevel}
+                            onStrokeDrawn={() => { hasUnsavedDrawingsRef.current = true; }}
                         />
                     ))}
                 </Document>
@@ -715,7 +790,7 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
                             {gradeResult.total_student_score} <span className="text-2xl text-slate-400">/ {gradeResult.total_max_score}</span>
                         </div>
                         <div className="w-full bg-slate-200 rounded-full h-2.5 mb-3">
-                          <div className="bg-gradient-to-r from-[#0a5482] via-[#2ab4e8] to-emerald-400 h-2.5 rounded-full transition-all" style={{ width: `${Math.min(100, (gradeResult.total_student_score / gradeResult.total_max_score) * 100)}%` }}></div>
+                          <div className="bg-gradient-to-r from-[#0a5482] via-[#2ab4e8] to-emerald-400 h-2.5 rounded-full transition-all" style={{ width: `${gradeResult.total_max_score > 0 ? Math.min(100, (gradeResult.total_student_score / gradeResult.total_max_score) * 100) : 0}%` }}></div>
                         </div>
                         <p className="text-[13px] text-slate-600 bg-slate-50 p-3 rounded-xl italic text-left">{gradeResult.general_feedback}</p>
                     </div>
@@ -743,7 +818,7 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
                                                 
                                                 <div className="text-[13px] text-slate-700 bg-white/70 p-2.5 rounded-lg border border-slate-200/50">
                                                     <div className="font-semibold text-slate-500 mb-1 text-[11px] uppercase tracking-wider">AI Nhận xét:</div>
-                                                    <div dangerouslySetInnerHTML={{ __html: String(feedbackData.examiner_comment || feedbackData.feedback || '').replace(/\\n|\n/g, '<br/>') }} />{feedbackData.correct_answer && (<div className="mt-2 pt-2 border-t border-slate-200/70 text-[12.5px]"><span className="font-bold text-slate-500 uppercase text-[10px] tracking-widest block mb-0.5">Đáp án chuẩn (Cambridge MS):</span><span className="font-semibold text-emerald-700" dangerouslySetInnerHTML={{ __html: renderLatex(String(feedbackData.correct_answer)) }} /></div>)}
+                                                    <div dangerouslySetInnerHTML={{ __html: escapeHtml(String(feedbackData.examiner_comment || feedbackData.feedback || '')).replace(/\\n|\n/g, '<br/>') }} />{feedbackData.correct_answer && (<div className="mt-2 pt-2 border-t border-slate-200/70 text-[12.5px]"><span className="font-bold text-slate-500 uppercase text-[10px] tracking-widest block mb-0.5">Đáp án chuẩn (Cambridge MS):</span><span className="font-semibold text-emerald-700" dangerouslySetInnerHTML={{ __html: renderLatex(String(feedbackData.correct_answer)) }} /></div>)}
                                                 </div>
 
                                                 {!isCorrect && (

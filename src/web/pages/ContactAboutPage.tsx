@@ -85,8 +85,23 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
   const handleContactSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setContactError('');
-    if (!contactName.trim() || !contactPhone.trim() || !contactEmail.trim() || !contactMessage.trim()) {
+    const submittedName = contactName.trim();
+    const submittedPhone = contactPhone.trim();
+    const submittedEmail = contactEmail.trim();
+    const submittedMessage = contactMessage.trim();
+
+    if (!submittedName || !submittedPhone || !submittedEmail || !submittedMessage) {
       setContactError(t('Please complete information on the items marked with') + ' (*)');
+      return;
+    }
+
+    const strippedPhone = submittedPhone.replace(/[\s.\-]/g, '');
+    if (!/^\d{9,15}$/.test(strippedPhone)) {
+      setContactError(
+        lang === 'vi'
+          ? 'Số điện thoại không hợp lệ! Vui lòng nhập từ 9–15 chữ số (ví dụ: 0935 058 688).'
+          : 'Invalid phone number! Please enter 9–15 digits.'
+      );
       return;
     }
 
@@ -100,10 +115,10 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
 
     const { error } = await supabase.from('te_contact').insert({
       contact_id: nextId,
-      contact_name: contactName.trim(),
-      contact_phone: contactPhone.trim(),
-      contact_email: contactEmail.trim(),
-      contact_message: contactMessage.trim(),
+      contact_name: submittedName,
+      contact_phone: strippedPhone,
+      contact_email: submittedEmail,
+      contact_message: submittedMessage,
       contact_title: 'Liên hệ từ website',
       contact_created_at: Math.floor(Date.now() / 1000),
       contact_status: 1,
@@ -115,6 +130,10 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
       setContactError(error.message);
     } else {
       setContactSubmitted(true);
+      setContactName('');
+      setContactPhone('');
+      setContactEmail('');
+      setContactMessage('');
       try {
         fetch('/api/notify-lead', {
           method: 'POST',
@@ -122,11 +141,11 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
           keepalive: true,
           body: JSON.stringify({
             contactId: nextId,
-            name: contactName.trim(),
-            phone: contactPhone.trim(),
-            email: contactEmail.trim(),
+            name: submittedName,
+            phone: strippedPhone,
+            email: submittedEmail,
             course: 'Liên hệ từ trang Liên hệ',
-            note: contactMessage.trim(),
+            note: submittedMessage,
             pageUrl: typeof window !== 'undefined' ? window.location.href : 'https://tonyenglish.vn/contact',
             sourceType: 'ContactPage',
           }),
@@ -335,7 +354,7 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
                         </p>
                       </div>
                       <Link
-                        to="/courses/english-communication 1"
+                        to="/courses/english-communication%201"
                         className="text-sm font-black text-[#0a5482] hover:text-[#2ab4e8] inline-flex items-center gap-1.5"
                       >
                         <span>{lang === 'vi' ? 'Xem đề cương khóa học' : 'View course syllabus'}</span>
@@ -469,7 +488,7 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
                     </p>
 
                     {contactSubmitted ? (
-                      <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-6 text-center space-y-2">
+                      <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-6 text-center space-y-3">
                         <div className="text-2xl">✅</div>
                         <div className="font-extrabold text-emerald-800 text-base">
                           {lang === 'vi' ? 'Đã gửi tin nhắn thành công!' : 'Message sent successfully!'}
@@ -479,6 +498,16 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
                             ? 'Cảm ơn bạn đã gửi lời nhắn. Thầy Tony sẽ trực tiếp phản hồi sớm nhất.'
                             : 'Thank you for reaching out. Mr. Tony will respond shortly.'}
                         </p>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setContactSubmitted(false);
+                            setContactError('');
+                          }}
+                          className="inline-flex items-center justify-center px-4 py-2 rounded-xl bg-white hover:bg-emerald-100 text-emerald-800 border border-emerald-300 font-bold text-xs sm:text-sm transition cursor-pointer"
+                        >
+                          {lang === 'vi' ? '✉️ Gửi tin nhắn mới' : '✉️ Send another message'}
+                        </button>
                       </div>
                     ) : (
                       <form onSubmit={handleContactSubmit} className="space-y-4">

@@ -57,6 +57,18 @@ interface AppContextType {
   logoutUser: () => void;
 }
 
+const DEFAULT_OPTIONS: Record<string, string> = {
+  company_address: 'R2B 2219, Royal City, 72 Nguyễn Trãi, Thanh Xuân, Hà Nội',
+  company_tel: '+84 93 505 8688',
+  company_phone: '0935 058 688',
+  company_email: 'tranhuyton@gmail.com',
+};
+
+function sanitizeTeUser(u: TeUser): TeUser {
+  const { user_pass: _pass, user_salt: _salt, ...safeUser } = u;
+  return safeUser as TeUser;
+}
+
 const AppContext = createContext<AppContextType | null>(null);
 
 export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -66,7 +78,14 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   const [user, setUserState] = useState<TeUser | null>(() => {
     try {
       const saved = localStorage.getItem('te_user');
-      return saved ? JSON.parse(saved) : null;
+      if (!saved) return null;
+      const parsed = JSON.parse(saved);
+      if (parsed && ('user_pass' in parsed || 'user_salt' in parsed)) {
+        const cleaned = sanitizeTeUser(parsed);
+        localStorage.setItem('te_user', JSON.stringify(cleaned));
+        return cleaned;
+      }
+      return parsed;
     } catch {
       return null;
     }
@@ -79,12 +98,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       return null;
     }
   });
-  const [options, setOptions] = useState<Record<string, string>>({
-    company_address: 'R2B 2219, Royal City, 72 Nguyễn Trãi, Thanh Xuân, Hà Nội',
-    company_tel: '+84 93 505 8688',
-    company_phone: '0935 058 688',
-    company_email: 'tranhuyton@gmail.com',
-  });
+  const [options, setOptions] = useState<Record<string, string>>(DEFAULT_OPTIONS);
   const [footerCourses, setFooterCourses] = useState<any[]>([]);
   const [footerNewsCates, setFooterNewsCates] = useState<any[]>([]);
   const [footerAboutCates, setFooterAboutCates] = useState<any[]>([]);
@@ -102,15 +116,21 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   };
 
   const setUser = (u: TeUser | null) => {
-    setUserState(u);
-    if (u) localStorage.setItem('te_user', JSON.stringify(u));
+    const safeUser = u ? sanitizeTeUser(u) : null;
+    setUserState(safeUser);
+    if (safeUser) localStorage.setItem('te_user', JSON.stringify(safeUser));
     else localStorage.removeItem('te_user');
   };
 
   const setAdmin = (a: TeAdmin | null) => {
-    setAdminState(a);
-    if (a) localStorage.setItem('te_admin', JSON.stringify(a));
-    else localStorage.removeItem('te_admin');
+    if (a) {
+      const { admin_pass: _pass, admin_salt: _salt, ...safeAdmin } = a;
+      setAdminState(safeAdmin as TeAdmin);
+      localStorage.setItem('te_admin', JSON.stringify(safeAdmin));
+    } else {
+      setAdminState(null);
+      localStorage.removeItem('te_admin');
+    }
   };
 
   const setSelectedCourseId = (id: number | null) => {
@@ -157,9 +177,11 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       if (optRes.data) {
         const map: Record<string, string> = {};
         optRes.data.forEach((row: any) => {
-          map[row.option_key] = row.option_value;
+          if (row.option_key && row.option_value !== null && row.option_value !== undefined && String(row.option_value).trim() !== '') {
+            map[row.option_key] = row.option_value;
+          }
         });
-        setOptions(map);
+        setOptions((prev) => ({ ...DEFAULT_OPTIONS, ...prev, ...map }));
       }
       if (courseRes.data) {
         setFooterCourses(
@@ -238,21 +260,37 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     if (!clean || !pass) {
       return { ok: false, error: t('Please enter imformation!') };
     }
-    // Find user by user_email or user_name
-    const { data: users } = await supabase
-      .from('te_user')
-      .select('*')
-      .eq('deleted', 0)
-      .or(`user_email.eq.${clean},user_name.eq.${clean}`)
-      .limit(5);
+    // Find user safely via parameterized queries (no PostgREST .or() string interpolation)
+    const [byEmailRes, byNameRes] = await Promise.all([
+      supabase
+        .from('te_user')
+        .select('*')
+        .eq('deleted', 0)
+        .eq('user_email', clean)
+        .limit(5),
+      supabase
+        .from('te_user')
+        .select('*')
+        .eq('deleted', 0)
+        .eq('user_name', clean)
+        .limit(5),
+    ]);
+    const seenIds = new Set<number>();
+    const users: any[] = [];
+    for (const row of [...(byEmailRes.data || []), ...(byNameRes.data || [])]) {
+      if (!seenIds.has(row.user_id)) {
+        seenIds.add(row.user_id);
+        users.push(row);
+      }
+    }
 
-    if (!users || users.length === 0) {
+    if (users.length === 0) {
       return { ok: false, error: lang === 'vi' ? 'Tài khoản hoặc email không tồn tại!' : 'User or Email does not exist!' };
     }
 
     for (const candidate of users) {
       const hashed = encryptLegacyPass(candidate.user_salt || '', pass);
-      if (candidate.user_pass === hashed || pass === 'tonyadmin2026') {
+      if (candidate.user_pass === hashed) {
         setUser(candidate);
         setLoginModalOpen(false);
         return { ok: true };

@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { supabase } from '../lib/supabase';
+import { supabase, isTonyEnglishAdmin } from '../lib/supabase';
 import { useApp } from '../context/AppContext';
-import { encryptLegacyPass } from '../lib/utils';
 
 interface TableConfig {
   key: string;
@@ -32,11 +31,10 @@ const ADMIN_TABLES: TableConfig[] = [
 ];
 
 export const AdminCpPage: React.FC = () => {
-  const { admin, setAdmin } = useApp();
+  const { setAdmin } = useApp();
 
-  const [adminUser, setAdminUser] = useState('admin');
-  const [adminPass, setAdminPass] = useState('');
-  const [loginErr, setLoginErr] = useState('');
+  const [authChecking, setAuthChecking] = useState(true);
+  const [isVerifiedAdmin, setIsVerifiedAdmin] = useState(false);
 
   const [activeTable, setActiveTable] = useState<TableConfig>(ADMIN_TABLES[0]);
   const [rows, setRows] = useState<any[]>([]);
@@ -52,9 +50,55 @@ export const AdminCpPage: React.FC = () => {
   const pageSize = 20;
 
   useEffect(() => {
-    if (!admin) return;
+    let active = true;
+    const verifyAdminSession = async () => {
+      try {
+        const {
+          data: { session },
+        } = await supabase.auth.getSession();
+        if (!session?.user) {
+          if (active) {
+            setIsVerifiedAdmin(false);
+            setAdmin(null);
+          }
+          return;
+        }
+        const { data: profile } = await supabase
+          .from('profiles')
+          .select('role, status')
+          .eq('id', session.user.id)
+          .maybeSingle();
+        if (!active) return;
+        const ok = isTonyEnglishAdmin(session.user, profile);
+        setIsVerifiedAdmin(ok);
+        if (!ok) setAdmin(null);
+      } catch {
+        if (active) {
+          setIsVerifiedAdmin(false);
+          setAdmin(null);
+        }
+      } finally {
+        if (active) setAuthChecking(false);
+      }
+    };
+
+    verifyAdminSession();
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange(() => {
+      verifyAdminSession();
+    });
+
+    return () => {
+      active = false;
+      subscription.unsubscribe();
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isVerifiedAdmin) return;
     loadTableData();
-  }, [admin, activeTable, page, search]);
+  }, [isVerifiedAdmin, activeTable, page, search]);
 
   async function loadTableData() {
     setLoading(true);
@@ -76,24 +120,10 @@ export const AdminCpPage: React.FC = () => {
     setLoading(false);
   }
 
-  const handleAdminLogin = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoginErr('');
-    const { data } = await supabase
-      .from('te_admin')
-      .select('*')
-      .eq('admin_name', adminUser.trim())
-      .limit(1);
-
-    if (data && data.length > 0) {
-      const adm = data[0];
-      const hashed = encryptLegacyPass(adm.admin_salt || '', adminPass);
-      if (adm.admin_pass === hashed || adminPass === 'admin123') {
-        setAdmin(adm);
-        return;
-      }
-    }
-    setLoginErr('Sai mật khẩu hoặc tài khoản! (Hoặc nhấn nút Truy cập nhanh bên dưới)');
+  const handleAdminLogout = async () => {
+    await supabase.auth.signOut();
+    setAdmin(null);
+    setIsVerifiedAdmin(false);
   };
 
   const handleStartCreate = () => {
@@ -142,7 +172,15 @@ export const AdminCpPage: React.FC = () => {
     }
   };
 
-  if (!admin) {
+  if (authChecking) {
+    return (
+      <div className="min-h-screen bg-[#0f172a] flex items-center justify-center p-4 font-sans text-slate-300 text-sm font-bold">
+        Đang xác thực quyền Quản trị viên...
+      </div>
+    );
+  }
+
+  if (!isVerifiedAdmin) {
     return (
       <div className="min-h-screen bg-[#0f172a] flex items-center justify-center p-4 font-sans">
         <div className="bg-white rounded-3xl w-full max-w-md shadow-2xl overflow-hidden">
@@ -158,49 +196,32 @@ export const AdminCpPage: React.FC = () => {
             </Link>
           </div>
 
-          <form onSubmit={handleAdminLogin} className="p-8 space-y-5">
-            <div>
-              <label className="block text-xs font-bold text-slate-500 uppercase mb-1.5">Tài khoản Admin</label>
-              <input
-                type="text"
-                value={adminUser}
-                onChange={(e) => setAdminUser(e.target.value)}
-                className="w-full border border-slate-300 rounded-xl px-4 py-3 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#2ab4e8]"
-              />
+          <div className="p-8 space-y-5 text-center">
+            <div className="w-14 h-14 rounded-2xl bg-sky-50 border border-sky-200 text-[#0a5482] flex items-center justify-center text-2xl mx-auto">
+              🔒
             </div>
-            <div>
-              <label className="block text-xs font-bold text-slate-500 uppercase mb-1.5">Mật khẩu</label>
-              <input
-                type="password"
-                value={adminPass}
-                onChange={(e) => setAdminPass(e.target.value)}
-                placeholder="••••••••"
-                className="w-full border border-slate-300 rounded-xl px-4 py-3 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#2ab4e8]"
-              />
+            <div className="space-y-2">
+              <h2 className="text-lg font-black text-slate-800">Khu vực yêu cầu quyền Quản trị viên</h2>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Trang quản trị đã được hợp nhất tại <code className="font-bold text-[#0a5482]">/admin</code> và yêu cầu
+                đăng nhập bằng tài khoản Admin TonyEnglish đã xác thực.
+              </p>
             </div>
-
-            {loginErr && (
-              <div className="p-3 bg-rose-50 border border-rose-200 rounded-xl text-rose-700 text-xs font-bold">
-                {loginErr}
-              </div>
-            )}
-
             <div className="space-y-2.5 pt-2">
-              <button
-                type="submit"
-                className="w-full bg-[#0a5482] hover:bg-[#084266] text-white font-black py-3.5 rounded-xl shadow-lg text-sm transition"
+              <a
+                href="/admin"
+                className="block w-full bg-[#0a5482] hover:bg-[#084266] text-white font-black py-3.5 rounded-xl shadow-lg text-sm transition"
               >
-                ĐĂNG NHẬP QUẢN TRỊ ➜
-              </button>
-              <button
-                type="button"
-                onClick={() => setAdmin({ admin_id: 1, admin_name: 'admin', admin_role: 'Administrator' })}
-                className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-black py-3 rounded-xl text-xs transition"
+                ĐẾN TRANG QUẢN TRỊ (/admin) ➜
+              </a>
+              <Link
+                to="/"
+                className="block w-full bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold py-3 rounded-xl text-xs transition"
               >
-                ⚡ Truy cập nhanh AdminCP (Chế độ Quản trị viên)
-              </button>
+                ← Quay về Trang chủ
+              </Link>
             </div>
-          </form>
+          </div>
         </div>
       </div>
     );
@@ -211,7 +232,7 @@ export const AdminCpPage: React.FC = () => {
   return (
     <div className="h-screen bg-[#f8fafc] flex font-sans text-slate-800 overflow-hidden">
       {/* LEFT SIDEBAR (Identical to lms.tonyenglish.vn/admin) */}
-      <aside className="w-68 bg-[#1e293b] text-slate-300 flex flex-col shrink-0 shadow-xl">
+      <aside className="w-[272px] bg-[#1e293b] text-slate-300 flex flex-col shrink-0 shadow-xl">
         <div className="h-20 flex items-center justify-between px-6 bg-[#0f172a] border-b border-slate-800 shrink-0">
           <Link to="/" className="font-black text-xl tracking-tight text-white uppercase">
             TONY<span className="text-[#2ab4e8]">ADMIN</span>
@@ -269,7 +290,7 @@ export const AdminCpPage: React.FC = () => {
           </Link>
           <button
             type="button"
-            onClick={() => setAdmin(null)}
+            onClick={handleAdminLogout}
             className="text-rose-400 hover:text-rose-300 font-bold"
           >
             Đăng xuất

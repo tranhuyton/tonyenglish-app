@@ -188,6 +188,20 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
   
   const globalAudioRef = useRef<HTMLAudioElement>(null);
   const isFinishingRef = useRef(false);
+  const soundCheckTimerRef = useRef<number | null>(null);
+
+  useEffect(() => {
+    return () => {
+      if (soundCheckTimerRef.current) {
+        window.clearTimeout(soundCheckTimerRef.current);
+      }
+      if (globalAudioRef.current) {
+        try {
+          globalAudioRef.current.pause();
+        } catch {}
+      }
+    };
+  }, []);
 
   // 🚀 NẾU LÀ REVIEW, ĐỔ BÊ TÔNG ĐÁP ÁN CŨ VÀO LUÔN
   const [answers, setAnswers] = useState<Record<string, string>>(() => {
@@ -221,9 +235,10 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
 
   useEffect(() => {
       if (testStarted && !isReviewMode && isListening && globalAudioRef.current && audioPlaylist[currentAudioIndex]) {
-          setTimeout(() => {
+          const timer = window.setTimeout(() => {
               globalAudioRef.current?.play().catch(e => console.log("Auto-play next track blocked", e));
           }, 100);
+          return () => window.clearTimeout(timer);
       }
   }, [currentAudioIndex, testStarted, isReviewMode, isListening, audioPlaylist]);
 
@@ -277,13 +292,20 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
     }
   };
 
-  const handleFinish = async () => {
+  const handleFinish = async (forceAutoSubmit: any = false) => {
+    const isForced = forceAutoSubmit === true;
     if (!isReviewMode) {
-      if (!window.confirm("Bạn có chắc chắn muốn nộp bài thi?")) return;
+      if (isFinishingRef.current) return;
+      if (!isForced && !window.confirm("Bạn có chắc chắn muốn nộp bài thi?")) return;
       isFinishingRef.current = true;
       
       // 🔒 Đọc answers từ ref để chống stale closure khi timer hết giờ gọi
       const currentAnswers = answersRef.current;
+      const savedEnd = getSavedEndTime();
+      const initialSecs = parseInitialTime(basicInfo.timeLimit);
+      const computedTimeSpent = savedEnd
+        ? Math.max(0, initialSecs - Math.max(0, Math.floor((savedEnd - Date.now()) / 1000)))
+        : Math.max(0, initialSecs - timeLeft);
       
       if (safeTestData?.id) {
         localStorage.removeItem(`ielts_ans_${safeTestData.id}`);
@@ -392,7 +414,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
       try {
         const { data: { user } } = await supabase.auth.getUser();
         if (user) {
-          const timeSpentSecs = parseInitialTime(basicInfo.timeLimit) - timeLeft;
+          const timeSpentSecs = computedTimeSpent;
           await supabase.from('test_results').insert([{
             user_id: user.id, 
             course_id: safeTestData?.course_id || safeTestData?.content_json?.basicInfo?.courseId || null,
@@ -404,6 +426,20 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
             // 🚀 ĐÃ SỬA: ĐẨY TOÀN BỘ questionTypeStats VÀO DETAILS ĐỂ SUPABASE GHI NHẬN LẠI DẠNG BÀI
             details: { test_id: safeTestData?.id, bandScore: band, userAnswers: currentAnswers, type_stats: questionTypeStats }
           }]);
+
+          // Auto-complete test-type assignments (Chỉ hoàn thành nếu đạt từ 50% điểm hoặc IELTS Band >= 4.0)
+          const isPassed = (band && !isNaN(parseFloat(band)))
+            ? parseFloat(band) >= 4.0
+            : (total > 0 ? (score / total) >= 0.5 : score >= 5.0);
+          if (isPassed && safeTestData?.id) {
+            await supabase.from('assignments')
+              .update({ is_completed: true, updated_at: new Date().toISOString() })
+              .eq('test_id', safeTestData.id)
+              .eq('user_id', user.id)
+              .eq('task_type', 'test');
+          }
+          window.dispatchEvent(new CustomEvent('tony-refresh-lecture-progress'));
+
         // 🚀 ANH DÁN ĐOẠN CODE BẮN PHÁO HIỆU VÀO ĐÂY NHÉ:
         await supabase.from('activity_logs').insert([{
           user_id: user.id, 
@@ -431,9 +467,16 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
     }
   };
 
+  const handleFinishRef = useRef(handleFinish);
+  handleFinishRef.current = handleFinish;
+
   const resetTest = () => {
     if (window.confirm("Làm lại từ đầu? Mọi đáp án sẽ bị xóa.")) { 
-      if (safeTestData?.id) localStorage.removeItem(`ielts_endtime_${safeTestData.id}`);
+      isFinishingRef.current = false;
+      if (safeTestData?.id) {
+        localStorage.removeItem(`ielts_ans_${safeTestData.id}`);
+        localStorage.removeItem(`ielts_endtime_${safeTestData.id}`);
+      }
       setAnswers({}); 
       setReviewFlags({}); 
       setIsReviewMode(false); 
@@ -536,10 +579,18 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
             if (remaining <= 0) {
               clearInterval(timer);
                 alert("⏰ Hết giờ!");
-                handleFinish();
+                handleFinishRef.current(true);
             }
         } else { 
-            setTimeLeft(prev => prev - 1); 
+            setTimeLeft(prev => {
+                if (prev <= 1) {
+                    clearInterval(timer);
+                    alert("⏰ Hết giờ!");
+                    handleFinishRef.current(true);
+                    return 0;
+                }
+                return prev - 1;
+            }); 
         }
     }, 1000);
     return () => clearInterval(timer);
@@ -786,12 +837,16 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
 
   const handleSoundCheck = () => {
     if (globalAudioRef.current) {
+      if (soundCheckTimerRef.current) {
+        window.clearTimeout(soundCheckTimerRef.current);
+      }
       globalAudioRef.current.currentTime = 0;
       const playPromise = globalAudioRef.current.play();
       if (playPromise !== undefined) {
         playPromise.then(() => {
-          setTimeout(() => { 
+          soundCheckTimerRef.current = window.setTimeout(() => { 
               globalAudioRef.current?.pause(); 
+              soundCheckTimerRef.current = null;
           }, 3000);
         }).catch(error => console.log("Trình duyệt tạm thời chặn autoplay âm thanh", error));
       }
@@ -1047,7 +1102,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
         setTimeLeft(remaining);
         if (remaining <= 0 && basicInfo?.category !== 'exercise') {
             alert("⏰ Bài thi này đã hết thời gian làm bài!");
-            handleFinish();
+            handleFinishRef.current(true);
             return;
         }
     }
@@ -1112,7 +1167,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
       )}
 
       {!testStarted ? (
-        <div className="flex flex-col h-screen items-center justify-center bg-[#eeeeee] font-sans">
+        <div className="flex flex-col h-[100dvh] items-center justify-center bg-[#eeeeee] font-sans">
           <div className="bg-white p-10 rounded-none border border-slate-300 shadow-sm text-center max-w-lg w-full">
             <div className="text-6xl mb-6">{isListening ? '🎧' : '💻'}</div>
             <h1 className="text-2xl font-black text-slate-900 mb-2">{safeTestData?.title || basicInfo.title || "IELTS Test"}</h1>
@@ -1150,7 +1205,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
           </div>
         </div>
       ) : (
-        <div className="flex flex-col h-screen bg-[#eeeeee] font-sans text-slate-900 relative">
+        <div className="flex flex-col h-[100dvh] bg-[#eeeeee] font-sans text-slate-900 relative">
           
           {highlightMenu.show && !isReviewMode && (
             <div style={{ left: highlightMenu.x, top: highlightMenu.y, transform: 'translate(-50%, -100%)' }} className="fixed z-50 bg-white text-slate-900 rounded-none shadow-md border border-slate-400 text-[13px] flex flex-col py-1 min-w-[130px]" onMouseDown={(e) => e.preventDefault()}>
@@ -2316,7 +2371,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                      </button>
                  </div>
                ) : (
-                 <button onClick={handleFinish} className="bg-slate-900 hover:bg-black text-white px-6 py-2 rounded-none text-[14px] font-bold transition ml-2 uppercase tracking-wide">
+                 <button onClick={() => handleFinish(false)} className="bg-slate-900 hover:bg-black text-white px-6 py-2 rounded-none text-[14px] font-bold transition ml-2 uppercase tracking-wide">
                      Nộp bài
                  </button>
                )}

@@ -30,6 +30,8 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
   const navigate = useNavigate();
 
   const [allVideoCates, setAllVideoCates] = useState<any[]>([]);
+  const [catesLoaded, setCatesLoaded] = useState(false);
+  const [loadingWatch, setLoadingWatch] = useState(false);
   const [videosInCate, setVideosInCate] = useState<any[]>([]);
   const [currentVideo, setCurrentVideo] = useState<any | null>(null);
 
@@ -41,19 +43,23 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
 
   useEffect(() => {
     async function loadVideoCategories() {
-      const { data } = await supabase
-        .from('te_video_category')
-        .select('*')
-        .eq('deleted', 0)
-        .eq('vc_status', 1)
-        .order('vc_order', { ascending: true });
-      if (data) setAllVideoCates(data);
+      try {
+        const { data } = await supabase
+          .from('te_video_category')
+          .select('*')
+          .eq('deleted', 0)
+          .eq('vc_status', 1)
+          .order('vc_order', { ascending: true });
+        if (data) setAllVideoCates(data);
+      } finally {
+        setCatesLoaded(true);
+      }
     }
     loadVideoCategories();
   }, []);
 
   useEffect(() => {
-    if (allVideoCates.length === 0) return;
+    if (!catesLoaded) return;
 
     async function loadModeData() {
       setShowQuestion(false);
@@ -68,6 +74,7 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
         .replace(/\.html$/i, '');
 
       if (mode === 'cate') {
+        setLoadingWatch(false);
         if (cleanCateSlug) {
           const target = allVideoCates.find((vc) => (vc.vc_name_url || '').trim() === cleanCateSlug);
           if (target) {
@@ -79,43 +86,53 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
           }
         }
       } else {
-        const targetCate = allVideoCates.find((vc) => (vc.vc_name_url || '').trim() === cleanCateSlug);
-        if (cleanVideoSlug) {
-          const { data: vRows } = await supabase
-            .from('te_video')
-            .select('*')
-            .eq('deleted', 0)
-            .eq('video_status', 1)
-            .eq('video_url', cleanVideoSlug)
-            .limit(1);
-          const cur = vRows && vRows.length > 0 ? vRows[0] : null;
-          setCurrentVideo(cur);
-          if (cur) {
+        setLoadingWatch(true);
+        try {
+          const targetCate = allVideoCates.find((vc) => (vc.vc_name_url || '').trim() === cleanCateSlug);
+          if (cleanVideoSlug) {
+            const { data: vRows } = await supabase
+              .from('te_video')
+              .select('*')
+              .eq('deleted', 0)
+              .eq('video_status', 1)
+              .eq('video_url', cleanVideoSlug)
+              .limit(1);
+            const cur = vRows && vRows.length > 0 ? vRows[0] : null;
+            setCurrentVideo(cur);
+            if (cur) {
+              const { data: list } = await supabase
+                .from('te_video')
+                .select('*')
+                .eq('deleted', 0)
+                .eq('video_status', 1)
+                .eq('vc_id', cur.vc_id)
+                .order('video_order', { ascending: true });
+              setVideosInCate(list || []);
+            } else {
+              setVideosInCate([]);
+            }
+          } else if (targetCate) {
             const { data: list } = await supabase
               .from('te_video')
               .select('*')
               .eq('deleted', 0)
               .eq('video_status', 1)
-              .eq('vc_id', cur.vc_id)
+              .eq('vc_id', targetCate.vc_id)
               .order('video_order', { ascending: true });
             setVideosInCate(list || []);
+            setCurrentVideo(list && list.length > 0 ? list[0] : null);
+          } else {
+            setCurrentVideo(null);
+            setVideosInCate([]);
           }
-        } else if (targetCate) {
-          const { data: list } = await supabase
-            .from('te_video')
-            .select('*')
-            .eq('deleted', 0)
-            .eq('video_status', 1)
-            .eq('vc_id', targetCate.vc_id)
-            .order('video_order', { ascending: true });
-          setVideosInCate(list || []);
-          setCurrentVideo(list && list.length > 0 ? list[0] : null);
+        } finally {
+          setLoadingWatch(false);
         }
       }
     }
 
     loadModeData();
-  }, [mode, cateSlug, videoSlug, allVideoCates]);
+  }, [mode, cateSlug, videoSlug, allVideoCates, catesLoaded]);
 
   const topCategories = allVideoCates.filter((vc) => Number(vc.vc_parent) === 0);
   const cleanCateParam = decodeURIComponent(cateSlug || '')
@@ -361,7 +378,9 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
                             alt={subTitle}
                             loading={sIdx < 3 ? 'eager' : 'lazy'}
                             onError={(e) => {
-                              (e.currentTarget as HTMLImageElement).src = '/uploads/No_Image_Wide.svg_1.png';
+                              const img = e.currentTarget as HTMLImageElement;
+                              img.onerror = null;
+                              img.src = '/uploads/No_Image_Wide.svg_1.png';
                             }}
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 brightness-105"
                           />
@@ -394,7 +413,38 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
               ) : (
                 /* VIDEO WATCH VIEW */
                 <div className="space-y-8">
-                  {currentVideo && (
+                  {!catesLoaded || loadingWatch ? (
+                    <div className="space-y-5 animate-pulse">
+                      <div className="aspect-video w-full rounded-2xl bg-slate-200" />
+                      <div className="space-y-3">
+                        <div className="h-7 bg-slate-200 rounded-xl w-3/4" />
+                        <div className="h-4 bg-slate-100 rounded w-full" />
+                        <div className="h-4 bg-slate-100 rounded w-5/6" />
+                      </div>
+                    </div>
+                  ) : !currentVideo ? (
+                    <div className="py-14 px-6 text-center rounded-2xl bg-slate-50 border border-slate-200/80 space-y-4">
+                      <div className="w-14 h-14 rounded-2xl bg-sky-100 text-[#0a5482] flex items-center justify-center mx-auto">
+                        <Film className="w-7 h-7" />
+                      </div>
+                      <div className="space-y-1.5">
+                        <h2 className="text-lg sm:text-xl font-black text-slate-800">
+                          {lang === 'vi' ? 'Không tìm thấy video bạn yêu cầu' : 'Video not found'}
+                        </h2>
+                        <p className="text-sm text-slate-500 max-w-md mx-auto">
+                          {lang === 'vi'
+                            ? 'Video này có thể đã được chuyển sang danh mục khác hoặc không còn tồn tại trong Kho Video.'
+                            : 'This video may have been moved or is no longer available in the Video Store.'}
+                        </p>
+                      </div>
+                      <Link
+                        to="/videos"
+                        className="inline-flex items-center gap-2 bg-[#0a5482] hover:bg-[#084266] text-white font-bold text-sm px-5 py-2.5 rounded-xl transition shadow-xs"
+                      >
+                        <span>{lang === 'vi' ? '← Quay về Kho Video' : '← Back to Video Store'}</span>
+                      </Link>
+                    </div>
+                  ) : (
                     <div className="space-y-5">
                       {currentVideo.video_link && (
                         <div className="aspect-video w-full rounded-2xl overflow-hidden bg-slate-950 shadow-lg border border-slate-800">
@@ -620,7 +670,9 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
                             src={resolveUploadUrl(vd.video_thumb)}
                             alt={vd.video_desc}
                             onError={(e) => {
-                              (e.currentTarget as HTMLImageElement).src = '/uploads/No_Image_Wide.svg_1.png';
+                              const img = e.currentTarget as HTMLImageElement;
+                              img.onerror = null;
+                              img.src = '/uploads/No_Image_Wide.svg_1.png';
                             }}
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                           />

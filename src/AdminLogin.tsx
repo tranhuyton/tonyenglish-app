@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { supabase } from './supabase';
+import { supabase, isTonyEnglishAdmin } from './supabase';
 
 export default function AdminLogin({ onLoginSuccess }: { onLoginSuccess: () => void }) {
   const [isLoading, setIsLoading] = useState(false);
@@ -24,11 +24,25 @@ export default function AdminLogin({ onLoginSuccess }: { onLoginSuccess: () => v
       if (error) {
         setErrorMsg("Đăng nhập thất bại! Vui lòng kiểm tra lại Email hoặc Mật khẩu.");
       } else if (data.user) {
-        if (email.toLowerCase().includes('admin')) {
+        const { data: profile, error: profileError } = await supabase
+          .from('profiles')
+          .select('role, status')
+          .eq('id', data.user.id)
+          .maybeSingle();
+
+        if (profileError) {
+          console.error('Lỗi kiểm tra quyền quản trị:', profileError.message);
+        }
+
+        if (isTonyEnglishAdmin(data.user, profile)) {
           onLoginSuccess();
         } else {
-          setErrorMsg("Tài khoản này không có quyền truy cập trang Quản trị!");
           await supabase.auth.signOut();
+          setErrorMsg(
+            profile?.status === 'inactive'
+              ? "Tài khoản quản trị này đang bị tạm dừng hoạt động."
+              : "Tài khoản này không có quyền truy cập trang Quản trị!"
+          );
         }
       }
     } catch (err) {

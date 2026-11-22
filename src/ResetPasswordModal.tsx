@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { supabase } from './supabase';
 
 interface ResetPasswordModalProps {
@@ -15,6 +15,29 @@ export default function ResetPasswordModal({ isOpen, onClose, onNavigate }: Rese
   const [loading, setLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
   const [isSuccess, setIsSuccess] = useState(false);
+
+  useEffect(() => {
+    if (isOpen) {
+      setPassword('');
+      setConfirmPassword('');
+      setShowPassword(false);
+      setShowConfirm(false);
+      setLoading(false);
+      setErrorMsg('');
+      setIsSuccess(false);
+    }
+  }, [isOpen]);
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        onClose();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, onClose]);
 
   if (!isOpen) return null;
 
@@ -58,10 +81,19 @@ export default function ResetPasswordModal({ isOpen, onClose, onNavigate }: Rese
 
   return (
     <div className="fixed inset-0 bg-slate-900/70 backdrop-blur-md z-[120] flex items-center justify-center p-4 animate-in fade-in duration-300">
-      <div className="bg-white rounded-[2rem] w-full max-w-md shadow-2xl overflow-hidden border border-slate-100 animate-in zoom-in-95 duration-200">
+      <div className="bg-white rounded-[2rem] w-full max-w-md max-h-[90dvh] overflow-y-auto shadow-2xl border border-slate-100 animate-in zoom-in-95 duration-200">
         
         {/* Header */}
         <div className="bg-gradient-to-r from-[#0a5482] to-[#0ea5e9] p-7 text-white text-center relative">
+          <button
+            type="button"
+            onClick={onClose}
+            aria-label="Đóng cửa sổ đặt lại mật khẩu"
+            className="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/15 hover:bg-white/25 border border-white/25 text-white flex items-center justify-center font-bold text-base transition-all cursor-pointer active:scale-95"
+            title="Đóng (Esc)"
+          >
+            ✕
+          </button>
           <div className="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-inner text-2xl border border-white/20">
             🔐
           </div>

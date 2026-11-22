@@ -210,17 +210,24 @@ export const CoursesPage: React.FC = () => {
   const handleZaloClick = (e: React.MouseEvent<HTMLElement>, cTitle: string) => {
     trackCourseConversion('Zalo', cTitle);
     copyPhoneToClipboard();
-    setZaloFallbackHint(true);
     const ua = typeof navigator !== 'undefined' ? navigator.userAgent || '' : '';
     const isMobileOrInApp = /FBAN|FBIOS|FB_IAB|Instagram|TikTok|Line|iPhone|iPad|iPod|Android/i.test(ua);
     if (isMobileOrInApp) {
       // Prevent Facebook In-App Browser from stranding users on zalo.me's blank white screen
       e.preventDefault();
-      setShowZaloModal(true);
-    } else {
+      setZaloFallbackHint(true);
       setShowZaloModal(true);
     }
   };
+
+  useEffect(() => {
+    if (!showZaloModal) return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setShowZaloModal(false);
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, [showZaloModal]);
 
   const handleProseClick = (e: React.MouseEvent<HTMLDivElement>) => {
     const anchor = (e.target as HTMLElement | null)?.closest('a');
@@ -629,8 +636,8 @@ export const CoursesPage: React.FC = () => {
               >
                 <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-3.5">
                   <div className="space-y-1.5">
-                    <div className="inline-flex items-center gap-1.5 text-[11px] sm:text-xs font-extrabold uppercase tracking-wide text-emerald-800 bg-emerald-100/80 border border-emerald-200 px-2.5 py-0.5 rounded-full">
-                      <span>🏠</span>
+                    <div className="inline-flex items-start sm:items-center gap-1.5 text-[11px] sm:text-xs font-extrabold uppercase tracking-wide text-emerald-800 bg-emerald-100/80 border border-emerald-200 px-3 py-1 sm:py-0.5 rounded-2xl sm:rounded-full leading-snug">
+                      <span className="shrink-0">🏠</span>
                       <span>
                         {lang === 'vi'
                           ? 'Học tại căn hộ nhà riêng Thầy Tony (R2B 2219 Royal City) & Online'
@@ -986,6 +993,8 @@ export const CoursesPage: React.FC = () => {
           onClick={() => setShowZaloModal(false)}
         >
           <div
+            role="dialog"
+            aria-modal="true"
             className="bg-white rounded-3xl max-w-md w-full overflow-hidden shadow-2xl border border-slate-200"
             onClick={(e) => e.stopPropagation()}
           >

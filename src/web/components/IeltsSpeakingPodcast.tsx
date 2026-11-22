@@ -82,7 +82,7 @@ export const IeltsSpeakingPodcast: React.FC<Props> = ({ newsId, onPodcastPractic
   const [phase, setPhase] = useState<PlaybackPhase>('idle');
   const [countdownSec, setCountdownSec] = useState<number>(0);
   const [playbackRate, setPlaybackRate] = useState<number>(1.0);
-  const [pauseBonusSec, setPauseBonusSec] = useState<number>(2); // Extra pause seconds
+  const [pauseBonusSec, setPauseBonusSec] = useState<number>(2.5); // Extra pause seconds
 
   // UI toggles for Reflex & Orange Drill modes
   const [hideReflexEnAll, setHideReflexEnAll] = useState<boolean>(true);
@@ -97,8 +97,21 @@ export const IeltsSpeakingPodcast: React.FC<Props> = ({ newsId, onPodcastPractic
   const countdownTimerRef = useRef<number | null>(null);
   const cardRefs = useRef<Record<number, HTMLDivElement | null>>({});
   const loggedModesRef = useRef<Record<string, boolean>>({});
+  const playbackRateRef = useRef<number>(playbackRate);
+  const pauseBonusSecRef = useRef<number>(pauseBonusSec);
   const onPodcastPracticeRef = useRef(onPodcastPractice);
   onPodcastPracticeRef.current = onPodcastPractice;
+
+  useEffect(() => {
+    playbackRateRef.current = playbackRate;
+    if (audioRef.current) {
+      audioRef.current.playbackRate = playbackRate;
+    }
+  }, [playbackRate]);
+
+  useEffect(() => {
+    pauseBonusSecRef.current = pauseBonusSec;
+  }, [pauseBonusSec]);
 
   const notifyPracticeMilestone = useCallback(
     (curMode: PracticeMode, doneCount: number, totalCount: number) => {
@@ -218,7 +231,7 @@ export const IeltsSpeakingPodcast: React.FC<Props> = ({ newsId, onPodcastPractic
           const audio = document.createElement('audio');
           audio.setAttribute('referrerpolicy', 'no-referrer');
           audio.src = url;
-          audio.playbackRate = playbackRate;
+          audio.playbackRate = playbackRateRef.current;
           audioRef.current = audio;
           let settled = false;
           const finish = () => {
@@ -265,7 +278,7 @@ export const IeltsSpeakingPodcast: React.FC<Props> = ({ newsId, onPodcastPractic
 
           const utter = new SpeechSynthesisUtterance(cleanText);
           utter.lang = langCode === 'vi' ? 'vi-VN' : 'en-GB';
-          utter.rate = playbackRate;
+          utter.rate = playbackRateRef.current;
           if (matchingVoices.length > 0) {
             // Prefer Google/Microsoft neural voices if available
             const preferred =
@@ -329,7 +342,7 @@ export const IeltsSpeakingPodcast: React.FC<Props> = ({ newsId, onPodcastPractic
             const ttsUrl = `/api/tts?tl=${tl}&q=${encodeURIComponent(chunkText)}`;
             const audio = document.createElement('audio');
             audio.src = ttsUrl;
-            audio.playbackRate = playbackRate;
+            audio.playbackRate = playbackRateRef.current;
             audioRef.current = audio;
             let chunkHandled = false;
             const fallbackToSpeech = () => {
@@ -357,7 +370,7 @@ export const IeltsSpeakingPodcast: React.FC<Props> = ({ newsId, onPodcastPractic
         }
       });
     },
-    [playbackRate]
+    []
   );
 
   // Countdown pause helper returning a Promise
@@ -427,7 +440,7 @@ export const IeltsSpeakingPodcast: React.FC<Props> = ({ newsId, onPodcastPractic
 
           // 2. Pause for student to shadow aloud
           const words = item.en.split(/\s+/).length;
-          const shadowPause = Math.max(3, Math.min(10, Math.round(words * 0.38) + pauseBonusSec));
+          const shadowPause = Math.max(3, Math.min(10, Math.round(words * 0.38) + pauseBonusSecRef.current));
           setPhase('pause_shadow');
           await waitCountdownAsync(shadowPause, myRunId);
           if (runIdRef.current !== myRunId) break;
@@ -447,7 +460,7 @@ export const IeltsSpeakingPodcast: React.FC<Props> = ({ newsId, onPodcastPractic
 
           // 2. Pause for student to translate aloud into English using the orange phrases
           const words = item.en.split(/\s+/).length;
-          const reflexPause = Math.max(3.5, Math.min(12, Math.round(words * 0.42) + pauseBonusSec));
+          const reflexPause = Math.max(3.5, Math.min(12, Math.round(words * 0.42) + pauseBonusSecRef.current));
           setPhase('pause_reflex');
           await waitCountdownAsync(reflexPause, myRunId);
           if (runIdRef.current !== myRunId) break;
@@ -479,7 +492,7 @@ export const IeltsSpeakingPodcast: React.FC<Props> = ({ newsId, onPodcastPractic
 
           // 2. Pause for student to recall & speak the orange English expression
           setPhase('pause_orange_recall');
-          await waitCountdownAsync(Math.max(2.5, pauseBonusSec + 1.5), myRunId);
+          await waitCountdownAsync(Math.max(2.5, pauseBonusSecRef.current + 1.5), myRunId);
           if (runIdRef.current !== myRunId) break;
 
           // 3. Reveal & play the English orange expression
@@ -510,7 +523,7 @@ export const IeltsSpeakingPodcast: React.FC<Props> = ({ newsId, onPodcastPractic
         setCountdownSec(0);
       }
     },
-    [data, mode, activeSentences, pauseBonusSec, speakTextAsync, stopAllPlayback, waitCountdownAsync]
+    [data, mode, activeSentences, speakTextAsync, stopAllPlayback, waitCountdownAsync, notifyPracticeMilestone]
   );
 
   // Play a single phrase or sentence on click without starting the full podcast loop
@@ -1089,7 +1102,7 @@ export const IeltsSpeakingPodcast: React.FC<Props> = ({ newsId, onPodcastPractic
                   </div>
 
                   {/* Example Sentence in Context */}
-                  <div className="mt-3 pl-3 border-l-3 border-[#ff6600]/60 space-y-1">
+                  <div className="mt-3 pl-3 border-l-[3px] border-[#ff6600]/60 space-y-1">
                     <div className="text-xs font-bold text-slate-400 uppercase tracking-wider">
                       Câu áp dụng trong bài (Câu #{vItem.sentenceIndex}):
                     </div>

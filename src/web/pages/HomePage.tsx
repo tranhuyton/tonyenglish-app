@@ -183,132 +183,138 @@ export const HomePage: React.FC = () => {
 
   useEffect(() => {
     async function fetchHomeData() {
-      const [adsRes, stickyRes, newsCateRes, vFocusRes, vEventRes, vCateRes, testiRes] = await Promise.all([
-        supabase
-          .from('te_ads')
-          .select('*')
-          .eq('deleted', 0)
-          .eq('status', 1)
-          .eq('ad_type', 6)
-          .order('rank', { ascending: true })
-          .limit(10),
-        supabase
-          .from('te_news')
-          .select('news_id,news_cc_id,news_title,news_title_url,news_thumb,news_desc')
-          .eq('deleted', 0)
-          .eq('news_status', 1)
-          .eq('news_stick', 1)
-          .order('news_id', { ascending: false })
-          .limit(10),
-        supabase
-          .from('te_news_category')
-          .select(
-            'news_cc_id,news_cc_parent,news_cc_name,news_cc_name_vi,news_cc_name_url,news_cc_thumb,news_cc_desc,news_cc_focus,news_cc_order'
-          )
-          .eq('deleted', 0)
-          .eq('news_cc_status', 1)
-          .order('news_cc_order', { ascending: true }),
-        supabase
-          .from('te_video')
-          .select('*')
-          .eq('deleted', 0)
-          .eq('video_status', 1)
-          .eq('video_focus', 1)
-          .limit(10),
-        supabase
-          .from('te_video')
-          .select('*')
-          .eq('deleted', 0)
-          .eq('video_status', 1)
-          .eq('video_focus', 2)
-          .limit(10),
-        supabase
-          .from('te_video_category')
-          .select('*')
-          .eq('deleted', 0)
-          .eq('vc_status', 1)
-          .order('vc_order', { ascending: true }),
-        supabase
-          .from('te_testimonial')
-          .select('*')
-          .eq('deleted', 0)
-          .eq('testimonial_status', 1)
-          .order('testimonial_order', { ascending: true }),
-      ]);
-
-      if (adsRes.data) setAds(adsRes.data);
-      setAdsLoaded(true);
-      if (stickyRes.data) setStickyNews(stickyRes.data);
-
-      if (newsCateRes.data) {
-        setNewsCategories(newsCateRes.data);
-        const focusCates = newsCateRes.data.filter((c: any) =>
-          [0, 1, 2, 3, 4, 5].includes(Number(c.news_cc_focus))
-        );
-        const targetCateIds = new Set<number>();
-        const parentMap: Record<number, number> = {};
-
-        for (const fc of focusCates) {
-          const fcId = Number(fc.news_cc_id);
-          targetCateIds.add(fcId);
-          for (const ch of newsCateRes.data) {
-            if (Number(ch.news_cc_parent) === fcId) {
-              targetCateIds.add(Number(ch.news_cc_id));
-              parentMap[Number(ch.news_cc_id)] = fcId;
-            }
-          }
-        }
-
-        if (targetCateIds.size > 0) {
-          const { data: homeNews } = await supabase
+      try {
+        const [adsRes, stickyRes, newsCateRes, vFocusRes, vEventRes, vCateRes, testiRes] = await Promise.all([
+          supabase
+            .from('te_ads')
+            .select('*')
+            .eq('deleted', 0)
+            .eq('status', 1)
+            .eq('ad_type', 6)
+            .order('rank', { ascending: true })
+            .limit(10),
+          supabase
             .from('te_news')
             .select('news_id,news_cc_id,news_title,news_title_url,news_thumb,news_desc')
             .eq('deleted', 0)
             .eq('news_status', 1)
-            .in('news_cc_id', Array.from(targetCateIds))
+            .eq('news_stick', 1)
             .order('news_id', { ascending: false })
-            .limit(1000);
+            .limit(10),
+          supabase
+            .from('te_news_category')
+            .select(
+              'news_cc_id,news_cc_parent,news_cc_name,news_cc_name_vi,news_cc_name_url,news_cc_thumb,news_cc_desc,news_cc_focus,news_cc_order'
+            )
+            .eq('deleted', 0)
+            .eq('news_cc_status', 1)
+            .order('news_cc_order', { ascending: true }),
+          supabase
+            .from('te_video')
+            .select('*')
+            .eq('deleted', 0)
+            .eq('video_status', 1)
+            .eq('video_focus', 1)
+            .limit(10),
+          supabase
+            .from('te_video')
+            .select('*')
+            .eq('deleted', 0)
+            .eq('video_status', 1)
+            .eq('video_focus', 2)
+            .limit(10),
+          supabase
+            .from('te_video_category')
+            .select('*')
+            .eq('deleted', 0)
+            .eq('vc_status', 1)
+            .order('vc_order', { ascending: true }),
+          supabase
+            .from('te_testimonial')
+            .select('*')
+            .eq('deleted', 0)
+            .eq('testimonial_status', 1)
+            .order('testimonial_order', { ascending: true }),
+        ]);
 
-          if (homeNews) {
-            const stickyIdSet = new Set((stickyRes.data || []).map((s: any) => s.news_id));
-            const byCate: Record<number, any[]> = {};
+        if (adsRes.data) setAds(adsRes.data);
+        setAdsLoaded(true);
+        if (stickyRes.data) setStickyNews(stickyRes.data);
 
-            for (const item of homeNews) {
-              if (stickyIdSet.has(item.news_id)) continue;
-              const cid = Number(item.news_cc_id);
-              const pid = parentMap[cid];
-              if (!byCate[cid]) byCate[cid] = [];
-              byCate[cid].push(item);
-              if (pid) {
-                if (!byCate[pid]) byCate[pid] = [];
-                byCate[pid].push(item);
+        if (newsCateRes.data) {
+          setNewsCategories(newsCateRes.data);
+          const focusCates = newsCateRes.data.filter((c: any) =>
+            [0, 1, 2, 3, 4, 5].includes(Number(c.news_cc_focus))
+          );
+          const targetCateIds = new Set<number>();
+          const parentMap: Record<number, number> = {};
+
+          for (const fc of focusCates) {
+            const fcId = Number(fc.news_cc_id);
+            targetCateIds.add(fcId);
+            for (const ch of newsCateRes.data) {
+              if (Number(ch.news_cc_parent) === fcId) {
+                targetCateIds.add(Number(ch.news_cc_id));
+                parentMap[Number(ch.news_cc_id)] = fcId;
               }
             }
+          }
 
-            const chosenMap: Record<number, any> = {};
-            for (const fc of focusCates) {
-              const cid = Number(fc.news_cc_id);
-              const candidates = byCate[cid] || [];
-              if (candidates.length > 0) {
-                const withThumb = candidates.find((n) => n.news_thumb && n.news_thumb.trim() !== '');
-                chosenMap[cid] = withThumb || candidates[0];
+          if (targetCateIds.size > 0) {
+            const { data: homeNews } = await supabase
+              .from('te_news')
+              .select('news_id,news_cc_id,news_title,news_title_url,news_thumb,news_desc')
+              .eq('deleted', 0)
+              .eq('news_status', 1)
+              .in('news_cc_id', Array.from(targetCateIds))
+              .order('news_id', { ascending: false })
+              .limit(300);
+
+            if (homeNews) {
+              const stickyIdSet = new Set((stickyRes.data || []).map((s: any) => s.news_id));
+              const byCate: Record<number, any[]> = {};
+
+              for (const item of homeNews) {
+                if (stickyIdSet.has(item.news_id)) continue;
+                const cid = Number(item.news_cc_id);
+                const pid = parentMap[cid];
+                if (!byCate[cid]) byCate[cid] = [];
+                byCate[cid].push(item);
+                if (pid) {
+                  if (!byCate[pid]) byCate[pid] = [];
+                  byCate[pid].push(item);
+                }
               }
+
+              const chosenMap: Record<number, any> = {};
+              for (const fc of focusCates) {
+                const cid = Number(fc.news_cc_id);
+                const candidates = byCate[cid] || [];
+                if (candidates.length > 0) {
+                  const withThumb = candidates.find((n) => n.news_thumb && n.news_thumb.trim() !== '');
+                  chosenMap[cid] = withThumb || candidates[0];
+                }
+              }
+              setLatestNewsByCate(chosenMap);
             }
-            setLatestNewsByCate(chosenMap);
           }
         }
-      }
 
-      if (vFocusRes.data && vFocusRes.data.length > 0) {
-        const rnd = Math.floor(Math.random() * vFocusRes.data.length);
-        setVideoFocus(vFocusRes.data[rnd]);
+        if (vFocusRes.data && vFocusRes.data.length > 0) {
+          const rnd = Math.floor(Math.random() * vFocusRes.data.length);
+          setVideoFocus(vFocusRes.data[rnd]);
+        }
+        if (vEventRes.data && vEventRes.data.length > 0) {
+          const rnd = Math.floor(Math.random() * vEventRes.data.length);
+          setVideoEvent(vEventRes.data[rnd]);
+        }
+        if (vCateRes.data) setAllVideoCategories(vCateRes.data);
+        if (testiRes.data) setTestimonials(testiRes.data);
+      } catch (err) {
+        console.warn('Home data fetch warning:', err);
+      } finally {
+        setAdsLoaded(true);
       }
-      if (vEventRes.data && vEventRes.data.length > 0) {
-        const rnd = Math.floor(Math.random() * vEventRes.data.length);
-        setVideoEvent(vEventRes.data[rnd]);
-      }
-      if (vCateRes.data) setAllVideoCategories(vCateRes.data);
-      if (testiRes.data) setTestimonials(testiRes.data);
     }
 
     fetchHomeData();
@@ -342,6 +348,7 @@ export const HomePage: React.FC = () => {
     const cateUrl = `/news/category/${(cate.news_cc_name_url || '').trim()}`;
     const articleUrl = `/news/view/${(newsItem.news_title_url || '').trim()}`;
     const rawTitle = (newsItem.news_title || '').trim();
+    const thumbSrc = resolveUploadUrl(newsItem.news_thumb);
 
     if (variant === 'horizontal') {
       return (
@@ -351,14 +358,18 @@ export const HomePage: React.FC = () => {
         >
           <div className="relative h-48 sm:h-auto sm:w-52 md:w-56 sm:min-h-[216px] shrink-0 overflow-hidden bg-slate-100">
             <Link to={articleUrl} className="block w-full h-full">
-              <img
-                src={resolveUploadUrl(newsItem.news_thumb)}
-                alt={rawTitle}
-                onError={(e) => {
-                  (e.currentTarget as HTMLImageElement).src = '/uploads/No_Image_Wide.svg_1.png';
-                }}
-                className="w-full h-full object-cover object-[50%_20%] group-hover:scale-105 transition-transform duration-500"
-              />
+              {thumbSrc && (
+                <img
+                  src={thumbSrc}
+                  alt={rawTitle}
+                  onError={(e) => {
+                    const img = e.currentTarget as HTMLImageElement;
+                    img.onerror = null;
+                    img.src = '/uploads/No_Image_Wide.svg_1.png';
+                  }}
+                  className="w-full h-full object-cover object-[50%_20%] group-hover:scale-105 transition-transform duration-500"
+                />
+              )}
             </Link>
             <Link
               to={cateUrl}
@@ -410,14 +421,18 @@ export const HomePage: React.FC = () => {
       >
         <div className={`relative ${isCompact ? 'h-44' : 'h-48'} overflow-hidden bg-slate-100`}>
           <Link to={articleUrl} className="block w-full h-full">
-            <img
-              src={resolveUploadUrl(newsItem.news_thumb)}
-              alt={rawTitle}
-              onError={(e) => {
-                (e.currentTarget as HTMLImageElement).src = '/uploads/No_Image_Wide.svg_1.png';
-              }}
-              className="w-full h-full object-cover object-[50%_20%] group-hover:scale-105 transition-transform duration-500"
-            />
+            {thumbSrc && (
+              <img
+                src={thumbSrc}
+                alt={rawTitle}
+                onError={(e) => {
+                  const img = e.currentTarget as HTMLImageElement;
+                  img.onerror = null;
+                  img.src = '/uploads/No_Image_Wide.svg_1.png';
+                }}
+                className="w-full h-full object-cover object-[50%_20%] group-hover:scale-105 transition-transform duration-500"
+              />
+            )}
           </Link>
           <Link
             to={cateUrl}
@@ -467,19 +482,21 @@ export const HomePage: React.FC = () => {
     const matchedCates = newsCategories.filter(
       (nc) => Number(nc.news_cc_focus) === focusType && !!latestNewsByCate[nc.news_cc_id]
     );
-    const totalCount = matchedCates.length + (videoEvent ? 1 : 0);
+    const includeVideoEvent = focusType === 5 && Boolean(videoEvent);
+    const totalCount = matchedCates.length + (includeVideoEvent ? 1 : 0);
     if (totalCount === 0) return null;
 
     const variant = getCardVariantForCount(totalCount);
     const gridClass = getBalancedGridClass(totalCount);
     const cards: React.ReactNode[] = [];
 
-    if (videoEvent) {
+    if (includeVideoEvent && videoEvent) {
       const vCateUrl = videoCateMap[videoEvent.vc_id]
         ? `/video/${(videoCateMap[videoEvent.vc_id].vc_name_url || '').trim()}/${(videoEvent.video_url || '').trim()}`
         : '/videos';
       const isHorizontal = variant === 'horizontal';
       const isCompact = variant === 'compact';
+      const videoEventThumb = resolveUploadUrl(videoEvent.video_thumb);
 
       cards.push(
         <div
@@ -494,11 +511,18 @@ export const HomePage: React.FC = () => {
             }`}
           >
             <Link to={vCateUrl} className="block w-full h-full">
-              <img
-                src={resolveUploadUrl(videoEvent.video_thumb)}
-                alt={videoEvent.video_desc}
-                className="w-full h-full object-cover object-[50%_20%] group-hover:scale-105 transition-transform duration-500"
-              />
+              {videoEventThumb && (
+                <img
+                  src={videoEventThumb}
+                  alt={videoEvent.video_desc}
+                  onError={(e) => {
+                    const img = e.currentTarget as HTMLImageElement;
+                    img.onerror = null;
+                    img.src = '/uploads/No_Image_Wide.svg_1.png';
+                  }}
+                  className="w-full h-full object-cover object-[50%_20%] group-hover:scale-105 transition-transform duration-500"
+                />
+              )}
             </Link>
             <span className="absolute top-3 left-3 bg-rose-600 text-white text-xs font-extrabold px-3 py-1 rounded-full shadow-md">
               🎬 {t('Video')}
@@ -700,6 +724,7 @@ export const HomePage: React.FC = () => {
                     {ads.map((adItem, idx) => {
                       const isActive = idx === bannerIdx;
                       const targetLink = normalizeInternalLink(adItem.link, '/courses');
+                      const adImgSrc = resolveUploadUrl(adItem.image);
                       return (
                         <Link
                           key={adItem.id || adItem.ad_id || idx}
@@ -708,12 +733,19 @@ export const HomePage: React.FC = () => {
                             isActive ? 'opacity-100 z-[1]' : 'opacity-0 pointer-events-none z-0'
                           }`}
                         >
-                          <img
-                            src={resolveUploadUrl(adItem.image)}
-                            alt={adItem.title || 'TonyEnglish'}
-                            loading={isActive ? 'eager' : 'lazy'}
-                            className="w-full h-full object-cover object-center"
-                          />
+                          {adImgSrc && (
+                            <img
+                              src={adImgSrc}
+                              alt={adItem.title || 'TonyEnglish'}
+                              loading={isActive ? 'eager' : 'lazy'}
+                              onError={(e) => {
+                                const img = e.currentTarget as HTMLImageElement;
+                                img.onerror = null;
+                                img.src = '/uploads/No_Image_Wide.svg_1.png';
+                              }}
+                              className="w-full h-full object-cover object-center"
+                            />
+                          )}
                         </Link>
                       );
                     })}
@@ -915,7 +947,7 @@ export const HomePage: React.FC = () => {
           </Link>
 
           <Link
-            to="/courses/english-communication 1"
+            to="/courses/english-communication%201"
             className="bg-white hover:bg-sky-50/40 border border-slate-200/90 hover:border-[#2ab4e8] rounded-2xl p-5 shadow-md hover:shadow-soft hover:-translate-y-0.5 transition-all group flex flex-col justify-between"
           >
             <div>
@@ -1005,14 +1037,18 @@ export const HomePage: React.FC = () => {
                       to={`/news/view/${(curSticky.news_title_url || '').trim()}`}
                       className="block w-full h-full"
                     >
-                      <img
-                        src={resolveUploadUrl(curSticky.news_thumb)}
-                        alt={curSticky.news_title}
-                        onError={(e) => {
-                          (e.currentTarget as HTMLImageElement).src = '/uploads/No_Image_Wide.svg_1.png';
-                        }}
-                        className="w-full h-full object-cover object-[50%_20%] group-hover:scale-105 transition-transform duration-500"
-                      />
+                      {resolveUploadUrl(curSticky.news_thumb) && (
+                        <img
+                          src={resolveUploadUrl(curSticky.news_thumb)}
+                          alt={curSticky.news_title}
+                          onError={(e) => {
+                            const img = e.currentTarget as HTMLImageElement;
+                            img.onerror = null;
+                            img.src = '/uploads/No_Image_Wide.svg_1.png';
+                          }}
+                          className="w-full h-full object-cover object-[50%_20%] group-hover:scale-105 transition-transform duration-500"
+                        />
+                      )}
                     </Link>
                     <span className="absolute top-3 left-3 bg-[#0a5482]/95 backdrop-blur-xs text-white text-xs font-extrabold px-3 py-1 rounded-full shadow-md border border-white/15 inline-flex items-center gap-1">
                       <Sparkles className="w-3 h-3 text-amber-300 shrink-0" />
@@ -1078,11 +1114,18 @@ export const HomePage: React.FC = () => {
                       onClick={() => setPopupVideo(videoFocus)}
                       className="block w-full h-full text-left relative cursor-pointer"
                     >
-                      <img
-                        src={resolveUploadUrl(videoFocus.video_thumb)}
-                        alt={videoFocus.video_desc}
-                        className="w-full h-full object-cover object-[50%_20%] group-hover:scale-105 transition-transform duration-500"
-                      />
+                      {resolveUploadUrl(videoFocus.video_thumb) && (
+                        <img
+                          src={resolveUploadUrl(videoFocus.video_thumb)}
+                          alt={videoFocus.video_desc}
+                          onError={(e) => {
+                            const img = e.currentTarget as HTMLImageElement;
+                            img.onerror = null;
+                            img.src = '/uploads/No_Image_Wide.svg_1.png';
+                          }}
+                          className="w-full h-full object-cover object-[50%_20%] group-hover:scale-105 transition-transform duration-500"
+                        />
+                      )}
                       <div className="absolute inset-0 bg-slate-900/25 flex items-center justify-center">
                         <span className="w-12 h-12 rounded-full bg-white/90 text-[#0a5482] flex items-center justify-center text-lg shadow-lg">
                           ▶
@@ -1309,7 +1352,9 @@ export const HomePage: React.FC = () => {
                           src={parsed.imageUrl}
                           alt={parsed.headline}
                           onError={(e) => {
-                            (e.currentTarget as HTMLImageElement).src = '/uploads/No_Image_Wide.svg_1.png';
+                            const img = e.currentTarget as HTMLImageElement;
+                            img.onerror = null;
+                            img.src = '/uploads/No_Image_Wide.svg_1.png';
                           }}
                           className={
                             parsed.isDiagram
@@ -1415,14 +1460,18 @@ export const HomePage: React.FC = () => {
                         }`}
                       >
                         <Link to={targetUrl} className="block w-full h-full relative">
-                          <img
-                            src={resolveUploadUrl(activeSub.vc_image || vc.vc_image)}
-                            alt={subTitle}
-                            onError={(e) => {
-                              (e.currentTarget as HTMLImageElement).src = '/uploads/No_Image_Wide.svg_1.png';
-                            }}
-                            className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 opacity-95"
-                          />
+                          {resolveUploadUrl(activeSub.vc_image || vc.vc_image) && (
+                            <img
+                              src={resolveUploadUrl(activeSub.vc_image || vc.vc_image)}
+                              alt={subTitle}
+                              onError={(e) => {
+                                const img = e.currentTarget as HTMLImageElement;
+                                img.onerror = null;
+                                img.src = '/uploads/No_Image_Wide.svg_1.png';
+                              }}
+                              className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 opacity-95"
+                            />
+                          )}
                           <div className="absolute inset-0 bg-gradient-to-t from-slate-900/55 via-transparent to-transparent flex items-center justify-center">
                             <span className="w-11 h-11 rounded-full bg-white/95 text-[#0a5482] flex items-center justify-center text-base shadow-lg group-hover:scale-110 transition-transform">
                               ▶

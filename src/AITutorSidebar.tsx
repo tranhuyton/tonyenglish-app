@@ -343,15 +343,15 @@ export default function AITutorSidebar({
       default:
         return ["💡 Hướng dẫn phương pháp", "🔍 Kiểm tra đáp án"];
     }
-  }, [mode, taskType]);
+  }, [mode, taskType, topicTitle]);
 
   const contextText = useMemo(() => {
-    if (mode === 'ielts' || mode === 'parent_mode' || !htmlContent) {
+    if ((mode === 'ielts' && taskType !== 'reading') || mode === 'parent_mode' || !htmlContent) {
         return '';
     }
     const doc = new DOMParser().parseFromString(htmlContent, 'text/html');
     return (doc.body.textContent || '').substring(0, 40000);
-  }, [htmlContent, mode]);
+  }, [htmlContent, mode, taskType]);
 
   useEffect(() => { 
       if (messagesEndRef.current && !isMinimized) {
@@ -798,7 +798,7 @@ Câu hỏi của học sinh: "${userMsg}"`;
       return (
           <button 
               onClick={() => { setIsMinimized(false); }}
-              className={`fixed bottom-[90px] md:bottom-[110px] right-3 md:right-7 z-[100000] w-13 h-13 md:w-15 md:h-15 rounded-2xl bg-gradient-to-br ${theme.headerBg} text-white shadow-[0_12px_32px_rgba(10,84,130,0.35)] flex items-center justify-center text-xl md:text-2xl hover:scale-105 active:scale-95 transition-all duration-300 animate-in zoom-in group border-2 border-[#2ab4e8]/60 backdrop-blur-sm cursor-pointer`}
+              className={`fixed bottom-20 lg:bottom-6 right-3 md:right-7 z-[70] w-13 h-13 md:w-15 md:h-15 rounded-2xl bg-gradient-to-br ${theme.headerBg} text-white shadow-[0_12px_32px_rgba(10,84,130,0.35)] flex items-center justify-center text-xl md:text-2xl hover:scale-105 active:scale-95 transition-all duration-300 animate-in zoom-in group border-2 border-[#2ab4e8]/60 backdrop-blur-sm cursor-pointer`}
               title="Mở lại khung Chat Tony AI Tutor"
           >
               <span className="group-hover:hidden drop-shadow-md">
@@ -818,7 +818,7 @@ Câu hỏi của học sinh: "${userMsg}"`;
     <>
       {isOpen && !isMinimized && (
           <div 
-              className="fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-[99999] md:hidden transition-opacity" 
+              className="fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-[69] md:hidden transition-opacity" 
               onClick={() => { 
                   setIsMinimized(true); 
                   setIsExpanded(false); 
@@ -831,7 +831,7 @@ Câu hỏi của học sinh: "${userMsg}"`;
               `fixed top-0 md:top-[64px] bottom-0 right-0 w-full ` + 
               `${isExpanded ? 'md:w-[800px]' : theme.width} ` + 
               `bg-[#f8fafc] shadow-[-12px_0_40px_rgba(15,23,42,0.12)] ` + 
-              `z-[100000] flex flex-col transition-all duration-300 ease-out border-l border-slate-200/90 ` + 
+              `z-[70] flex flex-col transition-all duration-300 ease-out border-l border-slate-200/90 ` + 
               `${isOpen && !isMinimized ? 'translate-x-0' : 'translate-x-full'}`
           }
       >
@@ -937,7 +937,7 @@ Câu hỏi của học sinh: "${userMsg}"`;
              
              <button 
                  onClick={() => { 
-                     if(window.confirm('Đóng cửa sổ này sẽ xóa lịch sử trò chuyện. Bạn có muốn thu nhỏ lại thay vì đóng hẳn không?')) {
+                     if (window.confirm('Bạn có chắc chắn muốn đóng hẳn và xóa toàn bộ lịch sử trò chuyện? (Bấm Hủy để chỉ thu nhỏ)')) {
                          setMessages([]);
                          onClose(); 
                          setIsExpanded(false); 
@@ -1060,8 +1060,8 @@ Câu hỏi của học sinh: "${userMsg}"`;
                  </div>
                  <div className="bg-white border border-slate-200/90 px-4 py-3 rounded-2xl rounded-tl-sm flex items-center gap-1.5 shadow-xs">
                      <span className="w-2 h-2 bg-[#2ab4e8] rounded-full animate-bounce"></span>
-                     <span className="w-2 h-2 bg-[#0a5482] rounded-full animate-bounce delay-100"></span>
-                     <span className="w-2 h-2 bg-[#2ab4e8] rounded-full animate-bounce delay-200"></span>
+                     <span className="w-2 h-2 bg-[#0a5482] rounded-full animate-bounce [animation-delay:150ms]"></span>
+                     <span className="w-2 h-2 bg-[#2ab4e8] rounded-full animate-bounce [animation-delay:300ms]"></span>
                  </div>
              </div>
           )}

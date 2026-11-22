@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
-import { supabase } from './supabase';
+import { supabase, isTonyEnglishAdmin } from './supabase';
 import { parseModuleTheme } from './moduleTheme';
 import { parseClassConfig } from './classConfigUtils';
 import { BoardTheme, DEFAULT_BOARD_THEME, BoardThemeModal, createCustomTheme, loadTheme, saveTheme } from './ThemeModal';
@@ -665,11 +665,25 @@ const PdfVisionViewer = ({ url, onClose, onCallTutor }: { url: string, onClose: 
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [pageInput, setPageInput] = useState<string>('1'); 
   const [isLoading, setIsLoading] = useState(true);
+  const [loadError, setLoadError] = useState<string | null>(null);
   const [isTwoPageMode, setIsTwoPageMode] = useState(false);
-  const [zoomLevel, setZoomLevel] = useState<number>(1.2);
+  const [zoomLevel, setZoomLevel] = useState<number>(() => (typeof window !== 'undefined' && window.innerWidth < 640 ? 0.75 : 1.2));
   const [isFullscreen, setIsFullscreen] = useState(false);
   
   const viewerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    setLoadError(null);
+    setIsLoading(true);
+    setCurrentPage(1);
+    setNumPages(null);
+  }, [url]);
+
+  useEffect(() => {
+    return () => {
+      clearTimeout((window as any).pdfCaptureTimeout);
+    };
+  }, []);
 
   useEffect(() => {
       setPageInput(currentPage.toString());
@@ -677,6 +691,12 @@ const PdfVisionViewer = ({ url, onClose, onCallTutor }: { url: string, onClose: 
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+          if (!document.fullscreenElement) {
+              onClose();
+          }
+          return;
+      }
       if (['INPUT', 'TEXTAREA'].includes((e.target as HTMLElement).tagName)) {
           return;
       }
@@ -694,7 +714,7 @@ const PdfVisionViewer = ({ url, onClose, onCallTutor }: { url: string, onClose: 
     
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [numPages, currentPage, isTwoPageMode]);
+  }, [numPages, currentPage, isTwoPageMode, onClose]);
 
   useEffect(() => {
     const onFullscreenChange = () => {
@@ -892,15 +912,52 @@ const PdfVisionViewer = ({ url, onClose, onCallTutor }: { url: string, onClose: 
         .pdf-page-single { box-shadow: 0 8px 40px rgba(0,0,0,0.5), 0 2px 10px rgba(0,0,0,0.3); }
       `}</style>
       <div className="flex-1 overflow-auto flex justify-center items-start p-4 md:p-8 bg-[#020617] relative custom-scrollbar scroll-smooth">
-         {isLoading && (
+         {isLoading && !loadError && (
             <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#020617]/80 backdrop-blur-sm z-10">
                <div className="w-10 h-10 border-4 border-[#0ea5e9]/20 border-t-[#0ea5e9] rounded-full animate-spin"></div>
                <span className="mt-3 text-slate-400 text-sm font-medium animate-pulse">Đang tải trang tài liệu...</span>
             </div>
          )}
+         {loadError ? (
+            <div className="my-auto max-w-md w-full bg-slate-900 border border-slate-700 rounded-2xl p-6 text-center shadow-2xl space-y-4">
+               <div className="w-14 h-14 mx-auto rounded-2xl bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-3xl">
+                 📄
+               </div>
+               <h3 className="text-white font-bold text-base">Không thể hiển thị trực tiếp file PDF</h3>
+               <p className="text-slate-400 text-xs leading-relaxed">
+                 {loadError} Em có thể mở trực tiếp tệp tài liệu ở tab mới bên dưới.
+               </p>
+               <div className="flex flex-wrap items-center justify-center gap-2.5 pt-1">
+                 <a
+                   href={url}
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-[#0ea5e9] hover:bg-[#0284c7] text-white text-xs font-bold shadow-md transition-all"
+                 >
+                   <span>Mở file PDF trực tiếp</span>
+                   <span>↗</span>
+                 </a>
+                 <button
+                   type="button"
+                   onClick={onClose}
+                   className="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-300 text-xs font-bold transition-all cursor-pointer"
+                 >
+                   Đóng
+                 </button>
+               </div>
+            </div>
+         ) : (
          <Document 
             file={url} 
-            onLoadSuccess={({ numPages }) => setNumPages(numPages)} 
+            onLoadSuccess={({ numPages }) => {
+              setLoadError(null);
+              setNumPages(numPages);
+            }}
+            onLoadError={(err) => {
+              console.error('[PdfVisionViewer] Failed to load PDF:', err);
+              setIsLoading(false);
+              setLoadError('Trình duyệt không thể tải trực tiếp tài liệu này do giới hạn kết nối hoặc định dạng tệp.');
+            }}
             loading={null}
          >
             <div className={`flex justify-center items-start ${isTwoPageMode ? 'gap-0 flex-col lg:flex-row' : ''}`}>
@@ -909,7 +966,8 @@ const PdfVisionViewer = ({ url, onClose, onCallTutor }: { url: string, onClose: 
                    scale={zoomLevel} 
                    renderTextLayer={false} 
                    renderAnnotationLayer={false} 
-                   onRenderSuccess={handlePageRenderSuccess} 
+                   onRenderSuccess={handlePageRenderSuccess}
+                   onRenderError={() => setIsLoading(false)}
                    className={`overflow-hidden max-w-full bg-white ${isTwoPageMode ? 'pdf-page-left' : 'pdf-page-single'}`}
                    loading={null} 
                />
@@ -919,13 +977,15 @@ const PdfVisionViewer = ({ url, onClose, onCallTutor }: { url: string, onClose: 
                        scale={zoomLevel} 
                        renderTextLayer={false} 
                        renderAnnotationLayer={false} 
-                       onRenderSuccess={handlePageRenderSuccess} 
+                       onRenderSuccess={handlePageRenderSuccess}
+                       onRenderError={() => setIsLoading(false)}
                        className="overflow-hidden max-w-full bg-white hidden lg:block pdf-page-right"
                        loading={null} 
                    />
                )}
            </div>
          </Document>
+         )}
       </div>
     </div>
   );
@@ -1199,11 +1259,19 @@ const StaticLectureContent = React.memo(({ html, isIframeOnly, fontScale = 100, 
       });
     }, [stopAllCurrentAudio, abortRecordingIfActive]);
 
+    const chimeAudioCtxRef = useRef<AudioContext | null>(null);
+
     const playChimeSound = useCallback((isSuccess: boolean) => {
       try {
         const AudioCtx = window.AudioContext || (window as any).webkitAudioContext;
         if (!AudioCtx) return;
-        const ctx = new AudioCtx();
+        if (!chimeAudioCtxRef.current || chimeAudioCtxRef.current.state === 'closed') {
+          chimeAudioCtxRef.current = new AudioCtx();
+        }
+        const ctx = chimeAudioCtxRef.current;
+        if (ctx.state === 'suspended') {
+          ctx.resume().catch(() => {});
+        }
         const osc = ctx.createOscillator();
         const gain = ctx.createGain();
         osc.connect(gain);
@@ -1470,13 +1538,26 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
     useEffect(() => {
       return () => {
         stopAllCurrentAudio(true);
-        if (autoStopTimerRef.current) clearTimeout(autoStopTimerRef.current);
-        if (mediaRecorderRef.current && mediaRecorderRef.current.state !== 'inactive') {
-          mediaRecorderRef.current.stop();
+        if (autoStopTimerRef.current) {
+          clearTimeout(autoStopTimerRef.current);
+          autoStopTimerRef.current = null;
+        }
+        if (mediaRecorderRef.current) {
+          mediaRecorderRef.current.onstop = null;
+          mediaRecorderRef.current.ondataavailable = null;
+          if (mediaRecorderRef.current.state !== 'inactive') {
+            try { mediaRecorderRef.current.stop(); } catch (e) {}
+          }
         }
         if (audioStreamRef.current) {
           audioStreamRef.current.getTracks().forEach(t => t.stop());
+          audioStreamRef.current = null;
         }
+        if (chimeAudioCtxRef.current && chimeAudioCtxRef.current.state !== 'closed') {
+          chimeAudioCtxRef.current.close().catch(() => {});
+          chimeAudioCtxRef.current = null;
+        }
+        clearTimeout((window as any).pdfCaptureTimeout);
       };
     }, [stopAllCurrentAudio]);
 
@@ -3341,6 +3422,10 @@ export default function LectureViewer({
   const lectureLoadRequestIdRef = useRef<number>(0);
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [completedTasks, setCompletedTasks] = useState<string[]>([]);
+  const completedTasksRef = useRef<string[]>(completedTasks);
+  useEffect(() => {
+    completedTasksRef.current = completedTasks;
+  }, [completedTasks]);
   const [testScoresMap, setTestScoresMap] = useState<Map<string, { score: number; total: number; percent: number; isPassed: boolean }>>(new Map());
   const [allLectureProgress, setAllLectureProgress] = useState<Record<string, string[]>>({});
   
@@ -3401,6 +3486,11 @@ export default function LectureViewer({
   });
   const [sidebarSearchQuery, setSidebarSearchQuery] = useState<string>('');
   const [readProgress, setReadProgress] = useState<number>(0);
+  const lastReadPctRef = useRef<number>(0);
+  const scrollRafRef = useRef<number | null>(null);
+  const [isDesktopViewport, setIsDesktopViewport] = useState<boolean>(() =>
+    typeof window !== 'undefined' ? window.innerWidth >= 768 : true
+  );
 
   const FONT_SCALE_STEPS = [85, 95, 100, 110, 120, 130];
   const stepFontScale = (dir: -1 | 1) => {
@@ -3418,8 +3508,19 @@ export default function LectureViewer({
   };
 
   useEffect(() => {
+    lastReadPctRef.current = 0;
     setReadProgress(0);
   }, [activeLectureId, currentPage, currentCourseId]);
+
+  useEffect(() => {
+    return () => {
+      if (scrollRafRef.current !== null) {
+        cancelAnimationFrame(scrollRafRef.current);
+        scrollRafRef.current = null;
+      }
+      clearTimeout((window as any).pdfCaptureTimeout);
+    };
+  }, []);
 
   useEffect(() => {
     setSidebarSearchQuery('');
@@ -3427,12 +3528,18 @@ export default function LectureViewer({
 
   const handleMainScroll = (e: React.UIEvent<HTMLElement>) => {
     const el = e.currentTarget;
-    const maxScroll = el.scrollHeight - el.clientHeight;
-    if (maxScroll <= 40) {
-      setReadProgress(0);
-      return;
-    }
-    setReadProgress(Math.min(100, Math.max(0, Math.round((el.scrollTop / maxScroll) * 100))));
+    if (scrollRafRef.current !== null) return;
+    scrollRafRef.current = requestAnimationFrame(() => {
+      scrollRafRef.current = null;
+      const maxScroll = el.scrollHeight - el.clientHeight;
+      const nextPct = maxScroll <= 40
+        ? 0
+        : Math.min(100, Math.max(0, Math.round((el.scrollTop / maxScroll) * 100)));
+      if (nextPct !== lastReadPctRef.current) {
+        lastReadPctRef.current = nextPct;
+        setReadProgress(nextPct);
+      }
+    });
   };
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -3801,14 +3908,19 @@ export default function LectureViewer({
     const handleFullscreenChange = () => {
         setIsFullscreen(!!document.fullscreenElement);
     };
+    const handleViewportResize = () => {
+        setIsDesktopViewport(window.innerWidth >= 768);
+    };
     document.addEventListener('fullscreenchange', handleFullscreenChange);
+    window.addEventListener('resize', handleViewportResize);
     
-    if (window.innerWidth >= 768) {
+    if (window.innerWidth >= 1024) {
         setIsSidebarOpen(true);
     }
     
     return () => {
         document.removeEventListener('fullscreenchange', handleFullscreenChange);
+        window.removeEventListener('resize', handleViewportResize);
     };
   }, []);
 
@@ -3962,11 +4074,11 @@ export default function LectureViewer({
 
       if (user) {
         const [{ data: profileData }, { data: userClassLinks }, { data: enrollRow }] = await Promise.all([
-          supabase.from('profiles').select('role').eq('id', user.id).single(),
+          supabase.from('profiles').select('role, status').eq('id', user.id).single(),
           supabase.from('class_students').select('class_id').eq('user_id', user.id),
           supabase.from('enrollments').select('id').eq('user_id', user.id).eq('course_id', activeId).maybeSingle()
         ]);
-        const isUserAdmin = user.email?.toLowerCase().includes('admin') || profileData?.role === 'admin';
+        const isUserAdmin = isTonyEnglishAdmin(user, profileData);
         if (!isUserAdmin) {
           const userClassIdSet = new Set((userClassLinks || []).map((x: any) => x.class_id));
           const userCourseClasses = courseClasses.filter((c: any) => userClassIdSet.has(c.id));
@@ -4462,97 +4574,100 @@ export default function LectureViewer({
       if (taskObj?.type === 'exercise') {
           return;
       }
-      
-      setCompletedTasks(prev => {
-         const isNowCompleted = !prev.includes(taskId);
-         const newCompleted = isNowCompleted ? [...prev, taskId] : prev.filter(id => id !== taskId);
-         const isCompleted = safeLectureTasks.length > 0 && newCompleted.length === safeLectureTasks.length;
-         
-         // Cập nhật currentLectureAssignments local state ngay lập tức
-         setCurrentLectureAssignments(cur => {
-             const syncTitle = `${activeLecture?.title || ''} : ${taskObj?.text || ''}`;
-             return cur.map(a => {
-                 if (a.title === syncTitle || a.title === taskObj?.text || a.title === `[Bài giảng] ${taskObj?.text}`) {
-                     return {
-                         ...a,
-                         student_completed: isNowCompleted,
-                         admin_approved: isNowCompleted ? a.admin_approved : false
-                     };
-                 }
-                 return a;
-             });
-         });
 
-         // Đồng bộ với Assignment (hỗ trợ cả thẻ theo tên Bài giảng lẫn thẻ "Công việc Section/Topic")
-         if (taskObj && taskObj.type === 'manual') {
-             const syncTitle = `${activeLecture?.title || ''} : ${taskObj.text}`;
-             const payload: any = { student_completed: isNowCompleted, updated_at: new Date().toISOString() };
-             if (!isNowCompleted) payload.admin_approved = false;
+      const prevCompleted = completedTasksRef.current;
+      const isNowCompleted = !prevCompleted.includes(taskId);
+      const newCompleted = isNowCompleted ? [...prevCompleted, taskId] : prevCompleted.filter(id => id !== taskId);
+      const isCompleted = safeLectureTasks.length > 0 && newCompleted.length === safeLectureTasks.length;
 
-             const updatePromises: PromiseLike<any>[] = [
-               supabase.from('assignments')
-                 .update(payload)
-                 .eq('user_id', currentUser.id)
-                 .eq('task_type', 'manual')
-                 .eq('title', syncTitle)
-             ];
+      completedTasksRef.current = newCompleted;
+      setCompletedTasks(newCompleted);
 
-             if (activeLecture?.title) {
-               updatePromises.push(
-                 supabase.from('assignments')
-                   .update(payload)
-                   .eq('user_id', currentUser.id)
-                   .eq('task_type', 'manual')
-                   .eq('card_title', activeLecture.title)
-                   .in('title', [syncTitle, `[Bài giảng] ${taskObj.text}`, taskObj.text])
-               );
-             }
-
-             Promise.all(updatePromises).then(() => {
-                 window.dispatchEvent(new CustomEvent('tony-refresh-lecture-progress'));
-             });
-         }
-         
-         supabase.from('lecture_progress')
-             .select('id')
-             .eq('user_id', currentUser.id)
-             .eq('lecture_id', activeLectureId)
-             .then(({ data: existingArray }) => {
-                 if (existingArray && existingArray.length > 0) {
-                     supabase.from('lecture_progress')
-                         .update({ completed_tasks: newCompleted, is_completed: isCompleted })
-                         .eq('id', existingArray[0].id)
-                         .then();
-                 } else {
-                     supabase.from('lecture_progress')
-                         .insert({ user_id: currentUser.id, lecture_id: activeLectureId, completed_tasks: newCompleted, is_completed: isCompleted })
-                         .then();
-                 }
-             }).catch();
-
-         setAllLectureProgress(allPrev => ({ 
-             ...allPrev, 
-             [activeLectureId]: newCompleted 
-         }));
-
-         if (isCompleted) {
-             setCompletedLectures(prevSet => new Set(prevSet).add(activeLectureId));
-             supabase.from('activity_logs').insert([{
-                 user_id: currentUser.id,
-                 action_type: 'finish_lecture',
-                 details: { lecture_title: activeLecture?.title || "Bài giảng" }
-             }]).then();
-         } else {
-             setCompletedLectures(prevSet => {
-                 const newSet = new Set(prevSet);
-                 newSet.delete(activeLectureId);
-                 return newSet;
-             });
-         }
-         
-         return newCompleted;
+      // Cập nhật currentLectureAssignments local state ngay lập tức
+      setCurrentLectureAssignments(cur => {
+          const syncTitle = `${activeLecture?.title || ''} : ${taskObj?.text || ''}`;
+          return cur.map(a => {
+              if (a.title === syncTitle || a.title === taskObj?.text || a.title === `[Bài giảng] ${taskObj?.text}`) {
+                  return {
+                      ...a,
+                      student_completed: isNowCompleted,
+                      admin_approved: isNowCompleted ? a.admin_approved : false
+                  };
+              }
+              return a;
+          });
       });
-  }, [currentUser, activeLectureId, lectures, activeLecture]);
+
+      setAllLectureProgress(allPrev => ({ 
+          ...allPrev, 
+          [activeLectureId]: newCompleted 
+      }));
+
+      if (isCompleted) {
+          setCompletedLectures(prevSet => new Set(prevSet).add(activeLectureId));
+      } else {
+          setCompletedLectures(prevSet => {
+              const newSet = new Set(prevSet);
+              newSet.delete(activeLectureId);
+              return newSet;
+          });
+      }
+
+      // Đồng bộ với Assignment (hỗ trợ cả thẻ theo tên Bài giảng lẫn thẻ "Công việc Section/Topic")
+      if (taskObj && taskObj.type === 'manual') {
+          const syncTitle = `${activeLecture?.title || ''} : ${taskObj.text}`;
+          const payload: any = { student_completed: isNowCompleted, updated_at: new Date().toISOString() };
+          if (!isNowCompleted) payload.admin_approved = false;
+
+          const updatePromises: PromiseLike<any>[] = [
+            supabase.from('assignments')
+              .update(payload)
+              .eq('user_id', currentUser.id)
+              .eq('task_type', 'manual')
+              .eq('title', syncTitle)
+          ];
+
+          if (activeLecture?.title) {
+            updatePromises.push(
+              supabase.from('assignments')
+                .update(payload)
+                .eq('user_id', currentUser.id)
+                .eq('task_type', 'manual')
+                .eq('card_title', activeLecture.title)
+                .in('title', [syncTitle, `[Bài giảng] ${taskObj.text}`, taskObj.text])
+            );
+          }
+
+          Promise.all(updatePromises).then(() => {
+              window.dispatchEvent(new CustomEvent('tony-refresh-lecture-progress'));
+          }).catch(() => {});
+      }
+      
+      supabase.from('lecture_progress')
+          .select('id')
+          .eq('user_id', currentUser.id)
+          .eq('lecture_id', activeLectureId)
+          .then(({ data: existingArray }) => {
+              if (existingArray && existingArray.length > 0) {
+                  supabase.from('lecture_progress')
+                      .update({ completed_tasks: newCompleted, is_completed: isCompleted })
+                      .eq('id', existingArray[0].id)
+                      .then();
+              } else {
+                  supabase.from('lecture_progress')
+                      .insert({ user_id: currentUser.id, lecture_id: activeLectureId, completed_tasks: newCompleted, is_completed: isCompleted })
+                      .then();
+              }
+          }).catch(() => {});
+
+      if (isCompleted) {
+          supabase.from('activity_logs').insert([{
+              user_id: currentUser.id,
+              action_type: 'finish_lecture',
+              details: { lecture_title: activeLecture?.title || "Bài giảng" }
+          }]).then();
+      }
+  }, [currentUser, activeLectureId, activeLecture]);
 
   const handleMarkWt2TaskDone = useCallback((taskId: string) => {
     if (!taskId) return;
@@ -4661,7 +4776,9 @@ export default function LectureViewer({
          
          const type = String(testData.test_type || '').toLowerCase();
 
-          if (type === 'igcse-direct') {
+          if (type.includes('sat-bluebook') || type === 'sat') {
+              onStartTest('sat-bluebook', testData);
+          } else if (type === 'igcse-direct') {
               onStartTest('igcse-direct', testData);
           } else if (type.includes('igcse')) {
               onStartTest('igcse', testData);
@@ -4816,6 +4933,25 @@ export default function LectureViewer({
 
   const isAllTasksDone = safeLectureTasks.length > 0 && safeCompletedTasks.length === safeLectureTasks.length;
 
+  const { sidebarSearchNorm, filteredModules } = useMemo(() => {
+    const normalizeSearch = (s: string) =>
+      (s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd');
+    const qNorm = normalizeSearch(sidebarSearchQuery.trim());
+    const list = modules
+      .map((mod, origIdx) => {
+        const modLecs = lectures.filter(l => l.module_id === mod.id);
+        if (!qNorm) return { mod, origIdx, matchedLectures: modLecs };
+        const theme = parseModuleTheme(mod.title, mod);
+        const modMatch = normalizeSearch(theme.cleanTitle).includes(qNorm);
+        const matchedLectures = modMatch
+          ? modLecs
+          : modLecs.filter(l => normalizeSearch(l.title).includes(qNorm));
+        return { mod, origIdx, matchedLectures };
+      })
+      .filter(item => !qNorm || item.matchedLectures.length > 0);
+    return { sidebarSearchNorm: qNorm, filteredModules: list };
+  }, [modules, lectures, sidebarSearchQuery]);
+
   if (isLoading) {
       return (
           <div className="min-h-[100dvh] flex flex-col items-center justify-center bg-slate-50">
@@ -4845,7 +4981,7 @@ export default function LectureViewer({
     <div className="flex flex-col h-[100dvh] w-full bg-[#f8fafc] font-sans text-slate-800 overflow-hidden relative overscroll-none">
       
       <header 
-         className="relative h-[64px] backdrop-blur-md text-white flex items-center px-3.5 sm:px-5 md:px-6 shrink-0 z-30 shadow-md justify-between border-b border-white/15 transition-all duration-300"
+         className={`relative h-[64px] backdrop-blur-md text-white flex items-center px-3.5 sm:px-5 md:px-6 shrink-0 ${isCourseDropdownOpen || isMobileMenuOpen ? 'z-[60]' : 'z-40'} shadow-md justify-between border-b border-white/15 transition-all duration-300`}
          style={{
              background: lectureTheme?.titleBg || 'linear-gradient(135deg, #073b5c 0%, #0a5482 55%, #0f172a 100%)',
              color: lectureTheme?.titleText || '#ffffff'
@@ -4880,7 +5016,7 @@ export default function LectureViewer({
                   window.dispatchEvent(new CustomEvent('tony-close-sidebar'));
                   window.dispatchEvent(new CustomEvent('tony-navigate', { detail: 'home' }));
                 }} 
-                className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-xl bg-white/12 hover:bg-white/22 border border-white/15 transition-all shrink-0 cursor-pointer" 
+                className="hidden sm:flex w-9 h-9 sm:w-10 sm:h-10 items-center justify-center rounded-xl bg-white/12 hover:bg-white/22 border border-white/15 transition-all shrink-0 cursor-pointer" 
                 title="Về trang chủ TonyEnglish.vn"
             >
                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.2} stroke="currentColor" className="w-4 h-4 sm:w-5 sm:h-5">
@@ -5005,7 +5141,7 @@ export default function LectureViewer({
             <button
               type="button"
               onClick={() => setIsLectureThemeModalOpen(true)}
-              className="flex items-center justify-center w-9 h-9 rounded-xl transition-all bg-white/12 hover:bg-white/22 text-white border border-white/20 shadow-xs active:scale-95 shrink-0 cursor-pointer"
+              className="hidden sm:flex items-center justify-center w-9 h-9 rounded-xl transition-all bg-white/12 hover:bg-white/22 text-white border border-white/20 shadow-xs active:scale-95 shrink-0 cursor-pointer"
               title="Đổi màu nền bài giảng"
             >
               <span className="text-sm sm:text-base">🎨</span>
@@ -5141,6 +5277,73 @@ export default function LectureViewer({
                           <span>🧭</span> Lộ trình học AI Tutor
                         </button>
                       )}
+                      {(course?.title || '').toLowerCase().includes('ielts') && (
+                        <div className="sm:hidden border-t border-slate-100 mt-1 pt-1">
+                          <div className="px-4 py-1 text-[10px] font-extrabold uppercase tracking-wider text-slate-400">
+                            Trợ lý IELTS AI
+                          </div>
+                          <button
+                            type="button"
+                            onClick={() => {
+                              setIsMobileMenuOpen(false);
+                              onOpenAI?.('ielts', activeLecture?.title, undefined, 'speaking');
+                            }}
+                            className="w-full text-left px-4 py-2 text-[13px] font-bold text-rose-600 hover:bg-rose-50 flex items-center gap-2.5 transition-colors cursor-pointer"
+                          >
+                            <span>🎙️</span> Tutor Speaking (Spk)
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => {
+                              setIsMobileMenuOpen(false);
+                              onOpenAI?.('ielts', activeLecture?.title, undefined, 'task1');
+                            }}
+                            className="w-full text-left px-4 py-2 text-[13px] font-bold text-emerald-700 hover:bg-emerald-50 flex items-center gap-2.5 transition-colors cursor-pointer"
+                          >
+                            <span>📊</span> Tutor Writing Task 1 (WT1)
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => {
+                              setIsMobileMenuOpen(false);
+                              onOpenAI?.('ielts', activeLecture?.title, undefined, 'task2');
+                            }}
+                            className="w-full text-left px-4 py-2 text-[13px] font-bold text-violet-700 hover:bg-violet-50 flex items-center gap-2.5 transition-colors cursor-pointer"
+                          >
+                            <span>✍️</span> Tutor Writing Task 2 (WT2)
+                          </button>
+                        </div>
+                      )}
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setIsMobileMenuOpen(false);
+                          setIsLectureThemeModalOpen(true);
+                        }}
+                        className="sm:hidden w-full text-left px-4 py-2.5 text-[13px] font-semibold text-slate-700 hover:bg-sky-50 hover:text-[#0a5482] flex items-center gap-2.5 transition-colors border-t border-slate-100 mt-1 cursor-pointer"
+                      >
+                        <span>🎨</span> Đổi màu nền bài giảng
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setIsMobileMenuOpen(false);
+                          try {
+                            sessionStorage.setItem('lms_last_student_view', 'lecture');
+                            localStorage.setItem('lms_last_student_view', 'lecture');
+                            if (currentCourseId) {
+                              sessionStorage.setItem('lms_active_course_id', currentCourseId);
+                              localStorage.setItem('lms_active_course_id', currentCourseId);
+                            }
+                          } catch (e) {}
+                          window.history.pushState(null, '', '/');
+                          window.dispatchEvent(new CustomEvent('tony-close-sidebar'));
+                          window.dispatchEvent(new CustomEvent('tony-navigate', { detail: 'home' }));
+                        }}
+                        className="sm:hidden w-full text-left px-4 py-2.5 text-[13px] font-semibold text-slate-700 hover:bg-sky-50 hover:text-[#0a5482] flex items-center gap-2.5 transition-colors cursor-pointer"
+                      >
+                        <span>🏠</span> Về trang chủ TonyEnglish
+                      </button>
                       <div className="sm:hidden px-4 py-2 border-t border-slate-100 flex items-center justify-between gap-2 mt-1">
                         <span className="text-[12px] font-bold text-slate-600">🔤 Cỡ chữ</span>
                         <div className="flex items-center gap-1 bg-slate-100 rounded-lg p-0.5">
@@ -5245,21 +5448,21 @@ export default function LectureViewer({
                  <>
                  <button 
                      onClick={() => onOpenAI?.('ielts', activeLecture?.title, undefined, 'speaking')} 
-                     className="w-9 h-9 rounded-xl flex items-center justify-center transition-all bg-gradient-to-br from-pink-400 to-rose-500 text-white shadow-sm border border-white/20 hover:scale-105 shrink-0 cursor-pointer"
+                     className="hidden sm:flex w-9 h-9 rounded-xl items-center justify-center transition-all bg-gradient-to-br from-pink-400 to-rose-500 text-white shadow-sm border border-white/20 hover:scale-105 shrink-0 cursor-pointer"
                      title="Tutor Speaking"
                  >
                      <span className="text-[10px] md:text-[11px] font-extrabold leading-tight">Spk</span>
                  </button>
                  <button 
                      onClick={() => onOpenAI?.('ielts', activeLecture?.title, undefined, 'task1')} 
-                     className="w-9 h-9 rounded-xl flex items-center justify-center transition-all bg-gradient-to-br from-emerald-400 to-teal-500 text-white shadow-sm border border-white/20 hover:scale-105 shrink-0 cursor-pointer"
+                     className="hidden sm:flex w-9 h-9 rounded-xl items-center justify-center transition-all bg-gradient-to-br from-emerald-400 to-teal-500 text-white shadow-sm border border-white/20 hover:scale-105 shrink-0 cursor-pointer"
                      title="Tutor Writing Task 1"
                  >
                      <span className="text-[10px] md:text-[11px] font-extrabold leading-tight">WT1</span>
                  </button>
                  <button 
                      onClick={() => onOpenAI?.('ielts', activeLecture?.title, undefined, 'task2')} 
-                     className="w-9 h-9 rounded-xl flex items-center justify-center transition-all bg-gradient-to-br from-violet-400 to-purple-500 text-white shadow-sm border border-white/20 hover:scale-105 shrink-0 cursor-pointer"
+                     className="hidden sm:flex w-9 h-9 rounded-xl items-center justify-center transition-all bg-gradient-to-br from-violet-400 to-purple-500 text-white shadow-sm border border-white/20 hover:scale-105 shrink-0 cursor-pointer"
                      title="Tutor Writing Task 2"
                  >
                      <span className="text-[10px] md:text-[11px] font-extrabold leading-tight">WT2</span>
@@ -5357,41 +5560,21 @@ export default function LectureViewer({
            <div className="flex-1 overflow-y-auto custom-scrollbar bg-white pb-24" style={{ WebkitOverflowScrolling: 'touch' }}>
              {modules.length === 0 ? (
                 <div className="p-8 text-center text-slate-400 text-sm">Chưa có nội dung.</div>
-             ) : (() => {
-                const normalizeSearch = (s: string) =>
-                  (s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd');
-                const qNorm = normalizeSearch(sidebarSearchQuery.trim());
-                const filteredModules = modules
-                  .map((mod, origIdx) => {
-                    const modLecs = lectures.filter(l => l.module_id === mod.id);
-                    if (!qNorm) return { mod, origIdx, matchedLectures: modLecs };
-                    const theme = parseModuleTheme(mod.title, mod);
-                    const modMatch = normalizeSearch(theme.cleanTitle).includes(qNorm);
-                    const matchedLectures = modMatch
-                      ? modLecs
-                      : modLecs.filter(l => normalizeSearch(l.title).includes(qNorm));
-                    return { mod, origIdx, matchedLectures };
-                  })
-                  .filter(item => !qNorm || item.matchedLectures.length > 0);
-
-                if (qNorm && filteredModules.length === 0) {
-                  return (
-                    <div className="p-8 text-center space-y-2.5">
-                      <div className="text-2xl">🔍</div>
-                      <p className="text-sm font-bold text-slate-600">Không tìm thấy bài giảng phù hợp</p>
-                      <button
-                        type="button"
-                        onClick={() => setSidebarSearchQuery('')}
-                        className="text-xs font-extrabold text-[#0a5482] bg-sky-50 hover:bg-sky-100 border border-sky-200 px-3 py-1.5 rounded-lg transition cursor-pointer"
-                      >
-                        Xóa tìm kiếm
-                      </button>
-                    </div>
-                  );
-                }
-
-                return filteredModules.map(({ mod, origIdx: index, matchedLectures: moduleLectures }) => {
-                  const isExpanded = qNorm ? true : expandedModules.includes(mod.id);
+             ) : sidebarSearchNorm && filteredModules.length === 0 ? (
+                <div className="p-8 text-center space-y-2.5">
+                  <div className="text-2xl">🔍</div>
+                  <p className="text-sm font-bold text-slate-600">Không tìm thấy bài giảng phù hợp</p>
+                  <button
+                    type="button"
+                    onClick={() => setSidebarSearchQuery('')}
+                    className="text-xs font-extrabold text-[#0a5482] bg-sky-50 hover:bg-sky-100 border border-sky-200 px-3 py-1.5 rounded-lg transition cursor-pointer"
+                  >
+                    Xóa tìm kiếm
+                  </button>
+                </div>
+             ) : (
+                filteredModules.map(({ mod, origIdx: index, matchedLectures: moduleLectures }) => {
+                  const isExpanded = sidebarSearchNorm ? true : expandedModules.includes(mod.id);
                   const theme = parseModuleTheme(mod.title, mod);
                   const isModuleAllLocked = isTrialMode && moduleLectures.length > 0 && moduleLectures.every(l => !trialUnlockedLectureIds.has(l.id));
                   
@@ -5451,7 +5634,8 @@ export default function LectureViewer({
                         </span>
                       </button>
                       
-                      <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isExpanded ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                      <div className={`grid transition-[grid-template-rows,opacity] duration-300 ease-in-out ${isExpanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
+                        <div className="overflow-hidden">
                         <div 
                             className="py-2 bg-white flex flex-col gap-0.5 px-2"
                             style={!isModuleAllLocked && theme.hasColor ? { borderLeft: `3px solid ${theme.border}`, marginLeft: '8px', marginRight: '4px' } : {}}
@@ -5579,18 +5763,19 @@ export default function LectureViewer({
                              )
                           })}
                         </div>
+                        </div>
                       </div>
                     </div>
                   )
-                });
-             })()}
+                })
+             )}
            </div>
          </aside>
 
          <main 
              className={`flex-1 overflow-y-auto custom-scrollbar relative lecture-content transition-all duration-500 ease-in-out`} 
              style={{
-                 ...(isTeacherBoardOpen ? { paddingRight: `${boardWidthVw}vw` } : {}),
+                 ...(isTeacherBoardOpen && isDesktopViewport ? { paddingRight: `${boardWidthVw}vw` } : {}),
                  backgroundColor: lectureTheme.boardBg
              }}
              ref={containerRef}
@@ -6102,8 +6287,8 @@ export default function LectureViewer({
           ></div>
 
           <div 
-            className={`w-full h-full relative pointer-events-auto transition-all duration-500 ease-in-out ${isTeacherBoardOpen ? '' : 'w-full'}`}
-            style={isTeacherBoardOpen ? { width: `${100 - boardWidthVw}vw` } : undefined}
+            className={`w-full h-full relative pointer-events-auto transition-all duration-500 ease-in-out ${isTeacherBoardOpen && isDesktopViewport ? '' : 'w-full'}`}
+            style={isTeacherBoardOpen && isDesktopViewport ? { width: `${100 - boardWidthVw}vw` } : undefined}
           >
              
              {/* Render PDF */}
@@ -6354,7 +6539,7 @@ export default function LectureViewer({
           onClick={() => setIsStudyCoachModalOpen(false)}
         >
           <div
-            className="w-full max-w-5xl rounded-3xl relative"
+            className="w-full max-w-5xl max-h-[90dvh] overflow-y-auto rounded-3xl relative"
             onClick={(e) => e.stopPropagation()}
           >
             <CourseStudyCoach

@@ -58,6 +58,8 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
         return (typeof parsed === 'object' && parsed !== null) ? parsed : {};
      } catch(e) { return {}; }
   });
+  const answersRef = useRef(answers);
+  useEffect(() => { answersRef.current = answers; }, [answers]);
 
   const [currentTaskIndex, setCurrentTaskIndex] = useState(0);
   const currentTask = allQuestions[currentTaskIndex];
@@ -67,10 +69,13 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
   const [isSubmitted, setIsSubmitted] = useState(false);
   useEffect(() => { window.dispatchEvent(new CustomEvent('tony-review-mode-change', { detail: Boolean(isSubmitted) })); return () => { window.dispatchEvent(new CustomEvent('tony-review-mode-change', { detail: false })); }; }, [isSubmitted]);
   const [isGrading, setIsGrading] = useState(false);
+  const isFinishingRef = useRef(false);
   const [aiResult, setAiResult] = useState<any>(null);
 
   const parseTime = (t: any) => parseInt(t) || 60;
   const [timeLeft, setTimeLeft] = useState(() => parseTime(basicInfo.timeLimit) * 60);
+  const timeLeftRef = useRef(timeLeft);
+  useEffect(() => { timeLeftRef.current = timeLeft; }, [timeLeft]);
 
   // Resize Left/Right Column logic
   const [leftWidth, setLeftWidth] = useState(50);
@@ -124,7 +129,7 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
   useEffect(() => {
     if (isSubmitted || isGrading) return;
     const timer = setInterval(() => setTimeLeft(prev => {
-        if (prev <= 1) { clearInterval(timer); handleSubmit(); return 0; }
+        if (prev <= 1) { clearInterval(timer); handleSubmitRef.current(true); return 0; }
         return prev - 1;
     }), 1000);
     return () => clearInterval(timer);
@@ -132,12 +137,17 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
 
   const formatTime = (secs: number) => {
     if (isNaN(secs)) return '60 minutes left';
+    if (secs < 60) {
+      const m = Math.floor(Math.max(0, secs) / 60).toString().padStart(2, '0');
+      const s = (Math.max(0, secs) % 60).toString().padStart(2, '0');
+      return `${m}:${s}`;
+    }
     const m = Math.floor(secs / 60);
     return `${m} minutes left`;
   };
 
   useEffect(() => {
-    if (safeData?.id && !isSubmitted && !isGrading) {
+    if (safeData?.id && !isSubmitted && !isGrading && !isFinishingRef.current) {
       localStorage.setItem(`ielts_writing_ans_${safeData.id}`, JSON.stringify(answers));
     }
   }, [answers, safeData?.id, isSubmitted, isGrading]);
@@ -156,19 +166,24 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
     return str === '' ? 0 : str.split(/\s+/).length;
   };
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (forceAutoSubmit: any = false) => {
+    const isForced = forceAutoSubmit === true;
+    if (isGrading || isFinishingRef.current) return;
+    const currentAnswers = answersRef.current;
+
     let totalWords = 0;
-    Object.values(answers).forEach(ans => totalWords += getWordCount(ans));
+    Object.values(currentAnswers).forEach(ans => totalWords += getWordCount(ans));
 
-    if (totalWords < 50) {
-      alert("Bạn chưa viết đủ bài. Vui lòng hoàn thiện tối thiểu 50 từ trước khi nộp.");
-      return;
+    if (!isForced) {
+      if (totalWords < 50) {
+        alert("Bạn chưa viết đủ bài. Vui lòng hoàn thiện tối thiểu 50 từ trước khi nộp.");
+        return;
+      }
+      if (!window.confirm("Bạn có chắc chắn muốn nộp bài thi? Hệ thống sẽ gửi bài cho Giám khảo AI chấm điểm.")) return;
     }
-    if (!window.confirm("Bạn có chắc chắn muốn nộp bài thi? Hệ thống sẽ gửi bài cho Giám khảo AI chấm điểm.")) return;
 
+    isFinishingRef.current = true;
     setIsGrading(true);
-
-    if (safeData?.id) localStorage.removeItem(`ielts_writing_ans_${safeData.id}`);
 
     try {
       // 🚀 NHẶT LINK ẢNH TỪ TẤT CẢ CÁC TASK ĐỂ GỬI CHO AI CHẤM
@@ -193,7 +208,7 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
         Lưu ý: Đối với Task 1, tôi đã gửi kèm hình ảnh biểu đồ/bản đồ trong tệp đính kèm. Bạn HÃY PHÂN TÍCH ẢNH NÀY để đối chiếu xem học sinh mô tả số liệu, đặc điểm có đúng với hình hay không (để chấm tiêu chí Task Achievement).
 
         BÀI LÀM CỦA HỌC SINH (Map theo ID câu hỏi):
-        ${JSON.stringify(answers)}
+        ${JSON.stringify(currentAnswers)}
 
         Hãy phân tích tất cả các Task học sinh đã làm và trả về ĐÚNG định dạng JSON sau (không dùng markdown block):
         {
@@ -234,6 +249,7 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
 
       const { data: { user } } = await supabase.auth.getUser();
       if (user) {
+        const timeSpentSecs = Math.max(0, (parseTime(basicInfo.timeLimit) * 60) - timeLeftRef.current);
         await supabase.from('test_results').insert([{
           user_id: user.id,
           course_id: safeData?.course_id || null,
@@ -241,12 +257,16 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
           test_type: 'IELTS-Writing',
           score: parsedResult.overall,
           total_score: 9,
-          time_spent: (parseTime(basicInfo.timeLimit) * 60) - timeLeft,
-          details: { test_id: safeData?.id, userAnswers: answers, aiFeedback: parsedResult, bandScore: parsedResult.overall }
+          time_spent: timeSpentSecs,
+          details: { test_id: safeData?.id, userAnswers: currentAnswers, aiFeedback: parsedResult, bandScore: parsedResult.overall }
         }]);
       }
 
+      // Chỉ xóa bản nháp sau khi chấm & lưu thành công
+      if (safeData?.id) localStorage.removeItem(`ielts_writing_ans_${safeData.id}`);
+
     } catch (error: any) {
+      isFinishingRef.current = false;
       console.error("LỖI CHI TIẾT:", error);
       alert("Hệ thống chấm điểm AI bị lỗi. Vui lòng thử lại: " + error.message);
     } finally {
@@ -254,12 +274,28 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
     }
   };
 
+  const handleSubmitRef = useRef(handleSubmit);
+  handleSubmitRef.current = handleSubmit;
+
   if (!testData || allQuestions.length === 0) {
-    return <div className="h-screen w-full flex items-center justify-center bg-[#eeeeee] font-bold text-slate-900">Loading test data...</div>;
+    return (
+      <div className="h-[100dvh] w-full flex flex-col items-center justify-center gap-4 bg-[#eeeeee] font-bold text-slate-800 p-6 text-center">
+        <p className="text-base">⚠️ Không tìm thấy nội dung đề thi IELTS Writing.</p>
+        {onBack && (
+          <button
+            type="button"
+            onClick={onBack}
+            className="px-5 py-2.5 bg-[#0a5482] hover:bg-[#084266] text-white rounded-xl text-sm font-bold transition shadow-sm cursor-pointer"
+          >
+            ← Quay lại
+          </button>
+        )}
+      </div>
+    );
   }
 
   return (
-    <div className="h-screen flex flex-col bg-[#eeeeee] font-sans text-slate-900 overflow-hidden">
+    <div className="h-[100dvh] flex flex-col bg-[#eeeeee] font-sans text-slate-900 overflow-hidden">
       
       {/* Đã tinh chỉnh khoảng cách dòng (leading) và margin dưới của thẻ P */}
       <style>{`
@@ -453,7 +489,7 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
                 
                 <button 
                   type="button"
-                  onClick={handleSubmit}
+                  onClick={() => handleSubmit(false)}
                   className="bg-[#0a5482] hover:bg-[#084266] text-white px-5 sm:px-6 py-2 rounded-xl text-[13px] sm:text-[14px] font-black transition uppercase tracking-wide shadow-sm cursor-pointer"
                 >
                   Nộp bài

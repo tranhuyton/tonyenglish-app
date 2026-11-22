@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 // ============================================================================
 // SHARED THEME SYSTEM (Extracted from TaskBoard.tsx)
@@ -188,6 +188,12 @@ export function BoardThemeModal({
 }) {
   const [customHex, setCustomHex] = useState(currentTheme.boardBg.startsWith('#') ? currentTheme.boardBg : '#0079bf');
 
+  useEffect(() => {
+    if (currentTheme.boardBg.startsWith('#')) {
+      setCustomHex(currentTheme.boardBg);
+    }
+  }, [currentTheme.boardBg]);
+
   if (!isOpen) return null;
 
   return (
@@ -314,7 +320,7 @@ export function BoardThemeModal({
             }}
             className="text-xs font-bold text-slate-500 hover:text-sky-600 transition-colors cursor-pointer"
           >
-            ↺ Khôi phục mặc định (Xanh Trello)
+            ↺ Khôi phục giao diện chuẩn (Mặc định)
           </button>
           <button
             type="button"

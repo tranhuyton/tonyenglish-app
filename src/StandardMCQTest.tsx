@@ -239,10 +239,28 @@ export default function StandardMCQTest({
   }
 
   const basicInfo = contentJSON?.basicInfo || { title: "Standard Test", timeLimit: "60", skill: "" };
-  const parts = Array.isArray(contentJSON?.parts) ? contentJSON.parts : [];
+  const rawParts = Array.isArray(contentJSON?.parts) ? contentJSON.parts : [];
+  const parts = useMemo(() => rawParts.map((p: any) => ({
+    ...p,
+    audioUrl: p?.audioUrl || p?.audio_url || '',
+    sections: Array.isArray(p?.sections) ? p.sections.map((s: any) => ({
+      ...s,
+      audioUrl: s?.audioUrl || s?.audio_url || '',
+      questions: Array.isArray(s?.questions) ? s.questions.map((q: any) => ({
+        ...q,
+        audioUrl: q?.audioUrl || q?.audio_url || '',
+        content: (q?.content !== undefined && q?.content !== null && String(q.content).trim() !== '')
+          ? q.content
+          : (q?.question || ''),
+        correctAnswer: (q?.correctAnswer !== undefined && q?.correctAnswer !== null && String(q.correctAnswer).trim() !== '')
+          ? q.correctAnswer
+          : (q?.answer ?? ''),
+      })) : []
+    })) : []
+  })), [contentJSON]);
   
   const isListening = true;
-  const globalAudio = basicInfo.audioUrl || parts[0]?.audioUrl;
+  const globalAudio = basicInfo.audioUrl || basicInfo.audio_url || parts[0]?.audioUrl;
 
 
 
@@ -347,6 +365,16 @@ export default function StandardMCQTest({
   
   const globalAudioRef = useRef<HTMLAudioElement>(null);
   const isFinishingRef = useRef(false);
+
+  useEffect(() => {
+    return () => {
+      if (globalAudioRef.current) {
+        try {
+          globalAudioRef.current.pause();
+        } catch {}
+      }
+    };
+  }, []);
 
   const containerRef = useRef<HTMLDivElement>(null);
   const rightPaneRef = useRef<HTMLDivElement>(null);
@@ -482,15 +510,23 @@ export default function StandardMCQTest({
   };
 
 // NỘP BÀI VÀ TÍNH ĐIỂM
-const handleFinish = async () => {
+const handleFinish = async (forceAutoSubmit: any = false) => {
+  const isForced = forceAutoSubmit === true;
   if (!isReviewMode) {
-    if (!window.confirm("Bạn có chắc chắn muốn nộp bài?")) {
+    if (isFinishingRef.current) return;
+    if (!isForced && !window.confirm("Bạn có chắc chắn muốn nộp bài?")) {
         return;
     }
     
     isFinishingRef.current = true;
     // 🔒 Đọc answers từ ref để chống stale closure khi timer hết giờ gọi
     const currentAnswers = answersRef.current;
+    const savedEnd = getSavedEndTime();
+    const initialSecs = parseInitialTime(basicInfo.timeLimit);
+    const computedTimeSpent = savedEnd
+      ? Math.max(0, initialSecs - Math.max(0, Math.floor((savedEnd - Date.now()) / 1000)))
+      : Math.max(0, initialSecs - timeLeft);
+
     if (safeData?.id) {
       localStorage.removeItem(`std_ans_${safeData.id}`);
       localStorage.removeItem(`standard_mark_${safeData.id}`);
@@ -530,18 +566,24 @@ const handleFinish = async () => {
                );
                
                const correctAnsComboSet = new Set(
-                   combo.flatMap((q:any) => String(q.correctAnswer).split(',').map((x:string) => x.trim().toUpperCase()).filter(Boolean))
+                   combo.flatMap((q:any) => String(q.correctAnswer || '').split(',').map((x:string) => x.trim().toUpperCase()).filter(Boolean))
                );
                
-               // Phải lựa chọn hết các ô đúng và không chọn ô sai thì mới có 1 điểm
-               const isPerfect = userAnsComboSet.size === correctAnsComboSet.size && 
-                                 [...userAnsComboSet].every(ans => correctAnsComboSet.has(ans));
-               let comboPoints = isPerfect ? 1 : 0;
+               // Chấm điểm thành phần cho từng ý đúng
+               const maxComboPoints = Math.max(combo.length, correctAnsComboSet.size);
+               let comboPoints = 0;
+               userAnsComboSet.forEach(ans => {
+                   if (correctAnsComboSet.has(ans)) {
+                       comboPoints++;
+                   }
+               });
+               const excessSelections = Math.max(0, userAnsComboSet.size - maxComboPoints);
+               comboPoints = Math.max(0, Math.min(comboPoints, maxComboPoints) - excessSelections);
                
                score += comboPoints;
-               total += 1;
+               total += maxComboPoints;
                questionTypeStats[qType].correct += comboPoints;
-               questionTypeStats[qType].total += 1;
+               questionTypeStats[qType].total += maxComboPoints;
            });
 
         } else if (qType === 'Đoạn văn') {
@@ -579,7 +621,7 @@ const handleFinish = async () => {
     try {
       const { data: { user } } = await supabase.auth.getSession().then(({data}) => ({ data: { user: data.session?.user } }));
       if (user) {
-        const timeSpentSecs = parseInitialTime(basicInfo.timeLimit) - timeLeft;
+        const timeSpentSecs = computedTimeSpent;
         await supabase.from('test_results').insert([{
           user_id: user.id,
           course_id: safeData?.course_id || safeData?.content_json?.basicInfo?.courseId || null,
@@ -632,6 +674,9 @@ const handleFinish = async () => {
   }
 };
 
+  const handleFinishRef = useRef(handleFinish);
+  handleFinishRef.current = handleFinish;
+
   const parseInitialTime = (val: any) => {
     if (!val) return 3600;
     if (typeof val === 'number') return val * 60;
@@ -662,10 +707,18 @@ const handleFinish = async () => {
             if (remaining <= 0) {
                 clearInterval(timer);
                 alert("⏰ Hết giờ làm bài!");
-                handleFinish();
+                handleFinishRef.current(true);
             }
         } else { 
-            setTimeLeft(prev => prev - 1); 
+            setTimeLeft(prev => {
+                if (prev <= 1) {
+                    clearInterval(timer);
+                    alert("⏰ Hết giờ làm bài!");
+                    handleFinishRef.current(true);
+                    return 0;
+                }
+                return prev - 1;
+            }); 
         }
     }, 1000);
     
@@ -980,13 +1033,13 @@ const handleFinish = async () => {
             }
 
             return (
-              <span key={pathKey} id={`q-${qNum}`} className="relative inline-flex flex-col items-center align-top mx-1.5 mt-1 group" style={{ textIndent: 0 }}>
+              <span key={pathKey} id={`q-${qNum}`} className="inline-flex flex-wrap items-center gap-1 align-middle mx-1 my-0.5" style={{ textIndent: 0 }}>
                 <span className={`px-2.5 py-0.5 text-[14px] font-bold text-white rounded-md shadow-sm border ${isCorrect ? 'bg-emerald-600 border-emerald-700' : 'bg-red-500 border-red-600'}`}>
                   {displayIndex}. {displayUserAnsForReview || '(trống)'}
                 </span>
                 {!isCorrect && (
-                  <span className="absolute top-full left-1/2 -translate-x-1/2 mt-1.5 text-[11px] text-emerald-800 font-bold bg-emerald-100 px-2 py-0.5 border border-emerald-300 rounded text-center whitespace-nowrap z-10 shadow-sm opacity-0 group-hover:opacity-100 transition-opacity">
-                    ĐA: {correctAns}
+                  <span className="inline-flex items-center text-[12px] text-emerald-800 font-bold bg-emerald-100 px-2 py-0.5 border border-emerald-300 rounded-md shadow-xs">
+                    ✓ {correctAns}
                   </span>
                 )}
               </span>
@@ -1161,13 +1214,13 @@ const handleFinish = async () => {
           const isCorrect = userAns.trim().toUpperCase() === correctAns.trim().toUpperCase();
           
           return (
-            <span key={index} className="relative inline-flex flex-col items-center align-top mx-1.5 mt-1 group">
+            <span key={index} className="inline-flex flex-wrap items-center gap-1 align-middle mx-1 my-0.5">
               <span className={`px-2.5 py-0.5 text-[14px] font-bold text-white rounded-md shadow-sm border ${isCorrect ? 'bg-emerald-600 border-emerald-700' : 'bg-red-500 border-red-600'}`}>
                 {displayIndex}. {userAns || '(trống)'}
               </span>
               {!isCorrect && (
-                <span className="absolute top-full left-1/2 -translate-x-1/2 mt-1.5 text-[11px] text-emerald-800 font-bold bg-emerald-100 px-2 py-0.5 border border-emerald-300 rounded text-center whitespace-nowrap z-10 shadow-sm opacity-0 group-hover:opacity-100 transition-opacity">
-                  ĐA: {correctAns}
+                <span className="inline-flex items-center text-[12px] text-emerald-800 font-bold bg-emerald-100 px-2 py-0.5 border border-emerald-300 rounded-md shadow-xs">
+                  ✓ {correctAns}
                 </span>
               )}
             </span>
@@ -1208,7 +1261,7 @@ const handleFinish = async () => {
         setTimeLeft(remaining);
         if (remaining <= 0 && basicInfo?.category !== 'exercise') {
             alert("⏰ Bài thi này đã hết thời gian làm bài!");
-            handleFinish();
+            handleFinishRef.current(true);
             return;
         }
     }
@@ -1339,11 +1392,17 @@ const handleFinish = async () => {
                                const saved = sessionStorage.getItem('lms_current_test');
                                if (saved) {
                                    const parsed = JSON.parse(saved);
-                                   if (parsed?.testData) {
-                                       delete parsed.testData.isReview;
-                                       delete parsed.testData.past_answers;
-                                       delete parsed.testData.past_score;
-                                       delete parsed.testData.past_total;
+                                   if (parsed) {
+                                       delete parsed.isReview;
+                                       delete parsed.past_answers;
+                                       delete parsed.past_score;
+                                       delete parsed.past_total;
+                                       if (parsed.testData) {
+                                           delete parsed.testData.isReview;
+                                           delete parsed.testData.past_answers;
+                                           delete parsed.testData.past_score;
+                                           delete parsed.testData.past_total;
+                                       }
                                        sessionStorage.setItem('lms_current_test', JSON.stringify(parsed));
                                    }
                                }
@@ -2446,10 +2505,9 @@ const handleFinish = async () => {
 
                                       return combos.map((combo, comboIndex) => {
                                           const comboIds = combo.map((q: any) => String(q.id));
-                                          const maxAllowed = combo.length;
-                                          
                                           const userAnsArr = Array.from(new Set(comboIds.map(id => answers[id]).filter(v => v && v.trim() !== '').flatMap(x => x.split(',').map(v=>v.trim().toUpperCase()))));
-                                          const correctAnsComboSet = new Set(combo.flatMap((q:any) => String(q.correctAnswer).split(',').map((x:string)=>x.trim().toUpperCase()).filter(Boolean)));
+                                          const correctAnsComboSet = new Set(combo.flatMap((q:any) => String(q.correctAnswer || '').split(',').map((x:string)=>x.trim().toUpperCase()).filter(Boolean)));
+                                          const maxAllowed = Math.max(combo.length, correctAnsComboSet.size);
                                           const validOptions = combo[0]?.options?.filter((opt: any) => String(opt || '').trim() !== '') || [];
                                           
                                           let comboPoints = 0;
@@ -2461,7 +2519,7 @@ const handleFinish = async () => {
                                                   hasWrong = true;
                                               }
                                           });
-                                          const targetCount = correctAnsComboSet.size || maxAllowed;
+                                          const targetCount = maxAllowed;
                                           const isPerfect = comboPoints === targetCount && !hasWrong && targetCount > 0;
                                           const isPartial = comboPoints > 0 && !isPerfect;
 
@@ -2479,7 +2537,7 @@ const handleFinish = async () => {
                                                   let currentSelected = Array.from(new Set(comboIds.map(id => prev[id]).filter(v => v && v.trim() !== '').flatMap(x => x.split(',').map(v=>v.trim().toUpperCase()))));
                                                   
                                                   if (isChecked) {
-                                                      if (comboIds.length > 1 && currentSelected.length >= maxAllowed) {
+                                                      if (maxAllowed > 0 && currentSelected.length >= maxAllowed) {
                                                           alert(`Lưu ý: Chỉ yêu cầu chọn tối đa ${maxAllowed} đáp án.`);
                                                           return prev;
                                                       }
@@ -2833,7 +2891,7 @@ const handleFinish = async () => {
                              Thoát
                          </button>
                       ) : (
-                         <button onClick={handleFinish} className="flex-1 bg-[#0ea5e9] hover:bg-[#0284c7] text-white font-black py-4 rounded-xl text-[14px] uppercase tracking-widest transition-colors shadow-lg shadow-[#0ea5e9]/20">
+                         <button onClick={() => handleFinish(false)} className="flex-1 bg-[#0ea5e9] hover:bg-[#0284c7] text-white font-black py-4 rounded-xl text-[14px] uppercase tracking-widest transition-colors shadow-lg shadow-[#0ea5e9]/20">
                              Nộp bài
                          </button>
                       )}
@@ -2890,7 +2948,7 @@ const handleFinish = async () => {
                           </button>
                         ) : (
                           <button 
-                            onClick={handleFinish}
+                            onClick={() => handleFinish(false)}
                             className="bg-[#0ea5e9] hover:bg-[#0284c7] text-white font-black text-[13px] px-4 py-2 rounded-xl shadow-md shadow-[#0ea5e9]/25 transition active:scale-95 uppercase tracking-wide whitespace-nowrap"
                           >
                             Nộp bài
@@ -2979,7 +3037,7 @@ const handleFinish = async () => {
                               </button>
                             ) : (
                               <button 
-                                onClick={handleFinish} 
+                                onClick={() => handleFinish(false)} 
                                 className="flex-1 bg-[#0ea5e9] hover:bg-[#0284c7] text-white font-black py-3.5 rounded-xl text-sm uppercase tracking-wider transition shadow-lg shadow-[#0ea5e9]/20 active:scale-95"
                               >
                                 Nộp bài

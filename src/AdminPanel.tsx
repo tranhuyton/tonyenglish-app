@@ -14,10 +14,29 @@ import { syncCourseBoardWithLectures, syncBoardTemplateToSingleUser } from './bo
 import { parseClassConfig, formatClassConfig } from './classConfigUtils';
 import './tailwind.css';
 
-let adminSearchTimer: any;
+async function fetchAllRows<T = any>(
+  buildQuery: (from: number, to: number) => PromiseLike<{ data: T[] | null; error: any }>
+): Promise<{ data: T[]; error: any }> {
+  const allRows: T[] = [];
+  const pageSize = 1000;
+  let from = 0;
+  while (true) {
+    const { data, error } = await buildQuery(from, from + pageSize - 1);
+    if (error) {
+      console.error('Error fetching paginated data:', error);
+      return { data: allRows, error };
+    }
+    if (!data || data.length === 0) break;
+    allRows.push(...data);
+    if (data.length < pageSize) break;
+    from += pageSize;
+  }
+  return { data: allRows, error: null };
+}
 
 function displayTestType(type: string | null | undefined): string {
   if (!type) return 'Đề thi';
+  if (type === 'SAT-Bluebook') return 'SAT BLUEBOOK';
   if (type === 'MCQ (Standard)') return 'STANDARD-MCQ';
   if (type === 'SplitScreen (Standard)') return 'STANDARD-SPLITSCREEN';
   return type;
@@ -34,6 +53,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   const [showBatchImport, setShowBatchImport] = useState(false);
   const [showBatchJsonImport, setShowBatchJsonImport] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const adminSearchTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   
   // 🚀 TỐI ƯU MOBILE: State quản lý Sidebar trượt trên điện thoại
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -119,7 +139,6 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   const [currentFolderId, setCurrentFolderId] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [filterCourse, setFilterCourse] = useState('all');
-  const [filterCategory, setFilterCategory] = useState('all'); 
   const [sortTest, setSortTest] = useState('date-desc');
   const [sortLecture, setSortLecture] = useState('date-desc');
   const [selectedTests, setSelectedTests] = useState<string[]>([]);
@@ -180,13 +199,25 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   useEffect(() => {
     if (assignMgmtSubTab === 'approvals') {
       const fetchApprovals = async () => {
-        // Fetch all completed manual assignments
-        const { data } = await supabase.from('assignments').select('*').eq('task_type', 'manual').eq('student_completed', true).order('updated_at', { ascending: false });
-        // Fetch all profiles for name lookup
-        const { data: profiles } = await supabase.from('profiles').select('id, full_name, email');
+        const [
+          { data },
+          { data: profiles },
+          { data: enrollments }
+        ] = await Promise.all([
+          // Fetch all completed manual assignments (paginated)
+          fetchAllRows((from, to) =>
+            supabase.from('assignments').select('*').eq('task_type', 'manual').eq('student_completed', true).order('updated_at', { ascending: false }).order('id', { ascending: true }).range(from, to)
+          ),
+          // Fetch all profiles for name lookup (paginated)
+          fetchAllRows((from, to) =>
+            supabase.from('profiles').select('id, full_name, email').order('id', { ascending: true }).range(from, to)
+          ),
+          // Fetch enrollments for course lookup (paginated)
+          fetchAllRows((from, to) =>
+            supabase.from('enrollments').select('user_id, course_id, courses(title)').order('id', { ascending: true }).range(from, to)
+          )
+        ]);
         setApprovalProfiles(profiles || []);
-        // Fetch enrollments for course lookup
-        const { data: enrollments } = await supabase.from('enrollments').select('user_id, course_id, courses(title)');
         setApprovalEnrollments(enrollments || []);
         
         let filtered = data || [];
@@ -228,20 +259,35 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   // Fetch students for detail view
   useEffect(() => {
     if (activeTab === 'assignments-mgmt' && assignMgmtSubTab === 'detail') {
-      if (assignMgmtCourseId) {
-        supabase.from('enrollments').select('user_id').eq('course_id', assignMgmtCourseId).then(({ data: enrollments }) => {
-          if (enrollments && enrollments.length > 0) {
-            const userIds = enrollments.map(e => e.user_id);
-            supabase.from('profiles').select('*').in('id', userIds).order('created_at', { ascending: false })
-              .then(({ data }) => setStudents(data || []));
+      let cancelled = false;
+      const loadDetailStudents = async () => {
+        if (assignMgmtCourseId) {
+          const { data: enrollments } = await fetchAllRows((from, to) =>
+            supabase.from('enrollments').select('user_id').eq('course_id', assignMgmtCourseId).order('id', { ascending: true }).range(from, to)
+          );
+          if (cancelled) return;
+          if (enrollments.length > 0) {
+            const userIds = Array.from(new Set(enrollments.map((e: any) => e.user_id)));
+            const loadedProfiles: any[] = [];
+            for (let i = 0; i < userIds.length; i += 200) {
+              const chunk = userIds.slice(i, i + 200);
+              const { data } = await supabase.from('profiles').select('*').in('id', chunk).order('created_at', { ascending: false });
+              if (data) loadedProfiles.push(...data);
+            }
+            loadedProfiles.sort((a, b) => new Date(b.created_at || 0).getTime() - new Date(a.created_at || 0).getTime());
+            if (!cancelled) setStudents(loadedProfiles);
           } else {
             setStudents([]);
           }
-        });
-      } else {
-        supabase.from('profiles').select('*').order('created_at', { ascending: false })
-          .then(({ data }) => setStudents(data || []));
-      }
+        } else {
+          const { data } = await fetchAllRows((from, to) =>
+            supabase.from('profiles').select('*').order('created_at', { ascending: false }).order('id', { ascending: true }).range(from, to)
+          );
+          if (!cancelled) setStudents(data);
+        }
+      };
+      loadDetailStudents();
+      return () => { cancelled = true; };
     }
   }, [activeTab, assignMgmtSubTab, assignMgmtCourseId]);
 
@@ -288,7 +334,9 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   useEffect(() => {
     if (!detailAssignStudent) return;
     const fetchAssignments = async () => {
-      const { data } = await supabase.from('assignments').select('*').eq('user_id', detailAssignStudent.id).order('due_date');
+      const { data } = await fetchAllRows((from, to) =>
+        supabase.from('assignments').select('*').eq('user_id', detailAssignStudent.id).order('due_date').order('id', { ascending: true }).range(from, to)
+      );
       setDetailAssignments(data || []);
       
       const { data: boards } = await supabase.from('assignments')
@@ -548,6 +596,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
         document.removeEventListener('mousedown', handleClickOutside);
         clearInterval(notifInterval);
         document.removeEventListener('visibilitychange', handleVisibility);
+        if (adminSearchTimerRef.current) clearTimeout(adminSearchTimerRef.current);
     }
   }, []);
 
@@ -568,7 +617,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
 
   useEffect(() => {
     setTestCurrentPage(1);
-  }, [searchQuery, filterCourse, filterCategory, sortTest]);
+  }, [searchQuery, filterCourse, sortTest]);
 
   const formatDateTime = (iso: string) => {
     if (!iso) return '';
@@ -748,40 +797,31 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
 
   // =========================================================================================
 
-  const fetchAllPages = async (queryFn: (from: number, to: number) => any) => {
-      let allData: any[] = [];
-      let from = 0;
-      const step = 1000;
-      while (true) {
-          const { data, error } = await queryFn(from, from + step - 1);
-          if (error) { console.error('Error fetching paginated data:', error); break; }
-          if (!data || data.length === 0) break;
-          allData = allData.concat(data);
-          if (data.length < step) break;
-          from += step;
-      }
-      return { data: allData };
-  };
-
   const fetchCourses = async () => {
     setIsLoadingCourses(true); 
-    const { data } = await supabase.from('courses').select('*').order('order_index', { ascending: true }).order('created_at', { ascending: false });
+    const { data } = await fetchAllRows((from, to) =>
+      supabase.from('courses').select('*').order('order_index', { ascending: true }).order('created_at', { ascending: false }).order('id', { ascending: true }).range(from, to)
+    );
     setCourses(data || []);
     setIsLoadingCourses(false); 
   };
 
   const fetchLibraryTests = async () => {
-    const { data } = await fetchAllPages((from, to) => supabase.from('tests').select('id, title, course_id, folder_id, is_published, order_index, created_at, test_type').order('order_index', { ascending: true }).order('created_at', { ascending: false }).range(from, to));
+    const { data } = await fetchAllRows((from, to) => supabase.from('tests').select('id, title, course_id, folder_id, is_published, order_index, created_at, test_type').order('order_index', { ascending: true }).order('created_at', { ascending: false }).order('id', { ascending: true }).range(from, to));
     setLibraryTests(data || []);
   };
 
   const fetchAllFolders = async () => {
-    const { data } = await supabase.from('folders').select('*').order('display_order', { ascending: true });
+    const { data } = await fetchAllRows((from, to) =>
+      supabase.from('folders').select('*').order('display_order', { ascending: true }).order('id', { ascending: true }).range(from, to)
+    );
     setAllFolders(data || []);
   };
 
   const fetchGlobalLectures = async () => {
-    const { data } = await supabase.from('lectures').select('*, courses(title), lecture_modules(title)').order('order_index', { ascending: true }).order('created_at', { ascending: false });
+    const { data } = await fetchAllRows((from, to) =>
+      supabase.from('lectures').select('*, courses(title), lecture_modules(title)').order('order_index', { ascending: true }).order('created_at', { ascending: false }).order('id', { ascending: true }).range(from, to)
+    );
     setGlobalLectures(data || []);
   };
 
@@ -790,7 +830,10 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
     setLectureModules(mods || []);
     
     if (mods && mods.length > 0) {
-      const { data: lecs } = await supabase.from('lectures').select('*').in('module_id', mods.map(m => m.id)).order('order_index', { ascending: true });
+      const modIds = mods.map(m => m.id);
+      const { data: lecs } = await fetchAllRows((from, to) =>
+        supabase.from('lectures').select('*').in('module_id', modIds).order('order_index', { ascending: true }).order('id', { ascending: true }).range(from, to)
+      );
       setLectures(lecs || []);
     } else {
       setLectures([]);
@@ -799,10 +842,14 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
     const { data: cls } = await supabase.from('classes').select('*').eq('course_id', courseId).order('created_at', { ascending: false });
     setClasses(cls || []);
     
-    const { data: flds } = await supabase.from('folders').select('*').eq('course_id', courseId).order('display_order', { ascending: true });
+    const { data: flds } = await fetchAllRows((from, to) =>
+      supabase.from('folders').select('*').eq('course_id', courseId).order('display_order', { ascending: true }).order('id', { ascending: true }).range(from, to)
+    );
     setFolders(flds || []);
     
-    const { data: ast } = await supabase.from('tests').select('id, title, course_id, folder_id, is_published, order_index, created_at, test_type').eq('course_id', courseId).order('order_index', { ascending: true });
+    const { data: ast } = await fetchAllRows((from, to) =>
+      supabase.from('tests').select('id, title, course_id, folder_id, is_published, order_index, created_at, test_type').eq('course_id', courseId).order('order_index', { ascending: true }).order('id', { ascending: true }).range(from, to)
+    );
     setAssignedTests(ast || []);
     
     // Lazy-load content_json in background for deadline/category features
@@ -840,8 +887,12 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
     }
 
     const [{ data: enrolls }, { data: allProfiles }] = await Promise.all([
-      supabase.from('enrollments').select('user_id').eq('course_id', courseId),
-      supabase.from('profiles').select('id, full_name, email, status').order('created_at', { ascending: false })
+      fetchAllRows((from, to) =>
+        supabase.from('enrollments').select('user_id').eq('course_id', courseId).order('id', { ascending: true }).range(from, to)
+      ),
+      fetchAllRows((from, to) =>
+        supabase.from('profiles').select('id, full_name, email, status').order('created_at', { ascending: false }).order('id', { ascending: true }).range(from, to)
+      )
     ]);
     const validProfiles = (allProfiles || []).filter(p => p.status !== 'inactive');
     setAllSystemStudents(validProfiles.map(p => ({ user_id: p.id, full_name: p.full_name, email: p.email })));
@@ -1132,6 +1183,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
 
   const handleBulkLectureVisibility = async (status: boolean) => {
     if (selectedLectures.length === 0) return alert("Vui lòng chọn ít nhất 1 bài giảng!");
+    if (!window.confirm(`Xác nhận ${status ? 'HIỂN THỊ' : 'ẨN'} ${selectedLectures.length} bài giảng đã chọn?`)) return;
     const idsArray = [...selectedLectures];
     for (let i = 0; i < idsArray.length; i += 100) {
         await supabase.from('lectures').update({ is_published: status }).in('id', idsArray.slice(i, i + 100));
@@ -1304,6 +1356,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   const handleQuickSelectFirstLecturePerModule = async () => {
     if (!selectedClass) return;
     const cfg = parseClassConfig(selectedClass.name);
+    if (!window.confirm(`Thao tác này sẽ xóa toàn bộ cấu hình học thử hiện tại của lớp "${cfg.cleanName}" và chỉ chọn bài giảng đầu tiên của mỗi học phần. Bạn có chắc muốn tiếp tục?`)) return;
     // Clear whole modules in class_modules first
     if (classModules.length > 0) {
       await supabase.from('class_modules').delete().eq('class_id', selectedClass.id);
@@ -1325,6 +1378,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   const handleClearAllTrialSelections = async () => {
     if (!selectedClass) return;
     const cfg = parseClassConfig(selectedClass.name);
+    if (!window.confirm(`Xác nhận BỎ CHỌN TẤT CẢ bài giảng và học phần học thử của lớp "${cfg.cleanName}"?`)) return;
     if (classModules.length > 0) {
       await supabase.from('class_modules').delete().eq('class_id', selectedClass.id);
       setClassModules([]);
@@ -1347,10 +1401,15 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
     });
   };
   
-  const handleSaveTestContent = async (testId: string, finalData: any) => {
+  const handleSaveTestContent = async (testId: string, finalData: any): Promise<boolean> => {
     let parsedJsonConfig = null;
     if (finalData.basicInfo?.skill === 'Case-Study' && finalData.json_config_string) {
-      try { parsedJsonConfig = JSON.parse(finalData.json_config_string); } catch(e) { return alert("⚠️ Lỗi cú pháp JSON."); }
+      try {
+        parsedJsonConfig = JSON.parse(finalData.json_config_string);
+      } catch (e) {
+        alert("⚠️ Lỗi cú pháp JSON.");
+        throw e;
+      }
     }
 
     const assignedCourseId = finalData.basicInfo?.courseId === 'all' ? null : finalData.basicInfo.courseId;
@@ -1390,17 +1449,30 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
       }
     };
     
-    let saveError = await savePayload(payload);
-    // Nếu lỗi do cột resource_pdf_url chưa tồn tại → thử lại không có cột đó (data đã lưu trong content_json)
-    if (saveError && saveError.message?.includes('resource_pdf_url')) {
-      delete payload.resource_pdf_url;
+    let saveError: any = null;
+    try {
       saveError = await savePayload(payload);
+      // Nếu lỗi do cột resource_pdf_url chưa tồn tại → thử lại không có cột đó (data đã lưu trong content_json)
+      if (saveError && saveError.message?.includes('resource_pdf_url')) {
+        delete payload.resource_pdf_url;
+        saveError = await savePayload(payload);
+      }
+    } catch (unexpectedErr: any) {
+      console.error(unexpectedErr);
+      alert("Lỗi khi lưu: " + (unexpectedErr?.message || String(unexpectedErr)));
+      throw unexpectedErr;
     }
-    if (saveError) { console.error(saveError); alert("Lỗi khi lưu: " + saveError.message); return; }
+
+    if (saveError) {
+      console.error(saveError);
+      alert("Lỗi khi lưu: " + saveError.message);
+      throw saveError;
+    }
     
     setEditingTest(null); 
     fetchLibraryTests(); 
     if (selectedCourse) fetchCourseDetailsData(selectedCourse.id);
+    return true;
   };
 
   // 🚀 LƯU DEADLINE CHỈNH SỬA NHANH CHO 1 BÀI TẬP
@@ -1577,6 +1649,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
 
   const handleBulkVisibility = async (status: boolean) => {
     if (selectedTests.length === 0) return alert("Vui lòng chọn ít nhất 1 đề thi/bài tập!");
+    if (!window.confirm(`Xác nhận ${status ? 'HIỂN THỊ' : 'ẨN'} ${selectedTests.length} đề thi/bài tập đã chọn?`)) return;
     const ids = new Set(selectedTests);
     // Optimistic update
     setLibraryTests(prev => prev.map(t => ids.has(t.id) ? { ...t, is_published: status } : t));
@@ -1764,8 +1837,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
       let result = libraryTests.filter(test => {
           const matchesSearch = test.title.toLowerCase().includes(searchQuery.toLowerCase());
           const matchesCourse = filterCourse === 'all' || (filterCourse === 'none' ? !test.course_id : test.course_id === filterCourse);
-          const matchesCategory = filterCategory === 'all';
-          return matchesSearch && matchesCourse && matchesCategory;
+          return matchesSearch && matchesCourse;
       });
       result = [...result].sort((a, b) => {
           if (sortTest === 'name-asc') return (a.title || '').localeCompare(b.title || '', undefined, { numeric: true, sensitivity: 'base' });
@@ -1776,7 +1848,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
           return 0;
       });
       return result;
-  }, [libraryTests, searchQuery, filterCourse, filterCategory, sortTest]);
+  }, [libraryTests, searchQuery, filterCourse, sortTest]);
 
   const totalTestPages = Math.ceil(filteredLibraryTests.length / testItemsPerPage);
   const paginatedTests = filteredLibraryTests.slice((testCurrentPage - 1) * testItemsPerPage, testCurrentPage * testItemsPerPage);
@@ -1996,6 +2068,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                             <input name="title" autoFocus defaultValue={course.title} className="w-full border border-slate-300 rounded-lg px-2 py-1 font-black text-[13px] md:text-[15px] outline-none mb-2 focus:border-[#0a5482]" />
                             <select name="type" defaultValue={course.type} className="w-full border border-slate-300 rounded-lg px-2 py-1 font-bold text-[12px] outline-none mb-2 focus:border-[#0a5482]">
                                <option value="IELTS">Hệ IELTS</option>
+                               <option value="SAT">Hệ Digital SAT</option>
                                <option value="Standard">Hệ Standard (IGCSE/TOEIC)</option>
                             </select>
                             <div className="flex gap-2">
@@ -3885,6 +3958,9 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                                  </div>
                                  <div className="flex gap-2 md:gap-3 shrink-0">
                                    <button onClick={() => handleToggleTestVisibility(t)} className={`${t.is_published ? 'text-emerald-500 hover:text-emerald-600' : 'text-slate-400 hover:text-slate-600'} font-bold text-[10px] md:text-xs transition-colors`}>{t.is_published ? '👁️ Hiện' : 'Ẩn'}</button>
+                                   {String(t.test_type || '').toLowerCase().includes('sat') && onStartTest && (
+                                     <button onClick={async () => { const { data: fullTest } = await supabase.from('tests').select('*').eq('id', t.id).single(); if (fullTest) onStartTest('sat-bluebook', fullTest); }} className="text-indigo-600 font-bold text-[10px] md:text-xs hover:underline">Bluebook</button>
+                                   )}
                                    <button onClick={() => { if (t.test_type === 'IGCSE-Science' || t.test_type === 'IGCSE-Math' || t.test_type === 'IGCSE-Direct') { setIgcseEditingTestId(t.id); setIgcseEditorOpen(true); } else { setEditingTest(t); } }} className="text-[#2ab4e8] font-bold text-[10px] md:text-xs hover:underline md:opacity-0 group-hover:opacity-100 transition-opacity">Sửa</button>
                                    <button onClick={() => handleUnassignTest(t.id)} className="text-red-400 font-bold text-[10px] md:text-xs hover:underline md:opacity-0 group-hover:opacity-100 transition-opacity">Gỡ ✖</button>
                                  </div>
@@ -3927,7 +4003,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                  </div>
 
                  <div className="flex flex-col sm:flex-row gap-3 flex-1 justify-end w-full xl:w-auto">
-                   <input type="text" placeholder="Tìm kiếm tên bài giảng..." defaultValue={searchQuery} onChange={e => { clearTimeout(adminSearchTimer); adminSearchTimer = setTimeout(() => setSearchQuery(e.target.value), 350); }} className="w-full sm:max-w-[250px] pl-3 pr-3 py-2 md:py-2.5 border border-slate-200 rounded-lg md:rounded-xl outline-none focus:border-[#2ab4e8] text-[13px] md:text-sm transition-colors" />
+                   <input type="text" placeholder="Tìm kiếm tên bài giảng..." defaultValue={searchQuery} onChange={e => { const val = e.target.value; if (adminSearchTimerRef.current) clearTimeout(adminSearchTimerRef.current); adminSearchTimerRef.current = setTimeout(() => setSearchQuery(val), 350); }} className="w-full sm:max-w-[250px] pl-3 pr-3 py-2 md:py-2.5 border border-slate-200 rounded-lg md:rounded-xl outline-none focus:border-[#2ab4e8] text-[13px] md:text-sm transition-colors" />
                    <select value={filterLectureCourse} onChange={e => setFilterLectureCourse(e.target.value)} className="w-full sm:w-auto px-3 py-2 md:py-2.5 border border-slate-200 rounded-lg md:rounded-xl text-[13px] md:text-sm font-bold text-slate-600 outline-none bg-white">
                       <option value="all">Tất cả khóa học</option>
                       <option value="none">-- Chung --</option>
@@ -4043,7 +4119,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                 
                 {/* Dòng tìm kiếm và filter chuyển xuống dưới, phóng to và căn giữa */}
                 <div className="flex flex-col sm:flex-row gap-3 w-full justify-center items-center mt-2 border-t border-slate-100 pt-4">
-                  <input type="text" placeholder="Tìm kiếm tên đề thi, bài tập..." defaultValue={searchQuery} onChange={e => { clearTimeout(adminSearchTimer); adminSearchTimer = setTimeout(() => setSearchQuery(e.target.value), 350); }} className="w-full sm:flex-1 max-w-[400px] px-4 py-2.5 md:py-3 border border-slate-300 shadow-sm rounded-lg md:rounded-xl outline-none focus:border-[#2ab4e8] focus:ring-2 focus:ring-blue-100 text-[13px] md:text-sm transition-all" />
+                  <input type="text" placeholder="Tìm kiếm tên đề thi, bài tập..." defaultValue={searchQuery} onChange={e => { const val = e.target.value; if (adminSearchTimerRef.current) clearTimeout(adminSearchTimerRef.current); adminSearchTimerRef.current = setTimeout(() => setSearchQuery(val), 350); }} className="w-full sm:flex-1 max-w-[400px] px-4 py-2.5 md:py-3 border border-slate-300 shadow-sm rounded-lg md:rounded-xl outline-none focus:border-[#2ab4e8] focus:ring-2 focus:ring-blue-100 text-[13px] md:text-sm transition-all" />
                   
                   <select value={filterCourse} onChange={e => setFilterCourse(e.target.value)} className="w-full sm:w-auto px-4 py-2.5 md:py-3 border border-slate-300 shadow-sm rounded-lg md:rounded-xl text-[13px] md:text-sm font-bold text-slate-600 outline-none bg-white focus:border-[#2ab4e8] focus:ring-2 focus:ring-blue-100 transition-all cursor-pointer">
                     <option value="all">Tất cả khóa học</option>
@@ -4100,6 +4176,9 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                             <td className="px-4 md:px-6 py-4 md:py-5 text-center"><button onClick={() => handleToggleTestVisibility(test)} className={`text-[10px] md:text-[12px] font-bold px-2 md:px-3 py-1 rounded transition-colors ${test.is_published ? 'text-emerald-600 bg-emerald-50 hover:bg-emerald-100' : 'text-slate-500 bg-slate-100 hover:bg-slate-200'}`}>{test.is_published ? 'Hiển thị' : 'Đang ẩn'}</button></td>
                             <td className="px-4 md:px-6 py-4 md:py-5 text-center"><input type="number" defaultValue={test.order_index || 0} onBlur={e => handleUpdateTestOrder(test.id, parseInt(e.target.value) || 0)} className="w-10 md:w-12 text-center text-[12px] md:text-[13px] font-bold border border-slate-200 rounded py-1 outline-none focus:border-[#2ab4e8]" /></td>
                             <td className="px-4 md:px-6 py-4 md:py-5 text-left space-x-1 md:space-x-2 whitespace-nowrap">
+                                 {String(test.test_type || '').toLowerCase().includes('sat') && onStartTest && (
+                                   <button onClick={async () => { const { data: fullTest } = await supabase.from('tests').select('*').eq('id', test.id).single(); if (fullTest) onStartTest('sat-bluebook', fullTest); }} className="text-indigo-700 bg-indigo-50 border border-indigo-300 px-2 md:px-3 py-1 md:py-1.5 rounded hover:bg-indigo-100 font-bold text-[10px] md:text-xs transition shadow-sm">Bluebook</button>
+                                 )}
                                  <button onClick={async () => { if (test.test_type === 'IGCSE-Science' || test.test_type === 'IGCSE-Math' || test.test_type === 'IGCSE-Direct') { setIgcseEditingTestId(test.id); setIgcseEditorOpen(true); } else { const { data: fullTest } = await supabase.from('tests').select('*').eq('id', test.id).single(); if (fullTest) setEditingTest(fullTest); else alert('Lỗi tải dữ liệu đề thi!'); } }} className="text-[#2ab4e8] bg-white border border-[#2ab4e8] px-2 md:px-3 py-1 md:py-1.5 rounded hover:bg-blue-50 font-bold text-[10px] md:text-xs transition shadow-sm">Sửa</button>
                                  <button onClick={() => handleDuplicateTest(test)} className="text-emerald-600 font-bold text-[10px] md:text-xs bg-white border border-emerald-300 px-2 md:px-3 py-1 md:py-1.5 rounded hover:bg-emerald-50 transition shadow-sm">Nhân bản</button>
                                  <button onClick={() => handleDeleteTest(test.id)} className="text-red-500 font-bold text-[10px] md:text-xs bg-white border border-red-200 px-2 md:px-3 py-1 md:py-1.5 rounded hover:bg-red-50 transition md:opacity-0 group-hover:opacity-100 shadow-sm">Xóa</button>

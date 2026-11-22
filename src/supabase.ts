@@ -17,11 +17,23 @@ import { createClient } from '@supabase/supabase-js';
  */
 export const TONYENGLISH_APP_ID = 'tonyenglish' as const;
 
+export const PRIMARY_ADMIN_EMAIL = 'admin@tonyenglish.vn';
+
 export function isTonyEnglishAuthUser(
   user: { user_metadata?: Record<string, any> } | null | undefined
 ): boolean {
   if (!user) return false;
   return user.user_metadata?.app !== 'tuvi';
+}
+
+export function isTonyEnglishAdmin(
+  user: { email?: string | null; user_metadata?: Record<string, any> } | null | undefined,
+  profile?: { role?: string | null; status?: string | null } | null
+): boolean {
+  if (!user || !isTonyEnglishAuthUser(user)) return false;
+  if (profile?.status === 'inactive') return false;
+  if (profile?.role === 'admin') return true;
+  return (user.email || '').trim().toLowerCase() === PRIMARY_ADMIN_EMAIL;
 }
 
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;

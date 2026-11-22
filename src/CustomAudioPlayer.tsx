@@ -18,12 +18,14 @@ export const CustomAudioPlayer = forwardRef<HTMLAudioElement, CustomAudioPlayerP
     const [isMuted, setIsMuted] = useState(false);
     const SPEED_STEPS = [0.75, 1, 1.25, 1.5];
     const [playbackRate, setPlaybackRate] = useState<number>(1);
+    const playbackRateRef = useRef<number>(1);
 
     const cyclePlaybackRate = () => {
       const audio = innerRef.current;
       const idx = SPEED_STEPS.indexOf(playbackRate);
       const nextRate = SPEED_STEPS[(idx + 1) % SPEED_STEPS.length];
       setPlaybackRate(nextRate);
+      playbackRateRef.current = nextRate;
       if (audio) audio.playbackRate = nextRate;
     };
 
@@ -35,17 +37,32 @@ export const CustomAudioPlayer = forwardRef<HTMLAudioElement, CustomAudioPlayerP
     };
 
     useEffect(() => {
+      setIsPlaying(false);
+      setProgress(0);
+      setCurrentTime('00:00');
+      setDuration('00:00');
+      const audio = innerRef.current;
+      if (audio) {
+        audio.playbackRate = playbackRateRef.current;
+      }
+    }, [src]);
+
+    useEffect(() => {
       const audio = innerRef.current;
       if (!audio) return;
 
       const updateProgress = () => {
         setCurrentTime(formatTime(audio.currentTime));
-        setProgress((audio.currentTime / audio.duration) * 100 || 0);
+        if (isFinite(audio.duration) && audio.duration > 0) {
+          setProgress((audio.currentTime / audio.duration) * 100);
+        } else {
+          setProgress(0);
+        }
       };
 
       const handleLoadedMetadata = () => {
         setDuration(formatTime(audio.duration));
-        audio.playbackRate = playbackRate;
+        audio.playbackRate = playbackRateRef.current;
       };
 
       const handleEnded = () => {
@@ -64,6 +81,7 @@ export const CustomAudioPlayer = forwardRef<HTMLAudioElement, CustomAudioPlayerP
       audio.addEventListener('pause', handlePause);
 
       return () => {
+        audio.pause();
         audio.removeEventListener('timeupdate', updateProgress);
         audio.removeEventListener('loadedmetadata', handleLoadedMetadata);
         audio.removeEventListener('ended', handleEnded);
@@ -79,14 +97,19 @@ export const CustomAudioPlayer = forwardRef<HTMLAudioElement, CustomAudioPlayerP
       if (isPlaying) {
         audio.pause();
       } else {
-        audio.play();
+        const playPromise = audio.play();
+        if (playPromise && typeof playPromise.catch === 'function') {
+          playPromise.catch(() => {
+            setIsPlaying(false);
+          });
+        }
       }
     };
 
     const skip = (seconds: number) => {
       const audio = innerRef.current;
-      if (!audio) return;
-      audio.currentTime = Math.max(0, Math.min(audio.currentTime + seconds, audio.duration || 0));
+      if (!audio || !isFinite(audio.duration) || audio.duration <= 0) return;
+      audio.currentTime = Math.max(0, Math.min(audio.currentTime + seconds, audio.duration));
     };
 
     const toggleMute = () => {
@@ -98,11 +121,12 @@ export const CustomAudioPlayer = forwardRef<HTMLAudioElement, CustomAudioPlayerP
 
     const handleSeek = (e: React.ChangeEvent<HTMLInputElement>) => {
       const audio = innerRef.current;
-      if (!audio) return;
+      if (!audio || !isFinite(audio.duration) || audio.duration <= 0) return;
 
-      const seekTime = (Number(e.target.value) / 100) * audio.duration;
+      const val = Number(e.target.value);
+      const seekTime = (val / 100) * audio.duration;
       audio.currentTime = seekTime;
-      setProgress(Number(e.target.value));
+      setProgress(val);
     };
 
     return (
@@ -111,7 +135,7 @@ export const CustomAudioPlayer = forwardRef<HTMLAudioElement, CustomAudioPlayerP
         
         {/* Playback Controls */}
         <div className="flex items-center gap-1.5 sm:gap-2.5 shrink-0 text-[#0a5482]">
-          <button type="button" onClick={() => skip(-15)} className="p-1 rounded-lg hover:bg-sky-100/70 hover:text-[#2ab4e8] transition cursor-pointer" title="Lùi 15s">
+          <button type="button" onClick={() => skip(-15)} className="p-1 rounded-lg hover:bg-sky-100/70 hover:text-[#2ab4e8] transition cursor-pointer" title="Lùi 15s" aria-label="Lùi 15 giây">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
                 <path d="M3 3v5h5"/>
@@ -119,7 +143,7 @@ export const CustomAudioPlayer = forwardRef<HTMLAudioElement, CustomAudioPlayerP
             </svg>
           </button>
           
-          <button type="button" onClick={togglePlayPause} className="hover:text-[#2ab4e8] active:scale-95 transition cursor-pointer" title={isPlaying ? 'Tạm dừng' : 'Phát'}>
+          <button type="button" onClick={togglePlayPause} className="hover:text-[#2ab4e8] active:scale-95 transition cursor-pointer" title={isPlaying ? 'Tạm dừng' : 'Phát'} aria-label={isPlaying ? 'Tạm dừng âm thanh' : 'Phát âm thanh'}>
             {isPlaying ? (
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8">
                 <path fillRule="evenodd" d="M6.75 5.25a.75.75 0 01.75-.75H9a.75.75 0 01.75.75v13.5a.75.75 0 01-.75.75H7.5a.75.75 0 01-.75-.75V5.25zm7.5 0A.75.75 0 0115 4.5h1.5a.75.75 0 01.75.75v13.5a.75.75 0 01-.75.75H15a.75.75 0 01-.75-.75V5.25z" clipRule="evenodd" />
@@ -131,7 +155,7 @@ export const CustomAudioPlayer = forwardRef<HTMLAudioElement, CustomAudioPlayerP
             )}
           </button>
 
-          <button type="button" onClick={() => skip(15)} className="p-1 rounded-lg hover:bg-sky-100/70 hover:text-[#2ab4e8] transition cursor-pointer" title="Tiến 15s">
+          <button type="button" onClick={() => skip(15)} className="p-1 rounded-lg hover:bg-sky-100/70 hover:text-[#2ab4e8] transition cursor-pointer" title="Tiến 15s" aria-label="Tiến 15 giây">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M21 12a9 9 0 1 1-9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/>
                 <path d="M21 3v5h-5"/>
@@ -151,6 +175,7 @@ export const CustomAudioPlayer = forwardRef<HTMLAudioElement, CustomAudioPlayerP
               type="range" 
               min="0" 
               max="100" 
+              step="0.1"
               value={progress} 
               onChange={handleSeek}
               aria-label="Audio seek"
@@ -177,11 +202,12 @@ export const CustomAudioPlayer = forwardRef<HTMLAudioElement, CustomAudioPlayerP
                 : 'bg-white text-slate-600 border-slate-200 hover:text-[#0a5482] hover:border-sky-200'
             }`}
             title="Đổi tốc độ phát (0.75x / 1x / 1.25x / 1.5x)"
+            aria-label={`Đổi tốc độ phát, hiện tại ${playbackRate}x`}
           >
             {playbackRate}x
           </button>
 
-          <button type="button" onClick={toggleMute} className="p-1.5 rounded-lg text-slate-500 hover:text-[#0a5482] hover:bg-slate-200/60 transition shrink-0 cursor-pointer" title={isMuted ? 'Bật âm lượng' : 'Tắt tiếng'}>
+          <button type="button" onClick={toggleMute} className="p-1.5 rounded-lg text-slate-500 hover:text-[#0a5482] hover:bg-slate-200/60 transition shrink-0 cursor-pointer" title={isMuted ? 'Bật âm lượng' : 'Tắt tiếng'} aria-label={isMuted ? 'Bật âm lượng' : 'Tắt tiếng'}>
             {isMuted ? (
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
                 <path d="M13.5 4.06c0-1.336-1.616-2.005-2.56-1.06l-4.5 4.5H4.508c-1.141 0-2.318.664-2.66 1.905A9.76 9.76 0 001.5 12c0 .898.121 1.768.35 2.595.341 1.24 1.518 1.905 2.659 1.905h1.93l4.5 4.5c.945.945 2.561.276 2.561-1.06V4.06zM17.78 9.22a.75.75 0 10-1.06 1.06L18.44 12l-1.72 1.72a.75.75 0 001.06 1.06l1.72-1.72 1.72 1.72a.75.75 0 101.06-1.06L20.56 12l1.72-1.72a.75.75 0 00-1.06-1.06l-1.72 1.72-1.72-1.72z" />

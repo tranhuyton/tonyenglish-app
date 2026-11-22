@@ -262,12 +262,18 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
     return () => window.removeEventListener('paste', handleGlobalPaste);
   }, [testData, answers, isReviewMode]);
 
+  const escapeHtml = (str: string): string =>
+    String(str || '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;');
+
   // LaTeX → Unicode/HTML converter for question labels
   const renderLatex = (text: string): string => {
     if (!text) return '';
+    let r = escapeHtml(text);
     const hasLatex = text.includes('\\') || /[\^_]\{/.test(text) || /[\^_]\(/.test(text);
-    if (!hasLatex) return text;
-    let r = text;
+    if (!hasLatex) return r;
     const m: [RegExp, string][] = [
       [/\\alpha/g,'α'],[/\\beta/g,'β'],[/\\gamma/g,'γ'],[/\\delta/g,'δ'],[/\\theta/g,'θ'],
       [/\\lambda/g,'λ'],[/\\mu/g,'μ'],[/\\pi/g,'π'],[/\\sigma/g,'σ'],[/\\omega/g,'ω'],
@@ -334,6 +340,18 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
   const [showPalette, setShowPalette] = useState<Record<string, boolean>>({});
   const [paletteTab, setPaletteTab] = useState<'sci'|'geo'|'alg'|'set'>('sci');
   const inputRefs = useRef<Record<string, HTMLInputElement | HTMLTextAreaElement | null>>({});
+
+  useEffect(() => {
+    const hasOpen = Object.values(showPalette).some(Boolean);
+    if (!hasOpen) return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setShowPalette({});
+      }
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, [showPalette]);
   
   const charTabs = {
     sci: {
@@ -391,7 +409,7 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
   const [ocrLoading, setOcrLoading] = useState<Record<string, boolean>>({});
   const handleOcr = async (subId: string) => {
     const input = document.createElement('input');
-    input.type = 'file'; input.accept = 'image/*'; input.capture = 'environment';
+    input.type = 'file'; input.accept = 'image/*';
     input.onchange = async (e: any) => {
       const file = e.target.files?.[0];
       if (!file) return;
@@ -419,26 +437,30 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
   };
 
   // Submit and grade via edge function
-  const handleSubmit = async () => {
+  const handleSubmit = async (forceAutoSubmit: any = false) => {
+    const isForced = forceAutoSubmit === true;
+    if (isFinishingRef.current || isSubmitting) return;
     const currentAnswers = answersRef.current;
     const isExercise = testData?.content_json?.basicInfo?.category === 'exercise';
-    if (Object.keys(currentAnswers).length === 0) {
+    if (!isForced && Object.keys(currentAnswers).length === 0) {
       alert("⚠️ Bạn chưa điền câu trả lời nào cả!"); return;
     }
-    if (!isExercise && timeLeft > 0 && !window.confirm("Bạn có chắc chắn muốn nộp bài thi?")) { return; }
-    if (isExercise && !window.confirm("Bạn có chắc chắn muốn nộp bài?")) { return; }
+    if (!isForced) {
+      if (!isExercise && timeLeft > 0 && !window.confirm("Bạn có chắc chắn muốn nộp bài thi?")) { return; }
+      if (isExercise && !window.confirm("Bạn có chắc chắn muốn nộp bài?")) { return; }
+    }
+
+    const rawTime = testData.json_config?.timeLimit || testData.timeLimit || testData.time_limit || 120;
+    const initialSeconds = (parseInt(rawTime) || 120) * 60;
+    const savedEnd = testData?.id ? getSavedEndTime(testData.id) : null;
+    const computedTimeSpent = savedEnd
+      ? Math.max(0, initialSeconds - Math.max(0, Math.floor((savedEnd - Date.now()) / 1000)))
+      : Math.max(0, initialSeconds - timeLeft);
 
     setIsSubmitting(true);
     isFinishingRef.current = true;
-    
-    if (testData?.id) {
-       localStorage.removeItem(`igcse_endtime_${testData.id}`);
-       localStorage.removeItem(`igcse_ans_${testData.id}`);
-    }
 
     try {
-      setIsSubmitting(true);
-
       const compressImage = (base64Str: string, maxWidth = 800, quality = 0.5): Promise<string> => {
           return new Promise((resolve) => {
               const img = new Image();
@@ -523,14 +545,10 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
       try {
         const { data: { user } } = await supabase.auth.getUser();
         if (user) {
-          const rawTime = testData.json_config?.timeLimit || testData.timeLimit || testData.time_limit || 120;
-          const initialSeconds = parseInt(rawTime) * 60;
-          const timeSpentSecs = initialSeconds - timeLeft;
-          
           await supabase.from('test_results').insert([{
             user_id: user.id, course_id: testData.course_id, test_title: testData.title || "IGCSE Paper",
             test_type: 'IGCSE-Science', score: gradedData.total_student_score, total_score: gradedData.total_max_score,
-            time_spent: timeSpentSecs > 0 ? timeSpentSecs : 0,
+            time_spent: computedTimeSpent,
             details: { test_id: testData.id, userAnswers: currentAnswers, aiFeedback: gradedData }
           }]);
 
@@ -549,7 +567,14 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
         }
       } catch (dbError) { console.error("DB save error:", dbError); }
 
+      // Chỉ xóa bản nháp sau khi chấm & lưu thành công
+      if (testData?.id) {
+         localStorage.removeItem(`igcse_endtime_${testData.id}`);
+         localStorage.removeItem(`igcse_ans_${testData.id}`);
+      }
+
     } catch (err: any) {
+      isFinishingRef.current = false;
       if (err.message && err.message.includes("Unexpected end of JSON input")) {
           alert("❌ Không thể nộp bài do kết nối gián đoạn hoặc file ảnh quá nặng. Vui lòng thử nộp lại.");
       } else {
@@ -560,6 +585,9 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
     }
   };
 
+  const handleSubmitRef = useRef(handleSubmit);
+  handleSubmitRef.current = handleSubmit;
+
   // Timer countdown
   useEffect(() => {
     if (isLoading || !testData || gradeResult || isFinishingRef.current || isReviewMode) return;
@@ -569,8 +597,18 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
         if (currentEndTime) {
             const remaining = Math.max(0, Math.floor((currentEndTime - Date.now()) / 1000));
             setTimeLeft(remaining);
-            if (remaining <= 0) { clearInterval(timer); alert("⏰ Hết giờ làm bài!"); handleSubmit(); }
-        } else { setTimeLeft(prev => Math.max(0, prev - 1)); }
+            if (remaining <= 0) { clearInterval(timer); alert("⏰ Hết giờ làm bài!"); handleSubmitRef.current(true); }
+        } else {
+            setTimeLeft(prev => {
+                if (prev <= 1) {
+                    clearInterval(timer);
+                    alert("⏰ Hết giờ làm bài!");
+                    handleSubmitRef.current(true);
+                    return 0;
+                }
+                return prev - 1;
+            });
+        }
     }, 1000);
     return () => clearInterval(timer);
   }, [isLoading, testData, gradeResult, isReviewMode]);
@@ -627,7 +665,7 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
 
   // Loading state
   if (isLoading) return (
-    <div className="h-screen w-screen flex flex-col items-center justify-center bg-[#525659] text-white font-bold">
+    <div className="h-[100dvh] w-screen flex flex-col items-center justify-center bg-[#525659] text-white font-bold">
       <div className="animate-spin text-4xl mb-4">⏳</div>
       <p>Đang tải đề thi IGCSE...</p>
     </div>
@@ -635,7 +673,7 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
 
   // No test data
   if (!testData || (!isReviewMode && (!testData.json_config || !testData.json_config.questions))) return (
-    <div className="h-screen w-screen flex flex-col items-center justify-center bg-[#525659] text-white font-bold gap-4">
+    <div className="h-[100dvh] w-screen flex flex-col items-center justify-center bg-[#525659] text-white font-bold gap-4">
       <p>⚠️ Chưa có cấu hình đề thi trong hệ thống.</p>
       <button onClick={onBack} className="bg-[#1e88e5] px-6 py-2 rounded hover:bg-blue-700 transition-colors">Quay lại</button>
     </div>
@@ -650,7 +688,7 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
   };
 
   return (
-    <div className="h-screen w-screen flex flex-col bg-white font-sans text-slate-900 overflow-hidden">
+    <div className="h-[100dvh] w-screen flex flex-col bg-white font-sans text-slate-900 overflow-hidden">
       {/* Header */}
       <header className="h-14 w-full bg-white border-b border-slate-300 flex items-center justify-between px-3 sm:px-6 shrink-0 z-20 box-border gap-2">
         <div className="flex items-center gap-2.5 sm:gap-4 overflow-hidden min-w-0">
@@ -671,7 +709,7 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
              <button type="button" onClick={() => { if (!document.fullscreenElement) document.documentElement.requestFullscreen().catch(()=>{}); else document.exitFullscreen(); }} className="hidden sm:inline-flex text-slate-500 hover:text-[#0a5482] transition-colors text-lg px-1 cursor-pointer" title={isFullscreen ? 'Thoát toàn màn hình' : 'Toàn màn hình'}>
                {isFullscreen ? '🔲' : '⛶'}
              </button>
-             <button type="button" onClick={handleSubmit} disabled={isSubmitting} className="bg-[#0a5482] hover:bg-[#084266] text-white font-bold text-xs sm:text-sm px-4 sm:px-6 py-1.5 rounded-lg transition-colors active:scale-95 disabled:opacity-50 whitespace-nowrap shadow-sm cursor-pointer">
+             <button type="button" onClick={() => handleSubmit(false)} disabled={isSubmitting} className="bg-[#0a5482] hover:bg-[#084266] text-white font-bold text-xs sm:text-sm px-4 sm:px-6 py-1.5 rounded-lg transition-colors active:scale-95 disabled:opacity-50 whitespace-nowrap shadow-sm cursor-pointer">
                {isSubmitting ? 'Đang chấm...' : 'Nộp Bài'}
              </button>
           </div>
@@ -688,11 +726,24 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
       )}
 
       {/* Split Screen */}
-      <div ref={containerRef} className="flex-1 flex flex-col md:flex-row overflow-hidden w-full select-none bg-[#525659]">
+      <div ref={containerRef} className={`flex-1 flex flex-col md:flex-row overflow-hidden w-full bg-[#525659] ${isDragging ? 'select-none' : ''}`}>
         {/* Left: PDF Viewer with Drawing Canvas */}
         <div style={{ width: isDesktop ? `${leftWidth}%` : '100%' }} className="h-[46vh] md:h-full flex flex-col shrink-0 bg-[#525659] border-b md:border-b-0 border-slate-700">
           <div className="bg-[#323639] border-b border-[#202224] px-3 sm:px-4 flex justify-between items-center gap-2 h-10 shrink-0 shadow-sm overflow-x-auto no-scrollbar">
-            <span className="font-bold text-slate-300 text-[11px] uppercase tracking-widest shrink-0">📄 Đề thi Cambridge</span>
+            <div className="flex items-center gap-2 shrink-0">
+              <span className="font-bold text-slate-300 text-[11px] uppercase tracking-widest shrink-0">📄 Đề thi Cambridge</span>
+              {testData.insert_pdf_url && (
+                <a
+                  href={testData.insert_pdf_url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-2 py-0.5 rounded bg-white/10 hover:bg-white/20 text-slate-200 hover:text-white text-[11px] font-bold transition whitespace-nowrap"
+                  title="Mở file PDF trong tab mới"
+                >
+                  ↗ Mở PDF
+                </a>
+              )}
+            </div>
             {!isReviewMode && (
               <div className="flex items-center gap-1 shrink-0">
                 <button onClick={() => setDrawMode(prev => prev === 'pen' ? null : 'pen')} className={`px-2 py-1 rounded text-[11px] font-bold transition-all ${drawMode === 'pen' ? 'bg-[#0a5482] text-white' : 'text-slate-400 hover:text-white'}`} title="Bút vẽ">✏️</button>
@@ -731,8 +782,10 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
                  <canvas
                    ref={drawCanvasRef}
                    className={`absolute inset-0 w-full h-full ${!drawMode ? 'pointer-events-none' : ''}`}
-                   style={{ cursor: drawMode === 'text' ? 'text' : drawMode === 'eraser' ? 'cell' : drawMode ? 'crosshair' : 'auto', zIndex: 10 }}
-                   onMouseDown={(e) => {
+                   style={{ cursor: drawMode === 'text' ? 'text' : drawMode === 'eraser' ? 'cell' : drawMode ? 'crosshair' : 'auto', touchAction: drawMode ? 'none' : 'auto', zIndex: 10 }}
+                   onPointerDown={(e) => {
+                     if (!drawMode) return;
+                     e.preventDefault();
                      const cv = drawCanvasRef.current; if (!cv) return;
                      const ctx = cv.getContext('2d'); if (!ctx) return;
                      const rect = e.currentTarget.getBoundingClientRect();
@@ -742,22 +795,24 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
                        setTextPos({x, y}); setDrawText('');
                        return;
                      }
+                     try { e.currentTarget.setPointerCapture(e.pointerId); } catch {}
                      setIsDrawing(true);
-                     if (['line','rect','circle','triangle'].includes(drawMode!)) {
+                     if (['line','rect','circle','triangle'].includes(drawMode)) {
                        setShapeStart({x, y});
                        canvasSnapshot.current = ctx.getImageData(0, 0, cv.width, cv.height);
                      } else {
                        ctx.beginPath(); ctx.moveTo(x, y);
                      }
                    }}
-                   onMouseMove={(e) => {
-                     if (!isDrawing) return;
+                   onPointerMove={(e) => {
+                     if (!isDrawing || !drawMode) return;
+                     e.preventDefault();
                      const cv = drawCanvasRef.current; if (!cv) return;
                      const ctx = cv.getContext('2d'); if (!ctx) return;
                      const rect = e.currentTarget.getBoundingClientRect();
                      const x = e.clientX - rect.left, y = e.clientY - rect.top;
                      
-                     if (['line','rect','circle','triangle'].includes(drawMode!) && shapeStart && canvasSnapshot.current) {
+                     if (['line','rect','circle','triangle'].includes(drawMode) && shapeStart && canvasSnapshot.current) {
                        ctx.putImageData(canvasSnapshot.current, 0, 0);
                        ctx.strokeStyle = penColor; ctx.lineWidth = 2; ctx.lineCap = 'round';
                        ctx.globalCompositeOperation = 'source-over';
@@ -768,15 +823,16 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
                        else if (drawMode === 'triangle') { ctx.moveTo(shapeStart.x+(x-shapeStart.x)/2, shapeStart.y); ctx.lineTo(x, y); ctx.lineTo(shapeStart.x, y); ctx.closePath(); }
                        ctx.stroke();
                      } else if (drawMode === 'pen' || drawMode === 'eraser') {
-                       ctx.strokeStyle = drawMode === 'eraser' ? 'rgba(0,0,0,0)' : penColor;
+                       ctx.strokeStyle = drawMode === 'eraser' ? 'rgba(0,0,0,1)' : penColor;
                        ctx.lineWidth = drawMode === 'eraser' ? 20 : 2;
                        ctx.lineCap = 'round';
                        ctx.globalCompositeOperation = drawMode === 'eraser' ? 'destination-out' : 'source-over';
                        ctx.lineTo(x, y); ctx.stroke();
                      }
                    }}
-                   onMouseUp={() => { setIsDrawing(false); setShapeStart(null); canvasSnapshot.current = null; }}
-                   onMouseLeave={() => { setIsDrawing(false); setShapeStart(null); canvasSnapshot.current = null; }}
+                   onPointerUp={(e) => { try { e.currentTarget.releasePointerCapture(e.pointerId); } catch {} setIsDrawing(false); setShapeStart(null); canvasSnapshot.current = null; }}
+                   onPointerCancel={() => { setIsDrawing(false); setShapeStart(null); canvasSnapshot.current = null; }}
+                   onPointerLeave={() => { setIsDrawing(false); setShapeStart(null); canvasSnapshot.current = null; }}
                  />
                  {/* Text input overlay */}
                  {drawMode === 'text' && textPos && (
@@ -857,7 +913,7 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
                         {gradeResult.total_student_score} <span className="text-2xl text-slate-400">/ {gradeResult.total_max_score}</span>
                     </div>
                     <div className="w-full bg-slate-200 rounded-full h-3 mb-4">
-                      <div className="bg-gradient-to-r from-[#0a5482] via-[#2ab4e8] to-emerald-400 h-3 rounded-full transition-all" style={{ width: `${Math.min(100, (gradeResult.total_student_score / gradeResult.total_max_score) * 100)}%` }}></div>
+                      <div className="bg-gradient-to-r from-[#0a5482] via-[#2ab4e8] to-emerald-400 h-3 rounded-full transition-all" style={{ width: `${gradeResult.total_max_score > 0 ? Math.min(100, (gradeResult.total_student_score / gradeResult.total_max_score) * 100) : 0}%` }}></div>
                     </div>
                     <p className="text-[14px] text-slate-600 bg-slate-50 p-4 rounded-xl italic text-left">{gradeResult.general_feedback}</p>
                 </div>
@@ -901,7 +957,7 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
                                                     )}
                                                 </div>
                                                 {showPalette[sub.id] && !isReviewMode && (
-                                                    <div className="absolute z-30 top-full mt-1 left-0 bg-white border border-slate-200 rounded-xl shadow-xl p-0 w-[380px] overflow-hidden">
+                                                    <div className="absolute z-30 top-full mt-1 left-0 bg-white border border-slate-200 rounded-xl shadow-xl p-0 w-[min(380px,calc(100vw-2rem))] overflow-hidden">
                                                         <div className="flex border-b border-slate-200 bg-slate-50">
                                                             {(Object.keys(charTabs) as Array<keyof typeof charTabs>).map(k => (
                                                                 <button key={k} type="button" onClick={() => setPaletteTab(k)} className={`flex-1 px-2 py-2 text-[11px] font-bold transition-all ${paletteTab === k ? 'text-[#1e88e5] border-b-2 border-[#1e88e5] bg-white' : 'text-slate-500 hover:text-slate-700'}`}>{charTabs[k].label}</button>
@@ -938,7 +994,7 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
                                                     )}
                                                 </div>
                                                 {showPalette[sub.id] && !isReviewMode && (
-                                                    <div className="absolute z-30 top-full mt-1 left-0 bg-white border border-slate-200 rounded-xl shadow-xl p-0 w-[380px] overflow-hidden">
+                                                    <div className="absolute z-30 top-full mt-1 left-0 bg-white border border-slate-200 rounded-xl shadow-xl p-0 w-[min(380px,calc(100vw-2rem))] overflow-hidden">
                                                         <div className="flex border-b border-slate-200 bg-slate-50">
                                                             {(Object.keys(charTabs) as Array<keyof typeof charTabs>).map(k => (
                                                                 <button key={k} type="button" onClick={() => setPaletteTab(k)} className={`flex-1 px-2 py-2 text-[11px] font-bold transition-all ${paletteTab === k ? 'text-[#1e88e5] border-b-2 border-[#1e88e5] bg-white' : 'text-slate-500 hover:text-slate-700'}`}>{charTabs[k].label}</button>
@@ -988,7 +1044,7 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
                                                             <p className="text-sm text-slate-500 font-semibold">Nhấn để chọn ảnh hoặc Ctrl+V để dán từ clipboard</p>
                                                             <p className="text-xs text-slate-400 mt-1">Ảnh sẽ tự động nén nhỏ {"<"} 1MB</p>
                                                         </div>
-                                                        <input type="file" className="hidden" accept="image/*" capture="environment" onChange={(e) => {
+                                                        <input type="file" className="hidden" accept="image/*" onChange={(e) => {
                                                             if(e.target.files && e.target.files[0]) handleImageUpload(sub.id, e.target.files[0]);
                                                         }} disabled={isReviewMode}/>
                                                     </label>

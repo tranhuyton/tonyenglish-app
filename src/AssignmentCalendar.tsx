@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { supabase } from './supabase';
 import { BoardTheme, DEFAULT_BOARD_THEME, BoardThemeModal, createCustomTheme, loadTheme, saveTheme } from './ThemeModal';
 import { parseLectureFromItem, getDisplayDescription } from './lectureTaskUtils';
@@ -16,6 +16,7 @@ interface Assignment {
   is_completed: boolean;
   card_title?: string;
   created_at: string;
+  updated_at?: string;
 }
 
 interface Props {
@@ -90,15 +91,24 @@ export default function AssignmentCalendar({
     }
   }, [userId]);
 
-  // Tải điểm thi thực tế từ test_results
+  const syncedAssignmentIdsRef = useRef<Set<string>>(new Set());
+
   useEffect(() => {
+    syncedAssignmentIdsRef.current.clear();
+  }, [userId]);
+
+  // Tải điểm thi thực tế từ test_results (chỉ tải theo userId hoặc khi có sự kiện refresh, tránh tải lại mỗi lần render)
+  useEffect(() => {
+    let cancelled = false;
     const fetchScores = async () => {
       const { data: { user } } = await supabase.auth.getUser();
-      if (!user) return;
+      if (!user || cancelled) return;
       const { data } = await supabase.from('test_results')
         .select('id, test_id, test_title, score, total_score, created_at, details')
         .eq('user_id', user.id)
-        .order('created_at', { ascending: false });
+        .order('created_at', { ascending: false })
+        .limit(500);
+      if (cancelled) return;
 
       const scoreMap = new Map<string, { score: number; total_score: number; percent: number; isPassed: boolean; completedAt: string | null }>();
       (data || []).forEach((r: any) => {
@@ -150,9 +160,10 @@ export default function AssignmentCalendar({
     const handleRefresh = () => fetchScores();
     window.addEventListener('tony-refresh-lecture-progress', handleRefresh);
     return () => {
+      cancelled = true;
       window.removeEventListener('tony-refresh-lecture-progress', handleRefresh);
     };
-  }, [assignments]);
+  }, [userId]);
 
   // ============================================
   // CALENDAR LOGIC
@@ -236,19 +247,31 @@ export default function AssignmentCalendar({
     };
   }, [latestTestScores, completedTestIds]);
 
-  // Đồng bộ ngày giao bài vào Database nếu hoàn thành trước hạn
+  // Đồng bộ ngày giao bài vào Database nếu hoàn thành trước hạn (chỉ đồng bộ 1 lần mỗi assignment ID)
   useEffect(() => {
     if (latestTestScores.size === 0 || assignments.length === 0) return;
-    assignments.forEach(async (a) => {
-      if (!a.due_date) return;
+    const pendingUpdates: { id: string; due_date: string }[] = [];
+    assignments.forEach((a) => {
+      if (!a.due_date || syncedAssignmentIdsRef.current.has(a.id)) return;
       const eff = getEffectiveDueDate(a);
       if (eff && eff < a.due_date) {
-        await supabase.from('assignments').update({
-          due_date: eff,
-          updated_at: new Date().toISOString()
-        }).eq('id', a.id);
+        syncedAssignmentIdsRef.current.add(a.id);
+        pendingUpdates.push({ id: a.id, due_date: eff });
       }
     });
+    if (pendingUpdates.length === 0) return;
+    const nowIso = new Date().toISOString();
+    Promise.all(
+      pendingUpdates.map((item) =>
+        supabase
+          .from('assignments')
+          .update({
+            due_date: item.due_date,
+            updated_at: nowIso,
+          })
+          .eq('id', item.id)
+      )
+    ).catch((err) => console.warn('[AssignmentCalendar] Failed syncing due_date:', err));
   }, [assignments, latestTestScores, getEffectiveDueDate]);
 
   // ============================================
@@ -657,7 +680,7 @@ export default function AssignmentCalendar({
           <div className="flex-1 min-w-0 w-full grid grid-cols-1 md:grid-cols-2 gap-5 items-start">
             
             {/* ========== CỘT 1: CỘT CÔNG VIỆC (MANUAL TASKS) ========== */}
-            <div className="bg-white rounded-2xl sm:rounded-3xl shadow-xs border border-slate-200/90 overflow-hidden flex flex-col h-[575px]">
+            <div className="bg-white rounded-2xl sm:rounded-3xl shadow-xs border border-slate-200/90 overflow-hidden flex flex-col max-h-[520px] xl:max-h-none xl:h-[575px]">
               {/* Header Cột Công việc */}
               <div className="px-5 py-4 border-b border-slate-200/80 bg-slate-50/70 flex items-center justify-between shrink-0">
                 <div className="flex items-center gap-3 min-w-0">
@@ -704,18 +727,23 @@ export default function AssignmentCalendar({
                     >
                       <div className="flex items-start gap-3">
                         <button
+                          type="button"
                           onClick={() => handleToggleComplete(task)}
                           disabled={task.is_completed || isUpdating === task.id}
-                          className={`mt-0.5 w-5 h-5 rounded-full border-2 flex items-center justify-center transition-all shrink-0 cursor-pointer ${
-                            task.is_completed 
-                              ? 'bg-emerald-500 border-emerald-500 text-white' 
-                              : task.student_completed 
-                                ? 'bg-amber-100 border-amber-400 text-amber-600' 
-                                : 'border-slate-300 hover:border-[#0a5482] bg-white text-transparent'
-                          } ${isUpdating === task.id ? 'animate-pulse' : ''}`}
+                          className="p-1.5 -m-1.5 mt-0 flex items-center justify-center shrink-0 cursor-pointer disabled:cursor-default group/chk"
                           title={task.is_completed ? "Đã được giáo viên duyệt" : task.student_completed ? "Bấm để bỏ đánh dấu hoàn thành" : "Bấm để đánh dấu đã hoàn thành"}
                         >
-                          {task.is_completed ? '✓' : task.student_completed ? '⏳' : ''}
+                          <span
+                            className={`w-5 h-5 rounded-full border-2 flex items-center justify-center transition-all ${
+                              task.is_completed 
+                                ? 'bg-emerald-500 border-emerald-500 text-white' 
+                                : task.student_completed 
+                                  ? 'bg-amber-100 border-amber-400 text-amber-600' 
+                                  : 'border-slate-300 group-hover/chk:border-[#0a5482] bg-white text-transparent'
+                            } ${isUpdating === task.id ? 'animate-pulse' : ''}`}
+                          >
+                            {task.is_completed ? '✓' : task.student_completed ? '⏳' : ''}
+                          </span>
                         </button>
 
                         <div className="flex-1 min-w-0">
@@ -795,7 +823,7 @@ export default function AssignmentCalendar({
             </div>
 
             {/* ========== CỘT 2: CỘT BÀI TẬP (TEST / EXERCISE TASKS) ========== */}
-            <div className="bg-white rounded-2xl sm:rounded-3xl shadow-xs border border-slate-200/90 overflow-hidden flex flex-col h-[575px]">
+            <div className="bg-white rounded-2xl sm:rounded-3xl shadow-xs border border-slate-200/90 overflow-hidden flex flex-col max-h-[520px] xl:max-h-none xl:h-[575px]">
               {/* Header Cột Bài tập */}
               <div className="px-5 py-4 border-b border-slate-200/80 bg-slate-50/70 flex items-center justify-between shrink-0">
                 <div className="flex items-center gap-3 min-w-0">

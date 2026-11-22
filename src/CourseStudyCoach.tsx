@@ -75,7 +75,14 @@ const formatSimpleMarkdown = (text: string, studentFirstName?: string, fullRawNa
     cleanFirst.toLowerCase() !== 'học viên'
   ) {
     const firstRegex = new RegExp(`(?<![\\p{L}])(${escapeRegExp(cleanFirst)})(?![\\p{L}])`, 'gu');
-    formatted = formatted.replace(firstRegex, '<b class="font-black text-slate-950">$1</b>');
+    formatted = formatted
+      .split(/(<[^>]+>)/g)
+      .map((part) =>
+        part.startsWith('<') && part.endsWith('>')
+          ? part
+          : part.replace(firstRegex, '<b class="font-black text-slate-950">$1</b>')
+      )
+      .join('');
   }
 
   return formatted;
@@ -884,8 +891,8 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
                   </div>
                   <div className="bg-slate-100 border border-slate-200 px-4 py-2.5 rounded-2xl flex items-center gap-2">
                     <span className="w-2 h-2 bg-[#2ab4e8] rounded-full animate-bounce" />
-                    <span className="w-2 h-2 bg-[#0a5482] rounded-full animate-bounce delay-100" />
-                    <span className="w-2 h-2 bg-[#2ab4e8] rounded-full animate-bounce delay-200" />
+                    <span className="w-2 h-2 bg-[#0a5482] rounded-full animate-bounce [animation-delay:150ms]" />
+                    <span className="w-2 h-2 bg-[#2ab4e8] rounded-full animate-bounce [animation-delay:300ms]" />
                     <span className="ml-1 text-slate-600">
                       Thầy Tony AI đang suy nghĩ và chọn bài phù hợp nhất cho{' '}
                       <span className="font-black text-slate-950">{displayStudentName}</span>...
@@ -985,7 +992,7 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
                   onPaste={handlePaste}
                   disabled={isAiThinking}
                   placeholder={`Nhắn hỏi Thầy hoặc Ctrl+V dán ảnh bài tập (VD: "Thầy giải giúp em câu này / hôm nay em nên học gì?")...`}
-                  className="flex-1 bg-white border border-slate-300 focus:border-[#2ab4e8] rounded-xl px-4 py-2.5 text-xs sm:text-sm font-medium text-slate-800 outline-none shadow-2xs"
+                  className="flex-1 min-w-0 bg-white border border-slate-300 focus:border-[#2ab4e8] rounded-xl px-4 py-2.5 text-xs sm:text-sm font-medium text-slate-800 outline-none shadow-2xs"
                 />
                 <button
                   type="submit"

@@ -248,7 +248,12 @@ export const translations: Record<'vi' | 'en', Record<string, string>> = {
     'Other learning materials': 'Other Learning Materials',
     'Thank you for contacting us. We will respond to you as soon as possible.': 'Thank you for reaching out. Mr. Tony will respond as soon as possible.',
     'We will contact you soon about the Time-table and Avaibility of The course.': 'Mr. Tony will contact you soon regarding suitable tutoring schedules.',
-    'Please feel free to contact us at anytime': 'Please feel free to contact Mr. Tony directly at any time'
+    'Please feel free to contact us at anytime': 'Please feel free to contact Mr. Tony directly at any time',
+    'Please enter imformation!': 'Please enter your information!',
+    'Not any news!!': 'No articles found.',
+    'You did change password complete!': 'Password changed successfully!',
+    'Do you want change your password?': 'Change your password?',
+    'Please complete information on the items marked with': 'Please fill in all required fields marked with'
   }
 };
 

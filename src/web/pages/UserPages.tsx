@@ -90,7 +90,7 @@ export const LoginPage: React.FC = () => {
 /* 2. LECTURE & TRIAL COURSE VIEWER (/user/lecture & /trial/:courseSlug) */
 export const LecturePage: React.FC<{ isTrial?: boolean }> = ({ isTrial = false }) => {
   const { courseSlug, lectureSlug } = useParams<{ courseSlug?: string; lectureSlug?: string }>();
-  const { lang, t, selectedCourseId } = useApp();
+  const { lang, t, user, selectedCourseId } = useApp();
 
   const [classes, setClasses] = useState<any[]>([]);
   const [selectedClass, setSelectedClass] = useState<any | null>(null);
@@ -107,6 +107,7 @@ export const LecturePage: React.FC<{ isTrial?: boolean }> = ({ isTrial = false }
   const [mobileCateOpen, setMobileCateOpen] = useState(false);
 
   useEffect(() => {
+    if (!user) return;
     async function loadClassesAndLectures() {
       let targetCourseId = selectedCourseId;
 
@@ -208,9 +209,10 @@ export const LecturePage: React.FC<{ isTrial?: boolean }> = ({ isTrial = false }
     }
 
     loadClassesAndLectures();
-  }, [isTrial, courseSlug, lectureSlug, selectedCourseId]);
+  }, [user, isTrial, courseSlug, lectureSlug, selectedCourseId]);
 
   useEffect(() => {
+    if (!user) return;
     async function loadLectureContentPages() {
       setCurPageIdx(0);
       setShowQuestion(false);
@@ -235,7 +237,11 @@ export const LecturePage: React.FC<{ isTrial?: boolean }> = ({ isTrial = false }
     }
 
     loadLectureContentPages();
-  }, [currentLecture]);
+  }, [user, currentLecture]);
+
+  if (!user) {
+    return <LoginPage />;
+  }
 
   const currentPageContent = lecturePages[curPageIdx] || null;
   const classTitle = selectedClass
@@ -253,16 +259,17 @@ export const LecturePage: React.FC<{ isTrial?: boolean }> = ({ isTrial = false }
           <div>
             <div className="font-black text-sm sm:text-base">Hệ thống Bài giảng &amp; Luyện thi thế hệ mới</div>
             <div className="text-xs text-sky-200">
-              Tích hợp Gia sư AI, chấm chữa Writing/Speaking và bài tập tương tác tại lms.tonyenglish.vn
+              Tích hợp Gia sư AI, chấm chữa Writing/Speaking và bài tập tương tác tại Góc Học Viên TonyEnglish
             </div>
           </div>
         </div>
-        <a
-          href="https://lms.tonyenglish.vn"
-          className="bg-[#2ab4e8] hover:bg-[#1d9ad1] text-white font-black text-xs sm:text-sm px-4 py-2.5 rounded-xl shadow-md transition whitespace-nowrap"
+        <button
+          type="button"
+          onClick={() => window.dispatchEvent(new CustomEvent('tony-open-lms'))}
+          className="bg-[#2ab4e8] hover:bg-[#1d9ad1] text-white font-black text-xs sm:text-sm px-4 py-2.5 rounded-xl shadow-md transition whitespace-nowrap cursor-pointer"
         >
           Chuyển sang LMS mới ➜
-        </a>
+        </button>
       </div>
 
       <div className="flex flex-col lg:flex-row gap-4 sm:gap-8 xl:gap-12 items-start">
@@ -583,9 +590,13 @@ export const ProfilePage: React.FC = () => {
       setPassMsg(t('New password does not match!'));
       return;
     }
-    const newEncrypted = encryptLegacyPass(user.user_salt || '', newPass);
+    const { data: saltRow } = await supabase
+      .from('te_user')
+      .select('user_salt')
+      .eq('user_id', user.user_id)
+      .maybeSingle();
+    const newEncrypted = encryptLegacyPass(saltRow?.user_salt || '', newPass);
     await supabase.from('te_user').update({ user_pass: newEncrypted }).eq('user_id', user.user_id);
-    setUser({ ...user, user_pass: newEncrypted });
     setNewPass('');
     setConfPass('');
     setPassMsg(t('You did change password complete!'));
@@ -725,17 +736,21 @@ export const MessagePage: React.FC = () => {
   const [messages, setMessages] = useState<any[]>([]);
 
   useEffect(() => {
-    if (!user) return;
+    if (!user?.user_id) {
+      setMessages([]);
+      return;
+    }
     supabase
       .from('te_message')
       .select('*')
       .eq('deleted', 0)
+      .eq('user_id', user.user_id)
       .order('msg_id', { ascending: false })
       .limit(30)
       .then(({ data }) => {
-        if (data) setMessages(data);
+        setMessages(data || []);
       });
-  }, [user]);
+  }, [user?.user_id]);
 
   if (!user) return <LoginPage />;
 

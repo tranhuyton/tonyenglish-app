@@ -232,7 +232,7 @@ export default function TaskBoard({
       console.error('[TaskBoard] Error saving column color locally:', e);
     }
 
-    if (colId) {
+    if (isAdmin && colId) {
       try {
         const clean = parseModuleTheme(colName).cleanTitle;
         const newTitle = formatModuleTitleWithColor(clean, bg, text);
@@ -267,6 +267,11 @@ export default function TaskBoard({
     handleSelectTheme(newTheme);
   };
   const [activeBoardIndex, setActiveBoardIndex] = useState(0);
+
+  useEffect(() => {
+    setActiveBoardIndex(0);
+    setActiveMobileColIndex(0);
+  }, [filterCourseId]);
   const [draggedColName, setDraggedColName] = useState<string | null>(null);
   const [dragOverColName, setDragOverColName] = useState<string | null>(null);
   const [customColOrders, setCustomColOrders] = useState<Record<string, string[]>>(() => {
@@ -583,26 +588,6 @@ export default function TaskBoard({
     } catch (error) {
       console.error('Error toggling task:', error);
       alert('Không thể cập nhật trạng thái công việc. Vui lòng thử lại.');
-    }
-  };
-
-  const handleSaveColumnColor = async (bg: string, text: string) => {
-    if (!colorPickerTarget) return;
-    const clean = parseModuleTheme(colorPickerTarget.colTitle).cleanTitle;
-    const newTitle = formatModuleTitleWithColor(clean, bg, text);
-
-    try {
-      if (colorPickerTarget.colId) {
-        await supabase.from('board_columns').update({ title: newTitle }).eq('id', colorPickerTarget.colId);
-        setBoardColumns(prev => prev.map(c => c.id === colorPickerTarget.colId ? { ...c, title: newTitle } : c));
-      }
-
-      await supabase.from('assignments').update({ category: newTitle }).eq('category', colorPickerTarget.colTitle);
-      setAssignments(prev => prev.map(a => a.category === colorPickerTarget.colTitle ? { ...a, category: newTitle } : a));
-    } catch (e) {
-      console.error('Error updating column color:', e);
-    } finally {
-      setColorPickerTarget(null);
     }
   };
 
@@ -1007,7 +992,7 @@ export default function TaskBoard({
         }
 
         return (
-          <div key={board.title} className="w-full flex flex-col relative overflow-hidden h-[calc(100vh-235px)] min-h-[540px] max-h-[760px]">
+          <div key={board.title} className="w-full flex-1 min-h-0 sm:min-h-[540px] flex flex-col relative overflow-hidden h-[calc(100dvh-235px)] max-h-[760px]">
             {/* Board - Horizontal Scroll like Trello with smooth mobile snap */}
             <div 
               ref={boardScrollContainerRef}
@@ -1018,7 +1003,6 @@ export default function TaskBoard({
               style={{
                 WebkitOverflowScrolling: 'touch',
                 touchAction: 'pan-x pan-y',
-                scrollSnapType: 'x mandatory',
               }}
             >
               {board.columns.map((col, colIdx) => {
@@ -1142,7 +1126,7 @@ export default function TaskBoard({
                       className="flex-1 overflow-y-auto column-cards-scrollbar pr-1 flex flex-col gap-2.5 min-h-0 pt-0.5"
                       style={{
                         WebkitOverflowScrolling: 'touch',
-                        touchAction: 'pan-y',
+                        touchAction: 'pan-x pan-y',
                       }}
                     >
                       {col.cards.map(card => {
@@ -1250,18 +1234,18 @@ export default function TaskBoard({
             </div>
 
             {/* Mobile Dots Carousel & Column Navigation */}
-            <div className="sm:hidden flex items-center justify-between px-5 py-2 shrink-0 z-20 bg-slate-900/80 backdrop-blur-xs">
+            <div className="sm:hidden flex items-center justify-between px-4 py-2 shrink-0 z-20 bg-slate-900/80 backdrop-blur-xs">
               <button
                 type="button"
                 onClick={() => scrollToColumn(Math.max(0, activeMobileColIndex - 1))}
                 disabled={activeMobileColIndex === 0}
-                className="w-7 h-7 rounded-full bg-white/20 hover:bg-white/30 active:scale-90 disabled:opacity-20 text-white flex items-center justify-center text-xs font-bold transition-all cursor-pointer"
+                className="w-10 h-10 rounded-full bg-white/20 hover:bg-white/30 active:scale-90 disabled:opacity-20 text-white flex items-center justify-center text-lg font-bold transition-all cursor-pointer"
                 aria-label="Cột trước"
               >
                 ‹
               </button>
 
-              <div className="flex items-center gap-1.5 max-w-[240px] overflow-x-auto py-1 px-1 custom-scrollbar">
+              <div className="flex items-center gap-1.5 max-w-[220px] overflow-x-auto py-1 px-1 custom-scrollbar">
                 {board.columns.map((c, i) => (
                   <button
                     key={c.name}
@@ -1281,7 +1265,7 @@ export default function TaskBoard({
                 type="button"
                 onClick={() => scrollToColumn(Math.min(board.columns.length - 1, activeMobileColIndex + 1))}
                 disabled={activeMobileColIndex === board.columns.length - 1}
-                className="w-7 h-7 rounded-full bg-white/20 hover:bg-white/30 active:scale-90 disabled:opacity-20 text-white flex items-center justify-center text-xs font-bold transition-all cursor-pointer"
+                className="w-10 h-10 rounded-full bg-white/20 hover:bg-white/30 active:scale-90 disabled:opacity-20 text-white flex items-center justify-center text-lg font-bold transition-all cursor-pointer"
                 aria-label="Cột tiếp theo"
               >
                 ›

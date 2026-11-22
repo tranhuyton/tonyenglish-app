@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, Suspense } from 'react';
-import { supabase } from './supabase';
+import { supabase, isTonyEnglishAuthUser, isTonyEnglishAdmin } from './supabase';
 import WebPortal from './web/WebPortal';
 import StudentPortal from './StudentPortal';
 import ResetPasswordModal from './ResetPasswordModal';
@@ -22,6 +22,7 @@ const NinjaSurvival = lazyWithRetry(() => import('./NinjaSurvival'));
 const VocabRacing = lazyWithRetry(() => import('./VocabRacing'));
 const IgcsePaperTest = lazyWithRetry(() => import('./IgcsePaperTest'));
 const IgcseDirectPaperTest = lazyWithRetry(() => import('./IgcseDirectPaperTest'));
+const SatBluebookTest = lazyWithRetry(() => import('./SatBluebookTest'));
 const AITutorSidebar = lazyWithRetry(() => import('./AITutorSidebar'));
 const LiveSpeakingTest = lazyWithRetry(() => import('./LiveSpeakingTest'));
 const MixedPaperTest = lazyWithRetry(() => import('./MixedPaperTest'));
@@ -50,6 +51,7 @@ const TEST_SESSION_VIEWS = [
   'case-study',
   'igcse',
   'igcse-direct',
+  'sat-bluebook',
   'siege-game',
   'ninja-survival',
   'vocab-racing',
@@ -64,6 +66,7 @@ const DATA_REQUIRED_TEST_VIEWS = [
   'case-study',
   'igcse',
   'igcse-direct',
+  'sat-bluebook',
 ];
 
 const STUDENT_LMS_VIEWS = [...RESUMABLE_STUDENT_VIEWS, ...TEST_SESSION_VIEWS];
@@ -136,6 +139,9 @@ export default function App() {
         if (hash === '#test' && savedView && TEST_SESSION_VIEWS.includes(savedView) && savedTest) {
           return savedView;
         }
+        if (hash === '#lecture') {
+          return 'lecture';
+        }
       } catch (e) {}
       return resolveStudentResumeView();
     }
@@ -158,12 +164,19 @@ export default function App() {
   
   // --- 🤖 AI SIDEBAR STATE ---
   const [isAISidebarOpen, setIsAISidebarOpen] = useState(false);
+  const [hasMountedAISidebar, setHasMountedAISidebar] = useState(false);
   const [aiMode, setAiMode] = useState<'tutor' | 'ielts'>('tutor');
   const [ieltsTopic, setIeltsTopic] = useState("");
   const [ieltsImage, setIeltsImage] = useState("");
   const [ieltsTaskType, setIeltsTaskType] = useState("task2");
   const [currentLectureTitle, setCurrentLectureTitle] = useState("");
   const [currentHtmlContent, setCurrentHtmlContent] = useState("");
+
+  useEffect(() => {
+    if (isAISidebarOpen) {
+      setHasMountedAISidebar(true);
+    }
+  }, [isAISidebarOpen]);
 
   // 🚀 LIVE TUTOR WIDGET STATE
   const [liveTutorState, setLiveTutorState] = useState<'CLOSED' | 'FULLSCREEN' | 'MINIMIZED'>('CLOSED');
@@ -209,11 +222,17 @@ export default function App() {
       setCurrentHtmlContent(e.detail.html || "");
     };
 
+    const handleCloseSidebar = () => {
+      setIsAISidebarOpen(false);
+    };
+
     document.addEventListener('click', handleGlobalClick);
     window.addEventListener('tony-update-lecture-context', handleUpdateContext);
+    window.addEventListener('tony-close-sidebar', handleCloseSidebar);
     return () => {
       document.removeEventListener('click', handleGlobalClick);
       window.removeEventListener('tony-update-lecture-context', handleUpdateContext);
+      window.removeEventListener('tony-close-sidebar', handleCloseSidebar);
     };
   }, []);
 
@@ -237,6 +256,10 @@ export default function App() {
              sessionStorage.removeItem('lms_current_test');
              sessionStorage.removeItem('lms_return_view');
            } catch (err) {}
+         }
+         if (resolved === 'home') {
+           setIsAISidebarOpen(false);
+           setLiveTutorState('CLOSED');
          }
          if (resolved === 'lecture') {
            try {
@@ -386,10 +409,15 @@ export default function App() {
         }
       }
     }
-    else if (RESUMABLE_STUDENT_VIEWS.includes(currentView)) {
+    else if (currentView === 'lecture') {
+      if ((p !== '/portal' && p !== '/lms') || h !== '#lecture') {
+        window.history.pushState(null, '', '/portal#lecture');
+      }
+    }
+    else if (currentView === 'portal') {
       if (p !== '/portal' && p !== '/lms') {
         window.history.pushState(null, '', '/portal');
-      } else if (h === '#test') {
+      } else if (h === '#test' || h === '#lecture') {
         window.history.replaceState(null, '', p);
       }
     }
@@ -399,7 +427,9 @@ export default function App() {
       }
     }
     else if (currentView === 'home') {
-      if (p === '/admin' || p === '/admin/' || p.startsWith('/khoa-hoc') || p.startsWith('/hoc-thu') || p.startsWith('/dang-ky') || p.startsWith('/promo') || p === '/lms' || p === '/lms/' || p === '/portal' || p === '/portal/') {
+      setIsAISidebarOpen(false);
+      setLiveTutorState('CLOSED');
+      if (p === '/admin' || p === '/admin/' || p === '/lms' || p === '/lms/' || p === '/portal' || p === '/portal/') {
         window.history.pushState(null, '', '/');
       }
     }
@@ -416,14 +446,27 @@ export default function App() {
           try { sessionStorage.setItem('lms_current_view', 'admin'); } catch (e) {}
         }
       } else if (p === '/portal' || p === '/portal/' || p === '/lms' || p === '/lms/') {
-        if (h !== '#test') {
+        if (h === '#lecture') {
           clearActiveTestSession();
-          const target = resolveStudentResumeView();
-          setCurrentView(prev => (RESUMABLE_STUDENT_VIEWS.includes(prev) ? prev : target));
-          try { sessionStorage.setItem('lms_current_view', target); } catch (e) {}
+          setCurrentView('lecture');
+          try {
+            sessionStorage.setItem('lms_current_view', 'lecture');
+            sessionStorage.setItem('lms_last_student_view', 'lecture');
+            localStorage.setItem('lms_last_student_view', 'lecture');
+          } catch (e) {}
+        } else if (h !== '#test') {
+          clearActiveTestSession();
+          setCurrentView('portal');
+          try {
+            sessionStorage.setItem('lms_current_view', 'portal');
+            sessionStorage.setItem('lms_last_student_view', 'portal');
+            localStorage.setItem('lms_last_student_view', 'portal');
+          } catch (e) {}
         }
       } else {
         clearActiveTestSession();
+        setIsAISidebarOpen(false);
+        setLiveTutorState('CLOSED');
         setCurrentView('home');
         try { sessionStorage.setItem('lms_current_view', 'home'); } catch (e) {}
       }
@@ -433,6 +476,18 @@ export default function App() {
   }, []);
 
   useEffect(() => {
+    const fetchProfileRoleStatus = async (userId: string) => {
+      try {
+        const queryPromise = supabase.from('profiles').select('role, status').eq('id', userId).maybeSingle();
+        const timeoutPromise = new Promise<any>((_, reject) => setTimeout(() => reject('TIMEOUT'), 4000));
+        const res = await Promise.race([queryPromise, timeoutPromise]);
+        return res?.data || null;
+      } catch (err) {
+        console.warn('Status verification error:', err);
+        return null;
+      }
+    };
+
     const startGlobalTimer = () => {
       if (!timerRef.current) {
         timerRef.current = setInterval(() => {
@@ -442,12 +497,14 @@ export default function App() {
             const currentSecs = parseInt(localStorage.getItem('tony_global_time') || '0');
             const newSecs = currentSecs + 60;
             localStorage.setItem('tony_global_time', newSecs.toString());
-            // Chỉ gọi Supabase mỗi 15 phút thay vì 5 phút (chỉ áp dụng cho học viên, không áp dụng cho admin)
+            // Chỉ gọi Supabase mỗi 15 phút thay vì 5 phút (chỉ áp dụng cho học viên TonyEnglish, không áp dụng cho admin hoặc tài khoản Tử Vi)
             if (newSecs > 0 && newSecs % 900 === 0) {
-              supabase.auth.getSession().then(({ data: { session } }) => {
+              supabase.auth.getSession().then(async ({ data: { session } }) => {
                 const user = session?.user;
-                if (user && !user.email?.toLowerCase().includes('admin')) {
-                  supabase.from('profiles').update({ study_time_seconds: newSecs }).eq('id', user.id).then().catch(console.error);
+                if (!user || !isTonyEnglishAuthUser(user)) return;
+                const profile = await fetchProfileRoleStatus(user.id);
+                if (!isTonyEnglishAdmin(user, profile) && profile) {
+                  await supabase.from('profiles').update({ study_time_seconds: newSecs }).eq('id', user.id);
                 }
               }).catch(console.warn);
             }
@@ -463,7 +520,7 @@ export default function App() {
         stopGlobalTimer();
       } else {
         supabase.auth.getSession().then(({ data: { session } }) => {
-          if (session) startGlobalTimer();
+          if (session?.user && isTonyEnglishAuthUser(session.user)) startGlobalTimer();
         }).catch(console.warn);
       }
     };
@@ -478,64 +535,70 @@ export default function App() {
       }
     } catch (e) {}
 
-    const verifyUserStatus = async (user: any) => {
-      if (!user) return true;
-      const email = user.email?.toLowerCase() || '';
-      if (email.includes('admin')) return true;
-      try {
-        const queryPromise = supabase.from('profiles').select('role, status').eq('id', user.id).single();
-        const timeoutPromise = new Promise<any>((_, reject) => setTimeout(() => reject('TIMEOUT'), 4000));
-        const res = await Promise.race([queryPromise, timeoutPromise]);
-        const profile = res?.data;
-        if (profile?.role !== 'admin' && profile?.status === 'inactive') {
-          await supabase.auth.signOut();
-          alert("⛔ Tài khoản học của bạn hiện đang ở trạng thái TẠM DỪNG.\nVui lòng liên hệ Thầy Tony để được hỗ trợ kích hoạt lại nhé!");
-          setCurrentView('home');
-          return false;
-        }
-      } catch (err) {
-        console.warn('Status verification error:', err);
+    const verifyUserStatus = async (user: any, existingProfile?: any) => {
+      if (!user || !isTonyEnglishAuthUser(user)) return false;
+      const profile = existingProfile !== undefined ? existingProfile : await fetchProfileRoleStatus(user.id);
+      if (isTonyEnglishAdmin(user, profile)) return true;
+      if (profile?.status === 'inactive') {
+        await supabase.auth.signOut();
+        alert("⛔ Tài khoản học của bạn hiện đang ở trạng thái TẠM DỪNG.\nVui lòng liên hệ Thầy Tony để được hỗ trợ kích hoạt lại nhé!");
+        setCurrentView('home');
+        return false;
       }
       return true;
     };
 
     // Kiểm tra session khi tải trang / F5
     supabase.auth.getSession().then(async ({ data: { session } }) => { 
-      if (session?.user) { 
-        const email = session.user.email?.toLowerCase() || '';
-        const isAdmin = email.includes('admin');
-        try {
-          if (localStorage.getItem('tony_oauth_redirect_portal') === '1') {
-            localStorage.removeItem('tony_oauth_redirect_portal');
-            if (!isAdmin) {
-              sessionStorage.setItem('lms_current_view', 'portal');
-              setCurrentView('portal');
-            }
+      const user = session?.user;
+      if (!user) return;
+      if (!isTonyEnglishAuthUser(user)) {
+        stopGlobalTimer();
+        setCurrentView(prev => (STUDENT_LMS_VIEWS.includes(prev) || prev === 'admin') ? 'home' : prev);
+        return;
+      }
+      const profile = await fetchProfileRoleStatus(user.id);
+      const isAdmin = isTonyEnglishAdmin(user, profile);
+      try {
+        if (localStorage.getItem('tony_oauth_redirect_portal') === '1') {
+          localStorage.removeItem('tony_oauth_redirect_portal');
+          if (!isAdmin) {
+            sessionStorage.setItem('lms_current_view', 'portal');
+            setCurrentView('portal');
           }
-        } catch (e) {}
-        if (isAdmin) {
-          setCurrentView(prev => prev === 'admin-login' ? 'admin' : prev);
-          startGlobalTimer();
-          return;
         }
-        const isActive = await verifyUserStatus(session.user);
-        if (!isActive) return;
-        startGlobalTimer(); 
-      } 
+      } catch (e) {}
+      if (isAdmin) {
+        setCurrentView(prev => prev === 'admin-login' ? 'admin' : prev);
+        startGlobalTimer();
+        return;
+      }
+      const isActive = await verifyUserStatus(user, profile);
+      if (!isActive) return;
+      startGlobalTimer(); 
     }).catch(console.warn);
 
     // Lắng nghe sự kiện auth: TUYỆT ĐỐI không gọi async DB query bên trong để tránh chặn luồng GoTrue
     const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
       if (event === 'SIGNED_IN') { 
+        const user = session?.user;
+        if (!user || !isTonyEnglishAuthUser(user)) {
+          stopGlobalTimer();
+          setCurrentView(prev => (STUDENT_LMS_VIEWS.includes(prev) || prev === 'admin') ? 'home' : prev);
+          return;
+        }
         startGlobalTimer(); 
         try {
-          const isAdmin = (session?.user?.email?.toLowerCase() || '').includes('admin');
           if (localStorage.getItem('tony_oauth_redirect_portal') === '1') {
             localStorage.removeItem('tony_oauth_redirect_portal');
-            if (!isAdmin) {
-              sessionStorage.setItem('lms_current_view', 'portal');
-              setCurrentView('portal');
-            }
+            setTimeout(() => {
+              fetchProfileRoleStatus(user.id).then((profile) => {
+                if (!isTonyEnglishAdmin(user, profile)) {
+                  try { sessionStorage.setItem('lms_current_view', 'portal'); } catch (e) {}
+                  setCurrentView('portal');
+                }
+              }).catch(console.warn);
+            }, 0);
           }
         } catch (e) {}
       }
@@ -543,6 +606,8 @@ export default function App() {
         setShowResetPasswordModal(true);
       }
       else if (event === 'SIGNED_OUT') {
+        setIsAISidebarOpen(false);
+        setLiveTutorState('CLOSED');
         setCurrentView(prev => (prev !== 'admin' && prev !== 'admin-login' && prev !== 'promo') ? 'home' : prev); 
         try { sessionStorage.removeItem('lms_current_view'); sessionStorage.removeItem('lms_last_student_view'); localStorage.removeItem('lms_last_student_view'); sessionStorage.removeItem('lms_current_test'); sessionStorage.removeItem('lms_active_course_id'); localStorage.removeItem('lms_active_course_id'); sessionStorage.removeItem('lms_return_view'); } catch(e) {}
         stopGlobalTimer(); 
@@ -555,6 +620,10 @@ export default function App() {
     const resolved = view === 'student-resume' ? resolveStudentResumeView() : view;
     if (!TEST_SESSION_VIEWS.includes(resolved)) {
       clearActiveTestSession();
+    }
+    if (resolved === 'home') {
+      setIsAISidebarOpen(false);
+      setLiveTutorState('CLOSED');
     }
     if (resolved === 'lecture' && !activeCourseId) {
       try {
@@ -576,10 +645,27 @@ export default function App() {
       const safeOrigin = TEST_SESSION_VIEWS.includes(currentView) ? (returnView || 'portal') : currentView;
       setCurrentTestData(data);
       setReturnView(safeOrigin);
-      sessionStorage.setItem('lms_return_view', safeOrigin);
-      sessionStorage.setItem('lms_current_test', JSON.stringify(data));
+      try {
+        sessionStorage.setItem('lms_return_view', safeOrigin);
+      } catch (e) {}
+      try {
+        sessionStorage.setItem('lms_current_test', JSON.stringify(data));
+      } catch (storageErr) {
+        // Đề nặng (nhiều ảnh base64 > 5MB UTF-16) vượt quota sessionStorage — giữ testData trong RAM và lưu metadata nhẹ
+        try {
+          sessionStorage.setItem('lms_current_test', JSON.stringify({
+            id: data?.id,
+            title: data?.title,
+            test_type: data?.test_type,
+            course_id: data?.course_id,
+          }));
+        } catch (e) {
+          try { sessionStorage.removeItem('lms_current_test'); } catch (_) {}
+        }
+      }
       let targetView = type.toLowerCase();
       if (data?.title?.includes('Volume 4') || data?.title?.includes('Volume 3') || data?.title?.includes('Volume 2') || data?.title?.includes('Volume 1')) targetView = 'standard-splitscreen';
+      else if (targetView.includes('sat-bluebook') || targetView === 'sat') targetView = 'sat-bluebook';
       else if (targetView.includes('igcse-direct')) targetView = 'igcse-direct';
       else if (targetView.includes('igcse')) targetView = 'igcse';
       else if (targetView.includes('standard-reading') || (targetView.includes('splitscreen') && targetView.includes('standard'))) targetView = 'standard-splitscreen';
@@ -588,7 +674,9 @@ export default function App() {
       else if (targetView.includes('case-study') || targetView.includes('business') || targetView.includes('splitscreen')) targetView = 'case-study';
       else if (targetView.includes('mixed-paper')) targetView = 'mixed-paper';
       handleNavigate(targetView);
-    } catch (error) {}
+    } catch (error) {
+      console.error('handleStartTest error:', error);
+    }
   };
   const handleOpenLecture = (courseId: string, lectureId?: string) => { 
     setActiveCourseId(courseId); 
@@ -614,7 +702,7 @@ export default function App() {
     }, 150);
   };
 
-  const validViews = ['admin-login', 'home', 'promo', 'portal', 'admin', 'ielts-writing', 'ielts-speaking', 'computer', 'paper', 'mixed-paper', 'standard', 'standard-splitscreen', 'case-study', 'igcse', 'igcse-direct', 'siege-game', 'ninja-survival', 'vocab-racing', 'lecture'];
+  const validViews = ['admin-login', 'home', 'promo', 'portal', 'admin', 'ielts-writing', 'ielts-speaking', 'computer', 'paper', 'mixed-paper', 'standard', 'standard-splitscreen', 'case-study', 'igcse', 'igcse-direct', 'sat-bluebook', 'siege-game', 'ninja-survival', 'vocab-racing', 'lecture'];
 
   return (
     <React.Fragment>
@@ -631,8 +719,8 @@ export default function App() {
           {/* 🚀 ĐÃ NỐI CẦU ONSTARTTEST VÀO ADMIN PANEL */}
           {currentView === 'admin' && <AdminPanel onNavigate={handleNavigate} onStartTest={handleStartTest} />}
           
-          {currentView === 'ielts-writing' && <IeltsWriting onBack={handleReturnFromTest} />}
-          {currentView === 'ielts-speaking' && <IeltsSpeaking onBack={handleReturnFromTest} />}
+          {currentView === 'ielts-writing' && <IeltsWriting onBack={handleReturnFromTest} testData={currentTestData} />}
+          {currentView === 'ielts-speaking' && <IeltsSpeaking onBack={handleReturnFromTest} testData={currentTestData} />}
           
           {currentView === 'computer' && <ComputerTest onBack={handleReturnFromTest} testData={currentTestData} />}
           {currentView === 'paper' && <PaperTest onBack={handleReturnFromTest} testData={currentTestData} />}
@@ -642,6 +730,7 @@ export default function App() {
           {currentView === 'case-study' && <SplitScreenTest key={`split-${currentTestData?.id || ''}`} onBack={handleReturnFromTest} testData={currentTestData} />}
           {currentView === 'igcse' && <IgcsePaperTest onBack={handleReturnFromTest} testData={currentTestData} onStartTest={handleStartTest} />}
           {currentView === 'igcse-direct' && <IgcseDirectPaperTest onBack={handleReturnFromTest} testData={currentTestData} onStartTest={handleStartTest} />}
+          {currentView === 'sat-bluebook' && <SatBluebookTest onBack={handleReturnFromTest} testData={currentTestData} />}
           {currentView === 'siege-game' && <SiegeGame onBack={handleReturnFromTest} testData={currentTestData} />}
           {currentView === 'ninja-survival' && <NinjaSurvival onBack={handleReturnFromTest} testData={currentTestData} />}
           {currentView === 'vocab-racing' && <VocabRacing onBack={handleReturnFromTest} testData={currentTestData} />}
@@ -680,69 +769,76 @@ export default function App() {
               }}
             />
           )}
-
-          <AppErrorBoundary fallback={null}>
-            <AITutorSidebar 
-              isOpen={isAISidebarOpen}
-            onClose={() => setIsAISidebarOpen(false)}
-            mode={aiMode}
-            topicTitle={ieltsTopic}
-            topicImage={ieltsImage} 
-            taskType={ieltsTaskType}
-            lectureTitle={currentLectureTitle}
-            htmlContent={currentHtmlContent}
-            courseTitle={activeCourseTitle}
-            isCallActive={liveTutorState !== 'CLOSED'}
-            />
-          </AppErrorBoundary>
-
-          {/* 🚀 GLOBAL WIDGET: HIỂN THỊ ĐÈ LÊN TRÊN BÀI THI/BÀI GIẢNG */}
-          {liveTutorState !== 'CLOSED' && (
-            <AppErrorBoundary fallback={
-              <div className="fixed bottom-6 right-6 z-[99999] bg-slate-900/95 border border-red-500/50 text-white p-4 rounded-2xl shadow-2xl flex items-center gap-3 animate-in fade-in">
-                <span className="text-xl">⚠️</span>
-                <div className="text-xs">
-                  <div className="font-bold text-red-400">Lỗi đàm thoại AI</div>
-                  <div className="text-slate-400">Đã xảy ra sự cố trong phiên kết nối</div>
-                </div>
-                <button 
-                  onClick={() => setLiveTutorState('CLOSED')} 
-                  className="bg-red-500 hover:bg-red-600 text-white px-3 py-1.5 rounded-xl text-xs font-bold transition-all ml-2"
-                >
-                  Đóng
-                </button>
-              </div>
-            }>
-              <LiveSpeakingTest 
-                 viewState={liveTutorState}
-                 onMinimize={() => setLiveTutorState('MINIMIZED')}
-                 onMaximize={() => setLiveTutorState('FULLSCREEN')}
-                 onClose={() => setLiveTutorState('CLOSED')}
-                 courseTitle={activeCourseTitle}
-                 onOpenAI={(passedMode?: string) => {
-                    let topic = '';
-                    let liveMode = '';
-                    try {
-                      topic = sessionStorage.getItem('tony_live_topic') || '';
-                      liveMode = sessionStorage.getItem('tony_live_mode') || '';
-                    } catch (e) {}
-
-                    if (passedMode === 'tutor' || liveMode === 'TUTOR') {
-                       setAiMode('tutor');
-                    } else if (topic) {
-                       setAiMode('ielts');
-                       setIeltsTopic(topic);
-                       setIeltsTaskType('speaking');
-                    } else {
-                       setAiMode('tutor');
-                    }
-                    setIsAISidebarOpen(true);
-                 }}
-              />
-            </AppErrorBoundary>
-          )}
         </Suspense>
       </AppErrorBoundary>
+
+      {/* 🤖 AI TUTOR SIDEBAR — Tách Suspense riêng để không làm trắng màn hình Bài giảng / Đề thi */}
+      {(isAISidebarOpen || hasMountedAISidebar) && (
+        <AppErrorBoundary fallback={null}>
+          <Suspense fallback={null}>
+            <AITutorSidebar 
+              isOpen={isAISidebarOpen}
+              onClose={() => setIsAISidebarOpen(false)}
+              mode={aiMode}
+              topicTitle={ieltsTopic}
+              topicImage={ieltsImage} 
+              taskType={ieltsTaskType}
+              lectureTitle={currentLectureTitle}
+              htmlContent={currentHtmlContent}
+              courseTitle={activeCourseTitle}
+              isCallActive={liveTutorState !== 'CLOSED'}
+            />
+          </Suspense>
+        </AppErrorBoundary>
+      )}
+
+      {/* 🚀 GLOBAL WIDGET: HIỂN THỊ ĐÈ LÊN TRÊN BÀI THI/BÀI GIẢNG (Tách Suspense riêng) */}
+      {liveTutorState !== 'CLOSED' && (
+        <AppErrorBoundary fallback={
+          <div className="fixed bottom-6 right-6 z-[99999] bg-slate-900/95 border border-red-500/50 text-white p-4 rounded-2xl shadow-2xl flex items-center gap-3 animate-in fade-in">
+            <span className="text-xl">⚠️</span>
+            <div className="text-xs">
+              <div className="font-bold text-red-400">Lỗi đàm thoại AI</div>
+              <div className="text-slate-400">Đã xảy ra sự cố trong phiên kết nối</div>
+            </div>
+            <button 
+              onClick={() => setLiveTutorState('CLOSED')} 
+              className="bg-red-500 hover:bg-red-600 text-white px-3 py-1.5 rounded-xl text-xs font-bold transition-all ml-2"
+            >
+              Đóng
+            </button>
+          </div>
+        }>
+          <Suspense fallback={null}>
+            <LiveSpeakingTest 
+               viewState={liveTutorState}
+               onMinimize={() => setLiveTutorState('MINIMIZED')}
+               onMaximize={() => setLiveTutorState('FULLSCREEN')}
+               onClose={() => setLiveTutorState('CLOSED')}
+               courseTitle={activeCourseTitle}
+               onOpenAI={(passedMode?: string) => {
+                  let topic = '';
+                  let liveMode = '';
+                  try {
+                    topic = sessionStorage.getItem('tony_live_topic') || '';
+                    liveMode = sessionStorage.getItem('tony_live_mode') || '';
+                  } catch (e) {}
+
+                  if (passedMode === 'tutor' || liveMode === 'TUTOR') {
+                     setAiMode('tutor');
+                  } else if (topic) {
+                     setAiMode('ielts');
+                     setIeltsTopic(topic);
+                     setIeltsTaskType('speaking');
+                  } else {
+                     setAiMode('tutor');
+                  }
+                  setIsAISidebarOpen(true);
+               }}
+            />
+          </Suspense>
+        </AppErrorBoundary>
+      )}
 
       {/* 📖 TỪ ĐIỂN CLICK ĐÚP & TỪ ĐIỂN RIÊNG BIỆT (CHỈ BẬT TRONG BÀI GIẢNG & CHẾ ĐỘ CHỮA BÀI) */}
       <DictionaryWidget

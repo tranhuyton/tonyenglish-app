@@ -12,7 +12,7 @@ import {
   FileText,
   Lock,
 } from 'lucide-react';
-import { supabase } from './supabase';
+import { supabase, isTonyEnglishAuthUser, isTonyEnglishAdmin } from './supabase';
 import AssignmentCalendar from './AssignmentCalendar';
 import TaskBoard from './TaskBoard';
 import { LineChart, Line, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
@@ -74,6 +74,8 @@ const getTestSkillConfig = (test: any) => {
       return { icon: '📖', bg: 'bg-blue-50', text: 'text-blue-600', border: 'border-blue-200' };
   }
 
+  if (type.includes('sat-bluebook') || type === 'sat') 
+      return { icon: '🎓', bg: 'bg-indigo-50', text: 'text-[#1e3a8a]', border: 'border-indigo-200' };
   if (type.includes('listening') || title.includes('listening')) 
       return { icon: '🎧', bg: 'bg-amber-50', text: 'text-amber-600', border: 'border-amber-200' };
   if (type.includes('speaking') || title.includes('speaking')) 
@@ -104,6 +106,7 @@ const getCourseCover = (course: any) => {
   if (t.includes('reflex') || t.includes('phản ứng') || t.includes('phản xạ')) return { image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=800', badge: 'Comm. Reflex', color: 'text-orange-500' };
   if (t.includes('communication') || t.includes('giao tiếp')) return { image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800', badge: 'Communication', color: 'text-pink-600' };
   if (t.includes('esl') || t.includes('english')) return { image: 'https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&q=80&w=800', badge: 'ESL Program', color: 'text-rose-600' };
+  if (t.includes('sat') || course.type === 'SAT') return { image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80&w=800', badge: 'Digital SAT 1500+', color: 'text-[#1e3a8a]' };
   if (t.includes('ielts') || course.type === 'IELTS') return { image: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=800', badge: 'IELTS Mastery', color: 'text-blue-600' };
   return { image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800', badge: course.type || 'Khóa học', color: 'text-slate-600' };
 };
@@ -282,11 +285,11 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   }, [currentUser?.id]);
 
   useEffect(() => {
-    if ((analyticsView === 'activity' || activeTab === 'analytics') && currentUser?.id) {
+    if ((analyticsView === 'activity' || activeTab === 'analytics') && currentUser?.id && isTonyEnglishAuthUser(currentUser)) {
       supabase.from('activity_logs').select('*').eq('user_id', currentUser.id).order('created_at', { ascending: false }).limit(200)
         .then(({ data }) => setStudentActivities(data || []));
     }
-  }, [analyticsView, activeTab, currentUser?.id]);
+  }, [analyticsView, activeTab, currentUser]);
 
   const handleSelectAnalyticsTheme = (theme: BoardTheme) => {
     setAnalyticsTheme(theme);
@@ -327,6 +330,17 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
     const handleFullscreenChange = () => setIsFullscreen(!!document.fullscreenElement);
     document.addEventListener('fullscreenchange', handleFullscreenChange);
     return () => document.removeEventListener('fullscreenchange', handleFullscreenChange);
+  }, []);
+
+  const targetUpdateTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    return () => {
+      if (targetUpdateTimerRef.current) {
+        clearTimeout(targetUpdateTimerRef.current);
+        targetUpdateTimerRef.current = null;
+      }
+    };
   }, []);
 
   useEffect(() => { 
@@ -386,12 +400,23 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
     try {
         const { data: { session } } = await supabase.auth.getSession();
         const user = session?.user;
-        setCurrentUser(user || null);
         
         if (!user) {
+            setCurrentUser(null);
             setIsLoading(false);
             return;
         }
+
+        // ⚠️ MULTI-TENANT GUARDRAIL: Chặn tuyệt đối tài khoản Tử Vi (app === 'tuvi') khỏi StudentPortal
+        if (!isTonyEnglishAuthUser(user)) {
+            setCurrentUser(null);
+            setUserProfile(null);
+            setIsLoading(false);
+            if (onNavigate) onNavigate('home');
+            return;
+        }
+
+        setCurrentUser(user);
 
         // Step 1: Fetch user-specific records — each query wrapped to prevent cascading failure
         const safeQuery = async (name: string, queryFn: () => any) => {
@@ -412,7 +437,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             safeQuery('day_plan_tasks', () => supabase.from('day_plan_tasks').select('title, course_day_plans(course_id)'))
         ]);
         const profile = profileRes.data;
-        const isUserAdmin = user.email?.toLowerCase().includes('admin') || profile?.role === 'admin';
+        const isUserAdmin = isTonyEnglishAdmin(user, profile);
         if (profile && !isUserAdmin && profile.status === 'inactive') {
             await supabase.auth.signOut();
             alert("⛔ Tài khoản học của bạn hiện đang ở trạng thái TẠM DỪNG.\nVui lòng liên hệ Thầy Tony để được hỗ trợ kích hoạt lại nhé!");
@@ -444,7 +469,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
         // Tự động tạo profile nếu đăng nhập qua Google OAuth lần đầu chưa có dòng trong bảng profiles
         // ⚠️ MULTI-TENANT GUARDRAIL: Tuyệt đối KHÔNG tự tạo profile học viên TonyEnglish nếu tài khoản thuộc hệ thống Tử Vi (`app === 'tuvi'`)
-        if (!resolvedProfile && user && user.user_metadata?.app !== 'tuvi') {
+        if (!resolvedProfile && user && isTonyEnglishAuthUser(user)) {
           const fallbackName =
             user.user_metadata?.full_name ||
             user.user_metadata?.name ||
@@ -502,7 +527,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
         setIsOnlineStudentAccount(isOnlineUser);
 
-        if (isOnlineUser && parsedAvatarObj.account_type !== 'online') {
+        if (isOnlineUser && isTonyEnglishAuthUser(user) && parsedAvatarObj.account_type !== 'online') {
           parsedAvatarObj = {
             ...parsedAvatarObj,
             account_type: 'online',
@@ -726,6 +751,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 const type = String(item.test_type || item.test_title || '').toLowerCase();
                 const isIeltsTest = type.includes('ielts') || detailsObj.bandScore !== undefined;
                 
+                if (type.includes('sat')) {
+                    return true;
+                }
                 if (isIeltsTest) {
                     const band = parseFloat(detailsObj.bandScore || 0);
                     return band > 3.0;
@@ -776,7 +804,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
     setProfileSuccessMsg('');
     setProfileErrorMsg('');
     try {
-      if (newFullName.trim() && currentUser?.id) {
+      if (newFullName.trim() && currentUser?.id && isTonyEnglishAuthUser(currentUser)) {
         const { error } = await supabase.from('profiles').update({ full_name: newFullName.trim() }).eq('id', currentUser.id);
         if (error) throw error;
         if (userProfile) {
@@ -846,21 +874,29 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
     return courseTargets[courseId] || '';
   };
 
-  const handleUpdateTarget = async (courseKey: string, newVal: string) => {
+  const handleUpdateTarget = (courseKey: string, newVal: string) => {
       const updated = { ...courseTargets, [courseKey]: newVal };
+      const jsonStr = JSON.stringify(updated);
       setCourseTargets(updated);
-      try { localStorage.setItem('tony_course_targets', JSON.stringify(updated)); } catch(e) {}
-      if (userProfile) {
-          setUserProfile({ ...userProfile, avatar_url: JSON.stringify(updated) });
+      try { localStorage.setItem('tony_course_targets', jsonStr); } catch(e) {}
+      setUserProfile((prev: any) => (prev ? { ...prev, avatar_url: jsonStr } : prev));
+      if (targetUpdateTimerRef.current) {
+          clearTimeout(targetUpdateTimerRef.current);
       }
-      if (currentUser?.id) {
-          await supabase.from('profiles').update({ avatar_url: JSON.stringify(updated) }).eq('id', currentUser.id);
+      const uid = currentUser?.id;
+      if (uid && isTonyEnglishAuthUser(currentUser)) {
+          targetUpdateTimerRef.current = setTimeout(() => {
+              supabase.from('profiles').update({ avatar_url: jsonStr }).eq('id', uid)
+                .then(({ error }) => {
+                  if (error) console.warn('[handleUpdateTarget] DB sync error:', error);
+                });
+          }, 500);
       }
   };
 
   const isCourseTrial = (courseId: string | number | null | undefined): boolean => {
     if (!courseId) return false;
-    const isAdminUser = currentUser?.email?.toLowerCase().includes('admin') || userProfile?.role === 'admin';
+    const isAdminUser = isTonyEnglishAdmin(currentUser, userProfile);
     if (isAdminUser) return false;
     const cid = String(courseId);
     if (trialClassCourseIdsSet.has(cid)) return true;
@@ -870,7 +906,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
   const handleRequestUnlockCourse = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!unlockModalCourse || !currentUser) return;
+    if (!unlockModalCourse || !currentUser || !isTonyEnglishAuthUser(currentUser)) return;
     const cleanPhone = unlockPhone.replace(/\D/g, '').trim();
     if (!/^\d{9,15}$/.test(cleanPhone)) {
       alert('Vui lòng nhập Số điện thoại hợp lệ (chỉ gồm 9–15 chữ số, ví dụ: 0987654321).');
@@ -949,7 +985,34 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
   const handleLogout = async () => {
     await supabase.auth.signOut();
-    localStorage.clear(); 
+    try {
+      const exactKeysToClear = [
+        'lms_last_student_view',
+        'lms_active_course_id',
+        'portal_filter_course',
+        'tony_global_time',
+        'tony_course_targets',
+        'tony_target_ielts',
+        'tony_oauth_redirect_portal',
+      ];
+      exactKeysToClear.forEach((k) => localStorage.removeItem(k));
+      const dynamicPrefixesToClear = [
+        'ielts_ans_',
+        'ielts_paper_ans_',
+        'std_ans_',
+        'case_study_ans_',
+        'ielts_endtime_',
+        'standard_endtime_',
+        'case_study_endtime_',
+        'ielts_paper_endtime_',
+      ];
+      for (let i = localStorage.length - 1; i >= 0; i--) {
+        const k = localStorage.key(i);
+        if (k && dynamicPrefixesToClear.some((p) => k.startsWith(p))) {
+          localStorage.removeItem(k);
+        }
+      }
+    } catch (e) {}
     sessionStorage.clear(); 
     window.dispatchEvent(new CustomEvent('tony-clear-chat'));
     window.dispatchEvent(new CustomEvent('tony-close-sidebar'));
@@ -1040,7 +1103,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
     }
     
     const type = String(testData.test_type || '').toLowerCase();
-    if (type === 'igcse-direct') {
+    if (type.includes('sat-bluebook') || type === 'sat') {
+        onStartTest('sat-bluebook', testData);
+    } else if (type === 'igcse-direct') {
         onStartTest('igcse-direct', testData);
     } else if (type.includes('igcse')) {
         onStartTest('igcse', testData);
@@ -1090,7 +1155,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
   const toggleFullScreen = () => { 
     if (!document.fullscreenElement) { 
-        document.documentElement.requestFullscreen().catch(); 
+        document.documentElement.requestFullscreen().catch(() => {}); 
     } else { 
         if (document.exitFullscreen) document.exitFullscreen(); 
     } 
@@ -1213,18 +1278,20 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
     const enrolledCourseIds = new Set(courses.map(c => c.id));
     const validTests = allTests.filter(t => enrolledCourseIds.has(t.course_id) || enrolledCourseIds.has(t.content_json?.basicInfo?.courseId));
     
-    return validTests.filter(t => {
+    return validTests
+      .reduce<any[]>((acc, t) => {
         const classDeadlines = t.content_json?.basicInfo?.classDeadlines;
-        if (!classDeadlines) return false;
+        if (!classDeadlines) return acc;
         
         const matchedClassId = userClassIds.find(id => classDeadlines[id]);
-        if (!matchedClassId) return false;
+        if (!matchedClassId) return acc;
         
-        if (completedTestIdsSet.has(String(t.id))) return false;
+        if (completedTestIdsSet.has(String(t.id))) return acc;
         
-        t._deadlineStr = classDeadlines[matchedClassId];
-        return true; 
-    }).sort((a, b) => new Date(a._deadlineStr).getTime() - new Date(b._deadlineStr).getTime());
+        acc.push({ ...t, _deadlineStr: classDeadlines[matchedClassId] });
+        return acc;
+      }, [])
+      .sort((a, b) => new Date(a._deadlineStr).getTime() - new Date(b._deadlineStr).getTime());
   }, [allTests, courses, completedTestIdsSet, userClassIds]);
 
   const totalFolderPages = Math.ceil(currentSubFolders.length / ITEMS_PER_PAGE);
@@ -1744,7 +1811,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
     for (const c of candidateCourses) {
       const courseLecs = allLectures
         .filter((l: any) => String(l.course_id) === String(c.id))
-        .sort((a: any, b: any) => (a.display_order || 0) - (b.display_order || 0));
+        .sort((a: any, b: any) => (a.order_index || 0) - (b.order_index || 0));
       if (courseLecs.length === 0) continue;
       const doneSet = courseStats[c.id]?.completedLecIds || new Set();
       const nextLec = courseLecs.find((l: any) => !doneSet.has(String(l.id))) || courseLecs[0];
@@ -1752,6 +1819,29 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
     }
     return null;
   }, [courses, filterCourse, allLectures, currentUser?.id, courseStats]);
+
+  const calendarAssignments = useMemo(() => {
+    if (filterCourse === 'all') return assignments;
+    return assignments.filter(a => {
+      if (a.board_template_id) {
+        const tpl = boardTemplates.find(t => String(t.id) === String(a.board_template_id));
+        if (tpl && String(tpl.course_id) === String(filterCourse)) return true;
+      }
+      if (a.board_template_title) {
+        const tpl = boardTemplates.find(t => t.title === a.board_template_title);
+        if (tpl && String(tpl.course_id) === String(filterCourse)) return true;
+      }
+      if (a.task_type === 'test') {
+        const test = (a.test_id ? allTests.find(t => String(t.id) === String(a.test_id)) : null) ||
+                     (a.title ? allTests.find(t => t.title && t.title.trim().toLowerCase() === a.title.trim().toLowerCase()) : null);
+        if (test && String(test.course_id) === String(filterCourse)) return true;
+      }
+      if (a.title && dayPlanTaskCourseMap[a.title.trim()] === String(filterCourse)) {
+        return true;
+      }
+      return false;
+    });
+  }, [assignments, filterCourse, boardTemplates, allTests, dayPlanTaskCourseMap]);
 
   const resumeTestInfo = useMemo(() => {
     const folderCourseLookup: Record<string, string> = {};
@@ -3095,7 +3185,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
           <div className="w-full flex-1 min-h-0 h-full flex flex-col animate-in fade-in duration-500 relative">
             <TaskBoard 
               userId={currentUser.id} 
-              isAdmin={currentUser.role === 'admin'}
+              isAdmin={isTonyEnglishAdmin(currentUser, userProfile)}
               filterCourseId={filterCourse}
               courseTitle={filterCourse === 'all' ? undefined : courses.find(c => String(c.id) === String(filterCourse))?.title}
               bottomActions={renderBottomControls}
@@ -3111,50 +3201,26 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
         {activeTab === 'calendar' && (
           <div className="animate-in fade-in slide-in-from-bottom-4 w-full flex-1 flex flex-col pb-2 relative">
-            {(() => {
-              const calendarAssignments = filterCourse === 'all' ? assignments : assignments.filter(a => {
-                if (a.board_template_id) {
-                  const tpl = boardTemplates.find(t => String(t.id) === String(a.board_template_id));
-                  if (tpl && String(tpl.course_id) === String(filterCourse)) return true;
-                }
-                if (a.board_template_title) {
-                  const tpl = boardTemplates.find(t => t.title === a.board_template_title);
-                  if (tpl && String(tpl.course_id) === String(filterCourse)) return true;
-                }
-                if (a.task_type === 'test') {
-                  const test = (a.test_id ? allTests.find(t => String(t.id) === String(a.test_id)) : null) ||
-                               (a.title ? allTests.find(t => t.title && t.title.trim().toLowerCase() === a.title.trim().toLowerCase()) : null);
-                  if (test && String(test.course_id) === String(filterCourse)) return true;
-                }
-                if (a.title && dayPlanTaskCourseMap[a.title.trim()] === String(filterCourse)) {
-                  return true;
-                }
-                return false;
-              });
-
-              return (
-                <div className="flex-1 min-h-0 w-full">
-                  <AssignmentCalendar 
-                    userId={currentUser?.id}
-                    assignments={calendarAssignments} 
-                    completedTestIds={completedTestIdsSet}
-                    courseTitle={filterCourse === 'all' ? undefined : courses.find(c => String(c.id) === String(filterCourse))?.title}
-                    lectures={allLectures}
-                    rightActions={<div className="w-full sm:w-auto">{renderBottomControls}</div>}
-                    onOpenLecture={handleGoToLecture}
-                    onRefresh={async () => {
-                      if (!currentUser) return;
-                      const { data } = await supabase.from('assignments').select('*').eq('user_id', currentUser.id).order('due_date', { ascending: true });
-                      setAssignments(data || []);
-                    }}
-                    onStartTest={(testId) => {
-                      const test = allTests.find(t => String(t.id) === String(testId));
-                      if (test) handleStartTestClick(test);
-                    }}
-                  />
-                </div>
-              );
-            })()}
+            <div className="flex-1 min-h-0 w-full">
+              <AssignmentCalendar 
+                userId={currentUser?.id}
+                assignments={calendarAssignments} 
+                completedTestIds={completedTestIdsSet}
+                courseTitle={filterCourse === 'all' ? undefined : courses.find(c => String(c.id) === String(filterCourse))?.title}
+                lectures={allLectures}
+                rightActions={<div className="w-full sm:w-auto">{renderBottomControls}</div>}
+                onOpenLecture={handleGoToLecture}
+                onRefresh={async () => {
+                  if (!currentUser) return;
+                  const { data } = await supabase.from('assignments').select('*').eq('user_id', currentUser.id).order('due_date', { ascending: true });
+                  setAssignments(data || []);
+                }}
+                onStartTest={(testId) => {
+                  const test = allTests.find(t => String(t.id) === String(testId));
+                  if (test) handleStartTestClick(test);
+                }}
+              />
+            </div>
           </div>
         )}
 
@@ -3970,7 +4036,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             
             {/* Header Thẻ Cá Nhân */}
             <div className="bg-gradient-to-r from-[#0a5482] to-[#0f172a] p-6 md:p-8 rounded-2xl sm:rounded-3xl border border-slate-800/40 shadow-md flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left text-white">
-              <div className="w-20 h-20 md:w-22 md:h-22 rounded-2xl bg-gradient-to-br from-[#2ab4e8] to-[#0a5482] text-white flex items-center justify-center font-black text-3xl md:text-4xl shadow-lg border-2 border-white/30 shrink-0">
+              <div className="w-20 h-20 md:w-[88px] md:h-[88px] rounded-2xl bg-gradient-to-br from-[#2ab4e8] to-[#0a5482] text-white flex items-center justify-center font-black text-3xl md:text-4xl shadow-lg border-2 border-white/30 shrink-0">
                 {displayUserInitial}
               </div>
               <div className="flex-1">
@@ -4314,7 +4380,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
                             const type = String(testDataToUse.test_type || '').toLowerCase();
                             let targetMode = 'standard';
-                            if (type.includes('igcse-direct')) targetMode = 'igcse-direct';
+                            if (type.includes('sat-bluebook') || type === 'sat') targetMode = 'sat-bluebook';
+                            else if (type.includes('igcse-direct')) targetMode = 'igcse-direct';
                             else if (type.includes('igcse')) targetMode = 'igcse';
                             else if (type.includes('split-standard')) targetMode = 'split-standard';
                             else if (type.includes('splitscreen') && type.includes('standard')) targetMode = 'standard-splitscreen';
@@ -4330,6 +4397,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                                 history_id: viewingHistoryDetail.id, 
                                 isReview: true,
                                 past_answers: viewingHistoryDetail.details?.userAnswers || viewingHistoryDetail.details?.answers || {},
+                                past_routing: viewingHistoryDetail.details?.routing || 'hard',
+                                past_details: viewingHistoryDetail.details || {},
                                 past_score: viewingHistoryDetail.scoreObj.value,
                                 past_total: totalStr ? totalStr.trim() : 0,
                                 past_band: viewingHistoryDetail.details?.bandScore || '0.0',
@@ -4427,7 +4496,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               onClick={() => setIsStudyCoachModalOpen(false)}
             >
               <div
-                className="w-full max-w-5xl rounded-3xl relative"
+                className="w-full max-w-5xl max-h-[90dvh] overflow-y-auto rounded-3xl relative"
                 onClick={(e) => e.stopPropagation()}
               >
                 <CourseStudyCoach

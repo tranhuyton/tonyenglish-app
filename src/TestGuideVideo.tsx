@@ -1,5 +1,96 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
-import { supabase } from './supabase';
+import { supabase, isTonyEnglishAuthUser, isTonyEnglishAdmin } from './supabase';
+
+// Cached admin check per authenticated session (strictly defaults to false until verified)
+let cachedAdminUserId: string | null = null;
+let cachedAdminResult: boolean | null = null;
+let pendingAdminCheck: Promise<boolean> | null = null;
+let authListenerAttached = false;
+
+function ensureGuideVideoAuthListener() {
+  if (authListenerAttached) return;
+  authListenerAttached = true;
+  supabase.auth.onAuthStateChange((_event, session) => {
+    const nextUserId = session?.user?.id || null;
+    if (nextUserId !== cachedAdminUserId) {
+      cachedAdminUserId = null;
+      cachedAdminResult = null;
+      pendingAdminCheck = null;
+    }
+  });
+}
+
+async function resolveGuideVideoAdmin(): Promise<boolean> {
+  ensureGuideVideoAuthListener();
+  const { data: { session } } = await supabase.auth.getSession();
+  const user = session?.user;
+  if (!user) {
+    cachedAdminUserId = null;
+    cachedAdminResult = false;
+    return false;
+  }
+  if (cachedAdminUserId === user.id && cachedAdminResult !== null) {
+    return cachedAdminResult;
+  }
+  if (pendingAdminCheck) {
+    return pendingAdminCheck;
+  }
+  pendingAdminCheck = (async () => {
+    try {
+      if (!isTonyEnglishAuthUser(user)) {
+        cachedAdminUserId = user.id;
+        cachedAdminResult = false;
+        return false;
+      }
+      const { data: profile } = await supabase
+        .from('profiles')
+        .select('role, status')
+        .eq('id', user.id)
+        .maybeSingle();
+      const adminOk = isTonyEnglishAdmin(user, profile);
+      cachedAdminUserId = user.id;
+      cachedAdminResult = adminOk;
+      return adminOk;
+    } catch {
+      return false;
+    } finally {
+      pendingAdminCheck = null;
+    }
+  })();
+  return pendingAdminCheck;
+}
+
+export function useIsGuideVideoAdmin(isAdminProp?: boolean): boolean {
+  const [isAdmin, setIsAdmin] = useState<boolean>(() => {
+    if (typeof isAdminProp === 'boolean') return isAdminProp;
+    return cachedAdminResult === true;
+  });
+
+  useEffect(() => {
+    if (typeof isAdminProp === 'boolean') {
+      setIsAdmin(isAdminProp);
+      return;
+    }
+    let active = true;
+    resolveGuideVideoAdmin().then((res) => {
+      if (active) setIsAdmin(res);
+    });
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(() => {
+      cachedAdminUserId = null;
+      cachedAdminResult = null;
+      pendingAdminCheck = null;
+      resolveGuideVideoAdmin().then((res) => {
+        if (active) setIsAdmin(res);
+      });
+    });
+    return () => {
+      active = false;
+      subscription.unsubscribe();
+    };
+  }, [isAdminProp]);
+
+  return typeof isAdminProp === 'boolean' ? isAdminProp : isAdmin;
+}
 
 export interface VideoSourceInfo {
   type: 'youtube' | 'drive' | 'direct' | 'loom' | 'vimeo' | 'iframe';
@@ -13,10 +104,12 @@ export interface GuideVideoItem {
   url: string;
 }
 
-export function parseVideoSource(rawUrl: string | null | undefined): VideoSourceInfo | null {
+export function parseVideoSource(rawUrl: string | null | undefined, autoplay = true): VideoSourceInfo | null {
   if (!rawUrl || typeof rawUrl !== 'string') return null;
   const url = rawUrl.trim();
   if (!url) return null;
+
+  const autoParam = autoplay ? 1 : 0;
 
   // 1. YouTube
   const ytMatch = url.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=|shorts\/))([\w-]{11})/i);
@@ -24,7 +117,7 @@ export function parseVideoSource(rawUrl: string | null | undefined): VideoSource
     const originParam = typeof window !== 'undefined' ? `&origin=${encodeURIComponent(window.location.origin)}&widget_referrer=${encodeURIComponent(window.location.origin)}` : '';
     return {
       type: 'youtube',
-      embedUrl: `https://www.youtube.com/embed/${ytMatch[1]}?autoplay=1&rel=0&enablejsapi=1${originParam}`,
+      embedUrl: `https://www.youtube.com/embed/${ytMatch[1]}?autoplay=${autoParam}&rel=0&enablejsapi=1${originParam}`,
       originalUrl: url
     };
   }
@@ -45,7 +138,7 @@ export function parseVideoSource(rawUrl: string | null | undefined): VideoSource
   if (loomMatch && loomMatch[1]) {
     return {
       type: 'loom',
-      embedUrl: `https://www.loom.com/embed/${loomMatch[1]}?autoplay=1`,
+      embedUrl: `https://www.loom.com/embed/${loomMatch[1]}?autoplay=${autoParam}`,
       originalUrl: url
     };
   }
@@ -55,7 +148,7 @@ export function parseVideoSource(rawUrl: string | null | undefined): VideoSource
   if (vimeoMatch && vimeoMatch[1]) {
     return {
       type: 'vimeo',
-      embedUrl: `https://player.vimeo.com/video/${vimeoMatch[1]}?autoplay=1`,
+      embedUrl: `https://player.vimeo.com/video/${vimeoMatch[1]}?autoplay=${autoParam}`,
       originalUrl: url
     };
   }
@@ -300,6 +393,7 @@ export function TestGuideVideoButton({
   isReviewMode = false,
   className = '',
   buttonTheme = 'dark',
+  isAdmin,
 }: {
   videoUrl: string | null | undefined;
   videos?: GuideVideoItem[];
@@ -309,9 +403,15 @@ export function TestGuideVideoButton({
   isReviewMode?: boolean;
   className?: string;
   buttonTheme?: 'dark' | 'light';
+  isAdmin?: boolean;
 }) {
+  const canEdit = useIsGuideVideoAdmin(isAdmin);
   const count = videos && videos.length > 0 ? videos.length : (videoUrl && videoUrl.trim() !== '' ? 1 : 0);
   const hasVideo = count > 0;
+
+  if (!hasVideo && !canEdit) {
+    return null;
+  }
 
   return (
     <div className={`flex items-center gap-1.5 ${className}`}>
@@ -340,20 +440,23 @@ export function TestGuideVideoButton({
             )}
           </button>
 
-          <button
-            type="button"
-            onClick={onOpenEditModal}
-            className={`p-1.5 rounded-lg text-[12px] transition ${
-              buttonTheme === 'dark'
-                ? 'text-slate-400 hover:text-white hover:bg-white/10'
-                : 'text-slate-500 hover:text-slate-800 hover:bg-slate-200'
-            }`}
-            title="Quản lý / Thêm nhiều video hướng dẫn"
-          >
-            ⚙️
-          </button>
+          {canEdit && (
+            <button
+              type="button"
+              onClick={onOpenEditModal}
+              className={`p-1.5 rounded-lg text-[12px] transition ${
+                buttonTheme === 'dark'
+                  ? 'text-slate-400 hover:text-white hover:bg-white/10'
+                  : 'text-slate-500 hover:text-slate-800 hover:bg-slate-200'
+              }`}
+              title="Quản lý / Thêm nhiều video hướng dẫn"
+              aria-label="Quản lý video hướng dẫn"
+            >
+              ⚙️
+            </button>
+          )}
         </>
-      ) : (
+      ) : canEdit ? (
         <button
           type="button"
           onClick={onOpenEditModal}
@@ -367,7 +470,7 @@ export function TestGuideVideoButton({
           <span>➕</span>
           <span>Thêm Video gợi ý</span>
         </button>
-      )}
+      ) : null}
     </div>
   );
 }
@@ -518,7 +621,7 @@ export function TestGuideVideoPlayer({
                 {idx + 1}
               </span>
               <span className="max-w-[240px] truncate">{v.title || `Video #${idx + 1}`}</span>
-              <span className={`text-[9px] px-1.5 py-0.2 rounded font-extrabold uppercase ${
+              <span className={`text-[9px] px-1.5 py-0.5 rounded font-extrabold uppercase ${
                 isSelected ? 'bg-blue-800/80 text-blue-100' : 'bg-slate-800 text-slate-400'
               }`}>
                 {badge}
@@ -696,6 +799,7 @@ export function TestGuideVideoEditModal({
   onSave,
   onSaveVideos,
   testTitle,
+  isAdmin,
 }: {
   isOpen: boolean;
   onClose: () => void;
@@ -704,7 +808,9 @@ export function TestGuideVideoEditModal({
   onSave?: (url: string | null) => Promise<void>;
   onSaveVideos?: (videos: GuideVideoItem[]) => Promise<void>;
   testTitle?: string;
+  isAdmin?: boolean;
 }) {
+  const canEdit = useIsGuideVideoAdmin(isAdmin);
   const [items, setItems] = useState<GuideVideoItem[]>([]);
   const [previewIdx, setPreviewIdx] = useState<number>(0);
   const [isUploading, setIsUploading] = useState(false);
@@ -715,7 +821,7 @@ export function TestGuideVideoEditModal({
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    if (isOpen) {
+    if (isOpen && canEdit) {
       let seed: GuideVideoItem[] = [];
       if (initialVideos && initialVideos.length > 0) {
         seed = initialVideos.map((v, i) => ({
@@ -736,12 +842,12 @@ export function TestGuideVideoEditModal({
       setIsSaving(false);
       setUploadPercent(0);
     }
-  }, [isOpen, initialVideos, initialUrl]);
+  }, [isOpen, canEdit, initialVideos, initialUrl]);
 
   const activePreviewUrl = items[previewIdx]?.url || '';
-  const previewSource = useMemo(() => parseVideoSource(activePreviewUrl), [activePreviewUrl]);
+  const previewSource = useMemo(() => parseVideoSource(activePreviewUrl, false), [activePreviewUrl]);
 
-  if (!isOpen) return null;
+  if (!isOpen || !canEdit) return null;
 
   const addEmptySlot = () => {
     const nextNum = items.length + 1;
@@ -1082,7 +1188,7 @@ export function TestGuideVideoEditModal({
                     key={previewSource.embedUrl}
                     src={previewSource.embedUrl}
                     referrerPolicy="strict-origin-when-cross-origin"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     className="w-full h-full border-0"
                     title="Preview"
                   />
@@ -1138,13 +1244,16 @@ export default function TestGuideVideo({
   isReviewMode = false,
   buttonTheme = 'dark',
   className = '',
+  isAdmin,
 }: {
   testData: any;
   onVideoChange?: (url: string | null, videos?: GuideVideoItem[]) => void;
   isReviewMode?: boolean;
   buttonTheme?: 'dark' | 'light';
   className?: string;
+  isAdmin?: boolean;
 }) {
+  const canEdit = useIsGuideVideoAdmin(isAdmin);
   const {
     videos,
     activeVideoIndex,
@@ -1166,9 +1275,12 @@ export default function TestGuideVideo({
         videos={videos}
         isOpen={isOpen}
         onToggleOpen={() => setIsOpen(!isOpen)}
-        onOpenEditModal={() => setIsEditModalOpen(true)}
+        onOpenEditModal={() => {
+          if (canEdit) setIsEditModalOpen(true);
+        }}
         isReviewMode={isReviewMode}
         buttonTheme={buttonTheme}
+        isAdmin={canEdit}
       />
 
       <TestGuideVideoPlayer
@@ -1183,14 +1295,17 @@ export default function TestGuideVideo({
         testTitle={testData?.title}
       />
 
-      <TestGuideVideoEditModal
-        isOpen={isEditModalOpen}
-        onClose={() => setIsEditModalOpen(false)}
-        initialUrl={videoUrl}
-        initialVideos={videos}
-        onSaveVideos={handleSaveVideos}
-        testTitle={testData?.title}
-      />
+      {canEdit && (
+        <TestGuideVideoEditModal
+          isOpen={isEditModalOpen}
+          onClose={() => setIsEditModalOpen(false)}
+          initialUrl={videoUrl}
+          initialVideos={videos}
+          onSaveVideos={handleSaveVideos}
+          testTitle={testData?.title}
+          isAdmin={canEdit}
+        />
+      )}
     </div>
   );
 }

@@ -5,6 +5,7 @@ import { useApp } from '../context/AppContext';
 import {
   resolveUploadUrl,
   stripTags,
+  truncateWords,
   fixLegacyHtmlContent,
   extractArticleVocabulary,
   extractArticleEbookPdfUrl,
@@ -632,7 +633,7 @@ const ArticleAudioPlayer: React.FC<{ src: string }> = ({ src }) => {
           {/* Visible draggable thumb */}
           <div
             className="
-              absolute w-5 h-5 sm:w-5.5 sm:h-5.5 bg-white border-[3px] border-[#0a5482]
+              absolute w-5 h-5 sm:w-[22px] sm:h-[22px] bg-white border-[3px] border-[#0a5482]
               rounded-full shadow-md pointer-events-none transform -translate-x-1/2
               group-hover:scale-110 transition-transform
             "
@@ -715,7 +716,13 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
       const uid = await getActiveTonyStudentUserId();
       if (!mounted) return;
       setAuthUserId(uid);
-      if (!uid) return;
+      if (!uid) {
+        setReadNewsIds(new Set());
+        setCompletedQuizNewsIds(new Set());
+        setCamReadingReadCount(0);
+        setCamListeningReadCount(0);
+        return;
+      }
 
       const { data: logs } = await supabase
         .from('activity_logs')
@@ -756,10 +763,25 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
       setCamListeningReadCount(camListenSet.size);
     }
     loadUserLibraryLogs();
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange(() => {
+      loadUserLibraryLogs();
+    });
     return () => {
       mounted = false;
+      subscription.unsubscribe();
     };
-  }, [user?.id]);
+  }, [user?.user_id]);
+
+  useEffect(() => {
+    if (!zoomImageUrl) return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setZoomImageUrl(null);
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, [zoomImageUrl]);
 
   const buildArticleLogContext = (targetArticle: any) => {
     const nid = Number(targetArticle?.news_id || 0);
@@ -775,8 +797,13 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
 
     const ebookExtracted = extractArticleEbookPdfUrl(targetArticle?.news_content || '');
     const isEbook = Number(targetArticle?.news_cc_id) === 30 || Boolean(ebookExtracted.pdfUrl);
+    const isQuizHidden =
+      targetArticle?.news_name_quiz === '__hidden__' ||
+      Number(targetArticle?.news_id) === 721 ||
+      (targetArticle?.news_title_url || '').trim().toLowerCase() === 'lukes-english-podcast';
     const quizList = targetArticle ? parseArticleInteractiveQuiz(targetArticle) : [];
     const hasLegacyQa =
+      !isQuizHidden &&
       quizList.length === 0 &&
       Boolean(targetArticle?.news_question && String(targetArticle.news_question).trim() !== '');
     const hasPodcast = [67, 68, 69].includes(Number(targetArticle?.news_cc_id));
@@ -1152,17 +1179,6 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
             </>
           )}
         </div>
-
-        {sidebarCollapsed && (
-          <button
-            type="button"
-            onClick={() => setSidebarCollapsed(false)}
-            className="hidden lg:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white hover:bg-sky-50 text-slate-600 hover:text-[#0a5482] font-bold text-xs border border-slate-200/90 shadow-sm transition cursor-pointer"
-          >
-            <span>📚</span>
-            <span>{lang === 'vi' ? 'Hiện danh mục trái' : 'Show sidebar'}</span>
-          </button>
-        )}
       </nav>
 
       <div className="flex flex-col lg:flex-row gap-4 sm:gap-8 xl:gap-10 items-start">
@@ -1546,6 +1562,8 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                       {newsList.map((item, idx) => {
                         const itemUrl = `/news/view/${(item.news_title_url || '').trim()}`;
                         const isChartThumb = [59, 60, 61, 62, 73].includes(Number(item.news_cc_id));
+                        const itemThumbSrc = resolveUploadUrl(item.news_thumb);
+                        const itemDescText = truncateWords(item.news_desc, 260);
                         return (
                           <div
                             key={item.news_id}
@@ -1557,17 +1575,21 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                                 isChartThumb ? 'bg-white border border-slate-200/70 p-1.5' : 'bg-slate-100'
                               }`}
                             >
-                              <img
-                                src={resolveUploadUrl(item.news_thumb)}
-                                alt={item.news_title}
-                                loading={idx < 2 ? 'eager' : 'lazy'}
-                                onError={(e) => {
-                                  (e.currentTarget as HTMLImageElement).src = '/uploads/No_Image_Wide.svg_1.png';
-                                }}
-                                className={`w-full h-full ${
-                                  isChartThumb ? 'object-contain' : 'object-cover'
-                                } group-hover:scale-105 transition-transform duration-500`}
-                              />
+                              {itemThumbSrc && (
+                                <img
+                                  src={itemThumbSrc}
+                                  alt={item.news_title}
+                                  loading={idx < 2 ? 'eager' : 'lazy'}
+                                  onError={(e) => {
+                                    const img = e.currentTarget as HTMLImageElement;
+                                    img.onerror = null;
+                                    img.src = '/uploads/No_Image_Wide.svg_1.png';
+                                  }}
+                                  className={`w-full h-full ${
+                                    isChartThumb ? 'object-contain' : 'object-cover'
+                                  } group-hover:scale-105 transition-transform duration-500`}
+                                />
+                              )}
                             </Link>
 
                             <div className="flex-1 flex flex-col justify-between min-w-0">
@@ -1578,9 +1600,11 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                                 >
                                   {item.news_title}
                                 </Link>
-                                <p className="text-slate-600 text-[15px] sm:text-base leading-relaxed line-clamp-2">
-                                  {stripTags(item.news_desc).slice(0, 260)}...
-                                </p>
+                                {itemDescText && (
+                                  <p className="text-slate-600 text-[15px] sm:text-base leading-relaxed line-clamp-2">
+                                    {itemDescText}
+                                  </p>
+                                )}
                               </div>
 
                               <div className="pt-3 mt-3 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 text-xs sm:text-sm text-slate-400">
@@ -1769,24 +1793,30 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                     )}
 
                   {/* Featured Image if enabled - Display full uploaded image without cropping */}
-                  {article.news_thumb && Number(article.news_status_avatar) === 1 && (
-                    <figure className="rounded-2xl overflow-hidden bg-white border border-slate-200/90 shadow-2xs p-2 sm:p-4 max-w-3xl mx-auto">
-                      <img
-                        src={resolveUploadUrl(article.news_thumb)}
-                        alt={article.news_title}
-                        onClick={() => setZoomImageUrl(resolveUploadUrl(article.news_thumb))}
-                        onError={(e) => {
-                          (e.currentTarget as HTMLImageElement).src = '/uploads/No_Image_Wide.svg_1.png';
-                        }}
-                        className="w-full h-auto max-h-[420px] sm:max-h-[460px] object-contain mx-auto block cursor-zoom-in rounded-xl"
-                      />
-                      {article.news_desc_thumb && (
-                        <figcaption className="pt-3 text-center text-sm italic text-slate-500">
-                          {stripTags(article.news_desc_thumb)}
-                        </figcaption>
-                      )}
-                    </figure>
-                  )}
+                  {(() => {
+                    const featuredImgUrl = resolveUploadUrl(article.news_thumb, '');
+                    if (!featuredImgUrl || Number(article.news_status_avatar) !== 1) return null;
+                    return (
+                      <figure className="rounded-2xl overflow-hidden bg-white border border-slate-200/90 shadow-2xs p-2 sm:p-4 max-w-3xl mx-auto">
+                        <img
+                          src={featuredImgUrl}
+                          alt={article.news_title}
+                          onClick={() => setZoomImageUrl(featuredImgUrl)}
+                          onError={(e) => {
+                            const img = e.currentTarget as HTMLImageElement;
+                            img.onerror = null;
+                            img.src = '/uploads/No_Image_Wide.svg_1.png';
+                          }}
+                          className="w-full h-auto max-h-[420px] sm:max-h-[460px] object-contain mx-auto block cursor-zoom-in rounded-xl"
+                        />
+                        {article.news_desc_thumb && (
+                          <figcaption className="pt-3 text-center text-sm italic text-slate-500">
+                            {stripTags(article.news_desc_thumb)}
+                          </figcaption>
+                        )}
+                      </figure>
+                    );
+                  })()}
 
                   {/* Article Body (English or Vietnamese translation) & Extracted Vocabulary */}
                   {(() => {
@@ -1798,11 +1828,15 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                     const parsedVi = showViTranslation ? extractArticleVocabulary(article.news_desc_vi) : null;
                     const displayBodyHtml = showViTranslation && parsedVi ? parsedVi.bodyHtml : enBodyClean;
                     const vocabItems = parsedEn.vocabItems;
+                    const isQuizHidden =
+                      article.news_name_quiz === '__hidden__' ||
+                      Number(article.news_id) === 721 ||
+                      (article.news_title_url || '').trim().toLowerCase() === 'lukes-english-podcast';
                     const interactiveQuiz = parseArticleInteractiveQuiz(article);
                     const hasLegacyQuestion =
+                      !isQuizHidden &&
                       interactiveQuiz.length === 0 &&
-                      article.news_question &&
-                      article.news_question.trim() !== '';
+                      Boolean(article.news_question && article.news_question.trim() !== '');
                     const hasInteractiveBox =
                       vocabItems.length > 0 ||
                       hasLegacyQuestion ||
@@ -2141,7 +2175,7 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
 
                         {/* IELTS Speaking Interactive Podcast & Orange Phrase Mastery Section */}
                         {[67, 68, 69].includes(Number(article.news_cc_id)) && article.news_id && (
-                          <div id="ielts-speaking-podcast-section" className="pt-2">
+                          <div id="ielts-speaking-podcast-section" className="pt-2 scroll-mt-24">
                             <IeltsSpeakingPodcast
                               newsId={Number(article.news_id)}
                               onPodcastPractice={(info) => {
@@ -2539,7 +2573,12 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
           className="fixed inset-0 z-50 bg-slate-900/80 backdrop-blur-xs flex items-center justify-center p-4 cursor-zoom-out"
           onClick={() => setZoomImageUrl(null)}
         >
-          <div className="relative max-w-5xl max-h-[92vh] bg-white rounded-2xl p-2 sm:p-4 shadow-2xl overflow-auto">
+          <div
+            role="dialog"
+            aria-modal="true"
+            onClick={(e) => e.stopPropagation()}
+            className="relative max-w-5xl max-h-[92vh] bg-white rounded-2xl p-2 sm:p-4 shadow-2xl overflow-auto cursor-default"
+          >
             <button
               type="button"
               onClick={() => setZoomImageUrl(null)}
@@ -2551,6 +2590,11 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
             <img
               src={zoomImageUrl}
               alt={article?.news_title || 'Full view'}
+              onError={(e) => {
+                const img = e.currentTarget as HTMLImageElement;
+                img.onerror = null;
+                img.src = '/uploads/No_Image_Wide.svg_1.png';
+              }}
               className="max-w-full max-h-[85vh] w-auto h-auto object-contain mx-auto block rounded-lg"
             />
           </div>

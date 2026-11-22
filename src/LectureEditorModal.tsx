@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef, useMemo, useCallback } from 'react';
 import { supabase } from './supabase';
 import JoditEditor from 'jodit-react';
-import ReactPlayer from 'react-player';
 import { setupListIndent } from './utils/joditFix';
 
 
@@ -102,13 +101,30 @@ const ExerciseSelectionModal = React.memo(({ availableExercises, onClose, onAddE
 // =========================================================================
 // CÁCH LY EDITOR: BỎ THANH CUỘN NGANG, CHO NÚT TỰ ĐỘNG XUỐNG DÒNG GỌN GÀNG
 // =========================================================================
-const MemoizedEditor = React.memo(({ initialValue, config, onHtmlChange }: any) => {
-  const editorRef = useRef(null);
+const MemoizedEditor = React.memo(({ pageId, initialValue, config, onHtmlChange, editorInstanceRef }: any) => {
+  const editorRef = useRef<any>(null);
 
   // Bypass jodit-react: gắn trực tiếp keydown handler vào Jodit instance
   const editorRefCallback = React.useCallback((jodit: any) => {
-    if (jodit) setupListIndent(jodit);
-  }, []);
+    if (jodit) {
+      setupListIndent(jodit);
+      if (editorInstanceRef) {
+        editorInstanceRef.current = { pageId, jodit };
+      }
+    }
+  }, [pageId, editorInstanceRef]);
+
+  useEffect(() => {
+    return () => {
+      if (editorInstanceRef?.current?.pageId === pageId) {
+        editorInstanceRef.current = null;
+      }
+    };
+  }, [pageId, editorInstanceRef]);
+
+  const handleBlur = useCallback((newHtml: string) => {
+    onHtmlChange(pageId, newHtml);
+  }, [pageId, onHtmlChange]);
 
   return (
      <div className="w-full bg-white relative rounded-b-xl overflow-hidden shadow-sm border border-slate-200">
@@ -250,7 +266,7 @@ const MemoizedEditor = React.memo(({ initialValue, config, onHtmlChange }: any) 
             editorRef={editorRefCallback}
             value={initialValue}
             config={config}
-            onBlur={onHtmlChange}
+            onBlur={handleBlur}
          />
      </div>
   );
@@ -268,6 +284,24 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
   const [pages, setPages] = useState<any[]>([]);
   const [activePageIndex, setActivePageIndex] = useState(0);
   const [isSaving, setIsSaving] = useState(false);
+  const [isDirty, setIsDirty] = useState(false);
+
+  const activeEditorRef = useRef<{ pageId: string; jodit: any } | null>(null);
+  const pagesRef = useRef<any[]>([]);
+  pagesRef.current = pages;
+  const isDirtyRef = useRef(false);
+
+  const markDirty = useCallback(() => {
+    if (!isDirtyRef.current) {
+      isDirtyRef.current = true;
+      setIsDirty(true);
+    }
+  }, []);
+
+  const resetDirty = useCallback(() => {
+    isDirtyRef.current = false;
+    setIsDirty(false);
+  }, []);
 
   const [taskList, setTaskList] = useState<any[]>(lectureData?.task_list || []);
   const [rightTab, setRightTab] = useState<'pages' | 'tasks'>('pages');
@@ -383,12 +417,13 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
   }), []);
 
   useEffect(() => {
+    resetDirty();
     if (lectureData.id !== 'new') {
         fetchPages();
     } else {
-        setPages([{ id: 'temp_1', page_number: 1, content_html: '' }]);
+        setPages([{ id: 'temp_1', page_number: 1, content_html: '', is_hidden: false }]);
     }
-  }, [lectureData]);
+  }, [lectureData, resetDirty]);
 
   useEffect(() => {
     if (!courseId) {
@@ -428,52 +463,91 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
 
   const activePage = pages[activePageIndex] || null;
 
-  const handleHtmlChange = useCallback((newHtml: string) => {
+  const getFlushedPages = useCallback((sourcePages: any[]) => {
+    const inst = activeEditorRef.current;
+    if (!inst?.jodit || !inst.pageId) return sourcePages;
+    const latestHtml = inst.jodit.value;
+    if (typeof latestHtml !== 'string') return sourcePages;
+    let changed = false;
+    const next = sourcePages.map(p => {
+      if (p.id === inst.pageId && (p.content_html || '') !== latestHtml) {
+        changed = true;
+        return { ...p, content_html: latestHtml };
+      }
+      return p;
+    });
+    return changed ? next : sourcePages;
+  }, []);
+
+  const handleHtmlChange = useCallback((pageId: string, newHtml: string) => {
+    if (!pageId) return;
+    const current = pagesRef.current.find(p => p.id === pageId);
+    if (current && (current.content_html || '') !== newHtml) {
+      markDirty();
+    }
     setPages(prevPages => {
+        const idx = prevPages.findIndex(p => p.id === pageId);
+        if (idx === -1) return prevPages;
+        if ((prevPages[idx].content_html || '') === newHtml) return prevPages;
         const updated = [...prevPages];
-        if (updated[activePageIndex]) {
-            updated[activePageIndex].content_html = newHtml;
-        }
+        updated[idx] = { ...updated[idx], content_html: newHtml };
         return updated;
     });
-  }, [activePageIndex]);
+  }, [markDirty]);
+
+  const handleSelectPage = (idx: number) => {
+    const flushed = getFlushedPages(pagesRef.current);
+    if (flushed !== pagesRef.current) {
+      markDirty();
+      setPages(flushed);
+    }
+    setActivePageIndex(idx);
+  };
 
   const handleAddPage = () => {
+    const flushed = getFlushedPages(pagesRef.current);
     setPages([
-        ...pages, 
-        { id: `temp_${Date.now()}`, page_number: pages.length + 1, content_html: '', is_hidden: false }
+        ...flushed, 
+        { id: `temp_${Date.now()}`, page_number: flushed.length + 1, content_html: '', is_hidden: false }
     ]);
-    setActivePageIndex(pages.length);
+    setActivePageIndex(flushed.length);
+    markDirty();
   };
 
   const handleMoveUp = (index: number) => {
     if (index === 0) return;
-    const newPages = [...pages];
+    const flushed = getFlushedPages(pagesRef.current);
+    const newPages = flushed.map(p => ({ ...p }));
     [newPages[index - 1], newPages[index]] = [newPages[index], newPages[index - 1]];
-    newPages.forEach((p, i) => p.page_number = i + 1); 
-    setPages(newPages);
+    const renumbered = newPages.map((p, i) => ({ ...p, page_number: i + 1 }));
+    setPages(renumbered);
     setActivePageIndex(index - 1);
+    markDirty();
   };
 
   const handleMoveDown = (index: number) => {
-    if (index === pages.length - 1) return;
-    const newPages = [...pages];
+    const flushed = getFlushedPages(pagesRef.current);
+    if (index >= flushed.length - 1) return;
+    const newPages = flushed.map(p => ({ ...p }));
     [newPages[index + 1], newPages[index]] = [newPages[index], newPages[index + 1]];
-    newPages.forEach((p, i) => p.page_number = i + 1); 
-    setPages(newPages);
+    const renumbered = newPages.map((p, i) => ({ ...p, page_number: i + 1 }));
+    setPages(renumbered);
     setActivePageIndex(index + 1);
+    markDirty();
   };
 
   const handleRemovePage = (indexToRemove: number) => {
-    if (pages.length <= 1) {
+    const flushed = getFlushedPages(pagesRef.current);
+    if (flushed.length <= 1) {
         return alert('Bài giảng phải có ít nhất 1 trang!');
     }
     if (!window.confirm('Xóa trang này?')) return;
-    const newPages = pages
+    const newPages = flushed
         .filter((_, idx) => idx !== indexToRemove)
         .map((p, idx) => ({ ...p, page_number: idx + 1 }));
     setPages(newPages);
-    setActivePageIndex(Math.max(0, indexToRemove - 1));
+    setActivePageIndex(Math.max(0, Math.min(indexToRemove - 1, newPages.length - 1)));
+    markDirty();
   };
 
   const toggleHidePage = (index: number) => {
@@ -487,6 +561,7 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
         }
         return updated;
     });
+    markDirty();
   };
 
   const handleAddExerciseTask = useCallback((ex: any) => {
@@ -498,8 +573,9 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
           type: 'exercise'
       };
       setTaskList(prev => [...prev, newTask]);
-      setShowExerciseModal(false); 
-  }, []);
+      setShowExerciseModal(false);
+      markDirty();
+  }, [markDirty]);
 
   const handleAddManualTask = () => {
       const text = window.prompt("Nhập nội dung ghi chú / nhiệm vụ:");
@@ -508,6 +584,7 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
               ...taskList, 
               { id: `task_${Date.now()}`, text: text.trim(), type: 'manual' }
           ]);
+          markDirty();
       }
   }
 
@@ -515,6 +592,7 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
       const newText = window.prompt("Sửa đổi tên hiển thị của nhiệm vụ:", task.text);
       if (newText && newText.trim() !== "") {
           setTaskList(taskList.map(t => t.id === task.id ? { ...t, text: newText.trim() } : t));
+          markDirty();
       }
   }
 
@@ -523,6 +601,7 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
       const newTasks = [...taskList];
       [newTasks[index - 1], newTasks[index]] = [newTasks[index], newTasks[index - 1]];
       setTaskList(newTasks);
+      markDirty();
   }
 
   const handleMoveTaskDown = (index: number) => {
@@ -530,13 +609,29 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
       const newTasks = [...taskList];
       [newTasks[index + 1], newTasks[index]] = [newTasks[index], newTasks[index + 1]];
       setTaskList(newTasks);
+      markDirty();
   }
+
+  const handleRequestClose = () => {
+    const flushed = getFlushedPages(pagesRef.current);
+    const hasUnflushedEdit = flushed !== pagesRef.current;
+    if ((isDirty || isDirtyRef.current || hasUnflushedEdit) && !window.confirm('Bạn có thay đổi chưa lưu. Bạn có chắc muốn đóng trình soạn thảo?')) {
+      return;
+    }
+    onClose();
+  };
 
   const handleSave = async () => {
     if (!title.trim() || !courseId) return alert('Vui lòng nhập tên và chọn khóa học!');
     setIsSaving(true);
 
     try {
+      // Flush latest unblurred HTML from active Jodit editor before saving
+      const latestPages = getFlushedPages(pagesRef.current);
+      if (latestPages !== pagesRef.current) {
+        setPages(latestPages);
+      }
+
       let currentLectureId = lectureData.id;
       
       const { data: { session } } = await supabase.auth.getSession();
@@ -608,18 +703,68 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
         if (err2) throw err2;
       }
 
-      // Cập nhật Pages
-      await supabase.from('lecture_pages').delete().eq('lecture_id', currentLectureId);
+      // Cập nhật Pages an toàn (non-destructive): upsert/insert trước, chỉ xóa trang cũ sau khi thành công
+      const { data: existingPageRows, error: existingPagesErr } = await supabase
+        .from('lecture_pages')
+        .select('id')
+        .eq('lecture_id', currentLectureId);
+      if (existingPagesErr) throw existingPagesErr;
 
-      const pagesToInsert = pages.map((p, idx) => ({
-        lecture_id: currentLectureId,
-        page_number: idx + 1,
-        content_html: p.is_hidden ? `<!-- hidden -->${p.content_html || ''}` : (p.content_html || '')
-      }));
-      
-      const { error: err3 } = await supabase.from('lecture_pages').insert(pagesToInsert);
-      if (err3) throw err3;
+      const existingIdSet = new Set((existingPageRows || []).map((row: any) => String(row.id)));
+      const keptExistingIds = new Set<string>();
+      const pagesToUpdate: any[] = [];
+      const pagesToInsert: any[] = [];
 
+      latestPages.forEach((p, idx) => {
+        const serializedHtml = p.is_hidden
+          ? `<!-- hidden -->${p.content_html || ''}`
+          : (p.content_html || '');
+        const idStr = p.id !== undefined && p.id !== null ? String(p.id) : '';
+        if (idStr && existingIdSet.has(idStr)) {
+          keptExistingIds.add(idStr);
+          pagesToUpdate.push({
+            id: p.id,
+            lecture_id: currentLectureId,
+            page_number: idx + 1,
+            content_html: serializedHtml,
+          });
+        } else {
+          pagesToInsert.push({
+            lecture_id: currentLectureId,
+            page_number: idx + 1,
+            content_html: serializedHtml,
+          });
+        }
+      });
+
+      if (pagesToUpdate.length > 0) {
+        const { error: upsertErr } = await supabase
+          .from('lecture_pages')
+          .upsert(pagesToUpdate, { onConflict: 'id' });
+        if (upsertErr) throw upsertErr;
+      }
+
+      if (pagesToInsert.length > 0) {
+        const { error: insertErr } = await supabase
+          .from('lecture_pages')
+          .insert(pagesToInsert);
+        if (insertErr) throw insertErr;
+      }
+
+      const removedPageIds = (existingPageRows || [])
+        .map((row: any) => row.id)
+        .filter((id: any) => !keptExistingIds.has(String(id)));
+
+      if (removedPageIds.length > 0) {
+        const { error: deleteErr } = await supabase
+          .from('lecture_pages')
+          .delete()
+          .eq('lecture_id', currentLectureId)
+          .in('id', removedPageIds);
+        if (deleteErr) throw deleteErr;
+      }
+
+      resetDirty();
       alert('Lưu bài giảng thành công!');
       onRefresh();
       onClose();
@@ -643,7 +788,7 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
           </div>
           <div className="flex items-center gap-3">
             <button 
-                onClick={onClose} 
+                onClick={handleRequestClose} 
                 className="px-5 py-2 rounded-xl text-slate-500 font-bold hover:bg-slate-100 transition"
             >
                 Hủy bỏ ✖
@@ -663,7 +808,7 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
              <label className="text-[11px] font-black text-slate-400 uppercase tracking-widest mb-1 block">Tên bài giảng <span className="text-red-500">*</span></label>
              <input 
                  value={title} 
-                 onChange={(e) => setTitle(e.target.value)} 
+                 onChange={(e) => { setTitle(e.target.value); markDirty(); }} 
                  placeholder="Nhập tên bài giảng..." 
                  className="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-2 font-bold text-slate-700 outline-none focus:border-[#2bd6eb]" 
              />
@@ -672,7 +817,7 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
              <label className="text-[11px] font-black text-slate-400 uppercase tracking-widest mb-1 block">Khóa học <span className="text-red-500">*</span></label>
              <select 
                  value={courseId} 
-                 onChange={(e) => setCourseId(e.target.value)} 
+                 onChange={(e) => { setCourseId(e.target.value); markDirty(); }} 
                  className="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-2 font-bold text-slate-700 outline-none focus:border-[#2bd6eb]"
              >
                 <option value="" disabled>Chọn khóa học...</option>
@@ -695,9 +840,11 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
              <div className="flex-1 overflow-y-auto bg-[#f8fafc] p-4 custom-scrollbar">
                  <MemoizedEditor 
                     key={activePage?.id || `empty_${activePageIndex}`} 
+                    pageId={activePage?.id || ''}
                     initialValue={activePage?.content_html || ''}
                     config={editorConfig}
                     onHtmlChange={handleHtmlChange}
+                    editorInstanceRef={activeEditorRef}
                  />
              </div>
           </div>
@@ -732,7 +879,7 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
                    </div>
                    <div className="flex-1 overflow-y-auto p-4 space-y-3 custom-scrollbar">
                       {pages.map((p, idx) => (
-                         <div key={p.id} onClick={() => setActivePageIndex(idx)} className={`flex justify-between items-center p-3 rounded-xl cursor-pointer transition-all border-2 ${activePageIndex === idx ? 'bg-white border-[#2bd6eb] shadow-md' : 'bg-white border-slate-100 hover:border-slate-300'} ${p.is_hidden ? 'bg-slate-100/50 opacity-75' : ''}`}>
+                         <div key={p.id} onClick={() => handleSelectPage(idx)} className={`flex justify-between items-center p-3 rounded-xl cursor-pointer transition-all border-2 ${activePageIndex === idx ? 'bg-white border-[#2bd6eb] shadow-md' : 'bg-white border-slate-100 hover:border-slate-300'} ${p.is_hidden ? 'bg-slate-100/50 opacity-75' : ''}`}>
                             <div className="flex items-center gap-2 min-w-0 flex-1">
                                <div className={`w-7 h-7 rounded-lg flex items-center justify-center text-xs font-black shrink-0 ${activePageIndex === idx ? 'bg-[#2bd6eb] text-white' : 'bg-slate-200 text-slate-500'}`}>
                                    {idx + 1}
@@ -795,7 +942,7 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
                                </div>
                                <div className="flex items-center gap-1 mt-1">
                                    <button onClick={() => handleEditTask(task)} className="w-6 h-6 flex items-center justify-center bg-blue-50 text-blue-600 hover:bg-blue-100 rounded text-[12px] transition-colors" title="Sửa tên nhiệm vụ">✏️</button>
-                                   <button onClick={() => setTaskList(taskList.filter(t => t.id !== task.id))} className="w-6 h-6 flex items-center justify-center bg-red-50 text-red-500 hover:bg-red-100 rounded text-[12px] transition-colors" title="Xóa">✖</button>
+                                   <button onClick={() => { setTaskList(taskList.filter(t => t.id !== task.id)); markDirty(); }} className="w-6 h-6 flex items-center justify-center bg-red-50 text-red-500 hover:bg-red-100 rounded text-[12px] transition-colors" title="Xóa">✖</button>
                                </div>
                             </div>
                          </div>

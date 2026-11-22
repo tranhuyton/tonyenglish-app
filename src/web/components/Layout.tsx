@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import {
   Phone,
@@ -22,7 +22,7 @@ import {
   X,
 } from 'lucide-react';
 import { useApp } from '../context/AppContext';
-import { supabase } from '../../supabase';
+import { supabase, isTonyEnglishAuthUser, isTonyEnglishAdmin, TONYENGLISH_APP_ID } from '../lib/supabase';
 
 export const Layout: React.FC<{
   children: React.ReactNode;
@@ -64,28 +64,39 @@ export const Layout: React.FC<{
   const [lmsRole, setLmsRole] = useState<'admin' | 'student' | null>(null);
 
   useEffect(() => {
-    const checkSession = async () => {
+    let active = true;
+
+    const resolveLmsRole = async (authUser: any | null | undefined) => {
+      if (!authUser || !isTonyEnglishAuthUser(authUser)) {
+        if (active) setLmsRole(null);
+        return;
+      }
       try {
-        const { data: { session } } = await supabase.auth.getSession();
-        if (session?.user) {
-          const email = session.user.email?.toLowerCase() || '';
-          if (email.includes('admin')) {
-            setLmsRole('admin');
-            return;
-          }
-          const { data: profile } = await supabase
-            .from('profiles')
-            .select('role, status')
-            .eq('id', session.user.id)
-            .maybeSingle();
-          if (profile?.role === 'admin') {
-            setLmsRole('admin');
-          } else if (profile?.status !== 'inactive') {
-            setLmsRole('student');
-          }
+        const { data: profile } = await supabase
+          .from('profiles')
+          .select('role, status')
+          .eq('id', authUser.id)
+          .maybeSingle();
+        if (!active) return;
+        if (isTonyEnglishAdmin(authUser, profile)) {
+          setLmsRole('admin');
+        } else if (profile?.status !== 'inactive') {
+          setLmsRole('student');
         } else {
           setLmsRole(null);
         }
+      } catch (e) {
+        console.warn('Session check warning:', e);
+        if (active) {
+          setLmsRole(isTonyEnglishAdmin(authUser, null) ? 'admin' : 'student');
+        }
+      }
+    };
+
+    const checkSession = async () => {
+      try {
+        const { data: { session } } = await supabase.auth.getSession();
+        await resolveLmsRole(session?.user);
       } catch (e) {
         console.warn('Session check warning:', e);
       }
@@ -93,14 +104,12 @@ export const Layout: React.FC<{
     checkSession();
 
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
-      if (!session?.user) {
-        setLmsRole(null);
-      } else {
-        const email = session.user.email?.toLowerCase() || '';
-        setLmsRole(email.includes('admin') ? 'admin' : 'student');
-      }
+      resolveLmsRole(session?.user);
     });
-    return () => subscription.unsubscribe();
+    return () => {
+      active = false;
+      subscription.unsubscribe();
+    };
   }, []);
 
   // Listen to custom event 'tony-open-lms' from anywhere in Web Portal
@@ -126,35 +135,58 @@ export const Layout: React.FC<{
   const [searchDropdownOpen, setSearchDropdownOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const searchBarRef = useRef<HTMLDivElement | null>(null);
+  const searchDropdownOpenRef = useRef(searchDropdownOpen);
+  searchDropdownOpenRef.current = searchDropdownOpen;
 
   // Dictionary / Translate modal popup
   const [popupModal, setPopupModal] = useState<{ title: string; url?: string; content?: string } | null>(null);
 
   // Double-click quick lookup tooltip state (autosearch.js replica)
   const [quickDict, setQuickDict] = useState<{ word: string; x: number; y: number } | null>(null);
+  const quickDictRef = useRef(quickDict);
+  quickDictRef.current = quickDict;
 
   useEffect(() => {
     const handleDblClick = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      if (target && (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.isContentEditable)) {
+      const target = e.target as HTMLElement | null;
+      if (
+        target &&
+        (target.tagName === 'INPUT' ||
+          target.tagName === 'TEXTAREA' ||
+          target.isContentEditable ||
+          target.closest('#addVdictOnYourWeb') ||
+          target.closest('[role="dialog"]'))
+      ) {
         return;
       }
       const selection = window.getSelection()?.toString().trim() || '';
       const cleanWord = selection.replace(/^[^a-zA-Z0-9À-ỹ]+|[^a-zA-Z0-9À-ỹ]+$/g, '').toLowerCase();
       if (cleanWord.length > 1 && cleanWord.length <= 40) {
-        const winWidth = window.innerWidth - 20;
-        const winHeight = window.innerHeight - 20;
-        const tipWidth = 320;
-        const tipHeight = 245;
-        let left = e.pageX + 12;
-        let top = e.pageY + 10;
-        if (e.clientX + 12 + tipWidth > winWidth) {
-          left = Math.max(5, e.pageX - tipWidth);
+        const margin = 8;
+        const tipWidth = Math.min(326, window.innerWidth - margin * 2);
+        const tipHeight = 250;
+        let left = e.clientX + 12;
+        let top = e.clientY + 12;
+        if (left + tipWidth > window.innerWidth - margin) {
+          left = e.clientX - tipWidth - 12;
         }
-        if (e.clientY + 10 + tipHeight > winHeight) {
-          top = Math.max(5, e.pageY - tipHeight - 10);
+        left = Math.max(margin, Math.min(left, window.innerWidth - tipWidth - margin));
+        if (top + tipHeight > window.innerHeight - margin) {
+          top = e.clientY - tipHeight - 12;
         }
-        setQuickDict({ word: cleanWord, x: left, y: top });
+        top = Math.max(margin, Math.min(top, window.innerHeight - tipHeight - margin));
+        setQuickDict({ word: cleanWord, x: Math.round(left), y: Math.round(top) });
+      }
+    };
+
+    const handleMouseDown = (e: MouseEvent) => {
+      const target = e.target as HTMLElement | null;
+      if (quickDictRef.current && target && !target.closest('#addVdictOnYourWeb')) {
+        setQuickDict(null);
+      }
+      if (searchDropdownOpenRef.current && searchBarRef.current && target && !searchBarRef.current.contains(target)) {
+        setSearchDropdownOpen(false);
       }
     };
 
@@ -163,14 +195,22 @@ export const Layout: React.FC<{
         const selection = window.getSelection()?.toString().trim() || '';
         const cleanWord = selection.replace(/^[^a-zA-Z0-9À-ỹ]+|[^a-zA-Z0-9À-ỹ]+$/g, '').toLowerCase();
         if (cleanWord.length > 1) {
+          const margin = 8;
+          const tipWidth = Math.min(326, window.innerWidth - margin * 2);
+          const tipHeight = 250;
           setQuickDict({
             word: cleanWord,
-            x: Math.max(20, window.scrollX + window.innerWidth / 2 - 155),
-            y: Math.max(20, window.scrollY + window.innerHeight / 2 - 120),
+            x: Math.max(margin, Math.round((window.innerWidth - tipWidth) / 2)),
+            y: Math.max(margin, Math.round((window.innerHeight - tipHeight) / 2)),
           });
         }
       } else if (e.key === 'Escape') {
-        setQuickDict(null);
+        if (quickDictRef.current) {
+          e.stopPropagation();
+          setQuickDict(null);
+          return;
+        }
+        setSearchDropdownOpen(false);
         setPopupModal(null);
         setLoginModalOpen(false);
         setForgotPasswordMode(false);
@@ -179,9 +219,11 @@ export const Layout: React.FC<{
     };
 
     document.addEventListener('dblclick', handleDblClick);
+    document.addEventListener('mousedown', handleMouseDown);
     document.addEventListener('keydown', handleKeyDown);
     return () => {
       document.removeEventListener('dblclick', handleDblClick);
+      document.removeEventListener('mousedown', handleMouseDown);
       document.removeEventListener('keydown', handleKeyDown);
     };
   }, []);
@@ -204,10 +246,14 @@ export const Layout: React.FC<{
   const [resetError, setResetError] = useState('');
 
   useEffect(() => {
-    if (loginModalOpen) {
-      setLoginLoading(false);
-      setLoginError('');
-    }
+    if (!loginModalOpen) return;
+    setLoginLoading(false);
+    setLoginError('');
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = prevOverflow;
+    };
   }, [loginModalOpen]);
 
   const handleRegisterSubmit = async (e: React.FormEvent) => {
@@ -240,7 +286,7 @@ export const Layout: React.FC<{
             phone: cleanPhone,
             role: 'student',
             account_type: 'online',
-            app: 'tonyenglish',
+            app: TONYENGLISH_APP_ID,
           },
         },
       });
@@ -248,6 +294,16 @@ export const Layout: React.FC<{
       if (error) throw error;
 
       if (data?.user) {
+        if (!isTonyEnglishAuthUser(data.user)) {
+          await supabase.auth.signOut();
+          setLoginError(
+            lang === 'vi'
+              ? 'Email này thuộc hệ thống khác và không thể đăng ký tự động tại TonyEnglish. Vui lòng dùng email khác hoặc liên hệ Thầy Tony.'
+              : 'This email belongs to another platform. Please use a different email address.'
+          );
+          setLoginLoading(false);
+          return;
+        }
         try {
           await supabase.from('profiles').upsert({
             id: data.user.id,
@@ -271,10 +327,21 @@ export const Layout: React.FC<{
 
       // Sign in immediately if session not returned directly
       if (!data?.session) {
-        await supabase.auth.signInWithPassword({
+        const { data: signInData, error: signInError } = await supabase.auth.signInWithPassword({
           email: cleanEmail,
           password: regPassword,
         });
+        if (signInError || !signInData?.session) {
+          setLoginError(
+            lang === 'vi'
+              ? 'Tài khoản đã được tạo! Vui lòng xác nhận email (nếu có) hoặc chuyển sang tab Đăng nhập.'
+              : 'Account created! Please verify your email or sign in on the Sign In tab.'
+          );
+          setAuthTab('login');
+          setLoginUsername(cleanEmail);
+          setLoginLoading(false);
+          return;
+        }
       }
 
       setLoginModalOpen(false);
@@ -363,14 +430,24 @@ export const Layout: React.FC<{
         const { data, error } = await Promise.race([loginPromise, timeoutPromise]);
 
         if (!error && data?.user) {
-          const isAdmin = cleanInput.includes('admin');
+          if (!isTonyEnglishAuthUser(data.user)) {
+            await supabase.auth.signOut();
+            setLoginError(
+              lang === 'vi'
+                ? 'Tài khoản này chưa được đăng ký trên hệ thống TonyEnglish. Vui lòng sử dụng tài khoản học viên TonyEnglish hoặc đăng ký học thử mới.'
+                : 'This account is not registered on TonyEnglish. Please sign in with a TonyEnglish student account or create a free trial account.'
+            );
+            setLoginLoading(false);
+            return;
+          }
+
           let profile: any = null;
           try {
             const profilePromise = supabase
               .from('profiles')
               .select('role, status')
               .eq('id', data.user.id)
-              .single();
+              .maybeSingle();
             const profileTimeout = new Promise<any>((_, reject) =>
               setTimeout(() => reject('TIMEOUT'), 4000)
             );
@@ -380,7 +457,9 @@ export const Layout: React.FC<{
             console.warn('Profile status check warning:', pErr);
           }
 
-          if (profile?.role !== 'admin' && !isAdmin && profile?.status === 'inactive') {
+          const isAdmin = isTonyEnglishAdmin(data.user, profile);
+
+          if (!isAdmin && profile?.status === 'inactive') {
             await supabase.auth.signOut();
             setLoginError(
               '⛔ Tài khoản học của bạn hiện đang ở trạng thái TẠM DỪNG. Vui lòng liên hệ Thầy Tony để được kích hoạt lại!'
@@ -390,7 +469,7 @@ export const Layout: React.FC<{
           }
 
           setLoginModalOpen(false);
-          if (profile?.role === 'admin' || isAdmin) {
+          if (isAdmin) {
             onNavigateLms?.('admin');
           } else {
             onNavigateLms?.('student-resume');
@@ -526,7 +605,7 @@ export const Layout: React.FC<{
           {/* Right tools: Search/Dictionary + Course selector + Language */}
           <div className="flex items-center justify-end gap-2.5 ml-auto">
             {/* Smart Dictionary & Search Bar */}
-            <div className="relative flex items-center bg-slate-800/95 border border-slate-700 hover:border-[#2ab4e8]/70 rounded-lg focus-within:border-[#2ab4e8] focus-within:ring-2 focus-within:ring-[#2ab4e8]/20 transition-all">
+            <div ref={searchBarRef} className="relative flex items-center bg-slate-800/95 border border-slate-700 hover:border-[#2ab4e8]/70 rounded-lg focus-within:border-[#2ab4e8] focus-within:ring-2 focus-within:ring-[#2ab4e8]/20 transition-all">
               <button
                 type="button"
                 onClick={() => setSearchDropdownOpen(!searchDropdownOpen)}
@@ -677,19 +756,21 @@ export const Layout: React.FC<{
 
       {/* 2. MAIN STICKY GLASSMORPHIC NAVBAR */}
       <nav className="bg-white/90 backdrop-blur-lg border-b border-slate-200/80 sticky top-0 z-40 shadow-2xs">
-        <div className="max-w-7xl mx-auto px-3.5 sm:px-6 h-16 sm:h-[74px] flex items-center justify-between gap-2 sm:gap-4">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 h-16 sm:h-[74px] flex items-center justify-between gap-1.5 sm:gap-4">
           {/* Brand Logo */}
-          <Link to="/" className="flex items-center gap-2 sm:gap-2.5 xl:gap-3 hover:opacity-90 transition-opacity shrink-0">
+          <Link to="/" className="flex items-center gap-1.5 sm:gap-2.5 xl:gap-3 hover:opacity-90 transition-opacity shrink-0 min-w-0">
             <img
               src="/logo-shield.png"
               onError={(e) => {
-                (e.currentTarget as HTMLImageElement).src = '/themes/tony/assets/img/logo khong chu.png';
+                const img = e.currentTarget as HTMLImageElement;
+                img.onerror = null;
+                img.src = '/themes/tony/assets/img/logo%20khong%20chu.png';
               }}
               alt="TonyEnglish"
-              className="h-8 sm:h-9 xl:h-10 w-auto object-contain"
+              className="h-7 sm:h-9 xl:h-10 w-auto object-contain shrink-0"
             />
             <div className="flex flex-col items-start leading-none">
-              <div className="font-display font-black text-[18px] sm:text-[21px] xl:text-[24px] tracking-tight">
+              <div className="font-display font-black text-[16px] sm:text-[21px] xl:text-[24px] tracking-tight whitespace-nowrap">
                 <span className="text-[#2ab4e8]">TONY</span>
                 <span className="text-[#0a5482]">ENGLISH</span>
               </div>
@@ -731,16 +812,16 @@ export const Layout: React.FC<{
           </div>
 
           {/* Right Action Buttons (Unified LMS) */}
-          <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
+          <div className="flex items-center gap-1 sm:gap-2 shrink-0">
             {lmsRole ? (
               <>
                 {lmsRole === 'admin' && (
                   <button
                     type="button"
                     onClick={() => onNavigateLms?.('student-resume')}
-                    className="bg-emerald-50 hover:bg-emerald-100 text-emerald-700 text-[11px] sm:text-[13px] font-extrabold px-2.5 py-1.5 sm:px-3.5 sm:py-2 rounded-xl transition border border-emerald-200 shadow-2xs active:scale-95 whitespace-nowrap inline-flex items-center gap-1.5 cursor-pointer"
+                    className="bg-emerald-50 hover:bg-emerald-100 text-emerald-700 text-[11px] sm:text-[13px] font-extrabold px-2 py-1.5 sm:px-3.5 sm:py-2 rounded-xl transition border border-emerald-200 shadow-2xs active:scale-95 whitespace-nowrap inline-flex items-center gap-1 sm:gap-1.5 cursor-pointer"
                   >
-                    <GraduationCap className="w-4 h-4" />
+                    <GraduationCap className="w-4 h-4 hidden sm:inline" />
                     <span>{lang === 'vi' ? 'Góc Học Viên' : 'Student Portal'}</span>
                   </button>
                 )}
@@ -748,10 +829,10 @@ export const Layout: React.FC<{
                   type="button"
                   onClick={() => (lmsRole === 'admin' ? onNavigateLms?.('admin') : onNavigateLms?.('student-resume'))}
                   title={lmsRole === 'admin' ? (lang === 'vi' ? 'Quản Trị' : 'Admin Setting') : (lang === 'vi' ? 'Góc Học Viên' : 'Student Portal')}
-                  className={`bg-gradient-to-r from-[#0a5482] to-[#1e74a8] hover:from-[#084266] hover:to-[#0a5482] text-white font-extrabold rounded-xl transition shadow-sm active:scale-95 whitespace-nowrap inline-flex items-center justify-center gap-1.5 cursor-pointer ${
+                  className={`bg-gradient-to-r from-[#0a5482] to-[#1e74a8] hover:from-[#084266] hover:to-[#0a5482] text-white font-extrabold rounded-xl transition shadow-sm active:scale-95 whitespace-nowrap inline-flex items-center justify-center gap-1 sm:gap-1.5 cursor-pointer ${
                     lmsRole === 'admin'
-                      ? 'text-[13px] sm:text-[14px] px-2.5 py-2 sm:px-3.5 sm:py-2.5'
-                      : 'text-[12px] sm:text-[13.5px] px-3 py-2 sm:px-4 sm:py-2.5'
+                      ? 'text-[12px] sm:text-[14px] px-2 py-1.5 sm:px-3.5 sm:py-2.5'
+                      : 'text-[11.5px] sm:text-[13.5px] px-2.5 py-1.5 sm:px-4 sm:py-2.5'
                   }`}
                 >
                   {lmsRole === 'admin' ? (
@@ -763,7 +844,7 @@ export const Layout: React.FC<{
                     </>
                   ) : (
                     <>
-                      <GraduationCap className="w-4 h-4 text-[#2ab4e8]" />
+                      <GraduationCap className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#2ab4e8]" />
                       <span>{lang === 'vi' ? 'Góc Học Viên' : 'Student Portal'}</span>
                       <ArrowRight className="w-3.5 h-3.5 hidden sm:inline" />
                     </>
@@ -771,13 +852,13 @@ export const Layout: React.FC<{
                 </button>
               </>
             ) : user ? (
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-1.5 sm:gap-2">
                 <Link
                   to="/user/profile"
-                  className="bg-slate-100 hover:bg-slate-200 text-[#0a5482] text-xs sm:text-[14px] font-bold px-3 py-2 sm:px-3.5 rounded-xl transition flex items-center gap-1.5"
+                  className="bg-slate-100 hover:bg-slate-200 text-[#0a5482] text-xs sm:text-[14px] font-bold px-2.5 py-1.5 sm:px-3.5 sm:py-2 rounded-xl transition flex items-center gap-1.5"
                 >
                   <User className="w-4 h-4" />
-                  <span className="max-w-[90px] sm:max-w-[120px] truncate">
+                  <span className="max-w-[76px] sm:max-w-[120px] truncate">
                     {user.user_fullname?.trim() ? user.user_fullname.trim().split(' ').slice(-1)[0] : user.user_name}
                   </span>
                 </Link>
@@ -791,7 +872,7 @@ export const Layout: React.FC<{
                     setForgotPasswordMode(false);
                     setLoginModalOpen(true);
                   }}
-                  className="inline-flex items-center gap-1 sm:gap-1.5 bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200/90 text-[12px] sm:text-[13px] font-extrabold px-2.5 sm:px-3.5 min-h-[40px] py-2 rounded-xl transition active:scale-95 whitespace-nowrap cursor-pointer"
+                  className="hidden sm:inline-flex items-center gap-1.5 bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200/90 text-[13px] font-extrabold px-3.5 min-h-[40px] py-2 rounded-xl transition active:scale-95 whitespace-nowrap cursor-pointer"
                 >
                   <Gift className="w-3.5 h-3.5 text-amber-600 shrink-0" />
                   <span>{lang === 'vi' ? 'Học thử' : 'Trial'}</span>
@@ -803,7 +884,7 @@ export const Layout: React.FC<{
                     setForgotPasswordMode(false);
                     setLoginModalOpen(true);
                   }}
-                  className="bg-[#0a5482] hover:bg-[#084266] text-white text-[12.5px] sm:text-[14px] font-extrabold px-3.5 sm:px-4.5 min-h-[40px] py-2 sm:py-2.5 rounded-xl transition shadow-sm active:scale-95 whitespace-nowrap cursor-pointer"
+                  className="bg-[#0a5482] hover:bg-[#084266] text-white text-[12px] sm:text-[14px] font-extrabold px-3 sm:px-4.5 min-h-[38px] sm:min-h-[40px] py-1.5 sm:py-2.5 rounded-xl transition shadow-sm active:scale-95 whitespace-nowrap cursor-pointer"
                 >
                   {t('Login')}
                 </button>
@@ -814,7 +895,7 @@ export const Layout: React.FC<{
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden min-w-[42px] min-h-[42px] flex items-center justify-center rounded-xl text-slate-600 hover:bg-slate-100 cursor-pointer"
+              className="lg:hidden min-w-[38px] min-h-[38px] sm:min-w-[42px] sm:min-h-[42px] flex items-center justify-center rounded-xl text-slate-600 hover:bg-slate-100 cursor-pointer"
               aria-label="Menu"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -988,7 +1069,9 @@ export const Layout: React.FC<{
                 <img
                   src="/logo-shield.png"
                   onError={(e) => {
-                    (e.currentTarget as HTMLImageElement).src = '/themes/tony/assets/img/logo khong chu.png';
+                    const img = e.currentTarget as HTMLImageElement;
+                    img.onerror = null;
+                    img.src = '/themes/tony/assets/img/logo%20khong%20chu.png';
                   }}
                   alt="TonyEnglish"
                   className="h-9 w-auto object-contain"
@@ -1006,13 +1089,13 @@ export const Layout: React.FC<{
                 <p className="flex items-start gap-2.5">
                   <MapPin className="w-4 h-4 text-[#2ab4e8] shrink-0 mt-0.5" />
                   <span>
-                    {t('Address')}: {addressText}
+                    {lang === 'vi' ? 'Địa chỉ:' : 'Address:'} {addressText}
                   </span>
                 </p>
                 <p className="flex items-center gap-2.5">
                   <Phone className="w-4 h-4 text-[#2ab4e8] shrink-0" />
                   <a href="tel:0935058688" className="hover:text-white transition">
-                    {t('Contact')}: {phoneText}
+                    {lang === 'vi' ? 'Liên hệ:' : 'Contact:'} {phoneText}
                   </a>
                 </p>
                 <p className="flex items-center gap-2.5">
@@ -1038,13 +1121,21 @@ export const Layout: React.FC<{
                     {t('Study at TonyEnglish')}
                   </Link>
                 </li>
-                {footerCourses.slice(0, 6).map((c: any) => (
-                  <li key={c.cc_id}>
-                    <Link to={`/courses/${(c.cc_name_url || '').trim()}`} className="hover:text-[#2ab4e8] transition-colors">
-                      {lang === 'vi' ? c.cc_name_vi || c.cc_name : c.cc_name}
-                    </Link>
-                  </li>
-                ))}
+                {footerCourses.slice(0, 6).map((c: any) => {
+                  const rawLabel = lang === 'vi' ? c.cc_name_vi || c.cc_name : c.cc_name;
+                  const cleanLabel = String(rawLabel || '')
+                    .replace(/IGCSE\s*\/\s*Alevel/gi, 'IGCSE / A-Level')
+                    .replace(/Giao Tiếp Căn bản/g, 'Giao tiếp Căn bản')
+                    .trim();
+                  const cleanSlugUrl = encodeURIComponent((c.cc_name_url || '').trim());
+                  return (
+                    <li key={c.cc_id}>
+                      <Link to={`/courses/${cleanSlugUrl}`} className="hover:text-[#2ab4e8] transition-colors">
+                        {cleanLabel}
+                      </Link>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
 
@@ -1147,7 +1238,9 @@ export const Layout: React.FC<{
           }}
         >
           <div
-            className="bg-white rounded-3xl w-full max-w-md shadow-2xl border border-slate-200/80 overflow-hidden animate-in zoom-in-95"
+            role="dialog"
+            aria-modal="true"
+            className="bg-white rounded-3xl w-full max-w-md max-h-[90dvh] overflow-y-auto shadow-2xl border border-slate-200/80 animate-in zoom-in-95"
             onClick={(e) => e.stopPropagation()}
           >
             {!forgotPasswordMode ? (
@@ -1481,6 +1574,8 @@ export const Layout: React.FC<{
           onClick={() => setPopupModal(null)}
         >
           <div
+            role="dialog"
+            aria-modal="true"
             className="bg-white rounded-2xl border border-slate-200/90 w-full max-w-[920px] h-[82vh] max-h-[720px] shadow-2xl flex flex-col overflow-hidden animate-in zoom-in-95"
             onClick={(e) => e.stopPropagation()}
           >
@@ -1489,7 +1584,9 @@ export const Layout: React.FC<{
                 <img
                   src="/logo-shield.png"
                   onError={(e) => {
-                    (e.currentTarget as HTMLImageElement).src = '/logo-shield-old.png';
+                    const img = e.currentTarget as HTMLImageElement;
+                    img.onerror = null;
+                    img.src = '/themes/tony/assets/img/logo%20khong%20chu.png';
                   }}
                   alt="TonyEnglish"
                   className="h-6 w-auto object-contain shrink-0"
@@ -1579,10 +1676,11 @@ export const Layout: React.FC<{
         <div
           id="addVdictOnYourWeb"
           style={{
-            position: 'absolute',
+            position: 'fixed',
             left: `${quickDict.x}px`,
             top: `${quickDict.y}px`,
             width: '326px',
+            maxWidth: 'calc(100vw - 16px)',
             zIndex: 999999,
           }}
           className="bg-white rounded-2xl border border-slate-200/95 shadow-2xl overflow-hidden animate-in fade-in zoom-in-95"

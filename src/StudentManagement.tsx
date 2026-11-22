@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { supabase } from './supabase';
+import React, { useState, useEffect, useRef } from 'react';
+import { supabase, TONYENGLISH_APP_ID } from './supabase';
 import { createClient } from '@supabase/supabase-js';
 import { parseClassConfig } from './classConfigUtils';
 import { parseArticleInteractiveQuiz, extractArticleEbookPdfUrl } from './web/lib/utils';
@@ -10,9 +10,25 @@ const authSupabase = createClient(
   { auth: { persistSession: false } }
 );
 
-let studentSearchTimer: any;
+async function fetchAllRows<T = any>(
+  buildQuery: (from: number, to: number) => PromiseLike<{ data: T[] | null; error: any }>
+): Promise<{ data: T[]; error: any }> {
+  const allRows: T[] = [];
+  const pageSize = 1000;
+  let from = 0;
+  while (true) {
+    const { data, error } = await buildQuery(from, from + pageSize - 1);
+    if (error) return { data: allRows, error };
+    if (!data || data.length === 0) break;
+    allRows.push(...data);
+    if (data.length < pageSize) break;
+    from += pageSize;
+  }
+  return { data: allRows, error: null };
+}
 
 export default function StudentManagement({ mode = 'offline', onStartTest, autoSelectUserId, autoTab, onAutoSelectDone }: { mode?: 'offline' | 'online', onStartTest?: any, autoSelectUserId?: string | null, autoTab?: 'courses' | 'history' | 'activity' | 'library' | 'assignments' | null, onAutoSelectDone?: () => void }) {
+  const studentSearchTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const [students, setStudents] = useState<any[]>([]);
   const [allEnrollments, setAllEnrollments] = useState<any[]>([]);
   const [courses, setCourses] = useState<any[]>([]);
@@ -94,7 +110,15 @@ export default function StudentManagement({ mode = 'offline', onStartTest, autoS
     fetchStudents();
     fetchCourses();
     supabase.from('classes').select('*').order('created_at', { ascending: false }).then(({data}) => setAllClasses(data || []));
-    supabase.from('tests').select('id, title, test_type, course_id, skill').then(({data}) => setAllTests(data || []));
+    fetchAllRows((from, to) =>
+      supabase.from('tests').select('id, title, test_type, course_id, skill').order('id', { ascending: true }).range(from, to)
+    ).then(({ data, error }) => {
+      if (error) console.error('Lỗi tải danh sách đề thi:', error.message);
+      setAllTests(data);
+    });
+    return () => {
+      if (studentSearchTimerRef.current) clearTimeout(studentSearchTimerRef.current);
+    };
   }, []);
 
   useEffect(() => {
@@ -146,11 +170,16 @@ export default function StudentManagement({ mode = 'offline', onStartTest, autoS
   const fetchStudents = async () => {
     setIsLoading(true);
     try {
-      const [{ data, error }, { data: enrollRows }] = await Promise.all([
-        supabase.from('profiles').select('*').order('created_at', { ascending: false }),
-        supabase.from('enrollments').select('user_id, course_id')
+      const [{ data, error }, { data: enrollRows, error: enrollError }] = await Promise.all([
+        fetchAllRows((from, to) =>
+          supabase.from('profiles').select('*').order('created_at', { ascending: false }).order('id', { ascending: true }).range(from, to)
+        ),
+        fetchAllRows((from, to) =>
+          supabase.from('enrollments').select('user_id, course_id').order('id', { ascending: true }).range(from, to)
+        )
       ]);
       if (error) throw error;
+      if (enrollError) throw enrollError;
       setStudents(data || []);
       setAllEnrollments(enrollRows || []);
     } catch (err: any) {
@@ -613,19 +642,32 @@ export default function StudentManagement({ mode = 'offline', onStartTest, autoS
       const { data, error } = await authSupabase.auth.signUp({
         email: email,
         password: password,
-        options: { data: { full_name: fullName, role: newUserRole, account_type: newUserRole === 'student' ? targetAccountType : undefined, app: 'tonyenglish' } }
+        options: {
+          data: {
+            full_name: fullName,
+            role: newUserRole,
+            phone: phone,
+            account_type: newUserRole === 'student' ? targetAccountType : undefined,
+            app: TONYENGLISH_APP_ID
+          }
+        }
       });
 
       if (error) throw error;
       await new Promise(resolve => setTimeout(resolve, 1500));
 
+      let profileSyncWarning = '';
       if (data.user) {
-        await supabase.rpc('update_user_profile', {
+        const { error: profileRpcError } = await supabase.rpc('update_user_profile', {
             target_user_id: data.user.id,
             new_full_name: fullName,
             new_role: newUserRole,
             new_phone: phone 
         });
+        if (profileRpcError) {
+          console.error('Lỗi đồng bộ hồ sơ (update_user_profile):', profileRpcError);
+          profileSyncWarning = `\n⚠️ Lưu ý: Đồng bộ hồ sơ (vai trò/SĐT) gặp lỗi: ${profileRpcError.message}`;
+        }
         if (newUserRole === 'student') {
           const avatarJson = JSON.stringify({ account_type: targetAccountType, provider: 'admin' });
           const { data: updatedProf } = await supabase
@@ -647,7 +689,7 @@ export default function StudentManagement({ mode = 'offline', onStartTest, autoS
         }
       }
 
-      alert(`✅ Đã tạo tài khoản ${newUserRole === 'admin' ? 'Quản trị viên' : 'Học viên'} thành công!`);
+      alert(`✅ Đã tạo tài khoản ${newUserRole === 'admin' ? 'Quản trị viên' : 'Học viên'} thành công!${profileSyncWarning}`);
       setShowCreateUserModal(false);
       setNewUserRole('student');
       fetchStudents(); 
@@ -887,7 +929,8 @@ export default function StudentManagement({ mode = 'offline', onStartTest, autoS
     if (foundTest && onStartTest) {
         const type = String(foundTest.test_type || '').toLowerCase();
         let targetMode = 'standard';
-        if (type.includes('split-standard')) targetMode = 'split-standard';
+        if (type.includes('sat-bluebook') || type === 'sat') targetMode = 'sat-bluebook';
+        else if (type.includes('split-standard')) targetMode = 'split-standard';
         else if (type.includes('splitscreen') && type.includes('standard')) targetMode = 'standard-splitscreen';
         else if (type.includes('standard-reading')) targetMode = 'standard-reading';
         else if (type.includes('case-study') || type.includes('business')) targetMode = 'case-study';
@@ -907,6 +950,8 @@ export default function StudentManagement({ mode = 'offline', onStartTest, autoS
             history_id: h.id, 
             isReview: true,
             past_answers: h.details?.userAnswers || h.details?.answers || {},
+            past_routing: h.details?.routing || 'hard',
+            past_details: h.details || {},
             past_score: h.score,
             past_total: h.total_score,
             past_band: h.details?.bandScore || '0.0',
@@ -2593,8 +2638,9 @@ export default function StudentManagement({ mode = 'offline', onStartTest, autoS
                 placeholder="Tìm kiếm theo email, tên, SĐT..." 
                 defaultValue={searchQuery}
                 onChange={(e) => {
-                  clearTimeout(studentSearchTimer);
-                  studentSearchTimer = setTimeout(() => setSearchQuery(e.target.value), 350);
+                  const val = e.target.value;
+                  if (studentSearchTimerRef.current) clearTimeout(studentSearchTimerRef.current);
+                  studentSearchTimerRef.current = setTimeout(() => setSearchQuery(val), 350);
                 }} 
                 className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-300 font-medium text-[13px] outline-none focus:border-[#0a5482] focus:ring-1 focus:ring-[#0a5482] bg-white transition-all shadow-sm" 
               />
@@ -2611,7 +2657,7 @@ export default function StudentManagement({ mode = 'offline', onStartTest, autoS
             <div className="p-16 text-center text-slate-400 font-medium text-lg border-t border-slate-100">Không tìm thấy tài khoản nào.</div>
           ) : (
             <>
-              <div className="flex-1 overflow-y-auto custom-scrollbar">
+              <div className="flex-1 overflow-x-auto overflow-y-auto custom-scrollbar">
                 <table className="w-full text-left border-collapse min-w-[900px]">
                   <thead className="sticky top-0 bg-white shadow-[0_1px_2px_rgba(0,0,0,0.05)] z-10">
                     <tr className="text-[11px] font-black uppercase tracking-wider text-slate-400">

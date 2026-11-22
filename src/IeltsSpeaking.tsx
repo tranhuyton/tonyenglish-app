@@ -159,11 +159,19 @@ export default function IeltsSpeaking({
 
   const [notes, setNotes] = useState<Record<string, string>>({}); 
   const [recordedBlobs, setRecordedBlobs] = useState<Record<string, Blob[]>>({}); 
+  const recordedBlobsRef = useRef(recordedBlobs);
+  useEffect(() => { recordedBlobsRef.current = recordedBlobs; }, [recordedBlobs]);
+
   const [audioUrls, setAudioUrls] = useState<Record<string, string>>({}); 
+  const audioUrlsRef = useRef(audioUrls);
+  useEffect(() => { audioUrlsRef.current = audioUrls; }, [audioUrls]);
+
   const [reviewFlags, setReviewFlags] = useState<Record<number, boolean>>({});
 
   // 🚀 TRẠNG THÁI GỌI ĐIỆN LIVE VỚI AI
   const [liveStatus, setLiveStatus] = useState<'IDLE' | 'CONNECTING' | 'CONNECTED'>('IDLE');
+  const liveStatusRef = useRef(liveStatus);
+  useEffect(() => { liveStatusRef.current = liveStatus; }, [liveStatus]);
   const [liveTranscript, setLiveTranscript] = useState<string>('');
   const [isMicSending, setIsMicSending] = useState(false);
   const [recordingTime, setRecordingTime] = useState(0);
@@ -225,6 +233,7 @@ export default function IeltsSpeaking({
   };
   
   const [isGrading, setIsGrading] = useState(false);
+  const isFinishingRef = useRef(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   useEffect(() => { window.dispatchEvent(new CustomEvent('tony-review-mode-change', { detail: Boolean(isSubmitted) })); return () => { window.dispatchEvent(new CustomEvent('tony-review-mode-change', { detail: false })); }; }, [isSubmitted]);
   const [aiResult, setAiResult] = useState<any>(null);
@@ -232,12 +241,14 @@ export default function IeltsSpeaking({
   // 5. Điều khiển thời gian đếm ngược tổng
   const parseTime = (t: any) => parseInt(t) || 15; 
   const [timeLeft, setTimeLeft] = useState(() => parseTime(basicInfo.timeLimit) * 60);
+  const timeLeftRef = useRef(timeLeft);
+  useEffect(() => { timeLeftRef.current = timeLeft; }, [timeLeft]);
 
   useEffect(() => {
     if (isSubmitted || isGrading) return;
     const timer = setInterval(() => {
       setTimeLeft(prev => {
-        if (prev <= 1) { clearInterval(timer); handleFinalSubmit(); return 0; }
+        if (prev <= 1) { clearInterval(timer); handleFinalSubmitRef.current(true); return 0; }
         return prev - 1;
       });
     }, 1000);
@@ -245,8 +256,13 @@ export default function IeltsSpeaking({
   }, [isSubmitted, isGrading]);
 
   useEffect(() => {
-    // Dọn dẹp kết nối khi unmount component
-    return () => stopLiveCall();
+    // Dọn dẹp kết nối và revoke object URLs khi unmount component
+    return () => {
+      stopLiveCall();
+      Object.values(audioUrlsRef.current).forEach((url) => {
+        try { URL.revokeObjectURL(url); } catch {}
+      });
+    };
   }, []);
 
   const formatTime = (secs: number) => {
@@ -258,6 +274,11 @@ export default function IeltsSpeaking({
 
   const formatTotalTime = (secs: number) => {
     if (isNaN(secs)) return '15 minutes left';
+    if (secs < 60) {
+      const m = Math.floor(Math.max(0, secs) / 60).toString().padStart(2, '0');
+      const s = (Math.max(0, secs) % 60).toString().padStart(2, '0');
+      return `${m}:${s}`;
+    }
     const m = Math.floor(secs / 60);
     return `${m} minutes left`;
   };
@@ -287,11 +308,17 @@ export default function IeltsSpeaking({
         if (event.data.size > 0) audioChunksRef.current.push(event.data);
       };
 
+      const targetQId = currentQ.id;
       mediaRecorder.onstop = () => {
         const audioBlob = new Blob(audioChunksRef.current, { type: 'audio/webm' });
         const audioUrl = URL.createObjectURL(audioBlob);
-        setRecordedBlobs(prev => ({ ...prev, [currentQ.id]: [audioBlob] }));
-        setAudioUrls(prev => ({ ...prev, [currentQ.id]: audioUrl }));
+        setRecordedBlobs(prev => ({ ...prev, [targetQId]: [audioBlob] }));
+        setAudioUrls(prev => {
+          if (prev[targetQId]) {
+            try { URL.revokeObjectURL(prev[targetQId]); } catch {}
+          }
+          return { ...prev, [targetQId]: audioUrl };
+        });
       };
 
       mediaRecorder.start();
@@ -426,22 +453,48 @@ export default function IeltsSpeaking({
 
   const stopLiveCall = () => {
     if (mediaRecorderRef.current && mediaRecorderRef.current.state !== 'inactive') {
-      mediaRecorderRef.current.stop();
+      try { mediaRecorderRef.current.stop(); } catch {}
     }
-    if (wsRef.current) wsRef.current.close();
-    if (streamRef.current) streamRef.current.getTracks().forEach(t => t.stop());
+    if (wsRef.current) {
+      try { wsRef.current.close(); } catch {}
+      wsRef.current = null;
+    }
+    if (streamRef.current) {
+      try { streamRef.current.getTracks().forEach(t => t.stop()); } catch {}
+      streamRef.current = null;
+    }
     
-    if (sourceNodeRef.current) sourceNodeRef.current.disconnect();
-    if (processorNodeRef.current) processorNodeRef.current.disconnect();
-    if (gainNodeRef.current) gainNodeRef.current.disconnect();
+    if (sourceNodeRef.current) {
+      try { sourceNodeRef.current.disconnect(); } catch {}
+      sourceNodeRef.current = null;
+    }
+    if (processorNodeRef.current) {
+      try { processorNodeRef.current.disconnect(); } catch {}
+      processorNodeRef.current = null;
+    }
+    if (gainNodeRef.current) {
+      try { gainNodeRef.current.disconnect(); } catch {}
+      gainNodeRef.current = null;
+    }
 
-    if (audioCtxInputRef.current) audioCtxInputRef.current.close();
-    if (audioCtxOutputRef.current) audioCtxOutputRef.current.close();
+    if (audioCtxInputRef.current) {
+      const ctx = audioCtxInputRef.current;
+      audioCtxInputRef.current = null;
+      if (ctx.state !== 'closed') ctx.close().catch(() => {});
+    }
+    if (audioCtxOutputRef.current) {
+      const ctx = audioCtxOutputRef.current;
+      audioCtxOutputRef.current = null;
+      if (ctx.state !== 'closed') ctx.close().catch(() => {});
+    }
     
     setLiveStatus('IDLE');
     isSetupCompleteRef.current = false;
     setIsMicSending(false);
-    clearInterval(timerRef.current);
+    if (timerRef.current) {
+      clearInterval(timerRef.current);
+      timerRef.current = null;
+    }
   };
 
   const deleteRecording = () => {
@@ -452,7 +505,10 @@ export default function IeltsSpeaking({
     const newBlobs = { ...recordedBlobs }; 
     delete newBlobs[currentQ.id];
     
-    const newUrls = { ...audioUrls }; 
+    const newUrls = { ...audioUrls };
+    if (newUrls[currentQ.id]) {
+      try { URL.revokeObjectURL(newUrls[currentQ.id]); } catch {}
+    }
     delete newUrls[currentQ.id];
     
     setRecordedBlobs(newBlobs);
@@ -504,31 +560,46 @@ export default function IeltsSpeaking({
   // =========================================================================================
   // LOGIC NỘP BÀI CHẤM ĐIỂM (AI GRADER)
   // =========================================================================================
-  const handleFinalSubmit = async () => {
-    if (liveStatus !== 'IDLE') {
+  const handleFinalSubmit = async (forceAutoSubmit: any = false) => {
+    const isForced = forceAutoSubmit === true;
+    if (isGrading || isFinishingRef.current) return;
+
+    if (liveStatusRef.current !== 'IDLE') {
         stopLiveCall();
     }
-    
-    const answeredQuestions = Object.keys(recordedBlobs).length;
-    if (answeredQuestions === 0) {
-      alert("Bạn chưa gọi điện với Giám khảo câu nào cả! Vui lòng hoàn thành ít nhất 1 câu.");
+
+    const currentBlobs = recordedBlobsRef.current;
+    const answeredQuestions = Object.keys(currentBlobs).length;
+    const hasInFlightChunks = audioChunksRef.current.length > 0;
+
+    if (answeredQuestions === 0 && !hasInFlightChunks) {
+      if (isForced) {
+        alert("⏰ Hết giờ làm bài! Bạn chưa ghi âm câu trả lời nào.");
+      } else {
+        alert("Bạn chưa gọi điện với Giám khảo câu nào cả! Vui lòng hoàn thành ít nhất 1 câu.");
+      }
       return;
     }
 
-    if (!window.confirm(`Bạn đã hoàn thành ${answeredQuestions}/${totalQuestions} câu. Bạn đã sẵn sàng nộp bài cho hệ thống chấm điểm?`)) {
+    if (!isForced && !window.confirm(`Bạn đã hoàn thành ${answeredQuestions}/${totalQuestions} câu. Bạn đã sẵn sàng nộp bài cho hệ thống chấm điểm?`)) {
         return;
     }
 
+    isFinishingRef.current = true;
     setIsGrading(true);
 
     try {
       const allChunks: Blob[] = [];
       
       allQuestions.forEach(q => { 
-          if (recordedBlobs[q.id]) {
-              allChunks.push(...recordedBlobs[q.id]); 
+          if (currentBlobs[q.id]) {
+              allChunks.push(...currentBlobs[q.id]); 
           }
       });
+
+      if (allChunks.length === 0 && audioChunksRef.current.length > 0) {
+          allChunks.push(new Blob(audioChunksRef.current, { type: 'audio/webm' }));
+      }
       
       const combinedBlob = new Blob(allChunks, { type: 'audio/webm' });
       const base64Audio = await blobToBase64(combinedBlob);
@@ -587,6 +658,7 @@ export default function IeltsSpeaking({
 
       const { data: { user } } = await supabase.auth.getUser();
       if (user) {
+        const timeSpentSecs = Math.max(0, (parseTime(basicInfo.timeLimit) * 60) - timeLeftRef.current);
         await supabase.from('test_results').insert([{
           user_id: user.id,
           course_id: safeData?.course_id || null,
@@ -594,7 +666,7 @@ export default function IeltsSpeaking({
           test_type: 'IELTS-Speaking',
           score: parsedResult.overall,
           total_score: 9,
-          time_spent: (parseTime(basicInfo.timeLimit) * 60) - timeLeft,
+          time_spent: timeSpentSecs,
           details: { 
               test_id: safeData?.id, 
               aiFeedback: parsedResult, 
@@ -604,6 +676,7 @@ export default function IeltsSpeaking({
       }
       
     } catch (error: any) {
+      isFinishingRef.current = false;
       console.error("LỖI CHI TIẾT:", error);
       alert("System Error during AI grading. Please try again: " + error.message);
     } finally {
@@ -611,19 +684,31 @@ export default function IeltsSpeaking({
     }
   };
 
+  const handleFinalSubmitRef = useRef(handleFinalSubmit);
+  handleFinalSubmitRef.current = handleFinalSubmit;
+
   // =========================================================================================
   // GIAO DIỆN CHÍNH
   // =========================================================================================
   if (!testData || allQuestions.length === 0) {
       return (
-          <div className="h-screen flex items-center justify-center bg-[#eeeeee] font-bold text-slate-500">
-              Loading test data...
+          <div className="h-[100dvh] flex flex-col items-center justify-center gap-4 bg-[#eeeeee] font-bold text-slate-700 p-6 text-center">
+              <p className="text-base">⚠️ Không tìm thấy nội dung đề thi IELTS Speaking.</p>
+              {onBack && (
+                  <button
+                      type="button"
+                      onClick={onBack}
+                      className="px-5 py-2.5 bg-[#0a5482] hover:bg-[#084266] text-white rounded-xl text-sm font-bold transition shadow-sm cursor-pointer"
+                  >
+                      ← Quay lại
+                  </button>
+              )}
           </div>
       );
   }
 
   return (
-    <div className="h-screen flex flex-col bg-[#eeeeee] font-sans text-black overflow-hidden">
+    <div className="h-[100dvh] flex flex-col bg-[#eeeeee] font-sans text-black overflow-hidden">
       
       {/* HEADER */}
       <header className="h-[52px] bg-[#1e293b] text-white flex justify-between items-center gap-3 px-4 shrink-0 select-none z-20 border-b border-slate-700">
@@ -847,7 +932,7 @@ export default function IeltsSpeaking({
                 
                 <button 
                   type="button"
-                  onClick={handleFinalSubmit}
+                  onClick={() => handleFinalSubmit(false)}
                   className="bg-[#0a5482] hover:bg-[#084266] text-white px-6 sm:px-7 py-2 rounded-xl text-[13px] sm:text-[14px] font-black transition active:scale-95 uppercase tracking-wide shadow-sm cursor-pointer"
                 >
                   Nộp bài
@@ -904,8 +989,8 @@ export default function IeltsSpeaking({
 
             <div className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/90 shadow-sm">
                 <h3 className="font-black text-lg text-[#0a5482] mb-3.5 flex items-center gap-2">💡 Nhận xét tổng quan</h3>
-                <div className="p-5 bg-sky-50/70 border border-sky-200/70 rounded-xl text-[15px] leading-[1.8] font-medium text-slate-800 font-sans">
-                  {aiResult.generalFeedback || 'Hệ thống đã ghi nhận bài thi Speaking của bạn.'}
+                <div className="p-5 bg-sky-50/70 border border-sky-200/70 rounded-xl text-[15px] leading-[1.8] font-medium text-slate-800 font-sans whitespace-pre-wrap">
+                  {aiResult.feedback?.general || aiResult.generalFeedback || 'Hệ thống đã ghi nhận bài thi Speaking của bạn.'}
                 </div>
             </div>
 
@@ -940,12 +1025,41 @@ export default function IeltsSpeaking({
                          "{aiResult.transcript}"
                       </div>
                    </div>
+
+                   {(aiResult.feedback?.pronunciation || aiResult.feedback?.vocabulary || aiResult.feedback?.fluency || aiResult.feedback?.modelAnswer) && (
+                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                       {aiResult.feedback?.pronunciation && (
+                         <div className="p-5 bg-slate-50 border border-slate-200/80 rounded-xl">
+                           <h4 className="font-black text-[#0a5482] mb-2 uppercase tracking-wider text-[12px]">🗣️ Phát âm (Pronunciation)</h4>
+                           <p className="text-[14.5px] leading-[1.75] font-medium text-slate-800 whitespace-pre-wrap font-sans">{aiResult.feedback.pronunciation}</p>
+                         </div>
+                       )}
+                       {aiResult.feedback?.vocabulary && (
+                         <div className="p-5 bg-slate-50 border border-slate-200/80 rounded-xl">
+                           <h4 className="font-black text-[#0a5482] mb-2 uppercase tracking-wider text-[12px]">📚 Từ vựng (Vocabulary)</h4>
+                           <p className="text-[14.5px] leading-[1.75] font-medium text-slate-800 whitespace-pre-wrap font-sans">{aiResult.feedback.vocabulary}</p>
+                         </div>
+                       )}
+                       {aiResult.feedback?.fluency && (
+                         <div className="p-5 bg-slate-50 border border-slate-200/80 rounded-xl md:col-span-2">
+                           <h4 className="font-black text-[#0a5482] mb-2 uppercase tracking-wider text-[12px]">⚡ Độ trôi chảy (Fluency &amp; Coherence)</h4>
+                           <p className="text-[14.5px] leading-[1.75] font-medium text-slate-800 whitespace-pre-wrap font-sans">{aiResult.feedback.fluency}</p>
+                         </div>
+                       )}
+                       {aiResult.feedback?.modelAnswer && (
+                         <div className="p-5 bg-emerald-50/70 border border-emerald-200/80 rounded-xl md:col-span-2">
+                           <h4 className="font-black text-emerald-800 mb-2 uppercase tracking-wider text-[12px]">🌟 Câu trả lời mẫu (Model Answer)</h4>
+                           <p className="text-[14.5px] leading-[1.8] font-medium text-slate-800 whitespace-pre-wrap font-sans">{aiResult.feedback.modelAnswer}</p>
+                         </div>
+                       )}
+                     </div>
+                   )}
                    
-                   {aiResult.detailedFeedback && (
+                   {(aiResult.detailedFeedback || typeof aiResult.feedback === 'string') && (
                    <div>
                       <h4 className="font-black text-slate-800 mb-2.5 uppercase tracking-widest text-[12px]">💡 Gợi ý sửa lỗi chi tiết</h4>
                       <div className="p-5 bg-slate-50 border border-slate-200/80 rounded-xl text-[15px] leading-[1.8] font-medium text-slate-800 whitespace-pre-wrap font-sans">
-                         {aiResult.detailedFeedback}
+                         {aiResult.detailedFeedback || aiResult.feedback}
                       </div>
                    </div>
                    )}

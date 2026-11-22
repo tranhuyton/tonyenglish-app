@@ -3,7 +3,7 @@ import { Document, Page, pdfjs } from 'react-pdf';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
 
-pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
+pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 export interface LibraryEbookViewerProps {
   pdfUrl: string;
@@ -47,6 +47,7 @@ export const LibraryEbookViewer: React.FC<LibraryEbookViewerProps> = ({
   const [containerWidth, setContainerWidth] = useState<number>(760);
 
   const canvasAreaRef = useRef<HTMLDivElement | null>(null);
+  const lastWidthRef = useRef<number>(760);
   const pagesTurnedRef = useRef<number>(0);
   const maxPageRef = useRef<number>(currentPage);
   const progressTimerRef = useRef<number | null>(null);
@@ -95,26 +96,37 @@ export const LibraryEbookViewer: React.FC<LibraryEbookViewerProps> = ({
     }
   }, [isTheater]);
 
-  // Responsive width observer so PDF pages fit crisply on mobile, tablet & desktop
+  // Responsive width observer (debounced + >=4px threshold to prevent mobile PDF canvas crash/re-render loop)
   useEffect(() => {
     const el = canvasAreaRef.current;
     if (!el) return;
-    const updateWidth = () => {
-      if (el.clientWidth > 0) {
-        setContainerWidth(el.clientWidth);
+    let resizeTimer: number | null = null;
+    const applyWidth = () => {
+      const nextWidth = el.clientWidth;
+      if (nextWidth > 0 && Math.abs(nextWidth - lastWidthRef.current) >= 4) {
+        lastWidthRef.current = nextWidth;
+        setContainerWidth(nextWidth);
       }
     };
-    updateWidth();
+    const scheduleUpdateWidth = () => {
+      if (resizeTimer !== null) window.clearTimeout(resizeTimer);
+      resizeTimer = window.setTimeout(applyWidth, 150);
+    };
+    if (el.clientWidth > 0) {
+      lastWidthRef.current = el.clientWidth;
+      setContainerWidth(el.clientWidth);
+    }
     let ro: ResizeObserver | null = null;
     if (typeof ResizeObserver !== 'undefined') {
-      ro = new ResizeObserver(() => updateWidth());
+      ro = new ResizeObserver(() => scheduleUpdateWidth());
       ro.observe(el);
     } else {
-      window.addEventListener('resize', updateWidth);
+      window.addEventListener('resize', scheduleUpdateWidth);
     }
     return () => {
+      if (resizeTimer !== null) window.clearTimeout(resizeTimer);
       if (ro) ro.disconnect();
-      else window.removeEventListener('resize', updateWidth);
+      else window.removeEventListener('resize', scheduleUpdateWidth);
     };
   }, [isTheater, useNativeFallback]);
 
@@ -164,6 +176,7 @@ export const LibraryEbookViewer: React.FC<LibraryEbookViewerProps> = ({
       const tag = (e.target as HTMLElement)?.tagName;
       if (tag === 'INPUT' || tag === 'TEXTAREA') return;
       if (e.key === 'Escape') {
+        if (document.getElementById('addVdictOnYourWeb')) return;
         setIsTheater(false);
       } else if (e.key === 'ArrowRight') {
         handleNext();
@@ -445,6 +458,10 @@ export const LibraryEbookViewer: React.FC<LibraryEbookViewerProps> = ({
                 renderTextLayer={true}
                 renderAnnotationLayer={true}
                 onRenderSuccess={() => setIsLoadingPage(false)}
+                onRenderError={() => {
+                  setIsLoadingPage(false);
+                  setUseNativeFallback(true);
+                }}
                 className={`bg-white rounded-sm overflow-hidden ${
                   isTwoPageMode && containerWidth >= 900 ? 'ebook-page-left' : 'ebook-page-single'
                 }`}
@@ -461,6 +478,10 @@ export const LibraryEbookViewer: React.FC<LibraryEbookViewerProps> = ({
                     renderTextLayer={true}
                     renderAnnotationLayer={true}
                     onRenderSuccess={() => setIsLoadingPage(false)}
+                    onRenderError={() => {
+                      setIsLoadingPage(false);
+                      setUseNativeFallback(true);
+                    }}
                     className="bg-white rounded-sm overflow-hidden hidden lg:block ebook-page-right"
                     loading={null}
                   />

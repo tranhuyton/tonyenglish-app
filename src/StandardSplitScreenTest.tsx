@@ -253,10 +253,28 @@ export default function StandardSplitScreenTest({
   }
 
   const basicInfo = contentJSON?.basicInfo || { title: "Standard Test", timeLimit: "60", skill: "" };
-  const parts = Array.isArray(contentJSON?.parts) ? contentJSON.parts : [];
+  const rawParts = Array.isArray(contentJSON?.parts) ? contentJSON.parts : [];
+  const parts = useMemo(() => rawParts.map((p: any) => ({
+    ...p,
+    audioUrl: p?.audioUrl || p?.audio_url || '',
+    sections: Array.isArray(p?.sections) ? p.sections.map((s: any) => ({
+      ...s,
+      audioUrl: s?.audioUrl || s?.audio_url || '',
+      questions: Array.isArray(s?.questions) ? s.questions.map((q: any) => ({
+        ...q,
+        audioUrl: q?.audioUrl || q?.audio_url || '',
+        content: (q?.content !== undefined && q?.content !== null && String(q.content).trim() !== '')
+          ? q.content
+          : (q?.question || ''),
+        correctAnswer: (q?.correctAnswer !== undefined && q?.correctAnswer !== null && String(q.correctAnswer).trim() !== '')
+          ? q.correctAnswer
+          : (q?.answer ?? ''),
+      })) : []
+    })) : []
+  })), [contentJSON]);
   
   const isListening = basicInfo.skill?.toLowerCase() === 'listening' || basicInfo.category?.toLowerCase() === 'ielts-listening' || safeData?.test_type === 'IELTS-Listening';
-  const globalAudio = basicInfo.audioUrl || parts[0]?.audioUrl;
+  const globalAudio = basicInfo.audioUrl || basicInfo.audio_url || parts[0]?.audioUrl;
 
   const hasAnyAudio = useMemo(() => {
     let flag = !!globalAudio;
@@ -325,6 +343,16 @@ export default function StandardSplitScreenTest({
   
   const globalAudioRef = useRef<HTMLAudioElement>(null);
   const isFinishingRef = useRef(false);
+
+  useEffect(() => {
+    return () => {
+      if (globalAudioRef.current) {
+        try {
+          globalAudioRef.current.pause();
+        } catch {}
+      }
+    };
+  }, []);
 
   const [leftWidth, setLeftWidth] = useState(50); 
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -475,15 +503,23 @@ export default function StandardSplitScreenTest({
   };
 
 // NỘP BÀI VÀ TÍNH ĐIỂM
-const handleFinish = async () => {
+const handleFinish = async (forceAutoSubmit: any = false) => {
+  const isForced = forceAutoSubmit === true;
   if (!isReviewMode) {
-    if (!window.confirm("Bạn có chắc chắn muốn nộp bài?")) {
+    if (isFinishingRef.current) return;
+    if (!isForced && !window.confirm("Bạn có chắc chắn muốn nộp bài?")) {
         return;
     }
     
     isFinishingRef.current = true;
     // 🔒 Đọc answers từ ref để chống stale closure khi timer hết giờ gọi
     const currentAnswers = answersRef.current;
+    const savedEnd = getSavedEndTime();
+    const initialSecs = parseInitialTime(basicInfo.timeLimit);
+    const computedTimeSpent = savedEnd
+      ? Math.max(0, initialSecs - Math.max(0, Math.floor((savedEnd - Date.now()) / 1000)))
+      : Math.max(0, initialSecs - timeLeft);
+
     if (safeData?.id) {
       localStorage.removeItem(`std_ans_${safeData.id}`);
       localStorage.removeItem(`standard_mark_${safeData.id}`);
@@ -523,21 +559,24 @@ const handleFinish = async () => {
                );
                
                const correctAnsComboSet = new Set(
-                   combo.flatMap((q:any) => String(q.correctAnswer).split(',').map((x:string) => x.trim().toUpperCase()).filter(Boolean))
+                   combo.flatMap((q:any) => String(q.correctAnswer || '').split(',').map((x:string) => x.trim().toUpperCase()).filter(Boolean))
                );
                
+               // Chấm điểm thành phần cho từng ý đúng
+               const maxComboPoints = Math.max(combo.length, correctAnsComboSet.size);
                let comboPoints = 0;
                userAnsComboSet.forEach(ans => { 
                    if (correctAnsComboSet.has(ans)) {
                        comboPoints++; 
                    }
                });
-               comboPoints = Math.min(comboPoints, combo.length); 
+               const excessSelections = Math.max(0, userAnsComboSet.size - maxComboPoints);
+               comboPoints = Math.max(0, Math.min(comboPoints, maxComboPoints) - excessSelections);
                
                score += comboPoints;
-               total += combo.length;
+               total += maxComboPoints;
                questionTypeStats[qType].correct += comboPoints;
-               questionTypeStats[qType].total += combo.length;
+               questionTypeStats[qType].total += maxComboPoints;
            });
 
         } else if (qType === 'Đoạn văn') {
@@ -555,7 +594,8 @@ const handleFinish = async () => {
              const uAns = String(currentAnswers[String(q.id)] || '').trim();
              const cAns = String(q.correctAnswer || '').trim();
              
-             let isCorrect = isOptionAnswerCorrect(uAns, cAns, q.options);
+             const effectiveOpts = (Array.isArray(q.options) && q.options.length > 0) ? q.options : (s?.questions?.[0]?.options || []);
+             let isCorrect = isOptionAnswerCorrect(uAns, cAns, effectiveOpts);
 
              if (isCorrect) { 
                  score++; 
@@ -574,7 +614,7 @@ const handleFinish = async () => {
     try {
       const { data: { user } } = await supabase.auth.getSession().then(({data}) => ({ data: { user: data.session?.user } }));
       if (user) {
-        const timeSpentSecs = parseInitialTime(basicInfo.timeLimit) - timeLeft;
+        const timeSpentSecs = computedTimeSpent;
         await supabase.from('test_results').insert([{
           user_id: user.id,
           course_id: safeData?.course_id || safeData?.content_json?.basicInfo?.courseId || null,
@@ -627,6 +667,9 @@ const handleFinish = async () => {
   }
 };
 
+  const handleFinishRef = useRef(handleFinish);
+  handleFinishRef.current = handleFinish;
+
   const parseInitialTime = (val: any) => {
     if (!val) return 3600;
     if (typeof val === 'number') return val * 60;
@@ -657,10 +700,18 @@ const handleFinish = async () => {
             if (remaining <= 0) {
                 clearInterval(timer);
                 alert("⏰ Hết giờ làm bài!");
-                handleFinish();
+                handleFinishRef.current(true);
             }
         } else { 
-            setTimeLeft(prev => prev - 1); 
+            setTimeLeft(prev => {
+                if (prev <= 1) {
+                    clearInterval(timer);
+                    alert("⏰ Hết giờ làm bài!");
+                    handleFinishRef.current(true);
+                    return 0;
+                }
+                return prev - 1;
+            }); 
         }
     }, 1000);
     
@@ -1005,13 +1056,13 @@ const handleFinish = async () => {
             }
 
             return (
-              <span key={pathKey} id={`q-${qNum}`} className="relative inline-flex flex-col items-center align-top mx-1.5 mt-1 group" style={{ textIndent: 0 }}>
+              <span key={pathKey} id={`q-${qNum}`} className="inline-flex flex-wrap items-center gap-1 align-middle mx-1 my-0.5" style={{ textIndent: 0 }}>
                 <span className={`px-2.5 py-0.5 text-[14px] font-bold text-white rounded-md shadow-sm border ${isCorrect ? 'bg-emerald-600 border-emerald-700' : 'bg-red-500 border-red-600'}`}>
                   {displayIndex}. {displayUserAnsForReview || '(trống)'}
                 </span>
                 {!isCorrect && (
-                  <span className="absolute top-full left-1/2 -translate-x-1/2 mt-1.5 text-[11px] text-emerald-800 font-bold bg-emerald-100 px-2 py-0.5 border border-emerald-300 rounded text-center whitespace-nowrap z-10 shadow-sm opacity-0 group-hover:opacity-100 transition-opacity">
-                    ĐA: {correctAns}
+                  <span className="inline-flex items-center text-[12px] text-emerald-800 font-bold bg-emerald-100 px-2 py-0.5 border border-emerald-300 rounded-md shadow-xs">
+                    ✓ {correctAns}
                   </span>
                 )}
               </span>
@@ -1178,13 +1229,13 @@ const handleFinish = async () => {
           const isCorrect = userAns.trim().toUpperCase() === correctAns.trim().toUpperCase();
           
           return (
-            <span key={index} className="relative inline-flex flex-col items-center align-top mx-1.5 mt-1 group">
+            <span key={index} className="inline-flex flex-wrap items-center gap-1 align-middle mx-1 my-0.5">
               <span className={`px-2.5 py-0.5 text-[14px] font-bold text-white rounded-md shadow-sm border ${isCorrect ? 'bg-emerald-600 border-emerald-700' : 'bg-red-500 border-red-600'}`}>
                 {displayIndex}. {userAns || '(trống)'}
               </span>
               {!isCorrect && (
-                <span className="absolute top-full left-1/2 -translate-x-1/2 mt-1.5 text-[11px] text-emerald-800 font-bold bg-emerald-100 px-2 py-0.5 border border-emerald-300 rounded text-center whitespace-nowrap z-10 shadow-sm opacity-0 group-hover:opacity-100 transition-opacity">
-                  ĐA: {correctAns}
+                <span className="inline-flex items-center text-[12px] text-emerald-800 font-bold bg-emerald-100 px-2 py-0.5 border border-emerald-300 rounded-md shadow-xs">
+                  ✓ {correctAns}
                 </span>
               )}
             </span>
@@ -1225,7 +1276,7 @@ const handleFinish = async () => {
         setTimeLeft(remaining);
         if (remaining <= 0 && basicInfo?.category !== 'exercise') {
             alert("⏰ Bài thi này đã hết thời gian làm bài!");
-            handleFinish();
+            handleFinishRef.current(true);
             return;
         }
     }
@@ -1245,12 +1296,12 @@ const handleFinish = async () => {
     return (
       <div className="flex flex-col h-[100dvh] font-sans bg-[#f1f5f9] overflow-hidden text-slate-800">
         
-        <header className={`h-[60px] border-b border-slate-200 flex justify-between items-center px-6 shrink-0 shadow-sm z-20 ${isReviewMode ? 'bg-emerald-700 text-white border-none' : 'bg-white text-slate-800'}`}>
-          <div className="font-black text-[16px] flex items-center gap-3 uppercase tracking-tight">
-            <span className={`text-xl ${isReviewMode ? 'opacity-100' : 'opacity-70'}`}>
+        <header className={`h-[60px] border-b border-slate-200 flex justify-between items-center px-3 sm:px-6 gap-2 shrink-0 shadow-sm z-20 ${isReviewMode ? 'bg-emerald-700 text-white border-none' : 'bg-white text-slate-800'}`}>
+          <div className="font-black text-[14px] sm:text-[16px] flex items-center gap-2 sm:gap-3 uppercase tracking-tight min-w-0">
+            <span className={`text-lg sm:text-xl shrink-0 ${isReviewMode ? 'opacity-100' : 'opacity-70'}`}>
                 {(isListening && hasAnyAudio) ? '🎧' : '📖'}
             </span>
-            <span className="truncate max-w-[200px] md:max-w-xl">
+            <span className="truncate max-w-[130px] sm:max-w-xs md:max-w-xl">
                 {isReviewMode ? `[CHỮA BÀI] ${safeData?.title || basicInfo?.title}` : (safeData?.title || basicInfo?.title)}
             </span>
           </div>
@@ -1262,18 +1313,18 @@ const handleFinish = async () => {
             </div>
           )}
 
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-2 sm:gap-6 shrink-0">
             {/* LABEL AND TIMER (TOP RIGHT) */}
             {!isReviewMode && testStarted && (
-               <div className="flex items-center gap-3">
+               <div className="flex items-center gap-1.5 sm:gap-3">
                  {basicInfo?.category === 'exercise' ? (
-                     <span className="text-[#0ea5e9] font-black tracking-[0.2em] uppercase text-[15px]">BÀI TẬP</span>
+                     <span className="hidden sm:inline text-[#0ea5e9] font-black tracking-[0.2em] uppercase text-[14px] sm:text-[15px] whitespace-nowrap">BÀI TẬP</span>
                  ) : (
                      <>
-                         <span className="text-rose-500 font-black tracking-[0.2em] uppercase text-[15px]">ĐỀ THI</span>
-                         <div className="flex items-center gap-1.5 text-rose-600 bg-rose-50 px-3 py-1 rounded-lg border border-rose-100">
-                             <span className="text-[14px]">⏱️</span> 
-                             <span className="font-mono font-bold tracking-widest text-[16px]">{formatTime(timeLeft)}</span>
+                         <span className="hidden sm:inline text-rose-500 font-black tracking-[0.2em] uppercase text-[15px] whitespace-nowrap">ĐỀ THI</span>
+                         <div className="flex items-center gap-1 sm:gap-1.5 text-rose-600 bg-rose-50 px-2 sm:px-3 py-1 rounded-lg border border-rose-100 whitespace-nowrap">
+                             <span className="text-[13px] sm:text-[14px]">⏱️</span> 
+                             <span className="font-mono font-bold tracking-wider sm:tracking-widest text-[13px] sm:text-[16px]">{formatTime(timeLeft)}</span>
                          </div>
                      </>
                  )}
@@ -1284,10 +1335,11 @@ const handleFinish = async () => {
             <div className="relative">
               <button 
                   onClick={() => setShowSettings(!showSettings)} 
-                  className={`flex items-center gap-2 opacity-70 hover:opacity-100 transition text-[13px] font-bold ${showSettings ? 'opacity-100' : ''}`}
+                  className={`flex items-center gap-1.5 sm:gap-2 opacity-70 hover:opacity-100 transition text-[13px] font-bold ${showSettings ? 'opacity-100' : ''}`}
                   title="Cài đặt"
+                  aria-label="Cài đặt"
               >
-                 <SettingsIcon /> Cài đặt
+                 <SettingsIcon /> <span className="hidden sm:inline">Cài đặt</span>
               </button>
               
               {showSettings && (
@@ -1336,8 +1388,9 @@ const handleFinish = async () => {
 
             <button 
                 onClick={toggleFullscreen} 
-                className="hover:text-current opacity-70 hover:opacity-100 transition" 
+                className="hidden sm:inline-flex hover:text-current opacity-70 hover:opacity-100 transition" 
                 title="Toàn màn hình"
+                aria-label="Toàn màn hình"
             >
                {isFullscreen ? <ExitFullscreenIcon /> : <FullscreenIcon />}
             </button>
@@ -1354,11 +1407,17 @@ const handleFinish = async () => {
                                const saved = sessionStorage.getItem('lms_current_test');
                                if (saved) {
                                    const parsed = JSON.parse(saved);
-                                   if (parsed?.testData) {
-                                       delete parsed.testData.isReview;
-                                       delete parsed.testData.past_answers;
-                                       delete parsed.testData.past_score;
-                                       delete parsed.testData.past_total;
+                                   if (parsed) {
+                                       delete parsed.isReview;
+                                       delete parsed.past_answers;
+                                       delete parsed.past_score;
+                                       delete parsed.past_total;
+                                       if (parsed.testData) {
+                                           delete parsed.testData.isReview;
+                                           delete parsed.testData.past_answers;
+                                           delete parsed.testData.past_score;
+                                           delete parsed.testData.past_total;
+                                       }
                                        sessionStorage.setItem('lms_current_test', JSON.stringify(parsed));
                                    }
                                }
@@ -1366,14 +1425,14 @@ const handleFinish = async () => {
                            window.location.reload();
                        }
                    }} 
-                   className="text-[13px] font-bold px-3.5 py-2 rounded-lg transition-colors flex items-center gap-1.5 shadow-sm border bg-amber-500 text-white border-amber-400 hover:bg-amber-600 cursor-pointer"
+                   className="text-[12px] sm:text-[13px] font-bold px-2.5 sm:px-3.5 py-1.5 sm:py-2 rounded-lg transition-colors flex items-center gap-1 sm:gap-1.5 shadow-sm border bg-amber-500 text-white border-amber-400 hover:bg-amber-600 cursor-pointer whitespace-nowrap"
                >
                  ↺ Làm lại
                </button>
             )}
             <button 
                 onClick={handleExit} 
-                className={`text-[13px] font-bold px-4 py-2 rounded-lg transition-colors flex items-center gap-2 shadow-sm border cursor-pointer ${isReviewMode ? 'bg-white/15 hover:bg-white/25 text-white border-white/30' : 'bg-white hover:bg-slate-50 text-slate-600 border-slate-200'}`}
+                className={`text-[12px] sm:text-[13px] font-bold px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg transition-colors flex items-center gap-1.5 sm:gap-2 shadow-sm border cursor-pointer whitespace-nowrap ${isReviewMode ? 'bg-white/15 hover:bg-white/25 text-white border-white/30' : 'bg-white hover:bg-slate-50 text-slate-600 border-slate-200'}`}
             >
               Thoát
             </button>
@@ -2339,20 +2398,23 @@ const handleFinish = async () => {
 
                                       return combos.map((combo, comboIndex) => {
                                           const comboIds = combo.map((q: any) => String(q.id));
-                                          const maxAllowed = combo.length;
-                                          
                                           const userAnsArr = Array.from(new Set(comboIds.map(id => answers[id]).filter(v => v && v.trim() !== '').flatMap(x => x.split(',').map(v=>v.trim().toUpperCase()))));
-                                          const correctAnsComboSet = new Set(combo.flatMap((q:any) => String(q.correctAnswer).split(',').map((x:string)=>x.trim().toUpperCase()).filter(Boolean)));
+                                          const correctAnsComboSet = new Set(combo.flatMap((q:any) => String(q.correctAnswer || '').split(',').map((x:string)=>x.trim().toUpperCase()).filter(Boolean)));
+                                          const maxAllowed = Math.max(combo.length, correctAnsComboSet.size);
                                           const validOptions = combo[0]?.options?.filter((opt: any) => String(opt || '').trim() !== '') || [];
                                           
                                           let comboPoints = 0;
+                                          let hasWrong = false;
                                           userAnsArr.forEach((ans:string) => { 
                                               if (correctAnsComboSet.has(ans)) {
                                                   comboPoints++; 
+                                              } else {
+                                                  hasWrong = true;
                                               }
                                           });
-                                          const isPerfect = comboPoints === maxAllowed;
-                                          const isPartial = comboPoints > 0 && comboPoints < maxAllowed;
+                                          const targetCount = maxAllowed;
+                                          const isPerfect = comboPoints === targetCount && !hasWrong && targetCount > 0;
+                                          const isPartial = comboPoints > 0 && !isPerfect;
 
                                           let containerClass = "bg-white p-6 md:p-8 rounded-2xl shadow-sm border transition-colors relative group scroll-mt-20 mb-4 ";
                                           if (isReviewMode) {
@@ -2368,7 +2430,7 @@ const handleFinish = async () => {
                                                   let currentSelected = Array.from(new Set(comboIds.map(id => prev[id]).filter(v => v && v.trim() !== '').flatMap(x => x.split(',').map(v=>v.trim().toUpperCase()))));
                                                   
                                                   if (isChecked) {
-                                                      if (currentSelected.length >= maxAllowed) {
+                                                      if (maxAllowed > 0 && currentSelected.length >= maxAllowed) {
                                                           alert(`Lưu ý: Chỉ yêu cầu chọn tối đa ${maxAllowed} đáp án.`);
                                                           return prev;
                                                       }
@@ -2380,9 +2442,13 @@ const handleFinish = async () => {
                                                   }
                                                   
                                                   const next = { ...prev };
-                                                  comboIds.forEach((id, idx) => { 
-                                                      next[id] = currentSelected[idx] || ''; 
-                                                  }); 
+                                                  if (comboIds.length === 1) {
+                                                      next[comboIds[0]] = currentSelected.join(', ');
+                                                  } else {
+                                                      comboIds.forEach((id, idx) => { 
+                                                          next[id] = currentSelected[idx] || ''; 
+                                                      }); 
+                                                  }
                                                   return next;
                                               });
                                           };
@@ -2716,7 +2782,7 @@ const handleFinish = async () => {
                          Thoát
                      </button>
                   ) : (
-                     <button onClick={handleFinish} className="flex-1 bg-[#0ea5e9] hover:bg-[#0284c7] text-white font-black py-4 rounded-xl text-[14px] uppercase tracking-widest transition-colors shadow-lg shadow-[#0ea5e9]/20">
+                     <button onClick={() => handleFinish(false)} className="flex-1 bg-[#0ea5e9] hover:bg-[#0284c7] text-white font-black py-4 rounded-xl text-[14px] uppercase tracking-widest transition-colors shadow-lg shadow-[#0ea5e9]/20">
                          Nộp bài
                      </button>
                   )}
@@ -2824,7 +2890,7 @@ const handleFinish = async () => {
                         </button>
                     </div>
                   ) : (
-                    <button onClick={handleFinish} className="bg-[#0ea5e9] hover:bg-[#0284c7] shadow-md shadow-[#0ea5e9]/20 text-white px-6 py-2.5 rounded-none text-[14px] font-bold transition ml-2 uppercase tracking-wide">
+                    <button onClick={() => handleFinish(false)} className="bg-[#0ea5e9] hover:bg-[#0284c7] shadow-md shadow-[#0ea5e9]/20 text-white px-6 py-2.5 rounded-none text-[14px] font-bold transition ml-2 uppercase tracking-wide">
                         Nộp bài
                     </button>
                   )}
