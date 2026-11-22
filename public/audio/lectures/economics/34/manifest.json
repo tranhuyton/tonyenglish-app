@@ -1,0 +1,70 @@
+{
+  "lectureId": "5d8ebacc-127e-4229-976b-3c75db87b8d4",
+  "courseTitle": "Cambridge IGCSE Economics (0455)",
+  "lectureTitle": "34. Population",
+  "totalDuration": 160.04,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_1": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_2": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_3": {
+      "start": 3,
+      "end": 3
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 34: Dân số",
+      "selector": "#sec-header",
+      "en": "Welcome to Lesson 34: Population. We examine the demographic drivers of population growth, interpret population pyramids and dependency ratios for ageing versus youthful societies, and analyse the economic concept of an optimum population.",
+      "vi": "Chào mừng các bạn đến với Bài 34: Dân số. Chúng ta tìm hiểu các động lực nhân khẩu học chi phối tăng trưởng dân số, đọc hiểu tháp dân số cùng tỷ lệ phụ thuộc của xã hội già hóa và xã hội trẻ, đồng thời phân tích khái niệm kinh tế về quy mô dân số tối ưu.",
+      "duration": 32.08,
+      "startTime": 0.0,
+      "endTime": 32.08,
+      "audioUrl": "/audio/lectures/economics/34/intro.mp3"
+    },
+    {
+      "id": "sec_1",
+      "title": "1. Các Yếu tố Ảnh hưởng đến Tăng trưởng Dân số",
+      "selector": "#sec-1",
+      "en": "Section 1 identifies the three demographic variables: the birth rate, the death rate, and net migration. Natural population growth occurs when births exceed deaths. Higher living standards, female education, and contraception lower birth rates, while improved sanitation, nutrition, and medical care reduce death rates and lengthen life expectancy.",
+      "vi": "Mục 1 xác định ba biến số nhân khẩu học: tỷ suất sinh, tỷ suất tử và di cư ròng. Tăng trưởng dân số tự nhiên diễn ra khi số sinh lớn hơn số tử. Mức sống cao, giáo dục nữ giới và kế hoạch hóa gia đình làm giảm tỷ suất sinh, trong khi vệ sinh môi trường, dinh dưỡng và y tế tốt hơn giúp giảm tỷ suất tử và kéo dài tuổi thọ.",
+      "duration": 44.1,
+      "startTime": 32.08,
+      "endTime": 76.18,
+      "audioUrl": "/audio/lectures/economics/34/sec_1.mp3"
+    },
+    {
+      "id": "sec_2",
+      "title": "2. Dân số Già hóa & Tỷ lệ Phụ thuộc",
+      "selector": "#sec-2",
+      "en": "Section 2 analyses population structure via the dependency ratio—comparing non-working young and elderly dependents against the working-age population. An ageing population raises public spending on pensions and healthcare while shrinking the tax base, pushing governments to raise the retirement age, encourage skilled immigration, or invest in automation.",
+      "vi": "Mục 2 phân tích cơ cấu dân số thông qua tỷ lệ phụ thuộc—so sánh nhóm trẻ em và người già ngoài độ tuổi lao động với lực lượng trong độ tuổi lao động. Dân số già hóa làm phình to chi tiêu công cho lương hưu và y tế trong khi thu hẹp cơ sở thuế, buộc chính phủ phải tăng tuổi nghỉ hưu, thu hút lao động nhập cư có tay nghề hoặc đẩy mạnh tự động hóa.",
+      "duration": 40.24,
+      "startTime": 76.18,
+      "endTime": 116.42,
+      "audioUrl": "/audio/lectures/economics/34/sec_2.mp3"
+    },
+    {
+      "id": "sec_3",
+      "title": "3. Khái niệm Dân số Tối ưu (Optimum Population)",
+      "selector": "#sec-3",
+      "en": "Section 3 explains optimum population: the ideal population size that, combined with a country's existing natural resources, capital, and technology, produces the maximum real output per head. Under-populated countries cannot fully exploit their resources or achieve economies of scale, whereas over-populated nations suffer congestion, resource shortages, and falling output per worker.",
+      "vi": "Mục 3 giải thích dân số tối ưu: quy mô dân số lý tưởng khi kết hợp với tài nguyên thiên nhiên, vốn và công nghệ hiện có của quốc gia sẽ tạo ra sản lượng thực bình quân đầu người cao nhất. Nước thiếu dân không khai thác hết tài nguyên và khó đạt lợi thế quy mô, còn nước quá tải dân số đối mặt với ùn tắc, khan hiếm tài nguyên và năng suất bình quân giảm sút.",
+      "duration": 43.62,
+      "startTime": 116.42,
+      "endTime": 160.04,
+      "audioUrl": "/audio/lectures/economics/34/sec_3.mp3"
+    }
+  ]
+}

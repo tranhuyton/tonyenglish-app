@@ -667,13 +667,14 @@ export default function App() {
               }}
               onStartTest={handleStartTest}
               onOpenAI={(passedMode?: string, topic?: string, image?: string, task?: string) => { 
-                if (passedMode === 'ielts' || topic) {
+                if (passedMode === 'ielts' || (!passedMode && topic)) {
                    setAiMode('ielts');
                    if (topic) setIeltsTopic(topic);
                    if (image) setIeltsImage(image);
                    if (task) setIeltsTaskType(task);
                 } else {
-                   setAiMode('tutor'); 
+                   setAiMode('tutor');
+                   if (topic) setIeltsTopic(topic);
                 }
                 setIsAISidebarOpen(true); 
               }}

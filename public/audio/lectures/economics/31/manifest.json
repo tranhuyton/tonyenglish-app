@@ -1,0 +1,70 @@
+{
+  "lectureId": "8c3e99df-51fb-4bdf-859d-c0cb85a01e93",
+  "courseTitle": "Cambridge IGCSE Economics (0455)",
+  "lectureTitle": "31. Inflation and Deflation",
+  "totalDuration": 169.23,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_1": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_2": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_3": {
+      "start": 3,
+      "end": 3
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 31: Lạm phát và Giảm phát",
+      "selector": "#sec-header",
+      "en": "Welcome to Lesson 31: Inflation and Deflation. We learn how price level changes are tracked using the Consumer Prices Index, contrast demand-pull and cost-push causes of inflation, distinguish benign from malign deflation, and assess who gains and who loses when prices shift.",
+      "vi": "Chào mừng các bạn đến với Bài 31: Lạm phát và Giảm phát. Chúng ta tìm hiểu cách đo biến động mức giá chung qua Chỉ số Giá Tiêu dùng CPI, phân biệt nguyên nhân lạm phát cầu kéo với chi phí đẩy, nhận diện giảm phát lành mạnh hay nguy hại, và đánh giá ai được lợi, ai chịu thiệt khi giá cả biến động.",
+      "duration": 35.68,
+      "startTime": 0.0,
+      "endTime": 35.68,
+      "audioUrl": "/audio/lectures/economics/31/intro.mp3"
+    },
+    {
+      "id": "sec_1",
+      "title": "1. Lạm phát & Giảm phát là gì?",
+      "selector": "#sec-1",
+      "en": "Section 1 defines inflation as a sustained rise in the general price level, reducing the purchasing power of money, whereas deflation is a sustained fall in the general price level. Governments measure inflation via the Consumer Prices Index, which tracks a weighted basket of typical household goods and services relative to a base year.",
+      "vi": "Mục 1 định nghĩa lạm phát là sự gia tăng liên tục của mức giá chung làm suy giảm sức mua của đồng tiền, còn giảm phát là sự sụt giảm liên tục của mức giá chung. Chính phủ đo lường lạm phát thông qua Chỉ số Giá Tiêu dùng CPI, theo dõi rổ hàng hóa và dịch vụ tiêu biểu có gắn trọng số so với năm gốc.",
+      "duration": 37.02,
+      "startTime": 35.68,
+      "endTime": 72.7,
+      "audioUrl": "/audio/lectures/economics/31/sec_1.mp3"
+    },
+    {
+      "id": "sec_2",
+      "title": "2. Nguyên nhân Lạm phát: Cầu kéo vs Chi phí đẩy",
+      "selector": "#sec-2",
+      "en": "Section 2 explains the two main drivers. Demand-pull inflation happens when excessive aggregate demand outstrips full-employment output, pulling prices higher. Cost-push inflation occurs when rising production costs—such as higher wages, oil prices, or indirect taxes—force firms to raise prices to protect profit margins, potentially igniting a wage-price spiral.",
+      "vi": "Mục 2 giải thích hai nguồn gốc chính. Lạm phát cầu kéo xảy ra khi tổng cầu tăng quá mạnh vượt khả năng sản xuất toàn dụng, kéo mặt bằng giá đi lên. Lạm phát chi phí đẩy xuất hiện khi chi phí đầu vào tăng—như tiền lương, giá dầu hay thuế gián thu—buộc doanh nghiệp tăng giá bán để bảo toàn lợi nhuận, dễ châm ngòi vòng xoáy lương – giá.",
+      "duration": 44.27,
+      "startTime": 72.7,
+      "endTime": 116.97,
+      "audioUrl": "/audio/lectures/economics/31/sec_2.mp3"
+    },
+    {
+      "id": "sec_3",
+      "title": "3. Hậu quả của Lạm phát: Người được lợi vs Kẻ chịu thiệt",
+      "selector": "#sec-3",
+      "en": "Section 3 evaluates consequences. Fixed-income pensioners, savers facing negative real interest rates, and exporters losing price competitiveness are hurt most by high inflation. Conversely, borrowers benefit as the real burden of fixed debts falls. Meanwhile, demand-side deflation is dangerous because consumers delay purchases expecting lower prices, triggering falling output and rising unemployment.",
+      "vi": "Mục 3 đánh giá hệ quả. Người nghỉ hưu hưởng thu nhập cố định, người gửi tiết kiệm chịu lãi suất thực âm và doanh nghiệp xuất khẩu mất lợi thế giá là những đối tượng chịu thiệt nặng nhất khi lạm phát cao. Ngược lại, người đi vay có lợi vì giá trị thực của khoản nợ cố định giảm dần. Trong khi đó, giảm phát do thiếu cầu rất nguy hiểm vì người tiêu dùng trì hoãn mua sắm chờ giá rẻ hơn, kéo theo sản lượng sụt giảm và thất nghiệp tăng cao.",
+      "duration": 52.26,
+      "startTime": 116.97,
+      "endTime": 169.23,
+      "audioUrl": "/audio/lectures/economics/31/sec_3.mp3"
+    }
+  ]
+}

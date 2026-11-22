@@ -1,0 +1,70 @@
+{
+  "lectureId": "d2c35d4a-7334-4331-98c6-1f04bb58c079",
+  "courseTitle": "Cambridge IGCSE Economics (0455)",
+  "lectureTitle": "33. Poverty",
+  "totalDuration": 158.77,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_1": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_2": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_3": {
+      "start": 3,
+      "end": 3
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 33: Nghèo đói",
+      "selector": "#sec-header",
+      "en": "Welcome to Lesson 33: Poverty. In this lesson, we distinguish absolute from relative poverty, diagnose the root causes and vicious cycle that trap low-income economies, and evaluate the effectiveness of government and international policies to alleviate poverty.",
+      "vi": "Chào mừng các bạn đến với Bài 33: Nghèo đói. Trong bài này, chúng ta phân biệt nghèo tuyệt đối với nghèo tương đối, phân tích nguyên nhân gốc rễ cùng vòng luẩn quẩn bẫy nghèo đói ở các nước thu nhập thấp, và đánh giá hiệu quả của các chính sách trong nước lẫn quốc tế nhằm xóa đói giảm nghèo.",
+      "duration": 32.27,
+      "startTime": 0.0,
+      "endTime": 32.27,
+      "audioUrl": "/audio/lectures/economics/33/intro.mp3"
+    },
+    {
+      "id": "sec_1",
+      "title": "1. Nghèo Tuyệt đối vs Nghèo Tương đối",
+      "selector": "#sec-1",
+      "en": "Section 1 defines both concepts clearly. Absolute poverty occurs when households lack sufficient income to afford basic necessities for survival—food, clean water, shelter, and essential healthcare. Relative poverty occurs when individuals have substantially lower income and living standards than the average in their society, even if basic survival needs are met.",
+      "vi": "Mục 1 định nghĩa rạch ròi hai khái niệm. Nghèo tuyệt đối xảy ra khi hộ gia đình không đủ thu nhập để đáp ứng các nhu cầu sinh tồn thiết yếu như lương thực, nước sạch, chỗ ở và y tế cơ bản. Nghèo tương đối xảy ra khi cá nhân có thu nhập và mức sống thấp hơn đáng kể so với mặt bằng chung xã hội dù đã đủ ăn mặc tối thiểu.",
+      "duration": 42.66,
+      "startTime": 32.27,
+      "endTime": 74.93,
+      "audioUrl": "/audio/lectures/economics/33/sec_1.mp3"
+    },
+    {
+      "id": "sec_2",
+      "title": "2. Nguyên nhân & Vòng luẩn quẩn Nghèo đói",
+      "selector": "#sec-2",
+      "en": "Section 2 explains the causes of poverty—unemployment, low wages, poor education, ill health, rapid population growth, and weak governance—and traces the poverty cycle: low incomes lead to low savings, which constrain capital investment, keeping productivity and output low and trapping future generations in low incomes.",
+      "vi": "Mục 2 lý giải các nguyên nhân gây nghèo đói như thất nghiệp, tiền lương thấp, thiếu giáo dục, bệnh tật, dân số tăng nhanh và quản trị yếu kém, đồng thời phác họa vòng luẩn quẩn nghèo đói: thu nhập thấp dẫn đến tiết kiệm thấp, hạn chế đầu tư tư bản, giữ năng suất và sản lượng ở mức thấp rồi tiếp tục khóa chặt thế hệ sau trong cảnh nghèo khó.",
+      "duration": 38.97,
+      "startTime": 74.93,
+      "endTime": 113.9,
+      "audioUrl": "/audio/lectures/economics/33/sec_2.mp3"
+    },
+    {
+      "id": "sec_3",
+      "title": "3. Chính sách Xóa đói Giảm nghèo",
+      "selector": "#sec-3",
+      "en": "Section 3 evaluates anti-poverty policies: promoting economic growth and job creation; investing in free education and healthcare to raise long-run human capital; implementing progressive taxes, national minimum wages, and targeted state benefits; and securing foreign aid or microfinance. Each measure involves opportunity costs and potential disincentive effects that must be evaluated.",
+      "vi": "Mục 3 đánh giá các chính sách xóa nghèo: thúc đẩy tăng trưởng và tạo việc làm; đầu tư giáo dục, y tế miễn phí nhằm nâng cao vốn con người dài hạn; áp dụng thuế lũy tiến, lương tối thiểu và trợ cấp đúng đối tượng; cùng viện trợ quốc tế và tín dụng vi mô. Mọi biện pháp đều có chi phí cơ hội và nguy cơ giảm động lực lao động cần cân nhắc kỹ.",
+      "duration": 44.87,
+      "startTime": 113.9,
+      "endTime": 158.77,
+      "audioUrl": "/audio/lectures/economics/33/sec_3.mp3"
+    }
+  ]
+}

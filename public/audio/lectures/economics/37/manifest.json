@@ -1,0 +1,85 @@
+{
+  "lectureId": "0497aa28-0b26-45b3-a233-74fb121c1824",
+  "courseTitle": "Cambridge IGCSE Economics (0455)",
+  "lectureTitle": "37. Globalisation, Free Trade and Protection",
+  "totalDuration": 216.25,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_1": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_2": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_3": {
+      "start": 3,
+      "end": 3
+    },
+    "sec_4": {
+      "start": 4,
+      "end": 4
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 37: Toàn cầu hóa, Thương mại tự do & Bảo hộ",
+      "selector": "#sec-header",
+      "en": "Welcome to Lesson 37: Globalisation, Free Trade and Protection. We investigate the forces driving global economic integration, assess the double-edged impact of multinational corporations on host nations, examine tariffs, quotas, and embargoes, and evaluate the case for and against trade protectionism.",
+      "vi": "Chào mừng các bạn đến với Bài 37: Toàn cầu hóa, Thương mại Tự do và Bảo hộ. Chúng ta tìm hiểu các động lực thúc đẩy hội nhập kinh tế toàn cầu, đánh giá tác động hai mặt của các công ty đa quốc gia MNCs đối với nước sở tại, phân tích thuế quan, hạn ngạch, cấm vận và tranh luận các lý do ủng hộ hay phản đối bảo hộ thương mại.",
+      "duration": 40.6,
+      "startTime": 0.0,
+      "endTime": 40.6,
+      "audioUrl": "/audio/lectures/economics/37/intro.mp3"
+    },
+    {
+      "id": "sec_1",
+      "title": "1. Toàn cầu hóa: Định nghĩa, Nguyên nhân & Hệ quả",
+      "selector": "#sec-1",
+      "en": "Section 1 defines globalisation as the growing integration and interdependence of national economies through cross-border trade, capital flows, technology, and labour mobility. Key catalysts include falling container shipping costs, digital communications, trade liberalisation under the WTO, and expanding regional trading blocs.",
+      "vi": "Mục 1 định nghĩa toàn cầu hóa là quá trình hội nhập và phụ thuộc lẫn nhau ngày càng sâu sắc giữa các nền kinh tế thông qua thương mại, dòng vốn, công nghệ và dịch chuyển lao động xuyên biên giới. Động lực chính gồm chi phí vận tải container giảm, viễn thông số, tự do hóa thương mại dưới WTO và sự mở rộng của các khối thương mại khu vực.",
+      "duration": 40.58,
+      "startTime": 40.6,
+      "endTime": 81.18,
+      "audioUrl": "/audio/lectures/economics/37/sec_1.mp3"
+    },
+    {
+      "id": "sec_2",
+      "title": "2. Vai trò của các Công ty Đa quốc gia (MNCs)",
+      "selector": "#sec-2",
+      "en": "Section 2 evaluates Multinational Companies, businesses operating production or service facilities in more than one country. MNCs bring foreign direct investment, jobs, modern technology, and tax revenue to host economies. Critics warn, however, that MNCs may repatriate profits abroad, outcompete local small firms, exploit low wages, or pollute environments with lax regulations.",
+      "vi": "Mục 2 đánh giá các Công ty Đa quốc gia MNCs—những doanh nghiệp vận hành cơ sở sản xuất hoặc dịch vụ tại nhiều quốc gia. MNCs mang đến vốn FDI, việc làm, công nghệ hiện đại và nguồn thu thuế cho nước sở tại. Tuy nhiên, giới phê bình cảnh báo MNCs có thể chuyển lợi nhuận về nước mẹ, bóp nghẹt doanh nghiệp nhỏ nội địa, tận dụng nhân công giá rẻ hoặc gây ô nhiễm ở nơi luật môi trường lỏng lẻo.",
+      "duration": 50.92,
+      "startTime": 81.18,
+      "endTime": 132.1,
+      "audioUrl": "/audio/lectures/economics/37/sec_2.mp3"
+    },
+    {
+      "id": "sec_3",
+      "title": "3. Các Công cụ Bảo hộ Thương mại",
+      "selector": "#sec-3",
+      "en": "Section 3 details the main methods of protectionism: tariffs are taxes on imported goods that raise their price; quotas place physical limits on import quantities; subsidies lower domestic producers' costs so they undercut imports; embargoes ban trade completely; and strict administrative or safety regulations slow down foreign imports.",
+      "vi": "Mục 3 trình bày các công cụ bảo hộ chính: thuế quan là thuế đánh vào hàng nhập khẩu làm tăng giá bán; hạn ngạch áp trần số lượng hàng được phép nhập; trợ cấp hạ chi phí cho nhà sản xuất trong nước để cạnh tranh giá; cấm vận chặn hoàn toàn giao thương; còn các tiêu chuẩn hành chính, kiểm dịch khắt khe gây chậm trễ hàng ngoại.",
+      "duration": 37.62,
+      "startTime": 132.1,
+      "endTime": 169.72,
+      "audioUrl": "/audio/lectures/economics/37/sec_3.mp3"
+    },
+    {
+      "id": "sec_4",
+      "title": "4. Lý do Bảo hộ & Hệ quả của Rào cản Thương mại",
+      "selector": "#sec-4",
+      "en": "Section 4 balances arguments for and against protectionism. Governments protect infant industries, sunset industries, strategic sectors, and domestic jobs, or counter unfair dumping and current account deficits. Yet protectionism raises consumer prices, restricts choice, shelters inefficient firms, and provokes retaliatory trade wars that shrink global growth.",
+      "vi": "Mục 4 cân bằng lập luận ủng hộ và phản đối bảo hộ. Chính phủ bảo hộ nhằm nuôi dưỡng ngành công nghiệp non trẻ, hỗ trợ ngành suy tàn, bảo vệ ngành chiến lược, giữ việc làm, chống bán phá giá hoặc thu hẹp thâm hụt vãng lai. Tuy vậy, bảo hộ làm tăng giá tiêu dùng, giảm lựa chọn, dung túng doanh nghiệp kém hiệu quả và châm ngòi chiến tranh thương mại trả đũa làm suy yếu tăng trưởng toàn cầu.",
+      "duration": 46.53,
+      "startTime": 169.72,
+      "endTime": 216.25,
+      "audioUrl": "/audio/lectures/economics/37/sec_4.mp3"
+    }
+  ]
+}

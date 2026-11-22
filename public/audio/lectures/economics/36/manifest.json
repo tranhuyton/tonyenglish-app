@@ -1,0 +1,85 @@
+{
+  "lectureId": "f8fdb43e-1162-4445-97d0-e8199debf0ab",
+  "courseTitle": "Cambridge IGCSE Economics (0455)",
+  "lectureTitle": "36. International Specialisation",
+  "totalDuration": 193.62,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_1": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_2": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_3": {
+      "start": 3,
+      "end": 3
+    },
+    "sec_4": {
+      "start": 4,
+      "end": 4
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 36: Chuyên môn hóa Quốc tế",
+      "selector": "#sec-header",
+      "en": "Welcome to Topic 6: International Trade and Globalisation, Lesson 36: International Specialisation. In this lesson, we examine why countries concentrate on producing specific goods and services, explore the economic basis of specialisation and free trade, and master two-sided essay evaluation.",
+      "vi": "Chào mừng các bạn đến với Chủ đề 6: Thương mại Quốc tế và Toàn cầu hóa, Bài 36: Chuyên môn hóa Quốc tế. Trong bài này, chúng ta tìm hiểu vì sao mỗi quốc gia tập trung sản xuất những mặt hàng nhất định, phân tích cơ sở kinh tế của chuyên môn hóa cùng thương mại tự do, và làm chủ kỹ năng đánh giá hai chiều trong bài luận.",
+      "duration": 39.02,
+      "startTime": 0.0,
+      "endTime": 39.02,
+      "audioUrl": "/audio/lectures/economics/36/intro.mp3"
+    },
+    {
+      "id": "sec_1",
+      "title": "1. Chuyên môn hóa Quốc tế & Phân công Lao động",
+      "selector": "#sec-1",
+      "en": "Section 1 defines international specialisation as countries concentrating their scarce resources on producing goods and services they are best suited to make, then trading surplus output for products other nations produce more efficiently. This extends the division of labour to a global scale, expanding world output and consumer choice.",
+      "vi": "Mục 1 định nghĩa chuyên môn hóa quốc tế là việc các quốc gia tập trung nguồn lực khan hiếm vào sản xuất những hàng hóa, dịch vụ có lợi thế nhất, sau đó xuất khẩu phần dư thừa để đổi lấy sản phẩm mà nước khác sản xuất hiệu quả hơn. Đây là sự mở rộng phân công lao động lên quy mô toàn cầu, giúp tăng tổng sản lượng thế giới và đa dạng hóa lựa chọn cho người tiêu dùng.",
+      "duration": 39.04,
+      "startTime": 39.02,
+      "endTime": 78.06,
+      "audioUrl": "/audio/lectures/economics/36/sec_1.mp3"
+    },
+    {
+      "id": "sec_2",
+      "title": "2. Cơ sở Kinh tế của Chuyên môn hóa",
+      "selector": "#sec-2",
+      "en": "Section 2 explains why countries specialise differently: variations in climate and natural resource endowments, differences in labour skills and wage costs, capital abundance, and technological expertise allow each country to achieve superior efficiency and lower opportunity costs in distinct industries.",
+      "vi": "Mục 2 giải thích cơ sở tạo nên khác biệt chuyên môn hóa: sự khác nhau về khí hậu, tài nguyên thiên nhiên, trình độ tay nghề và chi phí nhân công, quy mô tích lũy vốn cùng lợi thế công nghệ giúp mỗi quốc gia đạt hiệu suất vượt trội và chi phí cơ hội thấp hơn ở những ngành đặc thù.",
+      "duration": 33.71,
+      "startTime": 78.06,
+      "endTime": 111.77,
+      "audioUrl": "/audio/lectures/economics/36/sec_2.mp3"
+    },
+    {
+      "id": "sec_3",
+      "title": "3. Thương mại Quốc tế Tự do",
+      "selector": "#sec-3",
+      "en": "Section 3 explores free international trade—exchange across borders without tariffs, quotas, or artificial barriers. Free trade lets domestic firms tap massive global markets, reap economies of scale, access cheaper raw materials, and face healthy foreign competition that sparks innovation and lowers prices for consumers.",
+      "vi": "Mục 3 phân tích thương mại quốc tế tự do—sự trao đổi hàng hóa xuyên biên giới không có thuế quan, hạn ngạch hay rào cản nhân tạo. Thương mại tự do giúp doanh nghiệp nội địa tiếp cận thị trường toàn cầu rộng lớn, tận dụng lợi thế kinh tế nhờ quy mô, nhập nguyên liệu giá rẻ hơn và thúc đẩy đổi mới, giảm giá nhờ cạnh tranh quốc tế.",
+      "duration": 39.83,
+      "startTime": 111.77,
+      "endTime": 151.6,
+      "audioUrl": "/audio/lectures/economics/36/sec_3.mp3"
+    },
+    {
+      "id": "sec_4",
+      "title": "4. Đánh giá Toàn diện (Essay Mastery)",
+      "selector": "#sec-4",
+      "en": "Section 4 synthesises exam evaluation. While specialisation boosts global efficiency and living standards, over-specialisation leaves countries dangerously exposed to sudden drops in global demand, falling commodity prices, depletion of non-renewable resources, structural unemployment in declining sectors, and supply-chain disruptions during geopolitical crises.",
+      "vi": "Mục 4 tổng kết phần đánh giá cho bài thi. Dù chuyên môn hóa nâng cao hiệu quả toàn cầu và mức sống, chuyên môn hóa quá mức khiến quốc gia dễ bị tổn thương nghiêm trọng trước sụt giảm cầu thế giới, giá hàng hóa lao dốc, cạn kiệt tài nguyên không tái tạo, thất nghiệp cơ cấu ở các ngành suy tàn và đứt gãy chuỗi cung ứng khi có khủng hoảng địa chính trị.",
+      "duration": 42.02,
+      "startTime": 151.6,
+      "endTime": 193.62,
+      "audioUrl": "/audio/lectures/economics/36/sec_4.mp3"
+    }
+  ]
+}

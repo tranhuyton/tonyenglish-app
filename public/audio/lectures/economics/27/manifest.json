@@ -1,0 +1,85 @@
+{
+  "lectureId": "cb97d9d6-6009-4a15-83fc-e74ec2e1a959",
+  "courseTitle": "Cambridge IGCSE Economics (0455)",
+  "lectureTitle": "27. Monetary Policy",
+  "totalDuration": 200.72,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_1": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_2": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_3": {
+      "start": 3,
+      "end": 3
+    },
+    "sec_4": {
+      "start": 4,
+      "end": 4
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 27: Chính sách Tiền tệ",
+      "selector": "#sec-header",
+      "en": "Welcome to Lesson 27: Monetary Policy. Here we study how central banks manipulate interest rates, the money supply, and exchange rates to maintain price stability and support growth, trace how interest rate shifts ripple through households and firms, and evaluate monetary policy limits.",
+      "vi": "Chào mừng các bạn đến với Bài 27: Chính sách Tiền tệ. Trong bài này, chúng ta tìm hiểu cách ngân hàng trung ương điều chỉnh lãi suất, cung tiền và tỷ giá để giữ ổn định giá cả và hỗ trợ tăng trưởng, theo dõi cơ chế lãi suất lan tỏa tới hộ gia đình và doanh nghiệp, đồng thời đánh giá các giới hạn của chính sách tiền tệ.",
+      "duration": 36.98,
+      "startTime": 0.0,
+      "endTime": 36.98,
+      "audioUrl": "/audio/lectures/economics/27/intro.mp3"
+    },
+    {
+      "id": "sec_1",
+      "title": "1. Chính sách Tiền tệ là gì?",
+      "selector": "#sec-1",
+      "en": "Section 1 defines monetary policy as decisions made by the central bank regarding interest rates, the money supply, and foreign exchange rates to influence aggregate demand. Its three primary instruments are setting the base interest rate, altering the money supply through quantitative easing or reserve requirements, and intervening in currency markets.",
+      "vi": "Mục 1 định nghĩa chính sách tiền tệ là các quyết định của ngân hàng trung ương về lãi suất, cung tiền và tỷ giá hối đoái nhằm điều tiết tổng cầu. Ba công cụ chính gồm ấn định lãi suất cơ bản, điều tiết cung tiền qua nới lỏng định lượng hoặc tỷ lệ dự trữ bắt buộc, và can thiệp trên thị trường ngoại hối.",
+      "duration": 36.9,
+      "startTime": 36.98,
+      "endTime": 73.88,
+      "audioUrl": "/audio/lectures/economics/27/sec_1.mp3"
+    },
+    {
+      "id": "sec_2",
+      "title": "2. Tiền tệ Mở rộng vs Tiền tệ Thắt chặt",
+      "selector": "#sec-2",
+      "en": "Section 2 contrasts expansionary and contractionary monetary policy. Cutting interest rates and expanding the money supply lowers borrowing costs and discourages saving, stimulating spending and growth. Raising interest rates and restricting credit increases mortgage and loan costs, cooling aggregate demand to bring inflation back toward target.",
+      "vi": "Mục 2 đối chiếu tiền tệ mở rộng và tiền tệ thắt chặt. Hạ lãi suất và bơm cung tiền giúp giảm chi phí vay vốn, giảm hấp dẫn của tiền gửi tiết kiệm, từ đó kích thích chi tiêu và tăng trưởng. Ngược lại, tăng lãi suất và siết tín dụng làm tăng chi phí vay mua nhà và đầu tư, giúp hạ nhiệt tổng cầu để kéo lạm phát về mức mục tiêu.",
+      "duration": 41.54,
+      "startTime": 73.88,
+      "endTime": 115.42,
+      "audioUrl": "/audio/lectures/economics/27/sec_2.mp3"
+    },
+    {
+      "id": "sec_3",
+      "title": "3. Tác động của Lãi suất đến các Tác nhân Kinh tế",
+      "selector": "#sec-3",
+      "en": "Section 3 traces impacts across economic agents. For households, higher interest rates raise mortgage repayments and reward savers. For firms, dearer loans deter capital investment and squeeze profit margins. Internationally, higher rates attract hot money inflows, causing the currency to appreciate and making exports less price-competitive.",
+      "vi": "Mục 3 phân tích tác động đến từng chủ thể kinh tế. Với hộ gia đình, lãi suất tăng làm nặng gánh trả nợ thế chấp nhưng có lợi cho người gửi tiết kiệm. Với doanh nghiệp, chi phí vay cao làm chùn bước đầu tư mở rộng và thu hẹp biên lợi nhuận. Ở góc độ quốc tế, lãi suất cao hút dòng vốn nóng đổ vào, làm đồng nội tệ lên giá và giảm sức cạnh tranh giá của hàng xuất khẩu.",
+      "duration": 46.14,
+      "startTime": 115.42,
+      "endTime": 161.56,
+      "audioUrl": "/audio/lectures/economics/27/sec_3.mp3"
+    },
+    {
+      "id": "sec_4",
+      "title": "4. Đánh giá: Các Hạn chế của Chính sách Tiền tệ",
+      "selector": "#sec-4",
+      "en": "Section 4 highlights evaluation points. Monetary policy faces transmission time lags of up to eighteen months; commercial banks may refuse to pass rate cuts on to borrowers; low confidence during a deep slump means cheap loans still fail to spark spending; and raising rates cannot directly solve cost-push inflation from oil shocks.",
+      "vi": "Mục 4 nhấn mạnh các điểm đánh giá then chốt. Chính sách tiền tệ có độ trễ truyền dẫn lên tới mười tám tháng; ngân hàng thương mại có thể không hạ lãi suất cho vay tương ứng; khi niềm tin quá thấp trong suy thoái sâu thì lãi suất rẻ vẫn khó kích thích chi tiêu; và tăng lãi suất không trực tiếp giải quyết được lạm phát chi phí đẩy do cú sốc giá dầu.",
+      "duration": 39.16,
+      "startTime": 161.56,
+      "endTime": 200.72,
+      "audioUrl": "/audio/lectures/economics/27/sec_4.mp3"
+    }
+  ]
+}

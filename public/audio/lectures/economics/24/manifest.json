@@ -1,0 +1,70 @@
+{
+  "lectureId": "73ce7854-ee86-46f4-bef0-b144bdace1dd",
+  "courseTitle": "Cambridge IGCSE Economics (0455)",
+  "lectureTitle": "24. The Role of Government",
+  "totalDuration": 159.15,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_1": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_2": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_3": {
+      "start": 3,
+      "end": 3
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 24: Vai trò của Chính phủ",
+      "selector": "#sec-header",
+      "en": "Welcome to Cambridge IGCSE Economics, Topic 4: Government and the Macroeconomy. In Lesson 24, we examine the role of government at local, national, and international levels, explore how the state operates as both a producer and a major employer, and analyse government budget positions.",
+      "vi": "Chào mừng các bạn đến với môn Kinh tế học Cambridge IGCSE, Chủ đề 4: Chính phủ và Kinh tế Vĩ mô. Trong Bài 24, chúng ta tìm hiểu vai trò của chính phủ ở cấp địa phương, quốc gia và quốc tế, phân tích cách nhà nước hoạt động với tư cách nhà sản xuất lẫn nhà tuyển dụng lớn, và nắm vững các trạng thái ngân sách nhà nước.",
+      "duration": 38.22,
+      "startTime": 0.0,
+      "endTime": 38.22,
+      "audioUrl": "/audio/lectures/economics/24/intro.mp3"
+    },
+    {
+      "id": "sec_1",
+      "title": "1. Vai trò đa cấp của Chính phủ",
+      "selector": "#sec-1",
+      "en": "Section 1 outlines the multi-level role of government. Locally, councils fund public parks, refuse collection, and local roads. Nationally, central governments manage defence, macroeconomic policy, healthcare, and education. Internationally, governments negotiate trade treaties, join trading blocs, and provide overseas aid.",
+      "vi": "Mục 1 trình bày vai trò đa cấp của chính phủ. Ở cấp địa phương, chính quyền quản lý công viên, thu gom rác và đường giao thông nội bộ. Ở cấp quốc gia, chính phủ điều hành quốc phòng, chính sách kinh tế vĩ mô, y tế và giáo dục. Ở cấp quốc tế, chính phủ đàm phán hiệp định thương mại, tham gia khối kinh tế và viện trợ quốc tế.",
+      "duration": 45.57,
+      "startTime": 38.22,
+      "endTime": 83.79,
+      "audioUrl": "/audio/lectures/economics/24/sec_1.mp3"
+    },
+    {
+      "id": "sec_2",
+      "title": "2. Chính phủ là Nhà sản xuất & Người tuyển dụng",
+      "selector": "#sec-2",
+      "en": "Section 2 explains why governments act as producers and employers. The public sector supplies essential public goods like street lighting and merit goods like state schooling, protects strategic natural monopolies, and employs millions of public servants such as teachers, doctors, and police officers to stabilize employment and living standards.",
+      "vi": "Mục 2 giải thích vì sao chính phủ đóng vai trò nhà sản xuất và người tuyển dụng. Khu vực công cung cấp hàng hóa công cộng như đèn đường và hàng hóa khuyến dụng như trường công, nắm giữ các ngành độc quyền tự nhiên chiến lược, đồng thời tuyển dụng hàng triệu công chức như giáo viên, bác sĩ, cảnh sát nhằm ổn định việc làm và nâng cao đời sống.",
+      "duration": 39.06,
+      "startTime": 83.79,
+      "endTime": 122.85,
+      "audioUrl": "/audio/lectures/economics/24/sec_2.mp3"
+    },
+    {
+      "id": "sec_3",
+      "title": "3. Ngân sách Nhà nước & Các trạng thái Tài khóa",
+      "selector": "#sec-3",
+      "en": "Section 3 examines the government budget, which compares planned tax revenue against public expenditure. A budget surplus occurs when tax revenue exceeds spending; a balanced budget means both are equal; and a budget deficit arises when spending exceeds revenue, requiring government borrowing that adds to the national debt.",
+      "vi": "Mục 3 phân tích ngân sách nhà nước thông qua so sánh giữa tổng thu thuế và tổng chi tiêu công. Thặng dư ngân sách xảy ra khi thu thuế lớn hơn chi tiêu; ngân sách cân bằng khi thu bằng chi; còn thâm hụt ngân sách xuất hiện khi chi vượt thu, buộc chính phủ phải vay nợ và làm tăng nợ công quốc gia.",
+      "duration": 36.3,
+      "startTime": 122.85,
+      "endTime": 159.15,
+      "audioUrl": "/audio/lectures/economics/24/sec_3.mp3"
+    }
+  ]
+}

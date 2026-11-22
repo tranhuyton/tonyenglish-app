@@ -1,0 +1,85 @@
+{
+  "lectureId": "2d85d85e-815b-44f3-b6dd-82585e41b669",
+  "courseTitle": "Cambridge IGCSE Economics (0455)",
+  "lectureTitle": "39. Current Account of Balance of Payments",
+  "totalDuration": 204.86,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_1": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_2": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_3": {
+      "start": 3,
+      "end": 3
+    },
+    "sec_4": {
+      "start": 4,
+      "end": 4
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 39: Tài khoản Vãng lai của Cán cân Thanh toán",
+      "selector": "#sec-header",
+      "en": "Welcome to Lesson 39, our final Cambridge IGCSE Economics topic: Current Account of the Balance of Payments. We break down the four components of the current account, analyse the causes and consequences of deficits and surpluses, and evaluate policies to restore external balance.",
+      "vi": "Chào mừng các bạn đến với Bài 39, chủ đề cuối cùng của chương trình Kinh tế học Cambridge IGCSE: Tài khoản Vãng lai của Cán cân Thanh toán. Chúng ta sẽ mổ xẻ bốn cấu phần của tài khoản vãng lai, phân tích nguyên nhân cùng hệ quả của thâm hụt hay thặng dư, và đánh giá các chính sách khôi phục cân bằng đối ngoại.",
+      "duration": 36.04,
+      "startTime": 0.0,
+      "endTime": 36.04,
+      "audioUrl": "/audio/lectures/economics/39/intro.mp3"
+    },
+    {
+      "id": "sec_1",
+      "title": "1. Cán cân Thanh toán Quốc tế (BOP) là gì?",
+      "selector": "#sec-1",
+      "en": "Section 1 defines the Balance of Payments as a systematic financial record of all economic transactions between a country's residents and the rest of the world over a given period, typically one year. Money flowing into the country is recorded as a positive credit, while money flowing out is recorded as a negative debit.",
+      "vi": "Mục 1 định nghĩa Cán cân Thanh toán Quốc tế là bảng ghi chép tài chính có hệ thống toàn bộ giao dịch kinh tế giữa cư dân một nước với phần còn lại của thế giới trong một thời kỳ nhất định, thường là một năm. Dòng tiền chảy vào đất nước được ghi dương là khoản có, còn dòng tiền chảy ra được ghi âm là khoản nợ.",
+      "duration": 35.42,
+      "startTime": 36.04,
+      "endTime": 71.46,
+      "audioUrl": "/audio/lectures/economics/39/sec_1.mp3"
+    },
+    {
+      "id": "sec_2",
+      "title": "2. Bốn Bộ phận Cấu thành Tài khoản Vãng lai",
+      "selector": "#sec-2",
+      "en": "Section 2 details the four sections of the current account: first, trade in visible goods; second, trade in invisible services such as tourism, banking, and shipping; third, primary income covering cross-border wages, interest, profits, and dividends; and fourth, secondary income covering current transfers like foreign aid and worker remittances.",
+      "vi": "Mục 2 trình bày bốn bộ phận của tài khoản vãng lai: thứ nhất là cán cân thương mại hàng hóa hữu hình; thứ hai là cán cân dịch vụ vô hình như du lịch, ngân hàng và vận tải biển; thứ ba là thu nhập sơ cấp gồm tiền lương, lãi suất, lợi nhuận và cổ tức xuyên biên giới; và thứ tư là thu nhập thứ cấp gồm các khoản chuyển giao một chiều như viện trợ và kiều hối.",
+      "duration": 41.2,
+      "startTime": 71.46,
+      "endTime": 112.66,
+      "audioUrl": "/audio/lectures/economics/39/sec_2.mp3"
+    },
+    {
+      "id": "sec_3",
+      "title": "3. Thâm hụt vs Thặng dư: Nguyên nhân & Hệ quả Vĩ mô",
+      "selector": "#sec-3",
+      "en": "Section 3 analyses deficits and surpluses. A current account deficit arises when outflows exceed inflows—often caused by an overvalued exchange rate, high domestic inflation, strong import demand during a boom, or weak industrial productivity. Persistent deficits can reduce aggregate demand, cost jobs, and increase foreign debt, whereas huge surpluses can fuel domestic inflation and upward currency pressure.",
+      "vi": "Mục 3 phân tích thâm hụt và thặng dư. Thâm hụt tài khoản vãng lai xuất hiện khi dòng tiền ra vượt dòng tiền vào—thường do tỷ giá định giá quá cao, lạm phát nội địa cao, cầu nhập khẩu bùng nổ hoặc năng suất công nghiệp yếu. Thâm hụt kéo dài có thể làm giảm tổng cầu, mất việc làm và tăng nợ nước ngoài, còn thặng dư quá lớn dễ gây áp lực lạm phát nội địa và đẩy đồng nội tệ lên giá.",
+      "duration": 49.82,
+      "startTime": 112.66,
+      "endTime": 162.48,
+      "audioUrl": "/audio/lectures/economics/39/sec_3.mp3"
+    },
+    {
+      "id": "sec_4",
+      "title": "4. Chính sách Ổn định Cán cân Thanh toán",
+      "selector": "#sec-4",
+      "en": "Section 4 evaluates corrective policies: expenditure-reducing deflationary fiscal and monetary policies cut import demand but risk causing recession and unemployment; expenditure-switching tools like currency depreciation or tariffs shift spending toward domestic goods but risk inflation or retaliation; while long-run supply-side policies permanently boost export quality and productivity.",
+      "vi": "Mục 4 đánh giá các chính sách điều chỉnh: chính sách tài khóa và tiền tệ thắt chặt nhằm cắt giảm chi tiêu giúp hạ cầu nhập khẩu nhưng dễ gây suy thoái và thất nghiệp; các công cụ chuyển hướng chi tiêu như giảm giá nội tệ hay áp thuế quan chuyển sức mua sang hàng nội nhưng có nguy cơ gây lạm phát hoặc bị trả đũa; trong khi chính sách phía cung dài hạn nâng cao bền vững chất lượng và năng suất hàng xuất khẩu.",
+      "duration": 42.38,
+      "startTime": 162.48,
+      "endTime": 204.86,
+      "audioUrl": "/audio/lectures/economics/39/sec_4.mp3"
+    }
+  ]
+}

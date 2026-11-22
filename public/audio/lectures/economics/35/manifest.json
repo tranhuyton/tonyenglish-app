@@ -1,0 +1,70 @@
+{
+  "lectureId": "c5023a42-f9b6-4742-a333-82c47124ae3e",
+  "courseTitle": "Cambridge IGCSE Economics (0455)",
+  "lectureTitle": "35. Differences in Economic Development Between Countries",
+  "totalDuration": 159.74,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_1": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_2": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_3": {
+      "start": 3,
+      "end": 3
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 35: Khác biệt Phát triển Kinh tế giữa các Quốc gia",
+      "selector": "#sec-header",
+      "en": "Welcome to Lesson 35: Differences in Economic Development Between Countries. We compare the key characteristics of developed and developing economies, analyse structural differences in sector output, demographics, and productivity, and examine the major barriers holding back economic development.",
+      "vi": "Chào mừng các bạn đến với Bài 35: Sự Khác biệt về Phát triển Kinh tế giữa các Quốc gia. Chúng ta so sánh các đặc trưng cốt lõi của nền kinh tế phát triển và đang phát triển, phân tích khác biệt cơ cấu ngành, nhân khẩu học cùng năng suất, và tìm hiểu những rào cản lớn cản trở quá trình phát triển kinh tế.",
+      "duration": 35.92,
+      "startTime": 0.0,
+      "endTime": 35.92,
+      "audioUrl": "/audio/lectures/economics/35/intro.mp3"
+    },
+    {
+      "id": "sec_1",
+      "title": "1. Các Nền kinh tế Phát triển vs Đang phát triển",
+      "selector": "#sec-1",
+      "en": "Section 1 contrasts developed and developing nations. Developed economies feature high real GDP per capita, strong HDI scores, advanced infrastructure, high literacy, and low birth rates. Developing economies generally exhibit lower average incomes, faster population growth, weaker healthcare access, and greater vulnerability to external shocks.",
+      "vi": "Mục 1 đối chiếu quốc gia phát triển và đang phát triển. Nền kinh tế phát triển có GDP thực bình quân đầu người cao, điểm HDI vượt trội, hạ tầng hiện đại, tỷ lệ biết chữ cao và tỷ suất sinh thấp. Quốc gia đang phát triển thường có thu nhập bình quân thấp hơn, dân số tăng nhanh hơn, tiếp cận y tế hạn chế hơn và dễ tổn thương trước cú sốc bên ngoài.",
+      "duration": 45.5,
+      "startTime": 35.92,
+      "endTime": 81.42,
+      "audioUrl": "/audio/lectures/economics/35/sec_1.mp3"
+    },
+    {
+      "id": "sec_2",
+      "title": "2. Sự Khác biệt Cơ cấu trong Phát triển Kinh tế",
+      "selector": "#sec-2",
+      "en": "Section 2 examines structural indicators: employment composition shifts from primary agriculture in low-income nations toward secondary manufacturing in industrialising economies and tertiary services in mature developed economies. Differences in savings rates, capital-to-labour ratios, technology adoption, and healthcare explain wide gaps in labour productivity.",
+      "vi": "Mục 2 phân tích các chỉ báo cơ cấu: cơ cấu việc làm dịch chuyển từ nông nghiệp sơ cấp ở nước thu nhập thấp sang công nghiệp chế biến ở nước đang công nghiệp hóa và dịch vụ bậc ba ở nước phát triển. Sự chênh lệch về tỷ lệ tiết kiệm, tỷ lệ vốn trên lao động, trình độ công nghệ và chăm sóc sức khỏe giải thích khoảng cách lớn về năng suất lao động.",
+      "duration": 40.91,
+      "startTime": 81.42,
+      "endTime": 122.33,
+      "audioUrl": "/audio/lectures/economics/35/sec_2.mp3"
+    },
+    {
+      "id": "sec_3",
+      "title": "3. Rào cản đối với Sự Phát triển Kinh tế",
+      "selector": "#sec-3",
+      "en": "Section 3 diagnoses key barriers: over-reliance on volatile primary commodity exports with deteriorating terms of trade; heavy external debt repayments draining public budgets; capital shortages and brain drain; trade protectionism by richer nations; and political instability or corruption that deters foreign direct investment.",
+      "vi": "Mục 3 chỉ ra những rào cản chủ yếu: phụ thuộc quá mức vào xuất khẩu nông sản, khoáng sản thô có giá biến động mạnh; gánh nặng trả nợ nước ngoài hút cạn ngân sách công; thiếu vốn đầu tư và chảy máu chất xám; hàng rào bảo hộ thương mại từ các nước giàu; cùng bất ổn chính trị hoặc tham nhũng làm nản lòng dòng vốn FDI.",
+      "duration": 37.41,
+      "startTime": 122.33,
+      "endTime": 159.74,
+      "audioUrl": "/audio/lectures/economics/35/sec_3.mp3"
+    }
+  ]
+}

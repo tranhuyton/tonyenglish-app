@@ -212,6 +212,28 @@ const LECTURE_MANIFEST_MAP: Record<string, string> = {
   '604d1490-caed-47aa-a562-a6a902790a30': '/audio/lectures/economics/21/manifest.json', // 21. Firms and Production: Costs, Revenue & Objectives
   'd2019792-c956-44e2-98ed-c247617a9162': '/audio/lectures/economics/22/manifest.json', // 22. Market Structure: Competitive Markets
   '4a814791-86ae-4aab-b9e2-a94b2565c55c': '/audio/lectures/economics/23/manifest.json', // 23. Market Structure: Monopoly
+
+  // --- TOPIC 4: GOVERNMENT AND THE MACROECONOMY ---
+  '73ce7854-ee86-46f4-bef0-b144bdace1dd': '/audio/lectures/economics/24/manifest.json', // 24. The Role of Government
+  '729d78eb-2564-407c-8279-c76b18a8c961': '/audio/lectures/economics/25/manifest.json', // 25. The Macroeconomic Aims of Government
+  '50251f48-b7ab-4e4e-90e6-15f1c6129591': '/audio/lectures/economics/26/manifest.json', // 26. Fiscal Policy
+  'cb97d9d6-6009-4a15-83fc-e74ec2e1a959': '/audio/lectures/economics/27/manifest.json', // 27. Monetary Policy
+  '01041fd4-6608-4689-a502-832921ed3865': '/audio/lectures/economics/28/manifest.json', // 28. Supply-side Policy
+  'c089b0b4-0a41-4e2e-98a9-22c41e6c2b3c': '/audio/lectures/economics/29/manifest.json', // 29. Economic Growth
+  '33de93b1-9eaf-446f-aa27-ce108d2cae49': '/audio/lectures/economics/30/manifest.json', // 30. Employment and Unemployment
+  '8c3e99df-51fb-4bdf-859d-c0cb85a01e93': '/audio/lectures/economics/31/manifest.json', // 31. Inflation and Deflation
+
+  // --- TOPIC 5: ECONOMIC DEVELOPMENT ---
+  '747ea49f-ae93-437c-9612-2d64c960e71d': '/audio/lectures/economics/32/manifest.json', // 32. Living Standards
+  'd2c35d4a-7334-4331-98c6-1f04bb58c079': '/audio/lectures/economics/33/manifest.json', // 33. Poverty
+  '5d8ebacc-127e-4229-976b-3c75db87b8d4': '/audio/lectures/economics/34/manifest.json', // 34. Population
+  'c5023a42-f9b6-4742-a333-82c47124ae3e': '/audio/lectures/economics/35/manifest.json', // 35. Differences in Economic Development Between Countries
+
+  // --- TOPIC 6: INTERNATIONAL TRADE AND GLOBALISATION ---
+  'f8fdb43e-1162-4445-97d0-e8199debf0ab': '/audio/lectures/economics/36/manifest.json', // 36. International Specialisation
+  '0497aa28-0b26-45b3-a233-74fb121c1824': '/audio/lectures/economics/37/manifest.json', // 37. Globalisation, Free Trade and Protection
+  'ecb53067-d586-4806-9702-e52ad5c659e1': '/audio/lectures/economics/38/manifest.json', // 38. Foreign Exchange Rates
+  '2d85d85e-815b-44f3-b6dd-82585e41b669': '/audio/lectures/economics/39/manifest.json', // 39. Current Account of Balance of Payments
 };
 
 type LectureVideoItem = { title: string; videoId: string };
@@ -908,7 +930,7 @@ const PdfVisionViewer = ({ url, onClose, onCallTutor }: { url: string, onClose: 
     </div>
   );
 };
-const StaticLectureContent = React.memo(({ html, isIframeOnly, fontScale = 100, onOpenPopup, onOpenDict, onCloseDict, onSwitchPage }: any) => {
+const StaticLectureContent = React.memo(({ html, isIframeOnly, fontScale = 100, onOpenPopup, onOpenDict, onCloseDict, onSwitchPage, onOpenTutorAI, onOpenCourseLibrary }: any) => {
    const iframeRef = useRef<HTMLIFrameElement>(null);
    const [iframeHeight, setIframeHeight] = useState(600);
    const initialFontScaleRef = useRef<number>(fontScale || 100);
@@ -1020,57 +1042,61 @@ const StaticLectureContent = React.memo(({ html, isIframeOnly, fontScale = 100, 
       const cleanWord = word.trim().toLowerCase().replace(/[^a-z]/g, '');
       if (!cleanWord) return;
 
-      const localUrl = `/audio/pronunciation/${cleanWord}.mp3`;
-      const audio = new Audio(localUrl);
-      currentAudioRef.current = audio;
+      const speakFallback = () => {
+        if ('speechSynthesis' in window) {
+          window.speechSynthesis.cancel();
+          const utter = new SpeechSynthesisUtterance(cleanWord);
+          utter.lang = 'en-GB';
+          const voices = window.speechSynthesis.getVoices();
+          const gbMaleVoice = voices.find(v =>
+            v.lang.toLowerCase().startsWith('en-gb') &&
+            (v.name.toLowerCase().includes('male') ||
+             v.name.toLowerCase().includes('george') ||
+             v.name.toLowerCase().includes('ryan') ||
+             v.name.toLowerCase().includes('thomas') ||
+             v.name.toLowerCase().includes('daniel') ||
+             v.name.toLowerCase().includes('oliver'))
+          ) || voices.find(v => v.lang.toLowerCase().startsWith('en-gb'));
+          if (gbMaleVoice) {
+            utter.voice = gbMaleVoice;
+          }
+          utter.rate = 0.85;
+          window.speechSynthesis.speak(utter);
+        }
+      };
 
-      audio.onended = () => {
-        if (currentAudioRef.current === audio) {
+      const playFallbackLocal = () => {
+        const localUrl = `/audio/pronunciation/${cleanWord}.mp3`;
+        const localAudio = new Audio(localUrl);
+        currentAudioRef.current = localAudio;
+        localAudio.onended = () => {
+          if (currentAudioRef.current === localAudio) {
+            currentAudioRef.current = null;
+          }
+        };
+        localAudio.play().catch(() => {
+          if (currentAudioRef.current === localAudio) {
+            currentAudioRef.current = null;
+          }
+          speakFallback();
+        });
+      };
+
+      const cloudUrl = `https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/pronunciation/${cleanWord}.mp3`;
+      const cloudAudio = new Audio(cloudUrl);
+      currentAudioRef.current = cloudAudio;
+
+      cloudAudio.onended = () => {
+        if (currentAudioRef.current === cloudAudio) {
           currentAudioRef.current = null;
         }
       };
 
-      const playFallbackCloud = () => {
-         const cloudUrl = `https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/pronunciation/${cleanWord}.mp3`;
-         const cloudAudio = new Audio(cloudUrl);
-         currentAudioRef.current = cloudAudio;
-         cloudAudio.onended = () => {
-           if (currentAudioRef.current === cloudAudio) {
-             currentAudioRef.current = null;
-           }
-         };
-         cloudAudio.play().catch(() => {
-            if (currentAudioRef.current === cloudAudio) {
-              currentAudioRef.current = null;
-            }
-            if ('speechSynthesis' in window) {
-               window.speechSynthesis.cancel();
-               const utter = new SpeechSynthesisUtterance(cleanWord);
-               utter.lang = 'en-GB';
-               const voices = window.speechSynthesis.getVoices();
-               const gbMaleVoice = voices.find(v => 
-                  v.lang.toLowerCase().startsWith('en-gb') && 
-                  (v.name.toLowerCase().includes('male') || 
-                   v.name.toLowerCase().includes('george') || 
-                   v.name.toLowerCase().includes('ryan') || 
-                   v.name.toLowerCase().includes('thomas') ||
-                   v.name.toLowerCase().includes('daniel') ||
-                   v.name.toLowerCase().includes('oliver'))
-               ) || voices.find(v => v.lang.toLowerCase().startsWith('en-gb'));
-               if (gbMaleVoice) {
-                  utter.voice = gbMaleVoice;
-               }
-               utter.rate = 0.85;
-               window.speechSynthesis.speak(utter);
-            }
-         });
-      };
-
-      audio.play().catch(() => {
-         if (currentAudioRef.current === audio) {
-           currentAudioRef.current = null;
-         }
-         playFallbackCloud();
+      cloudAudio.play().catch(() => {
+        if (currentAudioRef.current === cloudAudio) {
+          currentAudioRef.current = null;
+        }
+        playFallbackLocal();
       });
     }, [stopAllCurrentAudio, abortRecordingIfActive]);
 
@@ -1088,17 +1114,52 @@ const StaticLectureContent = React.memo(({ html, isIframeOnly, fontScale = 100, 
         } catch (e) {}
       };
 
-      const localUrl = `/audio/communication/sentences/${audioKey}.mp3`;
+      const playSpeechSynthesisFallback = () => {
+        if ('speechSynthesis' in window && sentence) {
+          window.speechSynthesis.cancel();
+          const utter = new SpeechSynthesisUtterance(sentence);
+          utter.lang = 'en-GB';
+          const voices = window.speechSynthesis.getVoices();
+          const gbMaleVoice = voices.find(v =>
+            v.lang.toLowerCase().startsWith('en-gb') &&
+            (v.name.toLowerCase().includes('male') ||
+             v.name.toLowerCase().includes('george') ||
+             v.name.toLowerCase().includes('ryan') ||
+             v.name.toLowerCase().includes('thomas') ||
+             v.name.toLowerCase().includes('daniel') ||
+             v.name.toLowerCase().includes('oliver'))
+          ) || voices.find(v => v.lang.toLowerCase().startsWith('en-gb'));
+          if (gbMaleVoice) {
+            utter.voice = gbMaleVoice;
+          }
+          utter.rate = 0.88;
+          utter.onend = () => {
+            notifyAudioEnded();
+          };
+          utter.onerror = () => {
+            notifyAudioEnded();
+          };
+          window.speechSynthesis.speak(utter);
+        } else {
+          notifyAudioEnded();
+        }
+      };
+
+      const cleanAudioKey = (audioKey || '').trim();
+      if (!cleanAudioKey) {
+        playSpeechSynthesisFallback();
+        return;
+      }
+
+      const localUrl = `/audio/communication/sentences/${cleanAudioKey}.mp3`;
       const audio = new Audio(localUrl);
       currentAudioRef.current = audio;
 
-      if (audioKey) {
-        audio.onloadedmetadata = () => {
-          if (audio.duration && !isNaN(audio.duration) && audio.duration > 0) {
-            audioDurationCacheRef.current.set(audioKey, audio.duration);
-          }
-        };
-      }
+      audio.onloadedmetadata = () => {
+        if (audio.duration && !isNaN(audio.duration) && audio.duration > 0) {
+          audioDurationCacheRef.current.set(cleanAudioKey, audio.duration);
+        }
+      };
 
       audio.onended = () => {
         if (currentAudioRef.current === audio) {
@@ -1108,16 +1169,14 @@ const StaticLectureContent = React.memo(({ html, isIframeOnly, fontScale = 100, 
       };
 
       const playFallbackCloud = () => {
-         const cloudUrl = `https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/communication/sentences/${audioKey}.mp3`;
+         const cloudUrl = `https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/communication/sentences/${cleanAudioKey}.mp3`;
          const cloudAudio = new Audio(cloudUrl);
          currentAudioRef.current = cloudAudio;
-         if (audioKey) {
-           cloudAudio.onloadedmetadata = () => {
-             if (cloudAudio.duration && !isNaN(cloudAudio.duration) && cloudAudio.duration > 0) {
-               audioDurationCacheRef.current.set(audioKey, cloudAudio.duration);
-             }
-           };
-         }
+         cloudAudio.onloadedmetadata = () => {
+           if (cloudAudio.duration && !isNaN(cloudAudio.duration) && cloudAudio.duration > 0) {
+             audioDurationCacheRef.current.set(cleanAudioKey, cloudAudio.duration);
+           }
+         };
          cloudAudio.onended = () => {
            if (currentAudioRef.current === cloudAudio) {
              currentAudioRef.current = null;
@@ -1128,34 +1187,7 @@ const StaticLectureContent = React.memo(({ html, isIframeOnly, fontScale = 100, 
             if (currentAudioRef.current === cloudAudio) {
               currentAudioRef.current = null;
             }
-            if ('speechSynthesis' in window) {
-               window.speechSynthesis.cancel();
-               const utter = new SpeechSynthesisUtterance(sentence);
-               utter.lang = 'en-GB';
-               const voices = window.speechSynthesis.getVoices();
-               const gbMaleVoice = voices.find(v => 
-                  v.lang.toLowerCase().startsWith('en-gb') && 
-                  (v.name.toLowerCase().includes('male') || 
-                   v.name.toLowerCase().includes('george') || 
-                   v.name.toLowerCase().includes('ryan') || 
-                   v.name.toLowerCase().includes('thomas') ||
-                   v.name.toLowerCase().includes('daniel') ||
-                   v.name.toLowerCase().includes('oliver'))
-               ) || voices.find(v => v.lang.toLowerCase().startsWith('en-gb'));
-               if (gbMaleVoice) {
-                  utter.voice = gbMaleVoice;
-               }
-               utter.rate = 0.88;
-               utter.onend = () => {
-                 notifyAudioEnded();
-               };
-               utter.onerror = () => {
-                 notifyAudioEnded();
-               };
-               window.speechSynthesis.speak(utter);
-            } else {
-               notifyAudioEnded();
-            }
+            playSpeechSynthesisFallback();
          });
       };
 
@@ -1475,7 +1507,7 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
           stopRecordingAndEvaluate();
         } else if (e.data?.type === 'LECTURE_STOP_AUDIO') {
           stopAllCurrentAudio(true);
-        } else if (e.data?.type === 'LECTURE_RESIZE') {
+        } else if (e.data?.type === 'LECTURE_RESIZE' || e.data?.type === 'SET_IFRAME_HEIGHT') {
           const h = e.data.height;
           if (h && h > 0) {
               const targetHeight = Math.max(400, Math.ceil(h) + 16);
@@ -1550,11 +1582,17 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
         else if (e.data?.type === 'OPEN_WT1_VOCAB_BANK') {
           window.dispatchEvent(new CustomEvent('tony-open-wt1-vocab-bank', { detail: e.data }));
         }
+        else if (e.data?.type === 'OPEN_TUTOR_AI') {
+          onOpenTutorAI?.(e.data.topic, e.data.task);
+        }
+        else if (e.data?.type === 'OPEN_COURSE_LIBRARY') {
+          onOpenCourseLibrary?.();
+        }
       };
       
       window.addEventListener('message', handleMessage);
       return () => window.removeEventListener('message', handleMessage);
-    }, [onOpenPopup, onOpenDict, onCloseDict, onSwitchPage, playBritishPronunciation, playBritishSentence, startRecordingSentence, stopRecordingAndEvaluate, stopAllCurrentAudio]);
+    }, [onOpenPopup, onOpenDict, onCloseDict, onSwitchPage, onOpenTutorAI, onOpenCourseLibrary, playBritishPronunciation, playBritishSentence, startRecordingSentence, stopRecordingAndEvaluate, stopAllCurrentAudio]);
 
    const iframeContent = `
      <!DOCTYPE html>
@@ -3264,7 +3302,11 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
        />
      </div>
    );
-}, (prevProps, nextProps) => prevProps.html === nextProps.html);
+}, (prevProps, nextProps) => (
+  prevProps.html === nextProps.html &&
+  prevProps.fontScale === nextProps.fontScale &&
+  prevProps.isIframeOnly === nextProps.isIframeOnly
+));
 
 
 // =========================================================================================
@@ -3296,6 +3338,7 @@ export default function LectureViewer({
   
   const [pages, setPages] = useState<any[]>([]);
   const [activeLectureId, setActiveLectureId] = useState<string | null>(null);
+  const lectureLoadRequestIdRef = useRef<number>(0);
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [completedTasks, setCompletedTasks] = useState<string[]>([]);
   const [testScoresMap, setTestScoresMap] = useState<Map<string, { score: number; total: number; percent: number; isPassed: boolean }>>(new Map());
@@ -3318,7 +3361,6 @@ export default function LectureViewer({
   // 🚀 MỚI: HỨNG ẢNH ĐƯỢC UP TỪ SIDEBAR ĐỂ HIỂN THỊ NỬA TRÁI MÀN HÌNH
   const [uploadedBoardImage, setUploadedBoardImage] = useState<string | null>(null);
 
-  const [dictPopup, setDictPopup] = useState<{show: boolean, word: string, x: number, y: number, rectTop: number, data: any, isLoading: boolean} | null>(null);
   const [isTeacherBoardOpen, setIsTeacherBoardOpen] = useState(false);
   const [boardWidthVw, setBoardWidthVw] = useState(50);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -3492,6 +3534,91 @@ export default function LectureViewer({
            activeLecture?.course_id === '179f939c-2bf9-459a-8a14-78a14d2933cd';
   }, [course, currentCourseId, courseId, activeLecture]);
 
+  const isESLCourse = useMemo(() => {
+    const courseTitle = course?.title?.toLowerCase() || '';
+    return courseTitle.includes('esl') || courseTitle.includes('0510');
+  }, [course]);
+
+  const smartPageTabs = useMemo(() => {
+    if (!pages || pages.length <= 1) return [];
+    const sorted = [...pages].sort((a, b) => a.page_number - b.page_number);
+
+    const decodeAndClean = (raw: string) =>
+      raw
+        .replace(/<[^>]+>/g, ' ')
+        .replace(/&amp;/gi, '&')
+        .replace(/&nbsp;/gi, ' ')
+        .replace(/&ndash;/gi, '–')
+        .replace(/&mdash;/gi, '—')
+        .replace(/&quot;/gi, '"')
+        .replace(/&#39;|&apos;/gi, "'")
+        .replace(/\s+/g, ' ')
+        .trim();
+
+    const extractTag = (html: string, tag: string) => {
+      const m = (html || '').match(new RegExp(`<${tag}\\b[^>]*>([\\s\\S]*?)</${tag}>`, 'i'));
+      return m ? decodeAndClean(m[1]) : '';
+    };
+
+    const pickLevel = (tag: string) => sorted.map(p => extractTag(p.content_html || '', tag));
+
+    const h1s = pickLevel('h1');
+    const h2s = pickLevel('h2');
+    const h3s = pickLevel('h3');
+
+    const hasDistinctValues = (arr: string[]) => {
+      const nonEmpty = arr.filter(Boolean);
+      return nonEmpty.length > 0 && new Set(nonEmpty.map(s => s.toLowerCase())).size > 1;
+    };
+
+    let chosen = sorted.map(() => '');
+    if (hasDistinctValues(h1s)) {
+      chosen = h1s.map((v, idx) => v || h2s[idx] || h3s[idx] || '');
+    } else if (hasDistinctValues(h2s)) {
+      chosen = h2s.map((v, idx) => v || h3s[idx] || '');
+    } else if (hasDistinctValues(h3s)) {
+      chosen = h3s;
+    }
+
+    const shorten = (txt: string, maxLen = 38) => {
+      if (!txt) return '';
+      if (txt.length <= maxLen) return txt;
+      const cut = txt.slice(0, maxLen);
+      const lastSpace = cut.lastIndexOf(' ');
+      return (lastSpace > 18 ? cut.slice(0, lastSpace) : cut).trim() + '…';
+    };
+
+    return sorted.map((p, idx) => {
+      const rawTitle = shorten(chosen[idx]);
+      return {
+        pageNumber: p.page_number,
+        label: rawTitle || `Trang ${p.page_number}`,
+        hasExtractedTitle: Boolean(rawTitle),
+      };
+    });
+  }, [pages]);
+
+  const handleOpenTutorAI = useCallback((topic?: string, task?: string) => {
+    if (!onOpenAI) return;
+    const topicLower = (topic || '').toLowerCase();
+    if (task || isESLCourse || topicLower.includes('esl') || topicLower.includes('0510')) {
+      onOpenAI('ielts', topic, undefined, task || 'ESL');
+    } else {
+      onOpenAI('tutor', topic);
+    }
+  }, [onOpenAI, isESLCourse]);
+
+  const handleOpenCourseLibrary = useCallback(() => {
+    try {
+      if (currentCourseId) {
+        sessionStorage.setItem('portal_active_view', 'course');
+        sessionStorage.setItem('portal_selected_course_id', currentCourseId);
+        sessionStorage.removeItem('portal_current_folder_id');
+      }
+    } catch (err) {}
+    onBack();
+  }, [currentCourseId, onBack]);
+
   const currentHtmlContent = useMemo(() => { 
       const page = pages.find(p => p.page_number === currentPage); 
       return page ? page.content_html : ''; 
@@ -3656,23 +3783,6 @@ export default function LectureViewer({
   };
 
   useEffect(() => {
-    const handleSwitchPageMsg = (e: MessageEvent) => {
-      if (e.data?.type === 'LECTURE_SWITCH_PAGE') {
-        const targetP = parseInt(e.data.page, 10);
-        if (!isNaN(targetP) && targetP >= 1) {
-          setCurrentPage(targetP);
-          persistPage(targetP);
-          try {
-            containerRef.current?.scrollTo({ top: 0, behavior: 'smooth' });
-          } catch(err) {}
-        }
-      }
-    };
-    window.addEventListener('message', handleSwitchPageMsg);
-    return () => window.removeEventListener('message', handleSwitchPageMsg);
-  }, [activeLectureId, currentUser]);
-
-  useEffect(() => {
     if (courseId && courseId !== currentCourseId) {
       setCurrentCourseId(courseId);
     }
@@ -3704,10 +3814,6 @@ export default function LectureViewer({
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
-       const dictPop = document.getElementById('dict-popup');
-       if (dictPop && !dictPop.contains(e.target as Node)) {
-           setDictPopup(null);
-       }
        if (taskMenuRef.current && !taskMenuRef.current.contains(e.target as Node)) {
            setIsTaskMenuOpen(false);
        }
@@ -3993,6 +4099,7 @@ export default function LectureViewer({
     if (isTrialMode && !bypassTrialCheck && !trialUnlockedLectureIds.has(lectureId)) {
       return;
     }
+    const reqId = ++lectureLoadRequestIdRef.current;
     const targetUserId = userIdOverride || currentUser?.id;
     // Read saved page BEFORE any state changes (persist effect would overwrite it)
     const savedPageStr = sessionStorage.getItem(`tony_last_page_${lectureId}`) || localStorage.getItem(`tony_last_page_${targetUserId || ''}_${lectureId}`);
@@ -4028,6 +4135,8 @@ export default function LectureViewer({
                 ? supabase.from('test_results').select('id, test_title, score, total_score, details, created_at').eq('user_id', targetUserId).order('created_at', { ascending: false }).limit(2000)
                 : Promise.resolve({ data: null })
         ]);
+
+        if (lectureLoadRequestIdRef.current !== reqId) return;
 
         const scoreMap = new Map<string, { score: number; total: number; percent: number; isPassed: boolean }>();
         const nextWt2Graded: Record<string, { overall: number; count: number }> = {};
@@ -4091,8 +4200,6 @@ export default function LectureViewer({
                 ...p,
                 page_number: idx + 1
             }));
-        setPages(visiblePages);
-        
         // Restore saved page (read before state changes above)
         const validTargetPage = (targetPage > 0 && targetPage <= visiblePages.length) ? targetPage : 1;
         setPages(visiblePages);
@@ -4113,10 +4220,12 @@ export default function LectureViewer({
         if (targetUserId) {
             // Fetch lecture's task_list to reconcile
             const { data: currentLec } = await supabase.from('lectures').select('title, task_list').eq('id', lectureId).single();
+            if (lectureLoadRequestIdRef.current !== reqId) return;
             const taskList = currentLec?.task_list || [];
             
             if (taskList.length > 0) {
                 const { data: assignments } = await supabase.from('assignments').select('id, title, test_id, is_completed, student_completed, task_type, card_title, admin_approved').eq('user_id', targetUserId);
+                if (lectureLoadRequestIdRef.current !== reqId) return;
                 
                 const matchedAssigns = assignments?.filter((a: any) => 
                     a.task_type === 'manual' && (!currentLec?.title || a.card_title === currentLec.title)
@@ -4626,78 +4735,10 @@ export default function LectureViewer({
     }
   };
 
-  const fetchWithTimeout = async (url: string, ms = 4000) => {
-    const controller = new AbortController();
-    const id = setTimeout(() => controller.abort(), ms);
-    try {
-      const response = await fetch(url, { signal: controller.signal });
-      clearTimeout(id);
-      return response;
-    } catch (err) {
-      clearTimeout(id);
-      throw err;
-    }
-  };
-
   const triggerDictionary = useCallback((word: string, x: number, y: number, rectTop: number) => {
     const cleanWord = word.trim();
     if (!cleanWord) return;
-    setDictPopup(null); window.dispatchEvent(new CustomEvent('tony-open-quick-dictionary', { detail: { word: cleanWord, x, y, rectTop } })); return;
-    
-    Promise.allSettled([
-        fetchWithTimeout(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(cleanWord.toLowerCase())}`)
-            .then(r => r.ok ? r.json() : Promise.reject()),
-        fetchWithTimeout(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=vi&dt=t&dt=rm&dj=1&q=${encodeURIComponent(cleanWord)}`)
-            .then(r => r.ok ? r.json() : Promise.reject()),
-        fetchWithTimeout(`https://en.wiktionary.org/api/rest_v1/page/html/${encodeURIComponent(cleanWord.toLowerCase())}`)
-            .then(r => r.ok ? r.text() : Promise.reject())
-    ]).then(([enRes, viRes, wikRes]) => {
-         let phonetics = '';
-         let audio = '';
-         let translation = 'Không tìm thấy bản dịch (Hệ thống bận).';
-        
-         if (enRes.status === 'fulfilled' && enRes.value && enRes.value[0]) {
-             const phs = enRes.value[0].phonetics || [];
-             const ukPh = phs.find((p:any) => p.audio && p.audio.includes('-uk.mp3')) || phs.find((p:any) => p.text && p.text.includes('uk'));
-             const usPh = phs.find((p:any) => p.audio && p.audio.includes('-us.mp3'));
-             const anyPh = phs.find((p:any) => p.text);
-             phonetics = ukPh?.text || anyPh?.text || enRes.value[0].phonetic || '';
-             audio = ukPh?.audio || usPh?.audio || phs.find((p:any) => p.audio)?.audio || '';
-             if (phonetics && !phonetics.includes('UK') && phonetics.includes('/')) {
-                  phonetics = 'UK ' + phonetics;
-             }
-         }
-         
-         // Fallback to Wiktionary for true UK IPA
-         if (!phonetics && wikRes.status === 'fulfilled' && wikRes.value) {
-             const ipaMatches = [...wikRes.value.matchAll(/"wt":"(\/[^/]+\/)"/g)];
-             if (ipaMatches.length > 0) {
-                 phonetics = 'UK ' + ipaMatches[0][1];
-             }
-         }
-      
-         // Fallback to Google phonetics and audio
-         if (viRes.status === 'fulfilled' && viRes.value) {
-             const data = viRes.value;
-             if (!phonetics) {
-                 const ggPh = data.sentences?.find((s: any) => s.src_translit)?.src_translit;
-                 if (ggPh) phonetics = '/' + ggPh + '/';
-             }
-             if (!audio) {
-                 audio = `https://translate.google.com/translate_tts?ie=UTF-8&q=${encodeURIComponent(cleanWord)}&tl=en&client=tw-ob`;
-             }
-             const transStr = data.sentences?.find((s: any) => s.trans)?.trans;
-             if (transStr) {
-                 translation = transStr;
-             }
-         }
-        
-         setDictPopup(prev => prev ? { 
-            ...prev, 
-            data: { phonetics, audio, translation }, 
-            isLoading: false 
-         } : null);
-    });
+    window.dispatchEvent(new CustomEvent('tony-open-quick-dictionary', { detail: { word: cleanWord, x, y, rectTop } }));
   }, []);
 
   const handleTextSelection = useCallback(() => {
@@ -4765,134 +4806,15 @@ export default function LectureViewer({
     });
   }, [activeLecture]);
   const safeCompletedTasks = Array.isArray(completedTasks) ? completedTasks : [];
-  const isLastLectureAndPage = (totalPages === 0 || currentPage === totalPages) && lectures.findIndex(l => l.id === activeLectureId) === lectures.length - 1;
+  const navLecturesForState = useMemo(
+    () => (isTrialMode ? lectures.filter(l => trialUnlockedLectureIds.has(l.id)) : lectures),
+    [isTrialMode, lectures, trialUnlockedLectureIds]
+  );
+  const activeNavIndex = navLecturesForState.findIndex(l => l.id === activeLectureId);
+  const isFirstLectureAndPage = currentPage === 1 && (activeNavIndex <= 0);
+  const isLastLectureAndPage = (totalPages === 0 || currentPage === totalPages) && (activeNavIndex === -1 || activeNavIndex === navLecturesForState.length - 1);
 
   const isAllTasksDone = safeLectureTasks.length > 0 && safeCompletedTasks.length === safeLectureTasks.length;
-
-  // 📖 TRA TỪ ĐIỂN - State & Logic
-  const [dictQuery, setDictQuery] = useState('');
-  const [dictResults, setDictResults] = useState<any>(null);
-  const [isDictLoading, setIsDictLoading] = useState(false);
-  const [isDictOpen, setIsDictOpen] = useState(false);
-  const dictRef = useRef<HTMLDivElement>(null);
-  const dictTimerRef = useRef<any>(null);
-
-  // Phát hiện ngôn ngữ: có ký tự tiếng Việt có dấu → Vietnamese
-  const isVietnamese = (text: string) => /[àáảãạăắằẳẵặâấầẩẫậèéẻẽẹêếềểễệìíỉĩịòóỏõọôốồổỗộơớờởỡợùúủũụưứừửữựỳýỷỹỵđ]/i.test(text);
-
-  const lookupDictionary = useCallback(async (word: string) => {
-    const trimmed = word.trim();
-    if (!trimmed || trimmed.length < 2) { setDictResults(null); return; }
-    setIsDictLoading(true);
-    setIsDictOpen(true);
-
-    try {
-      const isVi = isVietnamese(trimmed);
-
-      if (isVi) {
-        // VIETNAMESE → ENGLISH
-        const res = await fetchWithTimeout(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=vi&tl=en&dt=t&dj=1&q=${encodeURIComponent(trimmed)}`);
-        const data = await res.json();
-        const translation = data?.sentences?.find((s: any) => s.trans)?.trans || data?.[0]?.[0]?.[0] || '';
-
-        setDictResults({
-          type: 'vi-en',
-          word: trimmed,
-          translation,
-          alternatives: [],
-        });
-      } else {
-        // ENGLISH → VIETNAMESE
-        const [dictRes, transRes, wikRes] = await Promise.allSettled([
-          fetchWithTimeout(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(trimmed.toLowerCase())}`),
-          fetchWithTimeout(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=vi&dt=t&dt=rm&dj=1&q=${encodeURIComponent(trimmed)}`),
-          fetchWithTimeout(`https://en.wiktionary.org/api/rest_v1/page/html/${encodeURIComponent(trimmed.toLowerCase())}`)
-        ]);
-
-        let definitions: any[] = [];
-        let phonetic = '';
-        let audioUrl = '';
-
-        if (dictRes.status === 'fulfilled' && dictRes.value.ok) {
-          const dictData = await dictRes.value.json();
-          if (Array.isArray(dictData) && dictData.length > 0) {
-            const entry = dictData[0];
-            const phs = entry.phonetics || [];
-            const ukPh = phs.find((p: any) => p.audio && p.audio.includes('-uk.mp3')) || phs.find((p:any) => p.text && p.text.includes('uk'));
-            const usPh = phs.find((p: any) => p.audio && p.audio.includes('-us.mp3'));
-            const anyPh = phs.find((p: any) => p.text);
-            phonetic = ukPh?.text || anyPh?.text || entry.phonetic || '';
-            audioUrl = ukPh?.audio || usPh?.audio || phs.find((p: any) => p.audio)?.audio || '';
-            if (phonetic && !phonetic.includes('UK') && phonetic.includes('/')) {
-                phonetic = 'UK ' + phonetic;
-            }
-            definitions = (entry.meanings || []).slice(0, 3).map((m: any) => ({
-              partOfSpeech: m.partOfSpeech,
-              defs: (m.definitions || []).slice(0, 2).map((d: any) => ({
-                definition: d.definition,
-                example: d.example || '',
-              })),
-            }));
-          }
-        }
-        
-        // Wiktionary Fallback for true UK IPA
-        if (!phonetic && wikRes.status === 'fulfilled' && wikRes.value) {
-             const ipaMatches = [...wikRes.value.matchAll(/"wt":"(\/[^/]+\/)"/g)];
-             if (ipaMatches.length > 0) {
-                 phonetic = 'UK ' + ipaMatches[0][1];
-             }
-        }
-
-        let viTranslation = '';
-        if (transRes.status === 'fulfilled' && transRes.value.ok) {
-          const data = await transRes.value.json();
-          viTranslation = data.sentences?.find((s: any) => s.trans)?.trans || data?.[0]?.[0]?.[0] || '';
-          if (!phonetic) {
-              const ggPh = data.sentences?.find((s: any) => s.src_translit)?.src_translit || data?.[0]?.[1]?.[3];
-              if (ggPh) phonetic = '/' + ggPh + '/';
-          }
-          if (!audioUrl) {
-              audioUrl = `https://translate.google.com/translate_tts?ie=UTF-8&q=${encodeURIComponent(trimmed)}&tl=en&client=tw-ob`;
-          }
-        }
-
-        setDictResults({
-          type: 'en-vi',
-          word: trimmed,
-          phonetic,
-          audioUrl,
-          viTranslation,
-          definitions,
-        });
-      }
-    } catch (error) {
-      setDictResults({
-        type: 'error',
-        word: trimmed,
-        message: 'Lỗi kết nối từ điển',
-      });
-    }
-    setIsDictLoading(false);
-  }, []);
-
-  const handleDictInput = (value: string) => {
-    setDictQuery(value);
-    if (dictTimerRef.current) clearTimeout(dictTimerRef.current);
-    if (!value.trim()) { setDictResults(null); setIsDictOpen(false); return; }
-    dictTimerRef.current = setTimeout(() => lookupDictionary(value), 500);
-  };
-
-  // Đóng dropdown khi click ra ngoài
-  useEffect(() => {
-    const handleClickOutside = (e: MouseEvent) => {
-      if (dictRef.current && !dictRef.current.contains(e.target as Node)) {
-        setIsDictOpen(false);
-      }
-    };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
 
   if (isLoading) {
       return (
@@ -5123,7 +5045,7 @@ export default function LectureViewer({
 
 
          {/* 📖 NÚT MỞ TỪ ĐIỂN - CHÍNH GIỮA */}
-         <div className="hidden lg:flex flex-1 justify-center mx-3 max-w-sm relative" ref={dictRef}>
+         <div className="hidden lg:flex flex-1 justify-center mx-3 max-w-sm relative">
            <button
              type="button"
              onClick={() => window.dispatchEvent(new CustomEvent('tony-open-standalone-dictionary'))}
@@ -5844,8 +5766,37 @@ export default function LectureViewer({
                             )}
                           </div>
                         )}
+                        {/* Tab bar cho các bài Past Papers 2 trang của Economics (tránh gắn nhầm Bản Tiếng Anh / Bản Tiếng Việt) */}
+                        {isEconomicsCourse && !activeLecture?.title?.toLowerCase().includes('podcast') && !(activeLectureId && LECTURE_PODCAST_COUNT[activeLectureId]) && !LECTURE_MANIFEST_MAP[activeLectureId] && totalPages === 2 && (
+                          <div className="flex items-center gap-2 sm:gap-2.5 mb-5 sm:mb-8 flex-wrap px-2 sm:px-0">
+                            <button
+                              type="button"
+                              onClick={() => { setCurrentPage(1); persistPage(1); }}
+                              className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all border ${
+                                currentPage === 1
+                                  ? 'bg-[#0a5482] text-white border-[#0a5482] shadow-md shadow-[#0a5482]/20'
+                                  : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50 hover:border-slate-300'
+                              }`}
+                            >
+                              <span>🏆</span>
+                              <span>Exam Practice Dashboard (Trang 1)</span>
+                            </button>
+                            <button
+                              type="button"
+                              onClick={() => { setCurrentPage(2); persistPage(2); }}
+                              className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all border ${
+                                currentPage === 2
+                                  ? 'bg-[#0a5482] text-white border-[#0a5482] shadow-md shadow-[#0a5482]/20'
+                                  : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50 hover:border-slate-300'
+                              }`}
+                            >
+                              <span>📝</span>
+                              <span>Past Papers List: Paper 1 &amp; 2 (Trang 2)</span>
+                            </button>
+                          </div>
+                        )}
                         {/* Tab bar cho các bài giảng có audio và nhiều trang (Ví dụ Biology 0610, Economics 0455) */}
-                         {!activeLecture?.title?.toLowerCase().includes('podcast') && !(activeLectureId && LECTURE_PODCAST_COUNT[activeLectureId]) && (LECTURE_MANIFEST_MAP[activeLectureId] || isEconomicsCourse) && totalPages > 1 && (
+                         {!activeLecture?.title?.toLowerCase().includes('podcast') && !(activeLectureId && LECTURE_PODCAST_COUNT[activeLectureId]) && (LECTURE_MANIFEST_MAP[activeLectureId] || (isEconomicsCourse && totalPages >= 3)) && totalPages > 1 && (
                            <div className="flex items-center gap-2 sm:gap-2.5 mb-5 sm:mb-8 flex-wrap px-2 sm:px-0">
                              <button
                                type="button"
@@ -5964,6 +5915,49 @@ export default function LectureViewer({
                              )}
                            </div>
                          )}
+                         {/* Smart Top Tab Bar cho toàn bộ các bài giảng nhiều trang khác (IELTS, Phát Âm, ESL 0510, Past Papers...) */}
+                         {totalPages > 1 &&
+                           !(activeLectureId && DIALOGUE_PODCAST_LECTURES[activeLectureId]) &&
+                           !activeLecture?.title?.toLowerCase().includes('podcast') &&
+                           !(activeLectureId && LECTURE_PODCAST_COUNT[activeLectureId]) &&
+                           !isOfficeEnglishCourse &&
+                           !isEconomicsCourse &&
+                           !(activeLectureId && LECTURE_MANIFEST_MAP[activeLectureId]) &&
+                           smartPageTabs.length > 1 && (
+                             <div className="flex items-center gap-2 sm:gap-2.5 mb-5 sm:mb-8 flex-wrap px-2 sm:px-0">
+                               {smartPageTabs.map((tab) => {
+                                 const isActive = currentPage === tab.pageNumber;
+                                 return (
+                                   <button
+                                     key={tab.pageNumber}
+                                     type="button"
+                                     onClick={() => { setCurrentPage(tab.pageNumber); persistPage(tab.pageNumber); }}
+                                     className={`inline-flex items-center gap-2 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all border cursor-pointer ${
+                                       isActive
+                                         ? 'bg-[#0a5482] text-white border-[#0a5482] shadow-md shadow-[#0a5482]/20'
+                                         : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50 hover:border-slate-300'
+                                     }`}
+                                   >
+                                     {tab.hasExtractedTitle ? (
+                                       <>
+                                         <span className={`inline-flex items-center justify-center w-5 h-5 rounded-md text-[11px] font-black shrink-0 ${
+                                           isActive ? 'bg-white/20 text-white' : 'bg-slate-100 text-slate-600'
+                                         }`}>
+                                           {tab.pageNumber}
+                                         </span>
+                                         <span>{tab.label}</span>
+                                       </>
+                                     ) : (
+                                       <>
+                                         <span>📄</span>
+                                         <span>{tab.label}</span>
+                                       </>
+                                     )}
+                                   </button>
+                                 );
+                               })}
+                             </div>
+                           )}
                         {activeLectureVideoId && (currentPage === 1 || (currentPage === 2 && !(activeLectureId && DIALOGUE_PODCAST_LECTURES[activeLectureId]))) && (
                          <div className="mb-5 sm:mb-8 mx-1 sm:mx-0 rounded-xl sm:rounded-2xl overflow-hidden shadow-md border border-slate-200 bg-slate-900">
                            <div className="flex items-center justify-between px-4 py-3 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 border-b border-slate-700/60">
@@ -6044,8 +6038,14 @@ export default function LectureViewer({
                            fontScale={lectureFontScale}
                            onOpenPopup={setPopupUrl} 
                            onOpenDict={triggerDictionary} 
-                           onCloseDict={() => { setDictPopup(null); window.dispatchEvent(new CustomEvent('tony-close-quick-dictionary')); }} 
-                           onSwitchPage={(page: number) => { setCurrentPage(page); persistPage(page); }}
+                           onCloseDict={() => { window.dispatchEvent(new CustomEvent('tony-close-quick-dictionary')); }} 
+                           onSwitchPage={(page: number) => {
+                             setCurrentPage(page);
+                             persistPage(page);
+                             try { containerRef.current?.scrollTo({ top: 0, behavior: 'smooth' }); } catch(err) {}
+                           }}
+                           onOpenTutorAI={handleOpenTutorAI}
+                           onOpenCourseLibrary={handleOpenCourseLibrary}
                        />
                     </div>
                   )}
@@ -6055,7 +6055,7 @@ export default function LectureViewer({
                     <div className={`max-w-[1060px] w-full flex justify-between items-center px-3 sm:px-0 pb-20 sm:pb-16 transition-all ${isTeacherBoardOpen ? 'max-w-none flex-col gap-6 md:flex-row' : ''}`}>
                        <button 
                            onClick={handlePrevPage} 
-                           disabled={currentPage === 1 && lectures.findIndex(l => l.id === activeLectureId) === 0} 
+                           disabled={isFirstLectureAndPage} 
                            className="flex items-center gap-1.5 sm:gap-2 text-slate-600 font-bold text-xs sm:text-[14px] hover:text-[#0a5482] hover:bg-white hover:border-slate-300 border border-transparent disabled:opacity-30 transition-all bg-transparent px-3.5 sm:px-5 py-2.5 sm:py-3 rounded-xl disabled:hover:bg-transparent shrink-0"
                        >
                           <span>←</span> <span className="hidden xs:inline">Bài trước</span><span className="xs:hidden">Trước</span>
@@ -6087,61 +6087,6 @@ export default function LectureViewer({
              </div>
          </main>
       </div>
-
-      {dictPopup && dictPopup.show && (
-         <div id="dict-popup" className="fixed bg-white rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] ring-1 ring-slate-900/5 w-[90vw] max-w-[340px] flex flex-col overflow-hidden animate-in fade-in zoom-in-95 duration-200"
-           style={{ 
-             zIndex: 99999, 
-             left: Math.max(10, Math.min(dictPopup.x - 170, window.innerWidth - 350)), 
-             ...(window.innerHeight - dictPopup.y < 300 ? { bottom: window.innerHeight - dictPopup.rectTop + 15 } : { top: dictPopup.y + 15 }), 
-             maxHeight: '400px' 
-           }}>
-            
-            <div className="bg-slate-50/80 backdrop-blur border-b border-slate-100 py-2.5 px-5 flex items-center justify-between shrink-0">
-               <div className="flex items-center">
-                   <img src="/logo-shield.png" alt="Logo" className="h-4 w-auto object-contain mr-2 opacity-80" />
-                   <span className="font-bold text-[11px] text-slate-500 tracking-widest uppercase">Từ điển AI</span>
-               </div>
-               <button onClick={() => setDictPopup(null)} className="text-slate-400 hover:text-slate-700">✕</button>
-            </div>
-
-            <div className="bg-white border-b border-slate-100 p-5 shrink-0 relative">
-               <h4 className="text-[20px] font-black text-slate-900 pr-10 leading-tight mb-1">
-                   {dictPopup.word}
-               </h4>
-               {dictPopup.data?.phonetics && (
-                   <span className="text-[14px] text-emerald-600 font-mono bg-emerald-50 px-2 py-0.5 rounded">
-                       {dictPopup.data.phonetics}
-                   </span>
-               )}
-               {dictPopup.data?.audio && (
-                   <button 
-                       onClick={() => {
-                           if(dictPopup.data.audio) {
-                               new Audio(dictPopup.data.audio).play();
-                           }
-                       }} 
-                       className="absolute top-5 right-5 w-10 h-10 rounded-full bg-blue-50 text-[#0ea5e9] flex items-center justify-center hover:bg-[#0ea5e9] hover:text-white transition-colors shadow-sm"
-                   >
-                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5"><path d="M13.5 4.06c0-1.336-1.616-2.005-2.56-1.06l-4.5 4.5H4.508c-1.141 0-2.318.664-2.66 1.905A9.76 9.76 0 001.5 12c0 .898.121 1.768.35 2.595.341 1.24 1.518 1.905 2.659 1.905h1.93l4.5 4.5c.945.945 2.561.276 2.561-1.06V4.06zM18.584 5.106a.75.75 0 011.06 0c3.808 3.807 3.808 9.98 0 13.788a.75.75 0 11-1.06-1.06 8.25 8.25 0 000-11.668.75.75 0 010-1.06z" /><path d="M15.932 7.757a.75.75 0 011.061 0 4.5 4.5 0 010 6.364.75.75 0 01-1.06-1.06 3 3 0 000-4.244.75.75 0 010-1.06z" /></svg>
-                   </button>
-               )}
-            </div>
-            
-            <div className="p-5 bg-slate-50 overflow-y-auto custom-scrollbar flex-1 text-[15px]" style={{ WebkitOverflowScrolling: 'touch' }}>
-              {dictPopup.isLoading ? (
-                 <div className="flex flex-col items-center justify-center py-4 opacity-50">
-                     <span className="w-6 h-6 border-2 border-[#0ea5e9] border-t-transparent rounded-full animate-spin mb-2"></span>
-                     <span className="text-[13px] font-medium">Đang dịch...</span>
-                 </div>
-               ) : (
-                 <div className="text-slate-700 leading-relaxed font-medium">
-                     {dictPopup.data?.translation}
-                 </div>
-              )}
-            </div>
-          </div>
-      )}
 
       {/* LỚP PHỦ MEDIA (PDF/YOUTUBE) VÀ ẢNH UPLOAD */}
       {(popupUrl || uploadedBoardImage) && (

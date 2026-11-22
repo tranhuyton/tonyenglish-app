@@ -1,0 +1,85 @@
+{
+  "lectureId": "ecb53067-d586-4806-9702-e52ad5c659e1",
+  "courseTitle": "Cambridge IGCSE Economics (0455)",
+  "lectureTitle": "38. Foreign Exchange Rates",
+  "totalDuration": 198.87,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_1": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_2": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_3": {
+      "start": 3,
+      "end": 3
+    },
+    "sec_4": {
+      "start": 4,
+      "end": 4
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 38: Tỷ giá Hối đoái",
+      "selector": "#sec-header",
+      "en": "Welcome to Lesson 38: Foreign Exchange Rates. In this lesson, we define foreign exchange rates, model how demand and supply determine floating exchange rates, identify the causes of currency appreciation and depreciation, and apply the SPICED and WPIDEC rules to evaluate macroeconomic impacts.",
+      "vi": "Chào mừng các bạn đến với Bài 38: Tỷ giá Hối đoái. Trong bài này, chúng ta định nghĩa tỷ giá hối đoái, phân tích cơ chế cung cầu xác lập tỷ giá thả nổi, nhận diện nguyên nhân đồng tiền lên giá hay mất giá, và vận dụng quy tắc SPICED cùng WPIDEC để đánh giá tác động kinh tế vĩ mô.",
+      "duration": 38.03,
+      "startTime": 0.0,
+      "endTime": 38.03,
+      "audioUrl": "/audio/lectures/economics/38/intro.mp3"
+    },
+    {
+      "id": "sec_1",
+      "title": "1. Tỷ giá Hối đoái & Động cơ Giao dịch Ngoại tệ",
+      "selector": "#sec-1",
+      "en": "Section 1 defines the foreign exchange rate as the price of one currency expressed in terms of another currency. Currencies are bought and sold on the foreign exchange market to pay for international exports and imports, fund overseas tourism, execute foreign direct investment, and conduct financial speculation.",
+      "vi": "Mục 1 định nghĩa tỷ giá hối đoái là giá của một đồng tiền được biểu thị bằng một đồng tiền khác. Ngoại tệ được mua bán trên thị trường ngoại hối nhằm thanh toán xuất nhập khẩu, chi trả du lịch quốc tế, thực hiện đầu tư trực tiếp nước ngoài và giao dịch đầu cơ tài chính.",
+      "duration": 33.78,
+      "startTime": 38.03,
+      "endTime": 71.81,
+      "audioUrl": "/audio/lectures/economics/38/sec_1.mp3"
+    },
+    {
+      "id": "sec_2",
+      "title": "2. Hệ thống Tỷ giá Thả nổi & Cân bằng Thị trường",
+      "selector": "#sec-2",
+      "en": "Section 2 explains floating exchange rates, where market demand and supply set the currency's equilibrium price without routine central bank intervention. Demand for a currency comes from foreign buyers of domestic exports, tourists, and inward investors; supply arises when domestic residents sell their currency to buy imports or invest overseas.",
+      "vi": "Mục 2 giải thích hệ thống tỷ giá thả nổi, nơi cung và cầu thị trường tự xác lập tỷ giá cân bằng mà không có sự can thiệp thường xuyên của ngân hàng trung ương. Cầu về đồng nội tệ đến từ người nước ngoài mua hàng xuất khẩu, khách du lịch và nhà đầu tư nước ngoài; còn cung phát sinh khi người dân trong nước bán nội tệ để nhập khẩu hoặc đầu tư ra nước ngoài.",
+      "duration": 40.31,
+      "startTime": 71.81,
+      "endTime": 112.12,
+      "audioUrl": "/audio/lectures/economics/38/sec_2.mp3"
+    },
+    {
+      "id": "sec_3",
+      "title": "3. Lên giá (Appreciation) vs Mất giá (Depreciation)",
+      "selector": "#sec-3",
+      "en": "Section 3 distinguishes appreciation—a rise in a currency's value under a floating system—from depreciation, a fall in its value. Key causes of exchange rate shifts include changes in demand for exports and imports, relative interest rate differentials attracting hot money, relative inflation rates, and market speculation about future economic prospects.",
+      "vi": "Mục 3 phân biệt lên giá—sự tăng giá trị đồng tiền trong chế độ thả nổi—với mất giá là sự giảm giá trị đồng tiền. Những nguyên nhân chính làm biến động tỷ giá gồm thay đổi cầu xuất nhập khẩu, chênh lệch lãi suất thu hút dòng vốn nóng, chênh lệch lạm phát giữa các nước và tâm lý đầu cơ về triển vọng kinh tế tương lai.",
+      "duration": 40.05,
+      "startTime": 112.12,
+      "endTime": 152.17,
+      "audioUrl": "/audio/lectures/economics/38/sec_3.mp3"
+    },
+    {
+      "id": "sec_4",
+      "title": "4. Tác động Vĩ mô (Quy tắc SPICED / WPIDEC)",
+      "selector": "#sec-4",
+      "en": "Section 4 masters exam application with SPICED and WPIDEC. A Stronger Pound makes Imports Cheaper and Exports Dearer—helping curb imported inflation but hurting exporters and the current account. Conversely, a Weaker Pound makes Imports Dearer and Exports Cheaper—stimulating export-led growth and jobs, provided export demand is price-elastic.",
+      "vi": "Mục 4 giúp các bạn làm chủ kỹ năng phân tích qua quy tắc SPICED và WPIDEC. Đồng tiền mạnh hơn làm hàng nhập khẩu rẻ hơn và hàng xuất khẩu đắt hơn—giúp kìm hãm lạm phát nhập khẩu nhưng gây bất lợi cho nhà xuất khẩu và tài khoản vãng lai. Ngược lại, đồng tiền yếu hơn làm nhập khẩu đắt lên và xuất khẩu rẻ đi—thúc đẩy tăng trưởng và việc làm xuất khẩu nếu cầu xuất khẩu co giãn theo giá.",
+      "duration": 46.7,
+      "startTime": 152.17,
+      "endTime": 198.87,
+      "audioUrl": "/audio/lectures/economics/38/sec_4.mp3"
+    }
+  ]
+}

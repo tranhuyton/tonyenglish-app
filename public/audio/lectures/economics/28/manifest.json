@@ -1,0 +1,70 @@
+{
+  "lectureId": "01041fd4-6608-4689-a502-832921ed3865",
+  "courseTitle": "Cambridge IGCSE Economics (0455)",
+  "lectureTitle": "28. Supply-side Policy",
+  "totalDuration": 148.07,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_1": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_2": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_3": {
+      "start": 3,
+      "end": 3
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 28: Chính sách Phía cung",
+      "selector": "#sec-header",
+      "en": "Welcome to Lesson 28: Supply-side Policy. Unlike demand-side tools, supply-side policies aim to increase the economy's long-run productive capacity and efficiency, shifting the production possibility curve outward to achieve non-inflationary economic growth.",
+      "vi": "Chào mừng các bạn đến với Bài 28: Chính sách Phía cung. Khác với các công cụ điều tiết cầu, chính sách phía cung hướng tới mở rộng năng lực sản xuất và nâng cao hiệu quả dài hạn của nền kinh tế, đẩy đường giới hạn khả năng sản xuất dịch chuyển ra ngoài nhằm đạt tăng trưởng không kèm lạm phát.",
+      "duration": 32.61,
+      "startTime": 0.0,
+      "endTime": 32.61,
+      "audioUrl": "/audio/lectures/economics/28/intro.mp3"
+    },
+    {
+      "id": "sec_1",
+      "title": "1. Chính sách Phía cung là gì?",
+      "selector": "#sec-1",
+      "en": "Section 1 defines supply-side policy as government measures designed to increase aggregate supply by improving the quality and quantity of factors of production and making markets work more competitively. By raising productivity, economies can expand output while keeping unit costs and inflation low.",
+      "vi": "Mục 1 định nghĩa chính sách phía cung là các biện pháp của chính phủ nhằm gia tăng tổng cung thông qua nâng cao chất lượng, số lượng các yếu tố sản xuất và giúp thị trường vận hành cạnh tranh hơn. Khi năng suất tăng, nền kinh tế có thể mở rộng sản lượng mà vẫn giữ chi phí đơn vị và lạm phát ở mức thấp.",
+      "duration": 34.26,
+      "startTime": 32.61,
+      "endTime": 66.87,
+      "audioUrl": "/audio/lectures/economics/28/sec_1.mp3"
+    },
+    {
+      "id": "sec_2",
+      "title": "2. Các Biện pháp Chính sách Phía cung",
+      "selector": "#sec-2",
+      "en": "Section 2 reviews key measures: investing in education and vocational training to boost human capital; lowering direct income and corporation taxes to incentivise work and enterprise; deregulation and privatisation to spur competition; labour market reforms curbing excessive union barriers; and subsidies for research and infrastructure.",
+      "vi": "Mục 2 tổng hợp các biện pháp trọng tâm: đầu tư giáo dục và đào tạo nghề để nâng cao vốn con người; cắt giảm thuế thu nhập cá nhân và thuế doanh nghiệp để khuyến khích lao động và khởi nghiệp; bãi bỏ quy định rườm rà và tư nhân hóa để thúc đẩy cạnh tranh; cải cách thị trường lao động; và trợ cấp nghiên cứu phát triển cùng hạ tầng.",
+      "duration": 38.37,
+      "startTime": 66.87,
+      "endTime": 105.24,
+      "audioUrl": "/audio/lectures/economics/28/sec_2.mp3"
+    },
+    {
+      "id": "sec_3",
+      "title": "3. Đánh giá: Ưu điểm vs Nhược điểm",
+      "selector": "#sec-3",
+      "en": "Section 3 weighs advantages and drawbacks. Supply-side policies deliver sustainable growth, lower structural unemployment, and stronger export competitiveness without fuelling inflation. However, education and infrastructure projects are costly and take many years to bear fruit, while deregulation and tax cuts for top earners can widen income inequality.",
+      "vi": "Mục 3 cân nhắc ưu và nhược điểm. Chính sách phía cung mang lại tăng trưởng bền vững, giảm thất nghiệp cơ cấu và tăng sức cạnh tranh xuất khẩu mà không gây lạm phát. Tuy nhiên, đầu tư giáo dục và hạ tầng rất tốn kém và mất nhiều năm mới phát huy hiệu quả, trong khi bãi bỏ quy định hay giảm thuế cho nhóm thu nhập cao có thể làm tăng bất bình đẳng.",
+      "duration": 42.83,
+      "startTime": 105.24,
+      "endTime": 148.07,
+      "audioUrl": "/audio/lectures/economics/28/sec_3.mp3"
+    }
+  ]
+}

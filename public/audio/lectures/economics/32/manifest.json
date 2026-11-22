@@ -1,0 +1,70 @@
+{
+  "lectureId": "747ea49f-ae93-437c-9612-2d64c960e71d",
+  "courseTitle": "Cambridge IGCSE Economics (0455)",
+  "lectureTitle": "32. Living Standards",
+  "totalDuration": 159.44,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_1": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_2": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_3": {
+      "start": 3,
+      "end": 3
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 32: Mức sống Dân cư",
+      "selector": "#sec-header",
+      "en": "Welcome to Topic 5: Economic Development, Lesson 32: Living Standards. In this lesson, we examine how economists measure and compare quality of life across countries using Real GDP per capita and the Human Development Index, and critically evaluate the limitations of each indicator.",
+      "vi": "Chào mừng các bạn đến với Chủ đề 5: Phát triển Kinh tế, Bài 32: Mức sống Dân cư. Trong bài này, chúng ta tìm hiểu cách các nhà kinh tế đo lường và so sánh chất lượng sống giữa các quốc gia thông qua GDP thực bình quân đầu người và Chỉ số Phát triển Con người HDI, đồng thời phân tích hạn chế của từng thước đo.",
+      "duration": 37.67,
+      "startTime": 0.0,
+      "endTime": 37.67,
+      "audioUrl": "/audio/lectures/economics/32/intro.mp3"
+    },
+    {
+      "id": "sec_1",
+      "title": "1. Đo lường Mức sống Dân cư",
+      "selector": "#sec-1",
+      "en": "Section 1 introduces Real GDP per head, calculated by dividing inflation-adjusted GDP by total population. It provides a quick snapshot of average material output and income per citizen, allowing governments to track economic progress over time and compare material prosperity between nations.",
+      "vi": "Mục 1 giới thiệu GDP thực bình quân đầu người, được tính bằng GDP đã điều chỉnh lạm phát chia cho tổng dân số. Thước đo này cho cái nhìn nhanh về sản lượng và thu nhập vật chất bình quân mỗi người dân, giúp chính phủ theo dõi tiến bộ kinh tế theo thời gian và so sánh sự thịnh vượng vật chất giữa các nước.",
+      "duration": 36.16,
+      "startTime": 37.67,
+      "endTime": 73.83,
+      "audioUrl": "/audio/lectures/economics/32/sec_1.mp3"
+    },
+    {
+      "id": "sec_2",
+      "title": "2. Chỉ số Phát triển Con người (HDI)",
+      "selector": "#sec-2",
+      "en": "Section 2 explains the United Nations Human Development Index, a composite measure scaled from zero to one across three dimensions: longevity measured by life expectancy at birth; knowledge measured by mean and expected years of schooling; and decent living standards measured by Gross National Income per capita adjusted for purchasing power parity.",
+      "vi": "Mục 2 giải thích Chỉ số Phát triển Con người HDI của Liên Hợp Quốc, một thước đo tổng hợp thang điểm từ 0 đến 1 dựa trên ba trụ cột: tuổi thọ đo bằng kỳ vọng sống lúc sinh; tri thức đo bằng số năm đi học trung bình và kỳ vọng; và mức sống đo bằng Tổng thu nhập quốc dân GNI bình quân đầu người tính theo sức mua tương đương PPP.",
+      "duration": 38.03,
+      "startTime": 73.83,
+      "endTime": 111.86,
+      "audioUrl": "/audio/lectures/economics/32/sec_2.mp3"
+    },
+    {
+      "id": "sec_3",
+      "title": "3. Hạn chế của GDP Bình quân đầu người",
+      "selector": "#sec-3",
+      "en": "Section 3 covers crucial Cambridge evaluation points. Real GDP per head hides income inequality, ignores unpaid housework and the informal shadow economy, omits leisure time and working conditions, fails to capture environmental damage, and does not distinguish whether spending goes toward healthcare or military weapons. Even HDI omits political freedom and ecological sustainability.",
+      "vi": "Mục 3 tổng hợp các điểm đánh giá then chốt của Cambridge. GDP thực bình quân đầu người che giấu bất bình đẳng thu nhập, bỏ sót công việc gia đình không trả lương và kinh tế ngầm, không phản ánh thời gian nghỉ ngơi hay điều kiện làm việc, bỏ qua hủy hoại môi trường và không phân biệt chi tiêu cho y tế hay vũ khí quân sự. Ngay cả HDI cũng chưa đo lường tự do dân sự hay tính bền vững sinh thái.",
+      "duration": 47.58,
+      "startTime": 111.86,
+      "endTime": 159.44,
+      "audioUrl": "/audio/lectures/economics/32/sec_3.mp3"
+    }
+  ]
+}

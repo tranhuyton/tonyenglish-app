@@ -1,0 +1,70 @@
+{
+  "lectureId": "c089b0b4-0a41-4e2e-98a9-22c41e6c2b3c",
+  "courseTitle": "Cambridge IGCSE Economics (0455)",
+  "lectureTitle": "29. Economic Growth",
+  "totalDuration": 163.7,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_1": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_2": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_3": {
+      "start": 3,
+      "end": 3
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 29: Tăng trưởng Kinh tế",
+      "selector": "#sec-header",
+      "en": "Welcome to Lesson 29: Economic Growth. In this lesson, we define economic growth using real GDP, distinguish recessions from expansions, explore both demand-side and supply-side causes of growth, and evaluate whether faster growth always improves living standards.",
+      "vi": "Chào mừng các bạn đến với Bài 29: Tăng trưởng Kinh tế. Trong bài này, chúng ta tìm hiểu khái niệm tăng trưởng kinh tế qua GDP thực, phân biệt suy thoái với mở rộng kinh tế, phân tích cả nguyên nhân từ phía cầu lẫn phía cung, và đánh giá liệu tăng trưởng nhanh hơn có luôn đồng nghĩa với mức sống tốt hơn hay không.",
+      "duration": 36.02,
+      "startTime": 0.0,
+      "endTime": 36.02,
+      "audioUrl": "/audio/lectures/economics/29/intro.mp3"
+    },
+    {
+      "id": "sec_1",
+      "title": "1. Định nghĩa & Đo lường Tăng trưởng Kinh tế",
+      "selector": "#sec-1",
+      "en": "Section 1 defines economic growth as an increase in the real value of goods and services produced in an economy over time, measured by the percentage rise in real GDP. Real GDP adjusts nominal output for inflation. A recession is formally defined as two consecutive quarters of negative real GDP growth.",
+      "vi": "Mục 1 định nghĩa tăng trưởng kinh tế là sự gia tăng giá trị thực của hàng hóa và dịch vụ được sản xuất ra trong một nền kinh tế theo thời gian, đo bằng tốc độ tăng phần trăm của GDP thực. GDP thực đã loại trừ yếu tố lạm phát khỏi sản lượng danh nghĩa. Suy thoái kinh tế được định nghĩa chính thức là hai quý liên tiếp GDP thực tăng trưởng âm.",
+      "duration": 40.55,
+      "startTime": 36.02,
+      "endTime": 76.57,
+      "audioUrl": "/audio/lectures/economics/29/sec_1.mp3"
+    },
+    {
+      "id": "sec_2",
+      "title": "2. Nguyên nhân của Tăng trưởng Kinh tế",
+      "selector": "#sec-2",
+      "en": "Section 2 distinguishes actual growth from potential growth. In the short run, higher aggregate demand utilises idle resources, moving a point inside the PPC toward the boundary. In the long run, discovering natural resources, expanding the labour force, investing in capital goods, and technological innovation shift the entire PPC outward.",
+      "vi": "Mục 2 phân biệt tăng trưởng thực tế và tăng trưởng tiềm năng. Trong ngắn hạn, tổng cầu tăng giúp huy động các nguồn lực nhàn rỗi, đưa nền kinh tế từ bên trong đường PPC tiến sát ra biên. Trong dài hạn, phát hiện tài nguyên mới, mở rộng lực lượng lao động, đầu tư tư bản và đổi mới công nghệ đẩy toàn bộ đường PPC dịch chuyển ra ngoài.",
+      "duration": 42.83,
+      "startTime": 76.57,
+      "endTime": 119.4,
+      "audioUrl": "/audio/lectures/economics/29/sec_2.mp3"
+    },
+    {
+      "id": "sec_3",
+      "title": "3. Đánh giá: Ưu điểm vs Nhược điểm của Tăng trưởng",
+      "selector": "#sec-3",
+      "en": "Section 3 evaluates growth. Benefits include higher average incomes, reduced absolute poverty, more jobs, and rising tax revenues that fund better healthcare and schools. Drawbacks include resource depletion, environmental pollution, stress and longer working hours, demand-pull inflation, and widening inequality if gains are unevenly shared.",
+      "vi": "Mục 3 đánh giá hai mặt của tăng trưởng. Lợi ích gồm thu nhập bình quân cao hơn, giảm nghèo tuyệt đối, thêm nhiều việc làm và tăng thu ngân sách để đầu tư y tế, giáo dục. Mặt trái gồm cạn kiệt tài nguyên, ô nhiễm môi trường, áp lực và thời gian làm việc kéo dài, lạm phát cầu kéo và gia tăng bất bình đẳng nếu thành quả không được phân bổ đồng đều.",
+      "duration": 44.3,
+      "startTime": 119.4,
+      "endTime": 163.7,
+      "audioUrl": "/audio/lectures/economics/29/sec_3.mp3"
+    }
+  ]
+}

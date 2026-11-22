@@ -265,21 +265,12 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
   const [courseId, setCourseId] = useState(lectureData?.course_id || '');
   const [moduleId, setModuleId] = useState(lectureData?.module_id || '');
   
-  // 🚀 State quản lý BÍ KÍP AI (Long Context Text)
-  const [tutorContext, setTutorContext] = useState(lectureData?.tutor_context || '');
-  
-  // 🚀 State Upload Ảnh Bí Kíp
-  const [isUploadingAnswerImg, setIsUploadingAnswerImg] = useState(false);
-  const answerImgInputRef = useRef<HTMLInputElement>(null);
-
   const [pages, setPages] = useState<any[]>([]);
   const [activePageIndex, setActivePageIndex] = useState(0);
   const [isSaving, setIsSaving] = useState(false);
 
   const [taskList, setTaskList] = useState<any[]>(lectureData?.task_list || []);
-  
-  // Đã thêm tab 'context' vào đây
-  const [rightTab, setRightTab] = useState<'pages' | 'tasks' | 'context'>('pages');
+  const [rightTab, setRightTab] = useState<'pages' | 'tasks'>('pages');
   
   const [availableExercises, setAvailableExercises] = useState<any[]>([]);
   const [showExerciseModal, setShowExerciseModal] = useState(false);
@@ -541,65 +532,6 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
       setTaskList(newTasks);
   }
 
-  // =========================================================================
-  // 🚀 CỐT LÕI XỬ LÝ UPLOAD ẢNH CHUNG (DÙNG CHO CẢ NÚT BẤM VÀ CTRL+V)
-  // =========================================================================
-  const processImageUpload = async (file: File) => {
-    if (file.size > 10 * 1024 * 1024) {
-        alert('Dung lượng ảnh tối đa 10MB.');
-        return;
-    }
-    
-    setIsUploadingAnswerImg(true);
-    try {
-        const fileExt = file.name.split('.').pop() || 'png';
-        const fileName = `answer_${Date.now()}.${fileExt}`;
-        
-        // Tải lên Supabase Storage bucket 'documents'
-        const { error } = await supabase.storage.from('documents').upload(fileName, file);
-        if (error) throw error;
-        
-        // Lấy URL công khai
-        const { data } = supabase.storage.from('documents').getPublicUrl(fileName);
-        
-        // Chèn Tag Ảnh vào ô Text Bí Kíp
-        const newImageTag = `\n[IMAGE_ANSWER: ${data.publicUrl}]\n`;
-        setTutorContext(prev => prev + newImageTag);
-        
-    } catch (err: any) {
-        alert('Lỗi tải ảnh: ' + err.message);
-    } finally {
-        setIsUploadingAnswerImg(false);
-    }
-  };
-
-  // Xử lý khi bấm nút Upload thủ công
-  const handleUploadAnswerImage = async (event: React.ChangeEvent<HTMLInputElement>) => {
-      const file = event.target.files?.[0];
-      if (file) {
-          await processImageUpload(file);
-      }
-      if (answerImgInputRef.current) answerImgInputRef.current.value = '';
-  };
-
-  // Xử lý khi ấn Ctrl+V (Paste) vào thẳng Textarea
-  const handlePasteImage = async (e: React.ClipboardEvent<HTMLTextAreaElement>) => {
-      const items = e.clipboardData?.items;
-      if (!items) return;
-
-      for (let i = 0; i < items.length; i++) {
-          // Bắt các item có type là image
-          if (items[i].type.indexOf('image') !== -1) {
-              e.preventDefault(); // Chặn hành vi paste chuỗi Base64 dài dằng dặc
-              const file = items[i].getAsFile();
-              if (file) {
-                  await processImageUpload(file);
-              }
-              break; // Chỉ xử lý ảnh đầu tiên nếu copy nhiều thứ
-          }
-      }
-  };
-
   const handleSave = async () => {
     if (!title.trim() || !courseId) return alert('Vui lòng nhập tên và chọn khóa học!');
     setIsSaving(true);
@@ -639,14 +571,13 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
           }
       }
       
-      // Khởi tạo Payload, bao gồm cả biến tutor_context
+      // Khởi tạo Payload (giữ nguyên cột tutor_context hiện có trong DB)
       const lecPayload: any = { 
          title, 
          course_id: courseId, 
          module_id: moduleId || null, 
          is_published: true, 
-         task_list: updatedTaskList,
-         tutor_context: tutorContext.trim() || null
+         task_list: updatedTaskList
       };
       
       if (currentLectureId === 'new') {
@@ -786,12 +717,6 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
                 >
                     📌 Nhiệm vụ
                 </button>
-                <button 
-                    onClick={() => setRightTab('context')} 
-                    className={`flex-1 py-2 text-[10px] sm:text-[11px] font-black uppercase rounded-lg transition-colors flex items-center justify-center gap-1 ${rightTab === 'context' ? 'bg-amber-100 shadow-sm text-amber-700 border border-amber-200' : 'text-slate-500 hover:text-amber-600'}`}
-                >
-                    🧠 Bí Kíp AI
-                </button>
              </div>
 
              {/* TAB NỘI DUNG */}
@@ -882,63 +807,6 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
                       )}
                    </div>
                 </>
-             )}
-
-             {/* TAB BÍ KÍP AI (LONG CONTEXT) - NÂNG CẤP HỖ TRỢ CTRL+V */}
-             {rightTab === 'context' && (
-                <div className="flex-1 flex flex-col bg-white">
-                   <div className="p-4 border-b border-slate-100 bg-amber-50 shrink-0">
-                       <div className="flex justify-between items-start mb-2">
-                           <h4 className="font-black text-amber-800 text-[13px] uppercase tracking-tight flex items-center gap-2">
-                               <span className="text-lg">🧠</span> CẤP BÍ KÍP CHO AI
-                           </h4>
-                           
-                           {/* NÚT UPLOAD ẢNH ĐÁP ÁN (DÙNG KHI CHỌN FILE TỪ MÁY) */}
-                           <input 
-                               type="file" 
-                               accept="image/*" 
-                               className="hidden" 
-                               ref={answerImgInputRef} 
-                               onChange={handleUploadAnswerImage} 
-                           />
-                           <button 
-                               onClick={() => answerImgInputRef.current?.click()}
-                               disabled={isUploadingAnswerImg}
-                               className="bg-amber-500 hover:bg-amber-600 text-white font-bold text-[10px] px-3 py-1.5 rounded-lg shadow-sm transition-colors flex items-center gap-1 disabled:opacity-50"
-                           >
-                               {isUploadingAnswerImg ? '⏳ ĐANG TẢI...' : '📸 CHỌN ẢNH'}
-                           </button>
-                       </div>
-                       <p className="text-[11px] text-amber-700/80 leading-relaxed font-medium">
-                           Nhập Text, hoặc <strong>Paste (Ctrl+V)</strong> ảnh đáp án trực tiếp vào ô bên dưới. AI sẽ dùng thông tin này để giải đáp cho học sinh.
-                       </p>
-                   </div>
-                   <div className="flex-1 p-3 relative">
-                       {isUploadingAnswerImg && (
-                           <div className="absolute inset-0 z-10 bg-white/80 flex flex-col items-center justify-center rounded-xl">
-                               <div className="w-8 h-8 border-4 border-amber-200 border-t-amber-500 rounded-full animate-spin"></div>
-                               <span className="mt-2 text-xs font-bold text-amber-600">Đang lưu ảnh lên Cloud...</span>
-                           </div>
-                       )}
-                       <textarea 
-                           value={tutorContext}
-                           onChange={e => setTutorContext(e.target.value)}
-                           onPaste={handlePasteImage} // BẮT SỰ KIỆN PASTE
-                           placeholder="Dán nội dung, hoặc ấn Ctrl+V để dán trực tiếp ảnh đáp án vào đây..."
-                           className="w-full h-full resize-none border border-slate-200 bg-slate-50 rounded-xl p-4 text-[13px] text-slate-700 outline-none focus:border-amber-400 focus:bg-white transition-colors custom-scrollbar font-mono"
-                       ></textarea>
-                   </div>
-                   {tutorContext && (
-                       <div className="px-4 py-2 border-t border-slate-100 bg-slate-50 flex justify-end shrink-0">
-                           <button 
-                               onClick={() => setTutorContext('')} 
-                               className="text-[11px] text-red-500 font-bold hover:underline transition"
-                           >
-                               Xóa trắng bí kíp
-                           </button>
-                       </div>
-                   )}
-                </div>
              )}
 
           </div>

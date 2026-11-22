@@ -1,0 +1,70 @@
+{
+  "lectureId": "729d78eb-2564-407c-8279-c76b18a8c961",
+  "courseTitle": "Cambridge IGCSE Economics (0455)",
+  "lectureTitle": "25. The Macroeconomic Aims of Government",
+  "totalDuration": 150.56,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_1": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_2": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_3": {
+      "start": 3,
+      "end": 3
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 25: Các Mục tiêu Kinh tế Vĩ mô",
+      "selector": "#sec-header",
+      "en": "Welcome to Lesson 25: The Macroeconomic Aims of Government. In this lesson, we study the five core macroeconomic targets every government strives to achieve, uncover why pursuing one objective frequently conflicts with another, and evaluate how policymakers reconcile these trade-offs.",
+      "vi": "Chào mừng các bạn đến với Bài 25: Các Mục tiêu Kinh tế Vĩ mô của Chính phủ. Trong bài này, chúng ta tìm hiểu năm mục tiêu vĩ mô cốt lõi mà mọi chính phủ đều hướng tới, lý giải vì sao theo đuổi mục tiêu này thường gây xung đột với mục tiêu khác, và đánh giá cách các nhà hoạch định hóa giải những đánh đổi đó.",
+      "duration": 35.75,
+      "startTime": 0.0,
+      "endTime": 35.75,
+      "audioUrl": "/audio/lectures/economics/25/intro.mp3"
+    },
+    {
+      "id": "sec_1",
+      "title": "1. Năm Mục tiêu Kinh tế Vĩ mô Cốt lõi",
+      "selector": "#sec-1",
+      "en": "Section 1 presents the five primary macroeconomic aims: sustainable economic growth measured by rising real GDP; full employment and low unemployment; price stability with low, predictable inflation; balance of payments stability on the current account; and fair redistribution of income to narrow inequality.",
+      "vi": "Mục 1 giới thiệu năm mục tiêu vĩ mô nền tảng: tăng trưởng kinh tế bền vững đo bằng GDP thực tăng; toàn dụng lao động và thất nghiệp thấp; ổn định giá cả với lạm phát thấp và dễ dự đoán; ổn định cán cân thanh toán vãng lai; và tái phân phối thu nhập công bằng nhằm thu hẹp khoảng cách giàu nghèo.",
+      "duration": 35.03,
+      "startTime": 35.75,
+      "endTime": 70.78,
+      "audioUrl": "/audio/lectures/economics/25/sec_1.mp3"
+    },
+    {
+      "id": "sec_2",
+      "title": "2. Xung đột giữa các Mục tiêu Kinh tế Vĩ mô",
+      "selector": "#sec-2",
+      "en": "Section 2 focuses on key macroeconomic conflicts tested heavily in Cambridge Paper 2. Rapid growth and falling unemployment often fuel demand-pull inflation as aggregate demand outpaces productive capacity. Higher domestic incomes also boost spending on imports, worsening a current account deficit, while rapid industrialisation can degrade the environment.",
+      "vi": "Mục 2 tập trung vào các xung đột vĩ mô trọng tâm thường xuất hiện trong đề thi Paper 2. Tăng trưởng nhanh và giảm thất nghiệp dễ châm ngòi cho lạm phát cầu kéo khi tổng cầu vượt năng lực sản xuất. Thu nhập tăng cũng kéo theo chi tiêu cho hàng nhập khẩu tăng vọt làm xấu đi thâm hụt vãng lai, đồng thời công nghiệp hóa nhanh dễ gây ô nhiễm môi trường.",
+      "duration": 42.06,
+      "startTime": 70.78,
+      "endTime": 112.84,
+      "audioUrl": "/audio/lectures/economics/25/sec_2.mp3"
+    },
+    {
+      "id": "sec_3",
+      "title": "3. Hóa giải Xung đột Chính sách",
+      "selector": "#sec-3",
+      "en": "Section 3 shows how governments reconcile conflicts. Rather than relying solely on short-run demand stimulation, governments combine prudent fiscal and monetary management with long-run supply-side investments in education, technology, and infrastructure so productive capacity expands alongside aggregate demand without triggering runaway inflation.",
+      "vi": "Mục 3 chỉ ra cách chính phủ hóa giải xung đột mục tiêu. Thay vì chỉ kích cầu ngắn hạn, chính phủ kết hợp điều hành tài khóa và tiền tệ thận trọng với các chính sách phía cung dài hạn như đầu tư giáo dục, công nghệ và hạ tầng để mở rộng năng lực sản xuất song hành cùng tổng cầu mà không gây lạm phát phi mã.",
+      "duration": 37.72,
+      "startTime": 112.84,
+      "endTime": 150.56,
+      "audioUrl": "/audio/lectures/economics/25/sec_3.mp3"
+    }
+  ]
+}

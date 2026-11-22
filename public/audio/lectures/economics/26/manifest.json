@@ -1,0 +1,85 @@
+{
+  "lectureId": "50251f48-b7ab-4e4e-90e6-15f1c6129591",
+  "courseTitle": "Cambridge IGCSE Economics (0455)",
+  "lectureTitle": "26. Fiscal Policy",
+  "totalDuration": 193.11,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_1": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_2": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_3": {
+      "start": 3,
+      "end": 3
+    },
+    "sec_4": {
+      "start": 4,
+      "end": 4
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 26: Chính sách Tài khóa",
+      "selector": "#sec-header",
+      "en": "Welcome to Lesson 26: Fiscal Policy. We examine how governments adjust taxation and public spending to steer aggregate demand, classify taxes by burden and equity, contrast expansionary and contractionary fiscal stances, and evaluate the real-world limitations of fiscal intervention.",
+      "vi": "Chào mừng các bạn đến với Bài 26: Chính sách Tài khóa. Chúng ta sẽ tìm hiểu cách chính phủ điều chỉnh thuế và chi tiêu công để điều tiết tổng cầu, phân loại các loại thuế theo gánh nặng và tính công bằng, so sánh tài khóa mở rộng với thắt chặt, và đánh giá những hạn chế thực tế của chính sách tài khóa.",
+      "duration": 35.99,
+      "startTime": 0.0,
+      "endTime": 35.99,
+      "audioUrl": "/audio/lectures/economics/26/intro.mp3"
+    },
+    {
+      "id": "sec_1",
+      "title": "1. Chính sách Tài khóa là gì?",
+      "selector": "#sec-1",
+      "en": "Section 1 defines fiscal policy as the deliberate use of government spending and taxation to influence aggregate demand and achieve macroeconomic aims. Government expenditure includes current spending on wages and public services alongside capital spending on long-term infrastructure such as hospitals, railways, and power grids.",
+      "vi": "Mục 1 định nghĩa chính sách tài khóa là việc chính phủ chủ động sử dụng chi tiêu công và thuế khóa để tác động lên tổng cầu và đạt các mục tiêu vĩ mô. Chi tiêu chính phủ gồm chi thường xuyên cho tiền lương, dịch vụ công và chi đầu tư phát triển cho hạ tầng dài hạn như bệnh viện, đường sắt và lưới điện.",
+      "duration": 36.26,
+      "startTime": 35.99,
+      "endTime": 72.25,
+      "audioUrl": "/audio/lectures/economics/26/sec_1.mp3"
+    },
+    {
+      "id": "sec_2",
+      "title": "2. Nguyên lý & Phân loại Thuế khóa",
+      "selector": "#sec-2",
+      "en": "Section 2 classifies taxation. Direct taxes such as income tax and corporation tax are levied directly on earnings and profits, whereas indirect taxes like VAT and excise duties are levied on spending. Taxes are further categorised as progressive, proportional, or regressive depending on how the tax rate changes as income rises.",
+      "vi": "Mục 2 phân loại hệ thống thuế. Thuế trực thu như thuế thu nhập cá nhân và thuế thu nhập doanh nghiệp đánh trực tiếp vào thu nhập và lợi nhuận, còn thuế gián thu như VAT và thuế tiêu thụ đặc biệt đánh vào chi tiêu mua sắm. Ngoài ra thuế còn được chia thành thuế lũy tiến, thuế tỷ lệ cố định và thuế lũy thoái tùy theo tỷ lệ thuế thay đổi ra sao khi thu nhập tăng.",
+      "duration": 42.47,
+      "startTime": 72.25,
+      "endTime": 114.72,
+      "audioUrl": "/audio/lectures/economics/26/sec_2.mp3"
+    },
+    {
+      "id": "sec_3",
+      "title": "3. Tài khóa Mở rộng vs Tài khóa Thắt chặt",
+      "selector": "#sec-3",
+      "en": "Section 3 compares the two stances. During a recession, expansionary fiscal policy cuts taxes and raises public spending to boost disposable income, consumption, investment, and employment. During an inflationary boom, contractionary fiscal policy raises taxes and trims spending to cool excess demand and curb rising prices.",
+      "vi": "Mục 3 so sánh hai hướng điều hành. Khi kinh tế suy thoái, tài khóa mở rộng giảm thuế và tăng chi tiêu công để nâng thu nhập khả dụng, thúc đẩy tiêu dùng, đầu tư và tạo việc làm. Ngược lại, khi kinh tế tăng trưởng nóng gây lạm phát, tài khóa thắt chặt tăng thuế và cắt giảm chi tiêu công nhằm hạ nhiệt tổng cầu và kiềm chế giá cả.",
+      "duration": 42.52,
+      "startTime": 114.72,
+      "endTime": 157.24,
+      "audioUrl": "/audio/lectures/economics/26/sec_3.mp3"
+    },
+    {
+      "id": "sec_4",
+      "title": "4. Đánh giá: Hạn chế của Chính sách Tài khóa",
+      "selector": "#sec-4",
+      "en": "Section 4 equips you for high-mark evaluation. Fiscal policy suffers from time lags in passing budgets, risks crowding out private investment if heavy borrowing pushes up interest rates, may trigger inflation if the economy is near full capacity, and excessive income taxes can create work disincentives.",
+      "vi": "Mục 4 trang bị lập luận đánh giá ăn điểm cao. Chính sách tài khóa gặp độ trễ thời gian khi thông qua ngân sách, có nguy cơ chèn lấn đầu tư tư nhân nếu vay nợ lớn làm tăng lãi suất, dễ gây lạm phát nếu nền kinh tế đã gần toàn dụng năng lực, và thuế thu nhập quá cao có thể làm giảm động lực làm việc.",
+      "duration": 35.87,
+      "startTime": 157.24,
+      "endTime": 193.11,
+      "audioUrl": "/audio/lectures/economics/26/sec_4.mp3"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "lectureId": "33de93b1-9eaf-446f-aa27-ce108d2cae49",
+  "courseTitle": "Cambridge IGCSE Economics (0455)",
+  "lectureTitle": "30. Employment and Unemployment",
+  "totalDuration": 166.34,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_1": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_2": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_3": {
+      "start": 3,
+      "end": 3
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 30: Việc làm và Thất nghiệp",
+      "selector": "#sec-header",
+      "en": "Welcome to Lesson 30: Employment and Unemployment. We explore how unemployment is defined and measured, classify frictional, structural, seasonal, and cyclical unemployment, and evaluate the costs of joblessness to individuals, businesses, and the wider economy.",
+      "vi": "Chào mừng các bạn đến với Bài 30: Việc làm và Thất nghiệp. Chúng ta tìm hiểu cách định nghĩa và đo lường tỷ lệ thất nghiệp, phân loại thất nghiệp cọ xát, cơ cấu, thời vụ và chu kỳ, đồng thời đánh giá cái giá của thất nghiệp đối với cá nhân, doanh nghiệp và toàn bộ nền kinh tế.",
+      "duration": 34.07,
+      "startTime": 0.0,
+      "endTime": 34.07,
+      "audioUrl": "/audio/lectures/economics/30/intro.mp3"
+    },
+    {
+      "id": "sec_1",
+      "title": "1. Định nghĩa & Đo lường Thất nghiệp",
+      "selector": "#sec-1",
+      "en": "Section 1 defines the unemployed as people of working age who are willing and able to work and actively seeking a job but cannot find one. The unemployment rate equals the number of unemployed divided by the total labour force times one hundred, measured using either the Claimant Count or the internationally comparable ILO Labour Force Survey.",
+      "vi": "Mục 1 định nghĩa người thất nghiệp là người trong độ tuổi lao động, có khả năng, sẵn sàng làm việc và đang tích cực tìm việc nhưng chưa tìm được. Tỷ lệ thất nghiệp bằng số người thất nghiệp chia tổng lực lượng lao động nhân một trăm phần trăm, được đo bằng thống kê người nhận trợ cấp thất nghiệp hoặc Khảo sát Lực lượng Lao động theo chuẩn quốc tế ILO.",
+      "duration": 37.29,
+      "startTime": 34.07,
+      "endTime": 71.36,
+      "audioUrl": "/audio/lectures/economics/30/sec_1.mp3"
+    },
+    {
+      "id": "sec_2",
+      "title": "2. Nguyên nhân & Các dạng Thất nghiệp",
+      "selector": "#sec-2",
+      "en": "Section 2 categorises types of unemployment. Frictional unemployment is short-term as workers switch jobs. Structural unemployment arises from long-term shifts in industry or automation leaving skills mismatched. Cyclical or demand-deficient unemployment strikes during recessions when aggregate demand collapses. Seasonal unemployment reflects regular weather or tourism cycles.",
+      "vi": "Mục 2 phân loại các dạng thất nghiệp. Thất nghiệp cọ xát diễn ra ngắn hạn khi người lao động chuyển việc. Thất nghiệp cơ cấu phát sinh khi ngành nghề suy thoái hoặc tự động hóa khiến kỹ năng không còn phù hợp. Thất nghiệp chu kỳ do thiếu cầu bùng phát trong suy thoái khi tổng cầu sụp đổ. Thất nghiệp thời vụ gắn với tính chu kỳ của thời tiết hay du lịch.",
+      "duration": 46.77,
+      "startTime": 71.36,
+      "endTime": 118.13,
+      "audioUrl": "/audio/lectures/economics/30/sec_2.mp3"
+    },
+    {
+      "id": "sec_3",
+      "title": "3. Hậu quả của Thất nghiệp",
+      "selector": "#sec-3",
+      "en": "Section 3 analyses consequences. Individuals suffer falling incomes, skill erosion, and mental stress. Firms experience lower consumer sales, though they may recruit from a larger pool of applicants. Governments face a double fiscal squeeze: lower income tax and VAT receipts alongside soaring welfare benefit payments, while the whole economy wastes productive output inside its PPC.",
+      "vi": "Mục 3 phân tích hậu quả của thất nghiệp. Cá nhân đối mặt với mất thu nhập, mai một kỹ năng và áp lực tâm lý. Doanh nghiệp sụt giảm doanh thu tiêu dùng dù dễ tuyển nhân sự hơn. Chính phủ chịu sức ép ngân sách kép: nguồn thu thuế thu nhập và VAT giảm mạnh trong khi chi trợ cấp thất nghiệp phình to, còn cả nền kinh tế lãng phí sản lượng tiềm năng bên trong đường PPC.",
+      "duration": 48.21,
+      "startTime": 118.13,
+      "endTime": 166.34,
+      "audioUrl": "/audio/lectures/economics/30/sec_3.mp3"
+    }
+  ]
+}
