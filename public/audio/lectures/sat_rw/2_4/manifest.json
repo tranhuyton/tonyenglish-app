@@ -1,0 +1,70 @@
+{
+  "lectureId": "5a121536-14aa-4548-920d-99f096f54160",
+  "courseTitle": "Digital SAT 1500+",
+  "lectureTitle": "2.4 Form, Structure & Sense II: Modifiers, Possessives, Pronouns & Parallelism",
+  "totalDuration": 142.77,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_modifiers": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_possessives": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_pronouns": {
+      "start": 3,
+      "end": 3
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 2.4: Modifiers, Possessives & Pronouns",
+      "selector": "#sec-header",
+      "en": "Welcome to Lesson 2.4: Form, Structure, and Sense Part Two. Today we lock down the remaining four Standard English Conventions skills: dangling modifiers, apostrophes and possessives, pronoun agreement, and logical comparisons.",
+      "vi": "Chào mừng các bạn đến với Bài 2.4: Hình thức, Cấu trúc và Ngữ nghĩa Phần 2. Hôm nay chúng ta hoàn thiện nốt bốn mảng cuối của Ngữ pháp SAT: bổ ngữ lơ lửng, sở hữu cách, đại từ và cấu trúc so sánh song song.",
+      "duration": 29.9,
+      "startTime": 0.0,
+      "endTime": 29.9,
+      "audioUrl": "/audio/lectures/sat_rw/2_4/intro.mp3"
+    },
+    {
+      "id": "sec_modifiers",
+      "title": "1. Dangling Modifiers & Bẫy Sở hữu cách giả Chủ ngữ",
+      "selector": "#sec-modifiers",
+      "en": "Section 1 gives you the ironclad modifier rule: whenever a sentence opens with a descriptive phrase followed by a comma, the grammatical subject immediately after the comma must be the exact person or thing being described. Watch out for the 750-plus possessive trap: in Marie Curie's notebooks, the subject is notebooks, not Marie Curie.",
+      "vi": "Mục 1 đưa ra quy tắc thép cho bổ ngữ mở đầu câu: danh từ làm chủ ngữ đứng ngay sau dấu phẩy bắt buộc phải chính là đối tượng được mô tả. Cảnh giác tuyệt đối với bẫy sở hữu cách: trong cụm Marie Curie's notebooks, chủ ngữ thật là những cuốn sổ chứ không phải nhà khoa học Marie Curie.",
+      "duration": 38.37,
+      "startTime": 29.9,
+      "endTime": 68.27,
+      "audioUrl": "/audio/lectures/sat_rw/2_4/sec_modifiers.mp3"
+    },
+    {
+      "id": "sec_possessives",
+      "title": "2. Dấu nháy đơn & Sở hữu cách",
+      "selector": "#sec-possessives",
+      "en": "Section 2 demystifies apostrophes. Check two questions: does the noun own the word right after it, and is the owner singular or plural? Remember that its with no apostrophe shows possession, it's always means it is or it has, its-apostrophe does not exist in English, and whose works for both people and inanimate objects.",
+      "vi": "Mục 2 hệ thống hóa dấu nháy sở hữu. Chỉ cần kiểm tra hai ý: danh từ đó có sở hữu từ ngay phía sau không, và chủ sở hữu là số ít hay số nhiều. Luôn nhớ its không phẩy là sở hữu, it's là viết tắt của it is, dạng its phẩy sau s không tồn tại, và whose dùng được cho cả người lẫn vật.",
+      "duration": 39.64,
+      "startTime": 68.27,
+      "endTime": 107.91,
+      "audioUrl": "/audio/lectures/sat_rw/2_4/sec_possessives.mp3"
+    },
+    {
+      "id": "sec_pronouns",
+      "title": "3. Đại từ, So sánh tương đồng & Song song",
+      "selector": "#sec-pronouns",
+      "en": "Section 3 covers pronoun matching and apples-to-apples comparisons. Collective nouns like a committee or a species take singular pronouns it and its on the American SAT. For comparisons, make sure you compare like with like by using that of for singular nouns and those of for plural nouns.",
+      "vi": "Mục 3 chốt quy tắc đại từ và so sánh tương đồng. Danh từ tập hợp như committee hay species trên SAT Mỹ luôn quy về số ít it và its. Khi so sánh hai đối tượng, luôn đối chiếu cùng cấp độ bằng cách dùng that of cho danh từ số ít và those of cho danh từ số nhiều.",
+      "duration": 34.86,
+      "startTime": 107.91,
+      "endTime": 142.77,
+      "audioUrl": "/audio/lectures/sat_rw/2_4/sec_pronouns.mp3"
+    }
+  ]
+}

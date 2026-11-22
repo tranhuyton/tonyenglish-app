@@ -1,0 +1,70 @@
+{
+  "lectureId": "4a37815c-c732-4886-bf35-bacbdbaacd25",
+  "courseTitle": "Digital SAT 1500+",
+  "lectureTitle": "3.2 Rhetorical Synthesis: The Goal-First SOP (100% Accuracy in 25 Seconds)",
+  "totalDuration": 139.32,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_goal_first": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_six_goals": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_fact_trap": {
+      "start": 3,
+      "end": 3
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 3.2: Rhetorical Synthesis — Quy trình Goal-First",
+      "selector": "#sec-header",
+      "en": "Welcome to Lesson 3.2: Rhetorical Synthesis. These bullet-point questions sit at the end of every module and can be solved in twenty-five seconds with one hundred percent accuracy once you stop reading the notes first.",
+      "vi": "Chào mừng các bạn đến với Bài 3.2: Tổng hợp tu từ Rhetorical Synthesis. Những câu ghi chú gạch đầu dòng ở cuối mỗi module có thể được giải quyết trong 25 giây với độ chính xác tuyệt đối nếu bạn bỏ thói quen đọc hết ghi chú trước.",
+      "duration": 28.29,
+      "startTime": 0.0,
+      "endTime": 28.29,
+      "audioUrl": "/audio/lectures/sat_rw/3_2/intro.mp3"
+    },
+    {
+      "id": "sec_goal_first",
+      "title": "1. Quy trình 3 bước Goal-First SOP",
+      "selector": "#sec-goal-first",
+      "en": "Section 1 presents the Goal-First routine. Step one: skip the notes and read the exact student goal in the prompt first. Step two: scan the four choices and slash every option that fails to accomplish that exact verb and target. Step three: verify your surviving choice against the bullet notes for factual accuracy.",
+      "vi": "Mục 1 giới thiệu quy trình Goal-First ba bước. Bước một: bỏ qua phần gạch đầu dòng và đọc thẳng mục tiêu của học sinh trong câu hỏi. Bước hai: quét bốn đáp án và loại mọi lựa chọn không đáp ứng đúng yêu cầu đó. Bước ba: đối chiếu nhanh đáp án còn lại với ghi chú để kiểm tra tính chính xác dữ kiện.",
+      "duration": 40.77,
+      "startTime": 28.29,
+      "endTime": 69.06,
+      "audioUrl": "/audio/lectures/sat_rw/3_2/sec_goal_first.mp3"
+    },
+    {
+      "id": "sec_six_goals",
+      "title": "2. Sáu dạng mục tiêu kinh điển",
+      "selector": "#sec-six-goals",
+      "en": "Section 2 details the six recurring prompt goals: emphasizing a difference or a similarity—both of which require mentioning both subjects—introducing a subject to an unfamiliar audience by defining who or what it is, distinguishing study methodology from study findings, and pairing a broad generalization with a concrete supporting example.",
+      "vi": "Mục 2 tổng kết sáu dạng mục tiêu quen thuộc nhất: nhấn mạnh điểm khác hay giống nhau đều phải gọi tên cả hai đối tượng; giới thiệu với khán giả chưa biết phải có định nghĩa rõ ràng; phân biệt giữa phương pháp nghiên cứu và kết quả tìm thấy; và luôn kết hợp nhận định khái quát kèm ví dụ cụ thể khi đề yêu cầu.",
+      "duration": 38.13,
+      "startTime": 69.06,
+      "endTime": 107.19,
+      "audioUrl": "/audio/lectures/sat_rw/3_2/sec_six_goals.mp3"
+    },
+    {
+      "id": "sec_fact_trap",
+      "title": "3. Bẫy Đúng Goal nhưng Sai Fact ở Hard Module 2",
+      "selector": "#sec-fact-trap",
+      "en": "Section 3 warns about a Hard Module 2 twist: occasionally two options satisfy the stated goal, but one silently swaps dates, names, or results from the bullet list. Always spend five seconds verifying every fact in your final answer against the notes.",
+      "vi": "Mục 3 cảnh báo bẫy nâng cao ở Hard Module 2: đôi khi có hai đáp án cùng khớp mục tiêu, nhưng một đáp án cố tình tráo năm, tên tác giả hoặc kết quả giữa hai đối tượng. Luôn dành năm giây kiểm chứng lại dữ kiện với danh sách ghi chú trước khi chốt.",
+      "duration": 32.13,
+      "startTime": 107.19,
+      "endTime": 139.32,
+      "audioUrl": "/audio/lectures/sat_rw/3_2/sec_fact_trap.mp3"
+    }
+  ]
+}

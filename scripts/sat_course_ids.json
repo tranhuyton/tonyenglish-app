@@ -1,0 +1,71 @@
+{
+  "course_id": "871fdd8e-96a4-4e4b-92a2-2cd41021ee82",
+  "course_title": "Digital SAT 1500+",
+  "modules": {
+    "rw_m1": "91af2c7f-6007-4e9d-ac86-9d244b0a5232",
+    "rw_m2": "dddb717d-2e4e-451e-9b21-12395e7b953b",
+    "rw_m3": "8607d21b-57eb-402d-ab1b-b88b5f9aba03",
+    "rw_m4": "beceac49-6721-443d-a162-9e0688701b18",
+    "rw_m5": "3fd9786b-a3e7-47f9-be90-d111ddb54964"
+  },
+  "folders": {
+    "rw_root": "5b9c521c-0944-4918-89e7-2d69f0f31a17",
+    "rw_drills": "05a5dd52-660f-4c37-b7ed-800cbad9244d",
+    "rw_mocks": "9c1414db-7cf8-480f-af64-b439db6c975b",
+    "rw_vocab": "040aaca0-a8bb-4c20-835b-28357f11fefb"
+  },
+  "lectures": {
+    "1_1": "762e8fcc-2bb8-4809-a1be-3e2356caf576",
+    "2_1": "02b0b21b-4740-4e5b-a070-3cf632ddfb64",
+    "2_2": "26b563d3-cfc5-4b2a-bf3c-7128a24af881",
+    "2_3": "9b144d9c-e93c-4db0-9f19-5c8cfe0ccea0",
+    "2_4": "5a121536-14aa-4548-920d-99f096f54160",
+    "3_1": "558ee953-ce61-4ebc-be42-85c8d60fd836",
+    "3_2": "4a37815c-c732-4886-bf35-bacbdbaacd25",
+    "4_1": "0e46ac2c-a319-4fcf-af0e-32c04b1e9ff5",
+    "4_2": "eb111af5-bdd4-40a9-86f9-9eb8347fab9a",
+    "4_3": "530fa446-d1b1-4244-ab92-ca929a7d2f13",
+    "4_4": "c855c46d-4136-4200-b143-a4ea6c5610f3",
+    "5_1": "249dd101-2a16-4007-90f6-792dcc827d55",
+    "5_2": "068c6e9b-42ea-40d3-8ea9-ececf275d722",
+    "5_3": "987fafaa-1b5b-4465-8b15-42726144a03f",
+    "5_4": "2a04e519-685c-433a-8064-378947cdc9cb",
+    "5_5": "6a789ece-9e81-434c-a54c-39200c650561"
+  },
+  "drills": {
+    "drill_1_1": "48255dd4-55d2-4c16-9a01-05cd56b21735",
+    "drill_2_1": "3ef84831-d1f7-4241-9d4a-8a11c0cb2a1b",
+    "drill_2_2": "dfaffed1-436c-46c0-a7b9-3046b0e923db",
+    "drill_2_3": "81236c77-fd93-4330-8b17-c4c0ac160e14",
+    "drill_2_4": "d2466137-f128-4fd2-a1a3-a0f5a00c2fff",
+    "drill_3_1": "becd87c9-4932-4824-8a67-2437236703dd",
+    "drill_3_2": "95d72999-1e2c-4128-9cf0-002405462ea2",
+    "drill_4_1": "186b7133-a5cf-4775-98a6-95ea9a369f20",
+    "drill_4_2": "4fbb47d2-4fe0-41b9-aa25-8ca876514fae",
+    "drill_4_3": "87c1f1d3-77aa-4463-9ea8-04de153c80b9",
+    "drill_4_4": "6dbab6a8-c9ed-49fe-a1cc-36b3fdb3e978",
+    "drill_5_1": "200f1c4d-8d5e-4b1b-b7ff-f0229eb57f61",
+    "drill_5_2": "92e0874b-3ba4-4d52-8f5d-ed984d281251",
+    "drill_5_3": "57fcc5e5-adb0-4053-99ff-f5bf0c37c641",
+    "drill_5_4": "930a2913-a69b-4c5e-b03f-4ee5504fd8c9",
+    "drill_5_5": "3181d3f5-328f-4d18-8dc1-afcbc783e01d"
+  },
+  "mocks": {
+    "mock_01": "5aa708ac-79f8-46b0-a0fd-da95248b3263",
+    "mock_02": "ce09f7d3-7b23-47e4-84a1-4e881f0f5fc0",
+    "mock_03": "23c217e0-3697-4167-bf32-3c328a4cb108",
+    "mock_04": "40587f91-c199-4337-9cad-28c6f561ff33"
+  },
+  "vocab_games": {
+    "sat_vocab_01": "15081527-e79b-402e-ada6-a956b9263814",
+    "sat_vocab_02": "1c320655-edfe-48bc-ab4f-87debec2b70b",
+    "sat_vocab_03": "f01fd259-46c1-4776-b7eb-6c88d5a71218",
+    "sat_vocab_04": "933f0ee3-78f9-4077-9f3d-dac97a463abd",
+    "sat_vocab_05": "cb2a9989-1ad6-4adc-8bde-b639cc9138dd",
+    "sat_vocab_06": "76507534-97c5-4797-b89e-4766af4c4852",
+    "sat_vocab_07": "cfff23fe-3188-4854-8824-c9a0b78489da",
+    "sat_vocab_08": "9444323e-2bfd-4ec4-95e3-d6767dd96d36",
+    "sat_vocab_09": "0b1021bc-811d-4cee-a604-ea32b08e1d0c",
+    "sat_vocab_10": "81727bcc-b583-45af-9e9d-320f17efa004"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "lectureId": "987fafaa-1b5b-4465-8b15-42726144a03f",
+  "courseTitle": "Digital SAT 1500+",
+  "lectureTitle": "5.3 Command of Evidence — Literary & Historical Quotations",
+  "totalDuration": 111.9,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_checklist": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_lit_traps": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_metaphor": {
+      "start": 3,
+      "end": 3
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 5.3: Trích dẫn Văn học & Lịch sử",
+      "selector": "#sec-header",
+      "en": "Welcome to Lesson 5.3: Command of Evidence with Literary and Historical Quotations. Instead of getting lost in nineteenth-century prose or poetry, you will convert every critic's claim into a strict multi-part checklist.",
+      "vi": "Chào mừng các bạn đến với Bài 5.3: Bằng chứng trích dẫn Văn học và Lịch sử. Thay vì bị choáng trước thơ hay tiểu thuyết cổ, bạn sẽ chuyển mọi nhận định phê bình thành một danh sách kiểm tra từng vế cực kỳ chính xác.",
+      "duration": 27.78,
+      "startTime": 0.0,
+      "endTime": 27.78,
+      "audioUrl": "/audio/lectures/sat_rw/5_3/intro.mp3"
+    },
+    {
+      "id": "sec_checklist",
+      "title": "1. Phương pháp Checklist Từng Vế",
+      "selector": "#sec-checklist",
+      "en": "Section 1 demonstrates Multi-Part Claim Checklisting. Break the claim into two or three concrete checkboxes—especially whenever words like both, yet, or while appear. Any quotation that matches only half of the claim must be crossed out immediately.",
+      "vi": "Mục 1 hướng dẫn phương pháp lập Checklist từng vế. Hãy tách nhận định phê bình thành hai hoặc ba tiêu chí bắt buộc—đặc biệt khi câu chứa từ both, yet hoặc while. Bất kỳ câu trích nào chỉ khớp được một nửa yêu cầu đều phải gạch bỏ ngay lập tức.",
+      "duration": 31.91,
+      "startTime": 27.78,
+      "endTime": 59.69,
+      "audioUrl": "/audio/lectures/sat_rw/5_3/sec_checklist.mp3"
+    },
+    {
+      "id": "sec_lit_traps",
+      "title": "2. Ba bẫy kinh điển của câu trích dẫn văn học",
+      "selector": "#sec-lit-traps",
+      "en": "Section 2 warns against three traps: Topic Keyword Lures that repeat nouns from the claim without proving its point, Half-Match quotations missing one key adjective, and Wrong-Direction quotes that reverse which character holds which attitude.",
+      "vi": "Mục 2 vạch trần ba bẫy hay gặp: bẫy lặp từ khóa chủ đề nhưng lệch luận điểm, bẫy chỉ khớp một nửa nhận định, và bẫy đảo chiều nhân vật khiến thái độ bị gán nhầm người.",
+      "duration": 24.76,
+      "startTime": 59.69,
+      "endTime": 84.45,
+      "audioUrl": "/audio/lectures/sat_rw/5_3/sec_lit_traps.mp3"
+    },
+    {
+      "id": "sec_metaphor",
+      "title": "3. Giải mã ẩn dụ thơ nhanh gọn",
+      "selector": "#sec-metaphor",
+      "en": "Section 3 shows how to translate poetic imagery directly into plain English themes—matching motifs of winter and stone to impermanence, embers and tides to endurance, and polite understatement to quiet irony.",
+      "vi": "Mục 3 hướng dẫn dịch nhanh hình ảnh thơ ẩn dụ sang ý nghĩa trực diện: mùa đông hay đá vỡ thường gợi sự tàn phai, than hồng hay thủy triều gợi sự bền bỉ, còn sự vênh giữa lời lẽ lịch sự và thực tế thường báo hiệu giọng điệu mỉa mai.",
+      "duration": 27.45,
+      "startTime": 84.45,
+      "endTime": 111.9,
+      "audioUrl": "/audio/lectures/sat_rw/5_3/sec_metaphor.mp3"
+    }
+  ]
+}

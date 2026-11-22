@@ -234,6 +234,26 @@ const LECTURE_MANIFEST_MAP: Record<string, string> = {
   '0497aa28-0b26-45b3-a233-74fb121c1824': '/audio/lectures/economics/37/manifest.json', // 37. Globalisation, Free Trade and Protection
   'ecb53067-d586-4806-9702-e52ad5c659e1': '/audio/lectures/economics/38/manifest.json', // 38. Foreign Exchange Rates
   '2d85d85e-815b-44f3-b6dd-82585e41b669': '/audio/lectures/economics/39/manifest.json', // 39. Current Account of Balance of Payments
+
+  // =========================================================================
+  // DIGITAL SAT 1500+ — READING & WRITING BILINGUAL AUDIO LECTURES (US-EN + VI)
+  // =========================================================================
+  '762e8fcc-2bb8-4809-a1be-3e2356caf576': '/audio/lectures/sat_rw/1_1/manifest.json', // 1.1 Digital SAT 1500+ Blueprint, Adaptive Routing & Pacing
+  '02b0b21b-4740-4e5b-a070-3cf632ddfb64': '/audio/lectures/sat_rw/2_1/manifest.json', // 2.1 Boundaries I: Clauses, Linking & Core Punctuation
+  '26b563d3-cfc5-4b2a-bf3c-7128a24af881': '/audio/lectures/sat_rw/2_2/manifest.json', // 2.2 Boundaries II: Essential vs. Non-Essential Elements & Punctuation Traps
+  '9b144d9c-e93c-4db0-9f19-5c8cfe0ccea0': '/audio/lectures/sat_rw/2_3/manifest.json', // 2.3 Form, Structure & Sense I: Subject–Verb Agreement, Finite Verbs & Tense
+  '5a121536-14aa-4548-920d-99f096f54160': '/audio/lectures/sat_rw/2_4/manifest.json', // 2.4 Form, Structure & Sense II: Modifiers, Possessives, Pronouns & Parallelism
+  '558ee953-ce61-4ebc-be42-85c8d60fd836': '/audio/lectures/sat_rw/3_1/manifest.json', // 3.1 Transitions: High-Level Logical Connectors & Hard-Tier Nuance Pairs
+  '4a37815c-c732-4886-bf35-bacbdbaacd25': '/audio/lectures/sat_rw/3_2/manifest.json', // 3.2 Rhetorical Synthesis: The Goal-First SOP
+  '0e46ac2c-a319-4fcf-af0e-32c04b1e9ff5': '/audio/lectures/sat_rw/4_1/manifest.json', // 4.1 Words in Context I: Predict-Before-Peek & Secondary Meanings
+  'eb111af5-bdd4-40a9-86f9-9eb8347fab9a': '/audio/lectures/sat_rw/4_2/manifest.json', // 4.2 Words in Context II: 750+ Elite Lexicon & Nuance Precision
+  '530fa446-d1b1-4244-ab92-ca929a7d2f13': '/audio/lectures/sat_rw/4_3/manifest.json', // 4.3 Text Structure, Main Purpose & Underlined Sentence Function
+  'c855c46d-4136-4200-b143-a4ea6c5610f3': '/audio/lectures/sat_rw/4_4/manifest.json', // 4.4 Cross-Text Connections: Dual-Passage Mapping & Hypothetical Response
+  '249dd101-2a16-4007-90f6-792dcc827d55': '/audio/lectures/sat_rw/5_1/manifest.json', // 5.1 Central Ideas & Details: Dense Prose & Poetry
+  '068c6e9b-42ea-40d3-8ea9-ececf275d722': '/audio/lectures/sat_rw/5_2/manifest.json', // 5.2 Command of Evidence — Scientific Claims
+  '987fafaa-1b5b-4465-8b15-42726144a03f': '/audio/lectures/sat_rw/5_3/manifest.json', // 5.3 Command of Evidence — Literary & Historical Quotations
+  '2a04e519-685c-433a-8064-378947cdc9cb': '/audio/lectures/sat_rw/5_4/manifest.json', // 5.4 Command of Evidence — Quantitative Charts & Tables
+  '6a789ece-9e81-434c-a54c-39200c650561': '/audio/lectures/sat_rw/5_5/manifest.json', // 5.5 Inferences: Tight Deductive Completion (1-Millimeter Rule)
 };
 
 type LectureVideoItem = { title: string; videoId: string };

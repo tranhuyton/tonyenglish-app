@@ -1,0 +1,70 @@
+{
+  "lectureId": "068c6e9b-42ea-40d3-8ea9-ececf275d722",
+  "courseTitle": "Digital SAT 1500+",
+  "lectureTitle": "5.2 Command of Evidence — Textual: Supporting & Weakening Scientific Hypotheses",
+  "totalDuration": 134.13,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_claim_lock": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_support_weaken": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_science_traps": {
+      "start": 3,
+      "end": 3
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 5.2: Command of Evidence — Khoa học",
+      "selector": "#sec-header",
+      "en": "Welcome to Lesson 5.2: Textual Command of Evidence for Scientific Claims. These Support and Weaken questions are the signature separator of Hard Module 2—and they become crystal clear once you translate every hypothesis into an X-to-Y causal arrow.",
+      "vi": "Chào mừng các bạn đến với Bài 5.2: Bằng chứng văn bản cho Giả thuyết Khoa học. Dạng câu hỏi Ủng hộ hay Làm suy yếu giả thuyết là cửa ải phân hóa khốc liệt nhất của Hard Module 2, nhưng sẽ trở nên cực kỳ rõ ràng khi bạn quy mọi giả thuyết về trục nhân quả X dẫn tới Y.",
+      "duration": 33.26,
+      "startTime": 0.0,
+      "endTime": 33.26,
+      "audioUrl": "/audio/lectures/sat_rw/5_2/intro.mp3"
+    },
+    {
+      "id": "sec_claim_lock",
+      "title": "1. Khóa đúng Chủ sở hữu & Trục X → Y",
+      "selector": "#sec-claim-lock",
+      "en": "Section 1 shows the Hypothesis Lock. First, confirm whose hypothesis the question asks about—never mix up an old consensus with the researcher's new proposal. Second, boil that exact claim down to a clean two-variable arrow: Cause X produces Effect Y.",
+      "vi": "Mục 1 hướng dẫn kỹ thuật Khóa Giả thuyết. Trước hết phải xác minh chính xác câu hỏi muốn chứng minh hay bác bỏ giả thuyết của ai, tránh nhầm giữa quan điểm cũ và đề xuất mới. Sau đó rút gọn ngay giả thuyết ấy thành mũi tên hai biến: Nguyên nhân X tạo ra Hệ quả Y.",
+      "duration": 33.04,
+      "startTime": 33.26,
+      "endTime": 66.3,
+      "audioUrl": "/audio/lectures/sat_rw/5_2/sec_claim_lock.mp3"
+    },
+    {
+      "id": "sec_support_weaken",
+      "title": "2. Ma trận Support vs. Weaken chuẩn 780–800",
+      "selector": "#sec-support-weaken",
+      "en": "Section 2 details the exact logic of proof. To directly support X causes Y, show that adding X produces Y while removing X eliminates Y. To directly weaken it, deploy one of three knockout blows: X occurs without Y, Y occurs without X, or an alternative confounding variable Z actually drives Y.",
+      "vi": "Mục 2 trình bày ma trận chứng minh chuẩn xác. Để ủng hộ trực tiếp X gây ra Y, hãy tìm bằng chứng có X thì có Y và khi bỏ X ở nhóm đối chứng thì Y biến mất. Để làm suy yếu trực tiếp, tìm một trong ba đòn quyết định: có X mà không có Y, không có X vẫn có Y, hoặc một biến nhiễu Z khác mới là nguyên nhân thật sự.",
+      "duration": 41.49,
+      "startTime": 66.3,
+      "endTime": 107.79,
+      "audioUrl": "/audio/lectures/sat_rw/5_2/sec_support_weaken.mp3"
+    },
+    {
+      "id": "sec_science_traps",
+      "title": "3. Ba bẫy kinh điển của bài khoa học",
+      "selector": "#sec-science-traps",
+      "en": "Section 3 highlights the three traps to eliminate: findings lacking any control comparison, Opposite-Direction lures that support when the prompt demands weaken, and adjacent-topic drift that sounds scientific while ignoring variable X altogether.",
+      "vi": "Mục 3 cảnh báo ba cạm bẫy phổ biến: dữ kiện thiếu nhóm đối chứng, đáp án ngược chiều khi đọc vội bỏ sót chữ weaken, và thông tin nghe rất khoa học nhưng trôi lệch hẳn khỏi biến X của giả thuyết.",
+      "duration": 26.34,
+      "startTime": 107.79,
+      "endTime": 134.13,
+      "audioUrl": "/audio/lectures/sat_rw/5_2/sec_science_traps.mp3"
+    }
+  ]
+}

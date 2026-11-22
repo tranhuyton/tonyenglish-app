@@ -1,0 +1,85 @@
+{
+  "lectureId": "762e8fcc-2bb8-4809-a1be-3e2356caf576",
+  "courseTitle": "Digital SAT 1500+",
+  "lectureTitle": "1.1 Digital SAT 1500+ Blueprint, Adaptive Routing & Pacing",
+  "totalDuration": 231.42,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_blueprint": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_triage": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_traps": {
+      "start": 3,
+      "end": 3
+    },
+    "sec_mindset": {
+      "start": 4,
+      "end": 4
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 1.1: Kiến trúc Digital SAT 1500+",
+      "selector": "#sec-header",
+      "en": "Welcome to Digital SAT 1500 Plus, Lesson 1.1: Blueprint, Adaptive Routing, and Triage Pacing. To break 750 in Reading and Writing, strong English alone is not enough. You must master the adaptive test architecture, optimize your thirty-two-minute pacing strategy, and systematically dismantle the five classic College Board trap archetypes.",
+      "vi": "Chào mừng các bạn đến với khóa Digital SAT 1500+, Bài 1.1: Kiến trúc Đề thi, Cơ chế Phân nhánh Adaptive và Chiến thuật Triage. Để bứt phá mốc 750–800 phần Ngôn ngữ, giỏi tiếng Anh thôi là chưa đủ: bạn phải làm chủ luật chơi thích ứng, phân bổ 32 phút thông minh và nhìn thấu 5 khuôn bẫy kinh điển của College Board.",
+      "duration": 44.85,
+      "startTime": 0.0,
+      "endTime": 44.85,
+      "audioUrl": "/audio/lectures/sat_rw/1_1/intro.mp3"
+    },
+    {
+      "id": "sec_blueprint",
+      "title": "1. Cấu trúc 4 Domains & Adaptive Routing",
+      "selector": "#sec-blueprint",
+      "en": "Section 1 maps the Reading and Writing blueprint. Every module contains twenty-seven discrete questions spanning four content domains in a predictable sequence: Craft and Structure first, followed by Information and Ideas, then Standard English Conventions, and finally Expression of Ideas. Your Module 1 accuracy determines whether you route into Hard Module 2—essential for any score above six hundred—or Lower Module 2, which caps your maximum score.",
+      "vi": "Mục 1 giải mã cấu trúc 4 miền kiến thức. Mỗi module gồm 27 câu hỏi sắp xếp theo đúng thứ tự cố định: mở đầu là Craft and Structure, tiếp theo là vùng khó nhất Information and Ideas, rồi đến Ngữ pháp Standard English Conventions và chốt lại bằng Expression of Ideas. Thành tích ở Module 1 quyết định bạn có vào được Hard Module 2 để tranh điểm 700–800 hay bị khóa trần ở mức 600.",
+      "duration": 53.9,
+      "startTime": 44.85,
+      "endTime": 98.75,
+      "audioUrl": "/audio/lectures/sat_rw/1_1/sec_blueprint.mp3"
+    },
+    {
+      "id": "sec_triage",
+      "title": "2. Chiến thuật Triage Order (Không bao giờ thiếu giờ)",
+      "selector": "#sec-triage",
+      "en": "Section 2 introduces the elite Triage Order. Instead of marching linearly from question one to twenty-seven and stalling on dense reading items in the middle, jump immediately to question sixteen or seventeen and sweep all Grammar, Transitions, and Rhetorical Synthesis items in seven to eight minutes with zero errors. Then clear Words in Context, banking up to sixteen uninterrupted minutes for the toughest Hard Module 2 reading gauntlet.",
+      "vi": "Mục 2 trình bày chiến thuật Triage chuẩn 780–800. Thay vì làm tuần tự rồi kẹt giờ ở giữa bài, hãy nhảy thẳng tới câu 16–17 để quét sạch nhóm Ngữ pháp, Từ nối và Tổng hợp ghi chú trong 7–8 phút với độ chính xác 100%. Sau đó quay lại xử lý từ vựng đầu bài, để dành trọn 15–16 phút đầu óc tỉnh táo nhất cho cụm câu Đọc hiểu phân hóa khó nhất.",
+      "duration": 51.5,
+      "startTime": 98.75,
+      "endTime": 150.25,
+      "audioUrl": "/audio/lectures/sat_rw/1_1/sec_triage.mp3"
+    },
+    {
+      "id": "sec_traps",
+      "title": "3. Giải phẫu 5 Mẫu Bẫy Kinh Điển",
+      "selector": "#sec-traps",
+      "en": "Section 3 dissects the five recurring College Board traps: Out of Scope extrapolations, Too Extreme absolute modifiers like solely or never, Half-Right Half-Wrong lures that hide an error in the final three words, Reversed Logic that swaps cause and effect, and True Data Wrong Claim distractors in chart questions. Recognizing these blueprints turns reading into an exact science.",
+      "vi": "Mục 3 giải phẫu 5 mẫu bẫy kinh điển: Suy diễn ngoài văn bản, Ngôn từ cực đoan, Bẫy nửa đúng nửa sai giấu lỗi ở 3 từ cuối, Đảo ngược nhân quả hoặc tráo vai tác giả, và Bẫy đúng số liệu nhưng sai luận điểm. Nhận diện được 5 khuôn bẫy này giúp bạn biến Đọc hiểu thành một môn khoa học chính xác.",
+      "duration": 42.11,
+      "startTime": 150.25,
+      "endTime": 192.36,
+      "audioUrl": "/audio/lectures/sat_rw/1_1/sec_traps.mp3"
+    },
+    {
+      "id": "sec_mindset",
+      "title": "4. Tư duy Loại trừ Chủ động (Active Elimination)",
+      "selector": "#sec-mindset",
+      "en": "Finally, adopt active elimination. High scorers do not search for an option that sounds nice; they prove why three choices are objectively wrong using the Bluebook Option Eliminator. Remember: on the Digital SAT, the passage is the entire universe, and a single unsupported word disqualifies an entire answer choice.",
+      "vi": "Cuối cùng, hãy rèn thói quen loại trừ chủ động. Thí sinh 780+ không tìm đáp án nghe có vẻ hay mà chứng minh lý do gạch bỏ 3 đáp án sai bằng nút gạch ngang trên Bluebook. Hãy nhớ: trên SAT, đoạn văn là vũ trụ duy nhất, chỉ cần một từ không có bằng chứng là đủ loại cả phương án đó.",
+      "duration": 39.06,
+      "startTime": 192.36,
+      "endTime": 231.42,
+      "audioUrl": "/audio/lectures/sat_rw/1_1/sec_mindset.mp3"
+    }
+  ]
+}

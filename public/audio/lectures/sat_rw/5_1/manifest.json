@@ -1,0 +1,70 @@
+{
+  "lectureId": "249dd101-2a16-4007-90f6-792dcc827d55",
+  "courseTitle": "Digital SAT 1500+",
+  "lectureTitle": "5.1 Central Ideas & Details: Decoding Dense Academic Prose & 19th-Century Poetry",
+  "totalDuration": 140.08,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_main_vs_detail": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_four_traps": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_poetry_detail": {
+      "start": 3,
+      "end": 3
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 5.1: Central Ideas & Details",
+      "selector": "#sec-header",
+      "en": "Welcome to Module 5, the Hard Module 2 Gauntlet. Lesson 5.1 tackles Central Ideas and Details—the foundation of Information and Ideas. Mastering accurate paraphrasing while rejecting word-salad traps is essential for breaking 750.",
+      "vi": "Chào mừng các bạn bước vào Module 5, vùng phân hóa quyết định của Hard Module 2. Bài 5.1 xử lý dạng Ý chính và Chi tiết—nền móng của miền Information and Ideas. Làm chủ kỹ năng nhận diện diễn giải tương đương và loại bỏ bẫy nhại chữ là chìa khóa vượt mốc 750.",
+      "duration": 35.73,
+      "startTime": 0.0,
+      "endTime": 35.73,
+      "audioUrl": "/audio/lectures/sat_rw/5_1/intro.mp3"
+    },
+    {
+      "id": "sec_main_vs_detail",
+      "title": "1. Tách chiến thuật Main Idea vs. Detail",
+      "selector": "#sec-main-vs-detail",
+      "en": "Section 1 distinguishes Main Idea from Detail. For Main Idea, synthesize the subject, contrast pivot, and central conclusion across the whole passage. For Detail questions, locate the exact anchor sentence and match its direct paraphrase. Beware the Word-Salad Trap: wrong answers often recycle flashy words straight from the passage while scrambling their actual relationship.",
+      "vi": "Mục 1 tách biệt chiến thuật hai tiểu dạng. Với Ý chính, hãy gom chủ thể, bước ngoặt đối lập và kết luận bao trùm cả đoạn. Với Chi tiết, tìm đúng câu chứa từ khóa rồi khớp bản diễn đạt lại sát nghĩa. Đặc biệt tránh bẫy nhại chữ: đáp án sai thường chép y nguyên từ vựng nổi bật trong bài nhưng ghép sai mối quan hệ.",
+      "duration": 45.33,
+      "startTime": 35.73,
+      "endTime": 81.06,
+      "audioUrl": "/audio/lectures/sat_rw/5_1/sec_main_vs_detail.mp3"
+    },
+    {
+      "id": "sec_four_traps",
+      "title": "2. Bốn bẫy chết người của Central Ideas & Details",
+      "selector": "#sec-four-traps",
+      "en": "Section 2 exposes four classic distractors: Too Narrow choices that summarize only one supporting example; Too Broad extrapolations; Unsupported Comparisons that sneak in words like more than or superior; and Subtle Distortions—for instance, turning unable to verify into proved false.",
+      "vi": "Mục 2 vạch trần bốn cái bẫy kinh điển: đáp án quá hẹp chỉ tóm tắt một ví dụ lẻ; suy rộng quá phạm vi bài; so sánh không có căn cứ khi bài không hề nói cái nào hơn cái nào; và đánh tráo sắc thái tinh vi, chẳng hạn biến chưa thể xác minh thành đã chứng minh là sai.",
+      "duration": 35.08,
+      "startTime": 81.06,
+      "endTime": 116.14,
+      "audioUrl": "/audio/lectures/sat_rw/5_1/sec_four_traps.mp3"
+    },
+    {
+      "id": "sec_poetry_detail",
+      "title": "3. Lột bỏ tính từ hoa mỹ trong văn học & thơ cổ",
+      "selector": "#sec-poetry-detail",
+      "en": "Section 3 shows how to strip ornate nineteenth-century prose and poetry down to its core subject-verb skeleton. Ignore decorative adjectives on your first pass and lock onto the exact emotional or narrative action.",
+      "vi": "Mục 3 hướng dẫn cách đọc nhanh văn học và thơ cổ thế kỷ 19: lược bỏ các cụm tính từ trang trí ở lượt đọc đầu để tóm gọn ngay bộ khung chủ ngữ và hành động cốt lõi của nhân vật.",
+      "duration": 23.94,
+      "startTime": 116.14,
+      "endTime": 140.08,
+      "audioUrl": "/audio/lectures/sat_rw/5_1/sec_poetry_detail.mp3"
+    }
+  ]
+}

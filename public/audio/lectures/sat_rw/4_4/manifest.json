@@ -1,0 +1,70 @@
+{
+  "lectureId": "c855c46d-4136-4200-b143-a4ea6c5610f3",
+  "courseTitle": "Digital SAT 1500+",
+  "lectureTitle": "4.4 Cross-Text Connections: Dual-Passage Mapping & Hypothetical Response",
+  "totalDuration": 116.8,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_matrix": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_hypothetical": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_dual_traps": {
+      "start": 3,
+      "end": 3
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 4.4: Cross-Text Connections — So sánh 2 đoạn văn",
+      "selector": "#sec-header",
+      "en": "Welcome to Lesson 4.4: Cross-Text Connections. Dual-passage items test your ability to map the exact intellectual relationship between two authors without exaggerating disagreement or mixing up who claimed what.",
+      "vi": "Chào mừng các bạn đến với Bài 4.4: Liên kết hai văn bản Cross-Text Connections. Dạng bài này kiểm tra khả năng định vị chính xác mối quan hệ lập luận giữa hai tác giả mà không thổi phồng mâu thuẫn hay nhầm vai hai đoạn.",
+      "duration": 27.62,
+      "startTime": 0.0,
+      "endTime": 27.62,
+      "audioUrl": "/audio/lectures/sat_rw/4_4/intro.mp3"
+    },
+    {
+      "id": "sec_matrix",
+      "title": "1. Ma trận 4 quan hệ Text 1 & Text 2",
+      "selector": "#sec-matrix",
+      "en": "Section 1 presents the four-way relationship matrix. Summarize Text 1 and Text 2 in one short line each, then identify whether Text 2 offers partial agreement with a caveat—the single most common Hard Module 2 pattern—direct refutation, independent corroboration, or shared consensus.",
+      "vi": "Mục 1 đưa ra ma trận bốn mối quan hệ. Hãy tóm tắt mỗi đoạn thành một câu ngắn rồi xác định xem Text 2 đang đồng ý một phần kèm điều kiện—mẫu hay gặp nhất ở Hard Module 2—hay phản bác trực tiếp, củng cố bổ sung, hay chia sẻ tiền đề chung.",
+      "duration": 34.98,
+      "startTime": 27.62,
+      "endTime": 62.6,
+      "audioUrl": "/audio/lectures/sat_rw/4_4/sec_matrix.mp3"
+    },
+    {
+      "id": "sec_hypothetical",
+      "title": "2. Xử lý câu hỏi Hypothetical Response",
+      "selector": "#sec-hypothetical",
+      "en": "Section 2 shows how to answer how Author Two would respond to Author One. Lock onto the exact claim named in the question, check precisely what Text 2 says about that specific point, and stick strictly to Text 2's stated scope.",
+      "vi": "Mục 2 hướng dẫn dạng câu phản hồi giả định. Khóa chặt luận điểm cụ thể mà câu hỏi nhắc tới ở Text 1, đối chiếu xem Text 2 nói gì về đúng điểm đó và bám sát tuyệt đối phạm vi lập luận của Text 2.",
+      "duration": 26.42,
+      "startTime": 62.6,
+      "endTime": 89.02,
+      "audioUrl": "/audio/lectures/sat_rw/4_4/sec_hypothetical.mp3"
+    },
+    {
+      "id": "sec_dual_traps",
+      "title": "3. Ba cạm bẫy 750–800 trong Cross-Text",
+      "selector": "#sec-dual-traps",
+      "en": "Section 3 flags the three deadliest traps: One-Text Only distractors on 'both agree' questions, Overstated Conflict distractors that turn a nuanced caveat into total rejection, and Role Swaps that reverse the two authors' claims.",
+      "vi": "Mục 3 cảnh báo ba cạm bẫy nguy hiểm nhất: bẫy chỉ đúng một đoạn khi câu hỏi yêu cầu cả hai cùng đồng ý, bẫy thổi phồng một giới hạn nhỏ thành bác bỏ hoàn toàn, và bẫy đánh tráo quan điểm giữa hai tác giả.",
+      "duration": 27.78,
+      "startTime": 89.02,
+      "endTime": 116.8,
+      "audioUrl": "/audio/lectures/sat_rw/4_4/sec_dual_traps.mp3"
+    }
+  ]
+}

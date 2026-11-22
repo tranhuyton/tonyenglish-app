@@ -1,0 +1,70 @@
+{
+  "lectureId": "eb111af5-bdd4-40a9-86f9-9eb8347fab9a",
+  "courseTitle": "Digital SAT 1500+",
+  "lectureTitle": "4.2 Words in Context II: 750+ Elite Lexicon, Word Roots & Nuance Precision",
+  "totalDuration": 156.51,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_nuance_clusters": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_roots": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_collocation": {
+      "start": 3,
+      "end": 3
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 4.2: Từ vựng tầng 750+ & Phân biệt sắc thái",
+      "selector": "#sec-header",
+      "en": "Welcome to Lesson 4.2: Words in Context Part Two, focusing on the 750-plus elite lexicon. On Hard Module 2, multiple choices often share the same positive or negative charge, so precision of degree and collocation becomes decisive.",
+      "vi": "Chào mừng các bạn đến với Bài 4.2: Từ vựng học thuật tầng 750+ và phân biệt sắc thái tinh tế. Ở Hard Module 2, nhiều đáp án thường có cùng hướng tích cực hoặc tiêu cực, vì vậy độ chính xác về mức độ và ngữ cảnh kết hợp từ là chìa khóa quyết định.",
+      "duration": 33.23,
+      "startTime": 0.0,
+      "endTime": 33.23,
+      "audioUrl": "/audio/lectures/sat_rw/4_2/intro.mp3"
+    },
+    {
+      "id": "sec_nuance_clusters",
+      "title": "1. Sáu cụm từ vựng sắc thái tinh tế",
+      "selector": "#sec-nuance-clusters",
+      "en": "Section 1 contrasts six high-yield clusters. Distinguish mitigate—which merely softens harm—from preclude, which prevents something altogether, and eradicate, which wipes it out completely. Similarly, separate corroborate—backing a claim with independent proof—from hypothesize, which merely proposes an unproven idea, and distinguish tenuous from equivocal.",
+      "vi": "Mục 1 đối chiếu sáu nhóm từ hay thi nhất. Phân biệt mitigate là giảm nhẹ tác hại với preclude là ngăn chặn không cho xảy ra và eradicate là xóa sổ hoàn toàn. Tương tự, tách biệt corroborate là củng cố bằng bằng chứng độc lập với hypothesize chỉ mới đặt giả thuyết, và phân biệt tenuous mong manh với equivocal nước đôi.",
+      "duration": 44.39,
+      "startTime": 33.23,
+      "endTime": 77.62,
+      "audioUrl": "/audio/lectures/sat_rw/4_2/sec_nuance_clusters.mp3"
+    },
+    {
+      "id": "sec_roots",
+      "title": "2. Mở khóa từ lạ bằng gốc từ Latin & Hy Lạp",
+      "selector": "#sec-roots",
+      "en": "Section 2 equips you with twelve powerhouse roots. Knowing that circum means around unlocks circumvent, circumspect, and circumscribe; knowing vac means empty unlocks vacuous and evanescent; and recognizing equi and ambi helps you spot ambiguity words instantly.",
+      "vi": "Mục 2 trang bị hệ thống gốc từ Latin và Hy Lạp đắc lực. Nhớ gốc circum nghĩa là xung quanh giúp bạn giải mã ngay circumvent, circumspect và circumscribe; gốc vac là trống rỗng mở khóa vacuous và evanescent; còn equi và ambi giúp nhận diện lập tức nhóm từ nước đôi mơ hồ.",
+      "duration": 35.27,
+      "startTime": 77.62,
+      "endTime": 112.89,
+      "audioUrl": "/audio/lectures/sat_rw/4_2/sec_roots.mp3"
+    },
+    {
+      "id": "sec_collocation",
+      "title": "3. Bộ lọc Chủ ngữ – Tân ngữ (Collocation Fit)",
+      "selector": "#sec-collocation",
+      "en": "Finally, whenever two choices look equally positive, run the Subject-Object Fit Check. You ameliorate a problem or hardship, never a positive heritage; evidence can corroborate or belie a hypothesis, but it cannot appease or reproach one. Pair this lesson with our ten Elite SAT Vocabulary Games to build instant recall across five hundred core words.",
+      "vi": "Cuối cùng, khi còn phân vân hai từ cùng sắc thái, hãy chạy Bộ lọc Chủ ngữ và Tân ngữ. Bạn dùng ameliorate để làm dịu một vấn đề xấu chứ không dùng cho di sản tốt đẹp; bằng chứng có thể củng cố hay bác bỏ một giả thuyết chứ không thể xoa dịu nó. Hãy kết hợp bài học này với 10 bộ Game Từ vựng 500 từ SAT tinh tuyển trên hệ thống.",
+      "duration": 43.62,
+      "startTime": 112.89,
+      "endTime": 156.51,
+      "audioUrl": "/audio/lectures/sat_rw/4_2/sec_collocation.mp3"
+    }
+  ]
+}

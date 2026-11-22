@@ -1,0 +1,85 @@
+{
+  "lectureId": "26b563d3-cfc5-4b2a-bf3c-7128a24af881",
+  "courseTitle": "Digital SAT 1500+",
+  "lectureTitle": "2.2 Boundaries II: Essential vs. Non-Essential Elements & Punctuation Traps",
+  "totalDuration": 201.83,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_essential": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_name_trap": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_forbidden": {
+      "start": 3,
+      "end": 3
+    },
+    "sec_interrupt_trans": {
+      "start": 4,
+      "end": 4
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 2.2: Boundaries II — Modifiers & Appositives",
+      "selector": "#sec-header",
+      "en": "Welcome to Lesson 2.2: Boundaries Part Two. Today we master the highest-frequency punctuation rules on the Digital SAT: essential versus non-essential elements, the title-plus-name rule, forbidden single commas, and interrupting transitions.",
+      "vi": "Chào mừng các bạn đến với Bài 2.2: Ranh giới câu Phần 2. Hôm nay chúng ta sẽ làm chủ các quy tắc dấu phẩy hay ra thi nhất trên Digital SAT: phân biệt thông tin bắt buộc và bổ sung, quy tắc chức danh đi với tên riêng, bốn vị trí cấm dấu phẩy và từ nối chen giữa câu.",
+      "duration": 33.09,
+      "startTime": 0.0,
+      "endTime": 33.09,
+      "audioUrl": "/audio/lectures/sat_rw/2_2/intro.mp3"
+    },
+    {
+      "id": "sec_essential",
+      "title": "1. Quy tắc Nhấc Bỏ: Essential vs. Non-Essential",
+      "selector": "#sec-essential",
+      "en": "Section 1 explains the cross-out test. If you can delete a middle phrase and the sentence still clearly identifies who or what it is talking about, the phrase is non-essential and must be bracketed by matching punctuation—two commas, two dashes, or two parentheses. Never mix a comma on one side with a dash on the other. If deleting the phrase breaks the sentence's identification, it is essential and takes zero commas.",
+      "vi": "Mục 1 hướng dẫn phép thử nhấc bỏ. Nếu che cụm bổ ngữ đi mà câu vẫn rõ chủ thể và trọn nghĩa, đó là thông tin bổ sung và bắt buộc phải bọc bằng một cặp dấu giống nhau: hai phẩy, hai gạch ngang hoặc ngoặc đơn, tuyệt đối không ghép lệch phẩy với gạch ngang. Ngược lại, nếu thiếu nó câu bị mơ hồ thì đó là thành phần bắt buộc và không dùng dấu phẩy.",
+      "duration": 47.15,
+      "startTime": 33.09,
+      "endTime": 80.24,
+      "audioUrl": "/audio/lectures/sat_rw/2_2/sec_essential.mp3"
+    },
+    {
+      "id": "sec_name_trap",
+      "title": "2. Quy tắc Chức danh + Tên riêng",
+      "selector": "#sec-name-trap",
+      "en": "Section 2 reveals a signature Digital SAT goldmine: the title-plus-name pattern. When a profession or nationality precedes a name with no article like a or the—for example, Japanese architect Kengo Kuma—the name is essential, so you must use zero commas around it. By contrast, when a unique title uses the or a possessive—like the museum's chief curator, Elena Morales—bracket the name with two commas.",
+      "vi": "Mục 2 chỉ ra dạng câu ăn điểm đặc trưng của Digital SAT: cấu trúc Chức danh kèm Tên riêng. Khi nghề nghiệp đứng trước tên mà không có mạo từ như a hay the—ví dụ Japanese architect Kengo Kuma—tuyệt đối không đặt dấu phẩy nào. Chỉ khi có mạo từ xác định một người duy nhất phía trước hoặc khi nghề nghiệp đứng sau tên riêng, ta mới dùng cặp hai dấu phẩy.",
+      "duration": 49.1,
+      "startTime": 80.24,
+      "endTime": 129.34,
+      "audioUrl": "/audio/lectures/sat_rw/2_2/sec_name_trap.mp3"
+    },
+    {
+      "id": "sec_forbidden",
+      "title": "3. Bốn vị trí CẤM dấu phẩy đơn lẻ",
+      "selector": "#sec-forbidden",
+      "en": "Section 3 locks down the four no-comma zones. Never drop a single comma between a subject and its main verb, between a verb and its object, directly before or after the conjunction that, or between a preposition and its noun. When in doubt, fewer commas usually win on the Digital SAT.",
+      "vi": "Mục 3 chốt bốn vùng cấm dấu phẩy đơn lẻ: không tách chủ ngữ khỏi động từ chính bằng một dấu phẩy, không tách động từ khỏi tân ngữ, không đặt phẩy sát trước hay sau từ that, và không tách giới từ khỏi danh từ. Trên Digital SAT, nguyên tắc an toàn là không thêm dấu phẩy theo cảm giác ngắt hơi.",
+      "duration": 35.85,
+      "startTime": 129.34,
+      "endTime": 165.19,
+      "audioUrl": "/audio/lectures/sat_rw/2_2/sec_forbidden.mp3"
+    },
+    {
+      "id": "sec_interrupt_trans",
+      "title": "4. Dấu câu quanh Từ nối chen giữa câu",
+      "selector": "#sec-interrupt-trans",
+      "en": "Section 4 contrasts two uses of however. Between two complete independent clauses, you need a semicolon before however and a comma after it. Inside a single clause—such as The prototype, however, failed pressure testing—however is merely an interrupter, so surround it with two commas, never a semicolon.",
+      "vi": "Mục 4 phân biệt hai vị trí của từ nối như however. Khi đứng giữa hai mệnh đề độc lập, nó cần chấm phẩy phía trước và phẩy phía sau. Nhưng khi chen vào giữa chủ ngữ và động từ của cùng một câu, nó chỉ là thành phần xen kẽ nên phải bọc bằng cặp hai dấu phẩy, tuyệt đối không dùng chấm phẩy.",
+      "duration": 36.64,
+      "startTime": 165.19,
+      "endTime": 201.83,
+      "audioUrl": "/audio/lectures/sat_rw/2_2/sec_interrupt_trans.mp3"
+    }
+  ]
+}

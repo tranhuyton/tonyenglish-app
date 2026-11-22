@@ -1,0 +1,70 @@
+{
+  "lectureId": "0e46ac2c-a319-4fcf-af0e-32c04b1e9ff5",
+  "courseTitle": "Digital SAT 1500+",
+  "lectureTitle": "4.1 Words in Context I: Predict-Before-Peek, Context Clues & Secondary Meanings",
+  "totalDuration": 137.68,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_predict": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_clues": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_secondary": {
+      "start": 3,
+      "end": 3
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 4.1: Words in Context I — Predict-Before-Peek",
+      "selector": "#sec-header",
+      "en": "Welcome to Lesson 4.1: Words in Context Part One. Words in Context opens every Reading and Writing module, and mastering the Predict-Before-Peek method prevents you from falling for fancy-sounding academic decoys.",
+      "vi": "Chào mừng các bạn đến với Bài 4.1: Từ vựng trong ngữ cảnh Phần 1. Đây là dạng mở màn của mọi module Đọc – Viết, và phương pháp tự đoán nghĩa trước khi nhìn đáp án sẽ bảo vệ bạn khỏi các từ học thuật nghe kêu nhưng sai logic.",
+      "duration": 28.5,
+      "startTime": 0.0,
+      "endTime": 28.5,
+      "audioUrl": "/audio/lectures/sat_rw/4_1/intro.mp3"
+    },
+    {
+      "id": "sec_predict",
+      "title": "1. Quy trình Predict-Before-Peek",
+      "selector": "#sec-predict",
+      "en": "Section 1 introduces Predict-Before-Peek. Never plug all four options into the blank blindly. Instead, locate the mirror clue—the phrase inside the passage that directly defines or contrasts with the blank—write down a simple prediction and positive or negative charge in your head, and match that exact meaning against the choices.",
+      "vi": "Mục 1 trình bày kỹ thuật tự đoán trước khi nhìn đáp án. Đừng lắp thử từng từ một cách cảm tính. Thay vào đó, hãy tìm manh mối gương ngay trong đoạn văn—nơi định nghĩa hoặc đối lập trực tiếp với chỗ trống—rồi tự chốt nghĩa đơn giản và sắc thái tích cực hay tiêu cực trước khi đối chiếu với 4 lựa chọn.",
+      "duration": 39.09,
+      "startTime": 28.5,
+      "endTime": 67.59,
+      "audioUrl": "/audio/lectures/sat_rw/4_1/sec_predict.mp3"
+    },
+    {
+      "id": "sec_clues",
+      "title": "2. Bốn loại manh mối ngữ cảnh",
+      "selector": "#sec-clues",
+      "en": "Section 2 maps the four signal clues: restatement clues after colons or dashes, contrast clues like although or far from, cause-and-effect bridges like because, and concrete examples in the following sentence that prove the missing adjective or verb.",
+      "vi": "Mục 2 hệ thống hóa bốn tín hiệu ngữ cảnh: định nghĩa lại sau dấu hai chấm hay gạch ngang, manh mối đối lập như far from hay although, cầu nối nhân quả với because, và câu ví dụ minh họa cụ thể ngay phía sau.",
+      "duration": 29.01,
+      "startTime": 67.59,
+      "endTime": 96.6,
+      "audioUrl": "/audio/lectures/sat_rw/4_1/sec_clues.mp3"
+    },
+    {
+      "id": "sec_secondary",
+      "title": "3. Bẫy nghĩa thứ cấp học thuật (Secondary Meanings)",
+      "selector": "#sec-secondary",
+      "en": "Section 3 reveals a favorite 750-plus College Board weapon: secondary meanings of everyday words. Memorize that pedestrian means dull or uninspired, qualified means limited or conditional, check means restrain, wanting means lacking, currency means widespread acceptance, and eclipse means surpass or overshadow.",
+      "vi": "Mục 3 bật mí vũ khí phân hóa 750+ của College Board: nghĩa thứ cấp học thuật của các từ quen thuộc. Hãy thuộc nằm lòng: pedestrian nghĩa là tẻ nhạt tầm thường, qualified là có điều kiện chừng mực, check là kiềm chế, wanting là thiếu sót, currency là độ thịnh hành, và eclipse là làm lu mờ vượt trội.",
+      "duration": 41.08,
+      "startTime": 96.6,
+      "endTime": 137.68,
+      "audioUrl": "/audio/lectures/sat_rw/4_1/sec_secondary.mp3"
+    }
+  ]
+}

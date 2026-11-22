@@ -1,0 +1,70 @@
+{
+  "lectureId": "530fa446-d1b1-4244-ab92-ca929a7d2f13",
+  "courseTitle": "Digital SAT 1500+",
+  "lectureTitle": "4.3 Text Structure, Main Purpose & Underlined Sentence Function",
+  "totalDuration": 134.05,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_three_subtypes": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_rhetorical_verbs": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_lit_structure": {
+      "start": 3,
+      "end": 3
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 4.3: Text Structure, Main Purpose & Function",
+      "selector": "#sec-header",
+      "en": "Welcome to Lesson 4.3: Text Structure, Main Purpose, and Underlined Sentence Function. Here you learn to read like a rhetorical architect, evaluating what each sentence does rather than merely what topics it mentions.",
+      "vi": "Chào mừng các bạn đến với Bài 4.3: Cấu trúc đoạn văn, Mục đích chính và Chức năng câu gạch chân. Ở bài học này, bạn sẽ rèn tư duy của một kiến trúc sư tu từ: đánh giá xem câu văn đang làm chức năng gì thay vì chỉ nhặt từ khóa bề mặt.",
+      "duration": 29.01,
+      "startTime": 0.0,
+      "endTime": 29.01,
+      "audioUrl": "/audio/lectures/sat_rw/4_3/intro.mp3"
+    },
+    {
+      "id": "sec_three_subtypes",
+      "title": "1. Ba tiểu dạng & Chiến thuật kiểm tra Động từ tu từ",
+      "selector": "#sec-three-subtypes",
+      "en": "Section 1 separates the three subtypes. Main Purpose must encompass the whole passage—never just one supporting detail. Overall Structure must match the exact chronological sequence of moves in the text. Underlined Function requires reading the sentence immediately before and after to see what logical link breaks if you remove it.",
+      "vi": "Mục 1 phân định ba tiểu dạng. Main Purpose phải bao quát toàn bài chứ không bó hẹp ở một chi tiết lẻ. Overall Structure phải khớp đúng trình tự diễn tiến từ đầu đến cuối đoạn. Còn câu hỏi chức năng câu gạch chân đòi hỏi đọc kỹ câu liền trước và liền sau để thấy vai trò kết nối không thể thiếu của nó.",
+      "duration": 40.48,
+      "startTime": 29.01,
+      "endTime": 69.49,
+      "audioUrl": "/audio/lectures/sat_rw/4_3/sec_three_subtypes.mp3"
+    },
+    {
+      "id": "sec_rhetorical_verbs",
+      "title": "2. Giải mã 10 động từ tu từ dễ hiểu nhầm",
+      "selector": "#sec-rhetorical-verbs",
+      "en": "Section 2 decodes ten high-frequency rhetorical verbs. Pay special attention to qualify, which means placing a boundary or caveat on a claim without rejecting it, concede, which means acknowledging a limitation, and reconcile, which means showing two seemingly conflicting views actually align.",
+      "vi": "Mục 2 giải mã mười động từ tu từ hay gây nhầm lẫn nhất. Đặc biệt chú ý: qualify là đặt giới hạn hay điều kiện cho một luận điểm chứ không bác bỏ hoàn toàn; concede là thừa nhận một mặt hạn chế; và reconcile là dung hòa hai quan điểm tưởng như mâu thuẫn.",
+      "duration": 34.14,
+      "startTime": 69.49,
+      "endTime": 103.63,
+      "audioUrl": "/audio/lectures/sat_rw/4_3/sec_rhetorical_verbs.mp3"
+    },
+    {
+      "id": "sec_lit_structure",
+      "title": "3. Xử lý đoạn trích Văn học & Thơ thế kỷ 19",
+      "selector": "#sec-lit-structure",
+      "en": "Section 3 tackles nineteenth-century prose and poetry. Always read the italicized introductory attribution first, ignore unfamiliar archaic words to track the speaker's core emotional shift, and reject distractors that interpret poetic metaphors literally.",
+      "vi": "Mục 3 hướng dẫn xử lý văn học và thơ cổ. Luôn đọc dòng giới thiệu in nghiêng trước để nắm bối cảnh, bỏ qua vài từ cổ khó để bám sát trục chuyển biến cảm xúc của nhân vật, và loại ngay các đáp án diễn giải ẩn dụ theo nghĩa đen.",
+      "duration": 30.42,
+      "startTime": 103.63,
+      "endTime": 134.05,
+      "audioUrl": "/audio/lectures/sat_rw/4_3/sec_lit_structure.mp3"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "lectureId": "6a789ece-9e81-434c-a54c-39200c650561",
+  "courseTitle": "Digital SAT 1500+",
+  "lectureTitle": "5.5 Inferences: Tight Deductive Completion & The 1-Millimeter Rule",
+  "totalDuration": 144.86,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_one_mm": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_four_engines": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_bridge_words": {
+      "start": 3,
+      "end": 3
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 5.5: Inferences — Quy tắc 1 Milimét",
+      "selector": "#sec-header",
+      "en": "Welcome to Lesson 5.5, the final lecture of the Reading and Writing mastery path: Inferences. These logical-completion items are the hardest questions on the entire exam—yet they obey strict mathematical deduction once you apply the One-Millimeter Rule.",
+      "vi": "Chào mừng các bạn đến với Bài 5.5, bài giảng chốt hạ lộ trình Reading and Writing 1500+: Suy luận logic Inferences. Đây là dạng câu khó nhất toàn đề thi, nhưng lại tuân theo phép suy diễn chặt chẽ như toán học một khi bạn áp dụng Quy tắc 1 Milimét.",
+      "duration": 32.66,
+      "startTime": 0.0,
+      "endTime": 32.66,
+      "audioUrl": "/audio/lectures/sat_rw/5_5/intro.mp3"
+    },
+    {
+      "id": "sec_one_mm",
+      "title": "1. Quy tắc 1 Milimét (The 1-Millimeter Rule)",
+      "selector": "#sec-one-mm",
+      "en": "Section 1 defines the One-Millimeter Rule. On the Digital SAT, an inference is never a wild creative leap; it is the inevitable sum of Premise A plus Premise B sitting just one millimeter beyond the written text. Any answer that extrapolates into unmentioned future dates or global claims is automatically a trap.",
+      "vi": "Mục 1 xác lập Quy tắc 1 Milimét. Trên Digital SAT, suy luận không bao giờ là sự bay bổng sáng tạo; nó là tổng tất yếu của Tiền đề A cộng Tiền đề B, chỉ bước thêm đúng một milimét từ dữ kiện có sẵn. Mọi đáp án nhảy cóc ra ngoài phạm vi thời gian hay không gian của bài đều là bẫy.",
+      "duration": 39.23,
+      "startTime": 32.66,
+      "endTime": 71.89,
+      "audioUrl": "/audio/lectures/sat_rw/5_5/sec_one_mm.mp3"
+    },
+    {
+      "id": "sec_four_engines",
+      "title": "2. Bốn khuôn lập luận hay thi nhất Hard Module 2",
+      "selector": "#sec-four-engines",
+      "en": "Section 2 maps the four deductive engines that power Hard Module 2 inferences: eliminating one of two possible causes, exposing a methodological sample limit that restricts generalization, using a counterexample to soften an absolute assumption, and spotting competing trade-off effects that partially cancel each other out.",
+      "vi": "Mục 2 hệ thống hóa bốn khuôn suy diễn chủ đạo ở Hard Module 2: loại trừ một trong hai nguyên nhân, chỉ ra giới hạn mẫu thử ngăn không cho khái quát hóa rộng, dùng phản ví dụ để thu hẹp giả định tuyệt đối, và nhận diện hai hiệu ứng trái chiều phần nào triệt tiêu nhau.",
+      "duration": 34.67,
+      "startTime": 71.89,
+      "endTime": 106.56,
+      "audioUrl": "/audio/lectures/sat_rw/5_5/sec_four_engines.mp3"
+    },
+    {
+      "id": "sec_bridge_words",
+      "title": "3. Cảnh giác 5 từ chốt ngay trước chỗ trống",
+      "selector": "#sec-bridge-words",
+      "en": "Finally, inspect the last five words immediately before the blank. Phrases like researchers doubt that or it is unlikely that flip polarity, requiring you to choose the idea the evidence disproves rather than supports. Favor calibrated scientific wording like likely or does not necessarily indicate over extreme absolutes.",
+      "vi": "Cuối cùng, luôn soi kỹ năm từ ngay trước chỗ trống. Các cụm như researchers doubt that hay it is unlikely that sẽ đảo ngược chiều logic, đòi hỏi bạn chọn nhận định bị bác bỏ chứ không phải nhận định được ủng hộ. Luôn ưu tiên ngôn ngữ học thuật chừng mực thay vì các từ cực đoan tuyệt đối.",
+      "duration": 38.3,
+      "startTime": 106.56,
+      "endTime": 144.86,
+      "audioUrl": "/audio/lectures/sat_rw/5_5/sec_bridge_words.mp3"
+    }
+  ]
+}

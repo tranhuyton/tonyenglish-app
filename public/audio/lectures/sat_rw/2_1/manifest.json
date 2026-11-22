@@ -1,0 +1,85 @@
+{
+  "lectureId": "02b0b21b-4740-4e5b-a070-3cf632ddfb64",
+  "courseTitle": "Digital SAT 1500+",
+  "lectureTitle": "2.1 Boundaries I: Clauses, Linking & Core Punctuation",
+  "totalDuration": 191.65,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_ic_dc": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_five_rules": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_colon_trap": {
+      "start": 3,
+      "end": 3
+    },
+    "sec_sop": {
+      "start": 4,
+      "end": 4
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 2.1: Boundaries I & Dấu câu cốt lõi",
+      "selector": "#sec-header",
+      "en": "Welcome to Lesson 2.1: Boundaries Part One, covering clauses, linking, and core punctuation. On a 1500-plus path, every Boundaries question is free points—your goal is one hundred percent accuracy in under twenty seconds per item.",
+      "vi": "Chào mừng các bạn đến với Bài 2.1: Ranh giới câu Phần 1 về mệnh đề và dấu câu cốt lõi. Với mục tiêu 1500+, mọi câu Boundaries đều là điểm chắc chắn phải lấy tuyệt đối trong dưới 20 giây mỗi câu.",
+      "duration": 30.18,
+      "startTime": 0.0,
+      "endTime": 30.18,
+      "audioUrl": "/audio/lectures/sat_rw/2_1/intro.mp3"
+    },
+    {
+      "id": "sec_ic_dc",
+      "title": "1. Phân biệt IC, DC và Phrase",
+      "selector": "#sec-ic-dc",
+      "en": "Section 1 establishes the core foundation: distinguishing an Independent Clause from a Dependent Clause or a Phrase. An independent clause has a subject, a finite verb, and expresses a complete thought. Watch out for conjunctive adverbs like however, therefore, and moreover—they do not act like conjunctions, so putting only a comma before them between two independent clauses creates an illegal comma splice.",
+      "vi": "Mục 1 xác lập nền tảng phân biệt Mệnh đề độc lập IC với Mệnh đề phụ DC và Cụm từ. Mệnh đề độc lập có chủ ngữ, động từ chia thì và đứng một mình trọn nghĩa. Đặc biệt cảnh giác với nhóm trạng từ như however, therefore, moreover: chúng không có quyền nối 2 câu bằng dấu phẩy mà bắt buộc dùng chấm hoặc chấm phẩy.",
+      "duration": 45.86,
+      "startTime": 30.18,
+      "endTime": 76.04,
+      "audioUrl": "/audio/lectures/sat_rw/2_1/sec_ic_dc.mp3"
+    },
+    {
+      "id": "sec_five_rules",
+      "title": "2. Năm công thức nối 2 IC & Mẹo tương đương",
+      "selector": "#sec-five-rules",
+      "en": "Section 2 gives you the five legal ways to link two independent clauses: a period, a semicolon, a comma plus FANBOYS, a colon when the second clause explains the first, or a single em-dash. Use the Equivalence Shortcut: whenever two options differ only by a period versus a semicolon between two independent clauses, both must be wrong because the SAT cannot have two equally correct answers.",
+      "vi": "Mục 2 tổng hợp 5 công thức nối hai mệnh đề độc lập hợp lệ: dấu chấm, chấm phẩy, phẩy cộng FANBOYS, hai chấm và gạch ngang đơn. Hãy tận dụng Mẹo Tương đương: nếu hai đáp án giống hệt nhau và chỉ khác nhau giữa dấu chấm và dấu chấm phẩy nối hai IC, cả hai đều chắc chắn sai vì đề không bao giờ có hai đáp án cùng đúng.",
+      "duration": 46.29,
+      "startTime": 76.04,
+      "endTime": 122.33,
+      "audioUrl": "/audio/lectures/sat_rw/2_1/sec_five_rules.mp3"
+    },
+    {
+      "id": "sec_colon_trap",
+      "title": "3. Bẫy Dấu Hai Chấm & Super-Semicolon",
+      "selector": "#sec-colon-trap",
+      "en": "Section 3 highlights two high-yield traps. First, never place a colon directly after a verb or preposition like were, includes, or such as—the clause before a colon must stand completely on its own. Second, remember the super-semicolon: when items in a complex list already contain internal commas, semicolons separate the major list items.",
+      "vi": "Mục 3 chỉ rõ hai bẫy hay gặp. Thứ nhất, tuyệt đối không đặt dấu hai chấm ngay sau động từ hay giới từ như were hay such as vì vế trước hai chấm bắt buộc phải là một câu hoàn chỉnh. Thứ hai, nhớ quy tắc Super-Semicolon dùng chấm phẩy để ngăn các mục lớn trong danh sách đã có sẵn dấu phẩy bên trong.",
+      "duration": 41.63,
+      "startTime": 122.33,
+      "endTime": 163.96,
+      "audioUrl": "/audio/lectures/sat_rw/2_1/sec_colon_trap.mp3"
+    },
+    {
+      "id": "sec_sop",
+      "title": "4. Quy trình 3 bước giải trong 20 giây",
+      "selector": "#sec-sop",
+      "en": "Finally, follow the three-step speed routine: scan the answer choices first to spot punctuation shifts, label the left and right sides of the blank as independent or dependent, and apply the five linking rules to eliminate traps instantly.",
+      "vi": "Cuối cùng, hãy thực hành quy trình 3 bước: liếc đáp án nhận diện dạng câu dấu câu, chia đôi câu tại chỗ trống để gắn nhãn IC hay DC cho hai vế, rồi áp dụng ngay 5 công thức và mẹo tương đương để chốt đáp án dưới 20 giây.",
+      "duration": 27.69,
+      "startTime": 163.96,
+      "endTime": 191.65,
+      "audioUrl": "/audio/lectures/sat_rw/2_1/sec_sop.mp3"
+    }
+  ]
+}

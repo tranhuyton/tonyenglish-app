@@ -1,0 +1,70 @@
+{
+  "lectureId": "2a04e519-685c-433a-8064-378947cdc9cb",
+  "courseTitle": "Digital SAT 1500+",
+  "lectureTitle": "5.4 Command of Evidence — Quantitative: Charts, Tables & The 'True Data, Wrong Claim' Trap",
+  "totalDuration": 126.18,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_three_step_quant": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_quant_traps": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_complete_sentence": {
+      "start": 3,
+      "end": 3
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 5.4: Biểu đồ & Bảng số liệu Quantitative Evidence",
+      "selector": "#sec-header",
+      "en": "Welcome to Lesson 5.4: Quantitative Command of Evidence. On the Digital SAT, graph and table questions rarely test difficult math—they test whether you can separate accurate data that proves the exact claim from accurate data that misses the point.",
+      "vi": "Chào mừng các bạn đến với Bài 5.4: Bằng chứng định lượng trên Biểu đồ và Bảng số liệu. Trên Digital SAT, câu biểu đồ hiếm khi đòi hỏi tính toán khó—thử thách thực sự là tách bạch dữ liệu đúng chứng minh chuẩn luận điểm khỏi dữ liệu tuy đúng bảng nhưng lệch mục tiêu.",
+      "duration": 31.98,
+      "startTime": 0.0,
+      "endTime": 31.98,
+      "audioUrl": "/audio/lectures/sat_rw/5_4/intro.mp3"
+    },
+    {
+      "id": "sec_three_step_quant",
+      "title": "1. Quy trình 3 bước đọc biểu đồ dưới 60 giây",
+      "selector": "#sec-three-step-quant",
+      "en": "Section 1 lays out the three-step Quantitative SOP. First, read the text and lock onto the exact claim before staring at the chart. Second, slash any option that misreads a number, unit, or trend. Third, among the remaining factually true options, pick the one that directly proves or refutes the claim's exact threshold or comparison.",
+      "vi": "Mục 1 trình bày quy trình ba bước tốc độ cao. Bước một: đọc đoạn văn và khóa chặt luận điểm trước khi soi số liệu. Bước hai: gạch ngay mọi phương án đọc sai số, sai đơn vị hoặc ngược xu hướng. Bước ba: trong các phương án cùng đúng số liệu, chọn đúng phương án giải quyết trọn vẹn điều kiện của luận điểm.",
+      "duration": 43.02,
+      "startTime": 31.98,
+      "endTime": 75.0,
+      "audioUrl": "/audio/lectures/sat_rw/5_4/sec_three_step_quant.mp3"
+    },
+    {
+      "id": "sec_quant_traps",
+      "title": "2. Bốn bẫy sát thủ trên biểu đồ",
+      "selector": "#sec-quant-traps",
+      "en": "Section 2 dissects the four recurring chart traps: True Data Wrong Claim, confusing percentages with raw totals, swapping legend lines or columns, and inventing outside causal explanations that never appear in the graphic.",
+      "vi": "Mục 2 chỉ rõ bốn bẫy kinh điển: đúng số liệu nhưng sai luận điểm, nhầm phần trăm với tổng số lượng tuyệt đối, nhìn lệch chú giải hay cột bảng, và tự suy diễn nguyên nhân không hề xuất hiện trên biểu đồ.",
+      "duration": 26.25,
+      "startTime": 75.0,
+      "endTime": 101.25,
+      "audioUrl": "/audio/lectures/sat_rw/5_4/sec_quant_traps.mp3"
+    },
+    {
+      "id": "sec_complete_sentence",
+      "title": "3. Mẹo câu hoàn thiện ví dụ cuối đoạn",
+      "selector": "#sec-complete-sentence",
+      "en": "Section 3 addresses fill-in-the-blank quantitative items. Check the transition right before the blank: whereas or however demands a contrasting data pair, while for example demands numbers confirming the exact pattern just stated.",
+      "vi": "Mục 3 lưu ý riêng cho dạng điền số liệu cuối câu: luôn kiểm tra từ nối ngay trước chỗ trống như whereas hay for example để chọn đúng cặp số liệu tương phản hoặc tương đồng.",
+      "duration": 24.93,
+      "startTime": 101.25,
+      "endTime": 126.18,
+      "audioUrl": "/audio/lectures/sat_rw/5_4/sec_complete_sentence.mp3"
+    }
+  ]
+}

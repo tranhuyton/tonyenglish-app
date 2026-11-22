@@ -10,6 +10,7 @@ const TEST_VIEWS = [
   'case-study',
   'igcse',
   'igcse-direct',
+  'sat-bluebook',
   'ielts-writing',
   'ielts-speaking',
 ];

@@ -1,0 +1,70 @@
+{
+  "lectureId": "558ee953-ce61-4ebc-be42-85c8d60fd836",
+  "courseTitle": "Digital SAT 1500+",
+  "lectureTitle": "3.1 Transitions: High-Level Logical Connectors & Hard-Tier Nuance Pairs",
+  "totalDuration": 154.41,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_four_families": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_hard_pairs": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_middle_trap": {
+      "start": 3,
+      "end": 3
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 3.1: Transitions — Từ nối logic bậc cao",
+      "selector": "#sec-header",
+      "en": "Welcome to Lesson 3.1: Transitions. Alongside grammar, Transitions are your second guaranteed speed bank on the Digital SAT. Today we master the four logical families and the five high-level nuance pairs that separate seven-fifty scorers from the pack.",
+      "vi": "Chào mừng các bạn đến với Bài 3.1: Từ nối logic Transitions. Cùng với Ngữ pháp, đây là mỏ điểm tốc độ thứ hai trên Digital SAT. Hôm nay ta làm chủ bốn họ từ nối và năm cặp từ tinh tế thường dùng để phân hóa mốc 750+.",
+      "duration": 33.93,
+      "startTime": 0.0,
+      "endTime": 33.93,
+      "audioUrl": "/audio/lectures/sat_rw/3_1/intro.mp3"
+    },
+    {
+      "id": "sec_four_families",
+      "title": "1. Bốn họ từ nối & Mẹo loại trừ đồng nghĩa",
+      "selector": "#sec-four-families",
+      "en": "Section 1 organizes every transition into four core families: Addition, Contrast, Cause-and-Effect, and Sequence. Always cover the options, summarize the logical bridge between Idea A and Idea B first, and deploy the Synonym Elimination Shortcut: if two choices have identical logical functions—such as therefore and consequently—eliminate both immediately.",
+      "vi": "Mục 1 hệ thống hóa bốn họ từ nối: Bổ sung cùng chiều, Đối lập, Nhân quả và Trình tự. Luôn xác định quan hệ giữa hai câu trước khi đọc đáp án, và áp dụng ngay mẹo loại trừ đồng nghĩa: hễ hai từ nối có cùng chức năng y hệt nhau như therefore và consequently thì gạch bỏ cả hai.",
+      "duration": 41.94,
+      "startTime": 33.93,
+      "endTime": 75.87,
+      "audioUrl": "/audio/lectures/sat_rw/3_1/sec_four_families.mp3"
+    },
+    {
+      "id": "sec_hard_pairs",
+      "title": "2. Năm cặp từ nối sát thủ ở Hard Module 2",
+      "selector": "#sec-hard-pairs",
+      "en": "Section 2 breaks down five subtle Hard Module 2 pairs. Use instead only when the first sentence states a negation and the second offers a replacement. Use by contrast or conversely to compare two distinct subjects moving in opposite directions, whereas nevertheless applies to a single subject defying expectations. Finally, distinguish indeed—which intensifies the exact same claim—from moreover, which introduces a separate supporting point.",
+      "vi": "Mục 2 giải mã năm cặp từ nối khó nhất ở Hard Module 2. Chỉ dùng instead khi vế trước phủ định X và vế sau thay thế bằng Y. Dùng by contrast khi đối chiếu hai đối tượng ngược chiều nhau, còn nevertheless dùng cho cùng một chủ thể xảy ra trái kỳ vọng. Phân biệt rạch ròi indeed dùng để nhấn mạnh sâu hơn chính ý cũ với moreover dùng để bổ sung một luận điểm mới độc lập.",
+      "duration": 51.04,
+      "startTime": 75.87,
+      "endTime": 126.91,
+      "audioUrl": "/audio/lectures/sat_rw/3_1/sec_hard_pairs.mp3"
+    },
+    {
+      "id": "sec_middle_trap",
+      "title": "3. Bẫy từ nối chen giữa câu",
+      "selector": "#sec-middle-trap",
+      "en": "Section 3 addresses mid-sentence transitions bracketed by commas. Whenever the blank sits inside the second sentence, mentally move it to the very beginning of that sentence so your brain evaluates the exact bridge between the two full ideas cleanly.",
+      "vi": "Mục 3 xử lý bẫy từ nối nằm giữa câu hai trong cặp dấu phẩy. Mẹo cực nhanh là hãy nhấc chỗ trống lên đầu câu hai trong suy nghĩ để cảm nhận chính xác cầu nối logic giữa hai ý trọn vẹn.",
+      "duration": 27.5,
+      "startTime": 126.91,
+      "endTime": 154.41,
+      "audioUrl": "/audio/lectures/sat_rw/3_1/sec_middle_trap.mp3"
+    }
+  ]
+}

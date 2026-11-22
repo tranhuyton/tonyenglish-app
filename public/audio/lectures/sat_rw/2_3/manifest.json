@@ -1,0 +1,85 @@
+{
+  "lectureId": "9b144d9c-e93c-4db0-9f19-5c8cfe0ccea0",
+  "courseTitle": "Digital SAT 1500+",
+  "lectureTitle": "2.3 Form, Structure & Sense I: Subject–Verb Agreement, Finite Verbs & Tense",
+  "totalDuration": 188.75,
+  "majorSections": {
+    "intro": {
+      "start": 0,
+      "end": 0
+    },
+    "sec_sv_core": {
+      "start": 1,
+      "end": 1
+    },
+    "sec_sv_traps": {
+      "start": 2,
+      "end": 2
+    },
+    "sec_finite": {
+      "start": 3,
+      "end": 3
+    },
+    "sec_tense": {
+      "start": 4,
+      "end": 4
+    }
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Giới thiệu Bài 2.3: Subject-Verb Agreement & Finite Verbs",
+      "selector": "#sec-header",
+      "en": "Welcome to Lesson 2.3: Form, Structure, and Sense Part One. Here we dissect how the Digital SAT disguises true subjects inside dense academic sentences, tests finite versus non-finite verbs, and enforces tense consistency.",
+      "vi": "Chào mừng các bạn đến với Bài 2.3: Hình thức, Cấu trúc và Ngữ nghĩa Phần 1. Trong bài này ta sẽ giải mã cách đề Digital SAT giấu chủ ngữ thật giữa rừng cụm giới từ, phân biệt động từ chia thì với phân từ, và xử lý chính xác sự hòa hợp thì.",
+      "duration": 32.06,
+      "startTime": 0.0,
+      "endTime": 32.06,
+      "audioUrl": "/audio/lectures/sat_rw/2_3/intro.mp3"
+    },
+    {
+      "id": "sec_sv_core",
+      "title": "1. Bẫy tách xa Chủ ngữ – Động từ & Mẹo 3–1",
+      "selector": "#sec-sv-core",
+      "en": "Section 1 shows the classic separation trap. Always cross out prepositional phrases starting with of, in, with, or by between the subject and the verb. Then apply the three-to-one shortcut: if three answer choices are plural and only one is singular, the lone singular option is almost certainly the intended answer—verify the core subject to be one hundred percent sure.",
+      "vi": "Mục 1 phân tích bẫy tách xa chủ ngữ và động từ. Hãy luôn gạch nhẩm các cụm giới từ như of, in, with chen giữa để lộ ra chủ ngữ gốc. Kết hợp với Mẹo 3–1: nếu có 3 đáp án số nhiều và duy nhất 1 đáp án số ít, phương án đơn độc đó thường chính là đáp án đúng.",
+      "duration": 41.7,
+      "startTime": 32.06,
+      "endTime": 73.76,
+      "audioUrl": "/audio/lectures/sat_rw/2_3/sec_sv_core.mp3"
+    },
+    {
+      "id": "sec_sv_traps",
+      "title": "2. Năm Chủ ngữ bẫy Hard Module 2",
+      "selector": "#sec-sv-traps",
+      "en": "Section 2 lists five Hard Module 2 subject traps: gerund subjects are always singular; inverted sentences hide the real subject after the verb; indefinite pronouns like each and every take singular verbs even before plural nouns; the number of is singular while a number of is plural; and phrases like along with do not make a singular subject plural.",
+      "vi": "Mục 2 điểm mặt 5 chủ ngữ bẫy ở Hard Module 2: chủ ngữ V-ing luôn chia số ít; câu đảo ngữ có chủ ngữ thật nằm sau động từ; each và every luôn chia số ít; the number of đi với số ít còn a number of đi với số nhiều; và cụm along with không làm chủ ngữ biến thành số nhiều.",
+      "duration": 38.92,
+      "startTime": 73.76,
+      "endTime": 112.68,
+      "audioUrl": "/audio/lectures/sat_rw/2_3/sec_sv_traps.mp3"
+    },
+    {
+      "id": "sec_finite",
+      "title": "3. Động từ chia thì (Finite) vs. Phân từ (Non-Finite)",
+      "selector": "#sec-finite",
+      "en": "Section 3 addresses the single most missed grammar item among seven-hundred-plus students: finite versus non-finite verbs. Check whether the main clause already has a conjugated main verb. If it lacks one, you must pick a finite verb and eliminate participles like designing or to design. If a main verb already exists, pick a participle modifier instead.",
+      "vi": "Mục 3 xử lý lỗi ngữ pháp dễ mất điểm nhất của học viên trên 700: động từ chia thì so với phân từ. Luôn kiểm tra mệnh đề chính đã có động từ chia thì chưa. Nếu chưa, bắt buộc chọn động từ chia thì và loại các dạng V-ing hay to-V. Nếu đã có rồi, chọn dạng phân từ để tránh lỗi hai động từ chính trong cùng một mệnh đề.",
+      "duration": 42.45,
+      "startTime": 112.68,
+      "endTime": 155.13,
+      "audioUrl": "/audio/lectures/sat_rw/2_3/sec_finite.mp3"
+    },
+    {
+      "id": "sec_tense",
+      "title": "4. Hòa hợp thì & Mỏ neo thời gian",
+      "selector": "#sec-tense",
+      "en": "Section 4 covers tense consistency. Never choose a tense by ear alone—find the time anchor in the surrounding text. Use past perfect had-plus-participle strictly for actions completed before another past anchor, and use would rather than will inside past-tense predictions.",
+      "vi": "Mục 4 tổng kết quy tắc hòa hợp thì. Tuyệt đối không chọn thì theo cảm tính mà hãy tìm mỏ neo thời gian trong đoạn văn. Chỉ dùng quá khứ hoàn thành cho sự việc xảy ra trước hẳn một mốc quá khứ khác, và dùng would thay cho will trong các dự đoán đặt ở ngữ cảnh quá khứ.",
+      "duration": 33.62,
+      "startTime": 155.13,
+      "endTime": 188.75,
+      "audioUrl": "/audio/lectures/sat_rw/2_3/sec_tense.mp3"
+    }
+  ]
+}
