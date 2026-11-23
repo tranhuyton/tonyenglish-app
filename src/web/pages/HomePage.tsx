@@ -775,7 +775,7 @@ export const HomePage: React.FC = () => {
                     )}
                   </div>
 
-                  <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between gap-3 bg-gradient-to-b from-slate-900/95 to-[#0f172a]">
+                  <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between gap-3 min-h-[176px] sm:min-h-[188px] bg-gradient-to-b from-slate-900/95 to-[#0f172a]">
                     <div className="space-y-2.5">
                       <div className="flex items-center justify-between gap-2">
                         <span className="inline-flex items-center gap-1.5 text-[11px] font-extrabold uppercase tracking-wider text-[#2ab4e8] bg-sky-500/15 border border-sky-400/25 px-2.5 py-0.5 rounded-full whitespace-nowrap">
@@ -797,17 +797,17 @@ export const HomePage: React.FC = () => {
 
                       <Link
                         to={curAdLink}
-                        className="block text-[15px] sm:text-[16px] font-extrabold leading-snug text-white hover:text-[#2ab4e8] transition-colors line-clamp-2 hero-ad-prose"
+                        className="block text-[15px] sm:text-[16px] font-extrabold leading-snug text-white hover:text-[#2ab4e8] transition-colors line-clamp-2 h-[2.75rem] sm:h-[2.85rem] overflow-hidden hero-ad-prose"
                       >
                         {curAdMetaText || curAdDescText || (lang === 'vi' ? 'Khám phá lộ trình học tại TonyEnglish' : 'Explore TonyEnglish Programs')}
                       </Link>
 
                       {showDistinctAdDesc ? (
-                        <p className="text-xs sm:text-[13px] text-slate-300/85 leading-relaxed line-clamp-2 min-h-[2.5rem]">
+                        <p className="text-xs sm:text-[13px] text-slate-300/85 leading-relaxed line-clamp-2 h-[2.5rem] sm:h-[2.65rem] overflow-hidden">
                           {curAdDescText}
                         </p>
                       ) : (
-                        <p className="text-xs sm:text-[13px] text-slate-300/80 leading-relaxed line-clamp-2 min-h-[2.5rem]">
+                        <p className="text-xs sm:text-[13px] text-slate-300/80 leading-relaxed line-clamp-2 h-[2.5rem] sm:h-[2.65rem] overflow-hidden">
                           {lang === 'vi'
                             ? 'Lộ trình cá nhân hóa 1 kèm 1 cùng Thầy Tony, kết hợp hệ sinh thái Bài giảng & Phòng thi AI 24/7.'
                             : 'Personalized 1-on-1 roadmap with Mr. Tony, combining bilingual lectures & 24/7 AI Exam Lab.'}
@@ -844,16 +844,22 @@ export const HomePage: React.FC = () => {
               ) : !adsLoaded ? (
                 <div className="w-full rounded-3xl overflow-hidden bg-slate-900/80 backdrop-blur-md border border-white/15 shadow-2xl flex flex-col animate-pulse">
                   <div className="aspect-[16/9] bg-slate-800/80 shrink-0" />
-                  <div className="p-5 flex-1 flex flex-col justify-between gap-3">
-                    <div className="space-y-3">
+                  <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between gap-3 min-h-[176px] sm:min-h-[188px]">
+                    <div className="space-y-2.5">
                       <div className="flex items-center justify-between">
                         <div className="h-5 w-32 rounded-full bg-white/10" />
                         <div className="h-4 w-24 rounded-full bg-white/10" />
                       </div>
-                      <div className="h-5 w-11/12 rounded-lg bg-white/15" />
-                      <div className="h-4 w-3/4 rounded-lg bg-white/10" />
+                      <div className="h-[2.75rem] sm:h-[2.85rem] space-y-2">
+                        <div className="h-4 w-11/12 rounded-lg bg-white/15" />
+                        <div className="h-4 w-2/3 rounded-lg bg-white/15" />
+                      </div>
+                      <div className="h-[2.5rem] sm:h-[2.65rem] space-y-1.5">
+                        <div className="h-3.5 w-full rounded-lg bg-white/10" />
+                        <div className="h-3.5 w-3/4 rounded-lg bg-white/10" />
+                      </div>
                     </div>
-                    <div className="pt-3 border-t border-white/10 flex items-center justify-between">
+                    <div className="pt-2.5 border-t border-white/10 flex items-center justify-between">
                       <div className="h-3.5 w-36 rounded bg-white/10" />
                       <div className="h-2 w-16 rounded-full bg-white/10" />
                     </div>
@@ -1060,11 +1066,11 @@ export const HomePage: React.FC = () => {
                     <div>
                       <Link
                         to={`/news/view/${(curSticky.news_title_url || '').trim()}`}
-                        className="font-extrabold text-[17px] sm:text-[18px] text-slate-800 group-hover:text-[#0a5482] transition-colors line-clamp-2 leading-snug mb-2 block"
+                        className="font-extrabold text-[17px] sm:text-[18px] text-slate-800 group-hover:text-[#0a5482] transition-colors line-clamp-2 min-h-[3rem] leading-snug mb-2 block"
                       >
                         {(curSticky.news_title || '').trim()}
                       </Link>
-                      <p className="text-slate-600 text-[15px] leading-relaxed line-clamp-3">
+                      <p className="text-slate-600 text-[15px] leading-relaxed line-clamp-3 min-h-[4.3rem]">
                         {truncateWords(curSticky.news_desc, 160)}
                       </p>
                     </div>
@@ -1488,14 +1494,14 @@ export const HomePage: React.FC = () => {
                           <Link
                             to={targetUrl}
                             className={`font-extrabold ${
-                              isCompact ? 'text-[15.5px]' : 'text-[17px] sm:text-[18px]'
+                              isCompact ? 'text-[15.5px] min-h-[2.6rem]' : 'text-[17px] sm:text-[18px] min-h-[3rem]'
                             } text-slate-800 group-hover:text-[#0a5482] transition-colors line-clamp-2 leading-snug mb-2 block`}
                           >
                             {subTitle}
                           </Link>
                           <p
                             className={`text-slate-600 ${
-                              isCompact ? 'text-[13.5px]' : 'text-[15px]'
+                              isCompact ? 'text-[13.5px] min-h-[3.9rem]' : 'text-[15px] min-h-[4.3rem]'
                             } leading-relaxed line-clamp-3`}
                           >
                             {truncateWords(descText, isCompact ? 130 : 165)}
