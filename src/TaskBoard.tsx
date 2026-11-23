@@ -789,15 +789,20 @@ export default function TaskBoard({
       const columns: ColumnData[] = Array.from(columnsMap.entries()).map(([category, cardsMap]) => {
         const cards: CardData[] = Array.from(cardsMap.entries()).map(([cardTitle, items]) => {
           const sortedItems = [...items].sort((a, b) => (a.order_index || 0) - (b.order_index || 0));
+          const explicitCardOrder = items[0]?.card_order;
+          const decPrefixMatch = cardTitle.match(/^\s*(\d+)\.(\d+)\b/);
           const numPrefixMatch = cardTitle.match(/^\s*(\d+)\./);
           const entityMatch = cardTitle.match(/(?:Topic|Unit|Chapter|Cambridge)\s*(\d+)/i);
-          const cardOrder = numPrefixMatch
-            ? parseInt(numPrefixMatch[1], 10)
-            : (entityMatch
-                ? parseInt(entityMatch[1], 10)
-                : ((items[0]?.card_order != null && items[0]?.card_order !== 0) 
-                    ? items[0].card_order 
-                    : (cardTitle.toLowerCase().startsWith('công việc') ? 1 : cardTitle.toLowerCase().startsWith('bài tập') ? 2 : 999)));
+          const cardOrder =
+            explicitCardOrder != null && explicitCardOrder !== 0
+              ? explicitCardOrder
+              : decPrefixMatch
+                ? parseInt(decPrefixMatch[1], 10) * 1000 + parseInt(decPrefixMatch[2], 10)
+                : numPrefixMatch
+                  ? parseInt(numPrefixMatch[1], 10) * 1000
+                  : entityMatch
+                    ? parseInt(entityMatch[1], 10) * 1000
+                    : (cardTitle.toLowerCase().startsWith('công việc') ? 1 : cardTitle.toLowerCase().startsWith('bài tập') ? 2 : 999999);
           const completedCount = sortedItems.filter(i => {
             if (i.task_type === 'test') {
               return i.is_completed || (i.test_id && completedTestIds.has(String(i.test_id)));
@@ -807,7 +812,7 @@ export default function TaskBoard({
           totalItems += sortedItems.length;
           totalCompleted += completedCount;
           return { title: cardTitle, order: cardOrder, items: sortedItems, completedCount, totalCount: sortedItems.length };
-        }).sort((a, b) => a.order - b.order);
+        }).sort((a, b) => (a.order - b.order) || a.title.localeCompare(b.title, undefined, { numeric: true }));
         return { name: category, cards };
       });
 
