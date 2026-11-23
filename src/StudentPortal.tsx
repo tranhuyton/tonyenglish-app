@@ -19,6 +19,7 @@ import { LineChart, Line, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip,
 import { BoardTheme, DEFAULT_BOARD_THEME, BoardThemeModal, createCustomTheme, loadTheme, saveTheme } from './ThemeModal';
 import CourseStudyCoach, { isCoachSupportedCourse } from './CourseStudyCoach';
 import { parseClassConfig } from './classConfigUtils';
+import { ensureCourseBoardAssignedToUser, ensureCourseBoardsAssignedForUser } from './boardLectureSync';
 
 const SUBFOLDER_PALETTES = [
   { gradient: 'from-[#073b5c] via-[#0a5482] to-[#136f9f]', accent: 'text-sky-200', pill: 'bg-sky-50 text-[#0a5482] border-sky-200/80' },
@@ -633,6 +634,23 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
         setAssignments(finalAssignments);
 
+        // Tự động gán Bảng Công Việc sẵn có cho tất cả các khóa học học viên đã tham gia (không ghi đè tiến độ cũ)
+        if (enrolledIds.length > 0 && isTonyEnglishAuthUser(user)) {
+          ensureCourseBoardsAssignedForUser(user.id, enrolledIds)
+            .then(async (autoRes) => {
+              if (autoRes.addedItems > 0) {
+                const { data: refreshedAssigns } = await supabase
+                  .from('assignments')
+                  .select('*')
+                  .eq('user_id', user.id)
+                  .order('due_date', { ascending: true })
+                  .limit(5000);
+                if (refreshedAssigns) setAssignments(refreshedAssigns);
+              }
+            })
+            .catch(() => {});
+        }
+
         // Nếu là học viên Online, tự động lấy thêm toàn bộ danh sách khóa học IGCSE để hiển thị chế độ Học Thử / Làm Thử
         let igcseCourseIds: string[] = [];
         if (isOnlineUser) {
@@ -1038,6 +1056,10 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
     sessionStorage.setItem('portal_selected_course_id', String(course.id));
     sessionStorage.setItem('portal_active_view', 'course');
     sessionStorage.removeItem('portal_current_folder_id');
+    // Tự động gán Bảng Công Việc của khóa học này nếu học viên đã vào khóa mà chưa có bảng
+    if (currentUser?.id && (enrolledCourseIdsSet.has(String(course.id)) || isTonyEnglishAdmin(currentUser, userProfile))) {
+      ensureCourseBoardAssignedToUser(String(course.id), currentUser.id).catch(() => {});
+    }
   };
 
   const handleGoToLecture = (courseId?: string, lectureId?: string) => {
@@ -3187,6 +3209,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               userId={currentUser.id} 
               isAdmin={isTonyEnglishAdmin(currentUser, userProfile)}
               filterCourseId={filterCourse}
+              enrolledCourseIds={isTonyEnglishAdmin(currentUser, userProfile) ? courses.map((c: any) => String(c.id)) : Array.from(enrolledCourseIdsSet)}
               courseTitle={filterCourse === 'all' ? undefined : courses.find(c => String(c.id) === String(filterCourse))?.title}
               bottomActions={renderBottomControls}
               lectures={allLectures}

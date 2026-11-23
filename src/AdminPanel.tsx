@@ -10,7 +10,8 @@ import BatchImportModal from './BatchImportModal';
 import BatchImportJsonModal from './BatchImportJsonModal';
 import { parseModuleTheme, formatModuleTitleWithColor, ModuleColorSelector, ModuleColorModal } from './moduleTheme';
 import { parseLectureFromItem, formatLectureTaskDescription } from './lectureTaskUtils';
-import { syncCourseBoardWithLectures, syncBoardTemplateToSingleUser } from './boardLectureSync';
+import { syncCourseBoardWithLectures, syncBoardTemplateToSingleUser, ensureCourseBoardAssignedToUser, assignCourseBoardToAllEnrolledUsers } from './boardLectureSync';
+import { generateMissingBoardsAndAssignEnrolledStudents } from './boardAutoGenerator';
 import { parseClassConfig, formatClassConfig } from './classConfigUtils';
 import './tailwind.css';
 
@@ -404,6 +405,9 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   const [boardLectureSearch, setBoardLectureSearch] = useState<string>('');
   const [expandedBoardLectureIds, setExpandedBoardLectureIds] = useState<Set<string>>(new Set());
   const [isSyncingBoardFromLectures, setIsSyncingBoardFromLectures] = useState<boolean>(false);
+  const [isAutoGeneratingBoards, setIsAutoGeneratingBoards] = useState<boolean>(false);
+  const [autoGenBoardsStatus, setAutoGenBoardsStatus] = useState<string>('');
+  const [isAssigningBoardToAll, setIsAssigningBoardToAll] = useState<boolean>(false);
 
   useEffect(() => {
     if (!boardCourseId) {
@@ -997,6 +1001,8 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
        if (found) setCourseStudentsList(prev => [...prev, found]);
      }
      await supabase.from('class_students').insert([{ class_id: selectedClass.id, user_id: userId }]); 
+     // Tự động gán Bảng Công Việc của khóa học cho học sinh vừa vào lớp
+     ensureCourseBoardAssignedToUser(selectedCourse.id, userId).catch(() => {});
      fetchClassDetails(selectedClass.id);
   };
 
@@ -2607,8 +2613,56 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                   <h3 className="font-black text-sm text-[#0a5482]">📋 Bảng Công việc (Task Board)</h3>
                   <p className="text-[11px] text-slate-400 mt-0.5">Tạo bảng công việc kiểu Trello cho học sinh theo dõi tiến độ</p>
                 </div>
-                <div className="flex gap-2 items-center">
-                  {/* Global filter controls this */}
+                <div className="flex gap-2 items-center flex-wrap">
+                  <button
+                    disabled={isAutoGeneratingBoards}
+                    onClick={async () => {
+                      if (isAutoGeneratingBoards) return;
+                      if (!window.confirm('Tự động tạo Bảng Công Việc cho tất cả các khóa còn thiếu (bao gồm Digital SAT 1500+ và các khóa chưa có Board) và tự động gán Board cho toàn bộ học viên đã tham gia từng khóa? (An toàn, không làm mất tiến độ cũ)')) return;
+                      setIsAutoGeneratingBoards(true);
+                      setAutoGenBoardsStatus('Đang chuẩn bị...');
+                      try {
+                        const res = await generateMissingBoardsAndAssignEnrolledStudents((msg) => setAutoGenBoardsStatus(msg));
+                        if (boardCourseId) {
+                          const { data } = await supabase.from('board_templates').select('*').eq('course_id', boardCourseId).order('created_at');
+                          setBoardTemplates(data || []);
+                          const nextTplId = data?.find(b => b.is_active)?.id || data?.[0]?.id || null;
+                          setActiveBoardTemplateId(nextTplId);
+                          if (nextTplId) {
+                            const { data: cols } = await supabase.from('board_columns').select('*').eq('board_template_id', nextTplId).order('order_index', { ascending: true });
+                            setBoardColumns(cols || []);
+                            if (cols && cols.length > 0) {
+                              const { data: cards } = await fetchAllRows((from, to) =>
+                                supabase.from('board_cards').select('*').in('column_id', cols.map(c => c.id)).order('order_index', { ascending: true }).order('id').range(from, to)
+                              );
+                              setBoardCards(cards || []);
+                              if (cards && cards.length > 0) {
+                                const { data: items } = await fetchAllRows((from, to) =>
+                                  supabase.from('board_card_items').select('*').in('card_id', cards.map(c => c.id)).order('order_index', { ascending: true }).order('id').range(from, to)
+                                );
+                                setBoardCardItems(items || []);
+                              }
+                            }
+                          }
+                        }
+                        alert(
+                          `✅ Hoàn tất khởi tạo & đồng bộ Bảng Công Việc toàn hệ thống!\n` +
+                          `• Board mới tạo: ${res.createdBoards} khóa (${res.totalCols} cột, ${res.totalCards} thẻ, ${res.totalItems} mục việc)\n` +
+                          `• Gán/đồng bộ cho học viên: ${res.usersUpdated} lượt tài khoản trên ${res.coursesAssignedCount} khóa (+${res.addedAssignments} mục mới)`
+                        );
+                      } catch (err: any) {
+                        console.error('[AutoGenBoards] Error:', err);
+                        alert('❌ Lỗi khi khởi tạo tự động: ' + (err?.message || err));
+                      } finally {
+                        setIsAutoGeneratingBoards(false);
+                        setAutoGenBoardsStatus('');
+                      }
+                    }}
+                    className="px-3.5 py-2 rounded-xl bg-gradient-to-r from-[#0a5482] to-sky-600 hover:from-[#084266] hover:to-sky-700 text-white font-bold text-xs shadow-xs transition-all cursor-pointer disabled:opacity-60"
+                    title="Khởi tạo tự động tất cả Board còn thiếu (SAT & các khóa chưa có Board) và gán cho học viên đã vào khóa"
+                  >
+                    {isAutoGeneratingBoards ? `⏳ ${autoGenBoardsStatus || 'Đang khởi tạo...'}` : '✨ Tạo tự động Board còn thiếu & Gán toàn bộ HV'}
+                  </button>
                 </div>
               </div>
 
@@ -2665,6 +2719,30 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                         title="Cập nhật toàn bộ việc chép bài & bài tập/quizzes từ các bài giảng vào Bảng giao bài, Lịch báo bài và Học sinh đã giao"
                       >
                         {isSyncingBoardFromLectures ? '⏳ Đang đồng bộ...' : '🔄 Đồng bộ từ Bài giảng & Học sinh'}
+                      </button>
+                      <button
+                        disabled={isAssigningBoardToAll}
+                        onClick={async () => {
+                          if (!boardCourseId || !activeBoardTemplateId || isAssigningBoardToAll) return;
+                          setIsAssigningBoardToAll(true);
+                          try {
+                            const res = await assignCourseBoardToAllEnrolledUsers(boardCourseId, activeBoardTemplateId);
+                            alert(
+                              `✅ Đã gán/đồng bộ "${res.boardTitle}" cho toàn bộ học viên của khóa!\n` +
+                              `• Tổng học viên trong khóa: ${res.usersTotal}\n` +
+                              `• Số tài khoản được cập nhật: ${res.usersUpdated} (+${res.addedItems} mục mới, ${res.updatedItems} cập nhật)`
+                            );
+                          } catch (err: any) {
+                            console.error(err);
+                            alert('❌ Lỗi khi gán Board: ' + (err?.message || err));
+                          } finally {
+                            setIsAssigningBoardToAll(false);
+                          }
+                        }}
+                        className="px-3 py-1.5 rounded-xl bg-emerald-100 hover:bg-emerald-200 text-emerald-900 border border-emerald-300 font-bold text-xs transition-all cursor-pointer disabled:opacity-50"
+                        title="Gán bảng công việc này cho tất cả học viên đã tham gia khóa học (giữ nguyên tiến độ đã làm)"
+                      >
+                        {isAssigningBoardToAll ? '⏳ Đang gán...' : '👥 Gán cho tất cả HV khóa này'}
                       </button>
                       <button onClick={async () => {
                         const bt = boardTemplates.find(b => b.id === activeBoardTemplateId);

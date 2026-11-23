@@ -3,6 +3,7 @@ import { supabase, TONYENGLISH_APP_ID } from './supabase';
 import { createClient } from '@supabase/supabase-js';
 import { parseClassConfig } from './classConfigUtils';
 import { parseArticleInteractiveQuiz, extractArticleEbookPdfUrl } from './web/lib/utils';
+import { ensureCourseBoardAssignedToUser, syncBoardTemplateToSingleUser } from './boardLectureSync';
 
 const authSupabase = createClient(
   import.meta.env.VITE_SUPABASE_URL,
@@ -355,43 +356,31 @@ export default function StudentManagement({ mode = 'offline', onStartTest, autoS
     setIsBoardAssigning(true);
     
     try {
-      const { data: bTpl } = await supabase.from('board_templates').select('id, title').eq('course_id', boardAssignCourseId).order('created_at').limit(1).maybeSingle();
-      const inserts = [];
-      for (const col of boardAssignColumns) {
-        const colCards = boardAssignCards.filter(c => c.column_id === col.id);
-        for (const card of colCards) {
-          const cardItems = boardAssignItems.filter(i => i.card_id === card.id);
-          for (const item of cardItems) {
-            inserts.push({
-              user_id: selectedStudent.id,
-              title: item.title,
-              description: item.description,
-              task_type: item.task_type,
-              test_id: item.test_id,
-              category: col.title,
-              card_title: card.title,
-              card_order: card.order_index || 0,
-              order_index: item.order_index || 0,
-              due_date: null,
-              board_template_id: bTpl?.id || null,
-              board_template_title: bTpl?.title || null
-            });
-          }
-        }
+      const { data: bTpl } = await supabase
+        .from('board_templates')
+        .select('id, title')
+        .eq('course_id', boardAssignCourseId)
+        .order('is_active', { ascending: false })
+        .order('created_at', { ascending: true })
+        .limit(1)
+        .maybeSingle();
+
+      if (!bTpl) {
+        alert('Khóa học này chưa có Bảng Công Việc mẫu nào.');
+        return;
       }
-      
-      if (inserts.length > 0) {
-        const { error } = await supabase.from('assignments').insert(inserts);
-        if (error) throw error;
-        
-        // Refresh assignments
-        const { data: updatedAssignments } = await supabase.from('assignments').select('*').eq('user_id', selectedStudent.id);
-        if (updatedAssignments) setStudentAssignments(updatedAssignments);
-      }
+
+      const syncRes = await syncBoardTemplateToSingleUser(bTpl.id, selectedStudent.id);
+      if (syncRes.error) throw new Error(syncRes.error);
+
+      const { data: updatedAssignments } = await fetchAllRows((from, to) =>
+        supabase.from('assignments').select('*').eq('user_id', selectedStudent.id).order('id').range(from, to)
+      );
+      if (updatedAssignments) setStudentAssignments(updatedAssignments);
       
       setShowBoardAssign(false);
       setBoardAssignCourseId(null);
-      alert('Đã giao thành công!');
+      alert(`Đã giao/đồng bộ bảng "${bTpl.title}" thành công! (+${syncRes.added} mục mới, ${syncRes.updated} mục cập nhật, giữ nguyên tiến độ cũ)`);
     } catch (err: any) {
       console.error(err);
       alert('Lỗi: ' + err.message);
@@ -781,13 +770,20 @@ export default function StudentManagement({ mode = 'offline', onStartTest, autoS
         }]);
         setStudentClassIds(prev => [...prev, classId]);
       }
+
+      // Tự động gán Bảng Công Việc sẵn có của khóa học cho học viên
+      const boardRes = await ensureCourseBoardAssignedToUser(courseId, selectedStudent.id).catch(() => null);
       
       setStudentEnrollments([data[0], ...studentEnrollments]);
       setAllEnrollments(prev => [...prev, { user_id: selectedStudent.id, course_id: courseId }]);
       setShowAssignModal(false);
       setSelectedAssignCourseId('');
       setSelectedAssignClassId('');
-      alert("✅ Đã gán khóa học thành công!");
+      alert(
+        boardRes && boardRes.added > 0
+          ? `✅ Đã gán khóa học & tự động gán "${boardRes.boardTitle}" (+${boardRes.added} mục công việc) thành công!`
+          : "✅ Đã gán khóa học thành công!"
+      );
     } catch (err: any) {
       alert("❌ Lỗi: " + err.message);
     } finally {
@@ -871,6 +867,8 @@ export default function StudentManagement({ mode = 'offline', onStartTest, autoS
           setStudentEnrollments(prev => [data[0], ...prev]);
           setAllEnrollments(prev => [...prev, { user_id: selectedStudent.id, course_id: course.id }]);
         }
+        // Tự động gán Bảng Công Việc sẵn có của khóa học IGCSE
+        ensureCourseBoardAssignedToUser(course.id, selectedStudent.id).catch(() => {});
         const meta = parseStudentMeta(selectedStudent);
         const reqList = Array.isArray(meta.requested_courses) ? meta.requested_courses.filter((t: string) => t !== course.title) : undefined;
         const nextMeta = {

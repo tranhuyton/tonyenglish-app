@@ -2,7 +2,23 @@ import { useState, useEffect, useMemo, useRef, useCallback } from 'react';
 import { supabase } from './supabase';
 import { parseModuleTheme, formatModuleTitleWithColor, ModuleColorModal } from './moduleTheme';
 import { parseLectureFromItem } from './lectureTaskUtils';
-import { syncCourseBoardWithLectures } from './boardLectureSync';
+import { syncCourseBoardWithLectures, ensureCourseBoardsAssignedForUser } from './boardLectureSync';
+
+async function fetchAllTaskBoardRows<T = any>(
+  buildQuery: (from: number, to: number) => PromiseLike<{ data: T[] | null; error: any }>
+): Promise<T[]> {
+  const rows: T[] = [];
+  const pageSize = 1000;
+  let from = 0;
+  while (true) {
+    const { data, error } = await buildQuery(from, from + pageSize - 1);
+    if (error || !data || data.length === 0) break;
+    rows.push(...data);
+    if (data.length < pageSize) break;
+    from += pageSize;
+  }
+  return rows;
+}
 
 interface Assignment {
   id: string;
@@ -136,6 +152,7 @@ export default function TaskBoard({
   userId, 
   isAdmin = false,
   filterCourseId = 'all', 
+  enrolledCourseIds,
   topActions,
   bottomActions,
   courseTitle,
@@ -147,6 +164,7 @@ export default function TaskBoard({
   userId: string; 
   isAdmin?: boolean;
   filterCourseId?: string; 
+  enrolledCourseIds?: string[];
   topActions?: React.ReactNode;
   bottomActions?: React.ReactNode;
   courseTitle?: string;
@@ -318,6 +336,11 @@ export default function TaskBoard({
     });
   };
 
+  const enrolledCourseKey = useMemo(
+    () => Array.from(new Set((enrolledCourseIds || []).map(String).filter(Boolean))).sort().join(','),
+    [enrolledCourseIds]
+  );
+
   useEffect(() => {
     fetchAssignments();
     setBoardTheme(loadTheme(`tony_taskboard_theme_${userId}`));
@@ -326,7 +349,7 @@ export default function TaskBoard({
     return () => {
       window.removeEventListener('tony-refresh-lecture-progress', handleRefresh);
     };
-  }, [userId]);
+  }, [userId, filterCourseId, enrolledCourseKey]);
 
   useEffect(() => {
     if (!activeModalCard) return;
@@ -345,19 +368,158 @@ export default function TaskBoard({
       }
       setLoading(true);
       
-      const [bRes, colRes, assignRes, trRes] = await Promise.all([
-        supabase.from('board_templates').select('id, title, course_id'),
-        supabase.from('board_columns').select('*').order('order_index', { ascending: true }),
-        supabase.from('assignments').select('*').eq('user_id', userId).not('category', 'is', null),
-        supabase.from('test_results').select('id, test_title, score, total_score, created_at, details').eq('user_id', userId).order('created_at', { ascending: false })
+      const [bRes, colRes, initialAssignRows, trRes] = await Promise.all([
+        supabase.from('board_templates').select('id, title, course_id, is_active, created_at').order('is_active', { ascending: false }).order('created_at', { ascending: true }),
+        fetchAllTaskBoardRows((from, to) =>
+          supabase.from('board_columns').select('*').order('order_index', { ascending: true }).order('id', { ascending: true }).range(from, to)
+        ),
+        fetchAllTaskBoardRows<Assignment>((from, to) =>
+          supabase.from('assignments').select('*').eq('user_id', userId).not('category', 'is', null).order('id', { ascending: true }).range(from, to)
+        ),
+        fetchAllTaskBoardRows((from, to) =>
+          supabase.from('test_results').select('id, test_title, score, total_score, created_at, details').eq('user_id', userId).order('created_at', { ascending: false }).order('id', { ascending: true }).range(from, to)
+        )
       ]);
 
-      setBoardTemplates(bRes.data || []);
-      setBoardColumns(colRes.data || []);
+      const allTemplates = bRes.data || [];
+      const allCols = colRes || [];
+      setBoardTemplates(allTemplates);
+      setBoardColumns(allCols);
+
+      let assignRows: Assignment[] = initialAssignRows || [];
+
+      // Auto-assign course Task Boards when user enters a course or opens TaskBoard
+      const targetCourseIds =
+        filterCourseId && filterCourseId !== 'all'
+          ? [String(filterCourseId)]
+          : (enrolledCourseIds || []).map(String).filter(Boolean);
+
+      if (targetCourseIds.length > 0 && allTemplates.length > 0) {
+        const colCountsByTpl = new Map<string, number>();
+        allCols.forEach((c: any) => {
+          const btid = String(c.board_template_id || '');
+          if (btid) colCountsByTpl.set(btid, (colCountsByTpl.get(btid) || 0) + 1);
+        });
+
+        const existingTplIds = new Set(assignRows.map(a => String(a.board_template_id || '')).filter(Boolean));
+        const existingTplTitles = new Set(assignRows.map(a => String(a.board_template_title || '')).filter(Boolean));
+
+        const missingCourseIds: string[] = [];
+        const fallbackTemplates: any[] = [];
+        const primaryTplByCourse = new Map<string, any>();
+
+        for (const tpl of allTemplates) {
+          const cid = String(tpl.course_id || '');
+          if (!cid || primaryTplByCourse.has(cid)) continue;
+          if ((colCountsByTpl.get(String(tpl.id)) || 0) > 0) {
+            primaryTplByCourse.set(cid, tpl);
+          }
+        }
+
+        for (const cid of Array.from(new Set(targetCourseIds))) {
+          const tpl = primaryTplByCourse.get(cid);
+          if (!tpl) continue;
+          if (!existingTplIds.has(String(tpl.id)) && !existingTplTitles.has(String(tpl.title))) {
+            missingCourseIds.push(cid);
+            fallbackTemplates.push(tpl);
+          }
+        }
+
+        if (missingCourseIds.length > 0) {
+          try {
+            const autoRes = await ensureCourseBoardsAssignedForUser(userId, missingCourseIds);
+            if (autoRes.addedItems > 0) {
+              assignRows = await fetchAllTaskBoardRows<Assignment>((from, to) =>
+                supabase.from('assignments').select('*').eq('user_id', userId).not('category', 'is', null).order('id', { ascending: true }).range(from, to)
+              );
+            }
+            if (autoRes.missingTemplateIds.length > 0) {
+              // Seamless live-template fallback if DB RLS blocks direct student insert into `assignments`
+              const missingTplSet = new Set(autoRes.missingTemplateIds.map(String));
+              const synthTpls = fallbackTemplates.filter(t => missingTplSet.has(String(t.id)));
+              const synthCols = allCols.filter((c: any) => missingTplSet.has(String(c.board_template_id || '')));
+              const synthColIds = synthCols.map((c: any) => c.id);
+
+              if (synthColIds.length > 0) {
+                const [synthCards, lpRes] = await Promise.all([
+                  fetchAllTaskBoardRows((from, to) =>
+                    supabase.from('board_cards').select('*').in('column_id', synthColIds).order('order_index').order('id').range(from, to)
+                  ),
+                  supabase.from('lecture_progress').select('lecture_id, completed_tasks, is_completed').eq('user_id', userId).limit(2000)
+                ]);
+                const synthCardIds = synthCards.map((c: any) => c.id);
+                const synthItems = synthCardIds.length > 0
+                  ? await fetchAllTaskBoardRows((from, to) =>
+                      supabase.from('board_card_items').select('*').in('card_id', synthCardIds).order('order_index').order('id').range(from, to)
+                    )
+                  : [];
+
+                let localChecks: Record<string, boolean> = {};
+                try {
+                  localChecks = JSON.parse(localStorage.getItem(`tony_live_board_checks_${userId}`) || '{}') || {};
+                } catch {}
+
+                const lpByLecId = new Map<string, { completed_tasks: string[]; is_completed: boolean }>();
+                (lpRes.data || []).forEach((lp: any) => {
+                  lpByLecId.set(String(lp.lecture_id), {
+                    completed_tasks: Array.isArray(lp.completed_tasks) ? lp.completed_tasks : [],
+                    is_completed: Boolean(lp.is_completed)
+                  });
+                });
+
+                const tplById = new Map<string, any>(synthTpls.map(t => [String(t.id), t]));
+                const synthesized: Assignment[] = [];
+
+                for (const col of synthCols) {
+                  const tpl = tplById.get(String(col.board_template_id));
+                  if (!tpl) continue;
+                  const cCards = synthCards.filter((cd: any) => cd.column_id === col.id);
+                  for (const card of cCards) {
+                    const cItems = synthItems.filter((it: any) => it.card_id === card.id);
+                    for (const it of cItems) {
+                      const liveId = `live_${it.id}`;
+                      let done = Boolean(localChecks[liveId]);
+                      if (!done && it.task_type === 'manual' && it.description) {
+                        const meta = parseLectureFromItem(it, card.title);
+                        if (meta.lectureId) {
+                          const lp = lpByLecId.get(String(meta.lectureId));
+                          if (lp) {
+                            if (meta.taskId && lp.completed_tasks.includes(meta.taskId)) done = true;
+                            else if (lp.is_completed) done = true;
+                          }
+                        }
+                      }
+                      synthesized.push({
+                        id: liveId,
+                        user_id: userId,
+                        title: it.title,
+                        description: it.description || '',
+                        task_type: it.task_type,
+                        test_id: it.test_id || undefined,
+                        category: col.title,
+                        card_title: card.title,
+                        card_order: card.order_index || 0,
+                        order_index: it.order_index || 0,
+                        student_completed: done,
+                        is_completed: false,
+                        board_template_id: tpl.id,
+                        board_template_title: tpl.title
+                      });
+                    }
+                  }
+                }
+                assignRows = [...assignRows, ...synthesized];
+              }
+            }
+          } catch (autoErr) {
+            console.warn('[TaskBoard] Auto-assign check error:', autoErr);
+          }
+        }
+      }
 
       const cSet = new Set<string>();
       const scoreMap = new Map<string, { score: number; total_score: number; percent: number; isPassed: boolean }>();
-      (trRes.data || []).forEach((r: any) => {
+      (trRes || []).forEach((r: any) => {
         let d = r.details;
         if (typeof d === 'string') {
           try { d = JSON.parse(d); } catch (e) {}
@@ -424,7 +586,7 @@ export default function TaskBoard({
       } catch (e) {}
       setInProgressTestIds(inProg);
 
-      setAssignments(assignRes.data || []);
+      setAssignments(assignRows);
       
     } catch (error) {
       console.error('[TaskBoard] Error fetching assignments:', error);
@@ -439,29 +601,39 @@ export default function TaskBoard({
 
     try {
       const newStatus = !task.student_completed;
+      const isLiveTemplateItem = String(task.id || '').startsWith('live_');
       
-      // Update this specific task
-      const updatePayload: any = { student_completed: newStatus };
-      if (!newStatus) updatePayload.admin_approved = false; // Reset approval when un-completing
-      
-      const { error } = await supabase
-        .from('assignments')
-        .update(updatePayload)
-        .eq('id', task.id);
+      if (isLiveTemplateItem) {
+        try {
+          const storageKey = `tony_live_board_checks_${userId}`;
+          const saved = JSON.parse(localStorage.getItem(storageKey) || '{}') || {};
+          saved[task.id] = newStatus;
+          localStorage.setItem(storageKey, JSON.stringify(saved));
+        } catch {}
+      } else {
+        // Update this specific task
+        const updatePayload: any = { student_completed: newStatus };
+        if (!newStatus) updatePayload.admin_approved = false; // Reset approval when un-completing
+        
+        const { error } = await supabase
+          .from('assignments')
+          .update(updatePayload)
+          .eq('id', task.id);
 
-      if (error) throw error;
+        if (error) throw error;
 
-      // Also sync all matching assignments (same title, same user, same task_type, scoped to card)
-      let query = supabase
-        .from('assignments')
-        .update(updatePayload)
-        .eq('user_id', userId)
-        .eq('title', task.title)
-        .eq('task_type', 'manual');
-      if (task.card_title) {
-        query = query.eq('card_title', task.card_title);
+        // Also sync all matching assignments (same title, same user, same task_type, scoped to card)
+        let query = supabase
+          .from('assignments')
+          .update(updatePayload)
+          .eq('user_id', userId)
+          .eq('title', task.title)
+          .eq('task_type', 'manual');
+        if (task.card_title) {
+          query = query.eq('card_title', task.card_title);
+        }
+        await query;
       }
-      await query;
 
       // Sync with lecture_progress (supports both lecture-named cards and "Công việc Section/Topic" cards)
       try {
@@ -639,11 +811,17 @@ export default function TaskBoard({
         return { name: category, cards };
       });
 
-      // Sort columns: Prioritize board_columns order_index -> Year 1 -> Year 2 -> ... -> Exam practice & Past papers ALWAYS at the very end
+      // Sort columns: Prioritize matching THIS board template's board_columns order_index
+      const thisBoardTpl = boardTemplates.find(t => t.title === boardTitle);
+      const thisBoardCols = thisBoardTpl
+        ? boardColumns.filter(c => String(c.board_template_id || '') === String(thisBoardTpl.id))
+        : [];
       const getColumnWeight = (catName: string) => {
         const norm = parseModuleTheme(catName).cleanTitle.trim().toLowerCase();
-        // Matching board_columns order_index first
-        const bc = boardColumns.find(c => parseModuleTheme(c.title).cleanTitle.trim().toLowerCase() === norm);
+        // Matching this board's own board_columns order_index first
+        const bc =
+          thisBoardCols.find(c => parseModuleTheme(c.title).cleanTitle.trim().toLowerCase() === norm) ||
+          boardColumns.find(c => parseModuleTheme(c.title).cleanTitle.trim().toLowerCase() === norm);
         if (bc && bc.order_index != null) {
           return bc.order_index;
         }
@@ -1006,11 +1184,21 @@ export default function TaskBoard({
               }}
             >
               {board.columns.map((col, colIdx) => {
-                const matchingCol = boardColumns.find(bc => {
-                  const t1 = parseModuleTheme(bc.title).cleanTitle.trim().toLowerCase();
-                  const t2 = parseModuleTheme(col.name).cleanTitle.trim().toLowerCase();
-                  return t1 === t2 || (bc.id && col.name === bc.id);
-                });
+                const boardTplForCol = boardTemplates.find(t => t.title === board.title);
+                const matchingCol =
+                  (boardTplForCol
+                    ? boardColumns.find(bc => {
+                        if (String(bc.board_template_id || '') !== String(boardTplForCol.id)) return false;
+                        const t1 = parseModuleTheme(bc.title).cleanTitle.trim().toLowerCase();
+                        const t2 = parseModuleTheme(col.name).cleanTitle.trim().toLowerCase();
+                        return t1 === t2 || (bc.id && col.name === bc.id);
+                      })
+                    : null) ||
+                  boardColumns.find(bc => {
+                    const t1 = parseModuleTheme(bc.title).cleanTitle.trim().toLowerCase();
+                    const t2 = parseModuleTheme(col.name).cleanTitle.trim().toLowerCase();
+                    return t1 === t2 || (bc.id && col.name === bc.id);
+                  });
                 const dbTheme = parseModuleTheme(matchingCol?.title || col.name);
                 const userColColor = customColColors[col.name];
                 const effectiveBg = userColColor?.bg || (dbTheme.hasColor ? dbTheme.bg : '#f1f5f9');
@@ -1277,11 +1465,21 @@ export default function TaskBoard({
 
       {/* ================= CARD DETAIL POPUP MODAL ================= */}
       {activeModalCard && (() => {
-        const matchingCol = boardColumns.find(bc => {
-          const t1 = parseModuleTheme(bc.title).cleanTitle.trim().toLowerCase();
-          const t2 = parseModuleTheme(activeModalCard.colName).cleanTitle.trim().toLowerCase();
-          return t1 === t2 || (bc.id && activeModalCard.colName === bc.id);
-        });
+        const modalBoardTpl = boardTemplates.find(t => t.title === activeModalCard.boardTitle);
+        const matchingCol =
+          (modalBoardTpl
+            ? boardColumns.find(bc => {
+                if (String(bc.board_template_id || '') !== String(modalBoardTpl.id)) return false;
+                const t1 = parseModuleTheme(bc.title).cleanTitle.trim().toLowerCase();
+                const t2 = parseModuleTheme(activeModalCard.colName).cleanTitle.trim().toLowerCase();
+                return t1 === t2 || (bc.id && activeModalCard.colName === bc.id);
+              })
+            : null) ||
+          boardColumns.find(bc => {
+            const t1 = parseModuleTheme(bc.title).cleanTitle.trim().toLowerCase();
+            const t2 = parseModuleTheme(activeModalCard.colName).cleanTitle.trim().toLowerCase();
+            return t1 === t2 || (bc.id && activeModalCard.colName === bc.id);
+          });
         const modalTheme = matchingCol ? parseModuleTheme(matchingCol.title) : parseModuleTheme(activeModalCard.colName);
         const currentCard = activeModalCard.card;
         const progressPct = currentCard.totalCount > 0 ? Math.round((currentCard.completedCount / currentCard.totalCount) * 100) : 0;
@@ -1323,7 +1521,17 @@ export default function TaskBoard({
                       {currentCard.title}
                     </h2>
                     {(() => {
-                      const cardLecMeta = parseLectureFromItem({ title: currentCard.title }, currentCard.title, effectiveLectures);
+                      let cardLecMeta = parseLectureFromItem({ title: currentCard.title }, currentCard.title, effectiveLectures);
+                      if (!cardLecMeta.isLecture) {
+                        const manualMetas = currentCard.items
+                          .filter(i => i.task_type === 'manual')
+                          .map(i => parseLectureFromItem(i, currentCard.title, effectiveLectures))
+                          .filter(m => m.isLecture && m.lectureId);
+                        const uniqueLecIds = Array.from(new Set(manualMetas.map(m => m.lectureId)));
+                        if (uniqueLecIds.length === 1) {
+                          cardLecMeta = manualMetas[0];
+                        }
+                      }
                       if (cardLecMeta.isLecture) {
                         return (
                           <button

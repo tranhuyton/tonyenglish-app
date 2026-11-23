@@ -12,6 +12,41 @@ export interface SyncBoardResult {
   updatedUserAssignments: number;
 }
 
+async function fetchAllPaginated<T = any>(
+  buildQuery: (from: number, to: number) => PromiseLike<{ data: T[] | null; error: any }>
+): Promise<{ data: T[]; error: any }> {
+  const allRows: T[] = [];
+  const pageSize = 1000;
+  let from = 0;
+  while (true) {
+    const { data, error } = await buildQuery(from, from + pageSize - 1);
+    if (error) return { data: allRows, error };
+    if (!data || data.length === 0) break;
+    allRows.push(...data);
+    if (data.length < pageSize) break;
+    from += pageSize;
+  }
+  return { data: allRows, error: null };
+}
+
+/**
+ * Resolves the primary active `board_templates` record for a given course.
+ */
+export async function resolveActiveBoardTemplateForCourse(
+  courseId: string,
+  explicitBoardTemplateId?: string
+): Promise<{ id: string; title: string; course_id: string; is_active?: boolean } | null> {
+  if (!courseId && !explicitBoardTemplateId) return null;
+  let query = supabase.from('board_templates').select('id, title, course_id, is_active, created_at');
+  if (explicitBoardTemplateId) {
+    query = query.eq('id', explicitBoardTemplateId);
+  } else {
+    query = query.eq('course_id', courseId).order('is_active', { ascending: false }).order('created_at', { ascending: true });
+  }
+  const { data } = await query.limit(1);
+  return data && data.length > 0 ? data[0] : null;
+}
+
 function extractLeadingNumber(text: string): number | null {
   const clean = parseModuleTheme(text || '').cleanTitle.trim();
   const secMatch = clean.match(/^(?:section|topic|unit|chapter|module)\s*(\d+)\b/i);
@@ -44,13 +79,13 @@ function sortLectureExerciseTasks(exTasks: any[], testsById: Map<string, any>): 
 export async function syncBoardTemplateToSingleUser(
   boardTemplateId: string,
   userId: string
-): Promise<{ added: number; updated: number; total: number }> {
+): Promise<{ added: number; updated: number; total: number; error?: string | null }> {
   const { data: tpl } = await supabase
     .from('board_templates')
     .select('id, title, course_id')
     .eq('id', boardTemplateId)
     .maybeSingle();
-  if (!tpl) return { added: 0, updated: 0, total: 0 };
+  if (!tpl) return { added: 0, updated: 0, total: 0, error: null };
 
   const { data: cols } = await supabase
     .from('board_columns')
@@ -58,25 +93,22 @@ export async function syncBoardTemplateToSingleUser(
     .eq('board_template_id', boardTemplateId)
     .order('order_index');
   const colList = cols || [];
-  if (colList.length === 0) return { added: 0, updated: 0, total: 0 };
+  if (colList.length === 0) return { added: 0, updated: 0, total: 0, error: null };
 
   const colIds = colList.map(c => c.id);
-  const { data: cards } = await supabase
-    .from('board_cards')
-    .select('*')
-    .in('column_id', colIds)
-    .order('order_index');
-  const cardList = cards || [];
+  const { data: cardList } = await fetchAllPaginated((from, to) =>
+    supabase.from('board_cards').select('*').in('column_id', colIds).order('order_index').order('id').range(from, to)
+  );
   const cardIds = cardList.map(c => c.id);
-  const { data: items } = cardIds.length > 0
-    ? await supabase.from('board_card_items').select('*').in('card_id', cardIds).order('order_index')
+  const { data: itemList } = cardIds.length > 0
+    ? await fetchAllPaginated((from, to) =>
+        supabase.from('board_card_items').select('*').in('card_id', cardIds).order('order_index').order('id').range(from, to)
+      )
     : { data: [] };
-  const itemList = items || [];
 
-  const { data: existingRows } = await supabase
-    .from('assignments')
-    .select('*')
-    .eq('user_id', userId);
+  const { data: existingRows } = await fetchAllPaginated((from, to) =>
+    supabase.from('assignments').select('*').eq('user_id', userId).order('id').range(from, to)
+  );
 
   const boardExisting = (existingRows || []).filter(
     r => r.board_template_id === boardTemplateId || r.board_template_title === tpl.title
@@ -153,19 +185,222 @@ export async function syncBoardTemplateToSingleUser(
     }
   }
 
+  let firstError: string | null = null;
+  let updatedOk = 0;
   for (const upd of toUpdate) {
-    await supabase.from('assignments').update(upd.payload).eq('id', upd.id);
+    const { error } = await supabase.from('assignments').update(upd.payload).eq('id', upd.id);
+    if (error) {
+      if (!firstError) firstError = error.message;
+    } else {
+      updatedOk++;
+    }
   }
 
+  let addedOk = 0;
   const chunkSize = 100;
   for (let i = 0; i < toInsert.length; i += chunkSize) {
-    await supabase.from('assignments').insert(toInsert.slice(i, i + chunkSize));
+    const slice = toInsert.slice(i, i + chunkSize);
+    const { error } = await supabase.from('assignments').insert(slice);
+    if (error) {
+      if (!firstError) firstError = error.message;
+      break;
+    }
+    addedOk += slice.length;
   }
 
   return {
-    added: toInsert.length,
-    updated: toUpdate.length,
-    total: itemList.length
+    added: addedOk,
+    updated: updatedOk,
+    total: itemList.length,
+    error: firstError
+  };
+}
+
+/**
+ * Ensures a student has the active board template of `courseId` assigned in `assignments`.
+ * Safe & idempotent: never duplicates items or overwrites completion status.
+ */
+export async function ensureCourseBoardAssignedToUser(
+  courseId: string,
+  userId: string,
+  options?: { forceSync?: boolean; explicitBoardTemplateId?: string }
+): Promise<{
+  boardTemplateId: string | null;
+  boardTitle: string | null;
+  added: number;
+  updated: number;
+  alreadyAssigned: boolean;
+  error?: string | null;
+}> {
+  if (!courseId || !userId) {
+    return { boardTemplateId: null, boardTitle: null, added: 0, updated: 0, alreadyAssigned: false, error: null };
+  }
+  const tpl = await resolveActiveBoardTemplateForCourse(courseId, options?.explicitBoardTemplateId);
+  if (!tpl) {
+    return { boardTemplateId: null, boardTitle: null, added: 0, updated: 0, alreadyAssigned: false, error: null };
+  }
+
+  if (!options?.forceSync) {
+    const { data: existingOne } = await supabase
+      .from('assignments')
+      .select('id')
+      .eq('user_id', userId)
+      .eq('board_template_id', tpl.id)
+      .not('category', 'is', null)
+      .limit(1);
+    if (existingOne && existingOne.length > 0) {
+      return {
+        boardTemplateId: tpl.id,
+        boardTitle: tpl.title,
+        added: 0,
+        updated: 0,
+        alreadyAssigned: true,
+        error: null
+      };
+    }
+  }
+
+  const syncRes = await syncBoardTemplateToSingleUser(tpl.id, userId);
+  return {
+    boardTemplateId: tpl.id,
+    boardTitle: tpl.title,
+    added: syncRes.added,
+    updated: syncRes.updated,
+    alreadyAssigned: false,
+    error: syncRes.error || null
+  };
+}
+
+/**
+ * Ensures ALL enrolled courses with an active board template are assigned to `userId`.
+ * Used automatically when students log in / open their course or TaskBoard.
+ */
+export async function ensureCourseBoardsAssignedForUser(
+  userId: string,
+  courseIds: string[]
+): Promise<{
+  assignedBoards: number;
+  addedItems: number;
+  missingTemplateIds: string[];
+  blockedByRls: boolean;
+}> {
+  const uniqueCourseIds = Array.from(new Set((courseIds || []).map(String).filter(Boolean)));
+  if (!userId || userId === 'default' || uniqueCourseIds.length === 0) {
+    return { assignedBoards: 0, addedItems: 0, missingTemplateIds: [], blockedByRls: false };
+  }
+
+  const { data: tpls } = await supabase
+    .from('board_templates')
+    .select('id, title, course_id, is_active, created_at')
+    .in('course_id', uniqueCourseIds)
+    .order('is_active', { ascending: false })
+    .order('created_at', { ascending: true });
+
+  if (!tpls || tpls.length === 0) {
+    return { assignedBoards: 0, addedItems: 0, missingTemplateIds: [], blockedByRls: false };
+  }
+
+  // Pick 1 primary template per course
+  const primaryByCourse = new Map<string, any>();
+  for (const t of tpls) {
+    const cid = String(t.course_id);
+    if (!primaryByCourse.has(cid)) primaryByCourse.set(cid, t);
+  }
+
+  const { data: existingAssigns } = await fetchAllPaginated((from, to) =>
+    supabase
+      .from('assignments')
+      .select('board_template_id, board_template_title')
+      .eq('user_id', userId)
+      .not('category', 'is', null)
+      .order('id')
+      .range(from, to)
+  );
+
+  const existingIds = new Set(existingAssigns.map(a => String(a.board_template_id || '')).filter(Boolean));
+  const existingTitles = new Set(existingAssigns.map(a => String(a.board_template_title || '')).filter(Boolean));
+
+  const missingTpls = Array.from(primaryByCourse.values()).filter(
+    t => !existingIds.has(String(t.id)) && !existingTitles.has(String(t.title))
+  );
+
+  if (missingTpls.length === 0) {
+    return { assignedBoards: 0, addedItems: 0, missingTemplateIds: [], blockedByRls: false };
+  }
+
+  let assignedBoards = 0;
+  let addedItems = 0;
+  let blockedByRls = false;
+  const stillMissingIds: string[] = [];
+
+  for (const tpl of missingTpls) {
+    const res = await syncBoardTemplateToSingleUser(tpl.id, userId);
+    if (res.error) {
+      blockedByRls = true;
+      stillMissingIds.push(tpl.id);
+      // Stop attempting further inserts if RLS blocks student self-insert
+      const remaining = missingTpls.slice(missingTpls.indexOf(tpl) + 1).map(t => t.id);
+      stillMissingIds.push(...remaining);
+      break;
+    }
+    if (res.added > 0) {
+      assignedBoards++;
+      addedItems += res.added;
+    } else if (res.total === 0) {
+      // Empty template, nothing to assign
+    }
+  }
+
+  return {
+    assignedBoards,
+    addedItems,
+    missingTemplateIds: Array.from(new Set(stillMissingIds)),
+    blockedByRls
+  };
+}
+
+/**
+ * Assigns/syncs a course's active board template to ALL students enrolled in that course.
+ */
+export async function assignCourseBoardToAllEnrolledUsers(
+  courseId: string,
+  explicitBoardTemplateId?: string
+): Promise<{
+  boardTitle: string;
+  usersTotal: number;
+  usersUpdated: number;
+  addedItems: number;
+  updatedItems: number;
+}> {
+  const tpl = await resolveActiveBoardTemplateForCourse(courseId, explicitBoardTemplateId);
+  if (!tpl) {
+    return { boardTitle: '', usersTotal: 0, usersUpdated: 0, addedItems: 0, updatedItems: 0 };
+  }
+
+  const { data: enrollRows } = await fetchAllPaginated((from, to) =>
+    supabase.from('enrollments').select('user_id').eq('course_id', courseId).order('id').range(from, to)
+  );
+  const uniqueUserIds = Array.from(new Set((enrollRows || []).map(r => r.user_id).filter(Boolean)));
+
+  let usersUpdated = 0;
+  let addedItems = 0;
+  let updatedItems = 0;
+
+  for (const uid of uniqueUserIds) {
+    const res = await syncBoardTemplateToSingleUser(tpl.id, uid);
+    if (res.added > 0 || res.updated > 0) {
+      usersUpdated++;
+      addedItems += res.added;
+      updatedItems += res.updated;
+    }
+  }
+
+  return {
+    boardTitle: tpl.title,
+    usersTotal: uniqueUserIds.length,
+    usersUpdated,
+    addedItems,
+    updatedItems
   };
 }
 
