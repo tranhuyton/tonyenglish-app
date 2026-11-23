@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { supabase } from './supabase';
+import { useLmsLang, LmsLangToggle } from './utils/lmsI18n';
 import './tailwind.css';
 
 const UserIcon = () => (
@@ -132,6 +133,11 @@ const parseStyle = (styleStr: string) => {
 };
 
 export default function ComputerTest({ onBack, testData, onFinish }: { onBack: () => void, testData?: any, onFinish?: (res: any) => void }) {
+  const [lang, setLang] = useLmsLang();
+  const isEn = lang === 'en';
+  const isEnRef = useRef(isEn);
+  isEnRef.current = isEn;
+
   let safeTestData = testData;
   if (typeof safeTestData === 'string') {
     try { 
@@ -274,7 +280,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
   const [timeLeft, setTimeLeft] = useState(() => parseInitialTime(basicInfo.timeLimit));
 
   const clearDraft = () => {
-    if(window.confirm('Xóa bản nháp và làm lại từ đầu?')) { 
+    if(window.confirm(isEn ? 'Clear draft and restart from scratch?' : 'Xóa bản nháp và làm lại từ đầu?')) { 
       if (safeTestData?.id) {
         localStorage.removeItem(`ielts_ans_${safeTestData.id}`);
         localStorage.removeItem(`ielts_endtime_${safeTestData.id}`);
@@ -296,7 +302,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
     const isForced = forceAutoSubmit === true;
     if (!isReviewMode) {
       if (isFinishingRef.current) return;
-      if (!isForced && !window.confirm("Bạn có chắc chắn muốn nộp bài thi?")) return;
+      if (!isForced && !window.confirm(isEn ? "Are you sure you want to submit the test?" : "Bạn có chắc chắn muốn nộp bài thi?")) return;
       isFinishingRef.current = true;
       
       // 🔒 Đọc answers từ ref để chống stale closure khi timer hết giờ gọi
@@ -471,7 +477,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
   handleFinishRef.current = handleFinish;
 
   const resetTest = () => {
-    if (window.confirm("Làm lại từ đầu? Mọi đáp án sẽ bị xóa.")) { 
+    if (window.confirm(isEn ? "Restart from scratch? All answers will be cleared." : "Làm lại từ đầu? Mọi đáp án sẽ bị xóa.")) { 
       isFinishingRef.current = false;
       if (safeTestData?.id) {
         localStorage.removeItem(`ielts_ans_${safeTestData.id}`);
@@ -578,14 +584,14 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
             setTimeLeft(remaining);
             if (remaining <= 0) {
               clearInterval(timer);
-                alert("⏰ Hết giờ!");
+                alert(isEnRef.current ? "⏰ Time's up!" : "⏰ Hết giờ!");
                 handleFinishRef.current(true);
             }
         } else { 
             setTimeLeft(prev => {
                 if (prev <= 1) {
                     clearInterval(timer);
-                    alert("⏰ Hết giờ!");
+                    alert(isEnRef.current ? "⏰ Time's up!" : "⏰ Hết giờ!");
                     handleFinishRef.current(true);
                     return 0;
                 }
@@ -685,7 +691,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
           const rect = span.getBoundingClientRect();
           setStickyNote({ show: true, id: noteId, text: '', x: rect.left, y: rect.bottom + 10 });
       } catch (e) { 
-          alert("Chỉ bôi đen gọn trong 1 đoạn văn!"); 
+          alert(isEn ? "Please select text within a single paragraph!" : "Chỉ bôi đen gọn trong 1 đoạn văn!"); 
       }
       setHighlightMenu({ ...highlightMenu, show: false }); 
       window.getSelection()?.removeAllRanges();
@@ -861,8 +867,14 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
      }));
      
      const safeContent = String(qContent || '').replace(stripHtmlRegex, '').trim();
-     const safeExplanation = String(qExplanation || 'Không có lời giải thích riêng cho câu hỏi này. Thầy/Cô hãy giải thích dựa trên đề bài và ngữ cảnh.').replace(stripHtmlRegex, '').trim();
-     const displayPrompt = `**Câu hỏi số ${questionIndexMap[questionId] || questionId}:**\n${safeContent}\n\n**Đáp án & Giải thích gốc:**\n${safeExplanation}`;
+     const safeExplanation = String(
+       qExplanation || (isEn
+         ? 'No separate explanation available for this question. Please explain based on the question and context.'
+         : 'Không có lời giải thích riêng cho câu hỏi này. Thầy/Cô hãy giải thích dựa trên đề bài và ngữ cảnh.')
+     ).replace(stripHtmlRegex, '').trim();
+     const displayPrompt = isEn
+       ? `Please explain in English.\n\n**Question ${questionIndexMap[questionId] || questionId}:**\n${safeContent}\n\n**Answer & Original Explanation:**\n${safeExplanation}`
+       : `**Câu hỏi số ${questionIndexMap[questionId] || questionId}:**\n${safeContent}\n\n**Đáp án & Giải thích gốc:**\n${safeExplanation}`;
      
      const fakeBtn = document.createElement('button');
      fakeBtn.className = 'btn-ai-trigger hidden';
@@ -876,14 +888,18 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
   // 🚀 TÍNH NĂNG GỌI GIA SƯ (VOICE) CHO TỪNG CÂU HỎI KÈM LỆNH AUTO_START
   const callTutorForQuestion = (q: any) => {
       const plainContent = String(q.content || '').replace(stripHtmlRegex, '').trim();
-      const plainExplanation = String(q.explanation || 'Không có lời giải thích.').replace(stripHtmlRegex, '').trim();
+      const plainExplanation = String(q.explanation || (isEn ? 'No explanation provided.' : 'Không có lời giải thích.')).replace(stripHtmlRegex, '').trim();
       const correctAns = String(q.correctAnswer || '');
-      const userAns = String(answers[String(q.id)] || '(trống)');
+      const userAns = String(answers[String(q.id)] || (isEn ? '(blank)' : '(trống)'));
       
       const tutorContext = {
           overall: scoreResult.band,
-          transcript: `Câu hỏi: "${plainContent}". \nĐáp án của học sinh: ${userAns}. \nĐáp án đúng: ${correctAns}. \nGiải thích gốc: "${plainExplanation}".`,
-          feedback: "Bạn là gia sư IELTS. Học sinh đang xem lại câu hỏi này trong phần Review. Hãy chủ động chào và giải thích chi tiết tại sao đáp án lại như vậy, phân tích từ vựng/ngữ pháp liên quan. Dùng giọng điệu tự nhiên, ân cần như đang dạy kèm 1-1."
+          transcript: isEn
+            ? `Question: "${plainContent}". \nStudent's answer: ${userAns}. \nCorrect answer: ${correctAns}. \nOriginal explanation: "${plainExplanation}".`
+            : `Câu hỏi: "${plainContent}". \nĐáp án của học sinh: ${userAns}. \nĐáp án đúng: ${correctAns}. \nGiải thích gốc: "${plainExplanation}".`,
+          feedback: isEn
+            ? "You are an IELTS tutor. Speak and explain strictly in English. The student is reviewing this question in Review Mode. Proactively greet the student and explain in detail why the answer is correct, analyzing relevant vocabulary and grammar. Use a natural, warm 1-on-1 tutoring tone."
+            : "Bạn là gia sư IELTS. Học sinh đang xem lại câu hỏi này trong phần Review. Hãy chủ động chào và giải thích chi tiết tại sao đáp án lại như vậy, phân tích từ vựng/ngữ pháp liên quan. Dùng giọng điệu tự nhiên, ân cần như đang dạy kèm 1-1."
       };
       
       sessionStorage.setItem('tony_live_mode', 'TUTOR');
@@ -950,11 +966,11 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
               return (
                 <span key={pathKey} id={`q-${qNum}`} className="relative inline-flex items-center align-middle mx-1 -translate-y-[2px] whitespace-nowrap" style={{ textIndent: 0 }}>
                   <span className={`shrink-0 inline-flex items-center justify-center leading-none px-3 py-1 text-[14px] font-bold font-sans text-white rounded-none border border-black ${isCorrect ? 'bg-emerald-600' : 'bg-red-600'}`} style={{ color: '#ffffff', textIndent: 0 }}>
-                    {displayIndex}. {displayUserAnsForReview || '(trống)'}
+                    {displayIndex}. {displayUserAnsForReview || (isEn ? '(blank)' : '(trống)')}
                   </span>
                   {!isCorrect && (
                     <span className="absolute top-full left-0 mt-1 text-[12px] font-sans text-white font-bold bg-slate-800 px-2 py-1 rounded-none whitespace-nowrap z-10" style={{ color: '#ffffff', textIndent: 0 }}>
-                      ĐA: {correctAns}
+                      {isEn ? 'Ans' : 'ĐA'}: {correctAns}
                     </span>
                   )}
                 </span>
@@ -999,7 +1015,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                 <button onClick={(e) => { e.stopPropagation(); clearDragAnswer(qNum); }} className="ml-2 hover:text-red-500 text-[14px] font-black font-sans">✕</button>
                             </div>
                         ) : ( 
-                            <span className="text-slate-400 text-[13px] italic font-sans w-full text-center" style={{ textIndent: 0 }}>Thả vào đây</span> 
+                            <span className="text-slate-400 text-[13px] italic font-sans w-full text-center" style={{ textIndent: 0 }}>{isEn ? 'Drop here' : 'Thả vào đây'}</span> 
                         )}
                     </span>
                 );
@@ -1021,7 +1037,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                       className="shrink-0 bg-white border border-slate-800 text-slate-800 font-bold font-sans text-[14px] h-[30px] px-1 rounded-none outline-none focus:border-black cursor-pointer min-w-[100px] max-w-[200px] truncate"
                       style={{ textIndent: 0 }}
                     >
-                      <option value="">-- Chọn --</option>
+                      <option value="">{isEn ? '-- Select --' : '-- Chọn --'}</option>
                       {validOptions.map((opt:string, oIdx:number) => {
                          const val = opt.replace(stripHtmlRegex, '').trim();
                          // Cho phép chọn lại cùng 1 đáp án nhiều lần cho dạng Droplist
@@ -1101,7 +1117,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
         const remaining = Math.max(0, Math.floor((currentEndTime - Date.now()) / 1000));
         setTimeLeft(remaining);
         if (remaining <= 0 && basicInfo?.category !== 'exercise') {
-            alert("⏰ Bài thi này đã hết thời gian làm bài!");
+            alert(isEn ? "⏰ Time for this test has expired!" : "⏰ Bài thi này đã hết thời gian làm bài!");
             handleFinishRef.current(true);
             return;
         }
@@ -1167,21 +1183,24 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
       )}
 
       {!testStarted ? (
-        <div className="flex flex-col h-[100dvh] items-center justify-center bg-[#eeeeee] font-sans">
+        <div className="flex flex-col h-[100dvh] items-center justify-center bg-[#eeeeee] font-sans relative">
+          <div className="absolute top-4 right-4">
+            <LmsLangToggle lang={lang} setLang={setLang} variant="light" />
+          </div>
           <div className="bg-white p-10 rounded-none border border-slate-300 shadow-sm text-center max-w-lg w-full">
             <div className="text-6xl mb-6">{isListening ? '🎧' : '💻'}</div>
             <h1 className="text-2xl font-black text-slate-900 mb-2">{safeTestData?.title || basicInfo.title || "IELTS Test"}</h1>
             {basicInfo?.category === 'exercise' ? (
-                <p className="text-emerald-600 font-black tracking-widest uppercase mb-8">BÀI TẬP</p>
+                <p className="text-emerald-600 font-black tracking-widest uppercase mb-8">{isEn ? 'PRACTICE' : 'BÀI TẬP'}</p>
             ) : (
-                <p className="text-slate-600 mb-8 font-medium">Thời gian: {formatTime(parseInitialTime(basicInfo.timeLimit))}</p>
+                <p className="text-slate-600 mb-8 font-medium">{isEn ? 'Time limit' : 'Thời gian'}: {formatTime(parseInitialTime(basicInfo.timeLimit))}</p>
             )}
             
             {isListening && (
               <div className="bg-slate-100 border border-slate-300 p-5 text-slate-800 text-[13px] font-bold mb-8 text-left leading-[1.8] rounded-none font-sans">
-                <p className="mb-3">LƯU Ý THI LISTENING: Hệ thống sẽ tự động phát âm thanh ngay khi bắt đầu. Bạn hãy kiểm tra và chỉnh âm lượng trước tại đây nhé.</p>
+                <p className="mb-3">{isEn ? 'LISTENING TEST NOTE: Audio will play automatically once you start. Please test your speakers and adjust the volume below first.' : 'LƯU Ý THI LISTENING: Hệ thống sẽ tự động phát âm thanh ngay khi bắt đầu. Bạn hãy kiểm tra và chỉnh âm lượng trước tại đây nhé.'}</p>
                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 bg-white p-3 border border-slate-400">
-                  <button onClick={handleSoundCheck} className="bg-slate-800 hover:bg-black text-white px-4 py-1.5 rounded-none font-bold transition text-[13px]">Test Loa 🔊</button>
+                  <button onClick={handleSoundCheck} className="bg-slate-800 hover:bg-black text-white px-4 py-1.5 rounded-none font-bold transition text-[13px]">{isEn ? 'Test Audio 🔊' : 'Test Loa 🔊'}</button>
                    <div className="flex items-center gap-2 w-full flex-1">
                      <span className="text-sm">🔈</span>
                      <input 
@@ -1199,8 +1218,8 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
               </div>
             )}
             <div className="flex gap-4 justify-center">
-              <button onClick={handleExit} className="px-6 py-2.5 rounded-none font-bold text-slate-700 hover:bg-slate-200 border border-slate-400 transition text-[14px]">Quay lại</button>
-              <button onClick={handleStartTest} className="bg-slate-800 hover:bg-black text-white font-bold px-8 py-2.5 rounded-none transition text-[14px]">Bắt Đầu Làm Bài</button>
+              <button onClick={handleExit} className="px-6 py-2.5 rounded-none font-bold text-slate-700 hover:bg-slate-200 border border-slate-400 transition text-[14px]">{isEn ? 'Back' : 'Quay lại'}</button>
+              <button onClick={handleStartTest} className="bg-slate-800 hover:bg-black text-white font-bold px-8 py-2.5 rounded-none transition text-[14px]">{isEn ? 'Start Test' : 'Bắt Đầu Làm Bài'}</button>
             </div>
           </div>
         </div>
@@ -1241,7 +1260,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                     value={stickyNote.text} 
                     onChange={(e) => setStickyNote({ ...stickyNote, text: e.target.value })} 
                     className="w-full h-32 bg-transparent outline-none resize-none text-[14px] text-slate-900 font-medium custom-scrollbar" 
-                    placeholder="Nhập ghi chú..." 
+                    placeholder={isEn ? "Type your note..." : "Nhập ghi chú..."} 
                     disabled={isReviewMode} 
                 />
                 {!isReviewMode && (
@@ -1256,7 +1275,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                         }} 
                         className="text-red-600 text-[12px] font-bold hover:underline"
                     >
-                        Xóa Note
+                        {isEn ? 'Delete Note' : 'Xóa Note'}
                     </button>
                     <button 
                         onClick={() => { 
@@ -1268,7 +1287,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                         }} 
                         className="bg-slate-800 hover:bg-black text-white text-[12px] font-bold px-4 py-1.5 rounded-none transition"
                     >
-                        Lưu lại
+                        {isEn ? 'Save' : 'Lưu lại'}
                     </button>
                   </div>
                 )}
@@ -1292,11 +1311,12 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                </div>
             ) : (
                <div className={`font-bold text-[14px] sm:text-[15px] tracking-widest shrink-0 tabular-nums ${basicInfo?.category === 'exercise' ? 'text-[#2ab4e8]' : (timeLeft <= 300 ? 'text-rose-400 animate-pulse' : 'text-white')}`}>
-                  {basicInfo?.category === 'exercise' ? 'BÀI TẬP' : formatTime(timeLeft)}
+                  {basicInfo?.category === 'exercise' ? (isEn ? 'PRACTICE' : 'BÀI TẬP') : formatTime(timeLeft)}
                </div>
             )}
 
             <div className="flex items-center justify-end gap-2 sm:gap-3 shrink-0 flex-1">
+               <LmsLangToggle lang={lang} setLang={setLang} variant="dark" />
                {!isReviewMode && (
                    <button type="button" onClick={clearDraft} className="text-[12px] text-slate-300 hover:text-white font-bold transition hidden lg:block cursor-pointer">
                        Clear Draft
@@ -1305,21 +1325,21 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                
                {isReviewMode ? (
                   <div className="flex items-center gap-2 sm:gap-2.5">
-                     <button type="button" onClick={toggleFullscreen} className="hidden sm:inline-flex hover:text-white text-slate-300 transition cursor-pointer" title="Toàn màn hình">
+                     <button type="button" onClick={toggleFullscreen} className="hidden sm:inline-flex hover:text-white text-slate-300 transition cursor-pointer" title={isEn ? "Fullscreen" : "Toàn màn hình"}>
                         {isFullscreen ? <ExitFullscreenIcon /> : <FullscreenIcon />}
                      </button>
-                     <button type="button" onClick={() => window.dispatchEvent(new CustomEvent('tony-open-standalone-dictionary'))} className="text-[12px] font-bold border border-white/30 bg-white/10 px-2.5 py-1 rounded-lg hover:bg-white/20 transition text-white cursor-pointer whitespace-nowrap">📖 Từ điển</button>
+                     <button type="button" onClick={() => window.dispatchEvent(new CustomEvent('tony-open-standalone-dictionary'))} className="text-[12px] font-bold border border-white/30 bg-white/10 px-2.5 py-1 rounded-lg hover:bg-white/20 transition text-white cursor-pointer whitespace-nowrap">{isEn ? '📖 Dictionary' : '📖 Từ điển'}</button>
                      <button type="button" onClick={resetTest} className="text-[12px] font-bold bg-amber-500 hover:bg-amber-600 text-white px-2.5 sm:px-3 py-1 rounded-lg transition cursor-pointer whitespace-nowrap">
-                         ↺ Làm lại
+                         {isEn ? '↺ Retry' : '↺ Làm lại'}
                      </button>
                      <button type="button" onClick={handleExit} className="text-[12px] font-bold border border-white/40 bg-white/15 hover:bg-white/25 px-2.5 sm:px-3 py-1 rounded-lg transition text-white cursor-pointer whitespace-nowrap">
-                         Thoát
+                         {isEn ? 'Exit' : 'Thoát'}
                      </button>
                   </div>
                ) : (
                   <div className="flex items-center gap-2.5 sm:gap-3.5 relative">
                      {isListening && globalAudio && (
-                        <div className="items-center gap-2 bg-black/40 px-2 py-1 rounded-lg border border-slate-500 hidden md:flex" title="Chỉnh âm lượng">
+                        <div className="items-center gap-2 bg-black/40 px-2 py-1 rounded-lg border border-slate-500 hidden md:flex" title={isEn ? "Adjust volume" : "Chỉnh âm lượng"}>
                          <span className="text-sm">🔈</span>
                          <input 
                              type="range" min="0" max="1" step="0.05" defaultValue="1" 
@@ -1332,7 +1352,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                          />
                        </div>
                      )}
-                     <button type="button" onClick={toggleFullscreen} className="hidden sm:inline-flex hover:text-white text-slate-300 transition cursor-pointer" title="Toàn màn hình">
+                     <button type="button" onClick={toggleFullscreen} className="hidden sm:inline-flex hover:text-white text-slate-300 transition cursor-pointer" title={isEn ? "Fullscreen" : "Toàn màn hình"}>
                         {isFullscreen ? <ExitFullscreenIcon /> : <FullscreenIcon />}
                      </button>
                      <div className="relative">
@@ -1340,13 +1360,13 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                          type="button"
                          onClick={() => setShowSettings((prev) => !prev)}
                          className={`hover:text-white transition cursor-pointer p-1 rounded ${showSettings ? 'text-[#2ab4e8] bg-white/10' : 'text-slate-300'}`}
-                         title="Cài đặt cỡ chữ"
+                         title={isEn ? "Font size settings" : "Cài đặt cỡ chữ"}
                        >
                           <SettingsIcon />
                        </button>
                        {showSettings && (
                          <div className="absolute right-0 top-full mt-2 w-48 bg-white text-slate-800 rounded-xl shadow-2xl border border-slate-200 p-3 z-50">
-                           <div className="text-[11px] font-extrabold uppercase tracking-wider text-slate-500 mb-2">Cỡ chữ hiển thị</div>
+                           <div className="text-[11px] font-extrabold uppercase tracking-wider text-slate-500 mb-2">{isEn ? 'Display Font Size' : 'Cỡ chữ hiển thị'}</div>
                            <div className="grid grid-cols-3 gap-1.5">
                              {(['S', 'M', 'L'] as const).map((sz) => (
                                <button
@@ -1359,14 +1379,14 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                      : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'
                                  }`}
                                >
-                                 {sz === 'S' ? 'Nhỏ' : sz === 'M' ? 'Vừa' : 'Lớn'}
+                                 {sz === 'S' ? (isEn ? 'Small' : 'Nhỏ') : sz === 'M' ? (isEn ? 'Medium' : 'Vừa') : (isEn ? 'Large' : 'Lớn')}
                                </button>
                              ))}
                            </div>
                          </div>
                        )}
                      </div>
-                     <button type="button" onClick={handleExit} className="hover:text-white text-slate-200 bg-white/10 hover:bg-white/20 px-3 py-1 rounded-lg transition text-[12.5px] font-bold tracking-wide cursor-pointer">Thoát</button>
+                     <button type="button" onClick={handleExit} className="hover:text-white text-slate-200 bg-white/10 hover:bg-white/20 px-3 py-1 rounded-lg transition text-[12.5px] font-bold tracking-wide cursor-pointer">{isEn ? 'Exit' : 'Thoát'}</button>
                   </div>
                )}
             </div>
@@ -1418,7 +1438,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                         <div className={`format-passage html-content-renderer max-w-none text-black break-words font-sans selection:bg-yellow-200 ${isReviewMode ? 'leading-[2.6]' : 'leading-[1.8]'}`}>
                           {isReviewMode && isListening && (
                               <div className="bg-slate-200 text-black p-4 rounded-none font-bold font-sans text-[14px] mb-6 border border-slate-400">
-                                  🎙️ TRANSCRIPT CHỮA BÀI
+                                  {isEn ? '🎙️ REVIEW TRANSCRIPT' : '🎙️ TRANSCRIPT CHỮA BÀI'}
                               </div>
                           )}
                           <div dangerouslySetInnerHTML={{ __html: cleanHtmlContent(currentPart?.content || "") }} />
@@ -1474,7 +1494,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                            onClick={() => setShowTranslation(!showTranslation)}
                            className="px-4 py-2 bg-[#e0f2fe] text-[#0369a1] border border-[#bae6fd] rounded-lg font-bold text-[13px] hover:bg-[#bae6fd] transition shadow-sm flex items-center gap-2"
                         >
-                           {showTranslation ? 'Tắt bài dịch & Hiện bài tập' : '📖 Xem bài dịch'}
+                           {showTranslation ? (isEn ? 'Hide Translation & Show Questions' : 'Tắt bài dịch & Hiện bài tập') : (isEn ? '📖 View Translation' : '📖 Xem bài dịch')}
                         </button>
                      </div>
                   )}
@@ -1553,7 +1573,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                         </div>
                                         {wordBankItems.length > 0 && (
                                             <div className="mt-8 p-5 bg-[#f4f4f4] border border-slate-400 rounded-none font-sans">
-                                                <p className="text-[13px] font-black text-black uppercase tracking-widest mb-4">Danh sách từ (Word Bank)</p>
+                                                <p className="text-[13px] font-black text-black uppercase tracking-widest mb-4">{isEn ? 'Word Bank' : 'Danh sách từ (Word Bank)'}</p>
                                                 <div className="flex flex-wrap gap-3">
                                                     {wordBankItems.map((item, idx) => {
                                                         const text = item.replace(stripHtmlRegex, '').trim();
@@ -1568,27 +1588,27 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                         {/* 🚀 THÊM BLOCK REVIEW & GỌI GIA SƯ CHO CÂU ĐIỀN TỪ Ở ĐÂY */}
                                         {isReviewMode && (
                                            <div className="w-full mt-8 border-t border-slate-300 pt-6 font-sans">
-                                              <p className="text-[14px] font-black text-black uppercase mb-4 tracking-widest">💡 Giải thích chi tiết & Gia sư AI:</p>
+                                              <p className="text-[14px] font-black text-black uppercase mb-4 tracking-widest">{isEn ? '💡 Detailed Explanation & AI Tutor:' : '💡 Giải thích chi tiết & Gia sư AI:'}</p>
                                               <div className="space-y-4">
                                                  {(Array.isArray(sec.questions) ? sec.questions : []).map((q: any) => {
                                                      if (!q?.id) return null;
                                                      const qIdx = questionIndexMap[String(q.id)] || q.id;
-                                                     const explanationText = q.explanation || 'Không có lời giải thích.';
-                                                     const qContentForAI = q.content || sec.content || 'Điền từ vào chỗ trống trong đoạn văn.';
+                                                     const explanationText = q.explanation || (isEn ? 'No explanation provided.' : 'Không có lời giải thích.');
+                                                     const qContentForAI = q.content || sec.content || (isEn ? 'Fill in the blanks in the passage.' : 'Điền từ vào chỗ trống trong đoạn văn.');
                                                      
                                                      return (
                                                          <div key={`expl-${q.id}`} className="bg-[#f4f4f4] p-5 border border-slate-300 rounded-none">
                                                              <div className="flex items-center gap-2 mb-2">
-                                                                 <span className="bg-slate-800 text-white font-bold px-2 py-0.5 text-[13px] rounded-none">Câu {qIdx}</span>
+                                                                 <span className="bg-slate-800 text-white font-bold px-2 py-0.5 text-[13px] rounded-none">{isEn ? `Question ${qIdx}` : `Câu ${qIdx}`}</span>
                                                              </div>
                                                              <div className="text-[15px] text-slate-800 font-medium leading-relaxed font-sans html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(explanationText) }} />
                                                              
                                                              <div className="flex items-center gap-2 mt-4 pt-4 border-t border-slate-300">
                                                                  <button onClick={(e) => { e.stopPropagation(); askAIToExplain(String(q.id), qContentForAI, explanationText); }} className="px-4 py-1.5 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded-none text-[13px] transition shadow-sm border border-[#064e3b]">
-                                                                    💬 Chat với AI
+                                                                    {isEn ? '💬 Chat with AI' : '💬 Chat với AI'}
                                                                  </button>
                                                                  <button onClick={(e) => { e.stopPropagation(); callTutorForQuestion({ ...q, content: qContentForAI }); }} className="px-4 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-none text-[13px] transition shadow-sm border border-emerald-600 flex items-center gap-1">
-                                                                    📞 Gọi Gia sư (Voice)
+                                                                    {isEn ? '📞 Call Tutor (Voice)' : '📞 Gọi Gia sư (Voice)'}
                                                                  </button>
                                                              </div>
                                                          </div>
@@ -1651,14 +1671,14 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                        
                                        {isReviewMode && (
                                           <div className="w-full mt-2 pt-4 border-t border-slate-300 ml-[46px] font-sans">
-                                             <p className="text-[13px] font-black text-black uppercase mb-1">💡 Giải thích đáp án:</p>
-                                             <div className="text-[15px] text-slate-800 font-medium leading-relaxed font-sans html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.explanation || 'Không có lời giải thích.') }} />
+                                             <p className="text-[13px] font-black text-black uppercase mb-1">{isEn ? '💡 Answer Explanation:' : '💡 Giải thích đáp án:'}</p>
+                                             <div className="text-[15px] text-slate-800 font-medium leading-relaxed font-sans html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.explanation || (isEn ? 'No explanation provided.' : 'Không có lời giải thích.')) }} />
                                              <div className="flex items-center gap-2 mt-3">
-                                                 <button onClick={() => askAIToExplain(String(q.id), q.content, q.explanation || 'Không có lời giải thích.')} className="px-4 py-1.5 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded-none text-[13px] transition shadow-sm border border-[#064e3b]">
-                                                    💬 Chat với AI
+                                                 <button onClick={() => askAIToExplain(String(q.id), q.content, q.explanation || (isEn ? 'No explanation provided.' : 'Không có lời giải thích.'))} className="px-4 py-1.5 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded-none text-[13px] transition shadow-sm border border-[#064e3b]">
+                                                    {isEn ? '💬 Chat with AI' : '💬 Chat với AI'}
                                                  </button>
                                                  <button onClick={() => callTutorForQuestion(q)} className="px-4 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-none text-[13px] transition shadow-sm border border-emerald-600 flex items-center gap-1">
-                                                    📞 Gọi Gia sư (Voice)
+                                                    {isEn ? '📞 Call Tutor (Voice)' : '📞 Gọi Gia sư (Voice)'}
                                                  </button>
                                              </div>
                                           </div>
@@ -1705,14 +1725,14 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
 
                                    {isReviewMode && (
                                       <div className="w-full mt-2 pt-4 border-t border-slate-300 ml-[46px] font-sans">
-                                         <p className="text-[13px] font-black text-black uppercase mb-1">💡 Giải thích đáp án:</p>
-                                         <div className="text-[15px] text-slate-800 font-medium leading-relaxed font-sans html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.explanation || 'Không có lời giải thích.') }} />
+                                         <p className="text-[13px] font-black text-black uppercase mb-1">{isEn ? '💡 Answer Explanation:' : '💡 Giải thích đáp án:'}</p>
+                                         <div className="text-[15px] text-slate-800 font-medium leading-relaxed font-sans html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.explanation || (isEn ? 'No explanation provided.' : 'Không có lời giải thích.')) }} />
                                          <div className="flex items-center gap-2 mt-3">
-                                             <button onClick={() => askAIToExplain(String(q.id), q.content, q.explanation || 'Không có lời giải thích.')} className="px-4 py-1.5 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded-none text-[13px] transition shadow-sm border border-[#064e3b]">
-                                                💬 Chat với AI
+                                             <button onClick={() => askAIToExplain(String(q.id), q.content, q.explanation || (isEn ? 'No explanation provided.' : 'Không có lời giải thích.'))} className="px-4 py-1.5 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded-none text-[13px] transition shadow-sm border border-[#064e3b]">
+                                                {isEn ? '💬 Chat with AI' : '💬 Chat với AI'}
                                              </button>
                                              <button onClick={() => callTutorForQuestion(q)} className="px-4 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-none text-[13px] transition shadow-sm border border-emerald-600 flex items-center gap-1">
-                                                📞 Gọi Gia sư (Voice)
+                                                {isEn ? '📞 Call Tutor (Voice)' : '📞 Gọi Gia sư (Voice)'}
                                              </button>
                                          </div>
                                       </div>
@@ -1765,11 +1785,11 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                               {isReviewMode ? (
                                                  <div className="flex items-center gap-2 justify-start md:justify-end w-full">
                                                      <div className={`px-4 py-1.5 rounded-none font-bold text-[14px] border min-w-[140px] text-center ${isCorrect ? 'bg-emerald-200 text-emerald-900 border-emerald-600' : 'bg-red-200 text-red-900 border-red-600'}`}>
-                                                        {userAns || '(trống)'}
+                                                        {userAns || (isEn ? '(blank)' : '(trống)')}
                                                      </div>
                                                      {!isCorrect && (
                                                          <div className="text-[12px] font-bold text-white bg-slate-800 px-2 py-0.5 rounded-none whitespace-nowrap font-sans">
-                                                             ĐA: {correctAns}
+                                                             {isEn ? 'Ans' : 'ĐA'}: {correctAns}
                                                          </div>
                                                      )}
                                                  </div>
@@ -1796,14 +1816,14 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
 
                                         {isReviewMode && (
                                            <div className="w-full mt-2 border-t border-slate-300 pt-3 flex-none basis-full font-sans">
-                                              <p className="text-[13px] font-black text-black uppercase mb-1">💡 Giải thích đáp án:</p>
-                                              <div className="text-[15px] text-slate-800 font-medium leading-relaxed font-sans html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.explanation || 'Không có lời giải thích.') }} />
+                                              <p className="text-[13px] font-black text-black uppercase mb-1">{isEn ? '💡 Answer Explanation:' : '💡 Giải thích đáp án:'}</p>
+                                              <div className="text-[15px] text-slate-800 font-medium leading-relaxed font-sans html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.explanation || (isEn ? 'No explanation provided.' : 'Không có lời giải thích.')) }} />
                                               <div className="flex items-center gap-2 mt-3">
-                                                  <button onClick={() => askAIToExplain(String(q.id), q.content, q.explanation || 'Không có lời giải thích.')} className="px-4 py-1.5 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded-none text-[13px] transition shadow-sm border border-[#064e3b]">
-                                                     💬 Chat với AI
+                                                  <button onClick={() => askAIToExplain(String(q.id), q.content, q.explanation || (isEn ? 'No explanation provided.' : 'Không có lời giải thích.'))} className="px-4 py-1.5 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded-none text-[13px] transition shadow-sm border border-[#064e3b]">
+                                                     {isEn ? '💬 Chat with AI' : '💬 Chat với AI'}
                                                   </button>
                                                   <button onClick={() => callTutorForQuestion(q)} className="px-4 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-none text-[13px] transition shadow-sm border border-emerald-600 flex items-center gap-1">
-                                                     📞 Gọi Gia sư (Voice)
+                                                     {isEn ? '📞 Call Tutor (Voice)' : '📞 Gọi Gia sư (Voice)'}
                                                   </button>
                                               </div>
                                            </div>
@@ -1827,27 +1847,27 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                 {/* 🚀 THÊM BLOCK REVIEW & GỌI GIA SƯ CHO CÂU KÉO THẢ INLINE Ở ĐÂY */}
                                 {isReviewMode && (
                                    <div className="w-full mt-8 border-t border-slate-300 pt-6 font-sans">
-                                      <p className="text-[14px] font-black text-black uppercase mb-4 tracking-widest">💡 Giải thích chi tiết & Gia sư AI:</p>
+                                      <p className="text-[14px] font-black text-black uppercase mb-4 tracking-widest">{isEn ? '💡 Detailed Explanation & AI Tutor:' : '💡 Giải thích chi tiết & Gia sư AI:'}</p>
                                       <div className="space-y-4">
                                          {(Array.isArray(sec.questions) ? sec.questions : []).map((q: any) => {
                                              if (!q?.id) return null;
                                              const qIdx = questionIndexMap[String(q.id)] || q.id;
-                                             const explanationText = q.explanation || 'Không có lời giải thích.';
-                                             const qContentForAI = q.content || sec.content || 'Điền từ vào chỗ trống trong đoạn văn.';
+                                             const explanationText = q.explanation || (isEn ? 'No explanation provided.' : 'Không có lời giải thích.');
+                                             const qContentForAI = q.content || sec.content || (isEn ? 'Fill in the blanks in the passage.' : 'Điền từ vào chỗ trống trong đoạn văn.');
                                              
                                              return (
                                                  <div key={`expl-${q.id}`} className="bg-[#f4f4f4] p-5 border border-slate-300 rounded-none">
                                                      <div className="flex items-center gap-2 mb-2">
-                                                         <span className="bg-slate-800 text-white font-bold px-2 py-0.5 text-[13px] rounded-none">Câu {qIdx}</span>
+                                                         <span className="bg-slate-800 text-white font-bold px-2 py-0.5 text-[13px] rounded-none">{isEn ? `Question ${qIdx}` : `Câu ${qIdx}`}</span>
                                                      </div>
                                                      <div className="text-[15px] text-slate-800 font-medium leading-relaxed font-sans html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(explanationText) }} />
                                                      
                                                      <div className="flex items-center gap-2 mt-4 pt-4 border-t border-slate-300">
                                                          <button onClick={(e) => { e.stopPropagation(); askAIToExplain(String(q.id), qContentForAI, explanationText); }} className="px-4 py-1.5 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded-none text-[13px] transition shadow-sm border border-[#064e3b]">
-                                                            💬 Chat với AI
+                                                            {isEn ? '💬 Chat with AI' : '💬 Chat với AI'}
                                                          </button>
                                                          <button onClick={(e) => { e.stopPropagation(); callTutorForQuestion({ ...q, content: qContentForAI }); }} className="px-4 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-none text-[13px] transition shadow-sm border border-emerald-600 flex items-center gap-1">
-                                                            📞 Gọi Gia sư (Voice)
+                                                            {isEn ? '📞 Call Tutor (Voice)' : '📞 Gọi Gia sư (Voice)'}
                                                          </button>
                                                      </div>
                                                  </div>
@@ -1902,9 +1922,9 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                               {isReviewMode ? (
                                                  <div className="flex items-center gap-2 justify-start md:justify-end w-full">
                                                      <div className={`px-4 py-1.5 rounded-none font-bold text-[14px] font-sans border min-w-[140px] text-center ${isCorrect ? 'bg-emerald-200 text-emerald-900 border-emerald-600' : 'bg-red-200 text-red-900 border-red-600'}`}>
-                                                        {displayUserAns || '(trống)'}
+                                                        {displayUserAns || (isEn ? '(blank)' : '(trống)')}
                                                      </div>
-                                                     {!isCorrect && <div className="text-[12px] font-bold text-white bg-slate-800 px-2 py-0.5 rounded-none whitespace-nowrap font-sans">ĐA: {correctAns}</div>}
+                                                     {!isCorrect && <div className="text-[12px] font-bold text-white bg-slate-800 px-2 py-0.5 rounded-none whitespace-nowrap font-sans">{isEn ? 'Ans' : 'ĐA'}: {correctAns}</div>}
                                                  </div>
                                               ) : (
                                                 <span
@@ -1918,7 +1938,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                                         <button onClick={(e) => { e.stopPropagation(); clearDragAnswer(String(q.id)); }} className="ml-2 hover:text-red-600 text-[12px] font-black font-sans">✕</button>
                                                     </div>
                                                   ) : (
-                                                    <span className="text-slate-400 text-[13px] italic font-sans w-full text-center">Thả vào đây</span>
+                                                    <span className="text-slate-400 text-[13px] italic font-sans w-full text-center">{isEn ? 'Drop here' : 'Thả vào đây'}</span>
                                                   )}
                                                 </span>
                                               )}
@@ -1927,14 +1947,14 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
 
                                         {isReviewMode && (
                                            <div className="w-full mt-2 border-t border-slate-300 pt-3 flex-none basis-full font-sans">
-                                              <p className="text-[13px] font-black text-black uppercase mb-1">💡 Giải thích đáp án:</p>
-                                              <div className="text-[15px] text-slate-800 font-medium leading-relaxed font-sans html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.explanation || 'Không có lời giải thích.') }} />
+                                              <p className="text-[13px] font-black text-black uppercase mb-1">{isEn ? '💡 Answer Explanation:' : '💡 Giải thích đáp án:'}</p>
+                                              <div className="text-[15px] text-slate-800 font-medium leading-relaxed font-sans html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.explanation || (isEn ? 'No explanation provided.' : 'Không có lời giải thích.')) }} />
                                               <div className="flex items-center gap-2 mt-3">
-                                                  <button onClick={() => askAIToExplain(String(q.id), q.content, q.explanation || 'Không có lời giải thích.')} className="px-4 py-1.5 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded-none text-[13px] transition shadow-sm border border-[#064e3b]">
-                                                     💬 Chat với AI
+                                                  <button onClick={() => askAIToExplain(String(q.id), q.content, q.explanation || (isEn ? 'No explanation provided.' : 'Không có lời giải thích.'))} className="px-4 py-1.5 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded-none text-[13px] transition shadow-sm border border-[#064e3b]">
+                                                     {isEn ? '💬 Chat with AI' : '💬 Chat với AI'}
                                                   </button>
                                                   <button onClick={() => callTutorForQuestion(q)} className="px-4 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-none text-[13px] transition shadow-sm border border-emerald-600 flex items-center gap-1">
-                                                     📞 Gọi Gia sư (Voice)
+                                                     {isEn ? '📞 Call Tutor (Voice)' : '📞 Gọi Gia sư (Voice)'}
                                                   </button>
                                               </div>
                                            </div>
@@ -1948,7 +1968,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
 
                             {!isReviewMode && (
                               <div className="mt-10 p-6 bg-[#f4f4f4] border border-slate-400 rounded-none font-sans">
-                                 <p className="text-[13px] font-black text-black uppercase tracking-widest mb-4">Danh sách lựa chọn (Kéo từ đây):</p>
+                                 <p className="text-[13px] font-black text-black uppercase tracking-widest mb-4">{isEn ? 'Options List (Drag from here):' : 'Danh sách lựa chọn (Kéo từ đây):'}</p>
                                 <div className="flex flex-wrap gap-3">
                                   {(() => {
                                     let allOptions: string[] = [];
@@ -1999,7 +2019,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                             
                             {isReviewMode && (
                               <div className="mt-10 p-6 bg-[#f4f4f4] border border-slate-300 rounded-none font-sans">
-                                <p className="text-[13px] font-black text-slate-500 uppercase tracking-widest mb-4">Danh sách lựa chọn:</p>
+                                <p className="text-[13px] font-black text-slate-500 uppercase tracking-widest mb-4">{isEn ? 'Options List:' : 'Danh sách lựa chọn:'}</p>
                                 <div className="flex flex-wrap gap-3">
                                   {(() => {
                                     let allOptions: string[] = [];
@@ -2070,7 +2090,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                             
                                             if (isChecked) {
                                                 if (currentSelected.length >= maxAllowed) {
-                                                    alert(`Lưu ý: Nhóm câu hỏi này chỉ yêu cầu chọn tối đa ${maxAllowed} đáp án.`);
+                                                    alert(isEn ? `Note: You can select at most ${maxAllowed} answers for this question group.` : `Lưu ý: Nhóm câu hỏi này chỉ yêu cầu chọn tối đa ${maxAllowed} đáp án.`);
                                                     return prev;
                                                 }
                                                 if (!currentSelected.includes(optionValue)) currentSelected.push(optionValue);
@@ -2156,19 +2176,19 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
 
                                           {isReviewMode && (
                                             <div className="mt-6 ml-0 pt-4 border-t border-slate-300 font-sans w-full">
-                                               <p className="text-[13px] font-black text-black uppercase mb-3">💡 Giải thích đáp án:</p>
+                                               <p className="text-[13px] font-black text-black uppercase mb-3">{isEn ? '💡 Answer Explanation:' : '💡 Giải thích đáp án:'}</p>
                                                {combo.map((q:any) => {
                                                    if (!q.explanation || String(q.explanation).trim() === '') return null;
                                                    return (
                                                        <div key={q.id} className="text-[15px] text-slate-800 font-medium leading-relaxed mb-3 last:mb-0 font-sans html-content-renderer">
-                                                           <span className="font-bold font-sans text-white px-2 py-0.5 bg-slate-800 rounded-none text-[13px] mr-2">Câu {questionIndexMap[String(q.id)] || q.id}</span>
+                                                           <span className="font-bold font-sans text-white px-2 py-0.5 bg-slate-800 rounded-none text-[13px] mr-2">{isEn ? `Question ${questionIndexMap[String(q.id)] || q.id}` : `Câu ${questionIndexMap[String(q.id)] || q.id}`}</span>
                                                            <span dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.explanation) }} />
                                                            <div className="flex items-center gap-2 mt-3">
                                                                <button onClick={(e) => { e.stopPropagation(); askAIToExplain(String(q.id), q.content, q.explanation); }} className="px-4 py-1.5 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded-none text-[12px] transition shadow-sm border border-[#064e3b]">
-                                                                  💬 Chat với AI
+                                                                  {isEn ? '💬 Chat with AI' : '💬 Chat với AI'}
                                                                </button>
                                                                <button onClick={(e) => { e.stopPropagation(); callTutorForQuestion(q); }} className="px-4 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-none text-[12px] transition shadow-sm border border-emerald-600 flex items-center gap-1">
-                                                                  📞 Gọi Gia sư (Voice)
+                                                                  {isEn ? '📞 Call Tutor (Voice)' : '📞 Gọi Gia sư (Voice)'}
                                                                </button>
                                                            </div>
                                                        </div>
@@ -2354,8 +2374,12 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                         onClick={() => {
                           const tutorContext = {
                             overall: scoreResult.band,
-                            transcript: `Bài test: ${basicInfo.title}. Điểm số: ${scoreResult.score}/${scoreResult.total} (Band ${scoreResult.band}).`,
-                            feedback: "Bạn là gia sư IELTS. Học sinh vừa hoàn thành bài kiểm tra Reading/Listening và đang xem lại điểm. Hãy gửi lời chào chúc mừng/động viên dựa trên điểm số, sau đó gợi ý học sinh đọc câu hỏi mà họ không hiểu để bạn phân tích chi tiết và đưa ra lời giải thích chuyên sâu."
+                            transcript: isEn
+                              ? `Test: ${basicInfo.title}. Score: ${scoreResult.score}/${scoreResult.total} (Band ${scoreResult.band}).`
+                              : `Bài test: ${basicInfo.title}. Điểm số: ${scoreResult.score}/${scoreResult.total} (Band ${scoreResult.band}).`,
+                            feedback: isEn
+                              ? "You are an IELTS tutor. Speak and explain strictly in English. The student has just completed a Reading/Listening test and is reviewing their score. Greet and encourage them based on their score, then invite them to ask about any question they didn't understand so you can analyze it in detail and give a thorough explanation."
+                              : "Bạn là gia sư IELTS. Học sinh vừa hoàn thành bài kiểm tra Reading/Listening và đang xem lại điểm. Hãy gửi lời chào chúc mừng/động viên dựa trên điểm số, sau đó gợi ý học sinh đọc câu hỏi mà họ không hiểu để bạn phân tích chi tiết và đưa ra lời giải thích chuyên sâu."
                           };
                           sessionStorage.setItem('tony_live_mode', 'TUTOR');
                           sessionStorage.setItem('tony_tutor_data', JSON.stringify(tutorContext));
@@ -2364,15 +2388,15 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                         }}
                         className="bg-emerald-600 hover:bg-emerald-500 text-white px-4 sm:px-6 py-2 rounded-none text-[13px] sm:text-[14px] font-bold transition uppercase tracking-wide shadow-sm flex items-center gap-2"
                      >
-                         📞 Gọi Gia Sư
+                         {isEn ? '📞 Call Tutor' : '📞 Gọi Gia Sư'}
                      </button>
                      <button onClick={handleExit} className="bg-[#064e3b] hover:bg-[#047857] text-white px-4 sm:px-6 py-2 rounded-none text-[13px] sm:text-[14px] font-bold transition uppercase tracking-wide">
-                         Thoát
+                         {isEn ? 'Exit' : 'Thoát'}
                      </button>
                  </div>
                ) : (
                  <button onClick={() => handleFinish(false)} className="bg-slate-900 hover:bg-black text-white px-6 py-2 rounded-none text-[14px] font-bold transition ml-2 uppercase tracking-wide">
-                     Nộp bài
+                     {isEn ? 'Submit' : 'Nộp bài'}
                  </button>
                )}
             </div>

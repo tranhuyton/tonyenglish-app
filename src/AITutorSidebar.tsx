@@ -6,6 +6,7 @@ import {
   executeTutorAction,
   GlobalStudentSnapshot,
 } from './globalTutorContext';
+import { useLmsLang, getLocalizedCourseTitle } from './utils/lmsI18n';
 
 interface AITutorProps {
   isOpen: boolean;
@@ -38,11 +39,28 @@ const UNICODE_FORMAT_INSTRUCTION = `
   + Để nhấn mạnh công thức hoặc tên chất, hãy dùng in đậm **...** hoặc backtick \`...\`, tuyệt đối không bọc bằng dấu $.
 - Trình bày mạch lạc, phân tách rõ ràng bằng gạch đầu dòng, các tiêu đề dùng in đậm **...** để dễ đọc.`;
 
+const UNICODE_FORMAT_INSTRUCTION_EN = `
+[MANDATORY FORMATTING RULES - STANDARD UNICODE]:
+- NEVER use LaTeX syntax (NO $, $$, \\rightarrow, \\to, \\frac, \\pm, \\sqrt, ^{...}, _{...}).
+- ALWAYS use direct Unicode symbols:
+  + Chemical reaction arrows: →, ⇌, ↑, ↓
+  + Superscripts / ion charges: ⁰ ¹ ² ³ ⁴ ⁵ ⁶ ⁷ ⁸ ⁹ ⁺ ⁻ ⁿ (e.g., Cu²⁺, SO₄²⁻, x², cm³)
+  + Subscripts: ₀ ₁ ₂ ₃ ₄ ₅ ₆ ₇ ₈ ₉ (e.g., H₂O, CO₂, H₂SO₄)
+  + Math & science symbols: ±, ×, ÷, √, °, ℃, ≈, ≠, ≤, ≥, Δ, π, α, β, θ, λ, Ω, μ
+- Structure your response clearly with bullet points and **bold** headings for readability.`;
+
 const TUTOR_PROMPTS = [
   "🧭 Tư vấn việc cần làm hôm nay",
   "📊 Đánh giá điểm test & tiến độ của em",
   "Tóm tắt bài học", 
   "Giải thích khái niệm khó"
+];
+
+const TUTOR_PROMPTS_EN = [
+  "🧭 What should I study today?",
+  "📊 Review my test scores & progress",
+  "Summarize this lesson",
+  "Explain difficult concepts"
 ];
 
 export default function AITutorSidebar({ 
@@ -58,6 +76,8 @@ export default function AITutorSidebar({
   isCallActive = false
 }: AITutorProps) {
   
+  const [lang] = useLmsLang();
+  const isEn = lang === 'en';
   const [messages, setMessages] = useState<{ role: 'user' | 'ai'; text: string; isError?: boolean }[]>([]);
   const [input, setInput] = useState('');
   const [isTyping, setIsTyping] = useState(false);
@@ -73,11 +93,11 @@ export default function AITutorSidebar({
 
   useEffect(() => {
     if (isOpen && mode === 'tutor') {
-      fetchGlobalStudentSnapshot(undefined, courseTitle).then((snap) => {
+      fetchGlobalStudentSnapshot(undefined, courseTitle, false, lang).then((snap) => {
         if (snap) setGlobalSnapshot(snap);
       });
     }
-  }, [isOpen, mode, courseTitle, lectureTitle]);
+  }, [isOpen, mode, courseTitle, lectureTitle, lang]);
 
   useEffect(() => {
     const isBubbleShowing = isOpen && isMinimized;
@@ -114,71 +134,94 @@ export default function AITutorSidebar({
   }, []);
 
   // 🚀 HELPER: Tạo welcome message dựa trên context hiện tại
-  const generateWelcome = () => {
+  const generateWelcome = (enMode = isEn) => {
     let welcomeText = "";
     if (mode === 'parent_mode') {
-      let studentName = 'học sinh';
-      try { studentName = sessionStorage.getItem('tony_parent_target_student') || 'học sinh'; } catch(e) {}
-      welcomeText = `Dạ chào anh/chị! Tôi là Trợ lý AI chủ nhiệm của bé **${studentName}**.\n\nHệ thống đã tổng hợp xong dữ liệu học tập của cháu trong 14 ngày qua. Anh/chị cần xem báo cáo tổng quan hay có câu hỏi cụ thể nào về tình hình của cháu không ạ?`;
+      let studentName = enMode ? 'the student' : 'học sinh';
+      try { studentName = sessionStorage.getItem('tony_parent_target_student') || (enMode ? 'the student' : 'học sinh'); } catch(e) {}
+      welcomeText = enMode
+        ? `Hello! I am the AI Academic Advisor for **${studentName}**.\n\nI have summarized their learning activity over the past 14 days. Would you like an overview report or do you have any specific questions about their progress?`
+        : `Dạ chào anh/chị! Tôi là Trợ lý AI chủ nhiệm của bé **${studentName}**.\n\nHệ thống đã tổng hợp xong dữ liệu học tập của cháu trong 14 ngày qua. Anh/chị cần xem báo cáo tổng quan hay có câu hỏi cụ thể nào về tình hình của cháu không ạ?`;
     } else if (mode === 'ielts') {
-      const isReflex = (topicTitle || '').toLowerCase().includes('phản xạ') || (topicTitle || '').toLowerCase().includes('giao tiếp');
+      const isReflex = (topicTitle || '').toLowerCase().includes('phản xạ') || (topicTitle || '').toLowerCase().includes('giao tiếp') || (topicTitle || '').toLowerCase().includes('reflex');
       if (isReflex) {
-        welcomeText = `Chào em! Thầy là Huấn luyện viên Luyện Phản Xạ Giao Tiếp.\n\n🎯 **Nội dung:** Luyện phản xạ cấu trúc câu giao tiếp thực chiến.\n\nEm có thể bấm chọn gợi ý bên dưới hoặc gửi câu hỏi để thầy gợi ý mẫu câu, từ vựng và hỗ trợ em luyện tập nhé!`;
+        welcomeText = enMode
+          ? `Hello! I'm your **Speaking Reflex & Communication Coach**.\n\n🎯 **Focus:** Practical speaking patterns & natural communication reflexes.\n\nPick a quick suggestion below or send your question for sentence templates, vocabulary, and interactive practice!`
+          : `Chào em! Thầy là Huấn luyện viên Luyện Phản Xạ Giao Tiếp.\n\n🎯 **Nội dung:** Luyện phản xạ cấu trúc câu giao tiếp thực chiến.\n\nEm có thể bấm chọn gợi ý bên dưới hoặc gửi câu hỏi để thầy gợi ý mẫu câu, từ vựng và hỗ trợ em luyện tập nhé!`;
       } else if (taskType === 'reading') {
-        welcomeText = `Chào em! Thầy đã nhận được yêu cầu giải thích:\n\n**${topicTitle}**\n\nEm muốn hỏi thêm thầy điều gì?`;
+        welcomeText = enMode
+          ? `Hello! I received your explanation request for:\n\n**${topicTitle}**\n\nWhat would you like me to clarify?`
+          : `Chào em! Thầy đã nhận được yêu cầu giải thích:\n\n**${topicTitle}**\n\nEm muốn hỏi thêm thầy điều gì?`;
       } else if (taskType === 'speaking') {
-        welcomeText = `Chào em! Thầy là trợ lý Speaking.\n\n`;
+        welcomeText = enMode ? `Hello! I'm your **Speaking AI Coach**.\n\n` : `Chào em! Thầy là trợ lý Speaking.\n\n`;
         if (topicTitle) {
-          welcomeText += `🎙️ **Chủ đề đang chọn:**\n*"${topicTitle}"*\n\nThầy đã nhận diện chủ đề trên! Em có thể bấm chọn gợi ý bên dưới để nhờ thầy **Tư vấn kịch bản (Lego)**, **Gợi ý từ vựng Band 8+**, hoặc cùng thầy luyện tập trả lời nhé!`;
+          welcomeText += enMode
+            ? `🎙️ **Selected Topic:**\n*"${topicTitle}"*\n\nI've loaded your topic! Choose a quick prompt below for a **Lego Script Outline**, **Band 8+ Vocabulary**, or let's practice your answer together!`
+            : `🎙️ **Chủ đề đang chọn:**\n*"${topicTitle}"*\n\nThầy đã nhận diện chủ đề trên! Em có thể bấm chọn gợi ý bên dưới để nhờ thầy **Tư vấn kịch bản (Lego)**, **Gợi ý từ vựng Band 8+**, hoặc cùng thầy luyện tập trả lời nhé!`;
         } else {
-          welcomeText += `Em gửi đề bài hoặc paste câu hỏi vào đây, thầy sẽ tư vấn Kịch bản Lego, gợi ý từ vựng Band 8+ hoặc cùng em luyện tập trả lời nhé!`;
+          welcomeText += enMode
+            ? `Send or paste any Speaking prompt here — I can help you build a Lego outline, suggest Band 8+ vocabulary, or practice answering together!`
+            : `Em gửi đề bài hoặc paste câu hỏi vào đây, thầy sẽ tư vấn Kịch bản Lego, gợi ý từ vựng Band 8+ hoặc cùng em luyện tập trả lời nhé!`;
         }
       } else if (taskType === 'task1') {
-        welcomeText = `Chào em! Thầy là trợ lý Writing Task 1.\n\n`;
+        welcomeText = enMode ? `Hello! I'm your **IELTS Writing Task 1 Assessor**.\n\n` : `Chào em! Thầy là trợ lý Writing Task 1.\n\n`;
         if (topicTitle) {
-          welcomeText += `📋 **Đề bài đang chọn:**\n*"${topicTitle}"*\n\nThầy đã nhận diện đề bài này! Em có thể bấm chọn gợi ý bên dưới để nhờ thầy **Phân tích biểu đồ**, **Lập dàn ý**, hoặc dán bài viết của em vào đây để thầy **Chấm điểm & sửa lỗi** nhé!`;
+          welcomeText += enMode
+            ? `📋 **Selected Prompt:**\n*"${topicTitle}"*\n\nI've got your prompt! Click a suggestion below to **Analyze the Chart**, **Build an Outline**, or paste your essay for **Band Scoring & Detailed Corrections**!`
+            : `📋 **Đề bài đang chọn:**\n*"${topicTitle}"*\n\nThầy đã nhận diện đề bài này! Em có thể bấm chọn gợi ý bên dưới để nhờ thầy **Phân tích biểu đồ**, **Lập dàn ý**, hoặc dán bài viết của em vào đây để thầy **Chấm điểm & sửa lỗi** nhé!`;
         } else {
-          welcomeText += `Em gửi đề bài hoặc paste nội dung vào đây, thầy sẽ phân tích biểu đồ, lập dàn ý, hoặc chấm điểm bài viết cho em nhé!`;
+          welcomeText += enMode
+            ? `Send or paste your Writing Task 1 prompt here — I'll help you analyze the chart, outline key trends, or grade your essay!`
+            : `Em gửi đề bài hoặc paste nội dung vào đây, thầy sẽ phân tích biểu đồ, lập dàn ý, hoặc chấm điểm bài viết cho em nhé!`;
         }
       } else if (taskType === 'task2') {
-        welcomeText = `Chào em! Thầy là trợ lý Writing Task 2.\n\n`;
+        welcomeText = enMode ? `Hello! I'm your **IELTS Writing Task 2 Assessor**.\n\n` : `Chào em! Thầy là trợ lý Writing Task 2.\n\n`;
         if (topicTitle) {
-          welcomeText += `📋 **Đề bài đang chọn:**\n*"${topicTitle}"*\n\nThầy đã nhận diện đề bài này! Em hãy bấm chọn các nút gợi ý bên dưới để nhờ thầy **Lập dàn ý (Pillars)**, **Gợi ý từ vựng Band 8.0+**, hoặc dán bài viết của em vào đây để thầy **Chấm điểm & sửa lỗi** chi tiết nhé!`;
+          welcomeText += enMode
+            ? `📋 **Selected Prompt:**\n*"${topicTitle}"*\n\nI've got your prompt! Pick a suggestion below for an **Essay Outline (Pillars)**, **Band 8.0+ Vocabulary**, or paste your essay for **Detailed Band Scoring & Feedback**!`
+            : `📋 **Đề bài đang chọn:**\n*"${topicTitle}"*\n\nThầy đã nhận diện đề bài này! Em hãy bấm chọn các nút gợi ý bên dưới để nhờ thầy **Lập dàn ý (Pillars)**, **Gợi ý từ vựng Band 8.0+**, hoặc dán bài viết của em vào đây để thầy **Chấm điểm & sửa lỗi** chi tiết nhé!`;
         } else {
-          welcomeText += `Em gửi đề bài hoặc paste nội dung vào đây, thầy sẽ lập dàn ý, gợi ý từ vựng, hoặc chấm điểm bài làm cho em nhé!`;
+          welcomeText += enMode
+            ? `Send or paste your Writing Task 2 prompt here — I'll help you brainstorm ideas, upgrade vocabulary, or grade your essay!`
+            : `Em gửi đề bài hoặc paste nội dung vào đây, thầy sẽ lập dàn ý, gợi ý từ vựng, hoặc chấm điểm bài làm cho em nhé!`;
         }
       } else {
-        welcomeText = `Chào em! Thầy đã sẵn sàng hỗ trợ.\n\n`;
-        if (topicTitle) welcomeText += `📋 **Đề bài / Câu hỏi:**\n*"${topicTitle}"*\n\n`;
-        welcomeText += `Em gửi câu hỏi hoặc chọn các gợi ý bên dưới để thầy hỗ trợ nhé!`;
+        welcomeText = enMode ? `Hello! I'm ready to help you.\n\n` : `Chào em! Thầy đã sẵn sàng hỗ trợ.\n\n`;
+        if (topicTitle) welcomeText += enMode ? `📋 **Prompt / Question:**\n*"${topicTitle}"*\n\n` : `📋 **Đề bài / Câu hỏi:**\n*"${topicTitle}"*\n\n`;
+        welcomeText += enMode
+          ? `Ask any question or pick one of the quick suggestions below!`
+          : `Em gửi câu hỏi hoặc chọn các gợi ý bên dưới để thầy hỗ trợ nhé!`;
       }
-      if (topicImage) welcomeText += `\n\n*(📷 Thầy đã nhận được hình ảnh/biểu đồ kèm theo)*`;
+      if (topicImage) welcomeText += enMode ? `\n\n*(📷 Attached image/chart received)*` : `\n\n*(📷 Thầy đã nhận được hình ảnh/biểu đồ kèm theo)*`;
     } else {
-      welcomeText = `Chào em! Thầy AI đã sẵn sàng hỗ trợ bài học **"${lectureTitle || 'này'}"**. Em có thể chat hỏi bài hoặc **Paste (Ctrl+V) / Tải ảnh lên** để thầy giải đáp nhé!`;
+      welcomeText = enMode
+        ? `Hello! **Tony AI Tutor** is ready to help you with **"${lectureTitle || 'this lesson'}"**. Feel free to ask any question, or **Paste (Ctrl+V) / Upload an image** for step-by-step explanations!`
+        : `Chào em! Thầy AI đã sẵn sàng hỗ trợ bài học **"${lectureTitle || 'này'}"**. Em có thể chat hỏi bài hoặc **Paste (Ctrl+V) / Tải ảnh lên** để thầy giải đáp nhé!`;
     }
     return [{ role: 'ai' as const, text: welcomeText }];
   };
 
-  // 🚀 AUTO-RESET: Cập nhật / reset chat khi đổi topic, đổi bài giảng hoặc mở lên
-  const prevContextRef = useRef({ topic: topicTitle, lecture: lectureTitle, mode, taskType });
+  // 🚀 AUTO-RESET: Cập nhật / reset chat khi đổi topic, đổi bài giảng, đổi ngôn ngữ hoặc mở lên
+  const prevContextRef = useRef({ topic: topicTitle, lecture: lectureTitle, mode, taskType, lang });
   useEffect(() => {
     if (isOpen) {
       const prev = prevContextRef.current;
       const contextChanged = prev.topic !== topicTitle || prev.lecture !== lectureTitle || prev.mode !== mode || prev.taskType !== taskType;
+      const langChanged = prev.lang !== lang;
       
-      if (contextChanged || messages.length === 0) {
-        setMessages(generateWelcome());
+      if (contextChanged || messages.length === 0 || (langChanged && messages.length <= 1)) {
+        setMessages(generateWelcome(isEn));
       }
-      prevContextRef.current = { topic: topicTitle, lecture: lectureTitle, mode, taskType };
+      prevContextRef.current = { topic: topicTitle, lecture: lectureTitle, mode, taskType, lang };
     }
-  }, [topicTitle, lectureTitle, taskType, mode, isOpen]);
+  }, [topicTitle, lectureTitle, taskType, mode, isOpen, lang, isEn]);
 
   const theme = useMemo(() => {
     if (mode === 'parent_mode') {
       return {
         headerBg: 'from-[#073b5c] via-[#0a5482] to-[#0f172a]', 
-        title: 'Trợ lý Phụ huynh', 
-        subtitle: 'TonyEnglish • Báo cáo AI', 
+        title: isEn ? 'Parent Advisor' : 'Trợ lý Phụ huynh', 
+        subtitle: isEn ? 'TonyEnglish • AI Report' : 'TonyEnglish • Báo cáo AI', 
         icon: '👨‍👩‍👧‍👦',
         userBg: 'bg-gradient-to-br from-[#0a5482] to-[#073b5c]', 
         aiBorder: 'border-slate-200/90', 
@@ -193,7 +236,7 @@ export default function AITutorSidebar({
       return {
         headerBg: 'from-[#073b5c] via-[#0a5482] to-[#0f172a]',
         title: 'Tony AI Tutor', 
-        subtitle: 'Gia sư đồng hành 24/7', 
+        subtitle: isEn ? '24/7 Personal AI Tutor' : 'Gia sư đồng hành 24/7', 
         icon: '🤖',
         userBg: 'bg-gradient-to-br from-[#0a5482] to-[#073b5c]', 
         aiBorder: 'border-slate-200/90', 
@@ -209,7 +252,7 @@ export default function AITutorSidebar({
         return {
           headerBg: 'from-[#073b5c] via-[#0a5482] to-[#0f172a]', 
           title: `IELTS Assessor (Task 1)`,
-          subtitle: 'Chấm điểm & Sửa lỗi chuyên sâu', 
+          subtitle: isEn ? 'In-depth Scoring & Corrections' : 'Chấm điểm & Sửa lỗi chuyên sâu', 
           icon: '📝',
           userBg: 'bg-gradient-to-br from-[#0a5482] to-[#073b5c]', 
           aiBorder: 'border-slate-200/90', 
@@ -222,7 +265,7 @@ export default function AITutorSidebar({
         return {
           headerBg: 'from-[#073b5c] via-[#0a5482] to-[#0f172a]', 
           title: `IELTS Assessor (${taskType.toUpperCase()})`,
-          subtitle: 'Chấm điểm & Sửa lỗi chuyên sâu', 
+          subtitle: isEn ? 'In-depth Scoring & Corrections' : 'Chấm điểm & Sửa lỗi chuyên sâu', 
           icon: '🎓',
           userBg: 'bg-gradient-to-br from-[#0a5482] to-[#073b5c]', 
           aiBorder: 'border-slate-200/90', 
@@ -235,7 +278,7 @@ export default function AITutorSidebar({
         return {
           headerBg: 'from-[#073b5c] via-[#0a5482] to-[#0f172a]', 
           title: 'Math AI Tutor',
-          subtitle: 'Giải chi tiết từng bước lập luận', 
+          subtitle: isEn ? 'Step-by-Step Reasoning & Proofs' : 'Giải chi tiết từng bước lập luận', 
           icon: '📐',
           userBg: 'bg-gradient-to-br from-[#0a5482] to-[#073b5c]', 
           aiBorder: 'border-slate-200/90', 
@@ -248,7 +291,7 @@ export default function AITutorSidebar({
         return {
           headerBg: 'from-[#073b5c] via-[#0a5482] to-[#0f172a]', 
           title: 'Science AI Tutor',
-          subtitle: 'Phân tích hiện tượng & Thí nghiệm', 
+          subtitle: isEn ? 'Concept & Experiment Analysis' : 'Phân tích hiện tượng & Thí nghiệm', 
           icon: '🧪',
           userBg: 'bg-gradient-to-br from-[#0a5482] to-[#073b5c]', 
           aiBorder: 'border-slate-200/90', 
@@ -261,7 +304,7 @@ export default function AITutorSidebar({
         return {
           headerBg: 'from-[#073b5c] via-[#0a5482] to-[#0f172a]', 
           title: 'Speaking Assistant',
-          subtitle: 'Lên ý tưởng & Bẻ lõi Part 2', 
+          subtitle: isEn ? 'Idea Building & Part 2 Coaching' : 'Lên ý tưởng & Bẻ lõi Part 2', 
           icon: '🎙️',
           userBg: 'bg-gradient-to-br from-[#0a5482] to-[#073b5c]', 
           aiBorder: 'border-slate-200/90', 
@@ -287,7 +330,7 @@ export default function AITutorSidebar({
         return {
           headerBg: 'from-[#073b5c] via-[#0a5482] to-[#0f172a]', 
           title: 'IELTS Reading Tutor',
-          subtitle: 'Giải thích đáp án chi tiết', 
+          subtitle: isEn ? 'Detailed Answer Explanations' : 'Giải thích đáp án chi tiết', 
           icon: '📖',
           userBg: 'bg-gradient-to-br from-[#0a5482] to-[#073b5c]', 
           aiBorder: 'border-slate-200/90', 
@@ -300,7 +343,7 @@ export default function AITutorSidebar({
         return {
           headerBg: 'from-[#073b5c] via-[#0a5482] to-[#0f172a]',
           title: 'Tony AI Multi-Tutor', 
-          subtitle: 'Hỗ trợ học tập chuyên sâu', 
+          subtitle: isEn ? 'Dedicated Study Assistant' : 'Hỗ trợ học tập chuyên sâu', 
           icon: '✨',
           userBg: 'bg-gradient-to-br from-[#0a5482] to-[#073b5c]', 
           aiBorder: 'border-slate-200/90', 
@@ -310,40 +353,58 @@ export default function AITutorSidebar({
           width: 'md:w-[480px]'
         };
     }
-  }, [mode, taskType]);
+  }, [mode, taskType, isEn]);
 
   const dynamicPrompts = useMemo(() => {
     if (mode === 'parent_mode') {
-        return ["📊 Tình hình học tập tuần qua", "📈 Cháu có tiến bộ không?", "💡 Có cần nhắc nhở cháu môn gì?"];
+        return isEn
+          ? ["📊 Weekly study summary", "📈 Is the student improving?", "💡 Which subject needs attention?"]
+          : ["📊 Tình hình học tập tuần qua", "📈 Cháu có tiến bộ không?", "💡 Có cần nhắc nhở cháu môn gì?"];
     }
 
     if (mode === 'tutor') {
-        return TUTOR_PROMPTS;
+        return isEn ? TUTOR_PROMPTS_EN : TUTOR_PROMPTS;
     }
 
-    const isReflex = (topicTitle || '').toLowerCase().includes('phản xạ') || (topicTitle || '').toLowerCase().includes('giao tiếp');
+    const isReflex = (topicTitle || '').toLowerCase().includes('phản xạ') || (topicTitle || '').toLowerCase().includes('giao tiếp') || (topicTitle || '').toLowerCase().includes('reflex');
     if (isReflex) {
-        return ["💡 Gợi ý mẫu câu phản xạ", "🧠 Mở rộng từ vựng giao tiếp", "✍️ Sửa lỗi phát âm / diễn đạt"];
+        return isEn
+          ? ["💡 Suggest reflex sentence patterns", "🧠 Expand communication vocabulary", "✍️ Fix phrasing & pronunciation"]
+          : ["💡 Gợi ý mẫu câu phản xạ", "🧠 Mở rộng từ vựng giao tiếp", "✍️ Sửa lỗi phát âm / diễn đạt"];
     }
     
     switch (taskType) {
       case 'task1':
       case 'task2':
-        return ["💡 Nhờ lập dàn ý", "📝 Chấm điểm bài viết", "🧠 Gợi ý từ vựng Band 8.0+"];
+        return isEn
+          ? ["💡 Build an outline", "📝 Grade my essay", "🧠 Band 8.0+ Vocabulary"]
+          : ["💡 Nhờ lập dàn ý", "📝 Chấm điểm bài viết", "🧠 Gợi ý từ vựng Band 8.0+"];
       case 'math':
-        return ["📐 Gợi ý bước giải tiếp theo", "🔍 Kiểm tra lỗi sai", "💡 Tìm phương pháp khác"];
+        return isEn
+          ? ["📐 Hint the next step", "🔍 Check my solution", "💡 Show an alternative method"]
+          : ["📐 Gợi ý bước giải tiếp theo", "🔍 Kiểm tra lỗi sai", "💡 Tìm phương pháp khác"];
       case 'Science':
-        return ["🧪 Giải thích hiện tượng", "📊 Phân tích số liệu", "📝 Hướng dẫn tự luận"];
+        return isEn
+          ? ["🧪 Explain the concept", "📊 Analyze the data", "📝 Structured answer guide"]
+          : ["🧪 Giải thích hiện tượng", "📊 Phân tích số liệu", "📝 Hướng dẫn tự luận"];
       case 'ESL':
-        return ["📝 Chấm điểm Cambridge", "✍️ Sửa lỗi diễn đạt", "🚀 Nâng cấp Band 9"];
+        return isEn
+          ? ["📝 Cambridge Band Grading", "✍️ Polish phrasing", "🚀 Upgrade to Grade A*"]
+          : ["📝 Chấm điểm Cambridge", "✍️ Sửa lỗi diễn đạt", "🚀 Nâng cấp Band 9"];
       case 'speaking':
-        return ["💡 Tư vấn kịch bản (Lego)", "🧠 Gợi ý từ vựng Band 8+", "✍️ Viết câu Mở bài ấn tượng"];
+        return isEn
+          ? ["💡 Lego Script Outline", "🧠 Band 8+ Vocabulary", "✍️ Write a strong opening"]
+          : ["💡 Tư vấn kịch bản (Lego)", "🧠 Gợi ý từ vựng Band 8+", "✍️ Viết câu Mở bài ấn tượng"];
       case 'reading':
-        return ["💡 Tại sao đáp án này đúng?", "🔍 Tìm dẫn chứng", "🧠 Dịch đoạn văn"];
+        return isEn
+          ? ["💡 Why is this answer correct?", "🔍 Find passage evidence", "🧠 Explain key vocabulary"]
+          : ["💡 Tại sao đáp án này đúng?", "🔍 Tìm dẫn chứng", "🧠 Dịch đoạn văn"];
       default:
-        return ["💡 Hướng dẫn phương pháp", "🔍 Kiểm tra đáp án"];
+        return isEn
+          ? ["💡 Study method tips", "🔍 Check my answer"]
+          : ["💡 Hướng dẫn phương pháp", "🔍 Kiểm tra đáp án"];
     }
-  }, [mode, taskType, topicTitle]);
+  }, [mode, taskType, topicTitle, isEn]);
 
   const contextText = useMemo(() => {
     if ((mode === 'ielts' && taskType !== 'reading') || mode === 'parent_mode' || !htmlContent) {
@@ -370,19 +431,23 @@ export default function AITutorSidebar({
        }, 300);
        
        if (messages.length === 0) {
-           setMessages(generateWelcome());
+           setMessages(generateWelcome(isEn));
        }
     }
-  }, [isOpen, mode, topicTitle, lectureTitle, topicImage, taskType]);
+  }, [isOpen, mode, topicTitle, lectureTitle, topicImage, taskType, isEn]);
 
   const handleCallTutor = () => {
-      const safeHtml = htmlContent ? htmlContent.replace(/<[^>]+>/g, '').slice(0, 2000) : 'Không có dữ liệu văn bản';
-      const safeTitle = lectureTitle || 'Bài giảng English';
+      const safeHtml = htmlContent ? htmlContent.replace(/<[^>]+>/g, '').slice(0, 2000) : (isEn ? 'No text content' : 'Không có dữ liệu văn bản');
+      const safeTitle = lectureTitle || (isEn ? 'English Lesson' : 'Bài giảng English');
       
       const tutorContext = {
           overall: "N/A",
-          transcript: `Học sinh đang học bài: "${safeTitle}". \nNội dung bài học: "${safeHtml}".`,
-          feedback: "Bạn là gia sư đang dạy bài giảng này. Hãy chủ động chào học sinh, nhắc tên bài học và hỏi xem học sinh không hiểu phần nào trong nội dung trên để bạn giải thích bằng giọng nói ân cần."
+          transcript: isEn
+            ? `The student is studying the lesson: "${safeTitle}". \nLesson content: "${safeHtml}".`
+            : `Học sinh đang học bài: "${safeTitle}". \nNội dung bài học: "${safeHtml}".`,
+          feedback: isEn
+            ? "You are the AI tutor teaching this lesson. Proactively greet the student in warm, natural English, mention the lesson title, and ask which part they would like explained."
+            : "Bạn là gia sư đang dạy bài giảng này. Hãy chủ động chào học sinh, nhắc tên bài học và hỏi xem học sinh không hiểu phần nào trong nội dung trên để bạn giải thích bằng giọng nói ân cần."
       };
       
       sessionStorage.setItem('tony_live_mode', 'TUTOR');
@@ -467,7 +532,7 @@ export default function AITutorSidebar({
         return;
     }
 
-    const displayMsg = currentImage ? `*(📸 Đã đính kèm hình ảnh)*\n\n${userMsg}` : userMsg;
+    const displayMsg = currentImage ? `*(📸 ${isEn ? 'Image attached' : 'Đã đính kèm hình ảnh'})*\n\n${userMsg}` : userMsg;
     setMessages(prev => [...prev, { role: 'user', text: displayMsg }]);
     
     setInput('');
@@ -499,8 +564,8 @@ export default function AITutorSidebar({
                   detail: { 
                       mode: 'vision_mode',
                       image: currentImage, // <--- ĐÃ TRUYỀN ẢNH THÀNH CÔNG VÀO LỆNH
-                      query: userMsg || "Thầy giải chi tiết giúp em bài này với ạ.",
-                      courseTitle: courseTitle || "Tổng hợp"
+                      query: userMsg || (isEn ? "Please solve and explain this exercise step-by-step in English." : "Thầy giải chi tiết giúp em bài này với ạ."),
+                      courseTitle: getLocalizedCourseTitle(courseTitle || (isEn ? "General" : "Tổng hợp"), lang)
                   } 
               }));
           }, 600);
@@ -514,10 +579,25 @@ export default function AITutorSidebar({
       let payload: any = {};
 
       if (mode === 'parent_mode') {
-         const parentContext = sessionStorage.getItem('tony_parent_ai_context') || 'Không có dữ liệu học tập gần đây.';
-         const studentName = sessionStorage.getItem('tony_parent_target_student') || 'học sinh';
+         const parentContext = sessionStorage.getItem('tony_parent_ai_context') || (isEn ? 'No recent learning data available.' : 'Không có dữ liệu học tập gần đây.');
+         const studentName = sessionStorage.getItem('tony_parent_target_student') || (isEn ? 'the student' : 'học sinh');
          
-         const systemPrompt = `Bạn là "Trợ lý Chủ nhiệm Tony AI". Nhiệm vụ của bạn là báo cáo tình hình học tập của học sinh ${studentName} cho phụ huynh.
+         const systemPrompt = isEn
+           ? `You are "Tony AI Academic Advisor". Your role is to report ${studentName}'s learning progress to their parent in clear, polite, warm ENGLISH.
+
+         STUDENT LEARNING DATA (PAST 14 DAYS):
+         """
+         ${parentContext}
+         """
+
+         RULES:
+         1. You are speaking directly to a PARENT. Be respectful, warm, and reassuring.
+         2. Base your answer STRICTLY on the provided data above. Never hallucinate scores or tasks.
+         3. Present insights clearly with bullet points. If there is no recent activity, politely state that no recent test activity has been recorded yet.
+         
+         PARENT QUESTION: "${userMsg}"
+         PLEASE REPLY POLITELY IN ENGLISH:`
+           : `Bạn là "Trợ lý Chủ nhiệm Tony AI". Nhiệm vụ của bạn là báo cáo tình hình học tập của học sinh ${studentName} cho phụ huynh.
 
          DƯỚI ĐÂY LÀ DỮ LIỆU HỌC TẬP THỰC TẾ TRONG 14 NGÀY QUA CỦA CHÁU:
          """
@@ -540,7 +620,20 @@ export default function AITutorSidebar({
 
       } else if (mode === 'ielts') {
          if (taskType === 'reading') {
-            const systemPrompt = `Bạn là gia sư IELTS Reading xuất sắc.
+            const systemPrompt = isEn
+              ? `You are an expert IELTS Reading tutor.
+            Below is the READING PASSAGE:
+            """
+            ${contextText}
+            """
+            Below is the QUESTION & ANSWER:
+            """
+            ${topicTitle}
+            """
+            Based strictly on the passage and question above, answer the student's question clearly in ENGLISH, explain why the correct answer is right/wrong, and ALWAYS quote the exact supporting sentence(s) from the passage:
+            "${userMsg}"
+            ${UNICODE_FORMAT_INSTRUCTION_EN}`
+              : `Bạn là gia sư IELTS Reading xuất sắc.
             Dưới đây là nội dung BÀI ĐỌC (Ẩn khỏi màn hình người dùng):
             """
             ${contextText}
@@ -559,7 +652,9 @@ export default function AITutorSidebar({
             }; 
          } else {
              payload = { 
-                content: `Đề bài: ${topicTitle}\n\nNội dung từ học sinh: ${userMsg}\n\n[QUY TẮC XƯNG HÔ]: BẮT BUỘC xưng Thầy/Cô và gọi Em (TUYỆT ĐỐI CẤM xưng con). Hướng dẫn ân cần, giải thích chi tiết, chuẩn xác.\n${UNICODE_FORMAT_INSTRUCTION}`,
+                content: isEn
+                  ? `[STRICT LANGUAGE INSTRUCTION: The student is using the ENGLISH interface. You MUST respond, explain, coach, and give all feedback exclusively in clear, natural ENGLISH unless the student explicitly requests Vietnamese.]\n\nPrompt / Topic: ${topicTitle}\n\nStudent message: ${userMsg}\n\n${UNICODE_FORMAT_INSTRUCTION_EN}`
+                  : `Đề bài: ${topicTitle}\n\nNội dung từ học sinh: ${userMsg}\n\n[QUY TẮC XƯNG HÔ]: BẮT BUỘC xưng Thầy/Cô và gọi Em (TUYỆT ĐỐI CẤM xưng con). Hướng dẫn ân cần, giải thích chi tiết, chuẩn xác.\n${UNICODE_FORMAT_INSTRUCTION}`,
                 imageUrl: currentImage || topicImage,
                 imageUrls: currentImage ? [currentImage] : (topicImage ? [topicImage] : []),
                 taskType: taskType 
@@ -568,15 +663,37 @@ export default function AITutorSidebar({
       } else {
          let snap = globalSnapshot;
          if (!snap) {
-           snap = await fetchGlobalStudentSnapshot(undefined, courseTitle);
+           snap = await fetchGlobalStudentSnapshot(undefined, courseTitle, false, lang);
            if (snap) setGlobalSnapshot(snap);
          }
          const globalBrainContext = snap?.promptContext || '';
+         const localizedCourseName = getLocalizedCourseTitle(courseTitle || '', lang);
          const currentLessonBlock = lectureTitle
-           ? `\n[BÀI GIẢNG HỌC VIÊN ĐANG MỞ TRÊN MÀN HÌNH]: "${lectureTitle}"\nNội dung bài giảng hiện tại:\n"""\n${(contextText || '').slice(0, 16000)}\n"""\n`
+           ? isEn
+             ? `\n[CURRENTLY OPEN LESSON]: "${lectureTitle}"\nLesson content:\n"""\n${(contextText || '').slice(0, 16000)}\n"""\n`
+             : `\n[BÀI GIẢNG HỌC VIÊN ĐANG MỞ TRÊN MÀN HÌNH]: "${lectureTitle}"\nNội dung bài giảng hiện tại:\n"""\n${(contextText || '').slice(0, 16000)}\n"""\n`
            : '';
-         const subjectRule = courseTitle ? `\n[KỶ LUẬT CHUYÊN MÔN]: Đây là khóa học "${courseTitle}".` : '';
-         const systemPrompt = `Bạn là "Thầy Tony AI" — người thầy chủ nhiệm kiêm gia sư trưởng trực tiếp dẫn dắt học viên tại TonyEnglish.vn. Luôn xưng "Thầy" và gọi học viên bằng tên hoặc "em" (TUYỆT ĐỐI CẤM xưng con).
+         const subjectRule = localizedCourseName
+           ? isEn
+             ? `\n[COURSE CONTEXT]: Active course is "${localizedCourseName}".`
+             : `\n[KỶ LUẬT CHUYÊN MÔN]: Đây là khóa học "${localizedCourseName}".`
+           : '';
+         const systemPrompt = isEn
+           ? `You are "Teacher Tony AI" — the lead mentor and personal AI tutor at TonyEnglish.vn.
+[STRICT LANGUAGE INSTRUCTION]: The student is using the ENGLISH interface. You MUST write your ENTIRE reply, explanations, coaching advice, AND all [[ACTION:...|Button Label]] labels in warm, clear, natural ENGLISH (unless the student explicitly asks for Vietnamese).
+
+${globalBrainContext}
+${currentLessonBlock}
+${subjectRule}
+${UNICODE_FORMAT_INSTRUCTION_EN}
+
+[YOUR MISSION AS TEACHER TONY AI]:
+- If the student asks about their study plan, what to study today, or test progress: base your guidance DIRECTLY on the REAL-TIME STUDENT LEARNING SNAPSHOT above (cite recent test scores, in-progress lectures, and Cambridge Library progress) and give specific, actionable next steps.
+- ALWAYS attach 2 to 4 clickable action tags using the exact syntax [[ACTION:OPEN_LECTURE:...]], [[ACTION:OPEN_FOLDER:...]], [[ACTION:OPEN_LIBRARY:...]], [[ACTION:OPEN_AI_ROOM:...]], or [[ACTION:OPEN_TAB:...]] with English button labels.
+- If the student asks about concepts in the open lesson ("${lectureTitle || ''}"): explain thoroughly and clearly with helpful examples.
+
+Student question: "${userMsg}"`
+           : `Bạn là "Thầy Tony AI" — người thầy chủ nhiệm kiêm gia sư trưởng trực tiếp dẫn dắt học viên tại TonyEnglish.vn. Luôn xưng "Thầy" và gọi học viên bằng tên hoặc "em" (TUYỆT ĐỐI CẤM xưng con).
 
 ${globalBrainContext}
 ${currentLessonBlock}
@@ -599,7 +716,7 @@ Câu hỏi của học sinh: "${userMsg}"`;
       const { data, error } = await supabase.functions.invoke(endpoint, { body: payload });
       
       if (error || data?.error) {
-          throw new Error("AI đang bận, hệ thống không thể kết nối ngay lúc này.");
+          throw new Error(isEn ? "AI is currently busy. Please try again in a moment." : "AI đang bận, hệ thống không thể kết nối ngay lúc này.");
       }
 
       let finalResponse = data.result || data.text || data.response;
@@ -613,8 +730,8 @@ Câu hỏi của học sinh: "${userMsg}"`;
   };
 
   const handleSuggestionClick = (p: string) => {
-      if (p.includes('Chấm điểm')) { 
-          setInput("Nhờ thầy chấm giúp bài làm sau:\n\n[Dán bài vào đây]"); 
+      if (p.includes('Chấm điểm') || p.toLowerCase().includes('grade') || p.toLowerCase().includes('grading')) { 
+          setInput(isEn ? "Please grade and give detailed feedback on my response:\n\n[Paste your work here]" : "Nhờ thầy chấm giúp bài làm sau:\n\n[Dán bài vào đây]"); 
           setTimeout(() => {
               if (textareaRef.current) {
                   textareaRef.current.focus();
@@ -799,7 +916,7 @@ Câu hỏi của học sinh: "${userMsg}"`;
           <button 
               onClick={() => { setIsMinimized(false); }}
               className={`fixed bottom-20 lg:bottom-6 right-3 md:right-7 z-[70] w-13 h-13 md:w-15 md:h-15 rounded-2xl bg-gradient-to-br ${theme.headerBg} text-white shadow-[0_12px_32px_rgba(10,84,130,0.35)] flex items-center justify-center text-xl md:text-2xl hover:scale-105 active:scale-95 transition-all duration-300 animate-in zoom-in group border-2 border-[#2ab4e8]/60 backdrop-blur-sm cursor-pointer`}
-              title="Mở lại khung Chat Tony AI Tutor"
+              title={isEn ? "Reopen Tony AI Tutor Chat" : "Mở lại khung Chat Tony AI Tutor"}
           >
               <span className="group-hover:hidden drop-shadow-md">
                   {theme.icon}
@@ -869,17 +986,17 @@ Câu hỏi của học sinh: "${userMsg}"`;
                  <button 
                      onClick={handleCallTutor}
                      className="flex bg-[#2ab4e8] hover:bg-[#1fa0d4] text-white border border-white/25 px-2.5 py-1.5 rounded-xl text-[11px] md:text-xs font-extrabold transition-all items-center gap-1 shadow-xs active:scale-95 cursor-pointer shrink-0"
-                     title="Vào lớp Học trực tiếp với Gia Sư AI trên Bảng Đen"
+                     title={isEn ? "Join Live AI Tutor Blackboard Session" : "Vào lớp Học trực tiếp với Gia Sư AI trên Bảng Đen"}
                  >
                      <span>👨‍🏫</span>
-                     <span>Lên Bảng</span>
+                     <span>{isEn ? 'Blackboard' : 'Lên Bảng'}</span>
                  </button>
              )}
 
              <button 
                  onClick={() => { setIsExpanded(!isExpanded); }} 
                  className="hidden md:flex w-8 h-8 items-center justify-center rounded-xl bg-white/10 hover:bg-white/20 border border-white/15 text-white transition-all cursor-pointer"
-                 title={isExpanded ? "Thu gọn khung" : "Mở rộng khung"}
+                 title={isExpanded ? (isEn ? "Collapse panel" : "Thu gọn khung") : (isEn ? "Expand panel" : "Mở rộng khung")}
              >
                 {isExpanded ? (
                     <svg 
@@ -917,7 +1034,7 @@ Câu hỏi của học sinh: "${userMsg}"`;
              <button 
                  onClick={() => { setIsMinimized(true); }} 
                  className="w-8 h-8 flex items-center justify-center rounded-xl bg-white/10 hover:bg-white/20 border border-white/15 text-white transition-all cursor-pointer"
-                 title="Thu nhỏ Chat"
+                 title={isEn ? "Minimize Chat" : "Thu nhỏ Chat"}
              >
                 <svg 
                     xmlns="http://www.w3.org/2000/svg" 
@@ -937,7 +1054,7 @@ Câu hỏi của học sinh: "${userMsg}"`;
              
              <button 
                  onClick={() => { 
-                     if (window.confirm('Bạn có chắc chắn muốn đóng hẳn và xóa toàn bộ lịch sử trò chuyện? (Bấm Hủy để chỉ thu nhỏ)')) {
+                     if (window.confirm(isEn ? 'Close chat and clear conversation history? (Click Cancel to minimize instead)' : 'Bạn có chắc chắn muốn đóng hẳn và xóa toàn bộ lịch sử trò chuyện? (Bấm Hủy để chỉ thu nhỏ)')) {
                          setMessages([]);
                          onClose(); 
                          setIsExpanded(false); 
@@ -946,7 +1063,7 @@ Câu hỏi của học sinh: "${userMsg}"`;
                      }
                  }} 
                  className="w-8 h-8 flex items-center justify-center rounded-xl bg-white/10 hover:bg-rose-500 border border-white/15 hover:border-rose-400 transition-all text-white cursor-pointer"
-                 title="Đóng hẳn"
+                 title={isEn ? "Close" : "Đóng hẳn"}
              >
                  <svg 
                      xmlns="http://www.w3.org/2000/svg" 
@@ -971,10 +1088,10 @@ Câu hỏi của học sinh: "${userMsg}"`;
           <div className="bg-white border-b border-slate-200/80 px-4 py-2 flex items-center gap-2 shrink-0 shadow-2xs">
             <span className="w-1 h-3.5 rounded-full bg-[#2ab4e8] shrink-0"></span>
             <span className="text-[10.5px] font-extrabold uppercase tracking-wider text-[#0a5482] shrink-0">
-              {mode === 'ielts' ? 'Đang luyện:' : 'Đang học:'}
+              {mode === 'ielts' ? (isEn ? 'Practicing:' : 'Đang luyện:') : (isEn ? 'Studying:' : 'Đang học:')}
             </span>
-            <span className="text-xs font-semibold text-slate-600 truncate" title={topicTitle || lectureTitle || courseTitle}>
-              {topicTitle || lectureTitle || courseTitle}
+            <span className="text-xs font-semibold text-slate-600 truncate" title={topicTitle || lectureTitle || getLocalizedCourseTitle(courseTitle || '', lang)}>
+              {topicTitle || lectureTitle || getLocalizedCourseTitle(courseTitle || '', lang)}
             </span>
           </div>
         )}
@@ -989,11 +1106,11 @@ Câu hỏi của học sinh: "${userMsg}"`;
                   <div className="w-full max-w-sm rounded-2xl overflow-hidden border border-slate-200/90 shadow-xs bg-white p-2.5">
                       <div className="text-[10px] font-extrabold text-[#0a5482] uppercase mb-2 px-1 tracking-widest flex items-center gap-1.5">
                           <span className="w-1.5 h-1.5 rounded-full bg-[#2ab4e8]"></span>
-                          Đề bài đính kèm
+                          {isEn ? 'Attached Prompt' : 'Đề bài đính kèm'}
                       </div>
                       <img 
                           src={topicImage} 
-                          alt="Task đề bài" 
+                          alt={isEn ? "Task prompt" : "Task đề bài"} 
                           className="w-full h-auto object-contain max-h-[240px] rounded-xl bg-slate-50" 
                       />
                   </div>
@@ -1090,20 +1207,20 @@ Câu hỏi của học sinh: "${userMsg}"`;
                   <div className="relative inline-block border border-slate-200 rounded-xl overflow-hidden shadow-xs">
                       <img 
                           src={attachedImage} 
-                          alt="Ảnh đính kèm" 
+                          alt={isEn ? "Attached image" : "Ảnh đính kèm"} 
                           className="h-16 w-auto object-cover bg-slate-50" 
                       />
                       <button 
                           onClick={() => { setAttachedImage(null); }} 
                           className="absolute -top-1 -right-1 w-5 h-5 bg-rose-500 text-white rounded-full flex items-center justify-center text-[10px] font-bold shadow-md hover:bg-rose-600 border border-white cursor-pointer"
-                          title="Xóa ảnh"
+                          title={isEn ? "Remove image" : "Xóa ảnh"}
                       >
                           ✕
                       </button>
                   </div>
                   {mode === 'tutor' && (
                       <span className="ml-3 text-[11px] font-extrabold text-[#0a5482] uppercase tracking-wider bg-sky-50 border border-sky-200 px-2.5 py-1 rounded-lg animate-pulse">
-                          ✨ AI Sẽ Lên Bảng Đen Để Giải Ảnh Này
+                          {isEn ? '✨ AI Will Solve This on the Blackboard' : '✨ AI Sẽ Lên Bảng Đen Để Giải Ảnh Này'}
                       </span>
                   )}
               </div>
@@ -1116,7 +1233,7 @@ Câu hỏi của học sinh: "${userMsg}"`;
                 <button 
                     onClick={() => { fileInputRef.current?.click(); }} 
                     className="w-9 h-9 md:w-10 md:h-10 shrink-0 flex items-center justify-center text-slate-400 hover:text-[#0a5482] hover:bg-sky-50 rounded-xl transition-colors self-end mb-[1px] cursor-pointer" 
-                    title="Đính kèm ảnh bài tập / Dán ảnh bằng Ctrl+V"
+                    title={isEn ? "Attach an exercise photo / Paste with Ctrl+V" : "Đính kèm ảnh bài tập / Dán ảnh bằng Ctrl+V"}
                 >
                     <svg 
                         xmlns="http://www.w3.org/2000/svg" 
@@ -1157,7 +1274,11 @@ Câu hỏi của học sinh: "${userMsg}"`;
                     } 
                 }} 
                 onPaste={handlePaste} 
-                placeholder={mode === 'parent_mode' ? "Hỏi AI về tình hình của bé..." : "Ctrl+V để dán ảnh hoặc gõ câu hỏi..."}
+                placeholder={
+                  mode === 'parent_mode'
+                    ? (isEn ? "Ask AI about the student's progress..." : "Hỏi AI về tình hình của bé...")
+                    : (isEn ? "Press Ctrl+V to paste an image or type your question..." : "Ctrl+V để dán ảnh hoặc gõ câu hỏi...")
+                }
                 className="flex-1 min-h-[40px] max-h-[120px] bg-transparent text-[15px] md:text-[14.5px] text-slate-700 font-medium px-2 py-2 outline-none resize-none custom-scrollbar leading-relaxed" 
                 rows={1} 
             />
@@ -1182,7 +1303,7 @@ Câu hỏi của học sinh: "${userMsg}"`;
           
           <div className="text-center mt-2">
               <span className="text-[10px] text-slate-400 font-medium">
-                  Tony AI có thể mắc lỗi. Vui lòng kiểm tra lại thông tin.
+                  {isEn ? 'Tony AI can make mistakes. Please verify important information.' : 'Tony AI có thể mắc lỗi. Vui lòng kiểm tra lại thông tin.'}
               </span>
           </div>
         </div>

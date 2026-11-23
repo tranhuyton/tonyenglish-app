@@ -36,6 +36,7 @@ import {
 import katex from 'katex';
 import 'katex/dist/katex.min.css';
 import { supabase } from './supabase';
+import { useLmsLang, LmsLangToggle } from './utils/lmsI18n';
 
 // ============================================================================
 // TYPES — DIGITAL SAT BLUEBOOK SCHEMA (R&W + MATH)
@@ -328,7 +329,7 @@ const DOMAIN_ORDER = [
   'Geometry and Trigonometry',
 ];
 
-function SatMathReferenceModal({ onClose }: { onClose: () => void }) {
+function SatMathReferenceModal({ onClose, isEn }: { onClose: () => void; isEn: boolean }) {
   return (
     <div className="fixed inset-0 z-50 bg-slate-900/50 backdrop-blur-xs flex items-center justify-center p-4">
       <div className="bg-white rounded-2xl border border-slate-300 shadow-2xl max-w-3xl w-full max-h-[88vh] flex flex-col overflow-hidden">
@@ -409,7 +410,11 @@ function SatMathReferenceModal({ onClose }: { onClose: () => void }) {
               <div>
                 <div className="font-black text-indigo-950">30°–60°–90° Special Right</div>
                 <div className="text-xs text-slate-700 mt-1">
-                  Tỉ lệ 3 cạnh: <b>x : x√3 : 2x</b> (đối diện 30° : 60° : 90°).
+                  {isEn ? (
+                    <>Side ratio: <b>x : x√3 : 2x</b> (opposite 30° : 60° : 90°).</>
+                  ) : (
+                    <>Tỉ lệ 3 cạnh: <b>x : x√3 : 2x</b> (đối diện 30° : 60° : 90°).</>
+                  )}
                 </div>
               </div>
             </div>
@@ -427,7 +432,11 @@ function SatMathReferenceModal({ onClose }: { onClose: () => void }) {
               <div>
                 <div className="font-black text-indigo-950">45°–45°–90° Special Right</div>
                 <div className="text-xs text-slate-700 mt-1">
-                  Tỉ lệ 3 cạnh: <b>s : s : s√2</b> (đường chéo hình vuông).
+                  {isEn ? (
+                    <>Side ratio: <b>s : s : s√2</b> (diagonal of a square).</>
+                  ) : (
+                    <>Tỉ lệ 3 cạnh: <b>s : s : s√2</b> (đường chéo hình vuông).</>
+                  )}
                 </div>
               </div>
             </div>
@@ -461,10 +470,10 @@ function SatMathReferenceModal({ onClose }: { onClose: () => void }) {
   );
 }
 
-const HIGHLIGHT_STYLES: Record<'yellow' | 'cyan' | 'pink', { bg: string; ring: string; label: string }> = {
-  yellow: { bg: '#fef08a', ring: '#eab308', label: 'Vàng' },
-  cyan: { bg: '#bae6fd', ring: '#0284c7', label: 'Xanh dương' },
-  pink: { bg: '#fbcfe8', ring: '#db2777', label: 'Hồng' },
+const HIGHLIGHT_STYLES: Record<'yellow' | 'cyan' | 'pink', { bg: string; ring: string; label: string; labelEn: string }> = {
+  yellow: { bg: '#fef08a', ring: '#eab308', label: 'Vàng', labelEn: 'Yellow' },
+  cyan: { bg: '#bae6fd', ring: '#0284c7', label: 'Xanh dương', labelEn: 'Blue' },
+  pink: { bg: '#fbcfe8', ring: '#db2777', label: 'Hồng', labelEn: 'Pink' },
 };
 
 const formatTimer = (secs: number) => {
@@ -479,6 +488,8 @@ const formatTimer = (secs: number) => {
 // ============================================================================
 
 export default function SatBluebookTest({ onBack, testData, onFinish }: SatBluebookTestProps) {
+  const [lang, setLang] = useLmsLang();
+  const isEn = lang === 'en';
   const safeTest = testData || {};
   const content: SatContentJson = useMemo(() => {
     let raw = safeTest?.content_json || safeTest;
@@ -1217,7 +1228,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
                 type="button"
                 onClick={() => setCalcMode((m) => (m === 'sat' ? 'standard' : 'sat'))}
                 className="px-2 py-0.5 rounded bg-white/10 hover:bg-white/20 text-[10px] font-bold text-sky-200 cursor-pointer"
-                title="Đổi phiên bản Desmos (SAT Testing / Standard)"
+                title={isEn ? "Switch Desmos edition (SAT Testing / Standard)" : "Đổi phiên bản Desmos (SAT Testing / Standard)"}
               >
                 {calcMode === 'sat' ? 'SAT Mode' : 'Full Mode'}
               </button>
@@ -1230,7 +1241,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
                 target="_blank"
                 rel="noreferrer"
                 className="p-1 rounded hover:bg-white/15 text-slate-300 hover:text-white"
-                title="Mở Desmos ở tab mới"
+                title={isEn ? "Open Desmos in new tab" : "Mở Desmos ở tab mới"}
               >
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
@@ -1238,7 +1249,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
                 type="button"
                 onClick={() => setCalcExpanded((v) => !v)}
                 className="p-1 rounded hover:bg-white/15 text-slate-300 hover:text-white cursor-pointer"
-                title={calcExpanded ? 'Thu nhỏ' : 'Mở rộng'}
+                title={calcExpanded ? (isEn ? 'Minimize' : 'Thu nhỏ') : (isEn ? 'Expand' : 'Mở rộng')}
               >
                 {calcExpanded ? <Minimize2 className="w-3.5 h-3.5" /> : <Maximize2 className="w-3.5 h-3.5" />}
               </button>
@@ -1246,7 +1257,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
                 type="button"
                 onClick={() => setShowCalculator(false)}
                 className="p-1 rounded hover:bg-rose-500/30 text-slate-300 hover:text-white cursor-pointer"
-                title="Ẩn máy tính (vẫn giữ nguyên hàm đang vẽ)"
+                title={isEn ? "Hide calculator (keeps your plotted graphs)" : "Ẩn máy tính (vẫn giữ nguyên hàm đang vẽ)"}
               >
                 <X className="w-4 h-4" />
               </button>
@@ -1265,7 +1276,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
           />
         </div>
       )}
-      {showReference && <SatMathReferenceModal onClose={() => setShowReference(false)} />}
+      {showReference && <SatMathReferenceModal onClose={() => setShowReference(false)} isEn={isEn} />}
     </>
   ) : null;
 
@@ -1277,15 +1288,17 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
       <div className="min-h-screen bg-slate-50 flex flex-col items-center justify-center p-6">
         <div className="bg-white rounded-2xl border border-slate-200 shadow-lg max-w-md w-full p-8 text-center">
           <AlertTriangle className="w-12 h-12 text-amber-500 mx-auto mb-3" />
-          <h2 className="text-xl font-black text-slate-900 mb-2">Dữ liệu đề SAT chưa sẵn sàng</h2>
+          <h2 className="text-xl font-black text-slate-900 mb-2">{isEn ? 'SAT test data is not ready' : 'Dữ liệu đề SAT chưa sẵn sàng'}</h2>
           <p className="text-slate-600 text-sm mb-6">
-            Đề thi này chưa có cấu trúc câu hỏi Digital SAT hợp lệ (`content_json`). Vui lòng báo Thầy Tony kiểm tra lại.
+            {isEn
+              ? 'This test does not have a valid Digital SAT question structure (`content_json`). Please notify TonyEnglish to check it.'
+              : 'Đề thi này chưa có cấu trúc câu hỏi Digital SAT hợp lệ (`content_json`). Vui lòng báo Thầy Tony kiểm tra lại.'}
           </p>
           <button
             onClick={handleExit}
             className="px-6 py-2.5 rounded-xl bg-[#0050b3] hover:bg-[#003d8a] text-white font-bold text-sm"
           >
-            Quay lại
+            {isEn ? 'Back' : 'Quay lại'}
           </button>
         </div>
       </div>
@@ -1323,12 +1336,15 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
               </div>
             </div>
           </div>
-          <button
-            onClick={handleExit}
-            className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-xs font-bold text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition"
-          >
-            <LogOut className="w-4 h-4" /> Thoát
-          </button>
+          <div className="flex items-center gap-2.5">
+            <LmsLangToggle lang={lang} setLang={setLang} variant="light" />
+            <button
+              onClick={handleExit}
+              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-xs font-bold text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition cursor-pointer"
+            >
+              <LogOut className="w-4 h-4" /> {isEn ? 'Exit' : 'Thoát'}
+            </button>
+          </div>
         </header>
 
         <main className="flex-1 flex items-center justify-center p-4 sm:p-8">
@@ -1355,27 +1371,27 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
             <div className="p-6 sm:p-8 space-y-6">
               <div className="grid grid-cols-3 gap-3 sm:gap-4">
                 <div className="rounded-2xl bg-slate-50 border border-slate-200 p-4 text-center">
-                  <div className="text-[11px] font-bold uppercase tracking-wider text-slate-500">Số câu hỏi</div>
+                  <div className="text-[11px] font-bold uppercase tracking-wider text-slate-500">{isEn ? 'Questions' : 'Số câu hỏi'}</div>
                   <div className="mt-1 text-xl sm:text-2xl font-black text-slate-900">{qCount}</div>
                   <div className="text-[11px] text-slate-500">
-                    {isAdaptiveMock ? `2 Modules × ${m1Len}` : 'Chuẩn Bluebook'}
+                    {isAdaptiveMock ? `2 Modules × ${m1Len}` : (isEn ? 'Bluebook Standard' : 'Chuẩn Bluebook')}
                   </div>
                 </div>
                 <div className="rounded-2xl bg-slate-50 border border-slate-200 p-4 text-center">
-                  <div className="text-[11px] font-bold uppercase tracking-wider text-slate-500">Thời gian</div>
+                  <div className="text-[11px] font-bold uppercase tracking-wider text-slate-500">{isEn ? 'Time' : 'Thời gian'}</div>
                   <div className="mt-1 text-xl sm:text-2xl font-black text-[#1e3a8a]">
-                    {isAdaptiveMock ? `${modTime}p × 2` : `${modTime} phút`}
+                    {isAdaptiveMock ? (isEn ? `${modTime}m × 2` : `${modTime}p × 2`) : (isEn ? `${modTime} min` : `${modTime} phút`)}
                   </div>
-                  <div className="text-[11px] text-slate-500">Đếm ngược chuẩn</div>
+                  <div className="text-[11px] text-slate-500">{isEn ? 'Official countdown' : 'Đếm ngược chuẩn'}</div>
                 </div>
                 <div className="rounded-2xl bg-slate-50 border border-slate-200 p-4 text-center">
-                  <div className="text-[11px] font-bold uppercase tracking-wider text-slate-500">Chế độ</div>
+                  <div className="text-[11px] font-bold uppercase tracking-wider text-slate-500">{isEn ? 'Mode' : 'Chế độ'}</div>
                   <div className="mt-1 text-base sm:text-lg font-black text-emerald-700 mt-1.5">
                     {isAdaptiveMock ? 'Adaptive' : '1500+ Drill'}
                   </div>
                   <div className="text-[11px] text-slate-500">
                     {isAdaptiveMock
-                      ? 'Thang 200–800'
+                      ? (isEn ? '200–800 Scale' : 'Thang 200–800')
                       : isMathSection
                       ? 'MCQ + Grid-In'
                       : 'Trap Analysis'}
@@ -1386,40 +1402,75 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
               {/* Bluebook Tools Briefing */}
               <div className="rounded-2xl bg-blue-50/70 border border-blue-200/80 p-4 sm:p-5 space-y-2.5">
                 <div className="text-xs font-black uppercase tracking-wider text-[#1e3a8a] flex items-center gap-1.5">
-                  <Info className="w-4 h-4" /> Công cụ mô phỏng chuẩn Bluebook đã tích hợp
+                  <Info className="w-4 h-4" /> {isEn ? 'Built-in Official Bluebook Tools' : 'Công cụ mô phỏng chuẩn Bluebook đã tích hợp'}
                 </div>
                 <ul className="text-xs sm:text-sm text-slate-700 space-y-1.5 list-disc pl-5">
                   {isMathSection ? (
                     <>
                       <li>
-                        <b>Máy tính đồ thị Desmos (SAT Edition):</b> Mở ngay trên thanh công cụ — giữ nguyên đồ thị &amp; bảng hồi quy khi chuyển câu.
+                        {isEn ? (
+                          <><b>Desmos Graphing Calculator (SAT Edition):</b> Open directly from the top toolbar — preserves graphs &amp; regression tables across questions.</>
+                        ) : (
+                          <><b>Máy tính đồ thị Desmos (SAT Edition):</b> Mở ngay trên thanh công cụ — giữ nguyên đồ thị &amp; bảng hồi quy khi chuyển câu.</>
+                        )}
                       </li>
                       <li>
-                        <b>Reference Sheet chuẩn College Board:</b> Bảng công thức Hình học 2D, 3D &amp; Tam giác đặc biệt 30–60–90, 45–45–90 tra nhanh 1 chạm.
+                        {isEn ? (
+                          <><b>Official College Board Reference Sheet:</b> One-click access to 2D/3D Geometry formulas &amp; 30–60–90, 45–45–90 special right triangles.</>
+                        ) : (
+                          <><b>Reference Sheet chuẩn College Board:</b> Bảng công thức Hình học 2D, 3D &amp; Tam giác đặc biệt 30–60–90, 45–45–90 tra nhanh 1 chạm.</>
+                        )}
                       </li>
                       <li>
-                        <b>Hỗ trợ cả Trắc nghiệm (MCQ) &amp; Tự điền số (SPR Grid-In):</b> Tự động nhận diện phân số (<code>-3/4</code>), số thập phân (<code>-0.75</code>) tương đương.
+                        {isEn ? (
+                          <><b>Supports both Multiple Choice (MCQ) &amp; Student-Produced Response (SPR Grid-In):</b> Automatically accepts equivalent fractions (<code>-3/4</code>) and decimals (<code>-0.75</code>).</>
+                        ) : (
+                          <><b>Hỗ trợ cả Trắc nghiệm (MCQ) &amp; Tự điền số (SPR Grid-In):</b> Tự động nhận diện phân số (<code>-3/4</code>), số thập phân (<code>-0.75</code>) tương đương.</>
+                        )}
                       </li>
                     </>
                   ) : (
                     <>
                       <li>
-                        <b>Highlight &amp; Ghi chú:</b> Bôi đen bất kỳ cụm từ nào trong đoạn văn bên trái để tô màu &amp; ghi chú ý chính.
+                        {isEn ? (
+                          <><b>Highlight &amp; Annotate:</b> Select any phrase in the left passage to color-highlight &amp; attach key notes.</>
+                        ) : (
+                          <><b>Highlight &amp; Ghi chú:</b> Bôi đen bất kỳ cụm từ nào trong đoạn văn bên trái để tô màu &amp; ghi chú ý chính.</>
+                        )}
                       </li>
                       <li>
-                        <b>Option Eliminator (ABC):</b> Bật nút gạch loại trừ để gạch ngang đáp án bẫy y hệt khi thi thật.
+                        {isEn ? (
+                          <><b>Option Eliminator (ABC):</b> Toggle strikethrough mode to cross out trap choices just like the official exam.</>
+                        ) : (
+                          <><b>Option Eliminator (ABC):</b> Bật nút gạch loại trừ để gạch ngang đáp án bẫy y hệt khi thi thật.</>
+                        )}
                       </li>
                     </>
                   )}
                   <li>
-                    <b>Mark for Review &amp; Question Navigator:</b> Gắn cờ câu khó và nhảy nhanh giữa các câu; phím tắt{' '}
-                    <code className="px-1 py-0.5 bg-white border border-blue-200 rounded text-[11px] font-bold">A–D</code>,{' '}
-                    <code className="px-1 py-0.5 bg-white border border-blue-200 rounded text-[11px] font-bold">←/→</code>,{' '}
-                    <code className="px-1 py-0.5 bg-white border border-blue-200 rounded text-[11px] font-bold">F</code>.
+                    {isEn ? (
+                      <>
+                        <b>Mark for Review &amp; Question Navigator:</b> Flag tricky questions and jump quickly; shortcuts{' '}
+                        <code className="px-1 py-0.5 bg-white border border-blue-200 rounded text-[11px] font-bold">A–D</code>,{' '}
+                        <code className="px-1 py-0.5 bg-white border border-blue-200 rounded text-[11px] font-bold">←/→</code>,{' '}
+                        <code className="px-1 py-0.5 bg-white border border-blue-200 rounded text-[11px] font-bold">F</code>.
+                      </>
+                    ) : (
+                      <>
+                        <b>Mark for Review &amp; Question Navigator:</b> Gắn cờ câu khó và nhảy nhanh giữa các câu; phím tắt{' '}
+                        <code className="px-1 py-0.5 bg-white border border-blue-200 rounded text-[11px] font-bold">A–D</code>,{' '}
+                        <code className="px-1 py-0.5 bg-white border border-blue-200 rounded text-[11px] font-bold">←/→</code>,{' '}
+                        <code className="px-1 py-0.5 bg-white border border-blue-200 rounded text-[11px] font-bold">F</code>.
+                      </>
+                    )}
                   </li>
                   {isAdaptiveMock && (
                     <li>
-                      <b>Phân nhánh Thích ứng (Adaptive Routing):</b> Đạt từ <b>{routingThreshold}/{m1Len}</b> ở Module 1 để vào nhánh <b>Module 2 Hard (vùng 650–800)</b>.
+                      {isEn ? (
+                        <><b>Adaptive Routing:</b> Score at least <b>{routingThreshold}/{m1Len}</b> in Module 1 to unlock <b>Hard Module 2 (650–800 score range)</b>.</>
+                      ) : (
+                        <><b>Phân nhánh Thích ứng (Adaptive Routing):</b> Đạt từ <b>{routingThreshold}/{m1Len}</b> ở Module 1 để vào nhánh <b>Module 2 Hard (vùng 650–800)</b>.</>
+                      )}
                     </li>
                   )}
                 </ul>
@@ -1431,17 +1482,17 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
                   onClick={() => startTest(false)}
                   className="flex-1 py-3.5 px-6 rounded-xl bg-[#0050b3] hover:bg-[#003d8a] text-white font-black text-sm sm:text-base shadow-lg shadow-blue-900/20 transition flex items-center justify-center gap-2 cursor-pointer"
                 >
-                  <span>{isAdaptiveMock ? 'Bắt đầu Thi Thử Adaptive (Module 1)' : 'Bắt đầu Làm Bài Luyện'}</span>
+                  <span>{isAdaptiveMock ? (isEn ? 'Start Adaptive Mock Test (Module 1)' : 'Bắt đầu Thi Thử Adaptive (Module 1)') : (isEn ? 'Start Practice Drill' : 'Bắt đầu Làm Bài Luyện')}</span>
                   <ChevronRight className="w-5 h-5" />
                 </button>
                 {isAdaptiveMock && content.module2_hard && (
                   <button
                     onClick={() => startTest(true)}
                     className="py-3.5 px-5 rounded-xl bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-300 font-extrabold text-xs sm:text-sm transition flex items-center justify-center gap-1.5 cursor-pointer"
-                    title={`Chế độ luyện trực tiếp ${m1Len} câu Hard Module 2 cho mục tiêu 750–800`}
+                    title={isEn ? `Direct practice mode with ${m1Len} Hard Module 2 questions targeting 750–800` : `Chế độ luyện trực tiếp ${m1Len} câu Hard Module 2 cho mục tiêu 750–800`}
                   >
                     <Target className="w-4 h-4 text-amber-600" />
-                    <span>Luyện thẳng Module 2 Hard</span>
+                    <span>{isEn ? 'Practice Hard Module 2 Directly' : 'Luyện thẳng Module 2 Hard'}</span>
                   </button>
                 )}
               </div>
@@ -1462,7 +1513,10 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
     const defaultModMin = isMathSection ? 35 : 32;
 
     return (
-      <div className="min-h-screen bg-[#f8fafc] flex flex-col items-center justify-center p-6">
+      <div className="min-h-screen bg-[#f8fafc] flex flex-col items-center justify-center p-6 relative">
+        <div className="absolute top-4 right-4">
+          <LmsLangToggle lang={lang} setLang={setLang} variant="light" />
+        </div>
         <div className="max-w-xl w-full bg-white rounded-3xl border border-slate-200 shadow-xl p-8 text-center space-y-5">
           <div className="w-16 h-16 rounded-2xl bg-[#1e3a8a] text-white flex items-center justify-center mx-auto shadow-lg">
             <Layers className="w-8 h-8" />
@@ -1471,9 +1525,13 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
             <div className="text-xs font-black uppercase tracking-widest text-blue-600 mb-1">
               Module 1 Complete • Adaptive Engine
             </div>
-            <h2 className="text-2xl font-black text-slate-900">Chuẩn bị bước vào Module 2</h2>
+            <h2 className="text-2xl font-black text-slate-900">{isEn ? 'Get Ready for Module 2' : 'Chuẩn bị bước vào Module 2'}</h2>
             <p className="text-sm text-slate-600 mt-2 leading-relaxed">
-              Hệ thống đã ghi nhận bài làm <b>Module 1</b> của bạn và định tuyến bộ câu hỏi <b>Module 2</b> phù hợp theo cơ chế thi thích ứng chuẩn College Board Digital SAT.
+              {isEn ? (
+                <>Your <b>Module 1</b> answers have been recorded and your <b>Module 2</b> question set has been routed according to the official College Board Digital SAT adaptive mechanism.</>
+              ) : (
+                <>Hệ thống đã ghi nhận bài làm <b>Module 1</b> của bạn và định tuyến bộ câu hỏi <b>Module 2</b> phù hợp theo cơ chế thi thích ứng chuẩn College Board Digital SAT.</>
+              )}
             </p>
           </div>
 
@@ -1484,22 +1542,22 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
                 {m2Route === 'hard'
                   ? content.module2_hard?.questions?.length || defaultModLen
                   : content.module2_lower?.questions?.length || defaultModLen}{' '}
-                câu hỏi
+                {isEn ? 'questions' : 'câu hỏi'}
               </div>
             </div>
             <div className="h-9 w-px bg-slate-200" />
             <div>
-              <div className="text-[11px] font-bold uppercase text-slate-500">Thời gian</div>
+              <div className="text-[11px] font-bold uppercase text-slate-500">{isEn ? 'Time' : 'Thời gian'}</div>
               <div className="text-lg font-black text-[#1e3a8a]">
                 {m2Route === 'hard'
                   ? content.module2_hard?.timeLimitMinutes || defaultModMin
                   : content.module2_lower?.timeLimitMinutes || defaultModMin}{' '}
-                phút
+                {isEn ? 'min' : 'phút'}
               </div>
             </div>
             <div className="h-9 w-px bg-slate-200" />
             <div>
-              <div className="text-[11px] font-bold uppercase text-slate-500">Trạng thái</div>
+              <div className="text-[11px] font-bold uppercase text-slate-500">{isEn ? 'Status' : 'Trạng thái'}</div>
               <div
                 className={`text-sm font-black px-2.5 py-0.5 rounded-full inline-block mt-0.5 ${
                   m2Route === 'hard'
@@ -1513,14 +1571,18 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
           </div>
 
           <p className="text-xs text-slate-500">
-            (Kết quả tạm tính Module 1: <b>{m1Right}/{m1Qs.length}</b> — ngưỡng vào Hard Module 2 là ≥ {routingThreshold}/{m1Qs.length})
+            {isEn ? (
+              <>(Provisional Module 1 score: <b>{m1Right}/{m1Qs.length}</b> — threshold for Hard Module 2 is ≥ {routingThreshold}/{m1Qs.length})</>
+            ) : (
+              <>(Kết quả tạm tính Module 1: <b>{m1Right}/{m1Qs.length}</b> — ngưỡng vào Hard Module 2 là ≥ {routingThreshold}/{m1Qs.length})</>
+            )}
           </p>
 
           <button
             onClick={proceedToModule2}
             className="w-full py-3.5 px-6 rounded-xl bg-[#0050b3] hover:bg-[#003d8a] text-white font-black text-base shadow-lg shadow-blue-900/20 transition flex items-center justify-center gap-2 cursor-pointer"
           >
-            <span>Bắt đầu Module 2 ngay</span>
+            <span>{isEn ? 'Start Module 2 Now' : 'Bắt đầu Module 2 ngay'}</span>
             <ChevronRight className="w-5 h-5" />
           </button>
         </div>
@@ -1548,6 +1610,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
             </div>
           </div>
           <div className="flex items-center gap-2.5">
+            <LmsLangToggle lang={lang} setLang={setLang} variant="light" />
             <button
               onClick={() => {
                 setReviewFilter('all');
@@ -1557,13 +1620,13 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
               }}
               className="px-4 py-2 rounded-xl bg-[#0050b3] hover:bg-[#003d8a] text-white font-bold text-xs sm:text-sm flex items-center gap-1.5 cursor-pointer"
             >
-              <BookOpen className="w-4 h-4" /> Chữa bài chi tiết
+              <BookOpen className="w-4 h-4" /> {isEn ? 'Detailed Review' : 'Chữa bài chi tiết'}
             </button>
             <button
               onClick={handleExit}
               className="px-3.5 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs sm:text-sm cursor-pointer"
             >
-              Về danh sách
+              {isEn ? 'Back to List' : 'Về danh sách'}
             </button>
           </div>
         </header>
@@ -1588,21 +1651,37 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
                   {analytics.scaledScore !== null
                     ? analytics.scaledScore >= (isMathSection ? 780 : 750)
                       ? isMathSection
-                        ? 'Xuất sắc! Phong độ Math của bạn đang ở ngưỡng 780–800 — sẵn sàng chinh phục SAT 1500+!'
+                        ? isEn
+                          ? 'Outstanding! Your Math performance is in the 780–800 range — ready to conquer SAT 1500+!'
+                          : 'Xuất sắc! Phong độ Math của bạn đang ở ngưỡng 780–800 — sẵn sàng chinh phục SAT 1500+!'
+                        : isEn
+                        ? 'Outstanding! Your Reading & Writing performance meets the 1500+ target (750–800 R&W).'
                         : 'Xuất sắc! Phong độ Reading & Writing của bạn đang đạt chuẩn mục tiêu 1500+ (750–800 R&W).'
                       : analytics.scaledScore >= 700
                       ? isMathSection
-                        ? 'Rất tốt! Bạn đã vượt mốc 700 Math — hãy mở Chữa bài chi tiết để luyện mẹo Desmos 10 giây và xử lý các câu Hard Module 2.'
+                        ? isEn
+                          ? 'Great job! You have crossed 700 Math — open Detailed Review to master 10-second Desmos tips and Hard Module 2 questions.'
+                          : 'Rất tốt! Bạn đã vượt mốc 700 Math — hãy mở Chữa bài chi tiết để luyện mẹo Desmos 10 giây và xử lý các câu Hard Module 2.'
+                        : isEn
+                        ? 'Great job! You have crossed 700 R&W — open Detailed Review to eliminate the remaining 4–7 Hard Module 2 traps.'
                         : 'Rất tốt! Bạn đã vượt mốc 700 R&W — hãy mở Chữa bài chi tiết để xử lý nốt 4–7 bẫy Hard Module 2.'
                       : isMathSection
-                      ? 'Hãy xem kỹ phân tích 4 Content Domains, lời giải đại số từng bước và mẹo Desmos để nâng tốc độ lên ngưỡng 750–800.'
+                      ? isEn
+                        ? 'Review the 4 Content Domains breakdown, step-by-step algebraic solutions, and Desmos tips to push toward 750–800.'
+                        : 'Hãy xem kỹ phân tích 4 Content Domains, lời giải đại số từng bước và mẹo Desmos để nâng tốc độ lên ngưỡng 750–800.'
+                      : isEn
+                      ? 'Review the 4 Content Domains breakdown and answer trap analysis to improve Grammar speed and Reading accuracy.'
                       : 'Hãy xem kỹ phân tích 4 Content Domains và bẫy đáp án từng câu để nâng tốc độ Grammar và độ chính xác Reading.'
                     : analytics.accuracyPct >= 85
-                    ? 'Độ chính xác ấn tượng ở ngưỡng 1500+! Xem nhanh các câu sai/đánh dấu để khóa chắc tuyệt đối kỹ năng này.'
+                    ? isEn
+                      ? 'Impressive accuracy at the 1500+ level! Quickly review any missed or flagged questions to lock in this skill.'
+                      : 'Độ chính xác ấn tượng ở ngưỡng 1500+! Xem nhanh các câu sai/đánh dấu để khóa chắc tuyệt đối kỹ năng này.'
+                    : isEn
+                    ? 'Click "Detailed Review" to read full explanations and distractor trap breakdowns for every missed question.'
                     : 'Hãy bấm "Chữa bài chi tiết" để đọc lời giải chi tiết và phân tích bẫy cho từng câu chưa đúng nhé.'}
                 </p>
                 {isSavingResult && (
-                  <div className="text-xs text-sky-200 animate-pulse">Đang lưu kết quả vào hồ sơ học tập...</div>
+                  <div className="text-xs text-sky-200 animate-pulse">{isEn ? 'Saving result to your learning profile...' : 'Đang lưu kết quả vào hồ sơ học tập...'}</div>
                 )}
               </div>
 
@@ -1617,20 +1696,20 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
                       {analytics.scaledScore}
                     </div>
                     <div className="text-xs font-semibold text-blue-200 mt-0.5">
-                      trên thang 200 – 800
+                      {isEn ? 'out of 200 – 800' : 'trên thang 200 – 800'}
                     </div>
                   </>
                 ) : (
                   <>
                     <div className="text-[11px] font-bold uppercase tracking-widest text-blue-200">
-                      Độ chính xác
+                      {isEn ? 'Accuracy' : 'Độ chính xác'}
                     </div>
                     <div className="text-5xl font-black tracking-tight mt-1 text-white">
                       {analytics.totalCorrect}
                       <span className="text-2xl text-blue-200">/{analytics.totalQ}</span>
                     </div>
                     <div className="text-xs font-semibold text-emerald-300 mt-0.5">
-                      {analytics.accuracyPct}% chính xác
+                      {isEn ? `${analytics.accuracyPct}% accurate` : `${analytics.accuracyPct}% chính xác`}
                     </div>
                   </>
                 )}
@@ -1640,7 +1719,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
             {/* Secondary Metrics Strip */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-6 pt-6 border-t border-white/15">
               <div className="bg-white/10 rounded-xl px-4 py-3">
-                <div className="text-[11px] text-blue-200 font-semibold">Câu đúng tổng</div>
+                <div className="text-[11px] text-blue-200 font-semibold">{isEn ? 'Total Correct' : 'Câu đúng tổng'}</div>
                 <div className="text-lg font-black">
                   {analytics.totalCorrect} / {analytics.totalQ} ({analytics.accuracyPct}%)
                 </div>
@@ -1664,11 +1743,11 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
                 </>
               )}
               <div className="bg-white/10 rounded-xl px-4 py-3">
-                <div className="text-[11px] text-blue-200 font-semibold">Tốc độ trung bình</div>
+                <div className="text-[11px] text-blue-200 font-semibold">{isEn ? 'Average Pace' : 'Tốc độ trung bình'}</div>
                 <div className="text-lg font-black">
-                  {avgSecPerQ}s / câu
+                  {avgSecPerQ}s / {isEn ? 'question' : 'câu'}
                   <span className="text-xs font-normal text-blue-200 ml-1">
-                    (chuẩn ≤{isMathSection ? 95 : 71}s)
+                    ({isEn ? 'target' : 'chuẩn'} ≤{isMathSection ? 95 : 71}s)
                   </span>
                 </div>
               </div>
@@ -1680,7 +1759,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
             {/* 4 Content Domains */}
             <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
               <h3 className="text-base font-black text-slate-900 flex items-center gap-2 mb-4">
-                <BarChart3 className="w-5 h-5 text-[#0050b3]" /> Phân tích theo 4 Content Domains
+                <BarChart3 className="w-5 h-5 text-[#0050b3]" /> {isEn ? '4 Content Domains Breakdown' : 'Phân tích theo 4 Content Domains'}
               </h3>
               <div className="space-y-4">
                 {Object.entries(analytics.domainStats)
@@ -1717,7 +1796,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
             {/* Granular Skill Breakdown */}
             <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
               <h3 className="text-base font-black text-slate-900 flex items-center gap-2 mb-4">
-                <Target className="w-5 h-5 text-indigo-600" /> Chi tiết từng Kỹ năng (Skills)
+                <Target className="w-5 h-5 text-indigo-600" /> {isEn ? 'Granular Skill Breakdown' : 'Chi tiết từng Kỹ năng (Skills)'}
               </h3>
               <div className="space-y-2.5 max-h-[300px] overflow-y-auto pr-1">
                 {Object.entries(analytics.skillStats).map(([skill, st]) => {
@@ -1761,7 +1840,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
               className="px-6 py-3 rounded-xl bg-rose-600 hover:bg-rose-700 text-white font-black text-sm shadow-md transition flex items-center gap-2 cursor-pointer"
             >
               <ShieldAlert className="w-4 h-4" />
-              Xem ngay {analytics.totalQ - analytics.totalCorrect} câu sai &amp; Phân tích bẫy
+              {isEn ? `Review ${analytics.totalQ - analytics.totalCorrect} Incorrect & Trap Analysis` : `Xem ngay ${analytics.totalQ - analytics.totalCorrect} câu sai & Phân tích bẫy`}
             </button>
             <button
               onClick={() => {
@@ -1772,13 +1851,13 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
               }}
               className="px-6 py-3 rounded-xl bg-[#0050b3] hover:bg-[#003d8a] text-white font-black text-sm shadow-md transition flex items-center gap-2 cursor-pointer"
             >
-              <BookOpen className="w-4 h-4" /> Chữa toàn bộ {analytics.totalQ} câu
+              <BookOpen className="w-4 h-4" /> {isEn ? `Review All ${analytics.totalQ} Questions` : `Chữa toàn bộ ${analytics.totalQ} câu`}
             </button>
             <button
               onClick={() => startTest(false)}
               className="px-5 py-3 rounded-xl bg-white hover:bg-slate-100 text-slate-700 border border-slate-300 font-bold text-sm transition flex items-center gap-2 cursor-pointer"
             >
-              <RotateCcw className="w-4 h-4" /> Làm lại đề này
+              <RotateCcw className="w-4 h-4" /> {isEn ? 'Retake This Test' : 'Làm lại đề này'}
             </button>
           </div>
         </main>
@@ -1804,24 +1883,25 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
               onClick={() => setPhase('summary')}
               className="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs flex items-center gap-1 cursor-pointer"
             >
-              <BarChart3 className="w-3.5 h-3.5" /> Báo cáo điểm
+              <BarChart3 className="w-3.5 h-3.5" /> {isEn ? 'Score Report' : 'Báo cáo điểm'}
             </button>
             <div>
               <div className="text-sm font-black text-slate-900 line-clamp-1">
-                Chữa bài: {testTitle}
+                {isEn ? `Review: ${testTitle}` : `Chữa bài: ${testTitle}`}
               </div>
               <div className="text-[11px] font-semibold text-slate-500">
                 {analytics.scaledScore !== null
                   ? `Scaled Score: ${analytics.scaledScore}/800 • `
                   : ''}
-                Đúng {analytics.totalCorrect}/{analytics.totalQ} ({analytics.accuracyPct}%)
-                {!isMathSection && ' • Click đúp từ bất kỳ để tra từ điển'}
+                {isEn ? 'Correct' : 'Đúng'} {analytics.totalCorrect}/{analytics.totalQ} ({analytics.accuracyPct}%)
+                {!isMathSection && (isEn ? ' • Double-click any word for Dictionary' : ' • Click đúp từ bất kỳ để tra từ điển')}
               </div>
             </div>
           </div>
 
           {/* Filter Bar */}
           <div className="flex flex-wrap items-center gap-2">
+            <LmsLangToggle lang={lang} setLang={setLang} variant="light" />
             {isMathSection && (
               <>
                 <button
@@ -1857,7 +1937,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
                         : 'text-slate-600 hover:text-slate-900'
                     }`}
                   >
-                    {m === 'all' ? 'Cả 2 Mod' : m === 'm1' ? 'Module 1' : 'Module 2'}
+                    {m === 'all' ? (isEn ? 'Both Mods' : 'Cả 2 Mod') : m === 'm1' ? 'Module 1' : 'Module 2'}
                   </button>
                 ))}
               </div>
@@ -1867,9 +1947,9 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
               <Filter className="w-3.5 h-3.5 text-slate-400 mx-1.5" />
               {(
                 [
-                  { id: 'all', label: `Tất cả (${completedQuestionList.length})` },
-                  { id: 'incorrect', label: `Câu sai (${analytics.totalQ - analytics.totalCorrect})` },
-                  { id: 'flagged', label: `Đánh dấu (${Object.values(flagged).filter(Boolean).length})` },
+                  { id: 'all', label: isEn ? `All (${completedQuestionList.length})` : `Tất cả (${completedQuestionList.length})` },
+                  { id: 'incorrect', label: isEn ? `Incorrect (${analytics.totalQ - analytics.totalCorrect})` : `Câu sai (${analytics.totalQ - analytics.totalCorrect})` },
+                  { id: 'flagged', label: isEn ? `Flagged (${Object.values(flagged).filter(Boolean).length})` : `Đánh dấu (${Object.values(flagged).filter(Boolean).length})` },
                 ] as const
               ).map((f) => (
                 <button
@@ -1893,7 +1973,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
               onClick={handleExit}
               className="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs cursor-pointer"
             >
-              Thoát
+              {isEn ? 'Exit' : 'Thoát'}
             </button>
           </div>
         </header>
@@ -1928,9 +2008,11 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
         {!q ? (
           <div className="flex-1 flex flex-col items-center justify-center p-8 text-center">
             <CheckCircle2 className="w-14 h-14 text-emerald-500 mb-3" />
-            <h3 className="text-lg font-black text-slate-900">Không có câu nào trong bộ lọc này!</h3>
+            <h3 className="text-lg font-black text-slate-900">{isEn ? 'No questions match this filter!' : 'Không có câu nào trong bộ lọc này!'}</h3>
             <p className="text-sm text-slate-500 mt-1">
-              Bạn đã làm đúng hết hoặc chưa đánh dấu câu nào. Chọn lại "Tất cả" để xem toàn bộ bài chữa.
+              {isEn
+                ? 'You answered everything correctly or have not flagged any questions. Switch back to "All" to view the full review.'
+                : 'Bạn đã làm đúng hết hoặc chưa đánh dấu câu nào. Chọn lại "Tất cả" để xem toàn bộ bài chữa.'}
             </p>
             <button
               onClick={() => {
@@ -1940,7 +2022,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
               }}
               className="mt-4 px-5 py-2 rounded-xl bg-[#0050b3] text-white font-bold text-sm cursor-pointer"
             >
-              Xem tất cả câu hỏi
+              {isEn ? 'View All Questions' : 'Xem tất cả câu hỏi'}
             </button>
           </div>
         ) : (
@@ -1950,7 +2032,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
               <div className="max-w-2xl mx-auto">
                 <div className="flex flex-wrap items-center gap-2 mb-4">
                   <span className="px-2.5 py-1 rounded-md bg-slate-900 text-white text-xs font-black">
-                    {q.moduleLabel} • Câu {q.number}
+                    {q.moduleLabel} • {isEn ? 'Question' : 'Câu'} {q.number}
                   </span>
                   {q.questionFormat === 'spr' && (
                     <span className="px-2.5 py-1 rounded-md bg-purple-50 text-purple-800 border border-purple-200 text-xs font-black">
@@ -1996,12 +2078,22 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
                     )}
                     <div>
                       <div className="font-black text-sm">
-                        {isCorrect ? 'Chính xác!' : 'Chưa chính xác'}
+                        {isCorrect ? (isEn ? 'Correct!' : 'Chính xác!') : (isEn ? 'Incorrect' : 'Chưa chính xác')}
                       </div>
                       <div className="text-xs opacity-90">
-                        Bạn {q.questionFormat === 'spr' ? 'nhập' : 'chọn'}:{' '}
-                        <b>{userAns || 'Bỏ trống'}</b> • Đáp án đúng:{' '}
-                        <b>{q.correctDisplay || q.correctAnswer}</b>
+                        {isEn ? (
+                          <>
+                            Your {q.questionFormat === 'spr' ? 'answer' : 'choice'}:{' '}
+                            <b>{userAns || '(blank)'}</b> • Correct answer:{' '}
+                            <b>{q.correctDisplay || q.correctAnswer}</b>
+                          </>
+                        ) : (
+                          <>
+                            Bạn {q.questionFormat === 'spr' ? 'nhập' : 'chọn'}:{' '}
+                            <b>{userAns || 'Bỏ trống'}</b> • Đáp án đúng:{' '}
+                            <b>{q.correctDisplay || q.correctAnswer}</b>
+                          </>
+                        )}
                       </div>
                     </div>
                   </div>
@@ -2042,20 +2134,20 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
                       }`}
                     >
                       <div className="text-[11px] font-black uppercase tracking-wider text-slate-500 mb-1">
-                        Đáp án bạn nhập
+                        {isEn ? 'Your Entered Answer' : 'Đáp án bạn nhập'}
                       </div>
                       <div
                         className="text-xl font-black text-slate-900"
                         dangerouslySetInnerHTML={{
                           __html: userAns
                             ? renderMathHtml(`\\(${formatSprPreviewLatex(userAns)}\\)`)
-                            : '<span class="text-slate-400 text-sm font-semibold">Bỏ trống</span>',
+                            : `<span class="text-slate-400 text-sm font-semibold">${isEn ? '(blank)' : 'Bỏ trống'}</span>`,
                         }}
                       />
                     </div>
                     <div className="rounded-xl border-2 border-emerald-500 bg-emerald-50/70 p-4">
                       <div className="text-[11px] font-black uppercase tracking-wider text-emerald-700 mb-1">
-                        Đáp án chuẩn được chấp nhận
+                        {isEn ? 'Accepted Correct Answers' : 'Đáp án chuẩn được chấp nhận'}
                       </div>
                       <div className="text-xl font-black text-emerald-950 font-mono">
                         {q.correctDisplay || (q.acceptedAnswers || [q.correctAnswer]).join(' | ')}
@@ -2106,7 +2198,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
                                         : 'bg-slate-800 text-amber-300'
                                     }`}
                                   >
-                                    {analysis.trapTag || (isRightOpt ? 'Đáp án đúng' : 'Bẫy nhiễu')}
+                                    {analysis.trapTag || (isRightOpt ? (isEn ? 'Correct Answer' : 'Đáp án đúng') : (isEn ? 'Distractor Trap' : 'Bẫy nhiễu'))}
                                   </span>
                                   <span
                                     className="text-slate-700"
@@ -2127,7 +2219,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
                   <div className="rounded-2xl bg-white border border-blue-200 shadow-sm p-5 space-y-3">
                     <div className="text-xs font-black uppercase tracking-wider text-[#1e3a8a] flex items-center gap-1.5">
                       <Sparkles className="w-4 h-4 text-blue-600" />
-                      {isMathSection ? 'Lời giải chi tiết & Chiến lược 800 Math' : 'Phân tích chiến lược 1500+'}
+                      {isMathSection ? (isEn ? 'Step-by-Step Solution & 800 Math Strategy' : 'Lời giải chi tiết & Chiến lược 800 Math') : (isEn ? '1500+ Strategy Analysis' : 'Phân tích chiến lược 1500+')}
                     </div>
                     <div
                       className="text-sm text-slate-800 leading-relaxed whitespace-pre-line"
@@ -2136,7 +2228,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
                     {q.explanation.desmosTipVi && (
                       <div className="rounded-xl bg-emerald-50 border border-emerald-200 px-4 py-3 text-xs sm:text-sm text-emerald-950 font-medium">
                         <div className="font-black text-emerald-800 flex items-center gap-1.5 mb-1">
-                          <Zap className="w-4 h-4 text-emerald-600" /> Mẹo Desmos 10 giây (800-Level Shortcut)
+                          <Zap className="w-4 h-4 text-emerald-600" /> {isEn ? '10-Second Desmos Tip (800-Level Shortcut)' : 'Mẹo Desmos 10 giây (800-Level Shortcut)'}
                         </div>
                         <div
                           dangerouslySetInnerHTML={{ __html: renderMathHtml(q.explanation.desmosTipVi) }}
@@ -2145,7 +2237,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
                     )}
                     {q.explanation.keyTakeaway && (
                       <div className="rounded-xl bg-amber-50 border border-amber-200 px-4 py-3 text-xs sm:text-sm text-amber-950 font-semibold">
-                        <span className="font-black text-amber-700">💡 Quy tắc vàng 1500+: </span>
+                        <span className="font-black text-amber-700">{isEn ? '💡 1500+ Golden Rule: ' : '💡 Quy tắc vàng 1500+: '}</span>
                         <span
                           dangerouslySetInnerHTML={{ __html: renderMathHtml(q.explanation.keyTakeaway) }}
                         />
@@ -2183,12 +2275,15 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
               {hideTimer ? '••:••' : formatTimer(secondsLeft)}
             </span>
           </div>
-          <button
-            onClick={() => setPhase('testing')}
-            className="px-4 py-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs cursor-pointer"
-          >
-            Quay lại làm bài
-          </button>
+          <div className="flex items-center gap-2.5">
+            <LmsLangToggle lang={lang} setLang={setLang} variant="light" />
+            <button
+              onClick={() => setPhase('testing')}
+              className="px-4 py-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs cursor-pointer"
+            >
+              {isEn ? 'Return to Test' : 'Quay lại làm bài'}
+            </button>
+          </div>
         </header>
 
         <main className="flex-1 flex items-center justify-center p-6">
@@ -2196,21 +2291,23 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
             <div className="text-center space-y-1.5">
               <h2 className="text-2xl font-black text-slate-900">Check Your Work</h2>
               <p className="text-sm text-slate-600">
-                Kiểm tra lại các câu chưa trả lời hoặc đã gắn cờ trước khi chuyển sang bước tiếp theo.
+                {isEn
+                  ? 'Review any unanswered or flagged questions before moving on.'
+                  : 'Kiểm tra lại các câu chưa trả lời hoặc đã gắn cờ trước khi chuyển sang bước tiếp theo.'}
               </p>
             </div>
 
             <div className="flex items-center justify-center gap-6 text-xs font-bold text-slate-600 border-y border-slate-200 py-3">
               <span className="flex items-center gap-1.5">
-                <span className="w-4 h-4 rounded bg-[#0050b3] inline-block" /> Đã trả lời (
+                <span className="w-4 h-4 rounded bg-[#0050b3] inline-block" /> {isEn ? 'Answered' : 'Đã trả lời'} (
                 {currentQuestions.length - unansweredCount})
               </span>
               <span className="flex items-center gap-1.5">
-                <span className="w-4 h-4 rounded border-2 border-dashed border-slate-400 inline-block" /> Chưa trả lời (
+                <span className="w-4 h-4 rounded border-2 border-dashed border-slate-400 inline-block" /> {isEn ? 'Unanswered' : 'Chưa trả lời'} (
                 {unansweredCount})
               </span>
               <span className="flex items-center gap-1.5">
-                <Bookmark className="w-4 h-4 text-amber-500 fill-amber-500" /> Gắn cờ ({flaggedCount})
+                <Bookmark className="w-4 h-4 text-amber-500 fill-amber-500" /> {isEn ? 'Flagged' : 'Gắn cờ'} ({flaggedCount})
               </span>
             </div>
 
@@ -2244,7 +2341,11 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
               <div className="rounded-xl bg-amber-50 border border-amber-200 px-4 py-3 text-xs sm:text-sm text-amber-900 flex items-center gap-2">
                 <AlertTriangle className="w-4 h-4 text-amber-600 shrink-0" />
                 <span>
-                  Bạn vẫn còn <b>{unansweredCount} câu chưa chọn đáp án</b>. Trên Digital SAT không bị trừ điểm câu sai — tuyệt đối đừng bỏ trống câu nào!
+                  {isEn ? (
+                    <>You still have <b>{unansweredCount} unanswered question{unansweredCount > 1 ? 's' : ''}</b>. There is no penalty for wrong answers on the Digital SAT — never leave any question blank!</>
+                  ) : (
+                    <>Bạn vẫn còn <b>{unansweredCount} câu chưa chọn đáp án</b>. Trên Digital SAT không bị trừ điểm câu sai — tuyệt đối đừng bỏ trống câu nào!</>
+                  )}
                 </span>
               </div>
             )}
@@ -2254,15 +2355,15 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
                 onClick={() => setPhase('testing')}
                 className="sm:w-1/3 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-sm cursor-pointer"
               >
-                ← Kiểm tra lại
+                {isEn ? '← Review Answers' : '← Kiểm tra lại'}
               </button>
               <button
                 onClick={handleSubmitCurrentModule}
                 className="flex-1 py-3 rounded-xl bg-[#0050b3] hover:bg-[#003d8a] text-white font-black text-sm shadow-md transition cursor-pointer"
               >
                 {isAdaptiveMock && activeStage === 'm1'
-                  ? 'Nộp Module 1 & Chuyển sang Module 2 →'
-                  : 'Nộp bài & Xem báo cáo điểm 200–800 →'}
+                  ? (isEn ? 'Submit Module 1 & Continue to Module 2 →' : 'Nộp Module 1 & Chuyển sang Module 2 →')
+                  : (isEn ? 'Submit & View 200–800 Score Report →' : 'Nộp bài & Xem báo cáo điểm 200–800 →')}
               </button>
             </div>
           </div>
@@ -2323,6 +2424,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
 
         {/* Right: Bluebook Tools (Desmos & Reference for Math, Highlights, Font Size, Fullscreen, Exit) */}
         <div className="flex items-center gap-1.5 sm:gap-2">
+          <LmsLangToggle lang={lang} setLang={setLang} variant="light" />
           {isMathSection && (
             <>
               <button
@@ -2332,7 +2434,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
                     ? 'bg-emerald-600 border-emerald-600 text-white shadow-sm'
                     : 'bg-white border-slate-300 text-slate-700 hover:bg-emerald-50 hover:border-emerald-400'
                 }`}
-                title="Mở Máy tính đồ thị Desmos (SAT Edition)"
+                title={isEn ? "Open Desmos Graphing Calculator (SAT Edition)" : "Mở Máy tính đồ thị Desmos (SAT Edition)"}
               >
                 <Calculator className="w-3.5 h-3.5" />
                 <span className="hidden md:inline">Calculator</span>
@@ -2345,7 +2447,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
                     ? 'bg-[#0050b3] border-[#0050b3] text-white shadow-sm'
                     : 'bg-white border-slate-300 text-slate-700 hover:bg-blue-50 hover:border-blue-400'
                 }`}
-                title="Bảng công thức Hình học SAT Reference Sheet"
+                title={isEn ? "SAT Geometry Reference Sheet" : "Bảng công thức Hình học SAT Reference Sheet"}
               >
                 <Compass className="w-3.5 h-3.5" />
                 <span className="hidden md:inline">Reference</span>
@@ -2360,7 +2462,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
                 ? 'bg-amber-50 border-amber-300 text-amber-900'
                 : 'bg-white border-slate-300 text-slate-700 hover:bg-slate-100'
             }`}
-            title="Bôi đen đoạn văn bên trái để Highlight & Ghi chú"
+            title={isEn ? "Select text in the left passage to Highlight & Annotate" : "Bôi đen đoạn văn bên trái để Highlight & Ghi chú"}
           >
             <Highlighter className="w-3.5 h-3.5" />
             <span className="hidden lg:inline">Highlights</span>
@@ -2376,7 +2478,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
               setFontSize((prev) => (prev === 'sm' ? 'md' : prev === 'md' ? 'lg' : 'sm'))
             }
             className="px-2.5 py-1.5 rounded-lg bg-white border border-slate-300 hover:bg-slate-100 text-xs font-black text-slate-700 hidden sm:inline-flex items-center gap-1 cursor-pointer"
-            title="Thay đổi cỡ chữ"
+            title={isEn ? "Change font size" : "Thay đổi cỡ chữ"}
           >
             <SlidersHorizontal className="w-3.5 h-3.5" />
             <span>{fontSize.toUpperCase()}</span>
@@ -2385,7 +2487,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
           <button
             onClick={toggleFullscreen}
             className="p-2 rounded-lg bg-white border border-slate-300 hover:bg-slate-100 text-slate-700 cursor-pointer"
-            title="Toàn màn hình"
+            title={isEn ? "Fullscreen" : "Toàn màn hình"}
           >
             {isFullscreen ? <Minimize2 className="w-4 h-4" /> : <Maximize2 className="w-4 h-4" />}
           </button>
@@ -2394,7 +2496,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
             onClick={() => setShowExitConfirm(true)}
             className="px-2.5 py-1.5 rounded-lg bg-white border border-slate-300 hover:bg-rose-50 hover:border-rose-300 hover:text-rose-700 text-xs font-bold text-slate-700 cursor-pointer"
           >
-            Thoát
+            {isEn ? 'Exit' : 'Thoát'}
           </button>
         </div>
       </header>
@@ -2419,7 +2521,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
               onClick={() => setShowDirections(false)}
               className="text-xs font-bold text-[#0050b3] hover:underline cursor-pointer"
             >
-              Đóng
+              {isEn ? 'Close' : 'Đóng'}
             </button>
           </div>
           <div
@@ -2437,18 +2539,20 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
         <div className="absolute top-20 right-4 z-40 w-80 bg-white rounded-2xl border border-slate-300 shadow-2xl p-4 space-y-3">
           <div className="flex items-center justify-between">
             <span className="text-xs font-black uppercase tracking-wider text-slate-800">
-              Highlights &amp; Notes (Câu {q.number})
+              Highlights &amp; Notes ({isEn ? `Q${q.number}` : `Câu ${q.number}`})
             </span>
             <button
               onClick={() => setShowHighlightsDrawer(false)}
               className="text-xs font-bold text-slate-500 hover:text-slate-900 cursor-pointer"
             >
-              Đóng
+              {isEn ? 'Close' : 'Đóng'}
             </button>
           </div>
           {activeHighlights.length === 0 ? (
             <p className="text-xs text-slate-500 leading-relaxed">
-              Bôi đen bất kỳ đoạn chữ nào trong văn bản bên trái để tô màu highlight hoặc gắn ghi chú nhanh.
+              {isEn
+                ? 'Select any text in the left passage to highlight it or attach a quick note.'
+                : 'Bôi đen bất kỳ đoạn chữ nào trong văn bản bên trái để tô màu highlight hoặc gắn ghi chú nhanh.'}
             </p>
           ) : (
             <div className="space-y-2 max-h-64 overflow-y-auto">
@@ -2494,7 +2598,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
                 onClick={() => applyHighlight(c)}
                 className="w-5 h-5 rounded-full border-2 border-white/80 hover:scale-110 transition cursor-pointer"
                 style={{ background: HIGHLIGHT_STYLES[c].bg }}
-                title={HIGHLIGHT_STYLES[c].label}
+                title={isEn ? HIGHLIGHT_STYLES[c].labelEn : HIGHLIGHT_STYLES[c].label}
               />
             ))}
             <div className="w-px h-4 bg-slate-700 mx-0.5" />
@@ -2514,7 +2618,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
                 onKeyDown={(e) => {
                   if (e.key === 'Enter') applyHighlight('yellow', pendingNoteText);
                 }}
-                placeholder="Ghi chú ngắn..."
+                placeholder={isEn ? "Quick note..." : "Ghi chú ngắn..."}
                 className="bg-slate-800 border border-slate-600 rounded-lg px-2 py-1 text-xs text-white outline-none w-44"
                 autoFocus
               />
@@ -2522,7 +2626,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
                 onClick={() => applyHighlight('yellow', pendingNoteText)}
                 className="px-2 py-1 rounded-lg bg-amber-400 text-slate-950 font-black text-xs cursor-pointer"
               >
-                Lưu
+                {isEn ? 'Save' : 'Lưu'}
               </button>
             </div>
           )}
@@ -2562,10 +2666,21 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
                   Student-Produced Response Directions
                 </div>
                 <ul className="list-disc pl-4 space-y-1">
-                  <li>Nhập một đáp án số chính xác (số nguyên, phân số <code>a/b</code>, hoặc số thập phân).</li>
-                  <li>Với phân số hoặc số thập phân tương đương (ví dụ <code>3/4</code>, <code>0.75</code>, <code>.75</code>), mọi cách viết đúng đều được chấm điểm tối đa.</li>
-                  <li>Nếu đáp án là số âm, đặt dấu trừ <code>-</code> ở đầu (ví dụ <code>-5/2</code> hoặc <code>-2.5</code>).</li>
-                  <li><b>Không nhập hỗn số</b>: thay vì <code>1 1/2</code>, hãy nhập <code>3/2</code> hoặc <code>1.5</code>.</li>
+                  {isEn ? (
+                    <>
+                      <li>Enter a single exact numeric answer (integer, fraction <code>a/b</code>, or decimal).</li>
+                      <li>For equivalent fractions or decimals (e.g., <code>3/4</code>, <code>0.75</code>, <code>.75</code>), all correct forms receive full credit.</li>
+                      <li>For negative answers, place the minus sign <code>-</code> at the beginning (e.g., <code>-5/2</code> or <code>-2.5</code>).</li>
+                      <li><b>Do not enter mixed numbers</b>: instead of <code>1 1/2</code>, enter <code>3/2</code> or <code>1.5</code>.</li>
+                    </>
+                  ) : (
+                    <>
+                      <li>Nhập một đáp án số chính xác (số nguyên, phân số <code>a/b</code>, hoặc số thập phân).</li>
+                      <li>Với phân số hoặc số thập phân tương đương (ví dụ <code>3/4</code>, <code>0.75</code>, <code>.75</code>), mọi cách viết đúng đều được chấm điểm tối đa.</li>
+                      <li>Nếu đáp án là số âm, đặt dấu trừ <code>-</code> ở đầu (ví dụ <code>-5/2</code> hoặc <code>-2.5</code>).</li>
+                      <li><b>Không nhập hỗn số</b>: thay vì <code>1 1/2</code>, hãy nhập <code>3/2</code> hoặc <code>1.5</code>.</li>
+                    </>
+                  )}
                 </ul>
               </div>
             )}
@@ -2577,7 +2692,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
             className={`hidden lg:flex w-2.5 shrink-0 cursor-col-resize items-center justify-center bg-slate-100 hover:bg-blue-100 border-x border-slate-200 transition ${
               isDraggingDivider ? 'bg-blue-200' : ''
             }`}
-            title="Kéo để thay đổi độ rộng 2 khung"
+            title={isEn ? "Drag to resize split panes" : "Kéo để thay đổi độ rộng 2 khung"}
           >
             <div className="w-1 h-10 rounded-full bg-slate-400" />
           </div>
@@ -2622,7 +2737,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
                         ? 'bg-[#0050b3] text-white border-[#0050b3] shadow-sm'
                         : 'bg-white text-slate-700 border-slate-300 hover:bg-slate-200'
                     }`}
-                    title="Bật/Tắt chế độ gạch loại trừ đáp án sai (Option Eliminator)"
+                    title={isEn ? "Toggle Option Eliminator to strike through wrong choices" : "Bật/Tắt chế độ gạch loại trừ đáp án sai (Option Eliminator)"}
                   >
                     <span className="line-through decoration-2">ABC</span>
                   </button>
@@ -2644,7 +2759,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
                 <div className="space-y-4 pt-2">
                   <div className="rounded-2xl border-2 border-slate-300 focus-within:border-[#0050b3] bg-slate-50/50 p-5 space-y-3 transition">
                     <label className="block text-xs font-black uppercase tracking-wider text-slate-600">
-                      Nhập đáp án số của bạn (Exact Answer)
+                      {isEn ? 'Enter Your Exact Numeric Answer' : 'Nhập đáp án số của bạn (Exact Answer)'}
                     </label>
                     <div className="flex items-center gap-2">
                       <input
@@ -2652,7 +2767,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
                         inputMode="decimal"
                         value={answers[q.id] || ''}
                         onChange={(e) => handleSprChange(q.id, e.target.value)}
-                        placeholder="VD: 12, -3/4, 0.75"
+                        placeholder={isEn ? "e.g., 12, -3/4, 0.75" : "VD: 12, -3/4, 0.75"}
                         maxLength={14}
                         className="flex-1 bg-white border-2 border-slate-300 focus:border-[#0050b3] rounded-xl px-4 py-3 font-mono text-lg font-black text-slate-900 outline-none select-text"
                       />
@@ -2662,14 +2777,18 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
                           onClick={() => handleSprChange(q.id, '')}
                           className="px-3 py-3 rounded-xl border border-slate-300 bg-white hover:bg-slate-100 text-xs font-bold text-slate-600 cursor-pointer"
                         >
-                          Xóa
+                          {isEn ? 'Clear' : 'Xóa'}
                         </button>
                       )}
                     </div>
                     {answers[q.id] && parseSatNumericValue(answers[q.id]) === null && (
                       <div className="text-xs font-bold text-rose-600 flex items-center gap-1.5">
                         <AlertTriangle className="w-3.5 h-3.5" />
-                        Định dạng chưa hợp lệ — chỉ nhập số, dấu chấm <code>.</code>, dấu gạch phân số <code>/</code> hoặc dấu âm <code>-</code> ở đầu.
+                        {isEn ? (
+                          <>Invalid format — enter only digits, a decimal point <code>.</code>, a fraction slash <code>/</code>, or a leading minus sign <code>-</code>.</>
+                        ) : (
+                          <>Định dạng chưa hợp lệ — chỉ nhập số, dấu chấm <code>.</code>, dấu gạch phân số <code>/</code> hoặc dấu âm <code>-</code> ở đầu.</>
+                        )}
                       </div>
                     )}
                     <div className="pt-2 border-t border-slate-200 flex items-center justify-between">
@@ -2732,7 +2851,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
                                 ? 'bg-slate-800 text-white border-slate-800'
                                 : 'bg-white text-slate-600 border-slate-300 hover:bg-slate-100'
                             }`}
-                            title={isEliminated ? 'Khôi phục đáp án' : `Gạch loại trừ đáp án ${opt.label}`}
+                            title={isEliminated ? (isEn ? 'Restore option' : 'Khôi phục đáp án') : (isEn ? `Eliminate choice ${opt.label}` : `Gạch loại trừ đáp án ${opt.label}`)}
                           >
                             {isEliminated ? (
                               <span className="text-[10px]">Undo</span>
@@ -2877,22 +2996,24 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
         <div className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
           <div className="bg-white rounded-2xl border border-slate-200 shadow-2xl max-w-sm w-full p-6 space-y-4 text-center">
             <AlertTriangle className="w-10 h-10 text-amber-500 mx-auto" />
-            <h3 className="text-lg font-black text-slate-900">Thoát khỏi bài thi?</h3>
+            <h3 className="text-lg font-black text-slate-900">{isEn ? 'Exit the test?' : 'Thoát khỏi bài thi?'}</h3>
             <p className="text-sm text-slate-600">
-              Bài làm hiện tại chưa được nộp. Bạn có chắc muốn thoát về trang danh sách không?
+              {isEn
+                ? 'Your current progress has not been submitted. Are you sure you want to return to the list?'
+                : 'Bài làm hiện tại chưa được nộp. Bạn có chắc muốn thoát về trang danh sách không?'}
             </p>
             <div className="flex gap-2.5 pt-1">
               <button
                 onClick={() => setShowExitConfirm(false)}
                 className="flex-1 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-sm cursor-pointer"
               >
-                Tiếp tục làm
+                {isEn ? 'Keep Working' : 'Tiếp tục làm'}
               </button>
               <button
                 onClick={handleExit}
                 className="flex-1 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white font-bold text-sm cursor-pointer"
               >
-                Thoát ngay
+                {isEn ? 'Exit Now' : 'Thoát ngay'}
               </button>
             </div>
           </div>

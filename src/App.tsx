@@ -5,6 +5,7 @@ import StudentPortal from './StudentPortal';
 import ResetPasswordModal from './ResetPasswordModal';
 import DictionaryWidget from './DictionaryWidget';
 import { lazyWithRetry, AppErrorBoundary } from './chunkReload';
+import { getLmsLang } from './utils/lmsI18n';
 
 // 🚀 CODE SPLITTING: Lazy load các component nặng có cơ chế tự động phục hồi khi có bản cập nhật mới
 const ComputerTest = lazyWithRetry(() => import('./ComputerTest'));
@@ -29,12 +30,15 @@ const MixedPaperTest = lazyWithRetry(() => import('./MixedPaperTest'));
 const CoursePromoPage = lazyWithRetry(() => import('./CoursePromoPage'));
 
 // Loading fallback khi đang tải component
-const LoadingFallback = () => (
-  <div className="h-screen bg-[#f8fafc] flex flex-col items-center justify-center gap-4">
-    <div className="w-12 h-12 border-4 border-slate-200 border-t-[#2bd6eb] rounded-full animate-spin" />
-    <p className="text-slate-500 font-bold text-sm animate-pulse">Đang tải...</p>
-  </div>
-);
+const LoadingFallback = () => {
+  const isEn = getLmsLang() === 'en';
+  return (
+    <div className="h-screen bg-[#f8fafc] flex flex-col items-center justify-center gap-4">
+      <div className="w-12 h-12 border-4 border-slate-200 border-t-[#2bd6eb] rounded-full animate-spin" />
+      <p className="text-slate-500 font-bold text-sm animate-pulse">{isEn ? 'Loading...' : 'Đang tải...'}</p>
+    </div>
+  );
+};
 
 // Chỉ lưu các trang chính của Góc Học Viên để khôi phục khi bấm nút "Góc Học Viên"
 // TUYỆT ĐỐI KHÔNG lưu các màn hình làm bài / chữa bài / minigame để tránh kẹt vòng lặp Review
@@ -541,7 +545,12 @@ export default function App() {
       if (isTonyEnglishAdmin(user, profile)) return true;
       if (profile?.status === 'inactive') {
         await supabase.auth.signOut();
-        alert("⛔ Tài khoản học của bạn hiện đang ở trạng thái TẠM DỪNG.\nVui lòng liên hệ Thầy Tony để được hỗ trợ kích hoạt lại nhé!");
+        const isEn = getLmsLang() === 'en';
+        alert(
+          isEn
+            ? "⛔ Your student account is currently PAUSED.\nPlease contact Teacher Tony to reactivate your account!"
+            : "⛔ Tài khoản học của bạn hiện đang ở trạng thái TẠM DỪNG.\nVui lòng liên hệ Thầy Tony để được hỗ trợ kích hoạt lại nhé!"
+        );
         setCurrentView('home');
         return false;
       }
@@ -798,14 +807,14 @@ export default function App() {
           <div className="fixed bottom-6 right-6 z-[99999] bg-slate-900/95 border border-red-500/50 text-white p-4 rounded-2xl shadow-2xl flex items-center gap-3 animate-in fade-in">
             <span className="text-xl">⚠️</span>
             <div className="text-xs">
-              <div className="font-bold text-red-400">Lỗi đàm thoại AI</div>
-              <div className="text-slate-400">Đã xảy ra sự cố trong phiên kết nối</div>
+              <div className="font-bold text-red-400">{getLmsLang() === 'en' ? 'AI Voice Error' : 'Lỗi đàm thoại AI'}</div>
+              <div className="text-slate-400">{getLmsLang() === 'en' ? 'A connection issue occurred during this session' : 'Đã xảy ra sự cố trong phiên kết nối'}</div>
             </div>
             <button 
               onClick={() => setLiveTutorState('CLOSED')} 
               className="bg-red-500 hover:bg-red-600 text-white px-3 py-1.5 rounded-xl text-xs font-bold transition-all ml-2"
             >
-              Đóng
+              {getLmsLang() === 'en' ? 'Close' : 'Đóng'}
             </button>
           </div>
         }>
@@ -855,8 +864,8 @@ export default function App() {
 
       {!validViews.includes(currentView) && (
         <div className="h-screen bg-red-50 flex flex-col items-center justify-center p-8 text-center font-sans">
-          <h1 className="text-4xl font-black text-red-600 mb-4">⚠️ LỖI ĐỊNH TUYẾN</h1>
-          <button onClick={() => { sessionStorage.clear(); window.location.reload(); }} className="bg-red-600 text-white font-bold px-8 py-3 rounded-xl shadow-lg">Khôi phục hệ thống</button>
+          <h1 className="text-4xl font-black text-red-600 mb-4">{getLmsLang() === 'en' ? '⚠️ ROUTING ERROR' : '⚠️ LỖI ĐỊNH TUYẾN'}</h1>
+          <button onClick={() => { sessionStorage.clear(); window.location.reload(); }} className="bg-red-600 text-white font-bold px-8 py-3 rounded-xl shadow-lg">{getLmsLang() === 'en' ? 'Reload Application' : 'Khôi phục hệ thống'}</button>
         </div>
       )}
     </React.Fragment>

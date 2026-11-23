@@ -3,6 +3,7 @@ import { supabase } from './supabase';
 import { CustomAudioPlayer } from './CustomAudioPlayer';
 import { useTestGuideVideo, TestGuideVideoButton, TestGuideVideoPlayer, TestGuideVideoEditModal } from './TestGuideVideo';
 import { normalizeHtmlImages, applySmartMcqImageSizing, scanContainerMcqImages, McqImageZoomModal } from './mcqImageUtils';
+import { useLmsLang, LmsLangToggle } from './utils/lmsI18n';
 import './tailwind.css';
 
 // =========================================================================================
@@ -218,6 +219,8 @@ export default function StandardMCQTest({
     testData: any, 
     onFinish: (res: any) => void 
 }) {
+  const [lang, setLang] = useLmsLang();
+  const isEn = lang === 'en';
   
   // Xử lý an toàn dữ liệu đầu vào
   let safeData = testData || {};
@@ -514,7 +517,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
   const isForced = forceAutoSubmit === true;
   if (!isReviewMode) {
     if (isFinishingRef.current) return;
-    if (!isForced && !window.confirm("Bạn có chắc chắn muốn nộp bài?")) {
+    if (!isForced && !window.confirm(isEn ? "Are you sure you want to submit your test?" : "Bạn có chắc chắn muốn nộp bài?")) {
         return;
     }
     
@@ -706,14 +709,14 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
             setTimeLeft(remaining);
             if (remaining <= 0) {
                 clearInterval(timer);
-                alert("⏰ Hết giờ làm bài!");
+                alert(isEn ? "⏰ Time is up!" : "⏰ Hết giờ làm bài!");
                 handleFinishRef.current(true);
             }
         } else { 
             setTimeLeft(prev => {
                 if (prev <= 1) {
                     clearInterval(timer);
-                    alert("⏰ Hết giờ làm bài!");
+                    alert(isEn ? "⏰ Time is up!" : "⏰ Hết giờ làm bài!");
                     handleFinishRef.current(true);
                     return 0;
                 }
@@ -834,8 +837,12 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
   // =========================================================================================
   const askAIToExplain = (questionId: string, qContent?: string, qExplanation?: string) => {
      const safeContent = String(qContent || '').replace(/<[^>]+>/g, '').trim();
-     const safeExplanation = String(qExplanation || 'Không có lời giải thích riêng cho câu hỏi này. Thầy/Cô hãy giải thích dựa trên đề bài và ngữ cảnh.').replace(/<[^>]+>/g, '').trim();
-     const displayPrompt = `**Câu hỏi số ${questionIndexMap[questionId] || questionId}:**\n${safeContent}\n\n**Đáp án & Giải thích gốc:**\n${safeExplanation}`;
+     const safeExplanation = String(
+       qExplanation || (isEn ? 'No individual explanation provided. Please explain based on the question and context in clear English.' : 'Không có lời giải thích riêng cho câu hỏi này. Thầy/Cô hãy giải thích dựa trên đề bài và ngữ cảnh.')
+     ).replace(/<[^>]+>/g, '').trim();
+     const displayPrompt = isEn
+       ? `**Question ${questionIndexMap[questionId] || questionId}:**\n${safeContent}\n\n**Official Answer & Explanation:**\n${safeExplanation}`
+       : `**Câu hỏi số ${questionIndexMap[questionId] || questionId}:**\n${safeContent}\n\n**Đáp án & Giải thích gốc:**\n${safeExplanation}`;
      
      const fakeBtn = document.createElement('button');
      fakeBtn.className = 'btn-ai-trigger hidden';
@@ -852,13 +859,17 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
   const callTutorForQuestion = (qId: string, qContent: string, qExplanation: string) => {
       const qIdx = questionIndexMap[String(qId)] || qId;
       const plainContent = String(qContent || '').replace(/<[^>]+>/g, '').trim();
-      const plainExplanation = String(qExplanation || 'Không có lời giải thích.').replace(/<[^>]+>/g, '').trim();
-      const userAns = String(answers[String(qId)] || '(trống)');
+      const plainExplanation = String(qExplanation || (isEn ? 'No explanation provided.' : 'Không có lời giải thích.')).replace(/<[^>]+>/g, '').trim();
+      const userAns = String(answers[String(qId)] || (isEn ? '(blank)' : '(trống)'));
       
       const tutorContext = {
           overall: scoreResult.score + '/' + scoreResult.total,
-          transcript: `Câu hỏi số ${qIdx}: "${plainContent}". \nĐáp án của học sinh: ${userAns}. \nGiải thích đáp án đúng: "${plainExplanation}".`,
-          feedback: "Học sinh đang xem lại câu hỏi này trong bài kiểm tra. Hãy giải thích chi tiết tại sao đáp án lại như vậy, phân tích ngữ pháp/từ vựng liên quan."
+          transcript: isEn
+            ? `Question ${qIdx}: "${plainContent}". \nStudent answer: ${userAns}. \nAnswer explanation: "${plainExplanation}".`
+            : `Câu hỏi số ${qIdx}: "${plainContent}". \nĐáp án của học sinh: ${userAns}. \nGiải thích đáp án đúng: "${plainExplanation}".`,
+          feedback: isEn
+            ? "The student is reviewing this test question. Explain clearly in English why the correct answer is right and break down the key grammar/vocabulary points."
+            : "Học sinh đang xem lại câu hỏi này trong bài kiểm tra. Hãy giải thích chi tiết tại sao đáp án lại như vậy, phân tích ngữ pháp/từ vựng liên quan."
       };
       
       sessionStorage.setItem('tony_live_mode', 'TUTOR');
@@ -1035,7 +1046,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
             return (
               <span key={pathKey} id={`q-${qNum}`} className="inline-flex flex-wrap items-center gap-1 align-middle mx-1 my-0.5" style={{ textIndent: 0 }}>
                 <span className={`px-2.5 py-0.5 text-[14px] font-bold text-white rounded-md shadow-sm border ${isCorrect ? 'bg-emerald-600 border-emerald-700' : 'bg-red-500 border-red-600'}`}>
-                  {displayIndex}. {displayUserAnsForReview || '(trống)'}
+                  {displayIndex}. {displayUserAnsForReview || (isEn ? '(blank)' : '(trống)')}
                 </span>
                 {!isCorrect && (
                   <span className="inline-flex items-center text-[12px] text-emerald-800 font-bold bg-emerald-100 px-2 py-0.5 border border-emerald-300 rounded-md shadow-xs">
@@ -1082,7 +1093,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                     <button onClick={(e) => { e.stopPropagation(); clearDragAnswer(qNum); }} className="ml-2 hover:text-red-500 text-[14px] font-black font-sans">✕</button>
                   </div>
                 ) : (
-                  <span className="text-slate-400 text-[13px] italic font-sans w-full text-center" style={{ textIndent: 0 }}>Thả vào đây</span>
+                  <span className="text-slate-400 text-[13px] italic font-sans w-full text-center" style={{ textIndent: 0 }}>{isEn ? 'Drop here' : 'Thả vào đây'}</span>
                 )}
               </span>
             );
@@ -1104,7 +1115,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                   className="shrink-0 bg-white border border-slate-300 text-[#0ea5e9] font-bold font-sans text-[14px] h-[30px] px-1 rounded-r-lg outline-none focus:border-[#0ea5e9] cursor-pointer min-w-[100px] max-w-[200px] truncate"
                   style={{ textIndent: 0 }}
                 >
-                  <option value="">-- Chọn --</option>
+                  <option value="">{isEn ? '-- Select --' : '-- Chọn --'}</option>
                   {validOptions.map((opt: string, oIdx: number) => {
                     const val = opt.replace(stripHtmlRegex, '').trim();
                     // Cho phép chọn lại cùng 1 đáp án nhiều lần cho dạng Droplist
@@ -1216,7 +1227,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
           return (
             <span key={index} className="inline-flex flex-wrap items-center gap-1 align-middle mx-1 my-0.5">
               <span className={`px-2.5 py-0.5 text-[14px] font-bold text-white rounded-md shadow-sm border ${isCorrect ? 'bg-emerald-600 border-emerald-700' : 'bg-red-500 border-red-600'}`}>
-                {displayIndex}. {userAns || '(trống)'}
+                {displayIndex}. {userAns || (isEn ? '(blank)' : '(trống)')}
               </span>
               {!isCorrect && (
                 <span className="inline-flex items-center text-[12px] text-emerald-800 font-bold bg-emerald-100 px-2 py-0.5 border border-emerald-300 rounded-md shadow-xs">
@@ -1260,7 +1271,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
         const remaining = Math.max(0, Math.floor((currentEndTime - Date.now()) / 1000));
         setTimeLeft(remaining);
         if (remaining <= 0 && basicInfo?.category !== 'exercise') {
-            alert("⏰ Bài thi này đã hết thời gian làm bài!");
+            alert(isEn ? "⏰ Time for this exam has expired!" : "⏰ Bài thi này đã hết thời gian làm bài!");
             handleFinishRef.current(true);
             return;
         }
@@ -1270,7 +1281,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
       globalAudioRef.current.play().catch(e => {
         console.error("Autoplay blocked:", e);
         if (basicInfo?.category !== 'exercise') {
-          alert("Trình duyệt chặn phát âm thanh tự động. Vui lòng bấm Bắt Đầu lại.");
+          alert(isEn ? "Your browser blocked automatic audio playback. Please click Start again." : "Trình duyệt chặn phát âm thanh tự động. Vui lòng bấm Bắt Đầu lại.");
         }
       });
     }
@@ -1289,26 +1300,27 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                 {(isListening && hasAnyAudio) ? '🎧' : '📖'}
             </span>
             <span className="truncate max-w-[150px] sm:max-w-xs md:max-w-xl">
-                {isReviewMode ? `[CHỮA BÀI] ${safeData?.title || basicInfo?.title}` : (safeData?.title || basicInfo?.title)}
+                {isReviewMode ? `[${isEn ? 'REVIEW' : 'CHỮA BÀI'}] ${safeData?.title || basicInfo?.title}` : (safeData?.title || basicInfo?.title)}
             </span>
           </div>
 
           {isReviewMode && (
-            <div onClick={() => window.dispatchEvent(new CustomEvent('tony-open-standalone-dictionary'))} className="hidden md:flex items-center bg-white/15 hover:bg-white/25 rounded-full border border-white/20 transition-all px-3.5 h-9 w-[280px] cursor-pointer text-white/90 text-[13px] font-medium gap-2" title="Mở Từ điển Anh-Việt / Việt-Anh">
+            <div onClick={() => window.dispatchEvent(new CustomEvent('tony-open-standalone-dictionary'))} className="hidden md:flex items-center bg-white/15 hover:bg-white/25 rounded-full border border-white/20 transition-all px-3.5 h-9 w-[280px] cursor-pointer text-white/90 text-[13px] font-medium gap-2" title={isEn ? "Open EN ↔ VI Dictionary" : "Mở Từ điển Anh-Việt / Việt-Anh"}>
               <span>🔍</span>
-              <span>Tra từ điển EN ↔ VI...</span>
+              <span>{isEn ? 'Look up dictionary...' : 'Tra từ điển EN ↔ VI...'}</span>
             </div>
           )}
 
-          <div className="flex items-center gap-3 md:gap-6 shrink-0">
+          <div className="flex items-center gap-2 md:gap-4 shrink-0">
+            <LmsLangToggle lang={lang} setLang={setLang} variant={isReviewMode ? 'dark' : 'light'} />
             {/* LABEL AND TIMER (TOP RIGHT) */}
             {!isReviewMode && testStarted && (
                <div className="flex items-center gap-2 md:gap-3">
                  {basicInfo?.category === 'exercise' ? (
-                     <span className="text-[#0ea5e9] font-black tracking-wider uppercase text-[13px] md:text-[15px] whitespace-nowrap">BÀI TẬP</span>
+                     <span className="text-[#0ea5e9] font-black tracking-wider uppercase text-[13px] md:text-[15px] whitespace-nowrap">{isEn ? 'PRACTICE' : 'BÀI TẬP'}</span>
                  ) : (
                      <>
-                         <span className="text-rose-500 font-black tracking-wider uppercase text-[13px] md:text-[15px] whitespace-nowrap hidden sm:inline">ĐỀ THI</span>
+                         <span className="text-rose-500 font-black tracking-wider uppercase text-[13px] md:text-[15px] whitespace-nowrap hidden sm:inline">{isEn ? 'EXAM' : 'ĐỀ THI'}</span>
                          <div className="flex items-center gap-1 text-rose-600 bg-rose-50 px-2.5 py-1 rounded-lg border border-rose-100 whitespace-nowrap">
                              <span className="text-[13px]">⏱️</span> 
                              <span className="font-mono font-bold tracking-wider text-[14px] md:text-[16px]">{formatTime(timeLeft)}</span>
@@ -1323,15 +1335,15 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
               <button 
                   onClick={() => setShowSettings(!showSettings)} 
                   className={`flex items-center gap-2 opacity-70 hover:opacity-100 transition text-[13px] font-bold ${showSettings ? 'opacity-100' : ''}`}
-                  title="Cài đặt"
+                  title={isEn ? "Settings" : "Cài đặt"}
               >
-                 <SettingsIcon /> Cài đặt
+                 <SettingsIcon /> {isEn ? 'Settings' : 'Cài đặt'}
               </button>
               
               {showSettings && (
                 <div className="absolute right-0 top-full mt-2 bg-white border border-slate-200 rounded-xl shadow-xl p-5 w-[220px] z-50 animate-in fade-in slide-in-from-top-2 duration-200">
                   <div className="mb-5">
-                    <p className="text-[12px] font-bold text-slate-500 uppercase tracking-widest mb-3">Cài đặt kích cỡ chữ</p>
+                    <p className="text-[12px] font-bold text-slate-500 uppercase tracking-widest mb-3">{isEn ? 'Text Size' : 'Cài đặt kích cỡ chữ'}</p>
                     <div className="flex gap-2 justify-center">
                       {(['S', 'M', 'L'] as const).map(size => (
                         <button 
@@ -1351,7 +1363,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                   
                   {(isListening && hasAnyAudio && globalAudioRef.current) && (
                     <div>
-                      <p className="text-[12px] font-bold text-slate-500 uppercase tracking-widest mb-3">Cài đặt âm thanh</p>
+                      <p className="text-[12px] font-bold text-slate-500 uppercase tracking-widest mb-3">{isEn ? 'Audio Volume' : 'Cài đặt âm thanh'}</p>
                       <div className="flex items-center gap-2">
                         <span className="text-lg">🔈</span>
                         <input 
@@ -1375,14 +1387,14 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
             <button 
                 onClick={toggleFullscreen} 
                 className="hover:text-current opacity-70 hover:opacity-100 transition" 
-                title="Toàn màn hình"
+                title={isEn ? "Fullscreen" : "Toàn màn hình"}
             >
                {isFullscreen ? <ExitFullscreenIcon /> : <FullscreenIcon />}
             </button>
             {isReviewMode && (
                <button 
                    onClick={() => {
-                       if (window.confirm("Bạn có chắc chắn muốn làm lại bài thi này? Mọi kết quả cũ sẽ bị xóa.")) {
+                       if (window.confirm(isEn ? "Are you sure you want to retake this test? Previous answers will be cleared." : "Bạn có chắc chắn muốn làm lại bài thi này? Mọi kết quả cũ sẽ bị xóa.")) {
                            if (safeData?.id) {
                                localStorage.removeItem(`std_ans_${safeData.id}`);
                                localStorage.removeItem(`standard_mark_${safeData.id}`);
@@ -1412,14 +1424,14 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                    }} 
                    className="text-[13px] font-bold px-3.5 py-2 rounded-lg transition-colors flex items-center gap-1.5 shadow-sm border bg-amber-500 text-white border-amber-400 hover:bg-amber-600 cursor-pointer"
                >
-                 ↺ Làm lại
+                 {isEn ? '↺ Retry' : '↺ Làm lại'}
                </button>
             )}
             <button 
                 onClick={handleExit} 
                 className={`text-[13px] font-bold px-4 py-2 rounded-lg transition-colors flex items-center gap-2 shadow-sm border cursor-pointer ${isReviewMode ? 'bg-white/15 hover:bg-white/25 text-white border-white/30' : 'bg-white hover:bg-slate-50 text-slate-600 border-slate-200'}`}
             >
-              Thoát
+              {isEn ? 'Exit' : 'Thoát'}
             </button>
           </div>
         </header>
@@ -1483,7 +1495,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                           <div>
                             <div className="inline-flex items-center gap-1.5 text-[11px] font-extrabold uppercase tracking-widest text-[#2ab4e8] mb-1">
                               <span>📊</span>
-                              <span>Kết quả bài làm</span>
+                              <span>{isEn ? 'Test Results' : 'Kết quả bài làm'}</span>
                             </div>
                             <div className="flex items-baseline gap-3">
                               <span className="text-4xl sm:text-5xl font-black tracking-tight tabular-nums">
@@ -1491,16 +1503,16 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                 <span className="text-xl sm:text-2xl text-sky-200/70 font-bold"> / {scoreResult.total}</span>
                               </span>
                               <span className={`px-2.5 py-0.5 rounded-full text-xs font-black border ${badgeStyle}`}>
-                                {pct}% chính xác
+                                {pct}% {isEn ? 'accuracy' : 'chính xác'}
                               </span>
                             </div>
                           </div>
                           <div className="flex flex-wrap items-center gap-2 text-xs font-bold">
                             <span className="px-3 py-1.5 rounded-xl bg-emerald-500/15 border border-emerald-400/25 text-emerald-200">
-                              ✅ Đúng: {scoreResult.score}
+                              {isEn ? '✅ Correct:' : '✅ Đúng:'} {scoreResult.score}
                             </span>
                             <span className="px-3 py-1.5 rounded-xl bg-rose-500/15 border border-rose-400/25 text-rose-200">
-                              ❌ Sai/Trống: {wrongCount}
+                              {isEn ? '❌ Wrong/Blank:' : '❌ Sai/Trống:'} {wrongCount}
                             </span>
                           </div>
                         </div>
@@ -1508,21 +1520,21 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                           <div className={`h-full bg-gradient-to-r ${accentGrad} rounded-full transition-all duration-500`} style={{ width: `${pct}%` }} />
                         </div>
                         <div className="relative z-10 mt-4 pt-3.5 border-t border-white/10 flex flex-wrap items-center justify-between gap-2">
-                          <span className="text-xs text-sky-100/80 font-medium">Lọc câu hỏi bên khung chữa bài:</span>
+                          <span className="text-xs text-sky-100/80 font-medium">{isEn ? 'Filter questions in review pane:' : 'Lọc câu hỏi bên khung chữa bài:'}</span>
                           <div className="inline-flex bg-slate-900/45 p-1 rounded-xl border border-white/15 gap-1">
                             <button
                               type="button"
                               onClick={() => setReviewFilter('all')}
                               className={`px-3 py-1.5 rounded-lg text-xs font-extrabold transition cursor-pointer ${reviewFilter === 'all' ? 'bg-white text-[#0a5482] shadow-xs' : 'text-sky-100 hover:text-white'}`}
                             >
-                              Tất cả ({scoreResult.total})
+                              {isEn ? 'All' : 'Tất cả'} ({scoreResult.total})
                             </button>
                             <button
                               type="button"
                               onClick={() => setReviewFilter('wrong')}
                               className={`px-3 py-1.5 rounded-lg text-xs font-extrabold transition cursor-pointer ${reviewFilter === 'wrong' ? 'bg-rose-500 text-white shadow-xs' : 'text-rose-200 hover:text-white'}`}
                             >
-                              ❌ Chỉ câu sai ({wrongCount})
+                              {isEn ? '❌ Wrong Only' : '❌ Chỉ câu sai'} ({wrongCount})
                             </button>
                           </div>
                         </div>
@@ -1558,7 +1570,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                 )}
                                 <div className="mb-8 p-6 bg-amber-50 rounded-2xl border border-amber-200 shadow-sm">
                                     <h4 className="font-bold text-amber-800 text-[16px] mb-3 flex items-center gap-2">
-                                        <Volume2 className="w-5 h-5 text-amber-600" /> Audio Transcript / Giải thích Part
+                                        <Volume2 className="w-5 h-5 text-amber-600" /> {isEn ? 'Audio Transcript / Part Explanation' : 'Audio Transcript / Giải thích Part'}
                                     </h4>
                                     <div className="text-[15px] text-amber-900 leading-[1.9] font-serif whitespace-pre-wrap html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(part.explanation) }} />
                                 </div>
@@ -1607,7 +1619,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                 onMouseDown={startDrag}
                 onTouchStart={startDrag}
                 className="hidden md:flex w-4 bg-[#e8e8e8] border-x border-[#c0c0c0] hover:bg-[#d4d4d4] cursor-col-resize flex-col justify-center items-center shrink-0 z-10 transition-colors shadow-sm"
-                title="Kéo để điều chỉnh độ rộng"
+                title={isEn ? "Drag to resize pane" : "Kéo để điều chỉnh độ rộng"}
               >
                  <div className="flex flex-col gap-1.5 opacity-40">
                     <div className="w-1 h-1 bg-black"></div>
@@ -1632,7 +1644,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                  <div className="flex items-center gap-2">
                    <span className={`w-2.5 h-2.5 rounded-full ${isReviewMode ? 'bg-amber-500' : 'bg-emerald-500 animate-pulse'}`}></span>
                    <span className="font-bold text-slate-700 text-[13px] uppercase tracking-wider">
-                     {isReviewMode ? 'Khu vực chữa bài & Xem lại' : 'Khu vực làm bài'}
+                     {isReviewMode ? (isEn ? 'Review & Explanations' : 'Khu vực chữa bài & Xem lại') : (isEn ? 'Workspace' : 'Khu vực làm bài')}
                    </span>
                  </div>
 
@@ -1685,7 +1697,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                           <div>
                             <div className="inline-flex items-center gap-1.5 text-[11px] font-extrabold uppercase tracking-widest text-[#2ab4e8] mb-1">
                               <span>📊</span>
-                              <span>Kết quả bài làm</span>
+                              <span>{isEn ? 'Test Results' : 'Kết quả bài làm'}</span>
                             </div>
                             <div className="flex items-baseline gap-3">
                               <span className="text-4xl sm:text-5xl font-black tracking-tight tabular-nums">
@@ -1693,16 +1705,16 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                 <span className="text-xl sm:text-2xl text-sky-200/70 font-bold"> / {scoreResult.total}</span>
                               </span>
                               <span className={`px-2.5 py-0.5 rounded-full text-xs font-black border ${badgeStyle}`}>
-                                {pct}% chính xác
+                                {pct}% {isEn ? 'accuracy' : 'chính xác'}
                               </span>
                             </div>
                           </div>
                           <div className="flex flex-wrap items-center gap-2 text-xs font-bold">
                             <span className="px-3 py-1.5 rounded-xl bg-emerald-500/15 border border-emerald-400/25 text-emerald-200">
-                              ✅ Đúng: {scoreResult.score}
+                              {isEn ? '✅ Correct:' : '✅ Đúng:'} {scoreResult.score}
                             </span>
                             <span className="px-3 py-1.5 rounded-xl bg-rose-500/15 border border-rose-400/25 text-rose-200">
-                              ❌ Sai/Trống: {wrongCount}
+                              {isEn ? '❌ Wrong/Blank:' : '❌ Sai/Trống:'} {wrongCount}
                             </span>
                           </div>
                         </div>
@@ -1710,21 +1722,21 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                           <div className={`h-full bg-gradient-to-r ${accentGrad} rounded-full transition-all duration-500`} style={{ width: `${pct}%` }} />
                         </div>
                         <div className="relative z-10 mt-4 pt-3.5 border-t border-white/10 flex flex-wrap items-center justify-between gap-2">
-                          <span className="text-xs text-sky-100/80 font-medium">Chế độ xem chữa bài:</span>
+                          <span className="text-xs text-sky-100/80 font-medium">{isEn ? 'Review view mode:' : 'Chế độ xem chữa bài:'}</span>
                           <div className="inline-flex bg-slate-900/45 p-1 rounded-xl border border-white/15 gap-1">
                             <button
                               type="button"
                               onClick={() => setReviewFilter('all')}
                               className={`px-3 py-1.5 rounded-lg text-xs font-extrabold transition cursor-pointer ${reviewFilter === 'all' ? 'bg-white text-[#0a5482] shadow-xs' : 'text-sky-100 hover:text-white'}`}
                             >
-                              Tất cả ({scoreResult.total})
+                              {isEn ? 'All' : 'Tất cả'} ({scoreResult.total})
                             </button>
                             <button
                               type="button"
                               onClick={() => setReviewFilter('wrong')}
                               className={`px-3 py-1.5 rounded-lg text-xs font-extrabold transition cursor-pointer ${reviewFilter === 'wrong' ? 'bg-rose-500 text-white shadow-xs' : 'text-rose-200 hover:text-white'}`}
                             >
-                              ❌ Chỉ câu sai ({wrongCount})
+                              {isEn ? '❌ Wrong Only' : '❌ Chỉ câu sai'} ({wrongCount})
                             </button>
                           </div>
                         </div>
@@ -1735,8 +1747,8 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                {isReviewMode && reviewFilter === 'wrong' && scoreResult.total > 0 && scoreResult.score >= scoreResult.total && (
                  <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-6 mb-6 text-center space-y-1.5">
                    <div className="text-3xl">🎉</div>
-                   <div className="text-base font-black text-emerald-800">Tuyệt vời! Bạn đã làm đúng 100% bài này!</div>
-                   <p className="text-xs text-emerald-700 font-medium">Không có câu sai nào để lọc — bấm &quot;Tất cả&quot; để xem lại lời giải chi tiết từng câu.</p>
+                   <div className="text-base font-black text-emerald-800">{isEn ? 'Awesome! You scored 100% on this test!' : 'Tuyệt vời! Bạn đã làm đúng 100% bài này!'}</div>
+                   <p className="text-xs text-emerald-700 font-medium">{isEn ? 'No wrong answers to filter — click "All" to review every detailed explanation.' : 'Không có câu sai nào để lọc — bấm "Tất cả" để xem lại lời giải chi tiết từng câu.'}</p>
                  </div>
                )}
 
@@ -1770,7 +1782,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                 onClick={() => setShowTranslation(!showTranslation)}
                                 className="px-4 py-2 bg-[#e0f2fe] text-[#0369a1] border border-[#bae6fd] rounded-lg font-bold text-[13px] hover:bg-[#bae6fd] transition shadow-sm flex items-center gap-2"
                              >
-                                {showTranslation ? 'Tắt bài dịch & Hiện bài tập' : '📖 Xem bài dịch'}
+                                {showTranslation ? (isEn ? 'Hide Translation & Show Questions' : 'Tắt bài dịch & Hiện bài tập') : (isEn ? '📖 View Translation' : '📖 Xem bài dịch')}
                              </button>
                           </div>
                        )}
@@ -1817,7 +1829,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                              {isReviewMode && sec?.explanation && (
                                 <div className="mb-6 p-5 bg-amber-50 rounded-xl border border-amber-200 shadow-inner">
                                     <h4 className="font-bold text-amber-800 text-[15px] mb-2 flex items-center gap-2">
-                                        <Volume2 className="w-5 h-5 text-amber-600" /> Audio Transcript / Giải thích Section
+                                        <Volume2 className="w-5 h-5 text-amber-600" /> {isEn ? 'Audio Transcript / Section Explanation' : 'Audio Transcript / Giải thích Section'}
                                     </h4>
                                     <div className="text-[14px] text-amber-900 leading-relaxed font-serif whitespace-pre-wrap html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(sec.explanation) }} />
                                 </div>
@@ -1900,7 +1912,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                         </div>
                                         {wordBankItems.length > 0 && (
                                           <div className="mt-8 p-5 bg-slate-50 border border-slate-200 rounded-xl font-sans">
-                                            <p className="text-[13px] font-black text-slate-600 uppercase tracking-widest mb-4">Danh sách từ (Word Bank)</p>
+                                            <p className="text-[13px] font-black text-slate-600 uppercase tracking-widest mb-4">{isEn ? 'Word Bank' : 'Danh sách từ (Word Bank)'}</p>
                                             <div className="flex flex-wrap gap-3">
                                               {wordBankItems.map((item, idx) => {
                                                 const text = item.replace(stripHtmlRegex, '').trim();
@@ -1918,7 +1930,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                   {/* Word bank for inline drag-drop */}
                                   {isInlineDragDrop && (
                                     <div className="mt-8 p-5 bg-slate-50 border border-slate-200 rounded-xl font-sans">
-                                      <p className="text-[13px] font-black text-slate-600 uppercase tracking-widest mb-4">Danh sách lựa chọn (Kéo từ đây):</p>
+                                      <p className="text-[13px] font-black text-slate-600 uppercase tracking-widest mb-4">{isEn ? 'Options (Drag from here):' : 'Danh sách lựa chọn (Kéo từ đây):'}</p>
                                       <div className="flex flex-wrap gap-3">
                                         {(() => {
                                           let allOptions: string[] = [];
@@ -1966,7 +1978,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                   {/* Review & Gia sư cho inline types */}
                                   {isReviewMode && (
                                      <div className="mt-8 pt-6 border-t border-slate-200 space-y-4">
-                                        <p className="text-[14px] font-black text-slate-800 uppercase tracking-widest mb-4">💡 Giải thích chi tiết & Gia Sư AI:</p>
+                                        <p className="text-[14px] font-black text-slate-800 uppercase tracking-widest mb-4">{isEn ? '💡 Detailed Explanations & AI Tutor:' : '💡 Giải thích chi tiết & Gia Sư AI:'}</p>
                                         {sec.questions?.map((q: any) => {
                                            if (!q?.id) return null;
                                            const qIdx = questionIndexMap[String(q.id)] || q.id;
@@ -1974,12 +1986,12 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                            const correctInlineAns = String(q.correctAnswer || '').trim();
                                            const isInlineRight = isOptionAnswerCorrect(userInlineAns, correctInlineAns, q.options);
                                            if (reviewFilter === 'wrong' && isInlineRight) return null;
-                                           const explanationText = q.explanation || 'Không có lời giải thích.';
+                                           const explanationText = q.explanation || (isEn ? 'No explanation provided.' : 'Không có lời giải thích.');
                                            
                                            return (
                                               <div key={`expl-${q.id}`} className="bg-slate-50 p-5 rounded-xl border border-slate-200">
                                                  <div className="flex items-center gap-2 mb-2">
-                                                     <span className="bg-slate-800 text-white font-bold px-2 py-0.5 text-[13px] rounded">Câu {qIdx}</span>
+                                                     <span className="bg-slate-800 text-white font-bold px-2 py-0.5 text-[13px] rounded">{isEn ? `Question ${qIdx}` : `Câu ${qIdx}`}</span>
                                                  </div>
                                                  <div className="text-[14px] text-slate-700 italic leading-relaxed whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(explanationText) }} />
                                                  
@@ -1991,7 +2003,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                                          }} 
                                                          className="px-4 py-1.5 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded text-[13px] transition shadow-sm border border-[#064e3b]"
                                                      >
-                                                         💬 Chat với AI
+                                                         {isEn ? '💬 Ask AI Tutor' : '💬 Chat với AI'}
                                                      </button>
                                                      <button 
                                                          onClick={(e) => { 
@@ -2000,7 +2012,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                                          }} 
                                                          className="px-4 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded text-[13px] transition shadow-sm border border-emerald-600 flex items-center gap-1"
                                                      >
-                                                         📞 Gọi Gia sư
+                                                         {isEn ? '📞 Call Tutor' : '📞 Gọi Gia sư'}
                                                      </button>
                                                  </div>
                                               </div>
@@ -2041,7 +2053,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                         
                                         {isReviewMode && (
                                             <div className="absolute top-5 right-5 font-bold text-[12px]">
-                                                {isQuestionCorrect ? <span className="text-emerald-700 bg-emerald-100 px-3 py-1 rounded-md">✅ Đúng</span> : <span className="text-red-700 bg-red-100 px-3 py-1 rounded-md">❌ Sai</span>}
+                                                {isQuestionCorrect ? <span className="text-emerald-700 bg-emerald-100 px-3 py-1 rounded-md">{isEn ? '✅ Correct' : '✅ Đúng'}</span> : <span className="text-red-700 bg-red-100 px-3 py-1 rounded-md">{isEn ? '❌ Wrong' : '❌ Sai'}</span>}
                                             </div>
                                         )}
 
@@ -2092,7 +2104,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                            
                                            {isReviewMode && q.explanation && (
                                              <div className="mt-6 pt-4 border-t border-slate-100">
-                                                <p className="text-[12px] font-black text-amber-600 uppercase mb-2">💡 Giải thích:</p>
+                                                <p className="text-[12px] font-black text-amber-600 uppercase mb-2">{isEn ? '💡 Explanation:' : '💡 Giải thích:'}</p>
                                                 <div className="text-[14px] text-slate-700 italic leading-relaxed mb-3" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(String(q.explanation)) }} />
                                                 
                                                 {/* 🚀 THÊM NÚT GỌI GIA SƯ */}
@@ -2104,7 +2116,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                                         }} 
                                                         className="px-3 py-1.5 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded text-[12px] transition shadow-sm border border-[#064e3b]"
                                                     >
-                                                        💬 Chat với AI
+                                                        {isEn ? '💬 Ask AI Tutor' : '💬 Chat với AI'}
                                                     </button>
                                                     <button 
                                                         onClick={(e) => { 
@@ -2113,7 +2125,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                                         }} 
                                                         className="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded text-[12px] transition shadow-sm border border-emerald-600 flex items-center gap-1"
                                                     >
-                                                        📞 Gọi Gia sư
+                                                        {isEn ? '📞 Call Tutor' : '📞 Gọi Gia sư'}
                                                     </button>
                                                 </div>
                                              </div>
@@ -2141,7 +2153,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                      
                                      {isReviewMode && (
                                         <div className="absolute top-6 right-6 font-bold text-[12px]">
-                                           {isQuestionCorrect ? <span className="text-emerald-700 bg-emerald-100 px-3 py-1.5 rounded-lg">✅ Đúng</span> : <span className="text-red-700 bg-red-100 px-3 py-1.5 rounded-lg">❌ Sai</span>}
+                                           {isQuestionCorrect ? <span className="text-emerald-700 bg-emerald-100 px-3 py-1.5 rounded-lg">{isEn ? '✅ Correct' : '✅ Đúng'}</span> : <span className="text-red-700 bg-red-100 px-3 py-1.5 rounded-lg">{isEn ? '❌ Wrong' : '❌ Sai'}</span>}
                                         </div>
                                      )}
 
@@ -2213,7 +2225,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
 
                                      {isReviewMode && q.explanation && (
                                         <div className="mt-6 sm:mt-8 pt-4 sm:pt-5 border-t border-slate-200 ml-0 sm:ml-10">
-                                           <p className="text-[12px] font-black text-amber-600 uppercase tracking-widest mb-2">💡 Giải thích đáp án:</p>
+                                           <p className="text-[12px] font-black text-amber-600 uppercase tracking-widest mb-2">{isEn ? '💡 Answer Explanation:' : '💡 Giải thích đáp án:'}</p>
                                            <div className="text-[14px] text-slate-700 italic leading-relaxed whitespace-pre-wrap border-l-[3px] border-slate-300 pl-3 mb-3" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(String(q.explanation)) }} />
                                            
                                            <div className="flex items-center gap-2 mt-3">
@@ -2224,7 +2236,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                                    }} 
                                                    className="px-3 py-1.5 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded text-[12px] transition shadow-sm border border-[#064e3b]"
                                                >
-                                                  💬 Chat với AI
+                                                  {isEn ? '💬 Ask AI Tutor' : '💬 Chat với AI'}
                                                </button>
                                                <button 
                                                    onClick={(e) => { 
@@ -2233,7 +2245,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                                    }} 
                                                    className="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded text-[12px] transition shadow-sm border border-emerald-600 flex items-center gap-1"
                                                >
-                                                  📞 Gọi Gia sư
+                                                  {isEn ? '📞 Call Tutor' : '📞 Gọi Gia sư'}
                                                </button>
                                            </div>
                                         </div>
@@ -2269,11 +2281,11 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                                {isReviewMode ? (
                                                    <div className="flex items-center gap-2 justify-start md:justify-end w-full">
                                                        <div className={`px-4 py-1.5 rounded font-bold text-[14px] border min-w-[140px] text-center ${isCorrect ? 'bg-emerald-100 text-emerald-800 border-emerald-300' : 'bg-red-100 text-red-800 border-red-300'}`}>
-                                                          {userAns || '(trống)'}
+                                                          {userAns || (isEn ? '(blank)' : '(trống)')}
                                                        </div>
                                                        {!isCorrect && (
                                                            <div className="text-[12px] font-bold text-emerald-700 bg-emerald-100 border border-emerald-300 px-2 py-0.5 rounded whitespace-nowrap">
-                                                               ĐA: {correctAns}
+                                                               {isEn ? 'Key:' : 'ĐA:'} {correctAns}
                                                            </div>
                                                        )}
                                                    </div>
@@ -2295,7 +2307,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                           
                                           {isReviewMode && q.explanation && (
                                              <div className="w-full mt-2 border-t border-gray-300 pt-3 flex-none basis-full font-sans">
-                                                <p className="text-[12px] font-black text-amber-600 uppercase mb-2">💡 Giải thích đáp án:</p>
+                                                <p className="text-[12px] font-black text-amber-600 uppercase mb-2">{isEn ? '💡 Answer Explanation:' : '💡 Giải thích đáp án:'}</p>
                                                 <div className="text-[14px] text-gray-600 italic leading-relaxed font-serif format-passage html-content-renderer mb-3" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.explanation) }} />
                                                 <div className="flex items-center gap-2">
                                                     <button 
@@ -2305,7 +2317,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                                         }} 
                                                         className="px-3 py-1.5 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded text-[12px] transition shadow-sm border border-[#064e3b]"
                                                     >
-                                                        💬 Chat với AI
+                                                        {isEn ? '💬 Ask AI Tutor' : '💬 Chat với AI'}
                                                     </button>
                                                     <button 
                                                         onClick={(e) => { 
@@ -2314,7 +2326,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                                         }} 
                                                         className="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded text-[12px] transition shadow-sm border border-emerald-600 flex items-center gap-1"
                                                     >
-                                                        📞 Gọi Gia sư
+                                                        {isEn ? '📞 Call Tutor' : '📞 Gọi Gia sư'}
                                                     </button>
                                                 </div>
                                              </div>
@@ -2376,11 +2388,11 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                                {isReviewMode ? (
                                                  <div className="flex items-center gap-2 justify-start md:justify-end w-full">
                                                    <div className={`px-4 py-1.5 rounded-lg font-bold text-[14px] border min-w-[140px] text-center ${isCorrect ? 'bg-emerald-100 text-emerald-800 border-emerald-300' : 'bg-red-100 text-red-800 border-red-300'}`}>
-                                                     {displayUserAns || '(trống)'}
+                                                     {displayUserAns || (isEn ? '(blank)' : '(trống)')}
                                                    </div>
                                                    {!isCorrect && (
                                                      <div className="text-[12px] font-bold text-emerald-700 bg-emerald-100 border border-emerald-300 px-2 py-0.5 rounded whitespace-nowrap">
-                                                       ĐA: {correctAns}
+                                                       {isEn ? 'Key:' : 'ĐA:'} {correctAns}
                                                      </div>
                                                    )}
                                                  </div>
@@ -2396,7 +2408,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                                        <button onClick={(e) => { e.stopPropagation(); clearDragAnswer(String(q.id)); }} className="ml-2 hover:text-red-500 text-[12px] font-black font-sans">✕</button>
                                                      </div>
                                                    ) : (
-                                                     <span className="text-slate-400 text-[13px] italic font-sans w-full text-center">Thả vào đây</span>
+                                                     <span className="text-slate-400 text-[13px] italic font-sans w-full text-center">{isEn ? 'Drop here' : 'Thả vào đây'}</span>
                                                    )}
                                                  </span>
                                                )}
@@ -2404,14 +2416,14 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                            </div>
                                            {isReviewMode && q.explanation && (
                                              <div className="w-full mt-2 border-t border-slate-200 pt-3 font-sans">
-                                               <p className="text-[12px] font-black text-amber-600 uppercase mb-2">💡 Giải thích đáp án:</p>
+                                               <p className="text-[12px] font-black text-amber-600 uppercase mb-2">{isEn ? '💡 Answer Explanation:' : '💡 Giải thích đáp án:'}</p>
                                                <div className="text-[14px] text-slate-600 italic leading-relaxed html-content-renderer mb-3" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.explanation) }} />
                                                <div className="flex items-center gap-2">
                                                  <button onClick={(e) => { e.stopPropagation(); askAIToExplain(String(q.id), q.content, q.explanation); }} className="px-3 py-1.5 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded text-[12px] transition shadow-sm border border-[#064e3b]">
-                                                   💬 Chat với AI
+                                                   {isEn ? '💬 Ask AI Tutor' : '💬 Chat với AI'}
                                                  </button>
                                                  <button onClick={(e) => { e.stopPropagation(); callTutorForQuestion(String(q.id), q.content, q.explanation); }} className="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded text-[12px] transition shadow-sm border border-emerald-600 flex items-center gap-1">
-                                                   📞 Gọi Gia sư
+                                                   {isEn ? '📞 Call Tutor' : '📞 Gọi Gia sư'}
                                                  </button>
                                                </div>
                                              </div>
@@ -2424,7 +2436,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                    {/* Draggable options word bank */}
                                    {!isReviewMode && (
                                      <div className="mt-8 p-5 bg-slate-50 border border-slate-200 rounded-xl font-sans">
-                                       <p className="text-[13px] font-black text-slate-600 uppercase tracking-widest mb-4">Danh sách lựa chọn (Kéo từ đây):</p>
+                                       <p className="text-[13px] font-black text-slate-600 uppercase tracking-widest mb-4">{isEn ? 'Options (Drag from here):' : 'Danh sách lựa chọn (Kéo từ đây):'}</p>
                                        <div className="flex flex-wrap gap-3">
                                          {(() => {
                                            const sectionQIds = (sec?.questions || []).map((q: any) => String(q.id));
@@ -2462,7 +2474,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                    {/* Review mode word bank (read-only) */}
                                    {isReviewMode && (
                                      <div className="mt-8 p-5 bg-slate-50 border border-slate-200 rounded-xl font-sans">
-                                       <p className="text-[13px] font-black text-slate-500 uppercase tracking-widest mb-4">Danh sách lựa chọn:</p>
+                                       <p className="text-[13px] font-black text-slate-500 uppercase tracking-widest mb-4">{isEn ? 'Options:' : 'Danh sách lựa chọn:'}</p>
                                        <div className="flex flex-wrap gap-3">
                                          {(() => {
                                            const sectionQIds = (sec?.questions || []).map((q: any) => String(q.id));
@@ -2538,7 +2550,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                                   
                                                   if (isChecked) {
                                                       if (maxAllowed > 0 && currentSelected.length >= maxAllowed) {
-                                                          alert(`Lưu ý: Chỉ yêu cầu chọn tối đa ${maxAllowed} đáp án.`);
+                                                          alert(isEn ? `Note: Please select at most ${maxAllowed} answers.` : `Lưu ý: Chỉ yêu cầu chọn tối đa ${maxAllowed} đáp án.`);
                                                           return prev;
                                                       }
                                                       if (!currentSelected.includes(optionValue)) {
@@ -2564,7 +2576,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                           const qText = getCleanQuestionText(combo[0]?.content, isCheckbox);
                                           const firstQIdx = questionIndexMap[comboIds[0]] || comboIds[0];
                                           const lastQIdx = questionIndexMap[comboIds[comboIds.length - 1]] || comboIds[comboIds.length - 1];
-                                          const displayIndexText = comboIds.length > 1 ? `Câu ${firstQIdx}-${lastQIdx}` : `Câu ${firstQIdx}`;
+                                          const displayIndexText = comboIds.length > 1 ? (isEn ? `Questions ${firstQIdx}-${lastQIdx}` : `Câu ${firstQIdx}-${lastQIdx}`) : (isEn ? `Question ${firstQIdx}` : `Câu ${firstQIdx}`);
 
                                           return (
                                              <div key={`combo-${comboIndex}`} id={`q-${combo[0].id}`} className={containerClass}>
@@ -2580,9 +2592,9 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                                
                                                {isReviewMode && (
                                                   <div className="absolute top-6 right-6 font-bold text-[12px]">
-                                                     {isPerfect ? <span className="text-emerald-700 bg-emerald-100 px-3 py-1.5 rounded-lg">✅ Đúng hết</span> 
-                                                     : isPartial ? <span className="text-amber-700 bg-amber-100 px-3 py-1.5 rounded-lg">⚠️ 1 phần</span>
-                                                     : <span className="text-red-700 bg-red-100 px-3 py-1.5 rounded-lg">❌ Sai hết</span>}
+                                                     {isPerfect ? <span className="text-emerald-700 bg-emerald-100 px-3 py-1.5 rounded-lg">{isEn ? '✅ All Correct' : '✅ Đúng hết'}</span> 
+                                                     : isPartial ? <span className="text-amber-700 bg-amber-100 px-3 py-1.5 rounded-lg">{isEn ? '⚠️ Partial' : '⚠️ 1 phần'}</span>
+                                                     : <span className="text-red-700 bg-red-100 px-3 py-1.5 rounded-lg">{isEn ? '❌ Incorrect' : '❌ Sai hết'}</span>}
                                                   </div>
                                                )}
 
@@ -2649,12 +2661,12 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
 
                                                {isReviewMode && (
                                                  <div className="mt-6 ml-[3.5rem] pt-4 border-t border-slate-200 font-sans">
-                                                    <p className="text-[12px] font-black text-amber-600 uppercase mb-3">💡 Giải thích đáp án:</p>
+                                                    <p className="text-[12px] font-black text-amber-600 uppercase mb-3">{isEn ? '💡 Answer Explanation:' : '💡 Giải thích đáp án:'}</p>
                                                     {combo.map((q:any) => {
                                                         if (!q.explanation || String(q.explanation).trim() === '') return null;
                                                         return (
                                                             <div key={q.id} className="text-[14px] text-gray-600 italic leading-relaxed mb-3 last:mb-0 border-l-[3px] border-slate-300 pl-4 bg-slate-50 py-3 pr-3 rounded-r-xl">
-                                                                <span className="font-bold text-white px-2 py-0.5 bg-slate-800 rounded text-[11px] mr-2 font-sans not-italic">Câu {questionIndexMap[String(q.id)] || q.id}</span>
+                                                                <span className="font-bold text-white px-2 py-0.5 bg-slate-800 rounded text-[11px] mr-2 font-sans not-italic">{isEn ? `Q${questionIndexMap[String(q.id)] || q.id}` : `Câu ${questionIndexMap[String(q.id)] || q.id}`}</span>
                                                                 <span dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.explanation) }} />
                                                                 
                                                                 <div className="flex items-center gap-2 mt-3 not-italic">
@@ -2665,7 +2677,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                                                         }} 
                                                                         className="px-3 py-1.5 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded text-[12px] transition shadow-sm border border-[#064e3b]"
                                                                     >
-                                                                       💬 Chat với AI
+                                                                       {isEn ? '💬 Ask AI Tutor' : '💬 Chat với AI'}
                                                                     </button>
                                                                     <button 
                                                                         onClick={(e) => { 
@@ -2674,7 +2686,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                                                         }} 
                                                                         className="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded text-[12px] transition shadow-sm border border-emerald-600 flex items-center gap-1"
                                                                     >
-                                                                       📞 Gọi Gia sư
+                                                                       {isEn ? '📞 Call Tutor' : '📞 Gọi Gia sư'}
                                                                     </button>
                                                                 </div>
                                                             </div>
@@ -2709,8 +2721,8 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                                     
                                                     {isReviewMode ? (
                                                         <div className="bg-slate-50 border border-slate-200 rounded-xl p-4">
-                                                            <div className="text-[12px] font-bold text-slate-500 uppercase tracking-widest mb-2">Câu trả lời của bạn:</div>
-                                                            <div className="text-slate-800 text-[15px] whitespace-pre-wrap">{userAns || '(Chưa trả lời)'}</div>
+                                                            <div className="text-[12px] font-bold text-slate-500 uppercase tracking-widest mb-2">{isEn ? 'Your Answer:' : 'Câu trả lời của bạn:'}</div>
+                                                            <div className="text-slate-800 text-[15px] whitespace-pre-wrap">{userAns || (isEn ? '(Not answered)' : '(Chưa trả lời)')}</div>
                                                             
                                                             <div className="mt-4 pt-4 border-t border-slate-200 flex flex-wrap gap-2">
                                                                 <button 
@@ -2720,7 +2732,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                                                     }} 
                                                                     className="px-4 py-2 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded-lg text-[13px] transition shadow-sm border border-[#064e3b]"
                                                                 >
-                                                                    💬 Nhờ AI Chấm Điểm
+                                                                    {isEn ? '💬 Ask AI to Grade' : '💬 Nhờ AI Chấm Điểm'}
                                                                 </button>
                                                                 <button 
                                                                     onClick={(e) => { 
@@ -2729,7 +2741,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                                                     }} 
                                                                     className="px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-lg text-[13px] transition shadow-sm border border-emerald-600 flex items-center gap-1"
                                                                 >
-                                                                    📞 Gọi Gia sư
+                                                                    {isEn ? '📞 Call Tutor' : '📞 Gọi Gia sư'}
                                                                 </button>
                                                             </div>
                                                         </div>
@@ -2737,7 +2749,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                                         <textarea 
                                                             value={userAns}
                                                             onChange={(e) => handleAnswer(qNum, e.target.value)}
-                                                            placeholder="Nhập câu trả lời của bạn vào đây..."
+                                                            placeholder={isEn ? "Type your answer here..." : "Nhập câu trả lời của bạn vào đây..."}
                                                             className="w-full min-h-[120px] p-4 bg-slate-50 border border-slate-300 rounded-xl focus:outline-none focus:border-[#0ea5e9] focus:ring-1 focus:ring-[#0ea5e9] text-[15px] text-slate-800 resize-y transition-colors placeholder:text-slate-400"
                                                         />
                                                     )}
@@ -2847,52 +2859,52 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                     <div className="p-5 border-b border-slate-200 flex flex-col items-center shrink-0">
                       {isReviewMode ? (
                         <div className="bg-sky-50 text-[#0a5482] px-4 py-2.5 rounded-xl border border-sky-200/80 w-full flex items-center justify-between shadow-2xs mb-4">
-                          <span className="text-[11px] font-extrabold uppercase tracking-wider">Điểm số</span>
+                          <span className="text-[11px] font-extrabold uppercase tracking-wider">{isEn ? 'Score' : 'Điểm số'}</span>
                           <span className="text-lg font-black tabular-nums">
                             {scoreResult.score} <span className="text-xs font-bold text-slate-400">/ {scoreResult.total}</span>
                           </span>
                         </div>
                       ) : basicInfo?.category === 'exercise' ? (
                         <div className="bg-emerald-50 text-emerald-600 px-6 py-2.5 rounded-lg font-black text-[18px] mb-4 border border-emerald-200 flex items-center justify-center gap-2 w-full shadow-sm tracking-widest uppercase">
-                            BÀI TẬP
+                            {isEn ? 'PRACTICE' : 'BÀI TẬP'}
                         </div>
                       ) : (
                         <div className="bg-red-50 text-red-500 px-6 py-2.5 rounded-lg font-bold text-[18px] mb-4 border border-red-100 flex items-center justify-center gap-2 w-full shadow-sm tracking-wider">
-                          <span className="text-red-400">⏳</span> {formatTime(timeLeft)} phút
+                          <span className="text-red-400">⏳</span> {formatTime(timeLeft)} {isEn ? 'min' : 'phút'}
                         </div>
                       )}
                       
                       <div className="w-full text-[14px] font-bold text-slate-800 mb-3 text-left">
-                          Danh sách câu hỏi
+                          {isEn ? 'Question Navigator' : 'Danh sách câu hỏi'}
                       </div>
                       
                       <div className="w-full flex flex-wrap gap-x-4 gap-y-2 text-[12px] font-medium text-slate-600 mb-2">
                          <div className="flex items-center gap-1.5">
-                             <div className="w-3 h-3 rounded-full bg-slate-200"></div> Chưa trả lời ({totalCount - answeredCount})
+                             <div className="w-3 h-3 rounded-full bg-slate-200"></div> {isEn ? 'Unanswered' : 'Chưa trả lời'} ({totalCount - answeredCount})
                          </div>
                          <div className="flex items-center gap-1.5">
-                             <div className="w-3 h-3 rounded-full bg-[#0ea5e9]"></div> Đã trả lời ({answeredCount})
+                             <div className="w-3 h-3 rounded-full bg-[#0ea5e9]"></div> {isEn ? 'Answered' : 'Đã trả lời'} ({answeredCount})
                          </div>
                          {!isReviewMode && (
                            <div className="flex items-center gap-1.5 w-full mt-1">
-                               <div className="w-3 h-3 rounded-full border-2 border-amber-500 bg-amber-50"></div> Đánh dấu ({markedCount})
+                               <div className="w-3 h-3 rounded-full border-2 border-amber-500 bg-amber-50"></div> {isEn ? 'Flagged' : 'Đánh dấu'} ({markedCount})
                            </div>
                          )}
                       </div>
                     </div>
                     
                     <div className="flex-1 min-h-0 overflow-y-auto p-5 custom-scrollbar bg-white">
-                      <p className="text-[12px] text-slate-400 mb-4">Bấm vào ô để đến câu hỏi</p>
+                      <p className="text-[12px] text-slate-400 mb-4">{isEn ? 'Click a number to jump to that question' : 'Bấm vào ô để đến câu hỏi'}</p>
                       {renderQuestionButtons('w-10 h-10', 'nav-')}
                     </div>
                     <div className="p-5 border-t border-slate-200 bg-slate-50 flex gap-3 shrink-0 mt-auto">
                       {isReviewMode ? (
                          <button onClick={handleExit} className="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 py-4 rounded-xl text-[14px] font-black uppercase tracking-widest transition-colors shadow-sm">
-                             Thoát
+                             {isEn ? 'Exit' : 'Thoát'}
                          </button>
                       ) : (
                          <button onClick={() => handleFinish(false)} className="flex-1 bg-[#0ea5e9] hover:bg-[#0284c7] text-white font-black py-4 rounded-xl text-[14px] uppercase tracking-widest transition-colors shadow-lg shadow-[#0ea5e9]/20">
-                             Nộp bài
+                             {isEn ? 'Submit' : 'Nộp bài'}
                          </button>
                       )}
                     </div>
@@ -2911,7 +2923,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                         <span className="text-base">📋</span>
                         <div className="flex flex-col leading-tight">
                           <div className="flex items-center gap-1.5">
-                            <span className="text-[13px] font-black text-slate-800">Câu hỏi</span>
+                            <span className="text-[13px] font-black text-slate-800">{isEn ? 'Questions' : 'Câu hỏi'}</span>
                             <span className="text-[11px] font-bold px-1.5 py-0.5 rounded-full bg-[#0ea5e9]/10 text-[#0ea5e9]">
                               {answeredCount}/{totalCount}
                             </span>
@@ -2919,7 +2931,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                           </div>
                           {markedCount > 0 && !isReviewMode && (
                             <span className="text-[10px] text-amber-600 font-bold">
-                              ★ {markedCount} đánh dấu
+                              ★ {markedCount} {isEn ? 'flagged' : 'đánh dấu'}
                             </span>
                           )}
                         </div>
@@ -2929,7 +2941,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                         {!isReviewMode && (
                           basicInfo?.category === 'exercise' ? (
                             <span className="text-emerald-600 bg-emerald-50 border border-emerald-100 font-black text-[11px] px-2.5 py-1.5 rounded-xl uppercase tracking-wider">
-                              BÀI TẬP
+                              {isEn ? 'PRACTICE' : 'BÀI TẬP'}
                             </span>
                           ) : (
                             <div className="flex items-center gap-1 text-rose-600 bg-rose-50 px-2.5 py-1.5 rounded-xl border border-rose-100 text-[12px] font-bold">
@@ -2944,14 +2956,14 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                             onClick={handleExit}
                             className="bg-slate-800 hover:bg-slate-900 text-white font-bold text-[13px] px-4 py-2 rounded-xl shadow-md transition active:scale-95 whitespace-nowrap"
                           >
-                            Thoát
+                            {isEn ? 'Exit' : 'Thoát'}
                           </button>
                         ) : (
                           <button 
                             onClick={() => handleFinish(false)}
                             className="bg-[#0ea5e9] hover:bg-[#0284c7] text-white font-black text-[13px] px-4 py-2 rounded-xl shadow-md shadow-[#0ea5e9]/25 transition active:scale-95 uppercase tracking-wide whitespace-nowrap"
                           >
-                            Nộp bài
+                            {isEn ? 'Submit' : 'Nộp bài'}
                           </button>
                         )}
                       </div>
@@ -2977,7 +2989,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                           {/* Tiêu đề Bottom Sheet */}
                           <div className="px-5 py-2.5 border-b border-slate-100 flex items-center justify-between shrink-0">
                             <div className="flex items-center gap-2">
-                              <h3 className="text-[15px] font-black text-slate-800">Danh sách câu hỏi</h3>
+                              <h3 className="text-[15px] font-black text-slate-800">{isEn ? 'Question Navigator' : 'Danh sách câu hỏi'}</h3>
                               <span className="text-[12px] font-bold px-2 py-0.5 rounded-full bg-[#0ea5e9]/10 text-[#0ea5e9]">
                                 {answeredCount}/{totalCount}
                               </span>
@@ -2986,7 +2998,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                               onClick={() => setShowPalette(false)}
                               className="px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold flex items-center gap-1.5 transition active:scale-95"
                             >
-                              <span>Thu gọn</span>
+                              <span>{isEn ? 'Collapse' : 'Thu gọn'}</span>
                               <span className="text-slate-400 font-bold">▼</span>
                             </button>
                           </div>
@@ -2994,7 +3006,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                           {/* Điểm số trong chế độ Chữa bài */}
                           {isReviewMode && (
                             <div className="mx-5 mt-3 bg-emerald-50 text-emerald-700 p-3 rounded-2xl border border-emerald-100 text-center shrink-0 flex items-center justify-between px-6 shadow-sm">
-                              <span className="text-xs font-bold uppercase tracking-wider">Kết quả của bạn</span>
+                              <span className="text-xs font-bold uppercase tracking-wider">{isEn ? 'Your Score' : 'Kết quả của bạn'}</span>
                               <span className="text-2xl font-black">{scoreResult.score} <span className="text-sm font-semibold text-emerald-400">/ {scoreResult.total}</span></span>
                             </div>
                           )}
@@ -3002,21 +3014,21 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                           {/* Chú thích trạng thái câu */}
                           <div className="px-5 py-2 bg-slate-50 border-b border-slate-100 flex flex-wrap gap-x-4 gap-y-1.5 text-[11px] font-medium text-slate-600 shrink-0">
                             <div className="flex items-center gap-1.5">
-                              <div className="w-2.5 h-2.5 rounded-full bg-slate-300"></div> Chưa làm ({totalCount - answeredCount})
+                              <div className="w-2.5 h-2.5 rounded-full bg-slate-300"></div> {isEn ? 'Unanswered' : 'Chưa làm'} ({totalCount - answeredCount})
                             </div>
                             <div className="flex items-center gap-1.5">
-                              <div className="w-2.5 h-2.5 rounded-full bg-[#0ea5e9]"></div> Đã làm ({answeredCount})
+                              <div className="w-2.5 h-2.5 rounded-full bg-[#0ea5e9]"></div> {isEn ? 'Answered' : 'Đã làm'} ({answeredCount})
                             </div>
                             {!isReviewMode && (
                               <div className="flex items-center gap-1.5">
-                                <div className="w-2.5 h-2.5 rounded-full border-2 border-amber-500 bg-amber-50"></div> Đánh dấu ({markedCount})
+                                <div className="w-2.5 h-2.5 rounded-full border-2 border-amber-500 bg-amber-50"></div> {isEn ? 'Flagged' : 'Đánh dấu'} ({markedCount})
                               </div>
                             )}
                           </div>
 
                           {/* Danh sách nút câu hỏi */}
                           <div className="flex-1 min-h-0 overflow-y-auto p-5 custom-scrollbar">
-                            <p className="text-[12px] text-slate-400 mb-3">Chạm vào số câu để chuyển ngay tới câu hỏi:</p>
+                            <p className="text-[12px] text-slate-400 mb-3">{isEn ? 'Tap a number to jump directly to that question:' : 'Chạm vào số câu để chuyển ngay tới câu hỏi:'}</p>
                             {renderQuestionButtons('w-11 h-11', 'mob-nav-')}
                           </div>
 
@@ -3026,21 +3038,21 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                               onClick={() => setShowPalette(false)}
                               className="px-4 py-3.5 rounded-xl border border-slate-300 bg-white hover:bg-slate-100 text-slate-700 text-sm font-bold transition active:scale-95"
                             >
-                              Đóng
+                              {isEn ? 'Close' : 'Đóng'}
                             </button>
                             {isReviewMode ? (
                               <button 
                                 onClick={handleExit} 
                                 className="flex-1 bg-slate-800 hover:bg-slate-900 text-white font-black py-3.5 rounded-xl text-sm uppercase tracking-wider transition shadow-md active:scale-95"
                               >
-                                Thoát
+                                {isEn ? 'Exit' : 'Thoát'}
                               </button>
                             ) : (
                               <button 
                                 onClick={() => handleFinish(false)} 
                                 className="flex-1 bg-[#0ea5e9] hover:bg-[#0284c7] text-white font-black py-3.5 rounded-xl text-sm uppercase tracking-wider transition shadow-lg shadow-[#0ea5e9]/20 active:scale-95"
                               >
-                                Nộp bài
+                                {isEn ? 'Submit' : 'Nộp bài'}
                               </button>
                             )}
                           </div>
@@ -3068,7 +3080,10 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
         )}
       {!testStarted ? (
         <div className="flex flex-col h-[100dvh] items-center justify-center bg-[#f8fafc] font-sans p-4">
-          <div className="bg-white p-10 md:p-12 rounded-3xl shadow-2xl border border-slate-200 w-full max-w-xl text-center animate-in zoom-in-95 duration-300">
+          <div className="bg-white p-10 md:p-12 rounded-3xl shadow-2xl border border-slate-200 w-full max-w-xl text-center animate-in zoom-in-95 duration-300 relative">
+            <div className="absolute top-4 right-4">
+              <LmsLangToggle lang={lang} setLang={setLang} variant="light" />
+            </div>
             <div className="w-24 h-24 bg-blue-50 border border-blue-100 rounded-full flex items-center justify-center mx-auto mb-6 shadow-inner text-[#0ea5e9]">
                <span className="text-5xl">{(isListening && hasAnyAudio) ? '🎧' : '📖'}</span>
             </div>
@@ -3079,10 +3094,10 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
             
             <div className="flex items-center justify-center gap-2 text-slate-500 mb-8 font-medium bg-slate-50 inline-flex px-5 py-2.5 rounded-xl border border-slate-100 mx-auto">
                {basicInfo?.category === 'exercise' ? (
-                   <span className="text-emerald-600 font-black tracking-widest uppercase">BÀI TẬP</span>
+                   <span className="text-emerald-600 font-black tracking-widest uppercase">{isEn ? 'PRACTICE' : 'BÀI TẬP'}</span>
                ) : (
                    <>
-                       <span className="text-lg">⏱</span> Thời gian làm bài: <span className="font-bold text-slate-800">{formatTime(parseInitialTime(basicInfo?.timeLimit))}</span>
+                       <span className="text-lg">⏱</span> {isEn ? 'Time Limit:' : 'Thời gian làm bài:'} <span className="font-bold text-slate-800">{formatTime(parseInitialTime(basicInfo?.timeLimit))}</span>
                    </>
                )}
             </div>
@@ -3091,8 +3106,12 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
               <div className="bg-amber-50 border border-amber-200 p-5 rounded-xl text-amber-800 text-[14px] font-medium mb-8 text-left leading-relaxed shadow-sm flex items-start gap-4">
                 <span className="text-2xl mt-1">⚠️</span>
                 <div>
-                   <span className="font-black block mb-1">LƯU Ý BÀI THI LISTENING</span> 
-                   File âm thanh sẽ được <span className="font-bold underline">tự động phát</span> ngay khi bạn bấm nút Bắt Đầu bên dưới. Vui lòng đeo tai nghe và kiểm tra lại âm lượng thiết bị.
+                   <span className="font-black block mb-1">{isEn ? 'LISTENING TEST NOTICE' : 'LƯU Ý BÀI THI LISTENING'}</span> 
+                   {isEn ? (
+                     <>Audio will <span className="font-bold underline">play automatically</span> as soon as you click Start below. Please put on headphones and check your device volume.</>
+                   ) : (
+                     <>File âm thanh sẽ được <span className="font-bold underline">tự động phát</span> ngay khi bạn bấm nút Bắt Đầu bên dưới. Vui lòng đeo tai nghe và kiểm tra lại âm lượng thiết bị.</>
+                   )}
                 </div>
               </div>
             )}
@@ -3102,13 +3121,13 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                   onClick={onBack} 
                   className="w-full sm:w-auto flex-1 bg-white px-8 py-4 rounded-xl font-bold text-slate-600 hover:text-slate-800 hover:bg-slate-50 border border-slate-200 transition-colors uppercase tracking-widest text-[13px] shadow-sm"
               >
-                  Quay lại
+                  {isEn ? 'Back' : 'Quay lại'}
               </button>
               <button 
                   onClick={handleStartTest} 
                   className="w-full sm:w-auto flex-[2] bg-[#0ea5e9] hover:bg-[#0284c7] text-white font-black px-10 py-4 rounded-xl shadow-lg transition-colors uppercase tracking-widest text-[13px] active:scale-95"
               >
-                  Bắt Đầu Làm Bài
+                  {isEn ? 'Start Test' : 'Bắt Đầu Làm Bài'}
               </button>
             </div>
           </div>
@@ -3129,7 +3148,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
           <div className="bg-slate-50/80 backdrop-blur border-b border-slate-100 py-2.5 px-5 flex items-center justify-between shrink-0">
             <div className="flex items-center">
               <span className="text-base mr-2">📖</span>
-              <span className="font-bold text-[11px] text-slate-500 tracking-widest uppercase">Từ điển AI</span>
+              <span className="font-bold text-[11px] text-slate-500 tracking-widest uppercase">{isEn ? 'AI Dictionary' : 'Từ điển AI'}</span>
             </div>
             <button onClick={() => setDictPopup(null)} className="text-slate-400 hover:text-slate-700 text-lg font-bold">✕</button>
           </div>
@@ -3155,7 +3174,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
             {dictPopup.isLoading ? (
               <div className="flex flex-col items-center justify-center py-4 opacity-50">
                 <span className="w-6 h-6 border-2 border-[#0ea5e9] border-t-transparent rounded-full animate-spin mb-2"></span>
-                <span className="text-[13px] font-medium">Đang dịch...</span>
+                <span className="text-[13px] font-medium">{isEn ? 'Translating...' : 'Đang dịch...'}</span>
               </div>
             ) : (
               <div className="text-slate-700 leading-relaxed font-medium">

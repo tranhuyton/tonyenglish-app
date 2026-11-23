@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { X, BookOpen, Maximize2 } from 'lucide-react';
+import { useLmsLang } from './utils/lmsI18n';
 
 const TEST_VIEWS = [
   'computer',
@@ -21,6 +22,8 @@ interface DictionaryWidgetProps {
 }
 
 export default function DictionaryWidget({ currentView, initialIsReview = false }: DictionaryWidgetProps) {
+  const [lang] = useLmsLang();
+  const isEn = lang === 'en';
   const [isReviewMode, setIsReviewMode] = useState<boolean>(initialIsReview);
   const [quickDict, setQuickDict] = useState<{ word: string; x: number; y: number } | null>(null);
   const [standaloneOpen, setStandaloneOpen] = useState<boolean>(false);
@@ -200,7 +203,7 @@ export default function DictionaryWidget({ currentView, initialIsReview = false 
                 setQuickDict(null);
               }}
               className="flex items-center gap-2 min-w-0 hover:opacity-90 transition cursor-pointer text-left"
-              title="Bấm để mở Từ điển lớn"
+              title={isEn ? 'Click to open full dictionary' : 'Bấm để mở Từ điển lớn'}
             >
               <img
                 src="/logo-shield.png"
@@ -223,7 +226,7 @@ export default function DictionaryWidget({ currentView, initialIsReview = false 
                   setQuickDict(null);
                 }}
                 className="w-6 h-6 rounded-lg flex items-center justify-center text-white/75 hover:text-white hover:bg-white/15 transition cursor-pointer"
-                title="Mở toàn màn hình Từ điển"
+                title={isEn ? 'Open full-screen Dictionary' : 'Mở toàn màn hình Từ điển'}
               >
                 <Maximize2 className="w-3.5 h-3.5" />
               </button>
@@ -231,7 +234,7 @@ export default function DictionaryWidget({ currentView, initialIsReview = false 
                 type="button"
                 onClick={() => setQuickDict(null)}
                 className="w-6 h-6 rounded-lg flex items-center justify-center text-white/75 hover:text-white hover:bg-white/15 transition cursor-pointer"
-                title="Đóng (Esc)"
+                title={isEn ? 'Close (Esc)' : 'Đóng (Esc)'}
               >
                 <X className="w-4 h-4" />
               </button>
@@ -243,7 +246,7 @@ export default function DictionaryWidget({ currentView, initialIsReview = false 
               key={quickDict.word}
               src={`https://dic.tienganh123.com/fast_dict.php?word=${encodeURIComponent(quickDict.word)}&dict=ev_ve&m=yes`}
               className="w-full h-[210px] border-0 block"
-              title={`Tra từ: ${quickDict.word}`}
+              title={isEn ? `Lookup: ${quickDict.word}` : `Tra từ: ${quickDict.word}`}
             />
           </div>
         </div>
@@ -274,7 +277,7 @@ export default function DictionaryWidget({ currentView, initialIsReview = false 
                   <span className="hidden sm:inline-block text-white/30">|</span>
                   <span className="hidden sm:inline-flex items-center gap-1.5 text-xs font-semibold text-sky-100/90 truncate">
                     <BookOpen className="w-3.5 h-3.5 text-[#2ab4e8] shrink-0" />
-                    <span>Từ điển Anh - Việt / Việt - Anh / Đồng nghĩa</span>
+                    <span>{isEn ? 'English - Vietnamese / Synonyms Dictionary' : 'Từ điển Anh - Việt / Việt - Anh / Đồng nghĩa'}</span>
                   </span>
                 </div>
               </div>
@@ -282,7 +285,7 @@ export default function DictionaryWidget({ currentView, initialIsReview = false 
                 type="button"
                 onClick={() => setStandaloneOpen(false)}
                 className="w-8 h-8 rounded-xl bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition cursor-pointer shrink-0"
-                title="Đóng (Esc)"
+                title={isEn ? 'Close (Esc)' : 'Đóng (Esc)'}
               >
                 <X className="w-4 h-4" />
               </button>
@@ -292,7 +295,7 @@ export default function DictionaryWidget({ currentView, initialIsReview = false 
               <iframe
                 src="https://dic.tienganh123.com/v2/"
                 className="w-full h-full border-0"
-                title="Từ điển riêng biệt TonyEnglish"
+                title={isEn ? 'TonyEnglish Standalone Dictionary' : 'Từ điển riêng biệt TonyEnglish'}
               />
             </div>
           </div>

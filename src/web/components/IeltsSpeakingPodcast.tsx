@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { useLmsLang } from '../../utils/lmsI18n';
 
 export interface OrangePhraseItem {
   en: string;
@@ -71,6 +72,8 @@ interface Props {
 let cachedPodcastMap: Record<string, ArticlePodcastData> | null = null;
 
 export const IeltsSpeakingPodcast: React.FC<Props> = ({ newsId, onPodcastPractice }) => {
+  const [lang] = useLmsLang();
+  const isEn = lang === 'en';
   const [data, setData] = useState<ArticlePodcastData | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [mode, setMode] = useState<PracticeMode>('shadowing');
@@ -544,7 +547,9 @@ export const IeltsSpeakingPodcast: React.FC<Props> = ({ newsId, onPodcastPractic
   if (loading) {
     return (
       <div className="my-6 p-6 rounded-2xl bg-slate-50 border border-slate-200 text-center text-slate-500 font-semibold text-sm">
-        ⏳ Đang tải Podcast luyện nói IELTS & Cụm từ màu da cam...
+        {isEn
+          ? '⏳ Loading IELTS Speaking Podcast & Orange Expressions...'
+          : '⏳ Đang tải Podcast luyện nói IELTS & Cụm từ màu da cam...'}
       </div>
     );
   }
@@ -558,27 +563,49 @@ export const IeltsSpeakingPodcast: React.FC<Props> = ({ newsId, onPodcastPractic
   const getPhaseBannerText = () => {
     switch (phase) {
       case 'playing_en':
-        return '🔊 Đang phát câu Tiếng Anh mẫu — Hãy lắng nghe ngữ điệu & cách nhấn cụm từ da cam!';
+        return isEn
+          ? '🔊 Playing model English sentence — Listen closely to intonation & orange expressions!'
+          : '🔊 Đang phát câu Tiếng Anh mẫu — Hãy lắng nghe ngữ điệu & cách nhấn cụm từ da cam!';
       case 'pause_shadow':
-        return `🎙️ TỚI LƯỢT BẠN NÓI NHẠI! Hãy đọc to câu trên và nhấn mạnh cụm từ màu da cam (${countdownSec}s)...`;
+        return isEn
+          ? `🎙️ YOUR TURN TO SHADOW! Repeat the sentence aloud and emphasize the orange phrases (${countdownSec}s)...`
+          : `🎙️ TỚI LƯỢT BẠN NÓI NHẠI! Hãy đọc to câu trên và nhấn mạnh cụm từ màu da cam (${countdownSec}s)...`;
       case 'playing_vi':
-        return '🇻🇳 Đang đọc câu Tiếng Việt — Hãy chuẩn bị dịch sang Tiếng Anh!';
+        return isEn
+          ? '🇻🇳 Playing Vietnamese prompt — Get ready to translate into English!'
+          : '🇻🇳 Đang đọc câu Tiếng Việt — Hãy chuẩn bị dịch sang Tiếng Anh!';
       case 'pause_reflex':
-        return `⚡ PHẢN XẠ DỊCH VIỆT - ANH! Hãy nói to câu Tiếng Anh có dùng cụm từ da cam (${countdownSec}s)...`;
+        return isEn
+          ? `⚡ VI → EN REFLEX TRANSLATION! Say the English sentence aloud using the orange phrases (${countdownSec}s)...`
+          : `⚡ PHẢN XẠ DỊCH VIỆT - ANH! Hãy nói to câu Tiếng Anh có dùng cụm từ da cam (${countdownSec}s)...`;
       case 'playing_en_answer':
-        return '🇬🇧 Đáp án câu Tiếng Anh mẫu — Hãy đối chiếu với câu bạn vừa dịch!';
+        return isEn
+          ? '🇬🇧 Model English answer — Compare with your translation!'
+          : '🇬🇧 Đáp án câu Tiếng Anh mẫu — Hãy đối chiếu với câu bạn vừa dịch!';
       case 'pause_absorb':
-        return `✨ Nghỉ chuyển câu (${countdownSec}s)...`;
+        return isEn
+          ? `✨ Transition pause (${countdownSec}s)...`
+          : `✨ Nghỉ chuyển câu (${countdownSec}s)...`;
       case 'playing_orange_vi':
-        return '🇻🇳 Nghe nghĩa Tiếng Việt của cụm từ màu da cam...';
+        return isEn
+          ? '🇻🇳 Listening to the Vietnamese meaning of the orange expression...'
+          : '🇻🇳 Nghe nghĩa Tiếng Việt của cụm từ màu da cam...';
       case 'pause_orange_recall':
-        return `🍊 HÃY BẬT RA CỤM TỪ MÀU DA CAM BẰNG TIẾNG ANH! (${countdownSec}s)...`;
+        return isEn
+          ? `🍊 RECALL THE ORANGE EXPRESSION IN ENGLISH! (${countdownSec}s)...`
+          : `🍊 HÃY BẬT RA CỤM TỪ MÀU DA CAM BẰNG TIẾNG ANH! (${countdownSec}s)...`;
       case 'playing_orange_en':
-        return '🇬🇧 Đáp án cụm từ văn nói màu da cam!';
+        return isEn
+          ? '🇬🇧 Model spoken orange expression!'
+          : '🇬🇧 Đáp án cụm từ văn nói màu da cam!';
       case 'playing_orange_example':
-        return '📖 Nghe câu ví dụ áp dụng cụm từ màu da cam trong bài nói mẫu...';
+        return isEn
+          ? '📖 Listening to the example sentence using this orange expression...'
+          : '📖 Nghe câu ví dụ áp dụng cụm từ màu da cam trong bài nói mẫu...';
       default:
-        return 'Bấm "▶ Phát Podcast" để luyện tự động toàn bài hoặc bấm vào từng câu / cụm từ da cam bên dưới.';
+        return isEn
+          ? 'Click "▶ Auto-Play Podcast" for hands-free practice or click any sentence / orange phrase below.'
+          : 'Bấm "▶ Phát Podcast" để luyện tự động toàn bài hoặc bấm vào từng câu / cụm từ da cam bên dưới.';
     }
   };
 
@@ -594,20 +621,31 @@ export const IeltsSpeakingPodcast: React.FC<Props> = ({ newsId, onPodcastPractic
               <span className="text-amber-300">🍊 Mastering Spoken Expressions</span>
             </div>
             <h3 className="text-lg sm:text-xl font-black leading-snug">
-              Podcast Luyện Nói Theo Câu, Phản Xạ Dịch Việt - Anh & Cụm Từ Màu Da Cam
+              {isEn
+                ? 'Sentence Shadowing, VI–EN Reflex & Orange Spoken Expressions Podcast'
+                : 'Podcast Luyện Nói Theo Câu, Phản Xạ Dịch Việt - Anh & Cụm Từ Màu Da Cam'}
             </h3>
             <p className="text-xs sm:text-sm text-sky-100/90 mt-1">
-              Luyện nói nhại từng câu (Shadowing), nghe Tiếng Việt bật ra Tiếng Anh và làm chủ{' '}
-              <strong className="text-amber-300">{data.orangeCount} từ & cụm từ màu da cam</strong> cực đắt giá trong văn nói IELTS.
+              {isEn ? (
+                <>
+                  Practice sentence-by-sentence Shadowing, VI→EN reflex translation, and master{' '}
+                  <strong className="text-amber-300">{data.orangeCount} high-value orange spoken expressions</strong> for IELTS Speaking.
+                </>
+              ) : (
+                <>
+                  Luyện nói nhại từng câu (Shadowing), nghe Tiếng Việt bật ra Tiếng Anh và làm chủ{' '}
+                  <strong className="text-amber-300">{data.orangeCount} từ & cụm từ màu da cam</strong> cực đắt giá trong văn nói IELTS.
+                </>
+              )}
             </p>
           </div>
 
           <div className="flex flex-wrap items-center gap-2 shrink-0">
             <span className="px-3.5 py-1.5 rounded-xl bg-white/10 border border-white/15 text-xs font-bold">
-              🗣️ {data.sentenceCount} câu mẫu
+              🗣️ {data.sentenceCount} {isEn ? 'model sentences' : 'câu mẫu'}
             </span>
             <span className="px-3.5 py-1.5 rounded-xl bg-[#ff6600] text-white text-xs font-extrabold shadow-2xs">
-              🍊 {data.orangeCount} cụm từ da cam
+              🍊 {data.orangeCount} {isEn ? 'orange phrases' : 'cụm từ da cam'}
             </span>
           </div>
         </div>
@@ -625,9 +663,11 @@ export const IeltsSpeakingPodcast: React.FC<Props> = ({ newsId, onPodcastPractic
           >
             <span className="text-lg">🗣️</span>
             <div className="min-w-0">
-              <div className="text-xs sm:text-sm leading-tight truncate">1. Nói nhại theo câu (Shadowing)</div>
+              <div className="text-xs sm:text-sm leading-tight truncate">
+                {isEn ? '1. Sentence Shadowing' : '1. Nói nhại theo câu (Shadowing)'}
+              </div>
               <div className={`text-[11px] truncate ${mode === 'shadowing' ? 'text-slate-500 font-medium' : 'text-sky-200'}`}>
-                Nghe câu mẫu EN → Nghỉ để nói theo
+                {isEn ? 'Listen to EN model → Pause to shadow' : 'Nghe câu mẫu EN → Nghỉ để nói theo'}
               </div>
             </div>
           </button>
@@ -643,9 +683,11 @@ export const IeltsSpeakingPodcast: React.FC<Props> = ({ newsId, onPodcastPractic
           >
             <span className="text-lg">⚡</span>
             <div className="min-w-0">
-              <div className="text-xs sm:text-sm leading-tight truncate">2. Nghe Việt – Dịch sang Anh</div>
+              <div className="text-xs sm:text-sm leading-tight truncate">
+                {isEn ? '2. VI → EN Reflex Drill' : '2. Nghe Việt – Dịch sang Anh'}
+              </div>
               <div className={`text-[11px] truncate ${mode === 'reflex' ? 'text-slate-500 font-medium' : 'text-sky-200'}`}>
-                Nghe câu VI + Gợi ý cụm cam → Dịch EN
+                {isEn ? 'Hear VI + Orange hints → Speak EN' : 'Nghe câu VI + Gợi ý cụm cam → Dịch EN'}
               </div>
             </div>
           </button>
@@ -662,10 +704,12 @@ export const IeltsSpeakingPodcast: React.FC<Props> = ({ newsId, onPodcastPractic
             <span className="text-lg">🍊</span>
             <div className="min-w-0">
               <div className="text-xs sm:text-sm leading-tight truncate">
-                3. Luyện Cụm từ Da cam ({data.orangeCount})
+                {isEn
+                  ? `3. Orange Expressions Drill (${data.orangeCount})`
+                  : `3. Luyện Cụm từ Da cam (${data.orangeCount})`}
               </div>
               <div className={`text-[11px] truncate ${mode === 'orange_drill' ? 'text-orange-100 font-medium' : 'text-sky-200'}`}>
-                Nghe nghĩa VI → Bật ra cụm từ cam + Ví dụ
+                {isEn ? 'Hear VI meaning → Recall phrase + Example' : 'Nghe nghĩa VI → Bật ra cụm từ cam + Ví dụ'}
               </div>
             </div>
           </button>
@@ -677,7 +721,7 @@ export const IeltsSpeakingPodcast: React.FC<Props> = ({ newsId, onPodcastPractic
         {/* Section Filter Pills (when in shadowing or reflex mode and multiple sections exist) */}
         {mode !== 'orange_drill' && data.sections.length > 1 && (
           <div className="flex items-center gap-1.5 overflow-x-auto pb-1">
-            <span className="text-xs font-bold text-slate-400 shrink-0 mr-1">Phần luyện:</span>
+            <span className="text-xs font-bold text-slate-400 shrink-0 mr-1">{isEn ? 'Section:' : 'Phần luyện:'}</span>
             <button
               type="button"
               onClick={() => setSelectedSectionIdx(0)}
@@ -687,7 +731,7 @@ export const IeltsSpeakingPodcast: React.FC<Props> = ({ newsId, onPodcastPractic
                   : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
               }`}
             >
-              Tất cả ({ data.sentenceCount } câu)
+              {isEn ? `All (${data.sentenceCount} sentences)` : `Tất cả (${data.sentenceCount} câu)`}
             </button>
             {data.sections.map((sec) => (
               <button
@@ -718,7 +762,11 @@ export const IeltsSpeakingPodcast: React.FC<Props> = ({ newsId, onPodcastPractic
                 <span>▶</span>
                 <span>
                   {activeItemIdx > 0 && activeItemIdx < totalItemsInCurrentMode
-                    ? `Tiếp tục Podcast (Câu ${activeItemIdx + 1}/${totalItemsInCurrentMode})`
+                    ? isEn
+                      ? `Resume Podcast (#${activeItemIdx + 1}/${totalItemsInCurrentMode})`
+                      : `Tiếp tục Podcast (Câu ${activeItemIdx + 1}/${totalItemsInCurrentMode})`
+                    : isEn
+                    ? `Auto-Play Podcast (${totalItemsInCurrentMode} ${mode === 'orange_drill' ? 'phrases' : 'sentences'})`
                     : `Phát Podcast Tự Động (${totalItemsInCurrentMode} ${mode === 'orange_drill' ? 'cụm từ' : 'câu'})`}
                 </span>
               </button>
@@ -729,7 +777,7 @@ export const IeltsSpeakingPodcast: React.FC<Props> = ({ newsId, onPodcastPractic
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white font-black text-sm shadow-sm transition cursor-pointer"
               >
                 <span>⏹</span>
-                <span>Dừng Podcast</span>
+                <span>{isEn ? 'Stop Podcast' : 'Dừng Podcast'}</span>
               </button>
             )}
 
@@ -742,18 +790,18 @@ export const IeltsSpeakingPodcast: React.FC<Props> = ({ newsId, onPodcastPractic
                 if (isPlaying) startPodcastFrom(prev);
               }}
               className="px-3 py-2 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 text-xs font-bold text-slate-700 disabled:opacity-40 cursor-pointer"
-              title="Câu trước"
+              title={isEn ? 'Previous item' : 'Câu trước'}
             >
-              ⏮ Trước
+              ⏮ {isEn ? 'Prev' : 'Trước'}
             </button>
 
             <button
               type="button"
               onClick={() => startPodcastFrom(activeItemIdx)}
               className="px-3 py-2 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 text-xs font-bold text-slate-700 cursor-pointer"
-              title="Phát lại câu hiện tại"
+              title={isEn ? 'Replay current item' : 'Phát lại câu hiện tại'}
             >
-              🔁 Lặp lại #{activeItemIdx + 1}
+              🔁 {isEn ? 'Replay' : 'Lặp lại'} #{activeItemIdx + 1}
             </button>
 
             <button
@@ -765,16 +813,16 @@ export const IeltsSpeakingPodcast: React.FC<Props> = ({ newsId, onPodcastPractic
                 if (isPlaying) startPodcastFrom(next);
               }}
               className="px-3 py-2 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 text-xs font-bold text-slate-700 disabled:opacity-40 cursor-pointer"
-              title="Câu tiếp theo"
+              title={isEn ? 'Next item' : 'Câu tiếp theo'}
             >
-              Tiếp ⏭
+              {isEn ? 'Next' : 'Tiếp'} ⏭
             </button>
           </div>
 
           {/* Speed & Pause Duration Controls */}
           <div className="flex flex-wrap items-center gap-2 text-xs">
             <div className="inline-flex items-center gap-1 bg-slate-100 px-2.5 py-1.5 rounded-xl font-bold text-slate-700">
-              <span>Tốc độ:</span>
+              <span>{isEn ? 'Speed:' : 'Tốc độ:'}</span>
               {[0.85, 1.0, 1.15].map((r) => (
                 <button
                   key={r}
@@ -790,14 +838,14 @@ export const IeltsSpeakingPodcast: React.FC<Props> = ({ newsId, onPodcastPractic
             </div>
 
             <div className="inline-flex items-center gap-1 bg-slate-100 px-2.5 py-1.5 rounded-xl font-bold text-slate-700">
-              <span>Thời gian nghỉ để nói:</span>
+              <span>{isEn ? 'Speaking pause:' : 'Thời gian nghỉ để nói:'}</span>
               {[
-                { label: 'Nhanh', val: 1 },
-                { label: 'Vừa', val: 2.5 },
-                { label: 'Dài', val: 4.5 },
+                { key: 'fast', label: isEn ? 'Short' : 'Nhanh', val: 1 },
+                { key: 'medium', label: isEn ? 'Medium' : 'Vừa', val: 2.5 },
+                { key: 'long', label: isEn ? 'Long' : 'Dài', val: 4.5 },
               ].map((opt) => (
                 <button
-                  key={opt.label}
+                  key={opt.key}
                   type="button"
                   onClick={() => setPauseBonusSec(opt.val)}
                   className={`px-2 py-0.5 rounded-md transition ${
@@ -833,7 +881,16 @@ export const IeltsSpeakingPodcast: React.FC<Props> = ({ newsId, onPodcastPractic
         {mode === 'reflex' && (
           <div className="flex flex-wrap items-center justify-between gap-2 pt-1 text-xs">
             <span className="text-slate-500 font-medium">
-              💡 <strong>Cách luyện phản xạ:</strong> Nghe câu Tiếng Việt và nhìn gợi ý <strong>Cụm từ da cam 🍊</strong>, tự dịch to ra Tiếng Anh trước khi xem đáp án.
+              {isEn ? (
+                <>
+                  💡 <strong>How to practice reflex:</strong> Listen to the Vietnamese prompt and check the{' '}
+                  <strong>Orange Phrases 🍊</strong> hints, then say the English sentence aloud before revealing the answer.
+                </>
+              ) : (
+                <>
+                  💡 <strong>Cách luyện phản xạ:</strong> Nghe câu Tiếng Việt và nhìn gợi ý <strong>Cụm từ da cam 🍊</strong>, tự dịch to ra Tiếng Anh trước khi xem đáp án.
+                </>
+              )}
             </span>
             <div className="flex flex-wrap items-center gap-2">
               <button
@@ -844,14 +901,26 @@ export const IeltsSpeakingPodcast: React.FC<Props> = ({ newsId, onPodcastPractic
                 }}
                 className="px-3 py-1 rounded-lg border border-sky-200 bg-sky-50 text-[#0a5482] font-bold hover:bg-[#0a5482] hover:text-white transition"
               >
-                {hideReflexEnAll ? '👁️ Hiện tất cả câu Tiếng Anh' : '🙈 Ẩn câu Tiếng Anh để tự dịch'}
+                {hideReflexEnAll
+                  ? isEn
+                    ? '👁️ Show All English Sentences'
+                    : '👁️ Hiện tất cả câu Tiếng Anh'
+                  : isEn
+                  ? '🙈 Hide English to Self-Translate'
+                  : '🙈 Ẩn câu Tiếng Anh để tự dịch'}
               </button>
               <button
                 type="button"
                 onClick={() => setHideOrangeHintInReflex(!hideOrangeHintInReflex)}
                 className="px-3 py-1 rounded-lg border border-orange-200 bg-orange-50 text-[#c2410c] font-bold hover:bg-[#ff6600] hover:text-white transition"
               >
-                {hideOrangeHintInReflex ? '🍊 Hiện gợi ý Cụm từ da cam' : '🎯 Thử thách: Ẩn gợi ý Cụm từ da cam'}
+                {hideOrangeHintInReflex
+                  ? isEn
+                    ? '🍊 Show Orange Phrase Hints'
+                    : '🍊 Hiện gợi ý Cụm từ da cam'
+                  : isEn
+                  ? '🎯 Challenge: Hide Orange Hints'
+                  : '🎯 Thử thách: Ẩn gợi ý Cụm từ da cam'}
               </button>
             </div>
           </div>
@@ -860,7 +929,15 @@ export const IeltsSpeakingPodcast: React.FC<Props> = ({ newsId, onPodcastPractic
         {mode === 'orange_drill' && (
           <div className="flex flex-wrap items-center justify-between gap-2 pt-1 text-xs">
             <span className="text-slate-500 font-medium">
-              💡 <strong>Cách làm chủ cụm từ màu da cam:</strong> Nghe nghĩa Tiếng Việt → Tự bật ra cụm từ Tiếng Anh → Nghe và nói nhại luôn câu ví dụ chứa cụm từ đó.
+              {isEn ? (
+                <>
+                  💡 <strong>How to master orange expressions:</strong> Hear the Vietnamese meaning → Recall the English phrase aloud → Listen and shadow the example sentence in context.
+                </>
+              ) : (
+                <>
+                  💡 <strong>Cách làm chủ cụm từ màu da cam:</strong> Nghe nghĩa Tiếng Việt → Tự bật ra cụm từ Tiếng Anh → Nghe và nói nhại luôn câu ví dụ chứa cụm từ đó.
+                </>
+              )}
             </span>
             <button
               type="button"
@@ -870,7 +947,13 @@ export const IeltsSpeakingPodcast: React.FC<Props> = ({ newsId, onPodcastPractic
               }}
               className="px-3 py-1 rounded-lg border border-orange-200 bg-orange-50 text-[#c2410c] font-bold hover:bg-[#ff6600] hover:text-white transition"
             >
-              {hideOrangeEnInDrill ? '👁️ Hiện tất cả cụm từ Tiếng Anh' : '🙈 Che cụm từ Tiếng Anh để tự kiểm tra'}
+              {hideOrangeEnInDrill
+                ? isEn
+                  ? '👁️ Show All English Phrases'
+                  : '👁️ Hiện tất cả cụm từ Tiếng Anh'
+                : isEn
+                ? '🙈 Hide English Phrases to Quiz'
+                : '🙈 Che cụm từ Tiếng Anh để tự kiểm tra'}
             </button>
           </div>
         )}
@@ -906,7 +989,7 @@ export const IeltsSpeakingPodcast: React.FC<Props> = ({ newsId, onPodcastPractic
                         onClick={() => playSingleSnippet(item.questionEn, 'en')}
                         className="self-start sm:self-center shrink-0 px-3 py-1.5 rounded-xl bg-white border border-slate-200 hover:border-[#0a5482] text-xs font-bold text-[#0a5482] shadow-2xs cursor-pointer"
                       >
-                        🔊 Nghe câu hỏi
+                        🔊 {isEn ? 'Listen to question' : 'Nghe câu hỏi'}
                       </button>
                     )}
                   </div>
@@ -965,7 +1048,7 @@ export const IeltsSpeakingPodcast: React.FC<Props> = ({ newsId, onPodcastPractic
                                 onClick={() => setRevealedReflexIds((prev) => ({ ...prev, [item.id]: true }))}
                                 className="px-3.5 py-2 rounded-xl border border-dashed border-slate-300 hover:border-[#0a5482] text-xs font-bold text-slate-500 hover:text-[#0a5482] bg-slate-50 transition cursor-pointer"
                               >
-                                👁️ Bấm để đối chiếu câu Tiếng Anh mẫu
+                                👁️ {isEn ? 'Click to reveal model English sentence' : 'Bấm để đối chiếu câu Tiếng Anh mẫu'}
                               </button>
                             )}
                           </>
@@ -975,7 +1058,7 @@ export const IeltsSpeakingPodcast: React.FC<Props> = ({ newsId, onPodcastPractic
                         {item.orangePhrases.length > 0 && !(mode === 'reflex' && hideOrangeHintInReflex) && (
                           <div className="flex flex-wrap items-center gap-1.5 pt-1">
                             <span className="text-[11px] font-extrabold text-[#c2410c] uppercase tracking-wider mr-1">
-                              🍊 Cụm từ da cam:
+                              🍊 {isEn ? 'Orange phrases:' : 'Cụm từ da cam:'}
                             </span>
                             {item.orangePhrases.map((op, opIdx) => (
                               <button
@@ -983,7 +1066,7 @@ export const IeltsSpeakingPodcast: React.FC<Props> = ({ newsId, onPodcastPractic
                                 type="button"
                                 onClick={() => playSingleSnippet(op.en, 'en')}
                                 className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-orange-50 hover:bg-[#ff6600] text-[#c2410c] hover:text-white border border-orange-200/90 text-xs font-bold transition cursor-pointer"
-                                title="Bấm để nghe phát âm cụm từ màu da cam này"
+                                title={isEn ? 'Click to hear pronunciation of this orange expression' : 'Bấm để nghe phát âm cụm từ màu da cam này'}
                               >
                                 <span>🔊</span>
                                 <span className="underline decoration-dotted">{op.en}</span>
@@ -1001,7 +1084,7 @@ export const IeltsSpeakingPodcast: React.FC<Props> = ({ newsId, onPodcastPractic
                         type="button"
                         onClick={() => playSingleSnippet(item.en, 'en', item.enAudioUrl)}
                         className="px-2.5 py-1.5 rounded-lg bg-sky-50 hover:bg-[#0a5482] text-[#0a5482] hover:text-white border border-sky-200 text-xs font-bold transition cursor-pointer"
-                        title="Nghe câu Tiếng Anh"
+                        title={isEn ? 'Listen in English' : 'Nghe câu Tiếng Anh'}
                       >
                         🔊 EN
                       </button>
@@ -1009,7 +1092,7 @@ export const IeltsSpeakingPodcast: React.FC<Props> = ({ newsId, onPodcastPractic
                         type="button"
                         onClick={() => playSingleSnippet(item.vi, 'vi', item.viAudioUrl)}
                         className="px-2.5 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-700 text-slate-700 hover:text-white text-xs font-bold transition cursor-pointer"
-                        title="Nghe câu Tiếng Việt"
+                        title={isEn ? 'Listen in Vietnamese' : 'Nghe câu Tiếng Việt'}
                       >
                         🇻🇳 VI
                       </button>
@@ -1017,9 +1100,9 @@ export const IeltsSpeakingPodcast: React.FC<Props> = ({ newsId, onPodcastPractic
                         type="button"
                         onClick={() => startPodcastFrom(idx)}
                         className="px-2.5 py-1.5 rounded-lg bg-orange-50 hover:bg-[#ff6600] text-[#c2410c] hover:text-white border border-orange-200 text-xs font-bold transition cursor-pointer"
-                        title="Phát Podcast bắt đầu từ câu này"
+                        title={isEn ? 'Start Podcast from this sentence' : 'Phát Podcast bắt đầu từ câu này'}
                       >
-                        ▶ Từ đây
+                        ▶ {isEn ? 'From here' : 'Từ đây'}
                       </button>
                     </div>
                   </div>
@@ -1068,7 +1151,7 @@ export const IeltsSpeakingPodcast: React.FC<Props> = ({ newsId, onPodcastPractic
                           onClick={() => setRevealedOrangeDrillIdx((prev) => ({ ...prev, [vIdx]: true }))}
                           className="px-3.5 py-1.5 rounded-xl border border-dashed border-[#ff6600] bg-orange-50 text-[#c2410c] text-xs font-extrabold cursor-pointer"
                         >
-                          👁️ Hiện cụm từ Tiếng Anh
+                          👁️ {isEn ? 'Reveal English phrase' : 'Hiện cụm từ Tiếng Anh'}
                         </button>
                       )}
 
@@ -1082,21 +1165,21 @@ export const IeltsSpeakingPodcast: React.FC<Props> = ({ newsId, onPodcastPractic
                         onClick={() => playSingleSnippet(vItem.en, 'en', vItem.enAudioUrl)}
                         className="px-3 py-1.5 rounded-lg bg-orange-50 hover:bg-[#ff6600] text-[#c2410c] hover:text-white border border-orange-200 text-xs font-bold transition cursor-pointer"
                       >
-                        🔊 Nghe cụm từ
+                        🔊 {isEn ? 'Play phrase' : 'Nghe cụm từ'}
                       </button>
                       <button
                         type="button"
                         onClick={() => playSingleSnippet(vItem.exampleEn, 'en')}
                         className="px-3 py-1.5 rounded-lg bg-sky-50 hover:bg-[#0a5482] text-[#0a5482] hover:text-white border border-sky-200 text-xs font-bold transition cursor-pointer"
                       >
-                        🔊 Nghe câu ví dụ
+                        🔊 {isEn ? 'Play example' : 'Nghe câu ví dụ'}
                       </button>
                       <button
                         type="button"
                         onClick={() => startPodcastFrom(vIdx)}
                         className="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-800 text-slate-700 hover:text-white text-xs font-bold transition cursor-pointer"
                       >
-                        ▶ Luyện từ đây
+                        ▶ {isEn ? 'Practice from here' : 'Luyện từ đây'}
                       </button>
                     </div>
                   </div>
@@ -1104,7 +1187,9 @@ export const IeltsSpeakingPodcast: React.FC<Props> = ({ newsId, onPodcastPractic
                   {/* Example Sentence in Context */}
                   <div className="mt-3 pl-3 border-l-[3px] border-[#ff6600]/60 space-y-1">
                     <div className="text-xs font-bold text-slate-400 uppercase tracking-wider">
-                      Câu áp dụng trong bài (Câu #{vItem.sentenceIndex}):
+                      {isEn
+                        ? `Example in context (Sentence #${vItem.sentenceIndex}):`
+                        : `Câu áp dụng trong bài (Câu #${vItem.sentenceIndex}):`}
                     </div>
                     <div
                       className="text-[15.5px] sm:text-[16px] text-slate-800 leading-relaxed"

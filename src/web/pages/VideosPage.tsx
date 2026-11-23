@@ -17,6 +17,7 @@ import { supabase } from '../lib/supabase';
 import { useApp } from '../context/AppContext';
 import { resolveUploadUrl, getYoutubeEmbedUrl, fixLegacyHtmlContent, updatePageSeo } from '../lib/utils';
 import { VideoInteractiveQuiz, parseVideoQuizData } from '../components/VideoInteractiveQuiz';
+import { getLocalizedVideoComment } from '../data/studyTipsEn';
 import {
   insertLibraryReadLog,
   insertLibraryExerciseLog,
@@ -49,7 +50,8 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
           .select('*')
           .eq('deleted', 0)
           .eq('vc_status', 1)
-          .order('vc_order', { ascending: true });
+          .order('vc_order', { ascending: true, nullsFirst: false })
+          .order('vc_id', { ascending: true });
         if (data) setAllVideoCates(data);
       } finally {
         setCatesLoaded(true);
@@ -468,7 +470,9 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
                         {currentVideo.video_cmt && (
                           <div
                             className="p-5 bg-slate-50 rounded-2xl border border-slate-200/80 legacy-prose"
-                            dangerouslySetInnerHTML={{ __html: fixLegacyHtmlContent(currentVideo.video_cmt) }}
+                            dangerouslySetInnerHTML={{
+                              __html: fixLegacyHtmlContent(getLocalizedVideoComment(currentVideo, lang)),
+                            }}
                           />
                         )}
                       </div>

@@ -9,6 +9,7 @@ import {
   clearGlobalTutorCache,
   extractStudentFirstName,
 } from './globalTutorContext';
+import { useLmsLang, getLocalizedCourseTitle } from './utils/lmsI18n';
 
 export interface StudyCoachProps {
   courseId: string;
@@ -107,6 +108,8 @@ export default function CourseStudyCoach({
   onSelectFolder,
   onNavigate,
 }: StudyCoachProps) {
+  const [lang] = useLmsLang();
+  const isEn = lang === 'en';
   const [isWindowCollapsed, setIsWindowCollapsed] = useState(false);
   const [isStatsCollapsed, setIsStatsCollapsed] = useState(false);
   const [isCourseDropdownOpen, setIsCourseDropdownOpen] = useState(false);
@@ -177,7 +180,7 @@ export default function CourseStudyCoach({
   const handleOpenImageOnBlackboard = () => {
     if (!attachedImage) return;
     const imgToSend = attachedImage;
-    const qText = userInput.trim() || 'Thầy giải chi tiết giúp em bài tập trong ảnh này với ạ.';
+    const qText = userInput.trim() || (isEn ? 'Please solve and explain the exercise in this image step by step.' : 'Thầy giải chi tiết giúp em bài tập trong ảnh này với ạ.');
     setAttachedImage(null);
     setUserInput('');
 
@@ -192,7 +195,7 @@ export default function CourseStudyCoach({
             mode: 'vision_mode',
             image: imgToSend,
             query: qText,
-            courseTitle: cleanTitle(courseTitle || 'Tổng hợp'),
+            courseTitle: getLocalizedCourseTitle(cleanTitle(courseTitle || (isEn ? 'General' : 'Tổng hợp')), lang),
           },
         })
       );
@@ -213,7 +216,8 @@ export default function CourseStudyCoach({
     );
   }, [courseId, courseTitle]);
 
-  const getCacheKey = (uid: string, cid: string) => `tony_ai_coach_chat_v5_${uid}_${cid}`;
+  const getCacheKey = (uid: string, cid: string, currentLang: string) =>
+    `tony_ai_coach_chat_v6_${uid}_${cid}_${currentLang}`;
 
   const askTonyAIBrain = async (
     snap: GlobalStudentSnapshot,
@@ -224,23 +228,44 @@ export default function CourseStudyCoach({
     setIsAiThinking(true);
     try {
       const imageInstruction = imageBase64
-        ? `\n[HỌC VIÊN ĐÃ ĐÍNH KÈM 1 HÌNH ẢNH BÀI TẬP / ĐỀ BÀI]:
+        ? isEn
+          ? `\n[THE STUDENT ATTACHED AN EXERCISE / QUESTION IMAGE]:
+- Examine the attached image carefully and read all questions, figures, or student answers.
+- Provide a clear step-by-step solution, highlight key marking-scheme concepts, and correct any mistakes.
+- Match the topic against the course catalog above and attach relevant clickable [[ACTION:...]] buttons.\n`
+          : `\n[HỌC VIÊN ĐÃ ĐÍNH KÈM 1 HÌNH ẢNH BÀI TẬP / ĐỀ BÀI]:
 - Hãy quan sát thật kỹ hình ảnh đính kèm, đọc toàn bộ đề bài/câu hỏi/số liệu hoặc bài làm của học sinh trong ảnh.
 - Giải chi tiết từng bước, giải thích rõ bản chất kiến thức, từ khóa ăn điểm (Marking Scheme) hoặc sửa lỗi sai cho học sinh một cách dễ hiểu nhất.
 - Sau khi giải xong bài trong ảnh, hãy đối chiếu với Bản đồ khóa học ở trên để gợi ý bài giảng lý thuyết hoặc thư mục đề luyện tập liên quan kèm mã nút bấm [[ACTION:...]].\n`
         : '';
 
-      const systemPrompt = `Bạn là "Thầy Tony AI" — người thầy chủ nhiệm kiêm gia sư trưởng trực tiếp dẫn dắt học viên tại TonyEnglish.vn.
+      const systemPrompt = isEn
+        ? `You are "Teacher Tony AI" — the lead mentor and personal academic coach at TonyEnglish.vn.
+[STRICT LANGUAGE RULE]: The student is using the ENGLISH interface. You MUST write your ENTIRE greeting, analysis, recommendations, AND ALL [[ACTION:...|Button Label]] labels exclusively in warm, clear, natural ENGLISH (unless the student explicitly requests Vietnamese). Address the student by first name ("${snap.studentName}") or "you".
+
+${snap.promptContext}
+${imageInstruction}
+[RESPONSE REQUIREMENTS]:
+1. ${
+            imageBase64
+              ? 'Focus first on solving and explaining the exercise/question in the uploaded image clearly step-by-step.'
+              : `Look directly at ${snap.studentName}'s real data above (recent test scores in this course, in-progress lectures on the Task Board, next lectures, and Cambridge Library progress).`
+          }
+2. Assign or suggest specific, concrete next steps (citing exact lecture titles, practice folders, or Library resources).
+3. ALWAYS append 1 to 4 clickable action tags using the exact syntax [[ACTION:OPEN_LECTURE:<ID>|<English Label>]], [[ACTION:OPEN_FOLDER:<ID>|<English Label>]], [[ACTION:OPEN_LIBRARY:<URL>|<English Label>]], [[ACTION:OPEN_AI_ROOM:<speaking|task1|task2>|<English Label>]], or [[ACTION:OPEN_TAB:<board|analytics>|<English Label>]] at the end of your reply.
+
+Student's current request: "${userQuestion}"`
+        : `Bạn là "Thầy Tony AI" — người thầy chủ nhiệm kiêm gia sư trưởng trực tiếp dẫn dắt học viên tại TonyEnglish.vn.
 Luôn xưng "Thầy" và gọi học viên bằng tên ("${snap.studentName}") hoặc "em". Giọng văn sống động, ấm áp, sát sao, đi thẳng vào dữ liệu thực tế của học viên (TUYỆT ĐỐI KHÔNG nói chung chung sáo rỗng, KHÔNG xưng con).
 
 ${snap.promptContext}
 ${imageInstruction}
 [YÊU CẦU TRẢ LỜI]:
 1. ${
-        imageBase64
-          ? 'Ưu tiên giải quyết thật chi tiết, cặn kẽ bài tập/câu hỏi trong hình ảnh mà học viên vừa gửi lên.'
-          : `Nhìn thẳng vào số liệu thực tế của ${snap.studentName} ở trên (điểm các bài test gần nhất của khóa học này, bài giảng đang làm dở trên Bảng công việc, bài giảng tiếp theo chưa học, và tiến độ đọc Bài dịch Cambridge trong Thư viện).`
-      }
+            imageBase64
+              ? 'Ưu tiên giải quyết thật chi tiết, cặn kẽ bài tập/câu hỏi trong hình ảnh mà học viên vừa gửi lên.'
+              : `Nhìn thẳng vào số liệu thực tế của ${snap.studentName} ở trên (điểm các bài test gần nhất của khóa học này, bài giảng đang làm dở trên Bảng công việc, bài giảng tiếp theo chưa học, và tiến độ đọc Bài dịch Cambridge trong Thư viện).`
+          }
 2. Giao hoặc gợi ý các công việc cụ thể tiếp theo cần làm (viết rõ tên bài giảng, tên bộ đề hoặc tên mục Thư viện).
 3. BẮT BUỘC chèn từ 1 đến 4 mã nút bấm hành động theo đúng cú pháp [[ACTION:OPEN_LECTURE:<ID>|<Nhãn nút>]], [[ACTION:OPEN_FOLDER:<ID>|<Nhãn nút>]], [[ACTION:OPEN_LIBRARY:<URL>|<Nhãn nút>]], [[ACTION:OPEN_AI_ROOM:<speaking|task1|task2>|<Nhãn nút>]], hoặc [[ACTION:OPEN_TAB:<board|analytics>|<Nhãn nút>]] ở cuối câu trả lời để học sinh bấm 1 click là mở thẳng bài đó.
 
@@ -256,7 +281,7 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
       });
 
       if (error || data?.error) {
-        throw new Error('Hệ thống AI đang bận, vui lòng thử lại sau giây lát.');
+        throw new Error(isEn ? 'AI is currently busy. Please try again shortly.' : 'Hệ thống AI đang bận, vui lòng thử lại sau giây lát.');
       }
 
       const rawReply = data?.result || data?.text || data?.response || '';
@@ -266,13 +291,13 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
         role: 'ai',
         text: cleanedText,
         actions,
-        timestamp: new Date().toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' }),
+        timestamp: new Date().toLocaleTimeString(isEn ? 'en-US' : 'vi-VN', { hour: '2-digit', minute: '2-digit' }),
       };
 
       setMessages((prev) => {
         const next = isInitialAutoDiagnosis ? [aiMsg] : [...prev, aiMsg];
         try {
-          sessionStorage.setItem(getCacheKey(snap.userId, courseId), JSON.stringify(next));
+          sessionStorage.setItem(getCacheKey(snap.userId, courseId, lang), JSON.stringify(next));
         } catch {}
         return next;
       });
@@ -287,36 +312,44 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
         fallbackActions.push({
           type: 'OPEN_LECTURE',
           target: targetLec.id,
-          label: `📖 Học bài: ${targetLec.title}`,
+          label: isEn ? `📖 Open Lesson: ${targetLec.title}` : `📖 Học bài: ${targetLec.title}`,
         });
       }
       if (snap.isIelts) {
         fallbackActions.push({
           type: 'OPEN_LIBRARY',
           target: '/news/category/cambridge-ielts-reading-translation',
-          label: '📚 Mở Thư viện: Bài dịch đọc Cambridge',
+          label: isEn ? '📚 Open Library: Cambridge Reading' : '📚 Mở Thư viện: Bài dịch đọc Cambridge',
         });
         fallbackActions.push({
           type: 'OPEN_LIBRARY',
           target: '/news/category/cambridge-ielts-listening-translation',
-          label: '🎧 Mở Thư viện: Bài dịch nghe Cambridge',
+          label: isEn ? '🎧 Open Library: Cambridge Listening' : '🎧 Mở Thư viện: Bài dịch nghe Cambridge',
         });
       }
       fallbackActions.push({
         type: 'OPEN_TAB',
         target: 'board',
-        label: '📋 Mở Bảng Công Việc',
+        label: isEn ? '📋 Open Task Board' : '📋 Mở Bảng Công Việc',
       });
 
       const fallbackMsg: CoachMessage = {
         role: 'ai',
-        text: `Chào **${snap.studentName}**! Thầy đã kiểm tra hồ sơ học tập của em: hiện tại em đã hoàn thành **${snap.taskProgress.completedTasks}/${snap.taskProgress.totalTasks} đầu việc (${snap.taskProgress.percent}%)** trên Bảng công việc${
-          snap.recentTests[0]
-            ? ` và bài kiểm tra gần nhất **${snap.recentTests[0].title}** đạt **${snap.recentTests[0].scoreLabel}**`
-            : ''
-        }.\n\nHôm nay thầy giao cho em ưu tiên hoàn thành bài giảng **${
-          targetLec ? targetLec.title : 'tiếp theo trong lộ trình'
-        }** và kết hợp đọc bài dịch song ngữ trong Thư viện nhé!`,
+        text: isEn
+          ? `Hello **${snap.studentName}**! I've checked your learning snapshot: you have completed **${snap.taskProgress.completedTasks}/${snap.taskProgress.totalTasks} tasks (${snap.taskProgress.percent}%)** on your Task Board${
+              snap.recentTests[0]
+                ? `, and your latest test **${snap.recentTests[0].title}** scored **${snap.recentTests[0].scoreLabel}**`
+                : ''
+            }.\n\nFor today's study session, let's prioritize finishing **${
+              targetLec ? targetLec.title : 'your next lesson in the roadmap'
+            }** and practicing in the Test Bank!`
+          : `Chào **${snap.studentName}**! Thầy đã kiểm tra hồ sơ học tập của em: hiện tại em đã hoàn thành **${snap.taskProgress.completedTasks}/${snap.taskProgress.totalTasks} đầu việc (${snap.taskProgress.percent}%)** trên Bảng công việc${
+              snap.recentTests[0]
+                ? ` và bài kiểm tra gần nhất **${snap.recentTests[0].title}** đạt **${snap.recentTests[0].scoreLabel}**`
+                : ''
+            }.\n\nHôm nay thầy giao cho em ưu tiên hoàn thành bài giảng **${
+              targetLec ? targetLec.title : 'tiếp theo trong lộ trình'
+            }** và kết hợp đọc bài dịch song ngữ trong Thư viện nhé!`,
         actions: fallbackActions,
       };
 
@@ -333,7 +366,8 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
 
     const initBrain = async () => {
       setIsLoadingSnapshot(true);
-      const snap = await fetchGlobalStudentSnapshot(courseId, courseTitle);
+      setMessages([]);
+      const snap = await fetchGlobalStudentSnapshot(courseId, courseTitle, false, lang);
       if (!isMounted) return;
       setIsLoadingSnapshot(false);
 
@@ -342,7 +376,7 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
 
       // Check session cache first so we don't waste tokens on every tab switch
       try {
-        const savedChat = sessionStorage.getItem(getCacheKey(snap.userId, courseId));
+        const savedChat = sessionStorage.getItem(getCacheKey(snap.userId, courseId, lang));
         if (savedChat) {
           const parsed = JSON.parse(savedChat);
           if (Array.isArray(parsed) && parsed.length > 0) {
@@ -352,10 +386,15 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
         }
       } catch {}
 
-      // Auto-trigger Thầy Tony AI's first live diagnosis!
+      const localizedTitle = getLocalizedCourseTitle(cleanTitle(courseTitle), lang);
+      // Auto-trigger Teacher Tony AI's first live diagnosis!
       await askTonyAIBrain(
         snap,
-        snap.isIelts
+        isEn
+          ? snap.isIelts
+            ? 'Please analyze my current learning progress (recent test scores, in-progress tasks on my Task Board, Cambridge Library progress, and my companion Grammar and Vocabulary course) and recommend my top priority study tasks for today!'
+            : `Please analyze my current learning progress in ${localizedTitle} (recent test scores and in-progress/next lessons on my Task Board) and recommend my top priority study tasks for today!`
+          : snap.isIelts
           ? 'Hãy phân tích hồ sơ học tập hiện tại của em (điểm các bài test gần nhất, các bài đang làm dở trên Bảng công việc, tiến độ đọc bài dịch Thư viện và khóa bổ trợ Grammar and Vocabulary) rồi chủ động giao cho em các việc cần làm ngay trong buổi học hôm nay (bao gồm cả việc làm thêm bài tập từ vựng/ngữ pháp trong khóa Grammar and Vocabulary) nhé!'
           : `Hãy phân tích hồ sơ học tập hiện tại của em trong khóa ${cleanTitle(courseTitle)} (điểm các bài kiểm tra gần nhất và các bài giảng đang làm dở / kế tiếp trên Bảng công việc) rồi chủ động giao cho em các việc cần làm ngay trong buổi học hôm nay nhé!`,
         true
@@ -366,19 +405,23 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
     return () => {
       isMounted = false;
     };
-  }, [courseId, courseTitle]);
+  }, [courseId, courseTitle, lang]);
 
   const handleRefreshDiagnosis = async () => {
     setIsLoadingSnapshot(true);
     clearGlobalTutorCache();
-    const freshSnap = await fetchGlobalStudentSnapshot(courseId, courseTitle, true);
+    const freshSnap = await fetchGlobalStudentSnapshot(courseId, courseTitle, true, lang);
     setIsLoadingSnapshot(false);
     if (!freshSnap) return;
     setSnapshot(freshSnap);
 
     await askTonyAIBrain(
       freshSnap,
-      freshSnap.isIelts
+      isEn
+        ? freshSnap.isIelts
+          ? 'I just updated my latest study progress. Please re-analyze all my test scores, Task Board, Cambridge Library, and Grammar and Vocabulary course to assign my next tasks!'
+          : 'I just updated my latest study progress. Please re-analyze all my test scores, Task Board, and Library progress to assign my next study tasks!'
+        : freshSnap.isIelts
         ? 'Em vừa cập nhật tiến độ học tập mới nhất. Thầy kiểm tra lại toàn bộ điểm số, Bảng công việc, Thư viện và khóa bổ trợ Grammar and Vocabulary để giao việc tiếp theo cho em nhé!'
         : 'Em vừa cập nhật tiến độ học tập mới nhất. Thầy kiểm tra lại toàn bộ điểm số, Bảng công việc và Thư viện để giao việc tiếp theo cho em nhé!',
       true
@@ -390,7 +433,7 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
     const imgToSend = customPrompt ? null : attachedImage;
     if ((!rawQ && !imgToSend) || isAiThinking || !snapshot) return;
 
-    const q = rawQ || 'Thầy giải chi tiết giúp em bài tập trong hình ảnh này nhé!';
+    const q = rawQ || (isEn ? 'Please solve and explain the exercise in this image step by step!' : 'Thầy giải chi tiết giúp em bài tập trong hình ảnh này nhé!');
 
     if (!customPrompt) {
       setUserInput('');
@@ -400,7 +443,7 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
       role: 'user',
       text: q,
       imageUrl: imgToSend || undefined,
-      timestamp: new Date().toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' }),
+      timestamp: new Date().toLocaleTimeString(isEn ? 'en-US' : 'vi-VN', { hour: '2-digit', minute: '2-digit' }),
     };
     setMessages((prev) => [...prev, userMsg]);
     setTimeout(() => {
@@ -415,76 +458,173 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
 
   if (!courseId || courseId === 'all') return null;
 
+  const localizedCourseName = getLocalizedCourseTitle(cleanTitle(courseTitle), lang);
+
   const quickPrompts = isIelts
+    ? isEn
+      ? [
+          {
+            icon: '🎯',
+            label: "Today's Top Priorities",
+            prompt:
+              'Based on my latest test scores, in-progress lectures on my Task Board, and companion Grammar & Vocabulary course, what should I prioritize studying today?',
+          },
+          {
+            icon: '📚',
+            label: 'Grammar & Vocabulary Boost',
+            prompt:
+              'Please review my current level and assign suitable exercises from Grammar and Vocabulary (such as 4000 English Words, Vocabulary Organiser, Expand Vocabulary Through Reading, or Grammar drills) with quick-open buttons!',
+          },
+          {
+            icon: '🎧',
+            label: 'Focus on Listening Today',
+            prompt:
+              'Today I want to focus on Listening. Please check my Listening scores and Cambridge Listening translation progress, then assign specific tasks with quick-open buttons!',
+          },
+          {
+            icon: '📖',
+            label: 'Focus on Reading Today',
+            prompt:
+              'Today I want to focus on Reading. Please check my Reading scores, Cambridge Reading translation progress, and vocabulary, then assign specific tasks with quick-open buttons!',
+          },
+          {
+            icon: '✍️',
+            label: 'Writing Practice Plan',
+            prompt:
+              'Today I want to practice Writing (Task 1 & Task 2). Please check my Writing progress on the Task Board and assign my next lesson plus the AI Writing Grader!',
+          },
+          {
+            icon: '🎙️',
+            label: 'Speaking Practice Plan',
+            prompt:
+              'Today I want to practice Speaking. Please check which Main Blocks / Plugin Blocks lessons I finished and assign the next lesson plus the IELTS Speaking AI Room!',
+          },
+        ]
+      : [
+          {
+            icon: '🎯',
+            label: 'Giao việc ưu tiên hôm nay',
+            prompt:
+              'Dựa vào điểm test gần nhất, các bài đang làm dở trên Bảng công việc và khóa bổ trợ Grammar & Vocabulary của em, hôm nay em nên ưu tiên làm những việc nào nhất hả thầy?',
+          },
+          {
+            icon: '📚',
+            label: 'Bổ trợ Grammar & Vocabulary',
+            prompt:
+              'Thầy kiểm tra lực học hiện tại của em và sai em làm thêm các bài tập phù hợp trong khóa Grammar and Vocabulary (như 4000 English Words, Vocabulary Organiser, Expand Vocabulary Through Reading hoặc bài tập Grammar) kèm nút mở bài để em tăng cường từ vựng và ngữ pháp phục vụ IELTS nhé!',
+          },
+          {
+            icon: '🎧',
+            label: 'Hôm nay em muốn cày Listening',
+            prompt:
+              'Hôm nay em muốn tập trung luyện kỹ năng Listening. Thầy xem điểm Listening và tiến độ đọc Bài dịch nghe Cambridge của em rồi giao bài cụ thể kèm nút mở bài giúp em nhé!',
+          },
+          {
+            icon: '📖',
+            label: 'Hôm nay em muốn cày Reading',
+            prompt:
+              'Hôm nay em muốn tập trung luyện kỹ năng Reading. Thầy xem điểm Reading, tiến độ đọc Bài dịch đọc Cambridge và từ vựng của em rồi giao bài cụ thể kèm nút mở bài giúp em nhé!',
+          },
+          {
+            icon: '✍️',
+            label: 'Hướng dẫn luyện Writing hôm nay',
+            prompt:
+              'Hôm nay em muốn học Writing (Task 1 & Task 2). Thầy xem trên Bảng công việc em đã học tới bài Writing nào rồi và giao bài học tiếp theo kèm phòng chấm AI cho em nhé!',
+          },
+          {
+            icon: '🎙️',
+            label: 'Hướng dẫn luyện Speaking hôm nay',
+            prompt:
+              'Hôm nay em muốn luyện Speaking. Thầy kiểm tra xem trong học phần Luyện thi Nói (Main Blocks / Plugin Blocks) em đã làm xong bài nào rồi và giao bài kế tiếp kèm phòng luyện Speaking AI cho em nhé!',
+          },
+        ]
+    : isIgcse0654
+    ? isEn
+      ? [
+          {
+            icon: '🎯',
+            label: "Today's Top Priorities",
+            prompt:
+              'Based on my progress across Biology, Chemistry, Physics and my latest test scores, which chapter and practice exercises should I study next today?',
+          },
+          {
+            icon: '🧬',
+            label: 'Study Biology (B1–B19)',
+            prompt:
+              'Today I want to study Biology (B1–B19). Please check which chapter I am on and assign the matching theory lecture + Topic Paper practice!',
+          },
+          {
+            icon: '🧪',
+            label: 'Study Chemistry (C1–C12)',
+            prompt:
+              'Today I want to study Chemistry (C1–C12). Please check which chapter I am on and assign the matching theory lecture + Topic Paper practice!',
+          },
+          {
+            icon: '⚡',
+            label: 'Study Physics (P1–P6)',
+            prompt:
+              'Today I want to study Physics (P1–P6). Please check which chapter I am on and assign the matching theory lecture + Topic Paper practice!',
+          },
+          {
+            icon: '📄',
+            label: 'Past Papers Strategy (Paper 2, 4, 6)',
+            prompt:
+              'Please recommend which Past Paper (Paper 2 Multiple Choice, Paper 4 Extended, or Paper 6 Practical) I should practice today based on my current performance!',
+          },
+        ]
+      : [
+          {
+            icon: '🎯',
+            label: 'Giao việc ưu tiên hôm nay',
+            prompt:
+              'Dựa vào tiến độ các chương Biology, Chemistry, Physics và điểm test gần nhất của em, hôm nay em nên học chương nào và làm bài tập nào tiếp theo hả thầy?',
+          },
+          {
+            icon: '🧬',
+            label: 'Hôm nay em học Biology (B1–B19)',
+            prompt:
+              'Hôm nay em muốn học phân môn Biology (B1–B19). Thầy kiểm tra xem em đã học tới chương B mấy rồi và giao bài giảng + bộ đề Topic Paper tương ứng cho em nhé!',
+          },
+          {
+            icon: '🧪',
+            label: 'Hôm nay em học Chemistry (C1–C12)',
+            prompt:
+              'Hôm nay em muốn học phân môn Chemistry (C1–C12). Thầy kiểm tra xem em đã học tới chương C mấy rồi và giao bài giảng + bộ đề Topic Paper tương ứng cho em nhé!',
+          },
+          {
+            icon: '⚡',
+            label: 'Hôm nay em học Physics (P1–P6)',
+            prompt:
+              'Hôm nay em muốn học phân môn Physics (P1–P6). Thầy kiểm tra xem em đã học tới chương P mấy rồi và giao bài giảng + bộ đề Topic Paper tương ứng cho em nhé!',
+          },
+          {
+            icon: '📄',
+            label: 'Tư vấn luyện Past Papers (Paper 2, 4, 6)',
+            prompt:
+              'Thầy tư vấn giúp em hôm nay nên luyện đề Past Paper nào (Paper 2 Multiple Choice, Paper 4 Extended hay Paper 6 Practical) dựa trên lực học hiện tại của em nhé!',
+          },
+        ]
+    : isEn
     ? [
         {
           icon: '🎯',
-          label: 'Giao việc ưu tiên hôm nay',
-          prompt:
-            'Dựa vào điểm test gần nhất, các bài đang làm dở trên Bảng công việc và khóa bổ trợ Grammar & Vocabulary của em, hôm nay em nên ưu tiên làm những việc nào nhất hả thầy?',
-        },
-        {
-          icon: '📚',
-          label: 'Bổ trợ Grammar & Vocabulary',
-          prompt:
-            'Thầy kiểm tra lực học hiện tại của em và sai em làm thêm các bài tập phù hợp trong khóa Grammar and Vocabulary (như 4000 English Words, Vocabulary Organiser, Expand Vocabulary Through Reading hoặc bài tập Grammar) kèm nút mở bài để em tăng cường từ vựng và ngữ pháp phục vụ IELTS nhé!',
-        },
-        {
-          icon: '🎧',
-          label: 'Hôm nay em muốn cày Listening',
-          prompt:
-            'Hôm nay em muốn tập trung luyện kỹ năng Listening. Thầy xem điểm Listening và tiến độ đọc Bài dịch nghe Cambridge của em rồi giao bài cụ thể kèm nút mở bài giúp em nhé!',
+          label: "Today's Top Priorities",
+          prompt: `Based on my learning progress and latest test scores in ${localizedCourseName}, which lecture and practice exercises should I prioritize today?`,
         },
         {
           icon: '📖',
-          label: 'Hôm nay em muốn cày Reading',
-          prompt:
-            'Hôm nay em muốn tập trung luyện kỹ năng Reading. Thầy xem điểm Reading, tiến độ đọc Bài dịch đọc Cambridge và từ vựng của em rồi giao bài cụ thể kèm nút mở bài giúp em nhé!',
+          label: 'Continue Theory Lecture',
+          prompt: `Please check my Task Board in ${localizedCourseName} for any in-progress or next theory lecture and assign it with a quick-open button!`,
         },
         {
-          icon: '✍️',
-          label: 'Hướng dẫn luyện Writing hôm nay',
-          prompt:
-            'Hôm nay em muốn học Writing (Task 1 & Task 2). Thầy xem trên Bảng công việc em đã học tới bài Writing nào rồi và giao bài học tiếp theo kèm phòng chấm AI cho em nhé!',
+          icon: '📝',
+          label: 'Pick Practice Tests Today',
+          prompt: `Please recommend the best practice test folder in ${localizedCourseName} for me to work on today!`,
         },
         {
-          icon: '🎙️',
-          label: 'Hướng dẫn luyện Speaking hôm nay',
-          prompt:
-            'Hôm nay em muốn luyện Speaking. Thầy kiểm tra xem trong học phần Luyện thi Nói (Main Blocks / Plugin Blocks) em đã làm xong bài nào rồi và giao bài kế tiếp kèm phòng luyện Speaking AI cho em nhé!',
-        },
-      ]
-    : isIgcse0654
-    ? [
-        {
-          icon: '🎯',
-          label: 'Giao việc ưu tiên hôm nay',
-          prompt:
-            'Dựa vào tiến độ các chương Biology, Chemistry, Physics và điểm test gần nhất của em, hôm nay em nên học chương nào và làm bài tập nào tiếp theo hả thầy?',
-        },
-        {
-          icon: '🧬',
-          label: 'Hôm nay em học Biology (B1–B19)',
-          prompt:
-            'Hôm nay em muốn học phân môn Biology (B1–B19). Thầy kiểm tra xem em đã học tới chương B mấy rồi và giao bài giảng + bộ đề Topic Paper tương ứng cho em nhé!',
-        },
-        {
-          icon: '🧪',
-          label: 'Hôm nay em học Chemistry (C1–C12)',
-          prompt:
-            'Hôm nay em muốn học phân môn Chemistry (C1–C12). Thầy kiểm tra xem em đã học tới chương C mấy rồi và giao bài giảng + bộ đề Topic Paper tương ứng cho em nhé!',
-        },
-        {
-          icon: '⚡',
-          label: 'Hôm nay em học Physics (P1–P6)',
-          prompt:
-            'Hôm nay em muốn học phân môn Physics (P1–P6). Thầy kiểm tra xem em đã học tới chương P mấy rồi và giao bài giảng + bộ đề Topic Paper tương ứng cho em nhé!',
-        },
-        {
-          icon: '📄',
-          label: 'Tư vấn luyện Past Papers (Paper 2, 4, 6)',
-          prompt:
-            'Thầy tư vấn giúp em hôm nay nên luyện đề Past Paper nào (Paper 2 Multiple Choice, Paper 4 Extended hay Paper 6 Practical) dựa trên lực học hiện tại của em nhé!',
+          icon: '📊',
+          label: 'Analyze Weak Areas & Review Plan',
+          prompt: `Please analyze my recent test scores in ${localizedCourseName}, identify my weakest topics, and tell me which lessons to review!`,
         },
       ]
     : [
@@ -510,7 +650,7 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
         },
       ];
 
-  const displayStudentName = extractStudentFirstName(snapshot?.studentName || studentName);
+  const displayStudentName = extractStudentFirstName(snapshot?.studentName || studentName, lang);
   const latestTest = snapshot?.recentTests?.[0] || null;
   const activeWorkLecture =
     snapshot?.taskProgress?.inProgressLectures?.[0] ||
@@ -536,11 +676,15 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
           <span className="bg-emerald-400/20 text-emerald-300 border border-emerald-400/30 text-[10px] sm:text-[11px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full flex items-center gap-1.5 min-w-0">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping shrink-0" />
             <span className="truncate">
-              Thầy Tony AI Chủ Nhiệm<span className="hidden sm:inline"> • Phân Tích Tiến Độ Tổng Thể</span>
+              {isEn ? (
+                <>Teacher Tony AI Mentor<span className="hidden sm:inline"> • Full Progress Analysis</span></>
+              ) : (
+                <>Thầy Tony AI Chủ Nhiệm<span className="hidden sm:inline"> • Phân Tích Tiến Độ Tổng Thể</span></>
+              )}
             </span>
           </span>
           <span className="bg-[#0f172a]/85 text-sky-200 border border-sky-400/35 text-[11px] sm:text-xs font-extrabold px-2.5 py-1 rounded-xl flex items-center gap-1.5 max-w-[200px] sm:max-w-[260px] truncate">
-            <span className="truncate">🎓 {cleanTitle(courseTitle)}</span>
+            <span className="truncate">🎓 {localizedCourseName}</span>
           </span>
         </div>
 
@@ -552,11 +696,11 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
               className="bg-white/10 hover:bg-white/20 text-white border border-white/20 text-xs font-extrabold px-3 py-1.5 rounded-xl transition cursor-pointer flex items-center gap-1.5"
               title={
                 isStatsCollapsed
-                  ? 'Mở lại bảng tóm tắt tiến độ phía trên'
-                  : 'Ẩn bảng tóm tắt tiến độ phía trên để cửa sổ chat cao hơn'
+                  ? (isEn ? 'Show summary cards above' : 'Mở lại bảng tóm tắt tiến độ phía trên')
+                  : (isEn ? 'Hide summary cards for a taller chat view' : 'Ẩn bảng tóm tắt tiến độ phía trên để cửa sổ chat cao hơn')
               }
             >
-              <span>{isStatsCollapsed ? 'Hiện tóm tắt' : 'Ẩn tóm tắt'}</span>
+              <span>{isStatsCollapsed ? (isEn ? 'Show Summary' : 'Hiện tóm tắt') : (isEn ? 'Hide Summary' : 'Ẩn tóm tắt')}</span>
               <span>{isStatsCollapsed ? '▼' : '▲'}</span>
             </button>
           )}
@@ -566,19 +710,19 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
               type="button"
               onClick={() => setIsWindowCollapsed(!isWindowCollapsed)}
               className="bg-amber-400/20 hover:bg-amber-400/30 text-amber-200 border border-amber-300/40 text-xs font-extrabold px-3 py-1.5 rounded-xl transition cursor-pointer flex items-center gap-1.5"
-              title={isWindowCollapsed ? 'Mở lại cửa sổ tư vấn Thầy Tony AI' : 'Thu gọn toàn bộ cửa sổ Thầy Tony AI'}
+              title={isWindowCollapsed ? (isEn ? 'Expand Teacher Tony AI window' : 'Mở lại cửa sổ tư vấn Thầy Tony AI') : (isEn ? 'Collapse Teacher Tony AI window' : 'Thu gọn toàn bộ cửa sổ Thầy Tony AI')}
             >
-              <span>{isWindowCollapsed ? 'Mở cửa sổ chat ▼' : 'Thu gọn cửa sổ ▲'}</span>
+              <span>{isWindowCollapsed ? (isEn ? 'Open Chat ▼' : 'Mở cửa sổ chat ▼') : (isEn ? 'Collapse ▲' : 'Thu gọn cửa sổ ▲')}</span>
             </button>
           ) : (
             <button
               type="button"
               onClick={onClose}
               className="px-3 py-1.5 rounded-xl bg-rose-500/80 hover:bg-rose-600 text-white border border-rose-400/50 font-black text-xs flex items-center gap-1.5 transition cursor-pointer"
-              title="Đóng cửa sổ Thầy Tony AI"
+              title={isEn ? 'Close Teacher Tony AI' : 'Đóng cửa sổ Thầy Tony AI'}
             >
               <span>✕</span>
-              <span className="hidden sm:inline">Đóng</span>
+              <span className="hidden sm:inline">{isEn ? 'Close' : 'Đóng'}</span>
             </button>
           )}
         </div>
@@ -593,7 +737,7 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
               <div
                 onClick={() =>
                   executeTutorAction(
-                    { type: 'OPEN_TAB', target: 'board', label: 'Bảng công việc' },
+                    { type: 'OPEN_TAB', target: 'board', label: isEn ? 'Task Board' : 'Bảng công việc' },
                     courseId,
                     { onOpenLecture, onSelectFolder, onNavigate }
                   )
@@ -602,7 +746,7 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
               >
                 <div className="flex items-center justify-between gap-2">
                   <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-500">
-                    📋 Bảng công việc
+                    {isEn ? '📋 Task Board' : '📋 Bảng công việc'}
                   </span>
                   <span className="text-xs font-black text-[#0a5482] bg-sky-50 px-2 py-0.5 rounded-full border border-sky-200">
                     {snapshot.taskProgress.percent}%
@@ -610,11 +754,12 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
                 </div>
                 <div className="mt-2">
                   <div className="text-base font-black text-slate-900">
-                    {snapshot.taskProgress.completedTasks} / {snapshot.taskProgress.totalTasks} việc
+                    {snapshot.taskProgress.completedTasks} / {snapshot.taskProgress.totalTasks} {isEn ? 'tasks' : 'việc'}
                   </div>
                   <div className="text-[11.5px] text-slate-500 font-semibold truncate mt-0.5">
-                    Xong trọn vẹn {snapshot.taskProgress.completedLecturesCount}/
-                    {snapshot.taskProgress.totalLecturesCount} bài giảng
+                    {isEn
+                      ? `Finished ${snapshot.taskProgress.completedLecturesCount}/${snapshot.taskProgress.totalLecturesCount} lectures`
+                      : `Xong trọn vẹn ${snapshot.taskProgress.completedLecturesCount}/${snapshot.taskProgress.totalLecturesCount} bài giảng`}
                   </div>
                 </div>
               </div>
@@ -638,18 +783,20 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
               >
                 <div className="flex items-center justify-between gap-2">
                   <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-500">
-                    📖 Bài cần học ngay
+                    {isEn ? '📖 Next Lesson' : '📖 Bài cần học ngay'}
                   </span>
                   <span className="text-[10.5px] font-black text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
-                    {snapshot.taskProgress.inProgressLectures.length > 0 ? 'Đang làm dở' : 'Bài kế tiếp'}
+                    {snapshot.taskProgress.inProgressLectures.length > 0
+                      ? (isEn ? 'In Progress' : 'Đang làm dở')
+                      : (isEn ? 'Up Next' : 'Bài kế tiếp')}
                   </span>
                 </div>
                 <div className="mt-2">
                   <div className="text-sm font-black text-slate-900 truncate" title={activeWorkLecture?.title}>
-                    {activeWorkLecture ? activeWorkLecture.title : 'Đã hoàn thành hết bài'}
+                    {activeWorkLecture ? activeWorkLecture.title : (isEn ? 'All lessons completed' : 'Đã hoàn thành hết bài')}
                   </div>
                   <div className="text-[11.5px] text-emerald-700 font-bold truncate mt-0.5">
-                    {activeWorkLecture ? `Bấm để mở ngay bài này →` : 'Tuyệt vời!'}
+                    {activeWorkLecture ? (isEn ? 'Click to open lesson →' : 'Bấm để mở ngay bài này →') : (isEn ? 'Awesome work!' : 'Tuyệt vời!')}
                   </div>
                 </div>
               </div>
@@ -658,7 +805,7 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
               <div
                 onClick={() =>
                   executeTutorAction(
-                    { type: 'OPEN_TAB', target: 'analytics', label: 'Tiến độ học' },
+                    { type: 'OPEN_TAB', target: 'analytics', label: isEn ? 'Progress Analytics' : 'Tiến độ học' },
                     courseId,
                     { onOpenLecture, onSelectFolder, onNavigate }
                   )
@@ -667,7 +814,7 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
               >
                 <div className="flex items-center justify-between gap-2">
                   <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-500">
-                    🎯 Điểm Test gần nhất
+                    {isEn ? '🎯 Latest Test' : '🎯 Điểm Test gần nhất'}
                   </span>
                   {latestTest && (
                     <span
@@ -683,12 +830,12 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
                 </div>
                 <div className="mt-2">
                   <div className="text-sm font-black text-slate-900 truncate" title={latestTest?.title}>
-                    {latestTest ? latestTest.title : 'Chưa có bài kiểm tra'}
+                    {latestTest ? latestTest.title : (isEn ? 'No test attempts yet' : 'Chưa có bài kiểm tra')}
                   </div>
                   <div className="text-[11.5px] text-slate-500 font-semibold truncate mt-0.5">
                     {latestTest
-                      ? `Ngày ${latestTest.dateLabel} • Kỹ năng ${latestTest.skill}`
-                      : 'Hãy làm 1 đề để AI chẩn đoán lực học'}
+                      ? (isEn ? `${latestTest.dateLabel} • ${latestTest.skill}` : `Ngày ${latestTest.dateLabel} • Kỹ năng ${latestTest.skill}`)
+                      : (isEn ? 'Take a test for AI diagnostics' : 'Hãy làm 1 đề để AI chẩn đoán lực học')}
                   </div>
                 </div>
               </div>
@@ -701,7 +848,7 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
                       {
                         type: 'OPEN_LIBRARY',
                         target: '/news/category/cambridge-ielts-reading-translation',
-                        label: 'Thư viện Bài dịch',
+                        label: isEn ? 'Cambridge Library' : 'Thư viện Bài dịch',
                       },
                       courseId,
                       { onOpenLecture, onSelectFolder, onNavigate }
@@ -711,19 +858,19 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
                 >
                   <div className="flex items-center justify-between gap-2">
                     <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-500">
-                      📚 Thư viện Dịch Cam
+                      {isEn ? '📚 Cambridge Library' : '📚 Thư viện Dịch Cam'}
                     </span>
                     <span className="text-[10.5px] font-black text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full border border-indigo-200">
-                      Bắt buộc
+                      {isEn ? 'Required' : 'Bắt buộc'}
                     </span>
                   </div>
                   <div className="mt-2">
                     <div className="text-sm font-black text-slate-900">
-                      Đọc: {snapshot.libraryProgress.camReadingCount}/252 • Nghe:{' '}
+                      {isEn ? 'Reading' : 'Đọc'}: {snapshot.libraryProgress.camReadingCount}/252 • {isEn ? 'Listening' : 'Nghe'}:{' '}
                       {snapshot.libraryProgress.camListeningCount}/336
                     </div>
                     <div className="text-[11.5px] text-indigo-700 font-bold truncate mt-0.5">
-                      Mở Thư viện Bài dịch Cambridge →
+                      {isEn ? 'Open Cambridge Translations →' : 'Mở Thư viện Bài dịch Cambridge →'}
                     </div>
                   </div>
                 </div>
@@ -731,7 +878,7 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
                 <div
                   onClick={() =>
                     executeTutorAction(
-                      { type: 'OPEN_TAB', target: 'analytics', label: 'Tiến độ học' },
+                      { type: 'OPEN_TAB', target: 'analytics', label: isEn ? 'Progress Analytics' : 'Tiến độ học' },
                       courseId,
                       { onOpenLecture, onSelectFolder, onNavigate }
                     )
@@ -740,18 +887,18 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
                 >
                   <div className="flex items-center justify-between gap-2">
                     <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-500">
-                      📊 Tổng số bài thi
+                      {isEn ? '📊 Total Tests' : '📊 Tổng số bài thi'}
                     </span>
                     <span className="text-[10.5px] font-black text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full border border-indigo-200 truncate max-w-[110px]">
-                      {isIgcse0654 ? 'IGCSE 0654' : 'Kho đề & Thi'}
+                      {isIgcse0654 ? 'IGCSE 0654' : (isEn ? 'Test Bank' : 'Kho đề & Thi')}
                     </span>
                   </div>
                   <div className="mt-2">
                     <div className="text-sm font-black text-slate-900">
-                      Đã làm {snapshot.recentTests.length} bài gần đây
+                      {isEn ? `${snapshot.recentTests.length} recent tests completed` : `Đã làm ${snapshot.recentTests.length} bài gần đây`}
                     </div>
                     <div className="text-[11.5px] text-indigo-700 font-bold truncate mt-0.5">
-                      Xem chi tiết Báo cáo hiệu suất →
+                      {isEn ? 'View Performance Report →' : 'Xem chi tiết Báo cáo hiệu suất →'}
                     </div>
                   </div>
                 </div>
@@ -765,7 +912,7 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
               <div className="flex items-center gap-2 flex-wrap">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                 <span className="text-xs font-extrabold uppercase tracking-wider text-[#0a5482] flex items-center gap-1.5 flex-wrap">
-                  <span>Nhận xét &amp; Chỉ định công việc trực tiếp từ Thầy Tony AI cho</span>
+                  <span>{isEn ? 'Direct Coaching & Study Plan from Teacher Tony AI for' : 'Nhận xét & Chỉ định công việc trực tiếp từ Thầy Tony AI cho'}</span>
                   <span className="font-black text-slate-950">{displayStudentName}</span>
                 </span>
               </div>
@@ -775,10 +922,10 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
                   onClick={handleRefreshDiagnosis}
                   disabled={isAiThinking || isLoadingSnapshot}
                   className="text-[11px] font-extrabold text-emerald-800 hover:bg-emerald-100 bg-emerald-50 border border-emerald-300 px-2.5 py-1 rounded-lg transition cursor-pointer flex items-center gap-1.5 disabled:opacity-50"
-                  title="Quét lại điểm số & tiến độ mới nhất để Thầy AI tư vấn lại"
+                  title={isEn ? 'Rescan latest scores & progress for updated AI advice' : 'Quét lại điểm số & tiến độ mới nhất để Thầy AI tư vấn lại'}
                 >
                   <span className={isAiThinking || isLoadingSnapshot ? 'animate-spin' : ''}>🔄</span>
-                  <span>Phân tích lại tiến độ</span>
+                  <span>{isEn ? 'Re-analyze Progress' : 'Phân tích lại tiến độ'}</span>
                 </button>
               </div>
             </div>
@@ -792,8 +939,17 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
                 <div className="flex items-center gap-3 py-6 justify-center text-slate-600 font-semibold text-sm">
                   <div className="w-5 h-5 border-2 border-[#0a5482]/30 border-t-[#0a5482] rounded-full animate-spin" />
                   <span>
-                    Thầy Tony AI đang đọc bảng điểm, các bài đang làm dở và nhật ký Thư viện của{' '}
-                    <span className="font-black text-slate-950">{displayStudentName}</span>...
+                    {isEn ? (
+                      <>
+                        Teacher Tony AI is reading test scores, tasks &amp; library activity for{' '}
+                        <span className="font-black text-slate-950">{displayStudentName}</span>...
+                      </>
+                    ) : (
+                      <>
+                        Thầy Tony AI đang đọc bảng điểm, các bài đang làm dở và nhật ký Thư viện của{' '}
+                        <span className="font-black text-slate-950">{displayStudentName}</span>...
+                      </>
+                    )}
                   </span>
                 </div>
               )}
@@ -842,7 +998,7 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
                           <div className="mt-4 pt-3.5 border-t border-slate-200/80">
                             <div className="text-[11px] font-black uppercase tracking-wider text-[#0a5482] mb-2 flex items-center gap-1.5">
                               <span>⚡</span>
-                              <span>Bấm vào đây để thực hiện ngay các việc Thầy vừa giao:</span>
+                              <span>{isEn ? 'Click below to jump straight into your assigned tasks:' : 'Bấm vào đây để thực hiện ngay các việc Thầy vừa giao:'}</span>
                             </div>
                             <div className="flex flex-wrap gap-2">
                               {msg.actions.map((act, aIdx) => {
@@ -894,8 +1050,17 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
                     <span className="w-2 h-2 bg-[#0a5482] rounded-full animate-bounce [animation-delay:150ms]" />
                     <span className="w-2 h-2 bg-[#2ab4e8] rounded-full animate-bounce [animation-delay:300ms]" />
                     <span className="ml-1 text-slate-600">
-                      Thầy Tony AI đang suy nghĩ và chọn bài phù hợp nhất cho{' '}
-                      <span className="font-black text-slate-950">{displayStudentName}</span>...
+                      {isEn ? (
+                        <>
+                          Teacher Tony AI is thinking and picking the best study tasks for{' '}
+                          <span className="font-black text-slate-950">{displayStudentName}</span>...
+                        </>
+                      ) : (
+                        <>
+                          Thầy Tony AI đang suy nghĩ và chọn bài phù hợp nhất cho{' '}
+                          <span className="font-black text-slate-950">{displayStudentName}</span>...
+                        </>
+                      )}
                     </span>
                   </div>
                 </div>
@@ -908,7 +1073,7 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
             <div className="p-3.5 sm:p-4 bg-slate-50 border-t border-slate-200/80 space-y-3">
               <div className="flex items-center gap-1.5 flex-wrap">
                 <span className="text-[11px] font-extrabold text-slate-500 mr-1">
-                  💡 Muốn đổi kỹ năng học hôm nay? Bấm hỏi Thầy ngay:
+                  {isEn ? '💡 Want to focus on a specific skill today? Ask Teacher Tony:' : '💡 Muốn đổi kỹ năng học hôm nay? Bấm hỏi Thầy ngay:'}
                 </span>
                 {quickPrompts.map((qp, idx) => (
                   <button
@@ -930,22 +1095,26 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
                     <div className="relative inline-block border border-slate-200 rounded-lg overflow-hidden shadow-2xs">
                       <img
                         src={attachedImage}
-                        alt="Ảnh bài tập đính kèm"
+                        alt={isEn ? 'Attached exercise image' : 'Ảnh bài tập đính kèm'}
                         className="h-14 w-auto object-cover bg-slate-50"
                       />
                       <button
                         type="button"
                         onClick={() => setAttachedImage(null)}
                         className="absolute -top-1 -right-1 w-5 h-5 bg-rose-500 hover:bg-rose-600 text-white rounded-full flex items-center justify-center text-[10px] font-bold shadow cursor-pointer"
-                        title="Xóa ảnh"
+                        title={isEn ? 'Remove image' : 'Xóa ảnh'}
                       >
                         ✕
                       </button>
                     </div>
                     <div className="text-xs">
-                      <div className="font-extrabold text-[#0a5482]">📸 Đã đính kèm ảnh bài tập</div>
+                      <div className="font-extrabold text-[#0a5482]">{isEn ? '📸 Exercise image attached' : '📸 Đã đính kèm ảnh bài tập'}</div>
                       <div className="text-slate-500 text-[11px]">
-                        Bấm <b>"Hỏi Thầy AI"</b> để giải ngay tại đây, hoặc đưa lên Bảng Đen để nghe giảng trực tiếp
+                        {isEn ? (
+                          <>Click <b>"Ask AI Coach"</b> to solve right here, or open on the Blackboard for live explanation</>
+                        ) : (
+                          <>Bấm <b>"Hỏi Thầy AI"</b> để giải ngay tại đây, hoặc đưa lên Bảng Đen để nghe giảng trực tiếp</>
+                        )}
                       </div>
                     </div>
                   </div>
@@ -955,7 +1124,7 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
                     className="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-extrabold px-3 py-2 rounded-xl shadow-2xs transition cursor-pointer flex items-center gap-1.5"
                   >
                     <span>👨‍🏫</span>
-                    <span>Đưa ảnh lên Bảng Đen giảng trực tiếp</span>
+                    <span>{isEn ? 'Solve Live on Blackboard' : 'Đưa ảnh lên Bảng Đen giảng trực tiếp'}</span>
                   </button>
                 </div>
               )}
@@ -972,10 +1141,10 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
                   onClick={() => fileInputRef.current?.click()}
                   disabled={isAiThinking}
                   className="bg-white hover:bg-sky-50 text-[#0a5482] border border-slate-300 hover:border-[#2ab4e8] font-bold text-xs sm:text-sm px-3 py-2.5 rounded-xl shadow-2xs transition cursor-pointer shrink-0 flex items-center gap-1.5 disabled:opacity-40"
-                  title="Tải ảnh bài tập lên hoặc bấm Ctrl+V để dán ảnh chụp màn hình"
+                  title={isEn ? 'Upload an exercise image or press Ctrl+V to paste a screenshot' : 'Tải ảnh bài tập lên hoặc bấm Ctrl+V để dán ảnh chụp màn hình'}
                 >
                   <span>📷</span>
-                  <span className="hidden sm:inline">Tải ảnh</span>
+                  <span className="hidden sm:inline">{isEn ? 'Upload' : 'Tải ảnh'}</span>
                 </button>
                 <input
                   type="file"
@@ -991,7 +1160,11 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
                   onChange={(e) => setUserInput(e.target.value)}
                   onPaste={handlePaste}
                   disabled={isAiThinking}
-                  placeholder={`Nhắn hỏi Thầy hoặc Ctrl+V dán ảnh bài tập (VD: "Thầy giải giúp em câu này / hôm nay em nên học gì?")...`}
+                  placeholder={
+                    isEn
+                      ? 'Ask Teacher Tony or press Ctrl+V to paste a question image (e.g. "What should I study today?")...'
+                      : 'Nhắn hỏi Thầy hoặc Ctrl+V dán ảnh bài tập (VD: "Thầy giải giúp em câu này / hôm nay em nên học gì?")...'
+                  }
                   className="flex-1 min-w-0 bg-white border border-slate-300 focus:border-[#2ab4e8] rounded-xl px-4 py-2.5 text-xs sm:text-sm font-medium text-slate-800 outline-none shadow-2xs"
                 />
                 <button
@@ -999,7 +1172,7 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
                   disabled={(!userInput.trim() && !attachedImage) || isAiThinking}
                   className="bg-[#0a5482] hover:bg-[#084266] text-white font-extrabold text-xs sm:text-sm px-4 py-2.5 rounded-xl shadow-xs transition cursor-pointer disabled:opacity-40 shrink-0 flex items-center gap-1.5"
                 >
-                  <span>Hỏi Thầy AI</span>
+                  <span>{isEn ? 'Ask AI Coach' : 'Hỏi Thầy AI'}</span>
                   <span>➤</span>
                 </button>
               </form>

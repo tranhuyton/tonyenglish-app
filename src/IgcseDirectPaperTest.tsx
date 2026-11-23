@@ -3,6 +3,7 @@ import { supabase } from './supabase';
 import { Document, Page, pdfjs } from 'react-pdf';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
+import { useLmsLang, LmsLangToggle } from './utils/lmsI18n';
 
 pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
@@ -79,7 +80,7 @@ const renderLatex = (text: string): string => {
   return r;
 };
 
-const DrawingPage = ({ pageNum, drawMode, penColor, scale, onStrokeDrawn }: any) => {
+const DrawingPage = ({ pageNum, drawMode, penColor, scale, onStrokeDrawn, isEn }: any) => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const isDrawingRef = useRef(false);
     const shapeStartRef = useRef<{x:number,y:number}|null>(null);
@@ -284,7 +285,7 @@ const DrawingPage = ({ pageNum, drawMode, penColor, scale, onStrokeDrawn }: any)
                     }}
                     className="absolute bg-white/90 border-2 border-[#1e88e5] rounded px-2 py-1 text-[14px] outline-none min-w-[120px] shadow-lg"
                     style={{ left: textPos.x, top: textPos.y, zIndex: 20, WebkitUserSelect: 'text', WebkitTouchCallout: 'default' } as React.CSSProperties}
-                    placeholder="Gõ text rồi Enter..."
+                    placeholder={isEn ? 'Type text and press Enter...' : 'Gõ text rồi Enter...'}
                 />
             )}
         </div>
@@ -293,6 +294,10 @@ const DrawingPage = ({ pageNum, drawMode, penColor, scale, onStrokeDrawn }: any)
 
 
 export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: propTestData }: { onBack?: () => void, onStartTest?: any, testData?: any }) {
+  const [lang, setLang] = useLmsLang();
+  const isEn = lang === 'en';
+  const isEnRef = useRef(isEn);
+  isEnRef.current = isEn;
   const [testData, setTestData] = useState<any>(() => {
       let raw = propTestData;
       if (!raw) {
@@ -329,7 +334,7 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
 
   const handleSafeExit = () => {
     if (!isReviewMode && !gradeResult) {
-      if (!window.confirm('Bạn đang làm bài thi IGCSE. Bạn có chắc muốn thoát ra ngoài không?')) return;
+      if (!window.confirm(isEn ? 'You are currently taking an IGCSE test. Are you sure you want to exit?' : 'Bạn đang làm bài thi IGCSE. Bạn có chắc muốn thoát ra ngoài không?')) return;
     }
     if (onBack) onBack();
   };
@@ -408,8 +413,8 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
     if (isFinishingRef.current || isSubmitting) return;
     const isExercise = testData?.content_json?.basicInfo?.category === 'exercise';
     if (!isForced) {
-      if (!isExercise && timeLeft > 0 && !window.confirm("Bạn có chắc chắn muốn nộp bài thi? AI sẽ phân tích hình ảnh mất khoảng 10-20 giây.")) { return; }
-      if (isExercise && !window.confirm("Bạn có chắc chắn muốn nộp bài?")) { return; }
+      if (!isExercise && timeLeft > 0 && !window.confirm(isEn ? "Are you sure you want to submit the exam? AI image grading takes about 10–20 seconds." : "Bạn có chắc chắn muốn nộp bài thi? AI sẽ phân tích hình ảnh mất khoảng 10-20 giây.")) { return; }
+      if (isExercise && !window.confirm(isEn ? "Are you sure you want to submit your work?" : "Bạn có chắc chắn muốn nộp bài?")) { return; }
     }
 
     const rawTime = testData.json_config?.timeLimit || testData.timeLimit || testData.time_limit || 120;
@@ -424,7 +429,11 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
 
     try {
       const imageAnswers: { questionId: string, base64: string }[] = [];
-      const textAnswers = { "ALL": "Học sinh làm bài trực tiếp trên giấy (PDF). Vui lòng xem các file đính kèm." };
+      const textAnswers = {
+        ALL: isEn
+          ? "The student completed the exam directly on the PDF paper. Please review the attached page images. IMPORTANT: Write all grading feedback (general_feedback and every examiner_comment) exclusively in English."
+          : "Học sinh làm bài trực tiếp trên giấy (PDF). Vui lòng xem các file đính kèm."
+      };
 
       const pageContainers = document.querySelectorAll('.page-container');
       
@@ -477,12 +486,14 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
             testConfig: testData.json_config?.questions || [],
             textAnswers: textAnswers,
             imageAnswers: imageAnswers,
-            pdfUrl: testData.insert_pdf_url || testData.pdf_url || null
+            pdfUrl: testData.insert_pdf_url || testData.pdf_url || null,
+            lang: isEn ? 'en' : 'vi',
+            feedbackLanguage: isEn ? 'English' : 'Vietnamese'
         }
       });
 
-      if (error) throw new Error("Lỗi gọi Server: " + error.message);
-      if (data?.error) throw new Error("Lỗi chấm điểm: " + data.error);
+      if (error) throw new Error((isEn ? "Server error: " : "Lỗi gọi Server: ") + error.message);
+      if (data?.error) throw new Error((isEn ? "Grading error: " : "Lỗi chấm điểm: ") + data.error);
       
       let gradedData;
       try {
@@ -504,7 +515,9 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
           gradedData = {
               total_student_score: 0,
               total_max_score: 0,
-              general_feedback: "⚠️ AI trả về dữ liệu bị lỗi định dạng (chứa ký tự không hợp lệ). Dưới đây là nội dung thô AI trả về:\n\n" + JSON.stringify(data.result || data.rawText),
+              general_feedback: (isEn
+                ? "⚠️ AI returned malformed data (invalid characters). Raw AI output below:\n\n"
+                : "⚠️ AI trả về dữ liệu bị lỗi định dạng (chứa ký tự không hợp lệ). Dưới đây là nội dung thô AI trả về:\n\n") + JSON.stringify(data.result || data.rawText),
               details: []
           };
       }
@@ -559,9 +572,9 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
     } catch (err: any) {
       isFinishingRef.current = false;
       if (err.message && err.message.includes("Unexpected end of JSON input")) {
-          alert("❌ Không thể nộp bài do kết nối gián đoạn hoặc file ảnh quá nặng. Vui lòng thử nộp lại.");
+          alert(isEn ? "❌ Could not submit due to an interrupted connection or oversized image files. Please try again." : "❌ Không thể nộp bài do kết nối gián đoạn hoặc file ảnh quá nặng. Vui lòng thử nộp lại.");
       } else {
-          alert("❌ Có lỗi trong lúc chấm: " + err.message);
+          alert((isEn ? "❌ An error occurred while grading: " : "❌ Có lỗi trong lúc chấm: ") + err.message);
       }
     } finally {
       setIsSubmitting(false);
@@ -579,12 +592,12 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
         if (currentEndTime) {
             const remaining = Math.max(0, Math.floor((currentEndTime - Date.now()) / 1000));
             setTimeLeft(remaining);
-            if (remaining <= 0) { clearInterval(timer); alert("⏰ Hết giờ làm bài!"); handleSubmitRef.current(true); }
+            if (remaining <= 0) { clearInterval(timer); alert(isEnRef.current ? "⏰ Time's up!" : "⏰ Hết giờ làm bài!"); handleSubmitRef.current(true); }
         } else {
             setTimeLeft(prev => {
                 if (prev <= 1) {
                     clearInterval(timer);
-                    alert("⏰ Hết giờ làm bài!");
+                    alert(isEnRef.current ? "⏰ Time's up!" : "⏰ Hết giờ làm bài!");
                     handleSubmitRef.current(true);
                     return 0;
                 }
@@ -598,8 +611,12 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
   const callAiTutor = (questionText: string, studentAns: string, correctAnswer: string) => {
       const tutorContext = {
           overall: 'IGCSE Review',
-          transcript: `Câu hỏi: "${questionText}". \nĐáp án của học sinh: ${studentAns}. \nĐáp án đúng Cambridge MS: "${correctAnswer}".`,
-          feedback: "Bạn là gia sư Cambridge IGCSE. Học sinh đang xem lại bài thi và không hiểu câu này. Hãy chủ động chào, đọc câu hỏi và giải thích chi tiết tại sao đáp án đúng là như vậy, phân tích từng bước lập luận. Dùng giọng điệu ân cần, dễ hiểu, nếu có công thức hãy đọc rõ ràng."
+          transcript: isEn
+            ? `Question: "${questionText}". \nStudent's answer: ${studentAns}. \nCorrect Cambridge Mark Scheme answer: "${correctAnswer}".`
+            : `Câu hỏi: "${questionText}". \nĐáp án của học sinh: ${studentAns}. \nĐáp án đúng Cambridge MS: "${correctAnswer}".`,
+          feedback: isEn
+            ? "You are a Cambridge IGCSE tutor. The student is reviewing their exam and does not understand this question. Speak and explain exclusively in English. Warmly greet the student, read the question, and explain step-by-step why the official answer is correct. Use a supportive, clear tone and read any formulas clearly."
+            : "Bạn là gia sư Cambridge IGCSE. Học sinh đang xem lại bài thi và không hiểu câu này. Hãy chủ động chào, đọc câu hỏi và giải thích chi tiết tại sao đáp án đúng là như vậy, phân tích từng bước lập luận. Dùng giọng điệu ân cần, dễ hiểu, nếu có công thức hãy đọc rõ ràng."
       };
       sessionStorage.setItem('tony_live_mode', 'TUTOR');
       sessionStorage.setItem('tony_tutor_data', JSON.stringify(tutorContext));
@@ -610,14 +627,14 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
   if (isLoading) return (
     <div className="h-[100dvh] w-screen flex flex-col items-center justify-center bg-[#525659] text-white font-bold">
       <div className="animate-spin text-4xl mb-4">⏳</div>
-      <p>Đang tải đề thi IGCSE (Direct)...</p>
+      <p>{isEn ? 'Loading IGCSE exam (Direct mode)...' : 'Đang tải đề thi IGCSE (Direct)...'}</p>
     </div>
   );
 
   if (!testData || (!isReviewMode && (!testData.json_config || !testData.json_config.questions))) return (
     <div className="h-[100dvh] w-screen flex flex-col items-center justify-center bg-[#525659] text-white font-bold gap-4">
-      <p>⚠️ Chưa có cấu hình đề thi trong hệ thống.</p>
-      <button onClick={onBack} className="bg-[#1e88e5] px-6 py-2 rounded hover:bg-blue-700 transition-colors">Quay lại</button>
+      <p>{isEn ? '⚠️ No exam configuration found in the system.' : '⚠️ Chưa có cấu hình đề thi trong hệ thống.'}</p>
+      <button onClick={onBack} className="bg-[#1e88e5] px-6 py-2 rounded hover:bg-blue-700 transition-colors">{isEn ? 'Go Back' : 'Quay lại'}</button>
     </div>
   );
 
@@ -638,33 +655,36 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
       {/* Header */}
       <header className="h-14 w-full bg-white border-b border-slate-300 flex items-center justify-between px-3 sm:px-6 shrink-0 z-20 box-border gap-2">
         <div className="flex items-center gap-2.5 sm:gap-4 overflow-hidden min-w-0">
-          <button type="button" onClick={handleSafeExit} className="text-slate-600 hover:text-[#0a5482] font-bold text-sm transition-colors whitespace-nowrap cursor-pointer">← Quay lại</button>
+          <button type="button" onClick={handleSafeExit} className="text-slate-600 hover:text-[#0a5482] font-bold text-sm transition-colors whitespace-nowrap cursor-pointer">← {isEn ? 'Back' : 'Quay lại'}</button>
           <div className="h-5 w-px bg-slate-300 hidden sm:block"></div>
           <div className="truncate flex items-baseline gap-2 min-w-0">
             <h1 className="font-bold text-slate-900 text-[14px] sm:text-[15px] leading-tight truncate">{isReviewMode ? `[REVIEW] ${testData.title}` : testData.title}</h1>
-            <span className="hidden md:inline-block text-xs text-[#0a5482] font-semibold px-2 py-0.5 bg-sky-50 border border-sky-200/70 rounded-md shrink-0">Chế độ vẽ trực tiếp</span>
+            <span className="hidden md:inline-block text-xs text-[#0a5482] font-semibold px-2 py-0.5 bg-sky-50 border border-sky-200/70 rounded-md shrink-0">{isEn ? 'Direct Draw Mode' : 'Chế độ vẽ trực tiếp'}</span>
           </div>
         </div>
-        {!gradeResult && !isReviewMode && (
-          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
-             <div className={`font-bold flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-lg text-xs sm:text-sm ${testData.content_json?.basicInfo?.category === 'exercise' ? 'text-[#0a5482] bg-sky-50 border border-sky-200' : (timeLeft <= 300 ? 'text-rose-600 bg-rose-50 border border-rose-200 animate-pulse' : 'text-slate-700 bg-slate-100')}`}>
-               {testData.content_json?.basicInfo?.category === 'exercise' ? 'BÀI TẬP' : <><span>⏱️</span> <span className="font-mono tracking-wider tabular-nums">{formatTime(timeLeft)}</span></>}
-             </div>
-             <button type="button" onClick={() => { if (!document.fullscreenElement) document.documentElement.requestFullscreen().catch(()=>{}); else document.exitFullscreen(); }} className="hidden sm:inline-flex text-slate-500 hover:text-[#0a5482] transition-colors text-lg px-1 cursor-pointer" title={isFullscreen ? 'Thoát toàn màn hình' : 'Toàn màn hình'}>
-               {isFullscreen ? '🔲' : '⛶'}
-             </button>
-             <button type="button" onClick={() => handleSubmit(false)} disabled={isSubmitting || !numPages} className="bg-[#0a5482] hover:bg-[#084266] text-white font-bold text-xs sm:text-sm px-4 sm:px-6 py-1.5 rounded-lg transition-colors active:scale-95 disabled:opacity-50 whitespace-nowrap shadow-sm cursor-pointer">
-               {isSubmitting ? 'Đang chấm...' : 'Nộp Bài'}
-             </button>
-          </div>
-        )}
+        <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+          <LmsLangToggle lang={lang} setLang={setLang} variant="light" />
+          {!gradeResult && !isReviewMode && (
+            <>
+               <div className={`font-bold flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-lg text-xs sm:text-sm ${testData.content_json?.basicInfo?.category === 'exercise' ? 'text-[#0a5482] bg-sky-50 border border-sky-200' : (timeLeft <= 300 ? 'text-rose-600 bg-rose-50 border border-rose-200 animate-pulse' : 'text-slate-700 bg-slate-100')}`}>
+                 {testData.content_json?.basicInfo?.category === 'exercise' ? (isEn ? 'EXERCISE' : 'BÀI TẬP') : <><span>⏱️</span> <span className="font-mono tracking-wider tabular-nums">{formatTime(timeLeft)}</span></>}
+               </div>
+               <button type="button" onClick={() => { if (!document.fullscreenElement) document.documentElement.requestFullscreen().catch(()=>{}); else document.exitFullscreen(); }} className="hidden sm:inline-flex text-slate-500 hover:text-[#0a5482] transition-colors text-lg px-1 cursor-pointer" title={isFullscreen ? (isEn ? 'Exit fullscreen' : 'Thoát toàn màn hình') : (isEn ? 'Fullscreen' : 'Toàn màn hình')}>
+                 {isFullscreen ? '🔲' : '⛶'}
+               </button>
+               <button type="button" onClick={() => handleSubmit(false)} disabled={isSubmitting || !numPages} className="bg-[#0a5482] hover:bg-[#084266] text-white font-bold text-xs sm:text-sm px-4 sm:px-6 py-1.5 rounded-lg transition-colors active:scale-95 disabled:opacity-50 whitespace-nowrap shadow-sm cursor-pointer">
+                 {isSubmitting ? (isEn ? 'Grading...' : 'Đang chấm...') : (isEn ? 'Submit' : 'Nộp Bài')}
+               </button>
+            </>
+          )}
+        </div>
       </header>
 
       {isSubmitting && (
         <div className="fixed inset-0 z-50 bg-slate-900/70 backdrop-blur-sm flex flex-col items-center justify-center text-white">
           <div className="w-16 h-16 border-4 border-white/30 border-t-white rounded-full animate-spin mb-6"></div>
-          <p className="text-xl font-bold mb-2">🧠 AI đang quét và chấm bài...</p>
-          <p className="text-sm text-slate-300">Quá trình này có thể mất 10 - 20 giây tùy số lượng trang</p>
+          <p className="text-xl font-bold mb-2">🧠 {isEn ? 'AI is scanning and grading your paper...' : 'AI đang quét và chấm bài...'}</p>
+          <p className="text-sm text-slate-300">{isEn ? 'This may take 10–20 seconds depending on the number of pages' : 'Quá trình này có thể mất 10 - 20 giây tùy số lượng trang'}</p>
         </div>
       )}
 
@@ -675,22 +695,22 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
         <div className="flex-1 h-full flex flex-col shrink-0 bg-[#525659] min-w-0">
           <div className="bg-[#323639] border-b border-[#202224] px-3 sm:px-4 flex justify-between items-center gap-3 h-12 shrink-0 shadow-sm overflow-x-auto no-scrollbar">
             <div className="flex items-center gap-2.5 sm:gap-3 shrink-0">
-              <span className="font-bold text-slate-300 text-[11px] uppercase tracking-widest hidden sm:inline-block">📄 Đề thi Cambridge</span>
+              <span className="font-bold text-slate-300 text-[11px] uppercase tracking-widest hidden sm:inline-block">📄 {isEn ? 'Cambridge Exam Paper' : 'Đề thi Cambridge'}</span>
               <div className="flex items-center bg-slate-800 rounded px-1 py-0.5">
-                 <button onClick={handleZoomOut} className="w-6 h-6 text-slate-400 hover:text-white flex items-center justify-center font-bold" title="Thu nhỏ">-</button>
+                 <button onClick={handleZoomOut} className="w-6 h-6 text-slate-400 hover:text-white flex items-center justify-center font-bold" title={isEn ? 'Zoom out' : 'Thu nhỏ'}>-</button>
                  <span className="text-[11px] text-slate-300 font-mono w-10 text-center">{Math.round(zoomLevel * 100)}%</span>
-                 <button onClick={handleZoomIn} className="w-6 h-6 text-slate-400 hover:text-white flex items-center justify-center font-bold" title="Phóng to">+</button>
+                 <button onClick={handleZoomIn} className="w-6 h-6 text-slate-400 hover:text-white flex items-center justify-center font-bold" title={isEn ? 'Zoom in' : 'Phóng to'}>+</button>
               </div>
             </div>
             {!isReviewMode && (
               <div className="flex items-center gap-1 shrink-0">
-                <button onClick={() => setDrawMode(prev => prev === 'pen' ? null : 'pen')} className={`px-3 py-1.5 rounded text-[12px] font-bold transition-all whitespace-nowrap ${drawMode === 'pen' ? 'bg-[#0a5482] text-white' : 'text-slate-400 hover:text-white bg-slate-800'}`} title="Bút vẽ">✏️ Viết</button>
-                <button onClick={() => setDrawMode(prev => prev === 'line' ? null : 'line')} className={`px-2 py-1.5 rounded text-[12px] font-bold transition-all ${drawMode === 'line' ? 'bg-[#0a5482] text-white' : 'text-slate-400 hover:text-white bg-slate-800'}`} title="Đường thẳng">📏</button>
-                <button onClick={() => setDrawMode(prev => prev === 'rect' ? null : 'rect')} className={`px-2 py-1.5 rounded text-[12px] font-bold transition-all ${drawMode === 'rect' ? 'bg-[#0a5482] text-white' : 'text-slate-400 hover:text-white bg-slate-800'}`} title="Hình chữ nhật">▬</button>
-                <button onClick={() => setDrawMode(prev => prev === 'circle' ? null : 'circle')} className={`px-2 py-1.5 rounded text-[12px] font-bold transition-all ${drawMode === 'circle' ? 'bg-[#0a5482] text-white' : 'text-slate-400 hover:text-white bg-slate-800'}`} title="Hình elip">⬭</button>
-                <button onClick={() => setDrawMode(prev => prev === 'triangle' ? null : 'triangle')} className={`px-2 py-1.5 rounded text-[12px] font-bold transition-all ${drawMode === 'triangle' ? 'bg-[#0a5482] text-white' : 'text-slate-400 hover:text-white bg-slate-800'}`} title="Tam giác">△</button>
-                <button onClick={() => setDrawMode(prev => prev === 'text' ? null : 'text')} className={`px-2 py-1.5 rounded text-[12px] font-bold transition-all ${drawMode === 'text' ? 'bg-[#0a5482] text-white' : 'text-slate-400 hover:text-white bg-slate-800'}`} title="Chữ">T</button>
-                <button onClick={() => setDrawMode(prev => prev === 'eraser' ? null : 'eraser')} className={`px-2 py-1.5 rounded text-[12px] font-bold transition-all whitespace-nowrap ${drawMode === 'eraser' ? 'bg-orange-500 text-white' : 'text-slate-400 hover:text-white bg-slate-800'}`} title="Tẩy">🧹 Tẩy</button>
+                <button onClick={() => setDrawMode(prev => prev === 'pen' ? null : 'pen')} className={`px-3 py-1.5 rounded text-[12px] font-bold transition-all whitespace-nowrap ${drawMode === 'pen' ? 'bg-[#0a5482] text-white' : 'text-slate-400 hover:text-white bg-slate-800'}`} title={isEn ? 'Pen' : 'Bút vẽ'}>✏️ {isEn ? 'Draw' : 'Viết'}</button>
+                <button onClick={() => setDrawMode(prev => prev === 'line' ? null : 'line')} className={`px-2 py-1.5 rounded text-[12px] font-bold transition-all ${drawMode === 'line' ? 'bg-[#0a5482] text-white' : 'text-slate-400 hover:text-white bg-slate-800'}`} title={isEn ? 'Straight line' : 'Đường thẳng'}>📏</button>
+                <button onClick={() => setDrawMode(prev => prev === 'rect' ? null : 'rect')} className={`px-2 py-1.5 rounded text-[12px] font-bold transition-all ${drawMode === 'rect' ? 'bg-[#0a5482] text-white' : 'text-slate-400 hover:text-white bg-slate-800'}`} title={isEn ? 'Rectangle' : 'Hình chữ nhật'}>▬</button>
+                <button onClick={() => setDrawMode(prev => prev === 'circle' ? null : 'circle')} className={`px-2 py-1.5 rounded text-[12px] font-bold transition-all ${drawMode === 'circle' ? 'bg-[#0a5482] text-white' : 'text-slate-400 hover:text-white bg-slate-800'}`} title={isEn ? 'Ellipse' : 'Hình elip'}>⬭</button>
+                <button onClick={() => setDrawMode(prev => prev === 'triangle' ? null : 'triangle')} className={`px-2 py-1.5 rounded text-[12px] font-bold transition-all ${drawMode === 'triangle' ? 'bg-[#0a5482] text-white' : 'text-slate-400 hover:text-white bg-slate-800'}`} title={isEn ? 'Triangle' : 'Tam giác'}>△</button>
+                <button onClick={() => setDrawMode(prev => prev === 'text' ? null : 'text')} className={`px-2 py-1.5 rounded text-[12px] font-bold transition-all ${drawMode === 'text' ? 'bg-[#0a5482] text-white' : 'text-slate-400 hover:text-white bg-slate-800'}`} title={isEn ? 'Text' : 'Chữ'}>T</button>
+                <button onClick={() => setDrawMode(prev => prev === 'eraser' ? null : 'eraser')} className={`px-2 py-1.5 rounded text-[12px] font-bold transition-all whitespace-nowrap ${drawMode === 'eraser' ? 'bg-orange-500 text-white' : 'text-slate-400 hover:text-white bg-slate-800'}`} title={isEn ? 'Eraser' : 'Tẩy'}>🧹 {isEn ? 'Eraser' : 'Tẩy'}</button>
                 {drawMode && (
                   <>
                     <div className="w-px h-5 bg-slate-600 mx-1.5"></div>
@@ -699,7 +719,7 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
                     ))}
                     <div className="w-px h-5 bg-slate-600 mx-1.5"></div>
                     <button onClick={() => {
-                        if (window.confirm("Bạn có chắc muốn xóa TẤT CẢ nét vẽ trên TẤT CẢ các trang?")) {
+                        if (window.confirm(isEn ? "Are you sure you want to clear ALL drawings on ALL pages?" : "Bạn có chắc muốn xóa TẤT CẢ nét vẽ trên TẤT CẢ các trang?")) {
                             const canvases = document.querySelectorAll('.student-canvas');
                             canvases.forEach(c => {
                                 const ctx = (c as HTMLCanvasElement).getContext('2d');
@@ -707,14 +727,14 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
                             });
                             hasUnsavedDrawingsRef.current = false;
                         }
-                    }} className="px-3 py-1.5 rounded text-[12px] text-slate-400 hover:text-white hover:bg-red-500 font-bold bg-slate-800 whitespace-nowrap" title="Xóa tất cả">🗑️ Xóa hết</button>
+                    }} className="px-3 py-1.5 rounded text-[12px] text-slate-400 hover:text-white hover:bg-red-500 font-bold bg-slate-800 whitespace-nowrap" title={isEn ? 'Clear all' : 'Xóa tất cả'}>🗑️ {isEn ? 'Clear all' : 'Xóa hết'}</button>
                   </>
                 )}
               </div>
             )}
             {isReviewMode && (
                <button onClick={() => setIsRightPanelOpen(!isRightPanelOpen)} className="px-4 py-1.5 rounded bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm transition-colors shadow-sm">
-                   {isRightPanelOpen ? 'Ẩn Kết Quả ➔' : '⬅ Xem Kết Quả'}
+                   {isRightPanelOpen ? (isEn ? 'Hide Results ➔' : 'Ẩn Kết Quả ➔') : (isEn ? '⬅ View Results' : '⬅ Xem Kết Quả')}
                </button>
             )}
           </div>
@@ -723,13 +743,13 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
              {!pdfUrl ? (
                 <div className="flex flex-col items-center justify-center h-full text-slate-400 p-8 text-center bg-[#525659]">
                   <span className="text-5xl mb-4">📄</span>
-                  <p className="font-bold">Không có file PDF đề thi.</p>
-                  <p className="text-sm mt-2">Vui lòng kiểm tra lại cấu hình bài giảng.</p>
+                  <p className="font-bold">{isEn ? 'No exam PDF file available.' : 'Không có file PDF đề thi.'}</p>
+                  <p className="text-sm mt-2">{isEn ? 'Please check the lesson configuration.' : 'Vui lòng kiểm tra lại cấu hình bài giảng.'}</p>
                 </div>
              ) : pdfError ? (
                 <div className="flex flex-col items-center justify-center h-full text-white p-8 text-center bg-[#525659] gap-4">
                   <span className="text-5xl">⚠️</span>
-                  <p className="font-bold text-lg">Không thể tải file PDF đề thi</p>
+                  <p className="font-bold text-lg">{isEn ? 'Unable to load exam PDF' : 'Không thể tải file PDF đề thi'}</p>
                   <p className="text-sm text-slate-300 max-w-md">{pdfError}</p>
                   <div className="flex flex-wrap items-center justify-center gap-3 mt-2">
                     <button
@@ -737,7 +757,7 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
                       onClick={() => { setPdfError(null); setPdfReloadKey(k => k + 1); }}
                       className="px-4 py-2 rounded-lg bg-[#0a5482] hover:bg-[#084266] text-white text-sm font-bold transition"
                     >
-                      🔄 Thử tải lại
+                      🔄 {isEn ? 'Try again' : 'Thử tải lại'}
                     </button>
                     <a
                       href={pdfUrl}
@@ -745,7 +765,7 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
                       rel="noopener noreferrer"
                       className="px-4 py-2 rounded-lg bg-white/15 hover:bg-white/25 text-white text-sm font-bold transition"
                     >
-                      ↗ Mở PDF trong tab mới
+                      ↗ {isEn ? 'Open PDF in new tab' : 'Mở PDF trong tab mới'}
                     </a>
                   </div>
                 </div>
@@ -754,8 +774,8 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
                     key={pdfReloadKey}
                     file={pdfUrl} 
                     onLoadSuccess={handleDocumentLoadSuccess} 
-                    onLoadError={(err: any) => setPdfError(err?.message || 'Lỗi kết nối hoặc định dạng PDF không hợp lệ.')}
-                    loading={<div className="text-white text-center py-20 animate-pulse">Đang tải file PDF...</div>}
+                    onLoadError={(err: any) => setPdfError(err?.message || (isEn ? 'Connection error or invalid PDF format.' : 'Lỗi kết nối hoặc định dạng PDF không hợp lệ.'))}
+                    loading={<div className="text-white text-center py-20 animate-pulse">{isEn ? 'Loading PDF file...' : 'Đang tải file PDF...'}</div>}
                 >
                     {Array.from(new Array(numPages || 0), (el, index) => (
                         <DrawingPage 
@@ -764,6 +784,7 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
                             drawMode={drawMode} 
                             penColor={penColor}
                             scale={zoomLevel}
+                            isEn={isEn}
                             onStrokeDrawn={() => { hasUnsavedDrawingsRef.current = true; }}
                         />
                     ))}
@@ -776,7 +797,7 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
         <div className={`absolute top-0 right-0 h-full w-[450px] max-w-full bg-[#f8fafc] shadow-[-10px_0_30px_rgba(0,0,0,0.3)] transition-transform duration-300 ease-in-out z-30 flex flex-col ${isRightPanelOpen ? 'translate-x-0' : 'translate-x-full'}`}>
           <div className="bg-[#323639] border-b border-[#202224] px-6 flex justify-between items-center h-12 shrink-0 shadow-sm">
             <span className="font-bold text-slate-300 text-[12px] uppercase tracking-widest flex items-center gap-2">
-              <span>✅</span> Bảng Điểm & Nhận Xét
+              <span>✅</span> {isEn ? 'Score & Feedback' : 'Bảng Điểm & Nhận Xét'}
             </span>
             <button onClick={() => setIsRightPanelOpen(false)} className="text-slate-400 hover:text-white text-xl">✕</button>
           </div>
@@ -817,14 +838,16 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
                                                 </div>
                                                 
                                                 <div className="text-[13px] text-slate-700 bg-white/70 p-2.5 rounded-lg border border-slate-200/50">
-                                                    <div className="font-semibold text-slate-500 mb-1 text-[11px] uppercase tracking-wider">AI Nhận xét:</div>
-                                                    <div dangerouslySetInnerHTML={{ __html: escapeHtml(String(feedbackData.examiner_comment || feedbackData.feedback || '')).replace(/\\n|\n/g, '<br/>') }} />{feedbackData.correct_answer && (<div className="mt-2 pt-2 border-t border-slate-200/70 text-[12.5px]"><span className="font-bold text-slate-500 uppercase text-[10px] tracking-widest block mb-0.5">Đáp án chuẩn (Cambridge MS):</span><span className="font-semibold text-emerald-700" dangerouslySetInnerHTML={{ __html: renderLatex(String(feedbackData.correct_answer)) }} /></div>)}
+                                                    <div className="font-semibold text-slate-500 mb-1 text-[11px] uppercase tracking-wider">{isEn ? 'AI Feedback:' : 'AI Nhận xét:'}</div>
+                                                    <div dangerouslySetInnerHTML={{ __html: escapeHtml(String(feedbackData.examiner_comment || feedbackData.feedback || '')).replace(/\\n|\n/g, '<br/>') }} />{feedbackData.correct_answer && (<div className="mt-2 pt-2 border-t border-slate-200/70 text-[12.5px]"><span className="font-bold text-slate-500 uppercase text-[10px] tracking-widest block mb-0.5">{isEn ? 'Official Answer (Cambridge MS):' : 'Đáp án chuẩn (Cambridge MS):'}</span><span className="font-semibold text-emerald-700" dangerouslySetInnerHTML={{ __html: renderLatex(String(feedbackData.correct_answer)) }} /></div>)}
                                                 </div>
 
                                                 {!isCorrect && (
                                                     <div className="flex flex-col gap-2 mt-3">
                                                         <button onClick={() => {
-                                                            const query = `Câu hỏi: "${latexToText(sub.label)}"\nĐáp án học sinh: "Làm trên giấy"\nĐáp án đúng: "${latexToText(feedbackData.correct_answer || '')}"\n\nThầy giải thích chi tiết giúp em tại sao em sai ạ!`;
+                                                            const query = isEn
+                                                              ? `Question: "${latexToText(sub.label)}"\nStudent's answer: "Written directly on paper"\nCorrect answer: "${latexToText(feedbackData.correct_answer || '')}"\n\nPlease explain in English in detail why my answer is wrong and how to solve this question.`
+                                                              : `Câu hỏi: "${latexToText(sub.label)}"\nĐáp án học sinh: "Làm trên giấy"\nĐáp án đúng: "${latexToText(feedbackData.correct_answer || '')}"\n\nThầy giải thích chi tiết giúp em tại sao em sai ạ!`;
                                                             const subjectTask = /math|0580|0606/i.test(`${testData?.test_type || ''} ${testData?.skill || ''} ${testData?.title || ''}`) ? 'math' : 'Science';
                                                             const btn = document.createElement('button');
                                                             btn.className = 'btn-ai-trigger';
@@ -834,10 +857,10 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
                                                             btn.click();
                                                             document.body.removeChild(btn);
                                                         }} className="flex items-center justify-center gap-2 px-3 py-1.5 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-bold text-[12px] rounded-lg shadow hover:shadow-md transition-all">
-                                                            💬 Chat Thầy AI
+                                                            💬 {isEn ? 'Chat with AI Teacher' : 'Chat Thầy AI'}
                                                         </button>
-                                                        <button onClick={() => callAiTutor(latexToText(sub.label), "Làm trên giấy", latexToText(feedbackData.correct_answer || ''))} className="flex items-center justify-center gap-2 px-3 py-1.5 bg-gradient-to-r from-amber-400 to-orange-400 text-white font-bold text-[12px] rounded-lg shadow hover:shadow-md transition-all">
-                                                            📞 Gọi Gia Sư
+                                                        <button onClick={() => callAiTutor(latexToText(sub.label), isEn ? "Written on paper" : "Làm trên giấy", latexToText(feedbackData.correct_answer || ''))} className="flex items-center justify-center gap-2 px-3 py-1.5 bg-gradient-to-r from-amber-400 to-orange-400 text-white font-bold text-[12px] rounded-lg shadow hover:shadow-md transition-all">
+                                                            📞 {isEn ? 'Call AI Tutor' : 'Gọi Gia Sư'}
                                                         </button>
                                                     </div>
                                                 )}
@@ -851,7 +874,7 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
                 </>
             ) : (
                 <div className="flex items-center justify-center h-full text-slate-400 font-medium">
-                    Chưa có kết quả chấm điểm.
+                    {isEn ? 'No grading results yet.' : 'Chưa có kết quả chấm điểm.'}
                 </div>
             )}
           </div>

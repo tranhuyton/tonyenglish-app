@@ -8,6 +8,7 @@ import CourseStudyCoach, { isCoachSupportedCourse } from './CourseStudyCoach';
 import { Wt2PillarStudioModal, Wt2PillarReflexModal, Wt2StudioOpenPayload, normalizeWt2TopicKey } from './Wt2PillarStudioModal';
 import { Spk2LegoStudioModal, Spk2LegoStudioOpenPayload } from './Spk2LegoStudioModal';
 import { Wt1StudioModal, Wt1VocabBankModal, Wt1StudioOpenPayload } from './Wt1StudioModal';
+import { useLmsLang, LmsLangToggle, getLocalizedCourseTitle } from './utils/lmsI18n';
 
 const LECTURE_MANIFEST_MAP: Record<string, string> = {
   '6286cb6f-b4ac-495b-b2ea-5a2bab09f764': '/audio/lectures/geography/1_1/manifest.json', // 1.1
@@ -709,6 +710,8 @@ import 'react-pdf/dist/Page/TextLayer.css';
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 const PdfVisionViewer = ({ url, onClose, onCallTutor }: { url: string, onClose: () => void, onCallTutor?: () => void }) => {
+  const [lang] = useLmsLang();
+  const isEn = lang === 'en';
   const [numPages, setNumPages] = useState<number | null>(null);
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [pageInput, setPageInput] = useState<string>('1'); 
@@ -867,16 +870,16 @@ const PdfVisionViewer = ({ url, onClose, onCallTutor }: { url: string, onClose: 
          <div className="flex items-center gap-2 md:gap-4">
              <div className="hidden sm:flex items-center gap-2 text-emerald-400 bg-emerald-950/40 px-3 py-1.5 rounded-full border border-emerald-800/50 shadow-[0_0_10px_rgba(16,185,129,0.1)]">
                 <span className="text-sm">🤖</span>
-                <span className="text-[11px] md:text-xs font-semibold animate-pulse tracking-wide">AI đang hỗ trợ</span>
+                <span className="text-[11px] md:text-xs font-semibold animate-pulse tracking-wide">{isEn ? 'AI Assisting' : 'AI đang hỗ trợ'}</span>
              </div>
              <div className="flex items-center bg-slate-800/80 rounded-lg border border-slate-700/50 p-0.5">
-                <button onClick={handleZoomOut} className="w-8 h-8 flex items-center justify-center text-slate-400 hover:bg-slate-700 hover:text-white rounded-md transition-all" title="Thu nhỏ (-)">
+                <button onClick={handleZoomOut} className="w-8 h-8 flex items-center justify-center text-slate-400 hover:bg-slate-700 hover:text-white rounded-md transition-all" title={isEn ? 'Zoom out (-)' : 'Thu nhỏ (-)'}>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607zM13.5 10.5h-6" /></svg>
                 </button>
                 <span className="text-slate-300 text-xs font-semibold font-mono w-12 text-center select-none">
                     {Math.round(zoomLevel * 100)}%
                 </span>
-                <button onClick={handleZoomIn} className="w-8 h-8 flex items-center justify-center text-slate-400 hover:bg-slate-700 hover:text-white rounded-md transition-all" title="Phóng to (+)">
+                <button onClick={handleZoomIn} className="w-8 h-8 flex items-center justify-center text-slate-400 hover:bg-slate-700 hover:text-white rounded-md transition-all" title={isEn ? 'Zoom in (+)' : 'Phóng to (+)'}>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607zM10.5 7.5v6m3-3h-6" /></svg>
                 </button>
              </div>
@@ -889,9 +892,9 @@ const PdfVisionViewer = ({ url, onClose, onCallTutor }: { url: string, onClose: 
                  className={`hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all border ${isTwoPageMode ? 'bg-[#0ea5e9]/20 text-[#0ea5e9] border-[#0ea5e9]/30' : 'bg-slate-800 text-slate-400 border-slate-700 hover:text-slate-200'}`}
              >
                  {isTwoPageMode ? (
-                     <><span className="text-sm">📖</span> 2 Trang</>
+                     <><span className="text-sm">📖</span> {isEn ? '2 Pages' : '2 Trang'}</>
                  ) : (
-                     <><span className="text-sm">📄</span> 1 Trang</>
+                     <><span className="text-sm">📄</span> {isEn ? '1 Page' : '1 Trang'}</>
                  )}
              </button>
              <div className="flex items-center gap-1 bg-slate-800/80 rounded-lg p-1 border border-slate-700/50">
@@ -927,16 +930,16 @@ const PdfVisionViewer = ({ url, onClose, onCallTutor }: { url: string, onClose: 
                  <button 
                      onClick={onCallTutor}
                      className="flex items-center gap-1.5 px-3 h-9 rounded-lg text-xs font-bold bg-emerald-500/10 border border-emerald-500/30 hover:bg-emerald-500 text-emerald-400 hover:text-white transition-all shadow-sm active:scale-95 shrink-0"
-                     title="Vào lớp Học trực tiếp với Gia Sư AI"
+                     title={isEn ? 'Join live whiteboard with AI Tutor' : 'Vào lớp Học trực tiếp với Gia Sư AI'}
                  >
                      <span className="animate-pulse">👨‍🏫</span>
-                     <span>Lên Bảng</span>
+                     <span>{isEn ? 'Whiteboard' : 'Lên Bảng'}</span>
                  </button>
              )}
              <button 
                 onClick={toggleFullscreen} 
                 className="w-9 h-9 rounded-lg bg-slate-800 border border-slate-700 hover:bg-slate-700 flex items-center justify-center text-slate-300 hover:text-white transition-all" 
-                title="Toàn màn hình"
+                title={isEn ? 'Fullscreen' : 'Toàn màn hình'}
              >
                  {isFullscreen ? (
                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5l5.25 5.25" /></svg>
@@ -947,7 +950,7 @@ const PdfVisionViewer = ({ url, onClose, onCallTutor }: { url: string, onClose: 
              <button 
                 onClick={onClose} 
                 className="w-9 h-9 rounded-lg bg-red-500/10 border border-red-500/30 hover:bg-red-500 flex items-center justify-center text-red-400 hover:text-white transition-all" 
-                title="Đóng tài liệu"
+                title={isEn ? 'Close document' : 'Đóng tài liệu'}
              >
                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
              </button>
@@ -963,7 +966,7 @@ const PdfVisionViewer = ({ url, onClose, onCallTutor }: { url: string, onClose: 
          {isLoading && !loadError && (
             <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#020617]/80 backdrop-blur-sm z-10">
                <div className="w-10 h-10 border-4 border-[#0ea5e9]/20 border-t-[#0ea5e9] rounded-full animate-spin"></div>
-               <span className="mt-3 text-slate-400 text-sm font-medium animate-pulse">Đang tải trang tài liệu...</span>
+               <span className="mt-3 text-slate-400 text-sm font-medium animate-pulse">{isEn ? 'Loading document page...' : 'Đang tải trang tài liệu...'}</span>
             </div>
          )}
          {loadError ? (
@@ -971,9 +974,9 @@ const PdfVisionViewer = ({ url, onClose, onCallTutor }: { url: string, onClose: 
                <div className="w-14 h-14 mx-auto rounded-2xl bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-3xl">
                  📄
                </div>
-               <h3 className="text-white font-bold text-base">Không thể hiển thị trực tiếp file PDF</h3>
+               <h3 className="text-white font-bold text-base">{isEn ? 'Unable to preview PDF directly' : 'Không thể hiển thị trực tiếp file PDF'}</h3>
                <p className="text-slate-400 text-xs leading-relaxed">
-                 {loadError} Em có thể mở trực tiếp tệp tài liệu ở tab mới bên dưới.
+                 {loadError} {isEn ? 'You can open the document directly in a new tab below.' : 'Em có thể mở trực tiếp tệp tài liệu ở tab mới bên dưới.'}
                </p>
                <div className="flex flex-wrap items-center justify-center gap-2.5 pt-1">
                  <a
@@ -982,7 +985,7 @@ const PdfVisionViewer = ({ url, onClose, onCallTutor }: { url: string, onClose: 
                    rel="noopener noreferrer"
                    className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-[#0ea5e9] hover:bg-[#0284c7] text-white text-xs font-bold shadow-md transition-all"
                  >
-                   <span>Mở file PDF trực tiếp</span>
+                   <span>{isEn ? 'Open PDF Directly' : 'Mở file PDF trực tiếp'}</span>
                    <span>↗</span>
                  </a>
                  <button
@@ -990,7 +993,7 @@ const PdfVisionViewer = ({ url, onClose, onCallTutor }: { url: string, onClose: 
                    onClick={onClose}
                    className="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-300 text-xs font-bold transition-all cursor-pointer"
                  >
-                   Đóng
+                   {isEn ? 'Close' : 'Đóng'}
                  </button>
                </div>
             </div>
@@ -1004,7 +1007,7 @@ const PdfVisionViewer = ({ url, onClose, onCallTutor }: { url: string, onClose: 
             onLoadError={(err) => {
               console.error('[PdfVisionViewer] Failed to load PDF:', err);
               setIsLoading(false);
-              setLoadError('Trình duyệt không thể tải trực tiếp tài liệu này do giới hạn kết nối hoặc định dạng tệp.');
+              setLoadError(isEn ? 'The browser could not load this document directly due to connection or file format restrictions.' : 'Trình duyệt không thể tải trực tiếp tài liệu này do giới hạn kết nối hoặc định dạng tệp.');
             }}
             loading={null}
          >
@@ -3465,6 +3468,8 @@ export default function LectureViewer({
     onOpenAI?: (passedMode?: string, topic?: string, image?: string, task?: string) => void,
     onCourseChange?: (newCourseId: string) => void
 }) {
+  const [lang, setLang] = useLmsLang();
+  const isEn = lang === 'en';
   const [currentCourseId, setCurrentCourseId] = useState<string>(courseId);
   const [availableCourses, setAvailableCourses] = useState<any[]>([]);
   const [isCourseDropdownOpen, setIsCourseDropdownOpen] = useState<boolean>(false);
@@ -3785,11 +3790,11 @@ export default function LectureViewer({
       const rawTitle = shorten(chosen[idx]);
       return {
         pageNumber: p.page_number,
-        label: rawTitle || `Trang ${p.page_number}`,
+        label: rawTitle || (isEn ? `Page ${p.page_number}` : `Trang ${p.page_number}`),
         hasExtractedTitle: Boolean(rawTitle),
       };
     });
-  }, [pages]);
+  }, [pages, isEn]);
 
   const handleOpenTutorAI = useCallback((topic?: string, task?: string) => {
     if (!onOpenAI) return;
@@ -4096,8 +4101,12 @@ export default function LectureViewer({
   const filteredAvailableCourses = useMemo(() => {
     if (!courseFilterQuery.trim()) return availableCourses;
     const q = courseFilterQuery.toLowerCase().trim();
-    return availableCourses.filter(c => (c.title || '').toLowerCase().includes(q));
-  }, [availableCourses, courseFilterQuery]);
+    return availableCourses.filter(c => {
+      const raw = (c.title || '').toLowerCase();
+      const loc = getLocalizedCourseTitle(c.title || '', lang).toLowerCase();
+      return raw.includes(q) || loc.includes(q);
+    });
+  }, [availableCourses, courseFilterQuery, lang]);
 
   const fetchCourseData = async (targetCourseIdOverride?: string) => {
     const activeId = targetCourseIdOverride || currentCourseId;
@@ -5042,7 +5051,7 @@ export default function LectureViewer({
       return (
           <div className="min-h-[100dvh] flex flex-col items-center justify-center bg-slate-50">
               <div className="w-12 h-12 border-4 border-[#0ea5e9]/30 border-t-[#0ea5e9] rounded-full animate-spin"></div>
-              <p className="mt-4 text-slate-500 font-medium">Đang tải không gian học...</p>
+              <p className="mt-4 text-slate-500 font-medium">{isEn ? 'Loading study workspace...' : 'Đang tải không gian học...'}</p>
           </div>
       );
   }
@@ -5051,13 +5060,13 @@ export default function LectureViewer({
       return (
           <div className="min-h-[100dvh] flex flex-col items-center justify-center bg-slate-50">
               <div className="text-5xl mb-4 text-red-400">⚠️</div>
-              <h2 className="text-xl font-bold text-slate-800 mb-2">Lỗi tải bài giảng</h2>
+              <h2 className="text-xl font-bold text-slate-800 mb-2">{isEn ? 'Failed to load lectures' : 'Lỗi tải bài giảng'}</h2>
               <p className="text-slate-500 mb-6">{errorMessage}</p>
               <button 
                   onClick={onBack} 
                   className="bg-[#0ea5e9] text-white px-6 py-2.5 rounded-xl font-semibold shadow-md hover:bg-[#0284c7] transition-all"
               >
-                  Quay lại trang chủ
+                  {isEn ? 'Back to Dashboard' : 'Quay lại trang chủ'}
               </button>
           </div>
       );
@@ -5084,7 +5093,7 @@ export default function LectureViewer({
             <button 
                 onClick={onBack} 
                 className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-xl bg-white/12 hover:bg-white/22 border border-white/15 transition-all shrink-0 cursor-pointer" 
-                title="Quay lại Góc học viên"
+                title={isEn ? 'Back to Student Portal' : 'Quay lại Góc học viên'}
             >
                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4 sm:w-5 sm:h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>
             </button>
@@ -5103,7 +5112,7 @@ export default function LectureViewer({
                   window.dispatchEvent(new CustomEvent('tony-navigate', { detail: 'home' }));
                 }} 
                 className="hidden sm:flex w-9 h-9 sm:w-10 sm:h-10 items-center justify-center rounded-xl bg-white/12 hover:bg-white/22 border border-white/15 transition-all shrink-0 cursor-pointer" 
-                title="Về trang chủ TonyEnglish.vn"
+                title={isEn ? 'Go to TonyEnglish.vn Homepage' : 'Về trang chủ TonyEnglish.vn'}
             >
                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.2} stroke="currentColor" className="w-4 h-4 sm:w-5 sm:h-5">
                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
@@ -5114,7 +5123,7 @@ export default function LectureViewer({
                 className={`w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-xl border transition-all shrink-0 cursor-pointer ${
                   isSidebarOpen ? 'bg-white/22 border-white/30' : 'bg-white/12 hover:bg-white/22 border-white/15'
                 }`}
-                title="Đóng/Mở mục lục bài giảng"
+                title={isEn ? 'Toggle lesson curriculum sidebar' : 'Đóng/Mở mục lục bài giảng'}
             >
                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M4 6h16M4 12h16M4 18h7" /></svg>
             </button>
@@ -5125,12 +5134,12 @@ export default function LectureViewer({
                   type="button"
                   onClick={() => setIsCourseDropdownOpen(!isCourseDropdownOpen)}
                   className="flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3.5 py-1.5 rounded-xl bg-white/12 hover:bg-white/22 border border-white/20 transition-all text-left shadow-xs hover:border-white/35 group max-w-[125px] xs:max-w-[160px] sm:max-w-[270px] md:max-w-[330px] cursor-pointer"
-                  title="Bấm để lọc / chuyển khóa học khác"
+                  title={isEn ? 'Click to switch course' : 'Bấm để lọc / chuyển khóa học khác'}
                >
                   <div className="flex flex-col min-w-0 flex-1">
                      <div className="flex items-center gap-1.5">
                         <span className="text-[13px] sm:text-[14.5px] font-black text-white truncate leading-tight tracking-tight">
-                           {course?.title || 'Đang tải khóa học...'}
+                           {course?.title ? getLocalizedCourseTitle(course.title, lang) : (isEn ? 'Loading course...' : 'Đang tải khóa học...')}
                         </span>
                         <span className={`text-[10px] text-[#2ab4e8] transition-transform duration-200 shrink-0 ${isCourseDropdownOpen ? 'rotate-180' : ''}`}>
                            ▼
@@ -5151,17 +5160,17 @@ export default function LectureViewer({
                      <div className="p-3 bg-slate-50 border-b border-slate-100">
                         <div className="flex items-center justify-between mb-2">
                            <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
-                              <span>📚</span> Chọn khóa học
+                              <span>📚</span> {isEn ? 'Select Course' : 'Chọn khóa học'}
                            </span>
                            <span className="text-[11px] font-extrabold text-[#0a5482] bg-sky-50 border border-sky-200/80 px-2 py-0.5 rounded-full">
-                              {availableCourses.length} khóa
+                              {availableCourses.length} {isEn ? 'courses' : 'khóa'}
                            </span>
                         </div>
                         {availableCourses.length > 3 && (
                            <div className="relative">
                               <input
                                  type="text"
-                                 placeholder="Tìm khóa học..."
+                                 placeholder={isEn ? 'Search courses...' : 'Tìm khóa học...'}
                                  value={courseFilterQuery}
                                  onChange={(e) => setCourseFilterQuery(e.target.value)}
                                  className="w-full px-3 py-1.5 pl-8 text-[13px] bg-white border border-slate-200 rounded-xl focus:outline-none focus:border-[#2ab4e8] focus:ring-2 focus:ring-[#2ab4e8]/20 text-slate-800 placeholder-slate-400"
@@ -5186,7 +5195,7 @@ export default function LectureViewer({
                      <div className="overflow-y-auto p-1.5 custom-scrollbar flex-1 space-y-1 max-h-[300px]">
                         {filteredAvailableCourses.length === 0 ? (
                            <div className="p-6 text-center text-slate-400 text-[13px]">
-                              Không tìm thấy khóa học nào
+                              {isEn ? 'No courses found' : 'Không tìm thấy khóa học nào'}
                            </div>
                         ) : (
                            filteredAvailableCourses.map((c: any) => {
@@ -5203,15 +5212,15 @@ export default function LectureViewer({
                                  >
                                     <div className="flex items-center gap-2.5 min-w-0 flex-1">
                                        <span className="text-base shrink-0">{isSelected ? '📖' : '📘'}</span>
-                                       <span className="truncate">{c.title}</span>
+                                       <span className="truncate">{getLocalizedCourseTitle(c.title, lang)}</span>
                                     </div>
                                     {isSelected ? (
                                        <span className="text-[11px] font-bold bg-[#0a5482] text-white px-2 py-0.5 rounded-full shrink-0 shadow-xs">
-                                          Đang học
+                                          {isEn ? 'Active' : 'Đang học'}
                                        </span>
                                     ) : (
                                        <span className="opacity-0 group-hover:opacity-100 text-[11px] text-[#0a5482] font-bold shrink-0 transition-opacity">
-                                          Chọn →
+                                          {isEn ? 'Open →' : 'Chọn →'}
                                        </span>
                                     )}
                                  </button>
@@ -5228,7 +5237,7 @@ export default function LectureViewer({
               type="button"
               onClick={() => setIsLectureThemeModalOpen(true)}
               className="hidden sm:flex items-center justify-center w-9 h-9 rounded-xl transition-all bg-white/12 hover:bg-white/22 text-white border border-white/20 shadow-xs active:scale-95 shrink-0 cursor-pointer"
-              title="Đổi màu nền bài giảng"
+              title={isEn ? 'Change lecture background theme' : 'Đổi màu nền bài giảng'}
             >
               <span className="text-sm sm:text-base">🎨</span>
             </button>
@@ -5240,7 +5249,7 @@ export default function LectureViewer({
                 onClick={() => stepFontScale(-1)}
                 disabled={lectureFontScale <= 85}
                 className="px-2 h-full rounded-lg text-xs font-extrabold text-white/90 hover:text-white hover:bg-white/15 disabled:opacity-35 transition cursor-pointer"
-                title="Thu nhỏ cỡ chữ"
+                title={isEn ? 'Decrease font size' : 'Thu nhỏ cỡ chữ'}
               >
                 A-
               </button>
@@ -5248,7 +5257,7 @@ export default function LectureViewer({
                 type="button"
                 onClick={resetFontScale}
                 className="px-1.5 h-full text-[11px] font-bold text-sky-200 hover:text-white transition cursor-pointer tabular-nums"
-                title="Đặt lại cỡ chữ mặc định (100%)"
+                title={isEn ? 'Reset font size (100%)' : 'Đặt lại cỡ chữ mặc định (100%)'}
               >
                 {lectureFontScale}%
               </button>
@@ -5257,7 +5266,7 @@ export default function LectureViewer({
                 onClick={() => stepFontScale(1)}
                 disabled={lectureFontScale >= 130}
                 className="px-2 h-full rounded-lg text-xs font-extrabold text-white/90 hover:text-white hover:bg-white/15 disabled:opacity-35 transition cursor-pointer"
-                title="Phóng to cỡ chữ"
+                title={isEn ? 'Increase font size' : 'Phóng to cỡ chữ'}
               >
                 A+
               </button>
@@ -5272,14 +5281,14 @@ export default function LectureViewer({
              type="button"
              onClick={() => window.dispatchEvent(new CustomEvent('tony-open-standalone-dictionary'))}
              className="w-full max-w-[320px] flex items-center justify-between bg-white/12 hover:bg-white/20 rounded-xl border border-white/20 transition-all px-3.5 h-9 cursor-pointer group"
-             title="Mở Từ điển Anh-Việt / Việt-Anh (hoặc click đúp bất kỳ từ nào trong bài)"
+             title={isEn ? 'Open Dictionary (or double-click any word in the lesson)' : 'Mở Từ điển Anh-Việt / Việt-Anh (hoặc click đúp bất kỳ từ nào trong bài)'}
            >
              <span className="flex items-center gap-2 min-w-0">
                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4 text-sky-200 group-hover:text-white shrink-0">
                  <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                </svg>
                <span className="text-white/80 group-hover:text-white text-[13px] font-semibold truncate">
-                 Tra từ điển EN ↔ VI...
+                 {isEn ? 'Dictionary Lookup...' : 'Tra từ điển EN ↔ VI...'}
                </span>
              </span>
              <span className="text-[10px] font-black uppercase tracking-wider px-1.5 py-0.5 rounded bg-white/15 text-sky-100 shrink-0">
@@ -5288,14 +5297,15 @@ export default function LectureViewer({
            </button>
          </div>
 
-          <div className="flex items-center gap-1.5 sm:gap-3 shrink-0 ml-2">
+          <div className="flex items-center gap-1.5 sm:gap-2.5 shrink-0 ml-2">
+              <LmsLangToggle lang={lang} setLang={setLang} variant="dark" />
               {/* 📱 NÚT MENU THAO TÁC NHANH CHO DI ĐỘNG & TABLET (< lg) */}
               <div className="relative lg:hidden">
                 <button
                   type="button"
                   onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                   className="w-9 h-9 rounded-xl flex items-center justify-center bg-white/15 hover:bg-white/25 text-white font-black text-base transition-all active:scale-95 border border-white/20 shadow-xs cursor-pointer"
-                  title="Menu chức năng & điều hướng"
+                  title={isEn ? 'Tools & navigation menu' : 'Menu chức năng & điều hướng'}
                 >
                   ⋯
                 </button>
@@ -5312,7 +5322,7 @@ export default function LectureViewer({
                         }}
                         className="w-full text-left px-4 py-2.5 text-[13px] font-bold text-[#0a5482] hover:bg-sky-50 flex items-center gap-2.5 transition-colors cursor-pointer"
                       >
-                        <span>📖</span> Tra từ điển EN ↔ VI
+                        <span>📖</span> {isEn ? 'Dictionary EN ↔ VI' : 'Tra từ điển EN ↔ VI'}
                       </button>
                       <div className="h-px bg-slate-100 my-1" />
                       <button
@@ -5325,7 +5335,7 @@ export default function LectureViewer({
                         }}
                         className="w-full text-left px-4 py-2.5 text-[13px] font-semibold text-slate-700 hover:bg-sky-50 hover:text-[#0a5482] flex items-center gap-2.5 transition-colors cursor-pointer"
                       >
-                        <span>📅</span> Lịch báo bài
+                        <span>📅</span> {isEn ? 'Study Calendar' : 'Lịch báo bài'}
                       </button>
                       <button
                         onClick={() => {
@@ -5337,7 +5347,7 @@ export default function LectureViewer({
                         }}
                         className="w-full text-left px-4 py-2.5 text-[13px] font-semibold text-slate-700 hover:bg-sky-50 hover:text-[#0a5482] flex items-center gap-2.5 transition-colors cursor-pointer"
                       >
-                        <span>📋</span> Bảng công việc
+                        <span>📋</span> {isEn ? 'Task Board' : 'Bảng công việc'}
                       </button>
                       <button
                         onClick={() => {
@@ -5350,7 +5360,7 @@ export default function LectureViewer({
                         }}
                         className="w-full text-left px-4 py-2.5 text-[13px] font-semibold text-slate-700 hover:bg-sky-50 hover:text-[#0a5482] flex items-center gap-2.5 transition-colors cursor-pointer"
                       >
-                        <span>📚</span> Kho đề bài tập
+                        <span>📚</span> {isEn ? 'Test Bank' : 'Kho đề bài tập'}
                       </button>
                       {isCoachSupportedCourse(currentCourseId, course?.title) && (
                         <button
@@ -5360,13 +5370,13 @@ export default function LectureViewer({
                           }}
                           className="sm:hidden w-full text-left px-4 py-2.5 text-[13px] font-bold text-[#0a5482] bg-sky-50/70 hover:bg-sky-100 flex items-center gap-2.5 transition-colors cursor-pointer"
                         >
-                          <span>🧭</span> Lộ trình học AI Tutor
+                          <span>🧭</span> {isEn ? 'Teacher Tony AI Roadmap' : 'Lộ trình học AI Tutor'}
                         </button>
                       )}
                       {(course?.title || '').toLowerCase().includes('ielts') && (
                         <div className="sm:hidden border-t border-slate-100 mt-1 pt-1">
                           <div className="px-4 py-1 text-[10px] font-extrabold uppercase tracking-wider text-slate-400">
-                            Trợ lý IELTS AI
+                            {isEn ? 'IELTS AI Assistants' : 'Trợ lý IELTS AI'}
                           </div>
                           <button
                             type="button"
@@ -5408,7 +5418,7 @@ export default function LectureViewer({
                         }}
                         className="sm:hidden w-full text-left px-4 py-2.5 text-[13px] font-semibold text-slate-700 hover:bg-sky-50 hover:text-[#0a5482] flex items-center gap-2.5 transition-colors border-t border-slate-100 mt-1 cursor-pointer"
                       >
-                        <span>🎨</span> Đổi màu nền bài giảng
+                        <span>🎨</span> {isEn ? 'Change background theme' : 'Đổi màu nền bài giảng'}
                       </button>
                       <button
                         type="button"
@@ -5428,10 +5438,10 @@ export default function LectureViewer({
                         }}
                         className="sm:hidden w-full text-left px-4 py-2.5 text-[13px] font-semibold text-slate-700 hover:bg-sky-50 hover:text-[#0a5482] flex items-center gap-2.5 transition-colors cursor-pointer"
                       >
-                        <span>🏠</span> Về trang chủ TonyEnglish
+                        <span>🏠</span> {isEn ? 'TonyEnglish Homepage' : 'Về trang chủ TonyEnglish'}
                       </button>
                       <div className="sm:hidden px-4 py-2 border-t border-slate-100 flex items-center justify-between gap-2 mt-1">
-                        <span className="text-[12px] font-bold text-slate-600">🔤 Cỡ chữ</span>
+                        <span className="text-[12px] font-bold text-slate-600">🔤 {isEn ? 'Font Size' : 'Cỡ chữ'}</span>
                         <div className="flex items-center gap-1 bg-slate-100 rounded-lg p-0.5">
                           <button
                             type="button"
@@ -5473,10 +5483,10 @@ export default function LectureViewer({
                         onBack();
                     }}
                     className="flex items-center gap-1.5 px-2.5 h-8 rounded-lg text-[12px] font-semibold transition-all text-white/90 hover:text-white hover:bg-white/15 cursor-pointer"
-                    title="Đi đến Lịch báo bài của khóa học"
+                    title={isEn ? 'Go to course Study Calendar' : 'Đi đến Lịch báo bài của khóa học'}
                 >
                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-3.5 h-3.5 text-sky-300"><path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>
-                   <span>Lịch báo bài</span>
+                   <span>{isEn ? 'Calendar' : 'Lịch báo bài'}</span>
                 </button>
                 <button
                     onClick={() => {
@@ -5486,10 +5496,10 @@ export default function LectureViewer({
                         onBack();
                     }}
                     className="flex items-center gap-1.5 px-2.5 h-8 rounded-lg text-[12px] font-semibold transition-all text-white/90 hover:text-white hover:bg-white/15 cursor-pointer"
-                    title="Đi đến Bảng công việc của khóa học"
+                    title={isEn ? 'Go to course Task Board' : 'Đi đến Bảng công việc của khóa học'}
                 >
                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-3.5 h-3.5 text-sky-300"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" /></svg>
-                   <span>Bảng việc</span>
+                   <span>{isEn ? 'Tasks' : 'Bảng việc'}</span>
                 </button>
                 <button
                     onClick={() => {
@@ -5500,10 +5510,10 @@ export default function LectureViewer({
                         onBack();
                     }}
                     className="flex items-center gap-1.5 px-2.5 h-8 rounded-lg text-[12px] font-semibold transition-all text-white/90 hover:text-white hover:bg-white/15 cursor-pointer"
-                    title="Đi đến kho đề của khóa học"
+                    title={isEn ? 'Go to course Test Bank' : 'Đi đến kho đề của khóa học'}
                 >
                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-3.5 h-3.5 text-sky-300"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" /></svg>
-                   <span>Kho đề</span>
+                   <span>{isEn ? 'Test Bank' : 'Kho đề'}</span>
                 </button>
               </div>
 
@@ -5511,10 +5521,10 @@ export default function LectureViewer({
                   <button
                       onClick={() => setIsStudyCoachModalOpen(true)}
                       className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 md:px-3.5 md:h-9 rounded-xl text-[12.5px] md:text-[13px] font-extrabold transition-all bg-amber-400/15 hover:bg-amber-400/25 text-amber-200 border border-amber-300/35 shadow-2xs cursor-pointer"
-                      title="Mở Trợ lý Thầy Tony AI tự động phân tích điểm số & giao việc tiếp theo"
+                      title={isEn ? 'Open Teacher Tony AI Advisor to analyze progress & daily tasks' : 'Mở Trợ lý Thầy Tony AI tự động phân tích điểm số & giao việc tiếp theo'}
                   >
                      <span>👨‍🏫</span>
-                     <span className="hidden sm:inline">Thầy Tony AI</span>
+                     <span className="hidden sm:inline">{isEn ? 'Teacher Tony AI' : 'Thầy Tony AI'}</span>
                   </button>
               )}
               {!(course?.title || '').toLowerCase().includes('ielts') && (
@@ -5525,7 +5535,7 @@ export default function LectureViewer({
                           }
                       }} 
                       className="flex items-center gap-1.5 px-2.5 sm:px-3.5 py-1.5 md:h-9 rounded-xl text-xs sm:text-[13px] font-extrabold transition-all bg-[#2ab4e8] hover:bg-[#1fa0d4] text-white shadow-xs border border-white/25 cursor-pointer shrink-0"
-                      title="Mở trợ lý học tập Tony AI Tutor"
+                      title={isEn ? 'Open Tony AI Tutor Assistant' : 'Mở trợ lý học tập Tony AI Tutor'}
                   >
                      <span>🤖</span> <span className="hidden sm:inline">AI Tutor</span>
                   </button>
@@ -5558,7 +5568,7 @@ export default function LectureViewer({
              <button 
                  onClick={toggleFullScreen} 
                  className="hidden md:flex w-9 h-9 rounded-xl items-center justify-center bg-white/12 hover:bg-white/22 border border-white/15 text-white transition-all cursor-pointer"
-                 title={isFullscreen ? "Thoát toàn màn hình" : "Toàn màn hình"}
+                 title={isFullscreen ? (isEn ? 'Exit fullscreen' : 'Thoát toàn màn hình') : (isEn ? 'Fullscreen' : 'Toàn màn hình')}
              >
                 {isFullscreen ? (
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5l5.25 5.25" /></svg>
@@ -5589,27 +5599,29 @@ export default function LectureViewer({
                       <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#2ab4e8] block leading-none mb-0.5">
                         TonyEnglish Curriculum
                       </span>
-                      <h3 className="font-black text-slate-900 text-[15px] tracking-tight leading-tight">Nội dung khóa học</h3>
+                      <h3 className="font-black text-slate-900 text-[15px] tracking-tight leading-tight">{isEn ? 'Course Curriculum' : 'Nội dung khóa học'}</h3>
                     </div>
                     {isTrialMode && (
                       <span className="bg-amber-100 text-amber-700 border border-amber-200 text-[10px] font-black uppercase px-2 py-0.5 rounded-full">
-                        🎁 Học thử
+                        🎁 {isEn ? 'Free Trial' : 'Học thử'}
                       </span>
                     )}
                   </div>
                   <button 
                       onClick={() => setIsSidebarOpen(false)} 
                       className="md:hidden w-8 h-8 rounded-full bg-slate-200/60 hover:bg-slate-200 flex items-center justify-center font-bold text-slate-500 hover:text-slate-700 text-sm transition-colors"
-                      title="Đóng danh sách"
+                      title={isEn ? 'Close list' : 'Đóng danh sách'}
                   >
                       ✕
                   </button>
               </div>
               <div className="flex flex-col gap-1.5 bg-white border border-slate-200/80 rounded-xl p-2.5 shadow-2xs">
                   <div className="flex justify-between text-[11.5px] font-bold text-slate-600">
-                      <span>{isTrialMode ? 'Bài học thử được mở' : 'Tiến độ hoàn thành'}</span>
+                      <span>{isTrialMode ? (isEn ? 'Free trial lessons unlocked' : 'Bài học thử được mở') : (isEn ? 'Completion progress' : 'Tiến độ hoàn thành')}</span>
                       <span className="text-[#0a5482] font-black">
-                        {isTrialMode ? `${trialUnlockedLectureIds.size} / ${lectures.length} bài` : `${completedLectures.size} / ${lectures.length} bài`}
+                        {isTrialMode
+                          ? `${trialUnlockedLectureIds.size} / ${lectures.length} ${isEn ? 'lessons' : 'bài'}`
+                          : `${completedLectures.size} / ${lectures.length} ${isEn ? 'lessons' : 'bài'}`}
                       </span>
                   </div>
                   <div className="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden">
@@ -5625,7 +5637,7 @@ export default function LectureViewer({
                     type="text"
                     value={sidebarSearchQuery}
                     onChange={(e) => setSidebarSearchQuery(e.target.value)}
-                    placeholder={`Tìm nhanh trong ${lectures.length} bài...`}
+                    placeholder={isEn ? `Quick search ${lectures.length} lessons...` : `Tìm nhanh trong ${lectures.length} bài...`}
                     className="w-full pl-9 pr-8 py-2 text-[12.5px] font-medium bg-white border border-slate-200/90 rounded-xl text-slate-800 placeholder-slate-400 focus:outline-none focus:border-[#2ab4e8] focus:ring-2 focus:ring-[#2ab4e8]/20 transition-all"
                   />
                   {sidebarSearchQuery && (
@@ -5633,7 +5645,7 @@ export default function LectureViewer({
                       type="button"
                       onClick={() => setSidebarSearchQuery('')}
                       className="absolute right-2.5 top-1/2 -translate-y-1/2 w-5 h-5 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 text-[10px] font-bold flex items-center justify-center cursor-pointer"
-                      title="Xóa tìm kiếm"
+                      title={isEn ? 'Clear search' : 'Xóa tìm kiếm'}
                     >
                       ✕
                     </button>
@@ -5645,17 +5657,17 @@ export default function LectureViewer({
            
            <div className="flex-1 overflow-y-auto custom-scrollbar bg-white pb-24" style={{ WebkitOverflowScrolling: 'touch' }}>
              {modules.length === 0 ? (
-                <div className="p-8 text-center text-slate-400 text-sm">Chưa có nội dung.</div>
+                <div className="p-8 text-center text-slate-400 text-sm">{isEn ? 'No lessons available yet.' : 'Chưa có nội dung.'}</div>
              ) : sidebarSearchNorm && filteredModules.length === 0 ? (
                 <div className="p-8 text-center space-y-2.5">
                   <div className="text-2xl">🔍</div>
-                  <p className="text-sm font-bold text-slate-600">Không tìm thấy bài giảng phù hợp</p>
+                  <p className="text-sm font-bold text-slate-600">{isEn ? 'No matching lessons found' : 'Không tìm thấy bài giảng phù hợp'}</p>
                   <button
                     type="button"
                     onClick={() => setSidebarSearchQuery('')}
                     className="text-xs font-extrabold text-[#0a5482] bg-sky-50 hover:bg-sky-100 border border-sky-200 px-3 py-1.5 rounded-lg transition cursor-pointer"
                   >
-                    Xóa tìm kiếm
+                    {isEn ? 'Clear search' : 'Xóa tìm kiếm'}
                   </button>
                 </div>
              ) : (
@@ -5746,7 +5758,7 @@ export default function LectureViewer({
                                      }
                                      handleSelectLecture(lec.id);
                                    }} 
-                                   title={isLocked ? '🔒 Bài giảng dành cho học viên chính thức - Bấm để xem hướng dẫn mở khóa' : lec.title}
+                                   title={isLocked ? (isEn ? '🔒 Official course lesson — Click to learn how to unlock' : '🔒 Bài giảng dành cho học viên chính thức - Bấm để xem hướng dẫn mở khóa') : lec.title}
                                    className={`w-full text-left px-3 py-2.5 rounded-xl text-[13px] transition-all flex items-start gap-3 relative group ${
                                      isLocked
                                        ? 'bg-slate-100/80 text-slate-400 cursor-pointer opacity-65 hover:opacity-80 select-none'
@@ -5794,7 +5806,7 @@ export default function LectureViewer({
                                           className={`text-[10px] px-1.5 py-0.5 rounded font-medium flex items-center gap-1 shrink-0 ${
                                             isLocked ? 'bg-slate-200/70 text-slate-400 border border-slate-200' : 'bg-red-50 text-red-600 border border-red-100'
                                           }`}
-                                          title="Có video bài giảng"
+                                          title={isEn ? 'Includes video lecture' : 'Có video bài giảng'}
                                         >
                                           <svg className="w-2.5 h-2.5 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
                                           {Array.isArray(LECTURE_VIDEO_MAP[lec.id]) ? `Video (${(LECTURE_VIDEO_MAP[lec.id] as any[]).length})` : 'Video'}
@@ -5805,7 +5817,7 @@ export default function LectureViewer({
                                           className={`text-[10px] px-1.5 py-0.5 rounded font-medium flex items-center gap-1 shrink-0 ${
                                             isLocked ? 'bg-slate-200/70 text-slate-400 border border-slate-200' : 'bg-emerald-50 text-emerald-700 border border-emerald-200 shadow-xs'
                                           }`}
-                                          title="Bài giảng Audio Podcast"
+                                          title={isEn ? 'Audio Podcast Lesson' : 'Bài giảng Audio Podcast'}
                                         >
                                           <svg className="w-2.5 h-2.5 stroke-current" fill="none" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 100-6 3 3 0 000 6z" /></svg>
                                           Podcast ({getPodcastCount(lec, currentCourseId)})
@@ -5816,10 +5828,10 @@ export default function LectureViewer({
                                           className={`text-[10px] px-1.5 py-0.5 rounded font-medium flex items-center gap-1 shrink-0 ${
                                             isLocked ? 'bg-slate-200/70 text-slate-400 border border-slate-200' : 'bg-indigo-50 text-indigo-700 border border-indigo-200 shadow-xs'
                                           }`}
-                                          title="Luyện phản xạ thực chiến cùng Trợ lý AI"
+                                          title={isEn ? 'Live speaking reflex practice with AI' : 'Luyện phản xạ thực chiến cùng Trợ lý AI'}
                                         >
                                           <span className="text-[11px] leading-none">🤖</span>
-                                          <span>Luyện nói AI</span>
+                                          <span>{isEn ? 'AI Speaking' : 'Luyện nói AI'}</span>
                                         </span>
                                       )}
                                       {totalTasks > 0 && (
@@ -5838,9 +5850,9 @@ export default function LectureViewer({
                                                    ? 'bg-[#0a5482]/10 text-[#0a5482] hover:bg-[#0a5482]/20 cursor-pointer'
                                                    : 'bg-slate-100 text-slate-500 hover:bg-slate-200 cursor-pointer'
                                            }`}
-                                           title={isLocked ? 'Bài giảng bị khóa trong chế độ học thử' : 'Bấm để xem nhiệm vụ bài học'}
+                                           title={isLocked ? (isEn ? 'Locked in Free Trial mode' : 'Bài giảng bị khóa trong chế độ học thử') : (isEn ? 'Click to view lesson tasks' : 'Bấm để xem nhiệm vụ bài học')}
                                          >
-                                             🎯 {completedCount}/{totalTasks} bài tập
+                                             🎯 {completedCount}/{totalTasks} {isEn ? 'tasks' : 'bài tập'}
                                          </span>
                                       )}
                                     </div>
@@ -5889,25 +5901,25 @@ export default function LectureViewer({
                   {!activeLectureId ? (
                     <div className="flex flex-col items-center justify-center h-full py-20 text-slate-400">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" className="w-16 h-16 mb-4 opacity-50"><path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" /></svg>
-                        <span className="font-medium text-lg">Chọn bài học ở danh sách bên trái để bắt đầu</span>
+                        <span className="font-medium text-lg">{isEn ? 'Select a lesson from the sidebar to begin' : 'Chọn bài học ở danh sách bên trái để bắt đầu'}</span>
                     </div>
                   ) : pages.length === 0 ? (
                     <div className="flex flex-col items-center justify-center h-full py-20 text-slate-400 text-center">
                        <span className="text-4xl mb-3 opacity-50">📖</span>
-                       <span className="font-bold text-slate-600">Nội dung bài học hiện đang được cập nhật.</span>
-                       <span className="text-sm mt-1">Vui lòng quay lại sau nhé!</span>
+                       <span className="font-bold text-slate-600">{isEn ? 'Lesson content is being updated.' : 'Nội dung bài học hiện đang được cập nhật.'}</span>
+                       <span className="text-sm mt-1">{isEn ? 'Please check back soon!' : 'Vui lòng quay lại sau nhé!'}</span>
                     </div>
                   ) : !currentHtmlContent ? (
                     <div className="flex flex-col items-center justify-center h-full py-20 text-slate-400">
                        <span className="w-8 h-8 border-4 border-[#0a5482]/25 border-t-[#0a5482] rounded-full animate-spin mb-4"></span>
-                       <span className="font-medium">Đang tải nội dung...</span>
+                       <span className="font-medium">{isEn ? 'Loading lesson content...' : 'Đang tải nội dung...'}</span>
                     </div>
                   ) : (
                     <div className="animate-in fade-in duration-500">
                        <div className="flex items-center gap-2 mb-2.5 sm:mb-3 flex-wrap px-2.5 sm:px-0">
                          <span className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.14em] text-[#0a5482] bg-sky-50 border border-sky-200/80 px-2.5 py-1 rounded-full">
                            <span className="w-1.5 h-1.5 rounded-full bg-[#2ab4e8]" />
-                           {course?.title || 'Bài Giảng Lý Thuyết'}
+                           {course?.title ? getLocalizedCourseTitle(course.title, lang) : (isEn ? 'Theory Lecture' : 'Bài Giảng Lý Thuyết')}
                          </span>
                          {activeLecture && (() => {
                             const activeTitleLower = (activeLecture.title || '').toLowerCase();
@@ -5921,13 +5933,17 @@ export default function LectureViewer({
                                 {hasActivePodcast && (
                                   <span className="text-xs px-2.5 py-1 rounded-full font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center gap-1.5 shadow-2xs">
                                     <svg className="w-3.5 h-3.5 stroke-current" fill="none" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 100-6 3 3 0 000 6z" /></svg>
-                                    <span>{isDialoguePod ? 'Podcast (2 chế độ: Shadowing & Phản xạ)' : `Podcast (${getPodcastCount(activeLecture, currentCourseId)} tập chuyên sâu)`}</span>
+                                    <span>
+                                      {isDialoguePod
+                                        ? (isEn ? 'Podcast (2 Modes: Shadowing & Reflex)' : 'Podcast (2 chế độ: Shadowing & Phản xạ)')
+                                        : (isEn ? `Podcast (${getPodcastCount(activeLecture, currentCourseId)} episodes)` : `Podcast (${getPodcastCount(activeLecture, currentCourseId)} tập chuyên sâu)`)}
+                                    </span>
                                   </span>
                                 )}
                                 {isActiveReflexAi && (
                                   <span className="text-xs px-2.5 py-1 rounded-full font-semibold bg-gradient-to-r from-indigo-50 to-violet-50 text-indigo-700 border border-indigo-200 flex items-center gap-1.5 shadow-2xs">
                                     <span className="text-sm">🤖</span>
-                                    <span>Luyện phản xạ cùng Trợ lý AI</span>
+                                    <span>{isEn ? 'AI Speaking Reflex Practice' : 'Luyện phản xạ cùng Trợ lý AI'}</span>
                                   </span>
                                 )}
                               </>
@@ -5949,7 +5965,7 @@ export default function LectureViewer({
                              }`}
                            >
                              <span>💬</span>
-                             <span>Bài hội thoại & Thực hành (Trang 1)</span>
+                             <span>{isEn ? 'Dialogue & Practice (Page 1)' : 'Bài hội thoại & Thực hành (Trang 1)'}</span>
                            </button>
                            <button
                              type="button"
@@ -5961,7 +5977,7 @@ export default function LectureViewer({
                              }`}
                            >
                              <span>🎧</span>
-                             <span>Podcast Shadowing & Phản xạ (Trang 2)</span>
+                             <span>{isEn ? 'Shadowing & Reflex Podcast (Page 2)' : 'Podcast Shadowing & Phản xạ (Trang 2)'}</span>
                            </button>
                          </div>
                        )}
@@ -5977,7 +5993,7 @@ export default function LectureViewer({
                              }`}
                            >
                              <span>🇻🇳</span>
-                             <span>Bản Tiếng Việt (Trang 1)</span>
+                             <span>{isEn ? 'Vietnamese Version (Page 1)' : 'Bản Tiếng Việt (Trang 1)'}</span>
                            </button>
                            <button
                              type="button"
@@ -5989,7 +6005,7 @@ export default function LectureViewer({
                              }`}
                            >
                              <span>🇬🇧</span>
-                             <span>Bản Tiếng Anh (Trang 2)</span>
+                             <span>{isEn ? 'English Version (Page 2)' : 'Bản Tiếng Anh (Trang 2)'}</span>
                            </button>
                          </div>
                        )}
@@ -6005,7 +6021,7 @@ export default function LectureViewer({
                               }`}
                             >
                               <span>🎧</span>
-                              <span>Luyện nghe &amp; Đọc hiểu (Trang 1)</span>
+                              <span>{isEn ? 'Listening & Reading (Page 1)' : 'Luyện nghe & Đọc hiểu (Trang 1)'}</span>
                             </button>
                             {totalPages >= 2 && (
                               <button
@@ -6018,7 +6034,7 @@ export default function LectureViewer({
                                 }`}
                               >
                                 <span>🔄</span>
-                                <span>Đối chiếu Song ngữ (Trang 2)</span>
+                                <span>{isEn ? 'Bilingual Side-by-Side (Page 2)' : 'Đối chiếu Song ngữ (Trang 2)'}</span>
                               </button>
                             )}
                             {totalPages >= 3 && (
@@ -6032,7 +6048,7 @@ export default function LectureViewer({
                                 }`}
                               >
                                 <span>🧠</span>
-                                <span>Learn by Heart - Luyện trí nhớ (Trang 3)</span>
+                                <span>{isEn ? 'Learn by Heart — Active Recall (Page 3)' : 'Learn by Heart - Luyện trí nhớ (Trang 3)'}</span>
                               </button>
                             )}
                           </div>
@@ -6052,10 +6068,10 @@ export default function LectureViewer({
                               <span>{isIdiomsCourse ? '🎧' : isEmailWritingCourse ? '✉️' : '🎤'}</span>
                               <span>
                                 {isIdiomsCourse
-                                  ? '10 Thành ngữ & Audio (Trang 1)'
+                                  ? (isEn ? '10 Idioms & Audio (Page 1)' : '10 Thành ngữ & Audio (Trang 1)')
                                   : isEmailWritingCourse
-                                  ? 'Cụm từ & 3 Mẫu Email (Trang 1)'
-                                  : 'Chiến lược & 2 Bài Mẫu STAR (Trang 1)'}
+                                  ? (isEn ? 'Key Phrases & 3 Samples (Page 1)' : 'Cụm từ & 3 Mẫu Email (Trang 1)')
+                                  : (isEn ? 'Strategy & 2 STAR Samples (Page 1)' : 'Chiến lược & 2 Bài Mẫu STAR (Trang 1)')}
                               </span>
                             </button>
                             {totalPages >= 2 && (
@@ -6071,10 +6087,10 @@ export default function LectureViewer({
                                 <span>{isIdiomsCourse ? '💬' : isEmailWritingCourse ? '🔄' : '🚨'}</span>
                                 <span>
                                   {isIdiomsCourse
-                                    ? 'Hội thoại & IELTS Band 8+ (Trang 2)'
+                                    ? (isEn ? 'Dialogue & IELTS Band 8+ (Page 2)' : 'Hội thoại & IELTS Band 8+ (Trang 2)')
                                     : isEmailWritingCourse
-                                    ? 'Sửa lỗi & Đối chiếu Song ngữ (Trang 2)'
-                                    : 'Tránh Bẫy & Đối chiếu Song ngữ (Trang 2)'}
+                                    ? (isEn ? 'Error Fix & Bilingual Review (Page 2)' : 'Sửa lỗi & Đối chiếu Song ngữ (Trang 2)')
+                                    : (isEn ? 'Pitfalls & Bilingual Review (Page 2)' : 'Tránh Bẫy & Đối chiếu Song ngữ (Trang 2)')}
                                 </span>
                               </button>
                             )}
@@ -6091,10 +6107,10 @@ export default function LectureViewer({
                                 <span>{isIdiomsCourse ? '🧠' : isEmailWritingCourse ? '📋' : '📝'}</span>
                                 <span>
                                   {isIdiomsCourse
-                                    ? 'Active Recall — Luyện trí nhớ (Trang 3)'
+                                    ? (isEn ? 'Active Recall Practice (Page 3)' : 'Active Recall — Luyện trí nhớ (Trang 3)')
                                     : isEmailWritingCourse
-                                    ? 'Biểu mẫu & Active Recall (Trang 3)'
-                                    : 'Khung Tự Soạn & Active Recall (Trang 3)'}
+                                    ? (isEn ? 'Templates & Active Recall (Page 3)' : 'Biểu mẫu & Active Recall (Trang 3)')
+                                    : (isEn ? 'Answer Builder & Active Recall (Page 3)' : 'Khung Tự Soạn & Active Recall (Trang 3)')}
                                 </span>
                               </button>
                             )}
@@ -6113,7 +6129,7 @@ export default function LectureViewer({
                               }`}
                             >
                               <span>🏆</span>
-                              <span>Exam Practice Dashboard (Trang 1)</span>
+                              <span>Exam Practice Dashboard ({isEn ? 'Page 1' : 'Trang 1'})</span>
                             </button>
                             <button
                               type="button"
@@ -6125,7 +6141,7 @@ export default function LectureViewer({
                               }`}
                             >
                               <span>📝</span>
-                              <span>Past Papers List: Paper 1 &amp; 2 (Trang 2)</span>
+                              <span>Past Papers List: Paper 1 &amp; 2 ({isEn ? 'Page 2' : 'Trang 2'})</span>
                             </button>
                           </div>
                         )}
@@ -6142,7 +6158,7 @@ export default function LectureViewer({
                                }`}
                              >
                                <span>🇬🇧</span>
-                               <span>Bản Tiếng Anh (Trang 1)</span>
+                               <span>{isEn ? 'English Notes (Page 1)' : 'Bản Tiếng Anh (Trang 1)'}</span>
                              </button>
                              <button
                                type="button"
@@ -6154,7 +6170,11 @@ export default function LectureViewer({
                                }`}
                              >
                                <span>🇻🇳</span>
-                               <span>{isEconomicsCourse ? 'Bản Tiếng Việt (Trang 2)' : 'Bản Song ngữ (Trang 2)'}</span>
+                               <span>
+                                 {isEconomicsCourse
+                                   ? (isEn ? 'Vietnamese Notes (Page 2)' : 'Bản Tiếng Việt (Trang 2)')
+                                   : (isEn ? 'Bilingual Notes (Page 2)' : 'Bản Song ngữ (Trang 2)')}
+                               </span>
                              </button>
                              {isEconomicsCourse ? (
                                <>
@@ -6169,7 +6189,7 @@ export default function LectureViewer({
                                      }`}
                                    >
                                      <span>📝</span>
-                                     <span>Câu hỏi & Trả lời mẫu Paper 2 (Trang 3)</span>
+                                     <span>{isEn ? 'Paper 2 Model Q&A (Page 3)' : 'Câu hỏi & Trả lời mẫu Paper 2 (Trang 3)'}</span>
                                    </button>
                                  )}
                                  {totalPages >= 4 && (
@@ -6183,7 +6203,7 @@ export default function LectureViewer({
                                      }`}
                                    >
                                      <span>🎯</span>
-                                     <span>Syllabus Content (Trang 4)</span>
+                                     <span>Syllabus Content ({isEn ? 'Page 4' : 'Trang 4'})</span>
                                    </button>
                                  )}
                                </>
@@ -6200,7 +6220,7 @@ export default function LectureViewer({
                                      }`}
                                    >
                                      <span>🎯</span>
-                                     <span>Syllabus Content (Trang 3)</span>
+                                     <span>Syllabus Content ({isEn ? 'Page 3' : 'Trang 3'})</span>
                                    </button>
                                  )}
                                  {totalPages >= 4 && (
@@ -6214,7 +6234,7 @@ export default function LectureViewer({
                                      }`}
                                    >
                                      <span>{isGeographyCourse ? '🗺️' : '📄'}</span>
-                                     <span>{isGeographyCourse ? 'Tóm tắt Logic (Trang 4)' : 'Trang 4'}</span>
+                                     <span>{isGeographyCourse ? (isEn ? 'Logic Summary (Page 4)' : 'Tóm tắt Logic (Trang 4)') : (isEn ? 'Page 4' : 'Trang 4')}</span>
                                    </button>
                                  )}
                                  {totalPages >= 5 && (
@@ -6228,7 +6248,7 @@ export default function LectureViewer({
                                      }`}
                                    >
                                      <span>{isGeographyCourse ? '✏️' : '📄'}</span>
-                                     <span>{isGeographyCourse ? 'Practice Activities (Trang 5)' : 'Trang 5'}</span>
+                                     <span>{isGeographyCourse ? `Practice Activities (${isEn ? 'Page 5' : 'Trang 5'})` : (isEn ? 'Page 5' : 'Trang 5')}</span>
                                    </button>
                                  )}
                                  {totalPages >= 6 && (
@@ -6242,7 +6262,7 @@ export default function LectureViewer({
                                      }`}
                                    >
                                      <span>{isGeographyCourse ? '📘' : '📄'}</span>
-                                     <span>{isGeographyCourse ? 'Textbook Tasks (Trang 6)' : 'Trang 6'}</span>
+                                     <span>{isGeographyCourse ? `Textbook Tasks (${isEn ? 'Page 6' : 'Trang 6'})` : (isEn ? 'Page 6' : 'Trang 6')}</span>
                                    </button>
                                  )}
                                </>
@@ -6303,7 +6323,7 @@ export default function LectureViewer({
                                  <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
                                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                                  </svg>
-                                 Video Bài Giảng
+                                 {isEn ? 'Video Lecture' : 'Video Bài Giảng'}
                                </span>
                                <span className="text-xs text-slate-300 font-medium hidden sm:inline truncate">
                                  {activeLectureVideoSubTitle}
@@ -6315,7 +6335,7 @@ export default function LectureViewer({
                                  target="_blank"
                                  rel="noopener noreferrer"
                                  className="text-xs font-semibold text-slate-300 hover:text-white flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-slate-800/80 hover:bg-red-600/90 transition-colors border border-slate-700/50"
-                                 title="Mở video trực tiếp trên YouTube"
+                                 title={isEn ? 'Open video directly on YouTube' : 'Mở video trực tiếp trên YouTube'}
                                >
                                  <span>YouTube</span>
                                  <span className="text-[10px]">↗</span>
@@ -6324,14 +6344,14 @@ export default function LectureViewer({
                                  onClick={() => setIsVideoCollapsed(!isVideoCollapsed)}
                                  className="text-xs font-semibold text-slate-300 hover:text-white flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800/80 hover:bg-slate-700 transition-colors border border-slate-700/50"
                                >
-                                 <span>{isVideoCollapsed ? 'Mở video' : 'Thu gọn'}</span>
+                                 <span>{isVideoCollapsed ? (isEn ? 'Show video' : 'Mở video') : (isEn ? 'Collapse' : 'Thu gọn')}</span>
                                  <span className="text-[10px]">{isVideoCollapsed ? '▼' : '▲'}</span>
                                </button>
                              </div>
                            </div>
                            {currentVideoList.length > 1 && (
                              <div className="flex items-center gap-2 px-4 py-2 bg-slate-800/95 border-b border-slate-700/60 overflow-x-auto custom-scrollbar">
-                               <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider shrink-0 mr-1">Các phần:</span>
+                               <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider shrink-0 mr-1">{isEn ? 'Parts:' : 'Các phần:'}</span>
                                {currentVideoList.map((item, idx) => (
                                  <button
                                    key={idx}
@@ -6352,7 +6372,7 @@ export default function LectureViewer({
                                <iframe
                                  key={activeLectureVideoId}
                                  src={`https://www.youtube.com/embed/${activeLectureVideoId}?rel=0&enablejsapi=1&origin=${typeof window !== 'undefined' ? encodeURIComponent(window.location.origin) : 'https%3A%2F%2Ftonyenglish.vn'}&widget_referrer=${typeof window !== 'undefined' ? encodeURIComponent(window.location.origin) : 'https%3A%2F%2Ftonyenglish.vn'}`}
-                                 title={activeLectureVideoSubTitle || "Video bài giảng"}
+                                 title={activeLectureVideoSubTitle || (isEn ? 'Video lecture' : 'Video bài giảng')}
                                  className="w-full h-full border-0"
                                  referrerPolicy="strict-origin-when-cross-origin"
                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -6395,7 +6415,7 @@ export default function LectureViewer({
                            disabled={isFirstLectureAndPage} 
                            className="flex items-center gap-1.5 sm:gap-2 text-slate-600 font-bold text-xs sm:text-[14px] hover:text-[#0a5482] hover:bg-white hover:border-slate-300 border border-transparent disabled:opacity-30 transition-all bg-transparent px-3.5 sm:px-5 py-2.5 sm:py-3 rounded-xl disabled:hover:bg-transparent shrink-0"
                        >
-                          <span>←</span> <span className="hidden xs:inline">Bài trước</span><span className="xs:hidden">Trước</span>
+                          <span>←</span> <span className="hidden xs:inline">{isEn ? 'Previous' : 'Bài trước'}</span><span className="xs:hidden">{isEn ? 'Prev' : 'Trước'}</span>
                        </button>
                        
                        {totalPages > 1 && (
@@ -6417,7 +6437,7 @@ export default function LectureViewer({
                            disabled={isLastLectureAndPage} 
                            className="flex items-center gap-1.5 sm:gap-2 text-white font-bold text-xs sm:text-[14px] transition-all bg-[#0a5482] hover:bg-[#084266] disabled:bg-slate-300 disabled:text-slate-500 disabled:cursor-not-allowed shadow-sm hover:shadow-md px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl shrink-0"
                        >
-                          <span>{currentPage < pages.length ? 'Trang sau' : 'Bài tiếp'}</span> <span>→</span>
+                          <span>{currentPage < pages.length ? (isEn ? 'Next Page' : 'Trang sau') : (isEn ? 'Next Lesson' : 'Bài tiếp')}</span> <span>→</span>
                        </button>
                    </div>
                 )}
@@ -6489,7 +6509,7 @@ export default function LectureViewer({
                          <div className="flex justify-between items-center mb-3 px-2">
                              <span className="text-emerald-400 font-bold text-xs tracking-widest uppercase flex items-center gap-2">
                                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_8px_#34d399]"></span>
-                                 ĐỀ BÀI ĐÍNH KÈM TỪ HỌC SINH
+                                 {isEn ? 'ATTACHED QUESTION FROM STUDENT' : 'ĐỀ BÀI ĐÍNH KÈM TỪ HỌC SINH'}
                              </span>
                              <button 
                                  onClick={() => {
@@ -6544,7 +6564,7 @@ export default function LectureViewer({
                    <div className="flex justify-between items-center mb-2.5">
                      <h4 className="font-bold text-slate-800 text-[15px] flex items-center gap-2">
                        <span>{isModalAllDone ? '🏆' : '🎯'}</span>
-                       Nhiệm vụ bài học
+                       {isEn ? 'Lesson Tasks' : 'Nhiệm vụ bài học'}
                      </h4>
                      <div className="flex items-center gap-2">
                        <span className={`font-bold text-[13px] px-2.5 py-1 rounded-full ${isModalAllDone ? 'bg-emerald-100 text-emerald-700' : 'bg-[#0ea5e9]/10 text-[#0ea5e9]'}`}>
@@ -6592,7 +6612,7 @@ export default function LectureViewer({
                            <button 
                                onClick={() => handleToggleTask(task.id)} 
                                className={`relative flex items-center justify-center shrink-0 w-6 h-6 mt-0.5 rounded-full border-2 transition-all cursor-pointer ${isTaskChecked ? 'bg-emerald-500 border-emerald-500 text-white shadow-xs' : 'bg-slate-50 border-slate-300 hover:border-[#0ea5e9]'}`}
-                               title={isTaskChecked ? "Bấm để bỏ đánh dấu hoàn thành" : "Bấm để đánh dấu đã hoàn thành"}
+                               title={isTaskChecked ? (isEn ? 'Click to mark incomplete' : 'Bấm để bỏ đánh dấu hoàn thành') : (isEn ? 'Click to mark complete' : 'Bấm để đánh dấu đã hoàn thành')}
                            >
                                {isTaskChecked && (
                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-3.5 h-3.5"><path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" /></svg>
@@ -6601,7 +6621,7 @@ export default function LectureViewer({
                         ) : (
                            <div 
                                className={`relative flex items-center justify-center shrink-0 w-6 h-6 mt-0.5 rounded-full border-2 select-none ${isTaskChecked ? 'bg-emerald-500 border-emerald-500 text-white shadow-xs' : 'bg-slate-50 border-slate-300 text-slate-400'}`}
-                               title={isTaskChecked ? "Đã đạt ≥ 50%" : "Cần nộp bài đạt từ 50%"}
+                               title={isTaskChecked ? (isEn ? 'Passed ≥ 50%' : 'Đã đạt ≥ 50%') : (isEn ? 'Score ≥ 50% required to pass' : 'Cần nộp bài đạt từ 50%')}
                            >
                                {isTaskChecked ? (
                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-3.5 h-3.5"><path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" /></svg>
@@ -6620,11 +6640,11 @@ export default function LectureViewer({
                              <div className="flex flex-wrap gap-1.5 mt-0.5">
                                {assign?.admin_approved ? (
                                  <span className="text-[10px] px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 font-bold flex items-center gap-1">
-                                   <span>✅</span> Đã hoàn thành
+                                   <span>✅</span> {isEn ? 'Completed' : 'Đã hoàn thành'}
                                  </span>
                                ) : (
                                  <span className="text-[10px] px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 font-bold flex items-center gap-1">
-                                   <span>⏳</span> Chờ giáo viên phê duyệt
+                                   <span>⏳</span> {isEn ? 'Awaiting teacher approval' : 'Chờ giáo viên phê duyệt'}
                                  </span>
                                )}
                              </div>
@@ -6635,16 +6655,16 @@ export default function LectureViewer({
                                 {scoreInfo ? (
                                   scoreInfo.isPassed ? (
                                     <span className="text-[11px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2.5 py-0.5 rounded-lg flex items-center gap-1">
-                                      <span>✓</span> Đã đạt: {scoreInfo.score}/{scoreInfo.total > 0 ? scoreInfo.total : 10} ({scoreInfo.percent}%)
+                                      <span>✓</span> {isEn ? 'Passed' : 'Đã đạt'}: {scoreInfo.score}/{scoreInfo.total > 0 ? scoreInfo.total : 10} ({scoreInfo.percent}%)
                                     </span>
                                   ) : (
                                     <span className="text-[11px] font-bold text-rose-700 bg-rose-50 border border-rose-200 px-2.5 py-0.5 rounded-lg flex items-center gap-1">
-                                      <span>⚠️</span> Chưa đạt: {scoreInfo.score}/{scoreInfo.total > 0 ? scoreInfo.total : 10} ({scoreInfo.percent}%) • Cần ≥ 50%
+                                      <span>⚠️</span> {isEn ? 'Not passed' : 'Chưa đạt'}: {scoreInfo.score}/{scoreInfo.total > 0 ? scoreInfo.total : 10} ({scoreInfo.percent}%) • {isEn ? 'Need ≥ 50%' : 'Cần ≥ 50%'}
                                     </span>
                                   )
                                 ) : (
                                   <span className="text-[10.5px] font-medium text-slate-400 bg-slate-100 px-2 py-0.5 rounded-md">
-                                    Cần nộp bài đạt từ 50% điểm
+                                    {isEn ? 'Submit with ≥ 50% score to pass' : 'Cần nộp bài đạt từ 50% điểm'}
                                   </span>
                                 )}
                               </div>
@@ -6661,7 +6681,7 @@ export default function LectureViewer({
                                       : 'bg-[#0ea5e9] text-white shadow-sm shadow-blue-500/30 hover:bg-[#0284c7] active:scale-95'
                                 }`}
                               >
-                                {isTaskChecked ? 'Làm lại bài' : scoreInfo && !scoreInfo.isPassed ? 'Làm lại để đạt điểm ➜' : 'Bắt đầu làm bài ➜'}
+                                {isTaskChecked ? (isEn ? 'Retry Test' : 'Làm lại bài') : scoreInfo && !scoreInfo.isPassed ? (isEn ? 'Retry to pass ➜' : 'Làm lại để đạt điểm ➜') : (isEn ? 'Start Practice ➜' : 'Bắt đầu làm bài ➜')}
                               </button>
                            )}
                         </div>
@@ -6680,7 +6700,7 @@ export default function LectureViewer({
         >
           <span>🎯</span>
           <span className={`px-2 py-0.5 rounded-full text-[11px] font-black ${currentLectureDoneCount === currentSafeTasks.length ? 'bg-emerald-100 text-emerald-700' : 'bg-[#0ea5e9]/10 text-[#0ea5e9]'}`}>
-            {currentLectureDoneCount}/{currentSafeTasks.length} việc
+            {currentLectureDoneCount}/{currentSafeTasks.length} {isEn ? 'tasks' : 'việc'}
           </span>
         </button>
       )}
@@ -6696,10 +6716,10 @@ export default function LectureViewer({
           >
             <CourseStudyCoach
               courseId={currentCourseId}
-              courseTitle={course?.title || ''}
+              courseTitle={getLocalizedCourseTitle(course?.title || '', lang)}
               availableCourses={availableCourses.map((c: any) => ({
                 id: String(c.id),
-                title: c.title,
+                title: getLocalizedCourseTitle(c.title, lang),
               }))}
               onSwitchCourse={(cid) => handleSelectCourse(cid)}
               lectures={lectures}
@@ -6746,7 +6766,7 @@ export default function LectureViewer({
                 window.dispatchEvent(new CustomEvent('tony-open-ai-coach-chat', {
                   detail: {
                     courseId: currentCourseId,
-                    courseTitle: course?.title || '',
+                    courseTitle: getLocalizedCourseTitle(course?.title || '', lang),
                     prompt
                   }
                 }));
@@ -6812,28 +6832,45 @@ export default function LectureViewer({
             <div className="bg-gradient-to-r from-[#0a5482] to-[#0f172a] px-6 py-5 text-white flex items-start justify-between gap-3">
               <div>
                 <span className="inline-flex items-center gap-1.5 text-[11px] font-black uppercase tracking-widest text-[#2ab4e8] mb-1">
-                  🔒 Chương trình chính thức
+                  {isEn ? '🔒 Official Program' : '🔒 Chương trình chính thức'}
                 </span>
                 <h3 className="text-lg font-black leading-snug">
-                  Mở khóa toàn bộ khóa học
+                  {isEn ? 'Unlock Full Course' : 'Mở khóa toàn bộ khóa học'}
                 </h3>
               </div>
               <button
                 type="button"
                 onClick={() => setLockedTrialLecture(null)}
                 className="w-8 h-8 rounded-xl bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition cursor-pointer shrink-0"
-                title="Đóng"
+                title={isEn ? 'Close' : 'Đóng'}
               >
                 ✕
               </button>
             </div>
             <div className="p-6 space-y-4">
               <div className="p-3.5 rounded-2xl bg-amber-50 border border-amber-200/80 text-sm text-amber-950 leading-relaxed">
-                Bài giảng <strong className="font-extrabold">"{lockedTrialLecture.title}"</strong> thuộc chương trình chính thức của khóa{' '}
-                <strong className="font-extrabold">{course?.title || 'IGCSE'}</strong>.
+                {isEn ? (
+                  <>
+                    Lesson <strong className="font-extrabold">"{lockedTrialLecture.title}"</strong> is part of the official curriculum for{' '}
+                    <strong className="font-extrabold">{getLocalizedCourseTitle(course?.title || 'IGCSE', lang)}</strong>.
+                  </>
+                ) : (
+                  <>
+                    Bài giảng <strong className="font-extrabold">"{lockedTrialLecture.title}"</strong> thuộc chương trình chính thức của khóa{' '}
+                    <strong className="font-extrabold">{getLocalizedCourseTitle(course?.title || 'IGCSE', lang)}</strong>.
+                  </>
+                )}
               </div>
               <p className="text-sm text-slate-600 leading-relaxed">
-                Bạn đang ở chế độ <strong className="text-slate-800">Học Thử miễn phí</strong>. Liên hệ Thầy Tony để mở khóa 100% bài giảng tương tác, kho đề luyện thi &amp; trợ lý AI 24/7:
+                {isEn ? (
+                  <>
+                    You are currently on the <strong className="text-slate-800">Free Trial</strong>. Contact Teacher Tony to unlock 100% of interactive lectures, the full test bank &amp; 24/7 AI tutoring:
+                  </>
+                ) : (
+                  <>
+                    Bạn đang ở chế độ <strong className="text-slate-800">Học Thử miễn phí</strong>. Liên hệ Thầy Tony để mở khóa 100% bài giảng tương tác, kho đề luyện thi &amp; trợ lý AI 24/7:
+                  </>
+                )}
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
                 <a
@@ -6842,7 +6879,7 @@ export default function LectureViewer({
                   rel="noreferrer"
                   className="flex items-center justify-center gap-2 bg-[#0a5482] hover:bg-[#084266] text-white font-black text-sm py-3 px-4 rounded-xl shadow-md transition"
                 >
-                  <span>💬 Nhắn Zalo Thầy Tony</span>
+                  <span>{isEn ? '💬 Message Teacher Tony on Zalo' : '💬 Nhắn Zalo Thầy Tony'}</span>
                 </a>
                 <a
                   href="tel:0935058688"
@@ -6859,7 +6896,7 @@ export default function LectureViewer({
                 }}
                 className="w-full py-2.5 rounded-xl text-xs font-bold text-slate-500 hover:text-[#0a5482] hover:bg-slate-100 transition cursor-pointer"
               >
-                Quay lại Góc Học Viên →
+                {isEn ? 'Back to Student Portal →' : 'Quay lại Góc Học Viên →'}
               </button>
             </div>
           </div>

@@ -1,8 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { supabase } from './supabase';
 import { useTestGuideVideo, TestGuideVideoButton, TestGuideVideoPlayer, TestGuideVideoEditModal } from './TestGuideVideo';
+import { useLmsLang, LmsLangToggle } from './utils/lmsI18n';
 
 export default function SplitScreenTest({ onBack, onStartTest, testData: propTestData }: { onBack?: () => void, onStartTest?: any, testData?: any }) {
+  const [lang, setLang] = useLmsLang();
+  const isEn = lang === 'en';
   // LẤY ĐÚNG ĐỀ THI TỪ THƯ VIỆN TRUYỀN VÀO (ưu tiên prop, fallback sessionStorage)
   const [testData, setTestData] = useState<any>(() => {
      if (propTestData) return propTestData;
@@ -159,15 +162,15 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
     const currentAnswers = answersRef.current;
     const isExerciseMode = testData?.content_json?.basicInfo?.category === 'exercise';
     if (!isForced && Object.keys(currentAnswers).length === 0) {
-      alert("⚠️ Bạn chưa điền câu trả lời nào cả!");
+      alert(isEn ? "⚠️ You haven't filled in any answers yet!" : "⚠️ Bạn chưa điền câu trả lời nào cả!");
       return;
     }
 
     if (!isForced) {
-      if (!isExerciseMode && timeLeft > 0 && !window.confirm("Bạn có chắc chắn muốn nộp bài thi?")) {
+      if (!isExerciseMode && timeLeft > 0 && !window.confirm(isEn ? "Are you sure you want to submit this exam?" : "Bạn có chắc chắn muốn nộp bài thi?")) {
         return; 
       }
-      if (isExerciseMode && !window.confirm("Bạn có chắc chắn muốn nộp bài tập?")) {
+      if (isExerciseMode && !window.confirm(isEn ? "Are you sure you want to submit this practice?" : "Bạn có chắc chắn muốn nộp bài tập?")) {
         return;
       }
     }
@@ -204,8 +207,8 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
         }
       });
 
-      if (error) throw new Error("Lỗi gọi Server: " + error.message);
-      if (data?.error) throw new Error("Lỗi chấm điểm AI: " + data.error);
+      if (error) throw new Error((isEn ? "Server error: " : "Lỗi gọi Server: ") + error.message);
+      if (data?.error) throw new Error((isEn ? "AI grading error: " : "Lỗi chấm điểm AI: ") + data.error);
 
       // igcse-grader trả về parsed object trực tiếp
       let gradedData;
@@ -281,10 +284,10 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
     } catch (err: any) {
       isFinishingRef.current = false;
       if (err.message && err.message.includes("Unexpected end of JSON input")) {
-        alert("❌ Không thể nộp bài do kết nối gián đoạn hoặc file PDF quá nặng. Vui lòng thử nộp lại.");
+        alert(isEn ? "❌ Could not submit due to an unstable connection or oversized PDF. Please try again." : "❌ Không thể nộp bài do kết nối gián đoạn hoặc file PDF quá nặng. Vui lòng thử nộp lại.");
       } else {
         console.error("Lỗi khi chấm bài:", err);
-        alert("❌ Đã có lỗi xảy ra: " + err.message);
+        alert((isEn ? "❌ An error occurred: " : "❌ Đã có lỗi xảy ra: ") + err.message);
       }
     } finally {
       setIsSubmitting(false);
@@ -306,14 +309,14 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
             setTimeLeft(remaining);
             if (remaining <= 0) {
                 clearInterval(timer);
-                alert("⏰ Hết giờ làm bài! Hệ thống tự động nộp bài.");
+                alert(isEn ? "⏰ Time is up! Your exam is being submitted automatically." : "⏰ Hết giờ làm bài! Hệ thống tự động nộp bài.");
                 handleSubmitRef.current(true);
             }
         } else {
             setTimeLeft(prev => {
                 if (prev <= 1) {
                     clearInterval(timer);
-                    alert("⏰ Hết giờ làm bài! Hệ thống tự động nộp bài.");
+                    alert(isEn ? "⏰ Time is up! Your exam is being submitted automatically." : "⏰ Hết giờ làm bài! Hệ thống tự động nộp bài.");
                     handleSubmitRef.current(true);
                     return 0;
                 }
@@ -347,7 +350,7 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
     return (
       <div className="h-[100dvh] w-screen flex flex-col items-center justify-center bg-[#525659] text-white font-bold">
         <div className="animate-spin text-4xl mb-4">⏳</div>
-        <p>Đang tải đề thi và tài liệu...</p>
+        <p>{isEn ? 'Loading exam & documents...' : 'Đang tải đề thi và tài liệu...'}</p>
       </div>
     );
   }
@@ -355,8 +358,8 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
   if (!testData || (!isReviewMode && (!testData.json_config || !testData.json_config.questions))) {
     return (
       <div className="h-[100dvh] w-screen flex flex-col items-center justify-center bg-[#525659] text-white font-bold gap-4">
-        <p>⚠️ Chưa có đề thi nào trong hệ thống hoặc dữ liệu bị lỗi.</p>
-        <button onClick={onBack} className="bg-[#1e88e5] text-white px-6 py-2 rounded-none">Quay lại</button>
+        <p>{isEn ? '⚠️ Exam not found or configuration data is invalid.' : '⚠️ Chưa có đề thi nào trong hệ thống hoặc dữ liệu bị lỗi.'}</p>
+        <button onClick={onBack} className="bg-[#1e88e5] text-white px-6 py-2 rounded-none">{isEn ? 'Back' : 'Quay lại'}</button>
       </div>
     );
   }
@@ -379,8 +382,12 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
   const callAiTutor = (questionText: string, studentAns: string, feedback: string) => {
       const tutorContext = {
           overall: 'Case Study Review',
-          transcript: `Câu hỏi: "${questionText}". \nĐáp án của học sinh: ${studentAns}. \nNhận xét: "${feedback}".`,
-          feedback: "Bạn là gia sư Cambridge IGCSE. Học sinh đang xem lại bài Case Study và không hiểu câu này. Hãy chủ động chào, đọc câu hỏi và giải thích chi tiết tại sao điểm lại bị trừ, phân tích từng bước lập luận. Dùng giọng điệu ân cần, dễ hiểu."
+          transcript: isEn
+            ? `Question: "${questionText}". \nStudent answer: ${studentAns}. \nFeedback: "${feedback}".`
+            : `Câu hỏi: "${questionText}". \nĐáp án của học sinh: ${studentAns}. \nNhận xét: "${feedback}".`,
+          feedback: isEn
+            ? "You are a Cambridge IGCSE tutor. The student is reviewing a Case Study question and needs help. Greet them warmly in English, walk through the question, explain why marks were lost, and break down the reasoning step by step."
+            : "Bạn là gia sư Cambridge IGCSE. Học sinh đang xem lại bài Case Study và không hiểu câu này. Hãy chủ động chào, đọc câu hỏi và giải thích chi tiết tại sao điểm lại bị trừ, phân tích từng bước lập luận. Dùng giọng điệu ân cần, dễ hiểu."
       };
       sessionStorage.setItem('tony_live_mode', 'TUTOR');
       sessionStorage.setItem('tony_tutor_data', JSON.stringify(tutorContext));
@@ -394,29 +401,32 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
       {/* HEADER TỔNG */}
       <header className="h-14 w-full bg-white border-b border-slate-300 flex items-center justify-between px-3 sm:px-6 shrink-0 z-20 box-border gap-2">
         <div className="flex items-center gap-2.5 sm:gap-4 overflow-hidden min-w-0">
-          <button onClick={onBack} className="text-slate-600 hover:text-black font-bold text-sm transition-colors whitespace-nowrap">← Quay lại</button>
+          <button onClick={onBack} className="text-slate-600 hover:text-black font-bold text-sm transition-colors whitespace-nowrap">{isEn ? '← Back' : '← Quay lại'}</button>
           <div className="h-5 w-px bg-slate-300 hidden sm:block"></div>
           <div className="truncate flex items-baseline gap-2 min-w-0">
             <h1 className="font-bold text-black text-[14px] sm:text-[15px] leading-tight truncate">
-              {isReviewMode ? `[REVIEW] ${testData.title || 'Bài thi Case Study'}` : testData.title || 'Bài thi Case Study'}
+              {isReviewMode ? `[REVIEW] ${testData.title || (isEn ? 'Case Study Exam' : 'Bài thi Case Study')}` : testData.title || (isEn ? 'Case Study Exam' : 'Bài thi Case Study')}
             </h1>
-            <p className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider hidden md:block">Phân loại: {testData.test_type || 'Case-Study'}</p>
+            <p className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider hidden md:block">{isEn ? 'Type:' : 'Phân loại:'} {testData.test_type || 'Case-Study'}</p>
           </div>
         </div>
-        {!gradeResult && !isReviewMode && (
-          <div className="flex items-center gap-2 sm:gap-4 shrink-0">
-             <div className={`font-bold flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded text-xs sm:text-sm ${testData.content_json?.basicInfo?.category === 'exercise' ? 'text-[#0ea5e9] bg-[#0ea5e9]/10' : (timeLeft <= 300 ? 'text-red-600 bg-red-50 animate-pulse' : 'text-slate-600 bg-slate-100')}`}>
-               {testData.content_json?.basicInfo?.category === 'exercise' ? 'BÀI TẬP' : <><span>⏱️</span> <span className="font-mono tracking-wider sm:tracking-widest tabular-nums">{formatTime(timeLeft)}</span></>}
-             </div>
-             <button 
-               onClick={() => handleSubmit(false)} 
-               disabled={isSubmitting}
-               className="bg-[#1e88e5] hover:bg-blue-700 text-white font-bold text-xs sm:text-sm px-4 sm:px-6 py-1.5 rounded-none transition-colors active:scale-95 disabled:opacity-50 whitespace-nowrap"
-             >
-               {isSubmitting ? 'Đang nộp...' : 'Nộp Bài'}
-             </button>
-          </div>
-        )}
+        <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+          <LmsLangToggle lang={lang} setLang={setLang} variant="light" />
+          {!gradeResult && !isReviewMode && (
+            <>
+               <div className={`font-bold flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded text-xs sm:text-sm ${testData.content_json?.basicInfo?.category === 'exercise' ? 'text-[#0ea5e9] bg-[#0ea5e9]/10' : (timeLeft <= 300 ? 'text-red-600 bg-red-50 animate-pulse' : 'text-slate-600 bg-slate-100')}`}>
+                 {testData.content_json?.basicInfo?.category === 'exercise' ? (isEn ? 'PRACTICE' : 'BÀI TẬP') : <><span>⏱️</span> <span className="font-mono tracking-wider sm:tracking-widest tabular-nums">{formatTime(timeLeft)}</span></>}
+               </div>
+               <button 
+                 onClick={() => handleSubmit(false)} 
+                 disabled={isSubmitting}
+                 className="bg-[#1e88e5] hover:bg-blue-700 text-white font-bold text-xs sm:text-sm px-4 sm:px-6 py-1.5 rounded-none transition-colors active:scale-95 disabled:opacity-50 whitespace-nowrap"
+               >
+                 {isSubmitting ? (isEn ? 'Submitting...' : 'Đang nộp...') : (isEn ? 'Submit' : 'Nộp Bài')}
+               </button>
+            </>
+          )}
+        </div>
       </header>
 
       {/* MOBILE VIEW SWITCHER (< md) */}
@@ -426,14 +436,14 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
           onClick={() => setMobileTab('pdf')}
           className={`flex-1 py-2.5 text-xs font-bold uppercase tracking-wider transition-colors border-b-2 ${mobileTab === 'pdf' ? 'bg-white text-[#1e88e5] border-[#1e88e5]' : 'text-slate-600 border-transparent'}`}
         >
-          📄 Đề bài
+          {isEn ? '📄 Question Paper' : '📄 Đề bài'}
         </button>
         <button
           type="button"
           onClick={() => setMobileTab('answers')}
           className={`flex-1 py-2.5 text-xs font-bold uppercase tracking-wider transition-colors border-b-2 ${mobileTab === 'answers' ? 'bg-white text-[#1e88e5] border-[#1e88e5]' : 'text-slate-600 border-transparent'}`}
         >
-          {gradeResult ? '✅ Kết quả' : '✏️ Bài làm'}
+          {gradeResult ? (isEn ? '✅ Results' : '✅ Kết quả') : (isEn ? '✏️ Answers' : '✏️ Bài làm')}
         </button>
       </div>
 
@@ -472,7 +482,7 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
                 )}
               </div>
             ) : (
-              <span className="font-bold text-slate-300 text-[11px] uppercase tracking-widest shrink-0">Đề thi</span>
+              <span className="font-bold text-slate-300 text-[11px] uppercase tracking-widest shrink-0">{isEn ? 'Question Paper' : 'Đề thi'}</span>
             )}
             {activePdfUrl && !(leftPdfView === 'question' && testData?.content_json?.basicInfo?.leftPaneType === 'text') && (
               <a
@@ -480,9 +490,9 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-2.5 py-1 rounded bg-white/10 hover:bg-white/20 text-slate-200 hover:text-white text-[11px] font-bold transition shrink-0 whitespace-nowrap"
-                title="Mở file PDF trong tab mới (khuyên dùng trên iPad/Mobile)"
+                title={isEn ? "Open PDF in a new tab (recommended on iPad/Mobile)" : "Mở file PDF trong tab mới (khuyên dùng trên iPad/Mobile)"}
               >
-                ↗ Mở PDF
+                {isEn ? '↗ Open PDF' : '↗ Mở PDF'}
               </a>
             )}
           </div>
@@ -503,7 +513,7 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
                if (activePdfUrl) {
                  return <iframe key={activePdfUrl} src={`${activePdfUrl}#toolbar=0&navpanes=0&scrollbar=0&view=FitH`} className="w-full h-full border-none bg-transparent" title={leftPdfView === 'insert2' ? 'PDF Insert 2' : leftPdfView === 'insert' ? 'PDF Insert 1' : 'PDF Question Paper'} />;
                }
-               return <div className="flex flex-col items-center justify-center h-full text-slate-400 p-8 text-center bg-[#525659]">📄<p className="font-bold">Không có tài liệu đính kèm.</p></div>;
+               return <div className="flex flex-col items-center justify-center h-full text-slate-400 p-8 text-center bg-[#525659]">📄<p className="font-bold">{isEn ? 'No document attached.' : 'Không có tài liệu đính kèm.'}</p></div>;
              })()}
           </div>
         </div>
@@ -524,9 +534,9 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
           <div className="bg-[#323639] border-b border-[#202224] px-6 flex justify-between items-center h-10 shrink-0 shadow-sm">
             <span className="font-bold text-slate-300 text-[11px] uppercase tracking-widest flex items-center gap-2">
               {gradeResult ? (
-                <><span>✅</span> Kết quả chấm điểm AI</>
+                <><span>✅</span> {isEn ? 'AI Grading Results' : 'Kết quả chấm điểm AI'}</>
               ) : (
-                <><span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> Khu vực làm bài</>
+                <><span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> {isEn ? 'Answer Workspace' : 'Khu vực làm bài'}</>
               )}
             </span>
 
@@ -571,12 +581,12 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
             {gradeResult ? (
               <div className="w-full bg-white shadow-xl mb-5 px-6 py-12 sm:px-16 sm:py-16 min-h-[85vh]">
                 <div className="border-b-4 border-black pb-8 mb-10 text-center">
-                  <h2 className="text-3xl font-black text-black mb-3">Kết Quả Chấm Điểm (AI)</h2>
+                  <h2 className="text-3xl font-black text-black mb-3">{isEn ? 'AI Grading Results' : 'Kết Quả Chấm Điểm (AI)'}</h2>
                   <div className="text-6xl font-black text-[#1e88e5] mb-6">
                     {gradeResult.total_student_score} <span className="text-3xl text-slate-400">/ {gradeResult.total_max_score}</span>
                   </div>
                   <p className="text-[16px] text-slate-700 italic bg-slate-100 p-6 border-l-4 border-[#1e88e5] text-left">
-                    <span className="font-bold not-italic block mb-2 text-black uppercase text-sm">Nhận xét tổng quan:</span>
+                    <span className="font-bold not-italic block mb-2 text-black uppercase text-sm">{isEn ? 'Overall Feedback:' : 'Nhận xét tổng quan:'}</span>
                     {gradeResult.general_feedback}
                   </p>
                 </div>
@@ -585,16 +595,16 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
                   {(gradeResult.details || []).map((item: any, idx: number) => (
                     <div key={idx} className="border border-slate-300 p-6 sm:p-8 shadow-sm relative">
                       <div className="flex justify-between items-center mb-6 border-b border-slate-200 pb-4">
-                        <h4 className="font-black text-xl text-black">Câu {item.question_number}</h4>
+                        <h4 className="font-black text-xl text-black">{isEn ? `Question ${item.question_number}` : `Câu ${item.question_number}`}</h4>
                         <span className={`font-black px-4 py-2 text-[15px] ${item.student_score === item.max_score ? 'bg-emerald-100 text-emerald-700 border border-emerald-300' : item.student_score === 0 ? 'bg-red-100 text-red-700 border border-red-300' : 'bg-orange-100 text-orange-700 border border-orange-300'}`}>
-                          Đạt: {item.student_score} / {item.max_score}
+                          {isEn ? 'Score:' : 'Đạt:'} {item.student_score} / {item.max_score}
                         </span>
                       </div>
                       
                       <div className="mb-4">
-                         <span className="font-bold text-slate-500 uppercase text-[11px] tracking-widest block mb-2">Bài làm của bạn:</span>
+                         <span className="font-bold text-slate-500 uppercase text-[11px] tracking-widest block mb-2">{isEn ? 'Your Answer:' : 'Bài làm của bạn:'}</span>
                          <div className="bg-slate-50 p-4 border border-slate-200 text-[14px] text-slate-600 italic whitespace-pre-wrap">
-                            {findStudentAnswer(item.question_number || item.id) || "Không có câu trả lời..."}
+                            {findStudentAnswer(item.question_number || item.id) || (isEn ? "No answer provided..." : "Không có câu trả lời...")}
                          </div>
                       </div>
 
@@ -607,7 +617,7 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
 
                       {item.correct_answer && (
                         <div className="mt-4 bg-white p-3 rounded border border-slate-200 text-[13px]">
-                          <span className="font-bold text-slate-500 uppercase text-[10px] tracking-widest block mb-1">Đáp án đúng (Cambridge MS):</span>
+                          <span className="font-bold text-slate-500 uppercase text-[10px] tracking-widest block mb-1">{isEn ? 'Correct Answer (Cambridge MS):' : 'Đáp án đúng (Cambridge MS):'}</span>
                           <span className="font-medium text-emerald-600 whitespace-pre-wrap">{item.correct_answer}</span>
                         </div>
                       )}
@@ -616,8 +626,10 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
                         <div className="flex items-center gap-2 mt-5">
                           <button onClick={() => {
                               const qn = item.question_number || item.id || '';
-                              const studentAns = findStudentAnswer(qn) || 'Bỏ trống';
-                              const query = `Câu hỏi số ${qn}\nĐáp án học sinh: "${studentAns}"\nĐiểm: ${item.student_score}/${item.max_score}\nNhận xét: "${item.examiner_comment}"${item.correct_answer ? `\nĐáp án đúng: "${item.correct_answer}"` : ''}\n\nThầy giải thích chi tiết giúp em tại sao em bị trừ điểm ạ!`;
+                              const studentAns = findStudentAnswer(qn) || (isEn ? 'Blank' : 'Bỏ trống');
+                              const query = isEn
+                                ? `Question ${qn}\nStudent answer: "${studentAns}"\nScore: ${item.student_score}/${item.max_score}\nFeedback: "${item.examiner_comment}"${item.correct_answer ? `\nCorrect answer: "${item.correct_answer}"` : ''}\n\nPlease explain in detail in English why marks were deducted!`
+                                : `Câu hỏi số ${qn}\nĐáp án học sinh: "${studentAns}"\nĐiểm: ${item.student_score}/${item.max_score}\nNhận xét: "${item.examiner_comment}"${item.correct_answer ? `\nĐáp án đúng: "${item.correct_answer}"` : ''}\n\nThầy giải thích chi tiết giúp em tại sao em bị trừ điểm ạ!`;
                               const btn = document.createElement('button');
                               btn.className = 'btn-ai-trigger';
                               btn.setAttribute('data-topic', query);
@@ -626,14 +638,14 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
                               btn.click();
                               document.body.removeChild(btn);
                           }} className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-bold text-[12px] rounded-lg shadow-md hover:shadow-lg transition-all active:scale-95">
-                              💬 Chat Thầy AI
+                              {isEn ? '💬 Ask AI Tutor' : '💬 Chat Thầy AI'}
                           </button>
                           <button onClick={() => {
                               const qn = item.question_number || item.id || '';
-                              const studentAns = findStudentAnswer(qn) || 'Bỏ trống';
-                              callAiTutor(`Câu ${qn}`, studentAns, item.examiner_comment || '');
+                              const studentAns = findStudentAnswer(qn) || (isEn ? 'Blank' : 'Bỏ trống');
+                              callAiTutor(isEn ? `Question ${qn}` : `Câu ${qn}`, studentAns, item.examiner_comment || '');
                           }} className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-amber-400 to-orange-400 text-white font-bold text-[12px] rounded-lg shadow-md hover:shadow-lg transition-all active:scale-95">
-                              📞 Gọi Gia Sư
+                              {isEn ? '📞 Call AI Tutor' : '📞 Gọi Gia Sư'}
                           </button>
                         </div>
                       )}
@@ -657,7 +669,7 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
                         setAnswers({});
                         isFinishingRef.current = false;
                     }} className="border-2 border-black hover:bg-slate-100 text-black font-bold px-10 py-3 transition-colors">
-                      Làm lại bài thi
+                      {isEn ? 'Retake Exam' : 'Làm lại bài thi'}
                     </button>
                   </div>
                 )}
@@ -700,7 +712,7 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
                        disabled={isSubmitting}
                        className="bg-[#1e88e5] hover:bg-blue-700 text-white font-bold px-10 py-3 rounded-none transition-transform active:scale-95 flex items-center gap-2 shadow-md disabled:opacity-50"
                      >
-                       {isSubmitting ? 'AI đang chấm bài...' : (isExercise ? 'Hoàn tất & Nộp bài tập' : 'Hoàn tất & Nộp bài thi')}
+                       {isSubmitting ? (isEn ? 'AI is grading...' : 'AI đang chấm bài...') : (isExercise ? (isEn ? 'Finish & Submit Practice' : 'Hoàn tất & Nộp bài tập') : (isEn ? 'Finish & Submit Exam' : 'Hoàn tất & Nộp bài thi'))}
                      </button>
                   </div>
                 )}

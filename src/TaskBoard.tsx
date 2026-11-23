@@ -3,6 +3,7 @@ import { supabase } from './supabase';
 import { parseModuleTheme, formatModuleTitleWithColor, ModuleColorModal } from './moduleTheme';
 import { parseLectureFromItem } from './lectureTaskUtils';
 import { syncCourseBoardWithLectures, ensureCourseBoardsAssignedForUser } from './boardLectureSync';
+import { useLmsLang, getLocalizedCourseTitle } from './utils/lmsI18n';
 
 async function fetchAllTaskBoardRows<T = any>(
   buildQuery: (from: number, to: number) => PromiseLike<{ data: T[] | null; error: any }>
@@ -173,6 +174,8 @@ export default function TaskBoard({
   onOpenLecture?: (courseId?: string, lectureId?: string) => void;
   onStartTest?: (testId: string) => void 
 }) {
+  const [lang] = useLmsLang();
+  const isEn = lang === 'en';
   const headerActions = topActions || filterElement;
   const [isSyncingLectures, setIsSyncingLectures] = useState(false);
   const [internalLectures, setInternalLectures] = useState<any[]>([]);
@@ -759,7 +762,7 @@ export default function TaskBoard({
       });
     } catch (error) {
       console.error('Error toggling task:', error);
-      alert('Không thể cập nhật trạng thái công việc. Vui lòng thử lại.');
+      alert(isEn ? 'Could not update task status. Please try again.' : 'Không thể cập nhật trạng thái công việc. Vui lòng thử lại.');
     }
   };
 
@@ -928,7 +931,7 @@ export default function TaskBoard({
   };
 
   const rawSuffix = courseTitle || currentBoard?.title || '';
-  const cleanBannerSuffix = rawSuffix.replace(/^bảng công việc\s*(—|-|:)?\s*/i, '').trim();
+  const cleanBannerSuffix = getLocalizedCourseTitle(rawSuffix.replace(/^bảng công việc\s*(—|-|:)?\s*/i, '').trim(), lang);
 
   return (
     <div 
@@ -961,13 +964,13 @@ export default function TaskBoard({
               <div className="min-w-0">
                 <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-xs border border-white/15 px-3 py-1 rounded-full text-[10px] sm:text-[11px] font-extrabold tracking-widest uppercase text-[#2ab4e8] mb-2.5 whitespace-nowrap">
                   <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
-                  <span>TonyEnglish Task Board • Bảng Công Việc</span>
+                  <span>{isEn ? 'TonyEnglish Study Task Board' : 'TonyEnglish Task Board • Bảng Công Việc'}</span>
                 </div>
                 <h1 className="text-xl sm:text-2xl md:text-[26px] font-black tracking-tight text-white leading-tight">
-                  Bảng Công Việc{cleanBannerSuffix ? ` — ${cleanBannerSuffix}` : ''}
+                  {isEn ? 'Task Board' : 'Bảng Công Việc'}{cleanBannerSuffix ? ` — ${cleanBannerSuffix}` : ''}
                 </h1>
                 <p className="text-slate-200/85 text-xs sm:text-sm font-medium mt-1">
-                  Quản lý lộ trình học tập theo chuyên đề, đánh dấu hoàn thành nhiệm vụ &amp; luyện tập đề thi.
+                  {isEn ? 'Manage your study roadmap by topic, check off tasks & jump straight into practice tests.' : 'Quản lý lộ trình học tập theo chuyên đề, đánh dấu hoàn thành nhiệm vụ & luyện tập đề thi.'}
                 </p>
               </div>
 
@@ -977,7 +980,7 @@ export default function TaskBoard({
                   type="button"
                   onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                   className="w-8 h-8 rounded-xl bg-white/15 hover:bg-white/25 border border-white/20 active:scale-95 text-white flex items-center justify-center font-bold text-base transition-all shadow-xs cursor-pointer"
-                  title="Tùy chọn bảng công việc"
+                  title={isEn ? 'Task board options' : 'Tùy chọn bảng công việc'}
                 >
                   ⋯
                 </button>
@@ -991,7 +994,7 @@ export default function TaskBoard({
                         onClick={() => { setIsThemeModalOpen(true); setIsMobileMenuOpen(false); }}
                         className="w-full px-4 py-2.5 text-left text-xs font-bold hover:bg-slate-50 flex items-center gap-2.5 transition-colors cursor-pointer"
                       >
-                        <span className="text-base">🎨</span> Đổi giao diện màu nền
+                        <span className="text-base">🎨</span> {isEn ? 'Change background theme' : 'Đổi giao diện màu nền'}
                       </button>
                       {isAdmin && activeBoardCourseId && (
                         <button
@@ -1003,8 +1006,8 @@ export default function TaskBoard({
                           <span className="text-base">🔄</span>
                           <span>
                             {missingLectureTaskCount > 0
-                              ? `Đồng bộ bài giảng (+${missingLectureTaskCount})`
-                              : 'Đồng bộ bài giảng'}
+                              ? (isEn ? `Sync lectures (+${missingLectureTaskCount})` : `Đồng bộ bài giảng (+${missingLectureTaskCount})`)
+                              : (isEn ? 'Sync lectures' : 'Đồng bộ bài giảng')}
                           </span>
                         </button>
                       )}
@@ -1014,7 +1017,7 @@ export default function TaskBoard({
                           onClick={() => { handleResetColumnOrder(currentBoard.title); setIsMobileMenuOpen(false); }}
                           className="w-full px-4 py-2.5 text-left text-xs font-bold hover:bg-slate-50 text-amber-600 flex items-center gap-2.5 transition-colors border-t border-slate-100 cursor-pointer"
                         >
-                          <span className="text-base">↺</span> Đặt lại thứ tự cột
+                          <span className="text-base">↺</span> {isEn ? 'Reset column order' : 'Đặt lại thứ tự cột'}
                         </button>
                       )}
                       {onOpenLecture && (
@@ -1023,7 +1026,7 @@ export default function TaskBoard({
                           onClick={() => { onOpenLecture(); setIsMobileMenuOpen(false); }}
                           className="w-full px-4 py-2.5 text-left text-xs font-bold hover:bg-emerald-50 text-emerald-700 flex items-center gap-2.5 transition-colors border-t border-slate-100 cursor-pointer"
                         >
-                          <span className="text-base">📖</span> Bài giảng lý thuyết
+                          <span className="text-base">📖</span> {isEn ? 'Theory Lectures' : 'Bài giảng lý thuyết'}
                         </button>
                       )}
                       {onStartTest && (
@@ -1032,7 +1035,7 @@ export default function TaskBoard({
                           onClick={() => { onStartTest(''); setIsMobileMenuOpen(false); }}
                           className="w-full px-4 py-2.5 text-left text-xs font-bold hover:bg-sky-50 text-[#0a5482] flex items-center gap-2.5 transition-colors border-t border-slate-100 cursor-pointer"
                         >
-                          <span className="text-base">📚</span> Mở kho đề
+                          <span className="text-base">📚</span> {isEn ? 'Open Test Bank' : 'Mở kho đề'}
                         </button>
                       )}
                     </div>
@@ -1047,7 +1050,7 @@ export default function TaskBoard({
                 boardsData.length <= 2 ? (
                   <div className="flex items-center gap-1 bg-white/10 backdrop-blur-xs border border-white/15 p-1 rounded-xl">
                     {boardsData.map((b, idx) => {
-                      const shortName = b.title.replace(/^bảng công việc\s*(—|-|:)?\s*/i, '').trim() || b.title;
+                      const shortName = getLocalizedCourseTitle(b.title.replace(/^bảng công việc\s*(—|-|:)?\s*/i, '').trim() || b.title, lang);
                       return (
                         <button
                           key={b.title}
@@ -1067,10 +1070,10 @@ export default function TaskBoard({
                       value={activeBoardIndex}
                       onChange={(e) => setActiveBoardIndex(Number(e.target.value))}
                       className="bg-transparent text-white font-extrabold text-xs sm:text-[13px] outline-none cursor-pointer pr-5 appearance-none max-w-[220px] sm:max-w-[260px] truncate"
-                      title="Chọn bảng công việc"
+                      title={isEn ? 'Select task board' : 'Chọn bảng công việc'}
                     >
                       {boardsData.map((b, idx) => {
-                        const shortName = b.title.replace(/^bảng công việc\s*(—|-|:)?\s*/i, '').trim() || b.title;
+                        const shortName = getLocalizedCourseTitle(b.title.replace(/^bảng công việc\s*(—|-|:)?\s*/i, '').trim() || b.title, lang);
                         return (
                           <option key={b.title} value={idx} className="bg-slate-900 text-white font-bold">
                             📋 {shortName} ({b.totalCompleted}/{b.totalItems})
@@ -1087,7 +1090,7 @@ export default function TaskBoard({
               {currentBoard && currentBoard.totalItems > 0 && (
                 <div className="bg-white/10 backdrop-blur-xs border border-white/15 rounded-xl px-3.5 py-1.5 flex flex-col justify-center min-w-[175px]">
                   <div className="flex items-center justify-between text-[11.5px] text-white/95 font-bold mb-1 gap-2 whitespace-nowrap">
-                    <span>Tiến độ chung</span>
+                    <span>{isEn ? 'Overall Progress' : 'Tiến độ chung'}</span>
                     <span className="text-[#2ab4e8] font-black">{currentBoard.totalCompleted}/{currentBoard.totalItems} ({currentBoard.overallProgress}%)</span>
                   </div>
                   <div className="w-full h-1.5 bg-white/20 rounded-full overflow-hidden">
@@ -1105,9 +1108,9 @@ export default function TaskBoard({
                   type="button"
                   onClick={() => handleResetColumnOrder(currentBoard.title)}
                   className="hidden sm:flex bg-white/12 hover:bg-white/20 border border-white/20 active:scale-95 text-white text-xs sm:text-[13px] font-bold px-3.5 py-2 rounded-xl transition-all shadow-xs items-center gap-1.5 cursor-pointer shrink-0 h-[38px]"
-                  title="Khôi phục thứ tự các cột ban đầu"
+                  title={isEn ? 'Restore original column order' : 'Khôi phục thứ tự các cột ban đầu'}
                 >
-                  <span>↺</span> <span className="hidden xl:inline">Đặt lại cột</span>
+                  <span>↺</span> <span className="hidden xl:inline">{isEn ? 'Reset Columns' : 'Đặt lại cột'}</span>
                 </button>
               )}
 
@@ -1122,15 +1125,15 @@ export default function TaskBoard({
                       ? 'bg-amber-400 hover:bg-amber-300 border-amber-300 text-slate-900 font-extrabold'
                       : 'bg-white/12 hover:bg-white/20 border-white/20 text-white'
                   }`}
-                  title="Đồng bộ đầy đủ công việc & bài tập quizzes từ bài giảng vào Bảng giao bài và cập nhật cho học sinh"
+                  title={isEn ? 'Sync lecture tasks & quizzes to the Task Board' : 'Đồng bộ đầy đủ công việc & bài tập quizzes từ bài giảng vào Bảng giao bài và cập nhật cho học sinh'}
                 >
                   <span className={isSyncingLectures ? 'animate-spin' : ''}>🔄</span>
                   <span>
                     {isSyncingLectures
-                      ? 'Đang đồng bộ...'
+                      ? (isEn ? 'Syncing...' : 'Đang đồng bộ...')
                       : missingLectureTaskCount > 0
-                        ? `Đồng bộ bài giảng (+${missingLectureTaskCount})`
-                        : 'Đồng bộ bài giảng'}
+                        ? (isEn ? `Sync Lectures (+${missingLectureTaskCount})` : `Đồng bộ bài giảng (+${missingLectureTaskCount})`)
+                        : (isEn ? 'Sync Lectures' : 'Đồng bộ bài giảng')}
                   </span>
                 </button>
               )}
@@ -1140,9 +1143,9 @@ export default function TaskBoard({
                 type="button"
                 onClick={() => setIsThemeModalOpen(true)}
                 className="hidden sm:flex bg-white/12 hover:bg-white/20 border border-white/20 active:scale-95 text-white text-xs sm:text-[13px] font-bold px-3.5 py-2 rounded-xl transition-all shadow-xs items-center gap-1.5 cursor-pointer shrink-0 h-[38px]"
-                title="Đổi giao diện màu nền"
+                title={isEn ? 'Change background theme' : 'Đổi giao diện màu nền'}
               >
-                <span>🎨</span> <span className="hidden xl:inline">Giao diện</span>
+                <span>🎨</span> <span className="hidden xl:inline">{isEn ? 'Theme' : 'Giao diện'}</span>
               </button>
             </div>
           </div>
@@ -1150,7 +1153,7 @@ export default function TaskBoard({
           {bottomActions && (
             <div className="relative z-30 pt-3 border-t border-white/15 flex flex-wrap items-center justify-between gap-2">
               <span className="text-[11px] font-bold uppercase tracking-wider text-sky-200/80 hidden sm:inline">
-                Lối tắt học tập &amp; Bộ lọc khóa học:
+                {isEn ? 'Study Shortcuts & Course Filter:' : 'Lối tắt học tập & Bộ lọc khóa học:'}
               </span>
               <div className="w-full sm:w-auto flex justify-end ml-auto">
                 {bottomActions}
@@ -1167,8 +1170,8 @@ export default function TaskBoard({
             <div className="flex-1 min-h-[340px] flex flex-col items-center justify-center py-8">
               <div className="p-10 text-center bg-white rounded-3xl shadow-xs border border-slate-200 max-w-md">
                 <span className="text-5xl block mb-4 opacity-40 grayscale">📋</span>
-                <h3 className="text-xl font-black text-slate-800 mb-2 tracking-tight">Chưa có bảng công việc nào</h3>
-                <p className="text-[14px] text-slate-500 font-medium">Hãy chọn một khóa học khác hoặc liên hệ giáo viên để được giao bảng công việc.</p>
+                <h3 className="text-xl font-black text-slate-800 mb-2 tracking-tight">{isEn ? 'No task board yet' : 'Chưa có bảng công việc nào'}</h3>
+                <p className="text-[14px] text-slate-500 font-medium">{isEn ? 'Select another course or contact your teacher to have a study board assigned.' : 'Hãy chọn một khóa học khác hoặc liên hệ giáo viên để được giao bảng công việc.'}</p>
               </div>
             </div>
           );
@@ -1184,7 +1187,7 @@ export default function TaskBoard({
                   onClick={() => scrollToColumn(Math.max(0, activeMobileColIndex - 1))}
                   disabled={activeMobileColIndex === 0}
                   className="w-10 h-10 rounded-full bg-white/20 hover:bg-white/30 active:scale-90 disabled:opacity-20 text-white flex items-center justify-center text-lg font-bold transition-all cursor-pointer"
-                  aria-label="Cột trước"
+                  aria-label={isEn ? 'Previous column' : 'Cột trước'}
                 >
                   ‹
                 </button>
@@ -1200,7 +1203,7 @@ export default function TaskBoard({
                           ? 'w-6 h-2 bg-[#2ab4e8] shadow-md' 
                           : 'w-2 h-2 bg-white/40 hover:bg-white/70'
                       }`}
-                      title={`Chuyển tới cột: ${parseModuleTheme(c.name).cleanTitle}`}
+                      title={`${isEn ? 'Jump to column:' : 'Chuyển tới cột:'} ${parseModuleTheme(c.name).cleanTitle}`}
                     />
                   ))}
                 </div>
@@ -1210,7 +1213,7 @@ export default function TaskBoard({
                   onClick={() => scrollToColumn(Math.min(board.columns.length - 1, activeMobileColIndex + 1))}
                   disabled={activeMobileColIndex === board.columns.length - 1}
                   className="w-10 h-10 rounded-full bg-white/20 hover:bg-white/30 active:scale-90 disabled:opacity-20 text-white flex items-center justify-center text-lg font-bold transition-all cursor-pointer"
-                  aria-label="Cột tiếp theo"
+                  aria-label={isEn ? 'Next column' : 'Cột tiếp theo'}
                 >
                   ›
                 </button>
@@ -1320,7 +1323,7 @@ export default function TaskBoard({
                         borderWidth: '1px',
                         color: effectiveText
                       }}
-                      title="Nhấp và kéo để đổi vị trí cột"
+                      title={isEn ? 'Drag to reorder column' : 'Nhấp và kéo để đổi vị trí cột'}
                     >
                       <div className="flex items-center gap-2 min-w-0 flex-1">
                         <span className="w-1 h-4 rounded-full shrink-0" style={{ backgroundColor: effectiveText, opacity: 0.65 }}></span>
@@ -1337,7 +1340,7 @@ export default function TaskBoard({
                             color: effectiveText
                           }}
                         >
-                          {col.cards.length} bài
+                          {col.cards.length} {isEn ? 'cards' : 'bài'}
                         </span>
                         <button
                           type="button"
@@ -1347,7 +1350,7 @@ export default function TaskBoard({
                           }}
                           className="w-6 h-6 rounded-lg bg-white hover:bg-slate-50 border flex items-center justify-center text-xs transition-all cursor-pointer shadow-2xs hover:scale-105"
                           style={{ borderColor: effectiveBorder }}
-                          title="Đổi màu nền cột này"
+                          title={isEn ? 'Change column color' : 'Đổi màu nền cột này'}
                         >
                           🎨
                         </button>
@@ -1419,13 +1422,13 @@ export default function TaskBoard({
                                       ? 'bg-emerald-600 text-white font-bold px-2 py-0.5 rounded-md shadow-xs' 
                                       : 'text-slate-600 font-semibold hover:text-[#0a5482] bg-slate-50 border border-slate-200/80 px-2 py-0.5 rounded-md'
                                   }`}
-                                  title={`Công việc: ${manualCompleted}/${manualTotal} đã hoàn thành`}
+                                  title={isEn ? `Tasks: ${manualCompleted}/${manualTotal} completed` : `Công việc: ${manualCompleted}/${manualTotal} đã hoàn thành`}
                                 >
                                   <svg className="w-3 h-3 shrink-0" viewBox="0 0 16 16" fill="currentColor">
                                     <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
                                     <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/>
                                   </svg>
-                                  <span>{manualCompleted}/{manualTotal} việc</span>
+                                  <span>{manualCompleted}/{manualTotal} {isEn ? 'tasks' : 'việc'}</span>
                                 </span>
                               )}
 
@@ -1436,18 +1439,18 @@ export default function TaskBoard({
                                       ? 'bg-emerald-600 text-white font-bold px-2 py-0.5 rounded-md shadow-xs' 
                                       : 'text-[#0a5482] font-semibold bg-sky-50/80 border border-sky-200/80 px-2 py-0.5 rounded-md'
                                   }`}
-                                  title={`Bài tập: ${testCompleted}/${testTotal} đã làm`}
+                                  title={isEn ? `Tests: ${testCompleted}/${testTotal} completed` : `Bài tập: ${testCompleted}/${testTotal} đã làm`}
                                 >
                                   <svg className="w-3 h-3 shrink-0" viewBox="0 0 16 16" fill="currentColor">
                                     <path fillRule="evenodd" d="M4 1.5A1.5 1.5 0 002.5 3v10A1.5 1.5 0 004 14.5h8a1.5 1.5 0 001.5-1.5V5.414A1.5 1.5 0 0013.086 4.35l-2.436-2.436A1.5 1.5 0 009.586 1.5H4zm5 1.707L12.293 6H10a1 1 0 01-1-1V3.207zM5 8.5a.75.75 0 01.75-.75h4.5a.75.75 0 010 1.5h-4.5A.75.75 0 015 8.5zm0 2.5a.75.75 0 01.75-.75h4.5a.75.75 0 010 1.5h-4.5A.75.75 0 015 11z" clipRule="evenodd" />
                                   </svg>
-                                  <span>{testCompleted}/{testTotal} bài tập</span>
+                                  <span>{testCompleted}/{testTotal} {isEn ? 'tests' : 'bài tập'}</span>
                                 </span>
                               )}
 
                               {hasOverdue && (
                                 <span className="inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-md bg-rose-50 text-rose-600 border border-rose-200">
-                                  <span>⚠️</span> Quá hạn
+                                  <span>⚠️</span> {isEn ? 'Overdue' : 'Quá hạn'}
                                 </span>
                               )}
                             </div>
@@ -1514,7 +1517,7 @@ export default function TaskBoard({
                     >
                       {modalTheme.cleanTitle}
                     </span>
-                    <span className="text-xs text-slate-500 font-semibold">• {activeModalCard.boardTitle}</span>
+                    <span className="text-xs text-slate-500 font-semibold">• {getLocalizedCourseTitle(activeModalCard.boardTitle.replace(/^bảng công việc\s*(—|-|:)?\s*/i, '').trim() || activeModalCard.boardTitle, lang)}</span>
                   </div>
                   <div className="flex items-center gap-3 flex-wrap">
                     <h2 className="text-xl sm:text-2xl font-black text-slate-900 leading-tight tracking-tight">
@@ -1541,9 +1544,9 @@ export default function TaskBoard({
                               onOpenLecture?.(cardLecMeta.courseId || undefined, cardLecMeta.lectureId || undefined);
                             }}
                             className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1 rounded-xl bg-sky-100 text-[#0284c7] hover:bg-[#0ea5e9] hover:text-white transition-all cursor-pointer shadow-2xs shrink-0 active:scale-95 border border-sky-200"
-                            title="Mở bài giảng này"
+                            title={isEn ? 'Open this lecture' : 'Mở bài giảng này'}
                           >
-                            <span>📖</span> Mở bài giảng ➜
+                            <span>📖</span> {isEn ? 'Open Lecture ➜' : 'Mở bài giảng ➜'}
                           </button>
                         );
                       }
@@ -1560,7 +1563,7 @@ export default function TaskBoard({
                       />
                     </div>
                     <span className="text-[13px] font-black shrink-0" style={{ color: modalTheme.hasColor ? modalTheme.text : '#0f172a' }}>
-                      {progressPct}% ({currentCard.completedCount}/{currentCard.totalCount} hoàn thành)
+                      {progressPct}% ({currentCard.completedCount}/{currentCard.totalCount} {isEn ? 'completed' : 'hoàn thành'})
                     </span>
                   </div>
                 </div>
@@ -1569,7 +1572,7 @@ export default function TaskBoard({
                   type="button"
                   onClick={() => setActiveModalCard(null)}
                   className="w-9 h-9 rounded-full bg-white/90 hover:bg-white text-slate-500 hover:text-slate-800 flex items-center justify-center transition-all shadow-sm shrink-0 border border-slate-200/80 cursor-pointer hover:scale-105"
-                  title="Đóng (ESC)"
+                  title={isEn ? 'Close (ESC)' : 'Đóng (ESC)'}
                 >
                   ✕
                 </button>
@@ -1579,10 +1582,10 @@ export default function TaskBoard({
               <div className="flex-1 overflow-y-auto custom-scrollbar p-5 sm:p-6 space-y-3 bg-slate-50/50">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-[11px] font-black text-slate-400 uppercase tracking-widest">
-                    Danh sách bài tập ({currentCard.items.length} mục)
+                    {isEn ? `Checklist (${currentCard.items.length} items)` : `Danh sách bài tập (${currentCard.items.length} mục)`}
                   </span>
                   <span className="text-[11px] font-semibold text-slate-400">
-                    {currentCard.completedCount}/{currentCard.totalCount} đã xong
+                    {currentCard.completedCount}/{currentCard.totalCount} {isEn ? 'done' : 'đã xong'}
                   </span>
                 </div>
 
@@ -1625,7 +1628,7 @@ export default function TaskBoard({
                               </p>
                               {item.due_date && (
                                 <span className="text-[11px] text-slate-400 shrink-0 ml-2">
-                                  Hạn: {new Date(item.due_date + 'T00:00:00').toLocaleDateString('vi-VN', {day:'numeric', month:'short'})}
+                                  {isEn ? 'Due:' : 'Hạn:'} {new Date(item.due_date + 'T00:00:00').toLocaleDateString(isEn ? 'en-US' : 'vi-VN', {day:'numeric', month:'short'})}
                                 </span>
                               )}
                             </div>
@@ -1635,12 +1638,12 @@ export default function TaskBoard({
                                 {isItemDone ? (
                                   <div className="flex items-center gap-1.5 flex-wrap">
                                     <span className="inline-flex items-center text-[10px] px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-700 font-bold">
-                                      ✓ Hoàn thành
+                                      ✓ {isEn ? 'Completed' : 'Hoàn thành'}
                                     </span>
                                     {testScore && (
                                       <span 
                                         className="inline-flex items-center gap-1 text-[11px] px-2.5 py-0.5 rounded-full bg-sky-100 text-[#0284c7] font-black border border-sky-200 shadow-xs"
-                                        title={`Điểm làm gần đây nhất: ${testScore.score}/${testScore.total_score} (${testScore.percent}%)`}
+                                        title={isEn ? `Latest score: ${testScore.score}/${testScore.total_score} (${testScore.percent}%)` : `Điểm làm gần đây nhất: ${testScore.score}/${testScore.total_score} (${testScore.percent}%)`}
                                       >
                                         🎯 {testScore.total_score > 0 ? `${testScore.score}/${testScore.total_score}` : testScore.score}
                                         <span className="text-[10px] font-bold text-sky-600">({testScore.percent}%)</span>
@@ -1649,15 +1652,15 @@ export default function TaskBoard({
                                   </div>
                                 ) : isItemInProgress ? (
                                   <span className="inline-flex items-center text-[10px] px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-700 font-bold">
-                                    ⏳ Đang làm dở
+                                    ⏳ {isEn ? 'In Progress' : 'Đang làm dở'}
                                   </span>
                                 ) : testScore ? (
                                   <span className="inline-flex items-center gap-1 text-[10px] px-2.5 py-0.5 rounded-full bg-rose-100 text-rose-700 font-bold border border-rose-200">
-                                    ⚠️ Chưa đạt: {testScore.total_score > 0 ? `${testScore.score}/${testScore.total_score}` : testScore.score} ({testScore.percent}%) • Cần ≥ 50%
+                                    ⚠️ {isEn ? 'Not passed' : 'Chưa đạt'}: {testScore.total_score > 0 ? `${testScore.score}/${testScore.total_score}` : testScore.score} ({testScore.percent}%) • {isEn ? 'Need ≥ 50%' : 'Cần ≥ 50%'}
                                   </span>
                                 ) : (
                                   <span className="inline-flex items-center text-[10px] px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-500 font-medium">
-                                    Chưa làm (Cần đạt ≥ 50%)
+                                    {isEn ? 'Not started (Need ≥ 50%)' : 'Chưa làm (Cần đạt ≥ 50%)'}
                                   </span>
                                 )}
                               </div>
@@ -1671,9 +1674,9 @@ export default function TaskBoard({
                                     }
                                   }}
                                   className="text-xs font-bold px-3.5 py-1.5 rounded-xl bg-emerald-100 hover:bg-emerald-200 text-emerald-800 transition-colors flex items-center gap-1.5 shrink-0 shadow-xs cursor-pointer"
-                                  title="Làm lại bài thi này"
+                                  title={isEn ? 'Retake this test' : 'Làm lại bài thi này'}
                                 >
-                                  <span>🔄</span> Làm lại
+                                  <span>🔄</span> {isEn ? 'Retake' : 'Làm lại'}
                                 </button>
                               ) : isItemInProgress ? (
                                 <button 
@@ -1684,9 +1687,9 @@ export default function TaskBoard({
                                     }
                                   }}
                                   className="text-xs font-bold px-3.5 py-1.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white shadow-xs transition-all flex items-center gap-1.5 shrink-0 cursor-pointer"
-                                  title="Làm tiếp bài đang làm dở"
+                                  title={isEn ? 'Continue test in progress' : 'Làm tiếp bài đang làm dở'}
                                 >
-                                  Làm tiếp ➜
+                                  {isEn ? 'Continue ➜' : 'Làm tiếp ➜'}
                                 </button>
                               ) : testScore ? (
                                 <button 
@@ -1697,9 +1700,9 @@ export default function TaskBoard({
                                     }
                                   }}
                                   className="text-xs font-bold px-3.5 py-1.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white shadow-xs transition-all flex items-center gap-1.5 shrink-0 cursor-pointer"
-                                  title="Làm lại để đạt điểm yêu cầu (≥ 50%)"
+                                  title={isEn ? 'Retake to reach ≥ 50%' : 'Làm lại để đạt điểm yêu cầu (≥ 50%)'}
                                 >
-                                  Làm lại để đạt điểm ➜
+                                  {isEn ? 'Retake to Pass ➜' : 'Làm lại để đạt điểm ➜'}
                                 </button>
                               ) : (
                                 <button 
@@ -1710,9 +1713,9 @@ export default function TaskBoard({
                                     }
                                   }}
                                   className="text-xs font-bold px-3.5 py-1.5 rounded-xl bg-[#0ea5e9] hover:bg-[#0284c7] text-white shadow-xs transition-all flex items-center gap-1.5 shrink-0 cursor-pointer"
-                                  title="Bắt đầu làm bài"
+                                  title={isEn ? 'Start practice test' : 'Bắt đầu làm bài'}
                                 >
-                                  Bắt đầu làm bài ➜
+                                  {isEn ? 'Start Test ➜' : 'Bắt đầu làm bài ➜'}
                                 </button>
                               )}
                             </div>
@@ -1753,20 +1756,20 @@ export default function TaskBoard({
                           </span>
                           {item.due_date && (
                             <span className="text-[11px] text-slate-400 shrink-0 whitespace-nowrap">
-                              Hạn: {new Date(item.due_date + 'T00:00:00').toLocaleDateString('vi-VN', {day:'numeric', month:'short'})}
+                              {isEn ? 'Due:' : 'Hạn:'} {new Date(item.due_date + 'T00:00:00').toLocaleDateString(isEn ? 'en-US' : 'vi-VN', {day:'numeric', month:'short'})}
                             </span>
                           )}
                         </div>
                         <div className="flex items-center justify-between gap-2 mt-1 flex-wrap">
                           <div className="flex flex-wrap gap-1.5">
                             {isItemDone && item.admin_approved && (
-                              <span className="text-[10px] px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 font-bold">✅ Đã hoàn thành</span>
+                              <span className="text-[10px] px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 font-bold">✅ {isEn ? 'Completed' : 'Đã hoàn thành'}</span>
                             )}
                             {isItemDone && !item.admin_approved && (
-                              <span className="text-[10px] px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 font-bold">⏳ Chờ giáo viên phê duyệt</span>
+                              <span className="text-[10px] px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 font-bold">⏳ {isEn ? 'Awaiting teacher review' : 'Chờ giáo viên phê duyệt'}</span>
                             )}
                             {item.due_date && !isItemDone && new Date() > new Date(item.due_date + 'T23:59:59') && (
-                              <span className="text-[10px] px-2 py-0.5 rounded-full bg-red-100 text-red-600 font-bold">⚠️ Quá hạn</span>
+                              <span className="text-[10px] px-2 py-0.5 rounded-full bg-red-100 text-red-600 font-bold">⚠️ {isEn ? 'Overdue' : 'Quá hạn'}</span>
                             )}
                           </div>
                           {lecMeta.isLecture && (
@@ -1778,10 +1781,10 @@ export default function TaskBoard({
                                 onOpenLecture?.(lecMeta.courseId || undefined, lecMeta.lectureId || undefined);
                               }}
                               className="text-[11px] font-bold px-3 py-1 rounded-xl bg-sky-50 text-[#0ea5e9] hover:bg-[#0ea5e9] hover:text-white border border-sky-200 transition-all flex items-center gap-1.5 shrink-0 cursor-pointer shadow-2xs active:scale-95 ml-auto"
-                              title="Đi tới bài giảng này"
+                              title={isEn ? 'Go to this lecture' : 'Đi tới bài giảng này'}
                             >
                               <span>📖</span>
-                              <span>Đến bài giảng ➜</span>
+                              <span>{isEn ? 'Go to Lecture ➜' : 'Đến bài giảng ➜'}</span>
                             </button>
                           )}
                         </div>
@@ -1794,14 +1797,16 @@ export default function TaskBoard({
               {/* Modal Footer */}
               <div className="px-6 py-4 border-t border-slate-100 bg-white flex items-center justify-between shrink-0">
                 <div className="text-[13px] text-slate-400 font-medium">
-                  {isCardAllDone ? '🎉 Bạn đã hoàn thành toàn bộ công việc trong thẻ này!' : '💡 Nhấp vào bài để bắt đầu làm hoặc tick chọn việc đã làm'}
+                  {isCardAllDone
+                    ? (isEn ? '🎉 You have completed every task in this card!' : '🎉 Bạn đã hoàn thành toàn bộ công việc trong thẻ này!')
+                    : (isEn ? '💡 Click a test to start or check off completed tasks' : '💡 Nhấp vào bài để bắt đầu làm hoặc tick chọn việc đã làm')}
                 </div>
                 <button
                   type="button"
                   onClick={() => setActiveModalCard(null)}
                   className="px-5 py-2.5 rounded-2xl text-[13px] font-black bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all cursor-pointer hover:shadow-sm"
                 >
-                  Đóng
+                  {isEn ? 'Close' : 'Đóng'}
                 </button>
               </div>
             </div>
@@ -1920,6 +1925,8 @@ function ColumnColorModal({
   onSave: (colName: string, bg: string, text: string, border: string, colId?: string) => void;
   onClose: () => void;
 }) {
+  const [lang] = useLmsLang();
+  const isEn = lang === 'en';
   const cleanName = parseModuleTheme(colName).cleanTitle;
   const initialBg = currentColor?.bg || '#f1f2f4';
   const initialText = currentColor?.text || '#1e293b';
@@ -1954,8 +1961,8 @@ function ColumnColorModal({
           <div className="flex items-center gap-2.5 min-w-0 pr-2">
             <span className="text-xl shrink-0">🎨</span>
             <div className="min-w-0">
-              <h3 className="font-bold text-slate-800 text-sm truncate">Đổi màu cột: {cleanName}</h3>
-              <p className="text-slate-400 text-xs mt-0.5">Các thẻ bên trong cột vẫn sẽ giữ nền trắng</p>
+              <h3 className="font-bold text-slate-800 text-sm truncate">{isEn ? `Column Color: ${cleanName}` : `Đổi màu cột: ${cleanName}`}</h3>
+              <p className="text-slate-400 text-xs mt-0.5">{isEn ? 'Cards inside the column keep their clean white background' : 'Các thẻ bên trong cột vẫn sẽ giữ nền trắng'}</p>
             </div>
           </div>
           <button
@@ -1971,7 +1978,7 @@ function ColumnColorModal({
         <div className="p-5 space-y-4 max-h-[70vh] overflow-y-auto custom-scrollbar">
           <div>
             <label className="text-xs font-bold text-slate-500 uppercase tracking-wider block mb-2.5">
-              Chọn màu cột (Trello Style)
+              {isEn ? 'Choose Column Color (Trello Style)' : 'Chọn màu cột (Trello Style)'}
             </label>
             <div className="grid grid-cols-2 gap-2.5">
               {COLUMN_COLOR_PRESETS.map((preset) => {
@@ -2014,7 +2021,7 @@ function ColumnColorModal({
           {/* Custom Hex Color Picker */}
           <div className="pt-3 border-t border-slate-100">
             <label className="text-xs font-bold text-slate-500 uppercase tracking-wider block mb-2">
-              Hoặc chọn màu tùy thích
+              {isEn ? 'Or pick a custom color' : 'Hoặc chọn màu tùy thích'}
             </label>
             <div className="flex items-center gap-2.5">
               <input
@@ -2035,7 +2042,7 @@ function ColumnColorModal({
                 onClick={() => handleApplyCustom(customHex)}
                 className="px-3.5 py-1.5 rounded-xl text-xs font-bold text-white bg-sky-600 hover:bg-sky-700 transition-all cursor-pointer shadow-xs shrink-0 active:scale-95"
               >
-                Áp dụng
+                {isEn ? 'Apply' : 'Áp dụng'}
               </button>
             </div>
           </div>
@@ -2048,14 +2055,14 @@ function ColumnColorModal({
             onClick={() => handleApplyPreset(COLUMN_COLOR_PRESETS[0])}
             className="text-xs font-bold text-slate-500 hover:text-sky-600 transition-colors cursor-pointer"
           >
-            ↺ Mặc định
+            ↺ {isEn ? 'Default' : 'Mặc định'}
           </button>
           <button
             type="button"
             onClick={onClose}
             className="px-4 py-1.5 rounded-xl text-xs font-bold bg-white border border-slate-200 hover:bg-slate-100 text-slate-700 transition-all cursor-pointer shadow-xs"
           >
-            Đóng
+            {isEn ? 'Close' : 'Đóng'}
           </button>
         </div>
       </div>

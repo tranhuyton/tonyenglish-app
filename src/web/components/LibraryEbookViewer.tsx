@@ -247,9 +247,21 @@ export const LibraryEbookViewer: React.FC<LibraryEbookViewerProps> = ({
                   ? 'bg-[#2ab4e8] text-white border-sky-300 shadow-xs'
                   : 'bg-white/10 hover:bg-white/20 text-sky-100 border-white/15'
               }`}
-              title="Chuyển chế độ đọc 1 trang hoặc 2 trang mở đôi như sách thật"
+              title={
+                lang === 'vi'
+                  ? 'Chuyển chế độ đọc 1 trang hoặc 2 trang mở đôi như sách thật'
+                  : 'Switch between single-page and two-page book spread view'
+              }
             >
-              <span>{isTwoPageMode ? '📖 2 Trang' : '📄 1 Trang'}</span>
+              <span>
+                {isTwoPageMode
+                  ? lang === 'vi'
+                    ? '📖 2 Trang'
+                    : '📖 2 Pages'
+                  : lang === 'vi'
+                  ? '📄 1 Trang'
+                  : '📄 1 Page'}
+              </span>
             </button>
 
             {/* Prev / Page Input / Next */}
@@ -259,7 +271,7 @@ export const LibraryEbookViewer: React.FC<LibraryEbookViewerProps> = ({
                 onClick={handlePrev}
                 disabled={currentPage <= 1}
                 className="px-2.5 py-1 rounded-lg bg-white/10 hover:bg-[#2ab4e8] disabled:opacity-30 text-white text-xs font-black transition cursor-pointer disabled:cursor-default"
-                title="Trang trước"
+                title={lang === 'vi' ? 'Trang trước' : 'Previous page'}
               >
                 ←
               </button>
@@ -276,7 +288,7 @@ export const LibraryEbookViewer: React.FC<LibraryEbookViewerProps> = ({
                     if (!isNaN(parsed)) goToPage(parsed);
                     else setPageInput(String(currentPage));
                   }}
-                  aria-label="Số trang"
+                  aria-label={lang === 'vi' ? 'Số trang' : 'Page number'}
                   className="w-11 text-center bg-slate-900 text-white font-extrabold py-0.5 rounded-md border border-sky-300/30 focus:outline-none focus:border-[#2ab4e8]"
                 />
                 <span className="mx-1 opacity-70">/</span>
@@ -288,7 +300,7 @@ export const LibraryEbookViewer: React.FC<LibraryEbookViewerProps> = ({
                 onClick={handleNext}
                 disabled={numPages !== null && currentPage >= numPages}
                 className="px-2.5 py-1 rounded-lg bg-white/10 hover:bg-[#2ab4e8] disabled:opacity-30 text-white text-xs font-black transition cursor-pointer disabled:cursor-default"
-                title="Trang tiếp theo"
+                title={lang === 'vi' ? 'Trang tiếp theo' : 'Next page'}
               >
                 →
               </button>
@@ -300,7 +312,7 @@ export const LibraryEbookViewer: React.FC<LibraryEbookViewerProps> = ({
                 type="button"
                 onClick={() => setZoomScale((z) => Math.max(0.6, Math.round((z - 0.15) * 100) / 100))}
                 className="w-7 h-7 rounded-lg hover:bg-white/15 text-white font-black text-sm flex items-center justify-center cursor-pointer"
-                title="Thu nhỏ"
+                title={lang === 'vi' ? 'Thu nhỏ' : 'Zoom out'}
               >
                 −
               </button>
@@ -308,7 +320,7 @@ export const LibraryEbookViewer: React.FC<LibraryEbookViewerProps> = ({
                 type="button"
                 onClick={() => setZoomScale(1)}
                 className="px-1.5 text-[11px] font-mono font-extrabold text-sky-200 hover:text-white cursor-pointer"
-                title="Đặt lại 100%"
+                title={lang === 'vi' ? 'Đặt lại 100%' : 'Reset to 100%'}
               >
                 {Math.round(zoomScale * 100)}%
               </button>
@@ -316,7 +328,7 @@ export const LibraryEbookViewer: React.FC<LibraryEbookViewerProps> = ({
                 type="button"
                 onClick={() => setZoomScale((z) => Math.min(2.2, Math.round((z + 0.15) * 100) / 100))}
                 className="w-7 h-7 rounded-lg hover:bg-white/15 text-white font-black text-sm flex items-center justify-center cursor-pointer"
-                title="Phóng to"
+                title={lang === 'vi' ? 'Phóng to' : 'Zoom in'}
               >
                 +
               </button>
@@ -330,7 +342,11 @@ export const LibraryEbookViewer: React.FC<LibraryEbookViewerProps> = ({
             type="button"
             onClick={() => setUseNativeFallback((v) => !v)}
             className="px-2.5 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/15 text-[11px] sm:text-xs font-bold text-sky-100 transition cursor-pointer"
-            title="Chuyển đổi giữa chế độ lật trang thông minh (hỗ trợ tra từ điển) và chế độ cuộn PDF gốc của trình duyệt"
+            title={
+              lang === 'vi'
+                ? 'Chuyển đổi giữa chế độ lật trang thông minh (hỗ trợ tra từ điển) và chế độ cuộn PDF gốc của trình duyệt'
+                : 'Switch between smart book view (with built-in dictionary) and native browser PDF scroll'
+            }
           >
             {useNativeFallback
               ? lang === 'vi'
@@ -347,7 +363,7 @@ export const LibraryEbookViewer: React.FC<LibraryEbookViewerProps> = ({
             rel="noopener noreferrer"
             download
             className="px-2.5 sm:px-3 py-1.5 rounded-xl bg-emerald-500/90 hover:bg-emerald-500 text-white text-[11px] sm:text-xs font-extrabold transition shadow-xs inline-flex items-center gap-1"
-            title="Mở / Tải file PDF về máy"
+            title={lang === 'vi' ? 'Mở / Tải file PDF về máy' : 'Open / Download PDF file'}
           >
             <span>⬇</span>
             <span className="hidden xs:inline">{lang === 'vi' ? 'Tải PDF' : 'PDF'}</span>
@@ -388,7 +404,7 @@ export const LibraryEbookViewer: React.FC<LibraryEbookViewerProps> = ({
             max={numPages}
             value={currentPage}
             onChange={(e) => goToPage(parseInt(e.target.value, 10))}
-            aria-label="Thanh trượt chuyển trang nhanh"
+            aria-label={lang === 'vi' ? 'Thanh trượt chuyển trang nhanh' : 'Quick page navigation slider'}
             className="flex-1 h-1.5 accent-[#2ab4e8] cursor-pointer"
           />
           {currentPage > 1 && (

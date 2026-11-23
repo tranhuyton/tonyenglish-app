@@ -1,4 +1,5 @@
 import { supabase } from './supabase';
+import { AppLang, getLmsLang, getLocalizedCourseTitle } from './utils/lmsI18n';
 
 export interface TutorActionItem {
   type: 'OPEN_LECTURE' | 'OPEN_FOLDER' | 'OPEN_LIBRARY' | 'OPEN_AI_ROOM' | 'OPEN_TAB';
@@ -66,10 +67,11 @@ const cleanTitle = (raw: string) =>
     .replace(/\s*\[bg:[^\]]*\]/gi, '')
     .trim();
 
-export const extractStudentFirstName = (rawName?: string | null): string => {
+export const extractStudentFirstName = (rawName?: string | null, lang?: AppLang): string => {
+  const isEn = (lang || getLmsLang()) === 'en';
   const cleaned = (rawName || '').trim();
-  if (!cleaned || cleaned.toLowerCase() === 'học viên' || cleaned.toLowerCase() === 'em') {
-    return 'em';
+  if (!cleaned || cleaned.toLowerCase() === 'học viên' || cleaned.toLowerCase() === 'em' || cleaned.toLowerCase() === 'student') {
+    return isEn ? 'there' : 'em';
   }
   const parts = cleaned.split(/\s+/).filter(Boolean);
   return parts[parts.length - 1] || cleaned;
@@ -98,9 +100,12 @@ export function clearGlobalTutorCache() {
 export async function fetchGlobalStudentSnapshot(
   courseIdInput?: string | null,
   courseTitleInput?: string | null,
-  forceRefresh = false
+  forceRefresh = false,
+  langOverride?: AppLang
 ): Promise<GlobalStudentSnapshot | null> {
   try {
+    const lang: AppLang = langOverride || getLmsLang();
+    const isEn = lang === 'en';
     const { data: authData } = await supabase.auth.getUser();
     const user = authData?.user;
     if (!user) return null;
@@ -112,7 +117,7 @@ export async function fetchGlobalStudentSnapshot(
       localStorage.getItem('portal_filter_course') ||
       '239a64f0-c106-40e5-a6e2-4e685a0d70fb';
 
-    const cacheKey = `${user.id}_${resolvedCourseId}`;
+    const cacheKey = `${user.id}_${resolvedCourseId}_${lang}`;
     const cached = snapshotMemoryCache.get(cacheKey);
     if (!forceRefresh && cached && Date.now() - cached.fetchedAt < 120_000) {
       return cached;
@@ -192,13 +197,14 @@ export async function fetchGlobalStudentSnapshot(
       profileRes.data?.full_name ||
       user.user_metadata?.full_name ||
       user.email?.split('@')[0] ||
-      'Học viên';
-    const studentName = extractStudentFirstName(rawFullName);
+      (isEn ? 'Student' : 'Học viên');
+    const studentName = extractStudentFirstName(rawFullName, lang);
 
-    const courseTitle = cleanTitle(
+    const rawCourseTitle = cleanTitle(
       courseTitleInput || courseRes.data?.title || 'IELTS Premium'
     );
-    const lowerCourseTitle = courseTitle.toLowerCase();
+    const courseTitle = getLocalizedCourseTitle(rawCourseTitle, lang);
+    const lowerCourseTitle = rawCourseTitle.toLowerCase();
     const isIelts =
       resolvedCourseId === '239a64f0-c106-40e5-a6e2-4e685a0d70fb' ||
       lowerCourseTitle.includes('ielts');
@@ -376,7 +382,7 @@ export async function fetchGlobalStudentSnapshot(
       if (!matchesCourseByIdOrTitle && !matchesCourseByKeyword) return;
 
       // Detect skill
-      let skill = 'Tổng hợp';
+      let skill = isEn ? 'General' : 'Tổng hợp';
       if (lowerTitle.includes('listen') || lowerTitle.includes('nghe') || d?.skill === 'listening') {
         skill = 'Listening';
       } else if (
@@ -426,7 +432,7 @@ export async function fetchGlobalStudentSnapshot(
           const avgPct = Math.round(
             bucket.percents.reduce((a, b) => a + b, 0) / bucket.percents.length
           );
-          parts.push(`Bài tập ${avgPct}%`);
+          parts.push(isEn ? `Practice ${avgPct}%` : `Bài tập ${avgPct}%`);
         }
         skillSummary[sk] = {
           count: totalCount,
@@ -638,7 +644,15 @@ export async function fetchGlobalStudentSnapshot(
         }
       });
 
-      gvSummarySection = `
+      gvSummarySection = isEn
+        ? `
+[COMPANION FOUNDATION COURSE: GRAMMAR AND VOCABULARY]:
+- Grammar lectures completed: ${gvDoneLectures}/${gvSortedLectures.length} lectures.
+- Recommended next / in-progress grammar lectures:
+${gvInProgOrNext.length > 0 ? gvInProgOrNext.join('\n') : '- Core grammar lectures completed.'}
+- Recent Grammar & Vocabulary practice tests:
+${gvRecentTestLines.length > 0 ? gvRecentTestLines.join('\n') : '- No recent exercises in Grammar and Vocabulary yet (proactively assign practice!).'}`
+        : `
 [KHÓA HỌC BỔ TRỢ NỀN TẢNG ĐI KÈM: GRAMMAR AND VOCABULARY]:
 - Tiến độ bài giảng Ngữ pháp nền tảng: Hoàn thành ${gvDoneLectures}/${gvSortedLectures.length} bài giảng.
 - Các bài giảng Ngữ pháp đang học dở / kế tiếp nên giao thêm:
@@ -651,7 +665,7 @@ ${gvRecentTestLines.length > 0 ? gvRecentTestLines.join('\n') : '- Chưa làm b�
         .map((f) => {
           const pTitle = f.parent_id ? gvFolderMap.get(String(f.parent_id))?.title : '';
           const label = pTitle ? `${pTitle} > ${cleanTitle(f.title)}` : cleanTitle(f.title);
-          return `- Thư mục Grammar & Vocabulary "${label}" -> FOLDER_ID: ${f.id}`;
+          return `- ${isEn ? 'Grammar & Vocabulary Folder' : 'Thư mục Grammar & Vocabulary'} "${label}" -> FOLDER_ID: ${f.id}`;
         })
         .join('\n');
 
@@ -663,7 +677,14 @@ ${gvRecentTestLines.length > 0 ? gvRecentTestLines.join('\n') : '- Chưa làm b�
         })
         .join('\n');
 
-      gvCatalogSection = `
+      gvCatalogSection = isEn
+        ? `
+2b. Open exercises & lectures in companion course "Grammar and Vocabulary" (to strengthen vocabulary & grammar):
+   - Folder action syntax: [[ACTION:OPEN_FOLDER:<FOLDER_ID>|📂 Grammar & Vocab: <Folder Name>]]
+${gvFoldersCatalog}
+   - Lecture action syntax: [[ACTION:OPEN_LECTURE:<LECTURE_ID>|📖 Study Grammar: <Lecture Title>]]
+${gvLecturesCatalog}`
+        : `
 2b. Mở trực tiếp Bài tập & Bài giảng trong khóa bổ trợ "Grammar and Vocabulary" (Dùng để sai học sinh IELTS Premium cày thêm Từ vựng & Ngữ pháp):
    - Khi giao bài tập Từ vựng / Ngữ pháp, dùng cú pháp: [[ACTION:OPEN_FOLDER:<FOLDER_ID>|📂 Bổ trợ Từ vựng/Ngữ pháp: <Tên thư mục>]]
 ${gvFoldersCatalog}
@@ -749,7 +770,118 @@ ${gvLecturesCatalog}`;
    - Bước 2: Hoàn thành đầy đủ các đầu việc & bài tập thực hành gắn liền với bài giảng đó trên Bảng công việc (OPEN_TAB:board) để đạt 100% tiến độ bài học.
    - Bước 3: Vào Thư mục Kho đề luyện tập (OPEN_FOLDER) tương ứng với chuyên đề vừa học để làm bài kiểm tra / Past Papers củng cố điểm số.`;
 
-    const promptContext = `
+    const promptContext = isEn
+      ? `
+====================================================================
+[STRICT LANGUAGE RULE]: The student is using the ENGLISH interface.
+You MUST write your ENTIRE response, greeting, analysis, coaching advice, AND ALL [[ACTION:...|Button Label]] labels in natural, warm, encouraging ENGLISH (unless the student explicitly requests Vietnamese).
+Address yourself as "Teacher Tony" / "I" and address the student by first name ("${studentName}") or "you".
+====================================================================
+REAL-TIME STUDENT LEARNING SNAPSHOT
+====================================================================
+- Student Name: ${studentName}
+- Active Course: ${courseTitle}
+- Overall Task Board Progress: ${completedTasksCount}/${totalTasksCount} tasks completed (${taskPercent}%), ${completedLecturesCount}/${sortedLectures.length} lectures fully completed.
+- Most Recently Viewed Lecture: ${lastLecture ? `"${lastLecture.title}" (${lastLecture.timeLabel})` : 'None recorded yet'}
+- Skill Performance Summary: ${skillSummaryText}
+${
+  isIelts
+    ? `- Cambridge IELTS Library Progress (Mandatory):
+  + Cambridge Reading Translations read: ${camReadingSet.size} / 252 passages
+  + Cambridge Listening Translations read: ${camListeningSet.size} / 336 sections
+  + Recently read Library items: ${recentLibraryTitles.length > 0 ? recentLibraryTitles.join('; ') : 'None yet'}`
+    : ''
+}
+
+[RECENT TEST RESULTS]:
+${
+  recentTests.length > 0
+    ? recentTests
+        .map(
+          (t) =>
+            `- [${t.dateLabel}] ${t.title} (${t.skill}): ${t.scoreLabel}${
+              t.isLow ? ' (⚠️ Needs reinforcement)' : ' (✅ Good)'
+            }`
+        )
+        .join('\n')
+    : '- No recent test attempts yet.'
+}
+
+[IN-PROGRESS LECTURES ON TASK BOARD (PRIORITY TO FINISH)]:
+${
+  inProgressLectures.length > 0
+    ? inProgressLectures
+        .slice(0, 6)
+        .map((l) => `- [${l.moduleName}] "${l.title}" (In progress: ${l.done}/${l.total} tasks) -> ID: ${l.id}`)
+        .join('\n')
+    : '- No unfinished in-progress lectures.'
+}
+
+[NEXT UP LECTURES BY MODULE]:
+${
+  nextUpLectures.length > 0
+    ? nextUpLectures
+        .slice(0, 8)
+        .map((l) => `- [${l.moduleName}] "${l.title}" (Not started: 0/${l.total} tasks) -> ID: ${l.id}`)
+        .join('\n')
+    : '- All course lectures completed!'
+}
+${gvSummarySection}
+
+[TEACHER TONY'S COACHING RULES FOR ${courseTitle.toUpperCase()}]:
+${
+  isIelts
+    ? `1. Base every recommendation directly on ${studentName}'s real data above (unfinished lectures, recent test scores, Cambridge Library progress, and companion "Grammar and Vocabulary" course).
+2. SCORING RULE: Only tests inside the "Cambridge Test" folder are graded on the IELTS Band scale (e.g., Band 6.5). All other practice folders (Crash Course, Cram Course, Strategies, Unit exercises) are graded by percentage (%) — NEVER call those scores a Band score.
+3. For Listening & Reading: if scores are low (< Band 6.0 on Cambridge or < 65% on drills), assign strategy lectures, strategy drills, and Cambridge Library reading/listening translations.
+4. For Speaking: follow the Lego Blocks method in Lectures -> then practice in the IELTS Speaking AI Room.
+5. For Writing: review Task 1 chart analysis / Task 2 5 essay types & 24 topic packs -> then submit in the IELTS Writing AI Grader.
+6. COMPANION COURSE ("Grammar and Vocabulary"): IELTS Premium students also study "Grammar and Vocabulary" to strengthen vocabulary & grammar. Proactively assign matching folders/lectures from Grammar and Vocabulary with clickable [[ACTION:...]] buttons.`
+    : isIgcse0654
+    ? `1. Check which Biology (B1–B19), Chemistry (C1–C12), or Physics (P1–P6) topics ${studentName} is working on and review recent test/past-paper results.
+2. Standard workflow per topic: (1) Study theory lecture -> (2) Complete lecture checklist tasks -> (3) Practice Past Papers (Paper 2 MCQ, Paper 4 Extended Theory, Paper 6 Alternative to Practical).`
+    : `1. Check ${studentName}'s real progress in "${courseTitle}" (modules: ${moduleNamesList || 'curriculum'}, in-progress/next lectures, and recent practice test folders: ${folderNamesList || 'Test Bank'}).
+2. All quizzes/tests in this course are graded by percentage (%). If a recent test is below 65%, point out the weak topic and recommend reviewing the matching theory lecture.
+3. Standard workflow: (1) Study the theory lecture (OPEN_LECTURE) -> (2) Complete all checklist items on the Task Board (OPEN_TAB:board) -> (3) Practice in the matching Test Bank folder (OPEN_FOLDER).`
+}
+
+====================================================================
+COURSE CATALOG & CLICKABLE ACTION BUTTONS (USE ENGLISH LABELS!)
+====================================================================
+Always append 1–4 clickable action tags using this exact syntax (with English button labels):
+
+1. Open a Theory Lecture directly:
+   Syntax: [[ACTION:OPEN_LECTURE:<LECTURE_ID>|📖 Open Lesson: <Lecture Title>]]
+   Course Lecture IDs:
+${courseLecturesCatalog || '- No lecture list available'}
+
+2. Open a Test Bank Folder directly:
+   Syntax: [[ACTION:OPEN_FOLDER:<FOLDER_ID>|📂 Practice: <Folder Name>]]
+   Course Folder IDs:
+${rootFoldersCatalog || '- No test folders available'}
+${gvCatalogSection}
+${
+  isIelts
+    ? `
+3. Open Library Resources directly:
+   - Cambridge IELTS Reading Translations (01-21): [[ACTION:OPEN_LIBRARY:/news/category/cambridge-ielts-reading-translation|📚 Open Library: Cambridge Reading]]
+   - Cambridge IELTS Listening Translations (01-21): [[ACTION:OPEN_LIBRARY:/news/category/cambridge-ielts-listening-translation|🎧 Open Library: Cambridge Listening]]
+   - IELTS Writing Samples: [[ACTION:OPEN_LIBRARY:/news/category/ielts-writting-samples|✍️ View Writing Samples]]
+   - IELTS Speaking Samples: [[ACTION:OPEN_LIBRARY:/news/category/speaking-ielts-sample|🎙️ View Speaking Samples]]
+
+4. Open AI Practice & Grading Rooms:
+   - IELTS Speaking AI Room: [[ACTION:OPEN_AI_ROOM:speaking|🎙️ Open IELTS Speaking AI Room]]
+   - IELTS Writing Task 1 AI Grader: [[ACTION:OPEN_AI_ROOM:task1|📊 Open Writing Task 1 AI Grader]]
+   - IELTS Writing Task 2 AI Grader: [[ACTION:OPEN_AI_ROOM:task2|✍️ Open Writing Task 2 AI Grader]]`
+    : ''
+}
+
+5. Open Task Board or Progress Analytics:
+   - Task Board: [[ACTION:OPEN_TAB:board|📋 Open Task Board]]
+   - Progress Report: [[ACTION:OPEN_TAB:analytics|📈 View Progress Report]]
+====================================================================
+`.trim()
+      : `
 ====================================================================
 HỒ SƠ HỌC TẬP TỔNG THỂ CỦA HỌC VIÊN (REAL-TIME STUDENT SNAPSHOT)
 ====================================================================

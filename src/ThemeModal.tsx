@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useLmsLang } from './utils/lmsI18n';
 
 // ============================================================================
 // SHARED THEME SYSTEM (Extracted from TaskBoard.tsx)
@@ -186,6 +187,8 @@ export function BoardThemeModal({
   onApplyCustomColor: (hex: string) => void;
   onClose: () => void;
 }) {
+  const [lang] = useLmsLang();
+  const isEn = lang === 'en';
   const [customHex, setCustomHex] = useState(currentTheme.boardBg.startsWith('#') ? currentTheme.boardBg : '#0079bf');
 
   useEffect(() => {
@@ -195,6 +198,20 @@ export function BoardThemeModal({
   }, [currentTheme.boardBg]);
 
   if (!isOpen) return null;
+
+  const THEME_NAMES_EN: Record<string, string> = {
+    'tony-classic': 'TonyEnglish Classic (Default)',
+    'trello-ocean-custom': 'Ocean Blue (Trello)',
+    'light-blue-palette': 'Soft Sky Blue',
+    'sky-soft': 'Calm Azure',
+    'teal-mint': 'Teal Mint',
+    'purple-lavender': 'Lavender Purple',
+    'sunset-orange': 'Sunset Orange',
+    'rose-pastel': 'Pastel Rose',
+    'emerald-leaf': 'Fresh Emerald',
+    'slate-modern': 'Modern Slate',
+    'midnight-dark': 'Midnight Dark',
+  };
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/45 backdrop-blur-xs p-4 animate-in fade-in duration-200">
@@ -208,8 +225,8 @@ export function BoardThemeModal({
           <div className="flex items-center gap-2.5">
             <span className="text-2xl">🎨</span>
             <div>
-              <h3 className="font-bold text-slate-800 text-base">Đổi màu nền (Trello Style)</h3>
-              <p className="text-slate-400 text-xs mt-0.5">Chọn màu nền yêu thích cho không gian làm việc</p>
+              <h3 className="font-bold text-slate-800 text-base">{isEn ? 'Background Theme' : 'Đổi màu nền (Trello Style)'}</h3>
+              <p className="text-slate-400 text-xs mt-0.5">{isEn ? 'Choose your favorite workspace background theme' : 'Chọn màu nền yêu thích cho không gian làm việc'}</p>
             </div>
           </div>
           <button
@@ -226,7 +243,7 @@ export function BoardThemeModal({
           {/* Preset Palettes */}
           <div>
             <label className="text-xs font-bold text-slate-500 uppercase tracking-wider block mb-3">
-              Bảng màu gợi ý
+              {isEn ? 'Suggested Palettes' : 'Bảng màu gợi ý'}
             </label>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
               {BOARD_THEMES.map((theme) => {
@@ -265,7 +282,7 @@ export function BoardThemeModal({
 
                     <div className="flex items-center justify-between px-0.5">
                       <span className="font-bold text-xs text-slate-700 truncate group-hover:text-sky-600">
-                        {theme.name}
+                        {isEn ? (THEME_NAMES_EN[theme.id] || theme.name) : theme.name}
                       </span>
                       {isSelected && (
                         <span className="text-[11px] font-black text-sky-600 shrink-0">✓</span>
@@ -280,7 +297,7 @@ export function BoardThemeModal({
           {/* Custom Color Picker */}
           <div className="pt-4 border-t border-slate-100">
             <label className="text-xs font-bold text-slate-500 uppercase tracking-wider block mb-2.5">
-              Hoặc chọn mã màu tùy thích
+              {isEn ? 'Or pick a custom color' : 'Hoặc chọn mã màu tùy thích'}
             </label>
             <div className="flex items-center gap-3">
               <input
@@ -304,7 +321,7 @@ export function BoardThemeModal({
                 }}
                 className="px-4 py-2 rounded-xl text-xs font-bold text-white bg-sky-600 hover:bg-sky-700 transition-all cursor-pointer shadow-xs active:scale-95 shrink-0"
               >
-                Áp dụng
+                {isEn ? 'Apply' : 'Áp dụng'}
               </button>
             </div>
           </div>
@@ -320,14 +337,14 @@ export function BoardThemeModal({
             }}
             className="text-xs font-bold text-slate-500 hover:text-sky-600 transition-colors cursor-pointer"
           >
-            ↺ Khôi phục giao diện chuẩn (Mặc định)
+            ↺ {isEn ? 'Reset to Default Theme' : 'Khôi phục giao diện chuẩn (Mặc định)'}
           </button>
           <button
             type="button"
             onClick={onClose}
             className="px-4 py-1.5 rounded-xl text-xs font-bold bg-white border border-slate-200 hover:bg-slate-100 text-slate-700 transition-all cursor-pointer shadow-xs"
           >
-            Đóng
+            {isEn ? 'Close' : 'Đóng'}
           </button>
         </div>
       </div>

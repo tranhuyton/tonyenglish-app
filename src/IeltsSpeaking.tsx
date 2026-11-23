@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { supabase } from './supabase';
 import './tailwind.css';
+import { useLmsLang, LmsLangToggle } from './utils/lmsI18n';
 
 // =========================================================================================
 // BỘ ICON CHUẨN IDP
@@ -74,6 +75,8 @@ export default function IeltsSpeaking({
   testData?: any, 
   onFinish?: (res: any) => void 
 }) {
+  const [lang, setLang] = useLmsLang();
+  const isEn = lang === 'en';
   
   // 1. Tải dữ liệu bài test
   const [testData, setTestData] = useState<any>(() => {
@@ -226,7 +229,7 @@ export default function IeltsSpeaking({
   const handleSafeExit = () => {
     const hasProgress = liveStatus !== 'IDLE' || Object.keys(recordedBlobs).length > 0;
     if (!isSubmitted && hasProgress) {
-      if (!window.confirm('Bạn đang có bản ghi âm chưa nộp. Bạn có chắc muốn thoát không?')) return;
+      if (!window.confirm(isEn ? 'You have unsubmitted recordings. Are you sure you want to exit?' : 'Bạn đang có bản ghi âm chưa nộp. Bạn có chắc muốn thoát không?')) return;
     }
     stopRecordingPlayback();
     if (onBack) onBack();
@@ -359,7 +362,10 @@ export default function IeltsSpeaking({
               speechConfig: { voiceConfig: { prebuiltVoiceConfig: { voiceName: "Puck" } } }
             },
             systemInstruction: {
-              parts: [{ text: `Bạn là giám khảo IELTS tên Tony đến từ nước Anh. Hãy đóng vai giám khảo và hỏi tôi câu hỏi sau đây. Trả lời cực kỳ ngắn gọn và tự nhiên như đang giao tiếp. Câu hỏi: ${plainQuestion}` }]
+              parts: [{ text: isEn
+                ? `You are Tony, an official British IELTS Speaking Examiner from the UK. Speak exclusively in natural, concise English. Conduct the interview and ask the candidate the following question conversationally. Question: ${plainQuestion}`
+                : `Bạn là giám khảo IELTS tên Tony đến từ nước Anh. Hãy đóng vai giám khảo và hỏi tôi câu hỏi sau đây. Trả lời cực kỳ ngắn gọn và tự nhiên như đang giao tiếp. Câu hỏi: ${plainQuestion}`
+              }]
             }
           }
         };
@@ -498,7 +504,7 @@ export default function IeltsSpeaking({
   };
 
   const deleteRecording = () => {
-    if (!window.confirm("Bạn có chắc chắn muốn xóa file ghi âm này để thu lại từ đầu?")) {
+    if (!window.confirm(isEn ? "Are you sure you want to delete this recording and re-record from scratch?" : "Bạn có chắc chắn muốn xóa file ghi âm này để thu lại từ đầu?")) {
         return;
     }
     
@@ -574,14 +580,14 @@ export default function IeltsSpeaking({
 
     if (answeredQuestions === 0 && !hasInFlightChunks) {
       if (isForced) {
-        alert("⏰ Hết giờ làm bài! Bạn chưa ghi âm câu trả lời nào.");
+        alert(isEn ? "⏰ Time's up! You haven't recorded any answers yet." : "⏰ Hết giờ làm bài! Bạn chưa ghi âm câu trả lời nào.");
       } else {
-        alert("Bạn chưa gọi điện với Giám khảo câu nào cả! Vui lòng hoàn thành ít nhất 1 câu.");
+        alert(isEn ? "You haven't spoken with the Examiner on any question yet! Please complete at least 1 question." : "Bạn chưa gọi điện với Giám khảo câu nào cả! Vui lòng hoàn thành ít nhất 1 câu.");
       }
       return;
     }
 
-    if (!isForced && !window.confirm(`Bạn đã hoàn thành ${answeredQuestions}/${totalQuestions} câu. Bạn đã sẵn sàng nộp bài cho hệ thống chấm điểm?`)) {
+    if (!isForced && !window.confirm(isEn ? `You have completed ${answeredQuestions}/${totalQuestions} questions. Are you ready to submit your test for grading?` : `Bạn đã hoàn thành ${answeredQuestions}/${totalQuestions} câu. Bạn đã sẵn sàng nộp bài cho hệ thống chấm điểm?`)) {
         return;
     }
 
@@ -604,7 +610,38 @@ export default function IeltsSpeaking({
       const combinedBlob = new Blob(allChunks, { type: 'audio/webm' });
       const base64Audio = await blobToBase64(combinedBlob);
 
-      const prompt = `
+      const prompt = isEn ? `
+        You are an official IELTS Speaking Examiner. Listen carefully to the combined recording of the candidate's answers to the following questions:
+        ${JSON.stringify(allQuestions.map((q, i) => `Question ${i+1} (${q.partTitle}): ${q.content}`))}
+
+        IMPORTANT: Write ALL feedback, comments, suggestions, and model answers strictly in English.
+
+        Tasks:
+        1. Score Overall Band and the 4 official IELTS Speaking criteria.
+        2. Provide a full, accurate transcript of the candidate's speech.
+        3. Provide actionable improvement suggestions for Pronunciation, Vocabulary, and Fluency, plus a high-scoring model answer.
+
+        FORMATTING RULES:
+        - Do NOT use double quotes (") inside string values. Use single quotes (') instead.
+        - Return ONLY the exact JSON structure below:
+        {
+          "overall": 6.5,
+          "criteria": {
+            "pronunciation": 6.0,
+            "grammar": 6.5,
+            "lexicalResource": 7.0,
+            "fluency": 6.5
+          },
+          "transcript": "Full transcribed speech...",
+          "feedback": {
+            "general": "Overall English summary...",
+            "pronunciation": "Pronunciation mistakes to improve...",
+            "vocabulary": "Vocabulary upgrades...",
+            "fluency": "Ways to speak more fluently and coherently...",
+            "modelAnswer": "High-scoring English model answer..."
+          }
+        }
+      ` : `
         Bạn là Giám khảo IELTS. Hãy nghe đoạn ghi âm tổng hợp các câu trả lời sau:
         ${JSON.stringify(allQuestions.map((q, i) => `Câu ${i+1} (${q.partTitle}): ${q.content}`))}
         
@@ -644,10 +681,10 @@ export default function IeltsSpeaking({
       });
 
       if (error) {
-          throw new Error("Lỗi gọi Server: " + error.message);
+          throw new Error((isEn ? "Server error: " : "Lỗi gọi Server: ") + error.message);
       }
       if (data?.error) {
-          throw new Error("Lỗi chấm điểm AI: " + data.error);
+          throw new Error((isEn ? "AI grading error: " : "Lỗi chấm điểm AI: ") + data.error);
       }
 
       const textResponse = data.result.replace(/\u0060{3}(json)?/gi, "").trim();
@@ -693,14 +730,14 @@ export default function IeltsSpeaking({
   if (!testData || allQuestions.length === 0) {
       return (
           <div className="h-[100dvh] flex flex-col items-center justify-center gap-4 bg-[#eeeeee] font-bold text-slate-700 p-6 text-center">
-              <p className="text-base">⚠️ Không tìm thấy nội dung đề thi IELTS Speaking.</p>
+              <p className="text-base">⚠️ {isEn ? 'IELTS Speaking exam content not found.' : 'Không tìm thấy nội dung đề thi IELTS Speaking.'}</p>
               {onBack && (
                   <button
                       type="button"
                       onClick={onBack}
                       className="px-5 py-2.5 bg-[#0a5482] hover:bg-[#084266] text-white rounded-xl text-sm font-bold transition shadow-sm cursor-pointer"
                   >
-                      ← Quay lại
+                      ← {isEn ? 'Back' : 'Quay lại'}
                   </button>
               )}
           </div>
@@ -723,14 +760,15 @@ export default function IeltsSpeaking({
            {isSubmitted ? 'TEST FINISHED' : formatTotalTime(timeLeft)}
         </div>
 
-        <div className="flex items-center justify-end gap-3 shrink-0 flex-1">
+        <div className="flex items-center justify-end gap-2 sm:gap-3 shrink-0 flex-1">
+           <LmsLangToggle lang={lang} setLang={setLang} variant="dark" />
            {isSubmitted ? (
               <button type="button" onClick={onBack} className="text-[13px] font-bold bg-[#2ab4e8] hover:bg-[#1fa0d4] text-white px-4 py-1.5 rounded-lg transition cursor-pointer">
-                  Quay lại Góc Học Viên
+                  {isEn ? 'Back to Student Portal' : 'Quay lại Góc Học Viên'}
               </button>
            ) : (
               <button type="button" onClick={handleSafeExit} className="text-[13px] font-bold px-3.5 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-slate-100 border border-white/15 transition cursor-pointer">
-                  Thoát
+                  {isEn ? 'Exit' : 'Thoát'}
               </button>
            )}
         </div>
@@ -745,8 +783,8 @@ export default function IeltsSpeaking({
              </svg>
              <span className="font-black text-xl text-[#0a5482]">AI</span>
           </div>
-          <h2 className="text-xl font-black text-slate-800 mb-2">Đang chấm điểm IELTS Speaking...</h2>
-          <p className="text-slate-500 font-medium text-sm">Vui lòng đợi trong giây lát để giám khảo AI phân tích bài nói của bạn.</p>
+          <h2 className="text-xl font-black text-slate-800 mb-2">{isEn ? 'Grading IELTS Speaking...' : 'Đang chấm điểm IELTS Speaking...'}</h2>
+          <p className="text-slate-500 font-medium text-sm">{isEn ? 'Please wait a moment while the AI Examiner evaluates your speaking response.' : 'Vui lòng đợi trong giây lát để giám khảo AI phân tích bài nói của bạn.'}</p>
         </div>
       )}
 
@@ -828,7 +866,7 @@ export default function IeltsSpeaking({
                                   ? 'bg-[#0a5482] text-white shadow-sm'
                                   : 'bg-sky-50 border border-sky-200 hover:bg-sky-100 text-[#0a5482]'
                               }`}
-                              title={isPlayingRecording ? 'Dừng phát' : 'Nghe lại bản ghi'}
+                              title={isPlayingRecording ? (isEn ? 'Stop playback' : 'Dừng phát') : (isEn ? 'Play recording' : 'Nghe lại bản ghi')}
                             >
                                {isPlayingRecording ? <span className="text-xs font-black">❚❚</span> : <PlayIcon />}
                             </button>
@@ -836,13 +874,13 @@ export default function IeltsSpeaking({
                                <div className={`h-full rounded-full transition-all ${isPlayingRecording ? 'bg-[#2ab4e8] animate-pulse w-full' : 'bg-[#0a5482] w-full'}`}></div>
                             </div>
                             <span className="text-[13px] font-bold text-slate-700 hidden sm:block">
-                              {isPlayingRecording ? 'Đang phát...' : 'Interview Saved'}
+                              {isPlayingRecording ? (isEn ? 'Playing...' : 'Đang phát...') : 'Interview Saved'}
                             </span>
                             <button
                               type="button"
                               onClick={() => { stopRecordingPlayback(); deleteRecording(); }}
                               className="w-10 h-10 rounded-xl text-slate-600 hover:text-white hover:bg-rose-600 transition flex items-center justify-center border border-slate-200 cursor-pointer shrink-0"
-                              title="Xóa & Ghi lại"
+                              title={isEn ? 'Delete & Re-record' : 'Xóa & Ghi lại'}
                             >
                                <TrashIcon />
                             </button>
@@ -851,15 +889,15 @@ export default function IeltsSpeaking({
                          <div className="flex items-center flex-wrap gap-3 sm:gap-5 w-full">
                             {liveStatus === 'IDLE' ? (
                                <button type="button" onClick={startLiveCall} className="px-6 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl flex items-center gap-2.5 transition active:scale-95 text-[14.5px] shadow-md shadow-emerald-600/20 cursor-pointer">
-                                 📞 Bắt đầu gọi Giám khảo
+                                 📞 {isEn ? 'Start Call with Examiner' : 'Bắt đầu gọi Giám khảo'}
                                </button>
                             ) : liveStatus === 'CONNECTING' ? (
                                <div className="text-emerald-600 font-bold animate-pulse flex items-center gap-2 text-[15px] px-4">
-                                  Đang kết nối...
+                                  {isEn ? 'Connecting...' : 'Đang kết nối...'}
                                </div>
                             ) : (
                                <button type="button" onClick={stopLiveCall} className="px-6 py-2.5 bg-rose-600 hover:bg-rose-700 text-white font-bold rounded-xl flex items-center gap-2.5 transition active:scale-95 text-[14.5px] shadow-md shadow-rose-600/20 cursor-pointer">
-                                 🛑 Kết thúc cuộc gọi
+                                 🛑 {isEn ? 'End Call' : 'Kết thúc cuộc gọi'}
                                </button>
                             )}
                             
@@ -935,7 +973,7 @@ export default function IeltsSpeaking({
                   onClick={() => handleFinalSubmit(false)}
                   className="bg-[#0a5482] hover:bg-[#084266] text-white px-6 sm:px-7 py-2 rounded-xl text-[13px] sm:text-[14px] font-black transition active:scale-95 uppercase tracking-wide shadow-sm cursor-pointer"
                 >
-                  Nộp bài
+                  {isEn ? 'Submit' : 'Nộp bài'}
                 </button>
              </div>
 
@@ -960,10 +998,13 @@ export default function IeltsSpeaking({
                   <button 
                     type="button"
                     onClick={() => {
+                      const rawFeedback = JSON.stringify(aiResult.detailedFeedback || aiResult.feedback);
                       const tutorContext = {
                         transcript: aiResult.transcript,
                         criteria: aiResult.criteria,
-                        feedback: JSON.stringify(aiResult.detailedFeedback || aiResult.feedback),
+                        feedback: isEn
+                          ? `You are an IELTS Speaking AI Tutor. Speak and explain exclusively in English. Review the student's speaking test feedback below and coach them through their mistakes: ${rawFeedback}`
+                          : rawFeedback,
                         overall: aiResult.overall
                       };
                       sessionStorage.setItem('tony_live_mode', 'TUTOR');
@@ -973,7 +1014,7 @@ export default function IeltsSpeaking({
                     }}
                     className="mt-2 inline-flex items-center justify-center gap-2 bg-[#2ab4e8] hover:bg-[#1fa0d4] text-white font-black py-2.5 px-6 rounded-xl transition-all shadow-lg active:scale-95 cursor-pointer text-sm"
                   >
-                    <span>📞</span> Gọi Gia sư AI giải thích lỗi sai
+                    <span>📞</span> {isEn ? 'Call AI Tutor to Review Mistakes' : 'Gọi Gia sư AI giải thích lỗi sai'}
                   </button>
                 </div>
                 <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl px-8 py-4 text-center shrink-0">
@@ -988,15 +1029,15 @@ export default function IeltsSpeaking({
             </div>
 
             <div className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/90 shadow-sm">
-                <h3 className="font-black text-lg text-[#0a5482] mb-3.5 flex items-center gap-2">💡 Nhận xét tổng quan</h3>
+                <h3 className="font-black text-lg text-[#0a5482] mb-3.5 flex items-center gap-2">💡 {isEn ? 'Overall Feedback' : 'Nhận xét tổng quan'}</h3>
                 <div className="p-5 bg-sky-50/70 border border-sky-200/70 rounded-xl text-[15px] leading-[1.8] font-medium text-slate-800 font-sans whitespace-pre-wrap">
-                  {aiResult.feedback?.general || aiResult.generalFeedback || 'Hệ thống đã ghi nhận bài thi Speaking của bạn.'}
+                  {aiResult.feedback?.general || aiResult.generalFeedback || (isEn ? 'Your Speaking test has been recorded.' : 'Hệ thống đã ghi nhận bài thi Speaking của bạn.')}
                 </div>
             </div>
 
             <div className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/90 shadow-sm space-y-6">
                 <div className="flex justify-between items-center pb-4 border-b border-slate-200">
-                  <h3 className="font-black text-xl text-slate-900">Chi tiết các tiêu chí</h3>
+                  <h3 className="font-black text-xl text-slate-900">{isEn ? 'Criteria Breakdown' : 'Chi tiết các tiêu chí'}</h3>
                 </div>
                 
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
@@ -1020,7 +1061,7 @@ export default function IeltsSpeaking({
 
                 <div className="space-y-5 pt-2">
                    <div>
-                      <h4 className="font-black text-slate-800 mb-2.5 uppercase tracking-widest text-[12px]">🎧 Bóc băng (Transcript)</h4>
+                      <h4 className="font-black text-slate-800 mb-2.5 uppercase tracking-widest text-[12px]">🎧 {isEn ? 'Transcript' : 'Bóc băng (Transcript)'}</h4>
                       <div className="p-5 bg-amber-50/70 border border-amber-200/80 rounded-xl text-[15px] leading-[1.8] font-sans text-slate-800 italic whitespace-pre-wrap">
                          "{aiResult.transcript}"
                       </div>
@@ -1030,25 +1071,25 @@ export default function IeltsSpeaking({
                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                        {aiResult.feedback?.pronunciation && (
                          <div className="p-5 bg-slate-50 border border-slate-200/80 rounded-xl">
-                           <h4 className="font-black text-[#0a5482] mb-2 uppercase tracking-wider text-[12px]">🗣️ Phát âm (Pronunciation)</h4>
+                           <h4 className="font-black text-[#0a5482] mb-2 uppercase tracking-wider text-[12px]">🗣️ {isEn ? 'Pronunciation' : 'Phát âm (Pronunciation)'}</h4>
                            <p className="text-[14.5px] leading-[1.75] font-medium text-slate-800 whitespace-pre-wrap font-sans">{aiResult.feedback.pronunciation}</p>
                          </div>
                        )}
                        {aiResult.feedback?.vocabulary && (
                          <div className="p-5 bg-slate-50 border border-slate-200/80 rounded-xl">
-                           <h4 className="font-black text-[#0a5482] mb-2 uppercase tracking-wider text-[12px]">📚 Từ vựng (Vocabulary)</h4>
+                           <h4 className="font-black text-[#0a5482] mb-2 uppercase tracking-wider text-[12px]">📚 {isEn ? 'Vocabulary' : 'Từ vựng (Vocabulary)'}</h4>
                            <p className="text-[14.5px] leading-[1.75] font-medium text-slate-800 whitespace-pre-wrap font-sans">{aiResult.feedback.vocabulary}</p>
                          </div>
                        )}
                        {aiResult.feedback?.fluency && (
                          <div className="p-5 bg-slate-50 border border-slate-200/80 rounded-xl md:col-span-2">
-                           <h4 className="font-black text-[#0a5482] mb-2 uppercase tracking-wider text-[12px]">⚡ Độ trôi chảy (Fluency &amp; Coherence)</h4>
+                           <h4 className="font-black text-[#0a5482] mb-2 uppercase tracking-wider text-[12px]">⚡ {isEn ? 'Fluency & Coherence' : 'Độ trôi chảy (Fluency & Coherence)'}</h4>
                            <p className="text-[14.5px] leading-[1.75] font-medium text-slate-800 whitespace-pre-wrap font-sans">{aiResult.feedback.fluency}</p>
                          </div>
                        )}
                        {aiResult.feedback?.modelAnswer && (
                          <div className="p-5 bg-emerald-50/70 border border-emerald-200/80 rounded-xl md:col-span-2">
-                           <h4 className="font-black text-emerald-800 mb-2 uppercase tracking-wider text-[12px]">🌟 Câu trả lời mẫu (Model Answer)</h4>
+                           <h4 className="font-black text-emerald-800 mb-2 uppercase tracking-wider text-[12px]">🌟 {isEn ? 'Model Answer' : 'Câu trả lời mẫu (Model Answer)'}</h4>
                            <p className="text-[14.5px] leading-[1.8] font-medium text-slate-800 whitespace-pre-wrap font-sans">{aiResult.feedback.modelAnswer}</p>
                          </div>
                        )}
@@ -1057,7 +1098,7 @@ export default function IeltsSpeaking({
                    
                    {(aiResult.detailedFeedback || typeof aiResult.feedback === 'string') && (
                    <div>
-                      <h4 className="font-black text-slate-800 mb-2.5 uppercase tracking-widest text-[12px]">💡 Gợi ý sửa lỗi chi tiết</h4>
+                      <h4 className="font-black text-slate-800 mb-2.5 uppercase tracking-widest text-[12px]">💡 {isEn ? 'Detailed Corrections & Tips' : 'Gợi ý sửa lỗi chi tiết'}</h4>
                       <div className="p-5 bg-slate-50 border border-slate-200/80 rounded-xl text-[15px] leading-[1.8] font-medium text-slate-800 whitespace-pre-wrap font-sans">
                          {aiResult.detailedFeedback || aiResult.feedback}
                       </div>

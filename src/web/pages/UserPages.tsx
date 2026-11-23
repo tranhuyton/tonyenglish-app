@@ -6,7 +6,8 @@ import { unserializePhpIds, fixLegacyHtmlContent, encryptLegacyPass, resolveUplo
 
 /* 1. LOGIN PAGE (/user/login) */
 export const LoginPage: React.FC = () => {
-  const { t, loginUser } = useApp();
+  const { lang, t, loginUser } = useApp();
+  const isEn = lang === 'en';
   const navigate = useNavigate();
 
   const [username, setUsername] = useState('');
@@ -32,7 +33,9 @@ export const LoginPage: React.FC = () => {
       <div className="bg-white rounded-3xl border border-slate-200 shadow-xl overflow-hidden">
         <div className="bg-gradient-to-r from-[#0a5482] to-[#0f172a] px-8 py-6 text-white">
           <h2 className="text-2xl font-black">{t('Sign in')}</h2>
-          <p className="text-xs text-sky-200 mt-1">Đăng nhập tài khoản học viên TonyEnglish</p>
+          <p className="text-xs text-sky-200 mt-1">
+            {isEn ? 'Sign in to your TonyEnglish student account' : 'Đăng nhập tài khoản học viên TonyEnglish'}
+          </p>
         </div>
         <form onSubmit={handleSubmit} className="p-8 space-y-5">
           <div>
@@ -78,7 +81,7 @@ export const LoginPage: React.FC = () => {
               onClick={() => window.dispatchEvent(new CustomEvent('tony-open-lms'))}
               className="text-[#0a5482] hover:text-[#2ab4e8] hover:underline cursor-pointer"
             >
-              Góc Học Viên LMS →
+              {isEn ? 'Student LMS Portal →' : 'Góc Học Viên LMS →'}
             </button>
           </div>
         </form>
@@ -91,6 +94,7 @@ export const LoginPage: React.FC = () => {
 export const LecturePage: React.FC<{ isTrial?: boolean }> = ({ isTrial = false }) => {
   const { courseSlug, lectureSlug } = useParams<{ courseSlug?: string; lectureSlug?: string }>();
   const { lang, t, user, selectedCourseId } = useApp();
+  const isEn = lang === 'en';
 
   const [classes, setClasses] = useState<any[]>([]);
   const [selectedClass, setSelectedClass] = useState<any | null>(null);
@@ -257,9 +261,13 @@ export const LecturePage: React.FC<{ isTrial?: boolean }> = ({ isTrial = false }
         <div className="flex items-center gap-3">
           <span className="text-2xl">🚀</span>
           <div>
-            <div className="font-black text-sm sm:text-base">Hệ thống Bài giảng &amp; Luyện thi thế hệ mới</div>
+            <div className="font-black text-sm sm:text-base">
+              {isEn ? 'Next-Generation Lecture & Exam Prep System' : 'Hệ thống Bài giảng & Luyện thi thế hệ mới'}
+            </div>
             <div className="text-xs text-sky-200">
-              Tích hợp Gia sư AI, chấm chữa Writing/Speaking và bài tập tương tác tại Góc Học Viên TonyEnglish
+              {isEn
+                ? 'Integrated AI Tutor, Writing/Speaking grading, and interactive exercises in the TonyEnglish Student Portal'
+                : 'Tích hợp Gia sư AI, chấm chữa Writing/Speaking và bài tập tương tác tại Góc Học Viên TonyEnglish'}
             </div>
           </div>
         </div>
@@ -268,7 +276,7 @@ export const LecturePage: React.FC<{ isTrial?: boolean }> = ({ isTrial = false }
           onClick={() => window.dispatchEvent(new CustomEvent('tony-open-lms'))}
           className="bg-[#2ab4e8] hover:bg-[#1d9ad1] text-white font-black text-xs sm:text-sm px-4 py-2.5 rounded-xl shadow-md transition whitespace-nowrap cursor-pointer"
         >
-          Chuyển sang LMS mới ➜
+          {isEn ? 'Switch to New LMS ➜' : 'Chuyển sang LMS mới ➜'}
         </button>
       </div>
 
@@ -282,10 +290,10 @@ export const LecturePage: React.FC<{ isTrial?: boolean }> = ({ isTrial = false }
           >
             <h2 className="text-slate-600 lg:text-slate-500 font-bold text-xs uppercase tracking-widest flex items-center gap-2 min-w-0">
               <span className="opacity-80 shrink-0">📖</span>
-              <span className="truncate">{isTrial ? 'Khóa học thử' : classTitle}</span>
+              <span className="truncate">{isTrial ? (isEn ? 'Trial Course' : 'Khóa học thử') : classTitle}</span>
             </h2>
             <span className="lg:hidden text-[11px] font-bold text-[#0a5482] bg-white px-2.5 py-1 rounded-lg border border-slate-200/80 shadow-2xs flex items-center gap-1 shrink-0 ml-2">
-              <span>{mobileCateOpen ? 'Thu gọn' : 'Danh sách bài'}</span>
+              <span>{mobileCateOpen ? (isEn ? 'Collapse' : 'Thu gọn') : (isEn ? 'Lesson List' : 'Danh sách bài')}</span>
               <span>{mobileCateOpen ? '▲' : '▼'}</span>
             </span>
           </button>
@@ -350,7 +358,7 @@ export const LecturePage: React.FC<{ isTrial?: boolean }> = ({ isTrial = false }
               </h1>
               {lecturePages.length > 1 && (
                 <span className="text-xs font-bold bg-sky-100 text-[#0a5482] px-3 py-1 rounded-full">
-                  Trang {curPageIdx + 1} / {lecturePages.length}
+                  {isEn ? `Page ${curPageIdx + 1} / ${lecturePages.length}` : `Trang ${curPageIdx + 1} / ${lecturePages.length}`}
                 </span>
               )}
             </div>
@@ -497,7 +505,7 @@ export const LecturePage: React.FC<{ isTrial?: boolean }> = ({ isTrial = false }
                         rel="noreferrer"
                         className="inline-flex items-center gap-2 bg-sky-50 hover:bg-sky-100 text-[#0a5482] font-bold text-xs px-4 py-2.5 rounded-xl border border-sky-200"
                       >
-                        📎 Tải tài liệu đính kèm (Download)
+                        📎 {isEn ? 'Download Attachment' : 'Tải tài liệu đính kèm (Download)'}
                       </a>
                     </div>
                   )}
@@ -550,6 +558,7 @@ export const LecturePage: React.FC<{ isTrial?: boolean }> = ({ isTrial = false }
 /* 3. PROFILE PAGE (/user/profile) */
 export const ProfilePage: React.FC = () => {
   const { lang, t, user, setUser, selectedCourseId, setSelectedCourseId, userCoursesList, logoutUser } = useApp();
+  const isEn = lang === 'en';
   const navigate = useNavigate();
 
   const [fullName, setFullName] = useState(user?.user_fullname || user?.user_name || '');
@@ -579,7 +588,7 @@ export const ProfilePage: React.FC = () => {
     const { error } = await supabase.from('te_user').update(fields).eq('user_id', user.user_id);
     if (!error) {
       setUser({ ...user, ...fields });
-      setSaveMsg('Đã lưu thông tin hồ sơ!');
+      setSaveMsg(isEn ? 'Profile saved!' : 'Đã lưu thông tin hồ sơ!');
       setTimeout(() => setSaveMsg(''), 3000);
     }
   };
@@ -665,7 +674,7 @@ export const ProfilePage: React.FC = () => {
               />
             </div>
             <div>
-              <label className="block text-xs font-bold text-slate-500 mb-1">Giới thiệu bản thân</label>
+              <label className="block text-xs font-bold text-slate-500 mb-1">{isEn ? 'About Me' : 'Giới thiệu bản thân'}</label>
               <textarea
                 rows={3}
                 value={aboutMe}
@@ -720,7 +729,7 @@ export const ProfilePage: React.FC = () => {
                 />
               </div>
               <button type="submit" className="bg-slate-800 text-white font-black text-xs px-6 py-2.5 rounded-xl">
-                Đổi mật khẩu
+                {isEn ? 'Change Password' : 'Đổi mật khẩu'}
               </button>
             </form>
           </div>
@@ -732,7 +741,8 @@ export const ProfilePage: React.FC = () => {
 
 /* 4. MESSAGE PAGE (/user/message) */
 export const MessagePage: React.FC = () => {
-  const { t, user } = useApp();
+  const { lang, t, user } = useApp();
+  const isEn = lang === 'en';
   const [messages, setMessages] = useState<any[]>([]);
 
   useEffect(() => {
@@ -764,7 +774,9 @@ export const MessagePage: React.FC = () => {
           {messages.length > 0 ? (
             messages.map((m) => (
               <div key={m.msg_id} className="py-4 first:pt-0 last:pb-0">
-                <h4 className="font-bold text-slate-800 text-sm">{m.msg_title || 'Thông báo từ TonyEnglish'}</h4>
+                <h4 className="font-bold text-slate-800 text-sm">
+                  {m.msg_title || (isEn ? 'Notification from TonyEnglish' : 'Thông báo từ TonyEnglish')}
+                </h4>
                 <div
                   className="text-xs text-slate-600 mt-1 legacy-prose"
                   dangerouslySetInnerHTML={{ __html: fixLegacyHtmlContent(m.msg_content) }}
@@ -772,7 +784,7 @@ export const MessagePage: React.FC = () => {
               </div>
             ))
           ) : (
-            <p className="text-sm text-slate-500">Chưa có tin nhắn nào.</p>
+            <p className="text-sm text-slate-500">{isEn ? 'No messages yet.' : 'Chưa có tin nhắn nào.'}</p>
           )}
         </div>
       </div>

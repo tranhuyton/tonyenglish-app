@@ -2,6 +2,7 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 import { supabase } from '../lib/supabase';
 import { encryptLegacyPass } from '../lib/utils';
 import { t as translate } from '../lib/i18n';
+import { LANG_CHANGE_EVENT, setGlobalLang } from '../../utils/lmsI18n';
 
 export interface TeUser {
   user_id: number;
@@ -112,8 +113,19 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
   const setLang = (l: 'vi' | 'en') => {
     setLangState(l);
-    localStorage.setItem('te_lang', l);
+    setGlobalLang(l);
   };
+
+  useEffect(() => {
+    const syncFromGlobal = (e: Event) => {
+      const ce = e as CustomEvent<'vi' | 'en'>;
+      if (ce.detail === 'en' || ce.detail === 'vi') {
+        setLangState(ce.detail);
+      }
+    };
+    window.addEventListener(LANG_CHANGE_EVENT, syncFromGlobal);
+    return () => window.removeEventListener(LANG_CHANGE_EVENT, syncFromGlobal);
+  }, []);
 
   const setUser = (u: TeUser | null) => {
     const safeUser = u ? sanitizeTeUser(u) : null;

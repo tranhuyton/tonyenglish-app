@@ -30,6 +30,7 @@ import {
   updatePageSeo,
 } from '../lib/utils';
 import { trackUnifiedContact } from '../../lib/googleAnalytics';
+import { getLocalizedArticle } from '../data/studyTipsEn';
 
 type CardVariant = 'default' | 'horizontal' | 'compact';
 
@@ -160,10 +161,12 @@ export const HomePage: React.FC = () => {
   useEffect(() => {
     updatePageSeo(
       '',
-      'TonyEnglish.vn - Lớp gia sư 1 kèm 1 trực tiếp cùng Thầy Tony (7 năm tu nghiệp UK) tại nhà riêng R2B 2219 Royal City & Online: IELTS, Cambridge IGCSE / A-Level, Digital SAT 1500+ & Giao tiếp. Học thử miễn phí 2-3 buổi. Zalo/Hotline: 0935 058 688.',
+      lang === 'vi'
+        ? 'TonyEnglish.vn - Lớp gia sư 1 kèm 1 trực tiếp cùng Thầy Tony (7 năm tu nghiệp UK) tại nhà riêng R2B 2219 Royal City & Online: IELTS, Cambridge IGCSE / A-Level, Digital SAT 1500+ & Giao tiếp. Học thử miễn phí 2-3 buổi. Zalo/Hotline: 0935 058 688.'
+        : 'TonyEnglish.vn - Private 1-on-1 tutoring with Mr. Tony (7+ years UK alumnus) at R2B 2219 Royal City & Online: IELTS, Cambridge IGCSE / A-Level, Digital SAT 1500+ & British Communication. 2–3 free trial lessons. Zalo/Hotline: +84 93 505 8688.',
       { canonicalPath: '/', image: '/images/courses/course-overview.jpg' }
     );
-  }, []);
+  }, [lang]);
 
   const [ads, setAds] = useState<any[]>([]);
   const [adsLoaded, setAdsLoaded] = useState(false);
@@ -230,7 +233,8 @@ export const HomePage: React.FC = () => {
             .select('*')
             .eq('deleted', 0)
             .eq('vc_status', 1)
-            .order('vc_order', { ascending: true }),
+            .order('vc_order', { ascending: true, nullsFirst: false })
+            .order('vc_id', { ascending: true }),
           supabase
             .from('te_testimonial')
             .select('*')
@@ -343,8 +347,9 @@ export const HomePage: React.FC = () => {
 
   // Render a single modern news category card (supports default, horizontal 2-up, and compact 4-up layouts)
   const renderNewsCateCard = (cate: any, variant: CardVariant = 'default') => {
-    const newsItem = latestNewsByCate[cate.news_cc_id];
-    if (!newsItem) return null;
+    const rawNewsItem = latestNewsByCate[cate.news_cc_id];
+    if (!rawNewsItem) return null;
+    const newsItem = getLocalizedArticle(rawNewsItem, lang);
 
     const cateTitle = lang === 'vi' ? cate.news_cc_name_vi || cate.news_cc_name : cate.news_cc_name;
     const cateUrl = `/news/category/${(cate.news_cc_name_url || '').trim()}`;
@@ -604,7 +609,7 @@ export const HomePage: React.FC = () => {
     curAdDescText.toLowerCase() !== curAdMetaText.toLowerCase() &&
     !curAdMetaText.toLowerCase().includes(curAdDescText.toLowerCase());
 
-  const curSticky = stickyNews[stickyIdx];
+  const curSticky = getLocalizedArticle(stickyNews[stickyIdx], lang);
   const featuredVideoParents = allVideoCategories.filter((vc) => Number(vc.vc_type) === 1);
   const videoStoreVariant = getCardVariantForCount(featuredVideoParents.length);
   const videoStoreGridClass = getBalancedGridClass(featuredVideoParents.length);
@@ -872,21 +877,35 @@ export const HomePage: React.FC = () => {
                 <div className="w-full rounded-3xl bg-white/10 backdrop-blur-md border border-white/20 p-6 sm:p-7 shadow-2xl flex flex-col justify-center space-y-4">
                   <div className="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-wider text-amber-300 bg-amber-400/15 border border-amber-300/30 px-3 py-1 rounded-full self-start">
                     <Sparkles className="w-3.5 h-3.5" />
-                    <span>Trải nghiệm Hệ sinh thái LMS</span>
+                    <span>{lang === 'vi' ? 'Trải nghiệm Hệ sinh thái LMS' : 'Explore the Smart LMS Ecosystem'}</span>
                   </div>
-                  <h3 className="text-xl font-black text-white">Phòng Học &amp; Luyện Đề Thông Minh 24/7</h3>
+                  <h3 className="text-xl font-black text-white">
+                    {lang === 'vi' ? 'Phòng Học & Luyện Đề Thông Minh 24/7' : '24/7 Smart Study & Exam Portal'}
+                  </h3>
                   <ul className="space-y-2.5 text-sm text-slate-200">
                     <li className="flex items-start gap-2.5">
                       <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                      <span>Bài giảng IGCSE Song ngữ Anh – Việt bám sát Syllabus Cambridge</span>
+                      <span>
+                        {lang === 'vi'
+                          ? 'Bài giảng IGCSE Song ngữ Anh – Việt bám sát Syllabus Cambridge'
+                          : 'Bilingual Cambridge IGCSE interactive lectures aligned with official Syllabuses'}
+                      </span>
                     </li>
                     <li className="flex items-start gap-2.5">
                       <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                      <span>Kho đề Past Papers có Video hướng dẫn giải chi tiết từng câu (1080p)</span>
+                      <span>
+                        {lang === 'vi'
+                          ? 'Kho đề Past Papers có Video hướng dẫn giải chi tiết từng câu (1080p)'
+                          : 'Topical Past Paper bank with step-by-step Marking Scheme walkthroughs'}
+                      </span>
                     </li>
                     <li className="flex items-start gap-2.5">
                       <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                      <span>Phòng thi IELTS Computer-delivered &amp; AI chấm Writing/Speaking tức thì</span>
+                      <span>
+                        {lang === 'vi'
+                          ? 'Phòng thi IELTS Computer-delivered & AI chấm Writing/Speaking tức thì'
+                          : 'IDP/BC-style Computer-Delivered IELTS Simulator & 24/7 AI Writing/Speaking grading'}
+                      </span>
                     </li>
                   </ul>
                 </div>

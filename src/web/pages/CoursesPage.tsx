@@ -37,17 +37,30 @@ const WEB_2026_CAPTIONS: Record<string, string> = {
   '10_kho_video_phu_de.png': '10. Kho Video luyện nghe có phụ đề song ngữ tương tác',
 };
 
+const WEB_2026_CAPTIONS_EN: Record<string, string> = {
+  '01_bai_giang_ngu_am_1.png': '1. Interactive Phonetics Lecture: Places of Articulation & British Vowel Chart',
+  '02_bai_giang_ngu_am_2.png': '2. Interactive Phonetics Lecture: Monophthong Vowels & Native Audio',
+  '03_goc_hoc_vien_ai.png': '3. Student Portal with Personalised Roadmap & 24/7 AI Study Advisor',
+  '04_lich_bao_bai.png': '4. Daily Assignment Calendar & Homework Progress Tracking with Mr. Tony',
+  '05_bai_giang_igcse_song_ngu.png': '5. Bilingual Cambridge IGCSE Lectures with Video & Audio Walkthroughs',
+  '06_thu_vien_click_dup_tra_tu.png': '6. Online Reading Library with Instant Double-Click Dictionary Lookup',
+  '07_thu_vien_cambridge_song_ngu.png': '7. Side-by-Side Bilingual Cambridge IELTS Reading & Listening Library',
+  '08_tu_dien_anh_viet.png': '8. Built-in English–Vietnamese Dictionary Available on Every Page',
+  '09_tu_dien_viet_anh.png': '9. Built-in Vietnamese–English Bidirectional Vocabulary Lookup',
+  '10_kho_video_phu_de.png': '10. Curated Video Store with Interactive Bilingual Subtitles',
+};
+
 const LEGACY_GALLERY_ITEMS = [
-  { src: '/images/legacy-2017/01_2017_01_23_3_bai_giang_ngu_am_1.png', caption: '1. Giao diện Bài giảng Ngữ âm: Vị trí Cấu Âm (2017)' },
-  { src: '/images/legacy-2017/02_2017_01_23_1_bai_giang_ngu_am_2.png', caption: '2. Giao diện Bài giảng Ngữ âm: Nguyên Âm Đơn (2017)' },
-  { src: '/images/legacy-2017/03_2017_01_23_2_muc_tin_nhan.png', caption: '3. Giao diện mục Tin nhắn trao đổi với Thầy Tony (2017)' },
-  { src: '/images/legacy-2017/04_2017_01_23_5_thong_bao_tin_nhan.png', caption: '4. Giao diện khi có thông báo tin nhắn mới (2017)' },
-  { src: '/images/legacy-2017/05_2017_01_23_6_cau_hinh_tai_khoan.png', caption: '5. Giao diện Cấu hình tài khoản & Chọn khóa học (2017)' },
-  { src: '/images/legacy-2017/06_2017_01_17_1_tra_tu_click_dup.png', caption: '6. Tính năng tra từ nhanh bằng Click đúp trong Thư viện (2017)' },
-  { src: '/images/legacy-2017/07_2017_01_23_7_so_tay_ghi_chep.png', caption: '7. Tính năng Sổ tay ghi chép từ vựng cá nhân (2017)' },
-  { src: '/images/legacy-2017/08_2017_01_17_2_tu_dien_anh_viet.png', caption: '8. Thanh tra từ điển từ Anh sang Việt (2017)' },
-  { src: '/images/legacy-2017/09_2017_01_17_3_tu_dien_viet_anh.png', caption: '9. Thanh tra từ điển từ Việt sang Anh (2017)' },
-  { src: '/images/legacy-2017/10_2017_01_17_5_tinh_nang_khac.png', caption: '10. Các tính năng Tìm kiếm, Nhận diện giọng nói & Dịch câu (2017)' },
+  { src: '/images/legacy-2017/01_2017_01_23_3_bai_giang_ngu_am_1.png', caption: '1. Giao diện Bài giảng Ngữ âm: Vị trí Cấu Âm (2017)', captionEn: '1. Phonetics Lecture Interface: Articulation Guide (2017)' },
+  { src: '/images/legacy-2017/02_2017_01_23_1_bai_giang_ngu_am_2.png', caption: '2. Giao diện Bài giảng Ngữ âm: Nguyên Âm Đơn (2017)', captionEn: '2. Phonetics Lecture Interface: Vowel Monophthongs (2017)' },
+  { src: '/images/legacy-2017/03_2017_01_23_2_muc_tin_nhan.png', caption: '3. Giao diện mục Tin nhắn trao đổi với Thầy Tony (2017)', captionEn: '3. Direct Messaging Inbox with Mr. Tony (2017)' },
+  { src: '/images/legacy-2017/04_2017_01_23_5_thong_bao_tin_nhan.png', caption: '4. Giao diện khi có thông báo tin nhắn mới (2017)', captionEn: '4. New Message Notification Window (2017)' },
+  { src: '/images/legacy-2017/05_2017_01_23_6_cau_hinh_tai_khoan.png', caption: '5. Giao diện Cấu hình tài khoản & Chọn khóa học (2017)', captionEn: '5. Account Settings & Course Selection Interface (2017)' },
+  { src: '/images/legacy-2017/06_2017_01_17_1_tra_tu_click_dup.png', caption: '6. Tính năng tra từ nhanh bằng Click đúp trong Thư viện (2017)', captionEn: '6. Instant Double-Click Dictionary Lookup in Library (2017)' },
+  { src: '/images/legacy-2017/07_2017_01_23_7_so_tay_ghi_chep.png', caption: '7. Tính năng Sổ tay ghi chép từ vựng cá nhân (2017)', captionEn: '7. Personal Vocabulary Notebook Tool (2017)' },
+  { src: '/images/legacy-2017/08_2017_01_17_2_tu_dien_anh_viet.png', caption: '8. Thanh tra từ điển từ Anh sang Việt (2017)', captionEn: '8. English-to-Vietnamese Lookup Bar (2017)' },
+  { src: '/images/legacy-2017/09_2017_01_17_3_tu_dien_viet_anh.png', caption: '9. Thanh tra từ điển từ Việt sang Anh (2017)', captionEn: '9. Vietnamese-to-English Lookup Bar (2017)' },
+  { src: '/images/legacy-2017/10_2017_01_17_5_tinh_nang_khac.png', caption: '10. Các tính năng Tìm kiếm, Nhận diện giọng nói & Dịch câu (2017)', captionEn: '10. Search, Voice Recognition & Sentence Translation Tools (2017)' },
 ];
 
 // Button tap fires Contact only (prevents premature Lead inflation from cancelled calls / blocked WebView popups)
@@ -178,6 +191,20 @@ export const CoursesPage: React.FC = () => {
       const cleanSlug = decodeURIComponent(effectiveSlug)
         .trim()
         .replace(/\.html$/i, '');
+      if (cleanSlug.toLowerCase() === 'toeic') {
+        const officeCourse = allCategories.find(
+          (c: any) => Number(c.cc_id) === 123 || (c.cc_name_url || '').trim() === 'business-office-english'
+        );
+        if (officeCourse) {
+          setCurrentCourse(officeCourse);
+          setOpenParentId(officeCourse.cc_parent === 0 ? officeCourse.cc_id : officeCourse.cc_parent);
+          const canonical = (officeCourse.cc_name_url || '').trim();
+          if (canonical && canonical !== 'toeic') {
+            navigate(`/courses/${encodeURIComponent(canonical)}`, { replace: true });
+          }
+          return;
+        }
+      }
       const found = allCategories.find((c: any) => (c.cc_name_url || '').trim() === cleanSlug);
       if (found) {
         setCurrentCourse(found);
@@ -299,9 +326,9 @@ export const CoursesPage: React.FC = () => {
           const src = img.getAttribute('src') || img.src || '';
           const fileName = src.split('/').pop()?.split('?')[0] || '';
           const caption =
+            (lang === 'en' ? WEB_2026_CAPTIONS_EN[fileName] : WEB_2026_CAPTIONS[fileName]) ||
             (img.getAttribute('alt') || '').trim() ||
             (img.getAttribute('title') || '').trim() ||
-            WEB_2026_CAPTIONS[fileName] ||
             courseTitle;
           return { src, caption };
         })
@@ -793,14 +820,20 @@ export const CoursesPage: React.FC = () => {
                 {zaloFallbackHint && (
                   <div className="rounded-xl bg-amber-50 border border-amber-200 px-3.5 py-2.5 flex flex-wrap items-center justify-between gap-2 text-xs text-amber-950 font-semibold">
                     <span>
-                      ✅ Đã copy số Zalo <strong>0935 058 688</strong> — Nếu trình duyệt Facebook chặn chuyển app, anh/chị mở <strong>Zalo</strong> rồi dán số vào ô Tìm kiếm nhé:
+                      {lang === 'vi' ? (
+                        <>✅ Đã copy số Zalo <strong>0935 058 688</strong> — Nếu trình duyệt Facebook chặn chuyển app, anh/chị mở <strong>Zalo</strong> rồi dán số vào ô Tìm kiếm nhé:</>
+                      ) : (
+                        <>✅ Copied Zalo number <strong>0935 058 688</strong> — If an in-app browser blocks opening Zalo, simply open <strong>Zalo</strong> and paste this number into Search:</>
+                      )}
                     </span>
                     <button
                       type="button"
                       onClick={handleCopyPhone}
                       className="px-3 py-1.5 rounded-lg bg-white border border-amber-300 text-amber-900 font-extrabold hover:bg-amber-100 transition cursor-pointer shrink-0"
                     >
-                      {copiedPhone ? '✅ Đã copy 0935058688' : '📋 Copy SĐT: 0935 058 688'}
+                      {copiedPhone
+                        ? lang === 'vi' ? '✅ Đã copy 0935058688' : '✅ Copied 0935058688'
+                        : lang === 'vi' ? '📋 Copy SĐT: 0935 058 688' : '📋 Copy Phone: 0935 058 688'}
                     </button>
                   </div>
                 )}
@@ -835,7 +868,8 @@ export const CoursesPage: React.FC = () => {
                       </div>
                     </div>
                     <div className="text-xs sm:text-sm font-bold text-slate-600">
-                      Hotline / Zalo Thầy Tony: <strong className="text-[#0a5482]">{CONTACT_PHONE_DISPLAY}</strong>
+                      {lang === 'vi' ? 'Hotline / Zalo Thầy Tony:' : 'Hotline / Zalo Mr. Tony:'}{' '}
+                      <strong className="text-[#0a5482]">{CONTACT_PHONE_DISPLAY}</strong>
                     </div>
                   </div>
                 </div>
@@ -855,15 +889,23 @@ export const CoursesPage: React.FC = () => {
                       </span>
                       <div className="min-w-0">
                         <div className="font-extrabold text-[13px] sm:text-sm text-amber-950 leading-snug">
-                          Góc Kỷ Niệm: Giao diện TonyEnglish phiên bản đầu tiên (2013 – 2017)
+                          {lang === 'vi'
+                            ? 'Góc Kỷ Niệm: Giao diện TonyEnglish phiên bản đầu tiên (2013 – 2017)'
+                            : 'Keepsake Archive: First-Generation TonyEnglish Web Interface (2013 – 2017)'}
                         </div>
                         <div className="text-[11.5px] text-amber-800/85 font-medium leading-relaxed mt-0.5">
-                          Lưu trữ 10 hình ảnh chụp màn hình kỷ niệm của trang web TonyEnglish thế hệ cũ
+                          {lang === 'vi'
+                            ? 'Lưu trữ 10 hình ảnh chụp màn hình kỷ niệm của trang web TonyEnglish thế hệ cũ'
+                            : 'Archive of 10 original screenshots from the classic TonyEnglish.vn platform'}
                         </div>
                       </div>
                     </div>
                     <span className="self-start sm:self-center inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-white border border-amber-200 text-amber-900 font-bold text-xs shrink-0 shadow-2xs">
-                      <span>{showLegacyGallery ? 'Thu gọn' : 'Xem ảnh kỷ niệm'}</span>
+                      <span>
+                        {showLegacyGallery
+                          ? lang === 'vi' ? 'Thu gọn' : 'Collapse'
+                          : lang === 'vi' ? 'Xem ảnh kỷ niệm' : 'View archive photos'}
+                      </span>
                       {showLegacyGallery ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
                     </span>
                   </button>
@@ -871,30 +913,41 @@ export const CoursesPage: React.FC = () => {
                   {showLegacyGallery && (
                     <div className="p-4 sm:p-6 border-t border-amber-200/70 bg-white space-y-5">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        {LEGACY_GALLERY_ITEMS.map((item, idx) => (
-                          <button
-                            key={item.src}
-                            type="button"
-                            onClick={() => setImageLightbox({ items: LEGACY_GALLERY_ITEMS, index: idx })}
-                            className="group text-left rounded-xl border border-slate-200 hover:border-[#2ab4e8] overflow-hidden bg-slate-50 shadow-2xs hover:shadow-md transition cursor-zoom-in"
-                          >
-                            <div className="relative overflow-hidden">
-                              <img
-                                src={item.src}
-                                alt={item.caption}
-                                className="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-300"
-                                loading="lazy"
-                              />
-                              <span className="absolute bottom-2 right-2 inline-flex items-center gap-1 px-2 py-1 rounded-lg bg-slate-900/80 text-white text-[11px] font-bold opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity shadow-sm">
-                                <ZoomIn className="w-3.5 h-3.5" />
-                                <span>{lang === 'vi' ? 'Phóng to' : 'Zoom'}</span>
-                              </span>
-                            </div>
-                            <div className="px-3 py-2 text-center text-xs font-semibold text-slate-600 group-hover:text-[#0a5482] border-t border-slate-200/80">
-                              {item.caption}
-                            </div>
-                          </button>
-                        ))}
+                        {LEGACY_GALLERY_ITEMS.map((item, idx) => {
+                          const itemCap = lang === 'vi' ? item.caption : item.captionEn;
+                          return (
+                            <button
+                              key={item.src}
+                              type="button"
+                              onClick={() =>
+                                setImageLightbox({
+                                  items: LEGACY_GALLERY_ITEMS.map((it) => ({
+                                    src: it.src,
+                                    caption: lang === 'vi' ? it.caption : it.captionEn,
+                                  })),
+                                  index: idx,
+                                })
+                              }
+                              className="group text-left rounded-xl border border-slate-200 hover:border-[#2ab4e8] overflow-hidden bg-slate-50 shadow-2xs hover:shadow-md transition cursor-zoom-in"
+                            >
+                              <div className="relative overflow-hidden">
+                                <img
+                                  src={item.src}
+                                  alt={itemCap}
+                                  className="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-300"
+                                  loading="lazy"
+                                />
+                                <span className="absolute bottom-2 right-2 inline-flex items-center gap-1 px-2 py-1 rounded-lg bg-slate-900/80 text-white text-[11px] font-bold opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity shadow-sm">
+                                  <ZoomIn className="w-3.5 h-3.5" />
+                                  <span>{lang === 'vi' ? 'Phóng to' : 'Zoom'}</span>
+                                </span>
+                              </div>
+                              <div className="px-3 py-2 text-center text-xs font-semibold text-slate-600 group-hover:text-[#0a5482] border-t border-slate-200/80">
+                                {itemCap}
+                              </div>
+                            </button>
+                          );
+                        })}
                       </div>
                     </div>
                   )}
@@ -1201,7 +1254,9 @@ export const CoursesPage: React.FC = () => {
                     {lang === 'vi' ? 'Nhắn Zalo trực tiếp Thầy Tony' : 'Connect via Zalo with Mr. Tony'}
                   </h3>
                   <p className="text-[11px] sm:text-xs text-sky-100 font-medium">
-                    R2B 2219 Royal City • Học thử 2–3 buổi miễn phí
+                    {lang === 'vi'
+                      ? 'R2B 2219 Royal City • Học thử 2–3 buổi miễn phí'
+                      : 'R2B 2219 Royal City • 2–3 Free Trial Sessions'}
                   </p>
                 </div>
               </div>
@@ -1209,7 +1264,7 @@ export const CoursesPage: React.FC = () => {
                 type="button"
                 onClick={() => setShowZaloModal(false)}
                 className="w-8 h-8 rounded-full bg-white/15 hover:bg-white/25 text-white font-black text-sm flex items-center justify-center cursor-pointer transition shrink-0"
-                aria-label="Đóng"
+                aria-label={lang === 'vi' ? 'Đóng' : 'Close'}
               >
                 ✕
               </button>
@@ -1219,7 +1274,9 @@ export const CoursesPage: React.FC = () => {
               <div className="rounded-2xl bg-emerald-50 border border-emerald-200 p-3.5 flex items-center justify-between gap-2">
                 <div>
                   <div className="text-[11px] font-extrabold uppercase tracking-wide text-emerald-700">
-                    {copiedPhone ? '✅ Đã tự động sao chép số Zalo' : 'Số điện thoại / Zalo Thầy Tony'}
+                    {copiedPhone
+                      ? lang === 'vi' ? '✅ Đã tự động sao chép số Zalo' : '✅ Zalo Number Automatically Copied'
+                      : lang === 'vi' ? 'Số điện thoại / Zalo Thầy Tony' : "Mr. Tony's Phone / Zalo"}
                   </div>
                   <div className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight mt-0.5">
                     {CONTACT_PHONE_DISPLAY}
@@ -1230,12 +1287,18 @@ export const CoursesPage: React.FC = () => {
                   onClick={handleCopyPhone}
                   className="px-3 py-2 rounded-xl bg-white border border-emerald-300 text-emerald-900 font-extrabold text-xs hover:bg-emerald-100 transition cursor-pointer shrink-0 shadow-2xs"
                 >
-                  {copiedPhone ? '✅ Đã copy' : '📋 Copy số'}
+                  {copiedPhone
+                    ? lang === 'vi' ? '✅ Đã copy' : '✅ Copied'
+                    : lang === 'vi' ? '📋 Copy số' : '📋 Copy number'}
                 </button>
               </div>
 
               <div className="rounded-xl bg-amber-50/90 border border-amber-200/90 px-3.5 py-2.5 text-xs sm:text-[13px] text-amber-950 leading-relaxed font-medium">
-                💡 <strong>Mẹo mở nhanh từ Facebook:</strong> Hệ thống đã copy sẵn số <strong>0935058688</strong>. Nếu bấm nút bên dưới bị trình duyệt Facebook chặn, anh/chị chỉ cần mở app <strong>Zalo</strong> trên điện thoại → bấm ô <strong>Tìm kiếm</strong> → <strong>Dán (0935058688)</strong> là nhắn tin cho thầy được ngay ạ!
+                {lang === 'vi' ? (
+                  <>💡 <strong>Mẹo mở nhanh từ Facebook:</strong> Hệ thống đã copy sẵn số <strong>0935058688</strong>. Nếu bấm nút bên dưới bị trình duyệt Facebook chặn, anh/chị chỉ cần mở app <strong>Zalo</strong> trên điện thoại → bấm ô <strong>Tìm kiếm</strong> → <strong>Dán (0935058688)</strong> là nhắn tin cho thầy được ngay ạ!</>
+                ) : (
+                  <>💡 <strong>Quick Tip from Mobile Apps:</strong> We already copied <strong>0935058688</strong>. If an in-app browser blocks opening Zalo directly, simply open <strong>Zalo</strong> → tap <strong>Search</strong> → <strong>Paste (0935058688)</strong> to message Mr. Tony right away!</>
+                )}
               </div>
 
               <div className="space-y-2.5 pt-0.5">

@@ -4,6 +4,7 @@ import {
   Volume2, VolumeX, ExternalLink, List, ChevronDown, ChevronUp, 
   Sparkles, CheckCircle2, Headphones, Radio
 } from 'lucide-react';
+import { useLmsLang } from './utils/lmsI18n';
 
 export interface LectureSegment {
   id: string;
@@ -39,6 +40,8 @@ export default function InteractiveLecturePlayer({
   activeSectionFromIframe,
   onClearActiveSection
 }: InteractiveLecturePlayerProps) {
+  const [lang] = useLmsLang();
+  const isEn = lang === 'en';
   const [manifest, setManifest] = useState<LectureManifest | null>(null);
   const [currentSegmentIndex, setCurrentSegmentIndex] = useState<number>(0);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
@@ -411,11 +414,11 @@ export default function InteractiveLecturePlayer({
         <div className="px-5 py-3 bg-black/20 border-b border-white/10 flex items-center justify-between gap-3">
           <div className="flex items-center gap-3">
             <a 
-              href="https://tonyenglish.vn/vi" 
+              href={isEn ? 'https://tonyenglish.vn/en' : 'https://tonyenglish.vn/vi'} 
               target="_blank" 
               rel="noopener noreferrer" 
               className="flex items-center gap-2 group hover:opacity-90 transition-opacity shrink-0"
-              title="Truy cập website chính thức TonyEnglish"
+              title={isEn ? 'Visit official TonyEnglish website' : 'Truy cập website chính thức TonyEnglish'}
             >
               <img 
                 src="/logo-shield.png" 
@@ -424,7 +427,7 @@ export default function InteractiveLecturePlayer({
               />
               <div className="flex flex-col text-left leading-none">
                 <span className="text-[13px] font-black text-white tracking-wider group-hover:text-[#2bd6eb] transition-colors">
-                  LỚP HỌC THẦY TONY
+                  {isEn ? "TEACHER TONY'S CLASSROOM" : 'LỚP HỌC THẦY TONY'}
                 </span>
                 <span className="text-[11px] font-bold text-sky-300 flex items-center gap-1">
                   tonyenglish.vn <ExternalLink className="w-2.5 h-2.5 opacity-70" />
@@ -435,7 +438,7 @@ export default function InteractiveLecturePlayer({
             <div className="hidden sm:flex items-center pl-3 border-l border-white/15">
               <span className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-sky-400/20 text-[#2bd6eb] text-[11px] font-bold border border-sky-400/30">
                 <Radio className="w-3 h-3 animate-pulse text-rose-400" />
-                Song ngữ Cambridge
+                {isEn ? 'Cambridge Bilingual Audio' : 'Song ngữ Cambridge'}
               </span>
             </div>
           </div>
@@ -444,16 +447,16 @@ export default function InteractiveLecturePlayer({
             <button
               onClick={() => setShowChapters(!showChapters)}
               className="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-xs font-bold transition-all flex items-center gap-1.5 text-sky-200 hover:text-white"
-              title="Xem danh sách các phân đoạn bài giảng"
+              title={isEn ? 'View lecture audio chapters' : 'Xem danh sách các phân đoạn bài giảng'}
             >
               <List className="w-3.5 h-3.5 text-[#2bd6eb]" />
-              <span>Mục lục ({currentSegmentIndex + 1}/{manifest.segments.length})</span>
+              <span>{isEn ? 'Chapters' : 'Mục lục'} ({currentSegmentIndex + 1}/{manifest.segments.length})</span>
             </button>
 
             <button
               onClick={() => setIsMinimized(!isMinimized)}
               className="p-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-sky-200 hover:text-white transition-all"
-              title={isMinimized ? "Mở rộng thanh nghe giảng" : "Thu gọn"}
+              title={isMinimized ? (isEn ? 'Expand audio player' : 'Mở rộng thanh nghe giảng') : (isEn ? 'Minimize' : 'Thu gọn')}
             >
               {isMinimized ? <ChevronDown className="w-4 h-4" /> : <ChevronUp className="w-4 h-4" />}
             </button>
@@ -470,19 +473,19 @@ export default function InteractiveLecturePlayer({
                 <div className="flex items-center gap-2 flex-wrap">
                   <span className="text-xs font-extrabold text-[#2bd6eb] uppercase tracking-wider flex items-center gap-1.5">
                     <Headphones className={`w-3.5 h-3.5 ${isPlaying ? 'animate-bounce' : ''}`} />
-                    {isPlaying ? 'Đang phát:' : (currentTime > 0 ? 'Tạm dừng:' : 'Sẵn sàng phát:')} {currentSegment?.title}
+                    {isPlaying ? (isEn ? 'Playing:' : 'Đang phát:') : (currentTime > 0 ? (isEn ? 'Paused:' : 'Tạm dừng:') : (isEn ? 'Ready:' : 'Sẵn sàng phát:'))} {currentSegment?.title}
                   </span>
                   {playMode === 'single' ? (
                     <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-400/20 text-amber-300 border border-amber-400/30">
-                      🎯 Tiểu mục (Tự dừng khi đọc xong)
+                      🎯 {isEn ? 'Single Clip (Stops at end)' : 'Tiểu mục (Tự dừng khi đọc xong)'}
                     </span>
                   ) : playMode === 'section' ? (
                     <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-400/20 text-emerald-300 border border-emerald-400/30">
-                      🔁 Mục lớn (Đọc lần lượt từng phần)
+                      🔁 {isEn ? 'Section (Continuous play)' : 'Mục lớn (Đọc lần lượt từng phần)'}
                     </span>
                   ) : (
                     <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-sky-400/20 text-sky-300 border border-sky-400/30">
-                      ▶️ Toàn bài
+                      ▶️ {isEn ? 'Full Lesson' : 'Toàn bài'}
                     </span>
                   )}
                 </div>
@@ -531,7 +534,9 @@ export default function InteractiveLecturePlayer({
               <div className="flex justify-between text-[11px] font-mono font-medium text-sky-200/70">
                 <span>{formatTime(currentTime)}</span>
                 <span className="text-xs font-sans text-sky-300">
-                  💡 Nhấn vào thẻ để nghe riêng & tự dừng • Nhấn lần nữa để Tạm dừng / Tiếp tục • Nhấn mục lớn để nghe lần lượt
+                  {isEn
+                    ? '💡 Click a card to listen & auto-stop • Click again to Pause/Resume • Click a section heading to play continuously'
+                    : '💡 Nhấn vào thẻ để nghe riêng & tự dừng • Nhấn lần nữa để Tạm dừng / Tiếp tục • Nhấn mục lớn để nghe lần lượt'}
                 </span>
                 <span>{formatTime(totalDuration)}</span>
               </div>
@@ -542,7 +547,7 @@ export default function InteractiveLecturePlayer({
               
               {/* Playback rate controls */}
               <div className="flex items-center gap-1">
-                <span className="text-[11px] text-sky-200/70 mr-1 hidden sm:inline">Tốc độ:</span>
+                <span className="text-[11px] text-sky-200/70 mr-1 hidden sm:inline">{isEn ? 'Speed:' : 'Tốc độ:'}</span>
                 {[0.8, 1.0, 1.25, 1.5].map(rate => (
                   <button
                     key={rate}
@@ -564,7 +569,7 @@ export default function InteractiveLecturePlayer({
                   onClick={() => currentSegmentIndex > 0 && handleSelectSegment(currentSegmentIndex - 1)}
                   disabled={currentSegmentIndex === 0}
                   className="p-2 rounded-xl bg-white/10 hover:bg-white/20 disabled:opacity-30 text-white transition-all"
-                  title="Phân đoạn trước"
+                  title={isEn ? 'Previous segment' : 'Phân đoạn trước'}
                 >
                   <SkipBack className="w-4 h-4" />
                 </button>
@@ -572,7 +577,7 @@ export default function InteractiveLecturePlayer({
                 <button
                   onClick={() => handleSkip(-5)}
                   className="p-2 rounded-xl bg-white/10 hover:bg-white/20 text-white transition-all text-xs font-bold flex items-center gap-1"
-                  title="Tua lại 5 giây"
+                  title={isEn ? 'Rewind 5 seconds' : 'Tua lại 5 giây'}
                 >
                   <RotateCcw className="w-3.5 h-3.5" />
                   <span className="text-[10px]">5s</span>
@@ -581,7 +586,7 @@ export default function InteractiveLecturePlayer({
                 <button
                   onClick={togglePlay}
                   className="w-12 h-12 rounded-full bg-gradient-to-r from-[#2bd6eb] to-sky-400 hover:from-white hover:to-[#2bd6eb] text-[#032b44] flex items-center justify-center shadow-lg hover:scale-105 active:scale-95 transition-all"
-                  title={isPlaying ? "Tạm dừng" : "Phát bài giảng"}
+                  title={isPlaying ? (isEn ? 'Pause' : 'Tạm dừng') : (isEn ? 'Play lecture' : 'Phát bài giảng')}
                 >
                   {isPlaying ? (
                     <Pause className="w-6 h-6 fill-[#032b44]" />
@@ -593,7 +598,7 @@ export default function InteractiveLecturePlayer({
                 <button
                   onClick={() => handleSkip(5)}
                   className="p-2 rounded-xl bg-white/10 hover:bg-white/20 text-white transition-all text-xs font-bold flex items-center gap-1"
-                  title="Tua tới 5 giây"
+                  title={isEn ? 'Forward 5 seconds' : 'Tua tới 5 giây'}
                 >
                   <span className="text-[10px]">5s</span>
                   <RotateCw className="w-3.5 h-3.5" />
@@ -603,7 +608,7 @@ export default function InteractiveLecturePlayer({
                   onClick={() => currentSegmentIndex < manifest.segments.length - 1 && handleSelectSegment(currentSegmentIndex + 1)}
                   disabled={currentSegmentIndex === manifest.segments.length - 1}
                   className="p-2 rounded-xl bg-white/10 hover:bg-white/20 disabled:opacity-30 text-white transition-all"
-                  title="Phân đoạn tiếp theo"
+                  title={isEn ? 'Next segment' : 'Phân đoạn tiếp theo'}
                 >
                   <SkipForward className="w-4 h-4" />
                 </button>
@@ -618,7 +623,7 @@ export default function InteractiveLecturePlayer({
                     onChange={(e) => setAutoScroll(e.target.checked)}
                     className="w-4 h-4 accent-[#2bd6eb] rounded cursor-pointer"
                   />
-                  <span className="hidden sm:inline">Cuộn theo lời giảng</span>
+                  <span className="hidden sm:inline">{isEn ? 'Auto-scroll' : 'Cuộn theo lời giảng'}</span>
                 </label>
 
                 <button
@@ -628,7 +633,7 @@ export default function InteractiveLecturePlayer({
                     if (audioRef.current) audioRef.current.muted = next;
                   }}
                   className="p-2 rounded-xl bg-white/10 hover:bg-white/20 text-white transition-all"
-                  title={isMuted ? "Bật âm" : "Tắt âm"}
+                  title={isMuted ? (isEn ? 'Unmute' : 'Bật âm') : (isEn ? 'Mute' : 'Tắt âm')}
                 >
                   {isMuted ? <VolumeX className="w-4 h-4 text-rose-400" /> : <Volume2 className="w-4 h-4" />}
                 </button>
@@ -644,7 +649,7 @@ export default function InteractiveLecturePlayer({
           <div className="border-t border-white/15 bg-black/40 p-4 max-h-60 overflow-y-auto space-y-1.5 animate-in fade-in duration-200">
             <div className="text-xs font-bold text-sky-300 mb-2 flex items-center gap-1">
               <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-              Chọn phân đoạn để nghe giảng ngay:
+              {isEn ? 'Jump to any audio segment:' : 'Chọn phân đoạn để nghe giảng ngay:'}
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
               {manifest.segments.map((seg, idx) => (

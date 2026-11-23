@@ -20,6 +20,7 @@ import { BoardTheme, DEFAULT_BOARD_THEME, BoardThemeModal, createCustomTheme, lo
 import CourseStudyCoach, { isCoachSupportedCourse } from './CourseStudyCoach';
 import { parseClassConfig } from './classConfigUtils';
 import { ensureCourseBoardAssignedToUser, ensureCourseBoardsAssignedForUser } from './boardLectureSync';
+import { useLmsLang, LmsLangToggle, getLocalizedCourseTitle } from './utils/lmsI18n';
 
 const SUBFOLDER_PALETTES = [
   { gradient: 'from-[#073b5c] via-[#0a5482] to-[#136f9f]', accent: 'text-sky-200', pill: 'bg-sky-50 text-[#0a5482] border-sky-200/80' },
@@ -117,6 +118,8 @@ const getCourseCover = (course: any) => {
 };
 
 export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }: any) {
+  const [lang, setLang] = useLmsLang();
+  const isEn = lang === 'en';
   const [isLoading, setIsLoading] = useState(true);
   
   const [activeTab, setActiveTab] = useState<'library'|'calendar'|'board'|'analytics'|'profile'>(() => {
@@ -833,10 +836,10 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
           setUserProfile({ ...userProfile, full_name: newFullName.trim() });
         }
       }
-      setProfileSuccessMsg('✓ Đã lưu thông tin cá nhân thành công!');
+      setProfileSuccessMsg(isEn ? '✓ Personal information saved successfully!' : '✓ Đã lưu thông tin cá nhân thành công!');
       setTimeout(() => setProfileSuccessMsg(''), 4000);
     } catch (error: any) { 
-      setProfileErrorMsg('Lỗi cập nhật: ' + (error.message || 'Vui lòng thử lại sau.')); 
+      setProfileErrorMsg((isEn ? 'Update error: ' : 'Lỗi cập nhật: ') + (error.message || (isEn ? 'Please try again later.' : 'Vui lòng thử lại sau.'))); 
     } finally { 
       setIsUpdatingProfile(false); 
     }
@@ -848,12 +851,12 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
     setPasswordErrorMsg('');
 
     if (!newPassword || newPassword.length < 6) {
-      setPasswordErrorMsg('Mật khẩu mới phải có tối thiểu 6 ký tự!');
+      setPasswordErrorMsg(isEn ? 'New password must be at least 6 characters!' : 'Mật khẩu mới phải có tối thiểu 6 ký tự!');
       return;
     }
 
     if (newPassword !== confirmPassword) {
-      setPasswordErrorMsg('Mật khẩu xác nhận không khớp với mật khẩu mới!');
+      setPasswordErrorMsg(isEn ? 'Confirmation password does not match!' : 'Mật khẩu xác nhận không khớp với mật khẩu mới!');
       return;
     }
 
@@ -863,10 +866,10 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
       if (error) throw error;
       setNewPassword('');
       setConfirmPassword('');
-      setPasswordSuccessMsg('✓ Đổi mật khẩu thành công! Mật khẩu mới đã được cập nhật.');
+      setPasswordSuccessMsg(isEn ? '✓ Password changed successfully!' : '✓ Đổi mật khẩu thành công! Mật khẩu mới đã được cập nhật.');
       setTimeout(() => setPasswordSuccessMsg(''), 5000);
     } catch (error: any) {
-      setPasswordErrorMsg('Lỗi đổi mật khẩu: ' + (error.message || 'Vui lòng thử lại sau.'));
+      setPasswordErrorMsg((isEn ? 'Password update error: ' : 'Lỗi đổi mật khẩu: ') + (error.message || (isEn ? 'Please try again later.' : 'Vui lòng thử lại sau.')));
     } finally {
       setIsChangingPassword(false);
     }
@@ -931,7 +934,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
     if (!unlockModalCourse || !currentUser || !isTonyEnglishAuthUser(currentUser)) return;
     const cleanPhone = unlockPhone.replace(/\D/g, '').trim();
     if (!/^\d{9,15}$/.test(cleanPhone)) {
-      alert('Vui lòng nhập Số điện thoại hợp lệ (chỉ gồm 9–15 chữ số, ví dụ: 0987654321).');
+      alert(isEn ? 'Please enter a valid phone number (9–15 digits, e.g. 0987654321).' : 'Vui lòng nhập Số điện thoại hợp lệ (chỉ gồm 9–15 chữ số, ví dụ: 0987654321).');
       return;
     }
     setIsSendingUnlockReq(true);
@@ -981,28 +984,27 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   // ====== MOTIVATIONAL COMMENT GENERATOR ======
   const getMotivationalComment = (avgPercent: number, targetGrade: string, isIelts: boolean, ieltsAvg: number, ieltsTarget: number): { emoji: string; text: string; color: string } => {
     if (isIelts) {
-      if (ieltsAvg <= 0) return { emoji: '📝', text: 'Hãy hoàn thành thêm bài thi để xem phân tích chi tiết nhé!', color: 'text-slate-400' };
+      if (ieltsAvg <= 0) return { emoji: '📝', text: isEn ? 'Complete a few more practice tests to unlock detailed analytics!' : 'Hãy hoàn thành thêm bài thi để xem phân tích chi tiết nhé!', color: 'text-slate-400' };
       const diff = ieltsAvg - ieltsTarget;
-      if (diff >= 1.0) return { emoji: '🏆', text: `Xuất sắc! Em đã vượt mục tiêu ${ieltsTarget} tận ${diff.toFixed(1)} band! Hãy thử thách bản thân với mục tiêu cao hơn nào!`, color: 'text-emerald-500' };
-      if (diff >= 0.5) return { emoji: '🎉', text: `Tuyệt vời! Em đã vượt mục tiêu ${ieltsTarget}! Cứ giữ phong độ này nhé, mục tiêu tiếp theo trong tầm tay rồi!`, color: 'text-emerald-500' };
-      if (diff >= 0) return { emoji: '✅', text: `Chúc mừng em đã đạt mục tiêu IELTS ${ieltsTarget}! Hãy tiếp tục ôn luyện để giữ vững phong độ nhé!`, color: 'text-emerald-500' };
-      if (diff >= -0.5) return { emoji: '💪', text: `Gần lắm rồi! Chỉ cần thêm ${Math.abs(diff).toFixed(1)} band nữa là chạm mục tiêu ${ieltsTarget}. Cố lên em nhé!`, color: 'text-amber-500' };
-      if (diff >= -1.0) return { emoji: '📈', text: `Em đang tiến bộ tốt! Khoảng cách đến mục tiêu ${ieltsTarget} chỉ còn ${Math.abs(diff).toFixed(1)} band. Luyện đều đặn mỗi ngày sẽ đạt thôi!`, color: 'text-amber-500' };
-      return { emoji: '🌟', text: `Mục tiêu ${ieltsTarget} là thử thách lớn, nhưng kiên trì là chìa khóa! Hãy tập trung vào từng kỹ năng yếu nhất trước nhé.`, color: 'text-sky-500' };
+      if (diff >= 1.0) return { emoji: '🏆', text: isEn ? `Outstanding! You exceeded your ${ieltsTarget} target by ${diff.toFixed(1)} bands! Ready to aim even higher?` : `Xuất sắc! Em đã vượt mục tiêu ${ieltsTarget} tận ${diff.toFixed(1)} band! Hãy thử thách bản thân với mục tiêu cao hơn nào!`, color: 'text-emerald-500' };
+      if (diff >= 0.5) return { emoji: '🎉', text: isEn ? `Fantastic! You've surpassed your Band ${ieltsTarget} target — keep this momentum going!` : `Tuyệt vời! Em đã vượt mục tiêu ${ieltsTarget}! Cứ giữ phong độ này nhé, mục tiêu tiếp theo trong tầm tay rồi!`, color: 'text-emerald-500' };
+      if (diff >= 0) return { emoji: '✅', text: isEn ? `Congratulations on reaching your IELTS ${ieltsTarget} goal! Keep practicing steadily to lock it in.` : `Chúc mừng em đã đạt mục tiêu IELTS ${ieltsTarget}! Hãy tiếp tục ôn luyện để giữ vững phong độ nhé!`, color: 'text-emerald-500' };
+      if (diff >= -0.5) return { emoji: '💪', text: isEn ? `So close! Just ${Math.abs(diff).toFixed(1)} band away from your ${ieltsTarget} target. Keep pushing!` : `Gần lắm rồi! Chỉ cần thêm ${Math.abs(diff).toFixed(1)} band nữa là chạm mục tiêu ${ieltsTarget}. Cố lên em nhé!`, color: 'text-amber-500' };
+      if (diff >= -1.0) return { emoji: '📈', text: isEn ? `Great progress! Only ${Math.abs(diff).toFixed(1)} band left to reach ${ieltsTarget}. Daily practice will get you there!` : `Em đang tiến bộ tốt! Khoảng cách đến mục tiêu ${ieltsTarget} chỉ còn ${Math.abs(diff).toFixed(1)} band. Luyện đều đặn mỗi ngày sẽ đạt thôi!`, color: 'text-amber-500' };
+      return { emoji: '🌟', text: isEn ? `Target ${ieltsTarget} is an ambitious goal, and consistency is the key! Focus on your lowest skill first.` : `Mục tiêu ${ieltsTarget} là thử thách lớn, nhưng kiên trì là chìa khóa! Hãy tập trung vào từng kỹ năng yếu nhất trước nhé.`, color: 'text-sky-500' };
     }
-    // Standard courses
-    if (avgPercent <= 0) return { emoji: '📝', text: 'Hãy hoàn thành thêm bài tập để xem phân tích chi tiết nhé!', color: 'text-slate-400' };
-    if (!targetGrade) return { emoji: '🎯', text: 'Hãy đặt mục tiêu điểm cho khóa học này để theo dõi tiến độ nhé!', color: 'text-sky-400' };
+    if (avgPercent <= 0) return { emoji: '📝', text: isEn ? 'Complete a few more exercises to view detailed performance insights!' : 'Hãy hoàn thành thêm bài tập để xem phân tích chi tiết nhé!', color: 'text-slate-400' };
+    if (!targetGrade) return { emoji: '🎯', text: isEn ? 'Set a target grade for this course to track your progress!' : 'Hãy đặt mục tiêu điểm cho khóa học này để theo dõi tiến độ nhé!', color: 'text-sky-400' };
     const targetMin = gradeToMinPercent(targetGrade);
     const currentGrade = percentToGrade(avgPercent);
     const diff = avgPercent - targetMin;
     const gradeIdx = GRADE_SCALE.findIndex(g => g.grade === currentGrade);
     const targetIdx = GRADE_SCALE.findIndex(g => g.grade === targetGrade);
-    if (gradeIdx < targetIdx) return { emoji: '🏆', text: `Xuất sắc! Điểm trung bình ${currentGrade} đã vượt xa mục tiêu ${targetGrade}! Em đang thể hiện rất tốt, hãy giữ phong độ này nhé!`, color: 'text-emerald-500' };
-    if (gradeIdx === targetIdx && diff >= 5) return { emoji: '🎉', text: `Tuyệt vời! Em đã đạt và vượt mục tiêu ${targetGrade} rồi! Cứ duy trì đà này là ổn!`, color: 'text-emerald-500' };
-    if (gradeIdx === targetIdx) return { emoji: '✅', text: `Chúc mừng! Em đang ở đúng mục tiêu ${targetGrade}. Tiếp tục ôn luyện để giữ vững và nâng cao thêm nhé!`, color: 'text-emerald-500' };
-    if (gradeIdx === targetIdx + 1) return { emoji: '💪', text: `Gần lắm rồi! Chỉ cần cải thiện thêm một chút nữa là chạm mục tiêu ${targetGrade}. Cố lên em!`, color: 'text-amber-500' };
-    return { emoji: '🌟', text: `Mục tiêu ${targetGrade} đang chờ em phía trước! Hãy tập trung ôn luyện đều đặn, mỗi ngày một chút thôi là sẽ tiến bộ rõ rệt!`, color: 'text-sky-500' };
+    if (gradeIdx < targetIdx) return { emoji: '🏆', text: isEn ? `Outstanding! Your average grade (${currentGrade}) is well above your ${targetGrade} goal. Keep shining!` : `Xuất sắc! Điểm trung bình ${currentGrade} đã vượt xa mục tiêu ${targetGrade}! Em đang thể hiện rất tốt, hãy giữ phong độ này nhé!`, color: 'text-emerald-500' };
+    if (gradeIdx === targetIdx && diff >= 5) return { emoji: '🎉', text: isEn ? `Awesome! You've hit and exceeded your ${targetGrade} target — keep up the great rhythm!` : `Tuyệt vời! Em đã đạt và vượt mục tiêu ${targetGrade} rồi! Cứ duy trì đà này là ổn!`, color: 'text-emerald-500' };
+    if (gradeIdx === targetIdx) return { emoji: '✅', text: isEn ? `Well done! You're right on track with your ${targetGrade} target. Keep revising to push even higher!` : `Chúc mừng! Em đang ở đúng mục tiêu ${targetGrade}. Tiếp tục ôn luyện để giữ vững và nâng cao thêm nhé!`, color: 'text-emerald-500' };
+    if (gradeIdx === targetIdx + 1) return { emoji: '💪', text: isEn ? `Almost there! Just a little more refinement to hit your ${targetGrade} target. You've got this!` : `Gần lắm rồi! Chỉ cần cải thiện thêm một chút nữa là chạm mục tiêu ${targetGrade}. Cố lên em!`, color: 'text-amber-500' };
+    return { emoji: '🌟', text: isEn ? `Your ${targetGrade} goal is right ahead! Steady daily study will deliver clear breakthroughs.` : `Mục tiêu ${targetGrade} đang chờ em phía trước! Hãy tập trung ôn luyện đều đặn, mỗi ngày một chút thôi là sẽ tiến bộ rõ rệt!`, color: 'text-sky-500' };
   };
 
   const handleLogout = async () => {
@@ -1175,7 +1177,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         setViewingHistoryDetail(null); 
         handleStartTestClick(foundTest); 
     } else {
-        alert("Đề thi này không còn tồn tại hoặc đã bị ẩn khỏi hệ thống.");
+        alert(isEn ? "This test no longer exists or has been hidden." : "Đề thi này không còn tồn tại hoặc đã bị ẩn khỏi hệ thống.");
     }
   };
 
@@ -1801,16 +1803,22 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
     const activeCourses = filterCourse === 'all' ? courses : courses.filter(c => String(c.id) === String(filterCourse));
     const hasIelts = activeCourses.some(c => /ielts/i.test(c.title || '') || c.type === 'IELTS');
     if (hasIelts) {
-      return { label: 'Mục tiêu IELTS', value: courseTargets.ielts || '6.5+' };
+      return { label: isEn ? 'IELTS Target' : 'Mục tiêu IELTS', value: courseTargets.ielts || '6.5+' };
     }
     const primaryCourse = activeCourses[0] || courses[0];
     const hasIgcse = activeCourses.some(c => /igcse|0654|0620|0625|0610|0450|0455|0460|0580|0510/i.test(c.title || ''));
     const savedGrade = primaryCourse ? courseTargets[String(primaryCourse.id)] : '';
     if (savedGrade) {
-      return { label: hasIgcse ? 'Mục tiêu IGCSE' : 'Mục tiêu khóa', value: savedGrade };
+      return {
+        label: hasIgcse ? (isEn ? 'IGCSE Target' : 'Mục tiêu IGCSE') : (isEn ? 'Course Target' : 'Mục tiêu khóa'),
+        value: savedGrade,
+      };
     }
-    return { label: hasIgcse ? 'Mục tiêu IGCSE' : 'Mục tiêu đầu ra', value: hasIgcse ? 'A / A*' : (courseTargets.ielts || '85%+') };
-  }, [courses, filterCourse, courseTargets]);
+    return {
+      label: hasIgcse ? (isEn ? 'IGCSE Target' : 'Mục tiêu IGCSE') : (isEn ? 'Target Goal' : 'Mục tiêu đầu ra'),
+      value: hasIgcse ? 'A / A*' : (courseTargets.ielts || '85%+'),
+    };
+  }, [courses, filterCourse, courseTargets, isEn]);
 
   // ⚡ Quick-Resume ("Học tiếp 1 chạm") for Lecture & Practice Test
   const resumeLectureInfo = useMemo(() => {
@@ -1900,11 +1908,32 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   let bannerConfig = { greeting: '', gradient: '', icon: '', subtitle: '' };
   
   if (hour >= 5 && hour < 12) {
-      bannerConfig = { greeting: 'Chào buổi sáng', gradient: 'from-[#073b5c] via-[#0a5482] to-[#0f172a]', icon: '🌅', subtitle: 'Bắt đầu ngày mới tràn đầy năng lượng! Một chút nỗ lực hôm nay sẽ mang lại kết quả lớn ngày mai.' };
+      bannerConfig = {
+        greeting: isEn ? 'Good morning' : 'Chào buổi sáng',
+        gradient: 'from-[#073b5c] via-[#0a5482] to-[#0f172a]',
+        icon: '🌅',
+        subtitle: isEn
+          ? 'Start your day with focus and energy! Consistent daily effort builds extraordinary results.'
+          : 'Bắt đầu ngày mới tràn đầy năng lượng! Một chút nỗ lực hôm nay sẽ mang lại kết quả lớn ngày mai.',
+      };
   } else if (hour >= 12 && hour < 18) {
-      bannerConfig = { greeting: 'Chào buổi chiều', gradient: 'from-[#073b5c] via-[#0a5482] to-[#0f172a]', icon: '🌤️', subtitle: 'Tiếp tục hành trình chinh phục mục tiêu nào! Giữ vững sự tập trung nhé.' };
+      bannerConfig = {
+        greeting: isEn ? 'Good afternoon' : 'Chào buổi chiều',
+        gradient: 'from-[#073b5c] via-[#0a5482] to-[#0f172a]',
+        icon: '🌤️',
+        subtitle: isEn
+          ? 'Keep pushing toward your goals! Stay focused and sharpen your skills step by step.'
+          : 'Tiếp tục hành trình chinh phục mục tiêu nào! Giữ vững sự tập trung nhé.',
+      };
   } else {
-      bannerConfig = { greeting: 'Chào buổi tối', gradient: 'from-[#073b5c] via-[#0a5482] to-[#0f172a]', icon: '🌙', subtitle: 'Thời gian tĩnh lặng tuyệt vời để tập trung ôn tập và nhìn lại những gì đã học.' };
+      bannerConfig = {
+        greeting: isEn ? 'Good evening' : 'Chào buổi tối',
+        gradient: 'from-[#073b5c] via-[#0a5482] to-[#0f172a]',
+        icon: '🌙',
+        subtitle: isEn
+          ? 'A quiet evening is the best time to review lessons and consolidate what you learned today.'
+          : 'Thời gian tĩnh lặng tuyệt vời để tập trung ôn tập và nhìn lại những gì đã học.',
+      };
   }
 
   const breadcrumbs = useMemo(() => {
@@ -1922,7 +1951,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
     return (
       <div className="flex justify-center items-center gap-3 mt-8">
         <button disabled={currentPage === 1} onClick={() => setPage(currentPage - 1)} className="w-10 h-10 rounded-xl flex items-center justify-center bg-white border border-slate-200/90 text-slate-600 hover:border-[#0a5482] hover:text-[#0a5482] hover:bg-sky-50 transition-colors disabled:opacity-40 disabled:hover:bg-white disabled:hover:border-slate-200 shadow-2xs font-black cursor-pointer">←</button>
-        <span className="text-[13px] font-extrabold text-[#0a5482] bg-white px-5 py-2.5 rounded-xl border border-slate-200/90 shadow-2xs">Trang {currentPage} / {totalPages}</span>
+        <span className="text-[13px] font-extrabold text-[#0a5482] bg-white px-5 py-2.5 rounded-xl border border-slate-200/90 shadow-2xs">{isEn ? `Page ${currentPage} / ${totalPages}` : `Trang ${currentPage} / ${totalPages}`}</span>
         <button disabled={currentPage === totalPages} onClick={() => setPage(currentPage + 1)} className="w-10 h-10 rounded-xl flex items-center justify-center bg-white border border-slate-200/90 text-slate-600 hover:border-[#0a5482] hover:text-[#0a5482] hover:bg-sky-50 transition-colors disabled:opacity-40 disabled:hover:bg-white disabled:hover:border-slate-200 shadow-2xs font-black cursor-pointer">→</button>
       </div>
     );
@@ -1935,25 +1964,25 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
           type="button"
           onClick={() => handleOpenStudyCoachModal()}
           className="bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-300 hover:border-amber-400 font-extrabold text-xs sm:text-[13px] px-3 sm:px-3.5 py-2 rounded-xl shadow-2xs transition-all flex items-center justify-center gap-1.5 hover:shadow hover:-translate-y-0.5 active:scale-95 cursor-pointer shrink-0"
-          title="Mở Trợ lý Thầy Tony AI phân tích tiến độ & giao việc hôm nay"
+          title={isEn ? 'Open Teacher Tony AI Advisor to review progress & today’s tasks' : 'Mở Trợ lý Thầy Tony AI phân tích tiến độ & giao việc hôm nay'}
         >
-          <span className="text-base">👨‍🏫</span> <span className="truncate">Thầy Tony AI</span>
+          <span className="text-base">👨‍🏫</span> <span className="truncate">{isEn ? 'Teacher Tony AI' : 'Thầy Tony AI'}</span>
         </button>
         <button
           type="button"
           onClick={() => handleGoToLecture()}
           className="bg-white hover:bg-emerald-50 text-emerald-700 hover:text-emerald-800 border border-emerald-200/90 hover:border-emerald-400 font-bold text-xs sm:text-[13px] px-3 sm:px-3.5 py-2 rounded-xl shadow-2xs transition-all flex items-center justify-center gap-1.5 hover:shadow hover:-translate-y-0.5 active:scale-95 cursor-pointer shrink-0"
-          title="Mở bài giảng lý thuyết"
+          title={isEn ? 'Open theory lectures' : 'Mở bài giảng lý thuyết'}
         >
-          <span className="text-base">📖</span> <span className="truncate">Bài giảng</span>
+          <span className="text-base">📖</span> <span className="truncate">{isEn ? 'Lectures' : 'Bài giảng'}</span>
         </button>
         <button
           type="button"
           onClick={() => handleGoToTestBank()}
           className="bg-white hover:bg-sky-50 text-[#0a5482] hover:text-[#084266] border border-sky-200/90 hover:border-[#2ab4e8] font-bold text-xs sm:text-[13px] px-3 sm:px-3.5 py-2 rounded-xl shadow-2xs transition-all flex items-center justify-center gap-1.5 hover:shadow hover:-translate-y-0.5 active:scale-95 cursor-pointer shrink-0"
-          title="Mở kho đề"
+          title={isEn ? 'Open Test Bank' : 'Mở kho đề'}
         >
-          <span className="text-base">📚</span> <span>Kho đề</span>
+          <span className="text-base">📚</span> <span>{isEn ? 'Test Bank' : 'Kho đề'}</span>
         </button>
       </div>
 
@@ -1964,7 +1993,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
           className="w-full bg-white hover:bg-sky-50/50 border border-slate-200/90 hover:border-[#2ab4e8] rounded-xl px-4 py-2 flex items-center justify-between cursor-pointer shadow-2xs transition-all"
         >
           <span className="font-bold text-[13px] text-[#0a5482] truncate pr-2">
-            {filterCourse === 'all' ? 'Tất cả khóa học' : courses.find(c => String(c.id) === String(filterCourse))?.title || 'Tất cả khóa học'}
+            {filterCourse === 'all'
+              ? isEn ? 'All Courses' : 'Tất cả khóa học'
+              : getLocalizedCourseTitle(courses.find(c => String(c.id) === String(filterCourse))?.title, lang) || (isEn ? 'All Courses' : 'Tất cả khóa học')}
           </span>
           <span className={`text-[#2ab4e8] text-[10px] transition-transform duration-300 shrink-0 ${filterCourseDropdownOpen ? 'rotate-180' : ''}`}>▼</span>
         </div>
@@ -1981,7 +2012,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 }}
                 className={`px-4 py-2.5 text-[13px] font-medium rounded-lg cursor-pointer transition-colors ${filterCourse === 'all' ? 'bg-sky-50 text-[#0a5482] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
               >
-                🌟 Tất cả khóa học
+                🌟 {isEn ? 'All Courses' : 'Tất cả khóa học'}
               </div>
               {courses.map(course => (
                 <div 
@@ -1993,7 +2024,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                   }}
                   className={`px-4 py-2.5 text-[13px] font-medium rounded-lg cursor-pointer transition-colors border-t border-slate-100 ${String(filterCourse) === String(course.id) ? 'bg-sky-50 text-[#0a5482] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
                 >
-                  📖 {course.title}
+                  📖 {getLocalizedCourseTitle(course.title, lang)}
                 </div>
               ))}
             </div>
@@ -2012,9 +2043,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             type="button"
             onClick={() => handleOpenStudyCoachModal()}
             className="bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-300 hover:border-amber-400 font-extrabold text-[11px] sm:text-xs px-2 sm:px-3 py-1.5 rounded-lg shadow-2xs transition-all flex items-center justify-center gap-1 sm:gap-1.5 cursor-pointer shrink-0 active:scale-95"
-            title="Mở Trợ lý Thầy Tony AI phân tích tiến độ & giao việc hôm nay"
+            title={isEn ? 'Open Teacher Tony AI Advisor to review progress & today’s tasks' : 'Mở Trợ lý Thầy Tony AI phân tích tiến độ & giao việc hôm nay'}
           >
-            <span className="text-sm">👨‍🏫</span> <span className="truncate">Thầy Tony AI</span>
+            <span className="text-sm">👨‍🏫</span> <span className="truncate">{isEn ? 'Teacher Tony AI' : 'Thầy Tony AI'}</span>
           </button>
 
           {/* NÚT BÀI GIẢNG */}
@@ -2022,11 +2053,15 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             type="button"
             onClick={() => handleGoToLecture()}
             className="bg-white hover:bg-emerald-50 text-emerald-700 hover:text-emerald-800 border border-emerald-200 hover:border-emerald-400 font-bold text-[11px] sm:text-xs px-2 sm:px-3 py-1.5 rounded-lg shadow-2xs transition-all flex items-center justify-center gap-1 sm:gap-1.5 cursor-pointer shrink-0 active:scale-95"
-            title="Mở bài giảng lý thuyết"
+            title={isEn ? 'Open theory lectures' : 'Mở bài giảng lý thuyết'}
           >
             <span className="text-sm">📖</span>
             <span className="truncate">
-              Bài giảng<span className="hidden md:inline"> lý thuyết</span>
+              {isEn ? (
+                <>Lectures<span className="hidden md:inline"> &amp; Theory</span></>
+              ) : (
+                <>Bài giảng<span className="hidden md:inline"> lý thuyết</span></>
+              )}
             </span>
           </button>
 
@@ -2035,9 +2070,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             type="button"
             onClick={() => handleGoToTestBank()}
             className="bg-white hover:bg-sky-50 text-[#0a5482] hover:text-[#084266] border border-sky-200 hover:border-[#2ab4e8] font-bold text-[11px] sm:text-xs px-2 sm:px-3 py-1.5 rounded-lg shadow-2xs transition-all flex items-center justify-center gap-1 sm:gap-1.5 cursor-pointer shrink-0 active:scale-95"
-            title="Mở kho đề"
+            title={isEn ? 'Open Test Bank' : 'Mở kho đề'}
           >
-            <span className="text-sm">📚</span> <span className="truncate">Kho đề</span>
+            <span className="text-sm">📚</span> <span className="truncate">{isEn ? 'Test Bank' : 'Kho đề'}</span>
           </button>
         </div>
 
@@ -2052,7 +2087,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             <div className="flex items-center gap-1.5 min-w-0 pr-1.5">
               <span className="text-slate-400 text-xs">🎓</span>
               <span className="font-bold text-xs text-[#0a5482] truncate">
-                {filterCourse === 'all' ? 'Tất cả khóa học' : courses.find(c => String(c.id) === String(filterCourse))?.title || 'Tất cả khóa học'}
+                {filterCourse === 'all'
+                  ? isEn ? 'All Courses' : 'Tất cả khóa học'
+                  : getLocalizedCourseTitle(courses.find(c => String(c.id) === String(filterCourse))?.title, lang) || (isEn ? 'All Courses' : 'Tất cả khóa học')}
               </span>
             </div>
             <span className={`text-[#2ab4e8] text-[10px] transition-transform duration-300 shrink-0 ${filterCourseDropdownOpen ? 'rotate-180' : ''}`}>▼</span>
@@ -2074,7 +2111,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                   }}
                   className={`px-3.5 py-2 text-xs rounded-xl font-medium cursor-pointer transition-colors ${filterCourse === 'all' ? 'bg-sky-50 text-[#0a5482] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
                 >
-                  🌟 Tất cả khóa học
+                  🌟 {isEn ? 'All Courses' : 'Tất cả khóa học'}
                 </div>
                 {courses.map(course => (
                   <div 
@@ -2089,7 +2126,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                     }}
                     className={`px-3.5 py-2 text-xs rounded-xl font-medium cursor-pointer transition-colors border-t border-slate-100 ${String(filterCourse) === String(course.id) ? 'bg-sky-50 text-[#0a5482] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
                   >
-                    📖 {course.title}
+                    📖 {getLocalizedCourseTitle(course.title, lang)}
                   </div>
                 ))}
               </div>
@@ -2150,7 +2187,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               }`}
             >
               <svg className={`w-4 h-4 ${activeTab === 'library' ? 'text-[#2ab4e8]' : 'text-slate-400'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
-              <span>Học tập &amp; Kho đề</span>
+              <span>{isEn ? 'Study & Tests' : 'Học tập & Kho đề'}</span>
             </button>
             <button 
               onClick={() => {
@@ -2164,7 +2201,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               }`}
             >
               <svg className={`w-4 h-4 ${activeTab === 'calendar' ? 'text-[#2ab4e8]' : 'text-slate-400'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>
-              <span>Lịch báo bài</span>
+              <span>{isEn ? 'Calendar' : 'Lịch báo bài'}</span>
             </button>
             <button 
               onClick={() => { resetWorkspaceAndChat(); setActiveTab('board'); }}
@@ -2177,7 +2214,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               <svg className={`w-4 h-4 ${activeTab === 'board' ? 'text-[#2ab4e8]' : 'text-slate-400'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
               </svg>
-              <span>Bảng công việc</span>
+              <span>{isEn ? 'Task Board' : 'Bảng công việc'}</span>
             </button>
             <button 
               onClick={() => {
@@ -2191,12 +2228,14 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               }`}
             >
               <svg className={`w-4 h-4 ${activeTab === 'analytics' ? 'text-[#2ab4e8]' : 'text-slate-400'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
-              <span>Báo cáo</span>
+              <span>{isEn ? 'Analytics' : 'Báo cáo'}</span>
             </button>
           </div>
 
           {/* Right Action Controls */}
-          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+          <div className="flex items-center gap-2 sm:gap-2.5 shrink-0">
+            <LmsLangToggle lang={lang} setLang={setLang} variant="light" />
+
             <button
               type="button"
               onClick={() => {
@@ -2204,15 +2243,15 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 window.history.pushState({}, '', '/');
                 onNavigate?.('home');
               }}
-              className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-slate-100/90 hover:bg-sky-50 text-[#0a5482] border border-slate-200/80 hover:border-sky-200 text-xs sm:text-[13px] font-bold transition-all cursor-pointer shrink-0"
-              title="Quay ra Cổng thông tin, Thư viện bài đọc & Kho Video TonyEnglish.vn"
+              className="hidden sm:inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-slate-100/90 hover:bg-sky-50 text-[#0a5482] border border-slate-200/80 hover:border-sky-200 text-xs sm:text-[13px] font-bold transition-all cursor-pointer shrink-0"
+              title={isEn ? 'Return to TonyEnglish.vn Homepage, Library & Video Store' : 'Quay ra Cổng thông tin, Thư viện bài đọc & Kho Video TonyEnglish.vn'}
             >
               <Globe className="w-3.5 h-3.5 text-[#2ab4e8]" />
-              <span>Trang chủ</span>
+              <span>{isEn ? 'Home' : 'Trang chủ'}</span>
             </button>
 
             <div className="hidden lg:flex items-center">
-              <button onClick={toggleFullScreen} className="w-9 h-9 rounded-xl flex items-center justify-center text-slate-500 hover:bg-slate-100 border border-transparent hover:border-slate-200 hover:text-[#0a5482] transition-colors cursor-pointer" title="Toàn màn hình">
+              <button onClick={toggleFullScreen} className="w-9 h-9 rounded-xl flex items-center justify-center text-slate-500 hover:bg-slate-100 border border-transparent hover:border-slate-200 hover:text-[#0a5482] transition-colors cursor-pointer" title={isEn ? 'Fullscreen' : 'Toàn màn hình'}>
                 {isFullscreen ? <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5l5.25 5.25" /></svg> : <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0-4.5L15 15" /></svg>}
               </button>
             </div>
@@ -2222,7 +2261,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 <div className="text-right hidden sm:block">
                   <div className="font-black text-[13px] text-slate-800 group-hover:text-[#0a5482] transition-colors leading-tight">{displayUserName}</div>
                   <div className="text-[10px] font-bold text-[#2ab4e8] uppercase tracking-wider mt-0.5">
-                    {userProfile?.role === 'admin' ? 'Quản trị' : 'Học viên'}
+                    {userProfile?.role === 'admin' ? (isEn ? 'Admin' : 'Quản trị') : (isEn ? 'Student' : 'Học viên')}
                   </div>
                 </div>
                 <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-gradient-to-br from-[#2ab4e8] to-[#0a5482] text-white flex items-center justify-center font-black shadow-xs text-[13px]">
@@ -2238,26 +2277,26 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                     onNavigate?.('home');
                     setIsDropdownOpen(false); 
                   }} className="sm:hidden w-full text-left px-5 py-3 text-sm font-bold text-[#0a5482] hover:bg-sky-50 flex items-center gap-2 transition-colors border-b border-slate-100">
-                    <span>🌐</span> Trang chủ &amp; Thư viện
+                    <span>🌐</span> {isEn ? 'Homepage & Library' : 'Trang chủ & Thư viện'}
                   </button>
                   <button onClick={() => { 
                     resetWorkspaceAndChat(); 
                     setActiveTab('profile'); 
                     setIsDropdownOpen(false); 
                   }} className="w-full text-left px-5 py-2.5 text-sm font-semibold text-slate-700 hover:bg-sky-50 hover:text-[#0a5482] transition-colors flex items-center gap-2 cursor-pointer">
-                    👤 Cấu hình tài khoản
+                    👤 {isEn ? 'Account Settings' : 'Cấu hình tài khoản'}
                   </button>
                   {userProfile?.role === 'admin' && (
                     <button onClick={() => {
                       resetWorkspaceAndChat();
                       if(onNavigate) onNavigate('admin');
                     }} className="w-full text-left px-5 py-2.5 text-sm font-black text-[#0a5482] hover:bg-sky-50 transition-colors cursor-pointer">
-                      ⚙️ Trang Quản Trị
+                      ⚙️ {isEn ? 'Admin Panel' : 'Trang Quản Trị'}
                     </button>
                   )}
                   <div className="h-px bg-slate-100 my-1"></div>
                   <button onClick={handleLogout} className="w-full text-left px-5 py-2.5 text-sm font-bold text-red-600 hover:bg-red-50 transition-colors cursor-pointer">
-                    🚪 Đăng xuất
+                    🚪 {isEn ? 'Sign Out' : 'Đăng xuất'}
                   </button>
                 </div>
               )}
@@ -2279,7 +2318,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 <div className="text-white flex-1">
                   <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/15 px-3.5 py-1 rounded-full text-[11px] sm:text-xs font-extrabold uppercase tracking-widest text-[#2ab4e8] mb-3.5">
                     <span>🎓</span>
-                    <span>TonyEnglish Student Portal • Góc Học Viên</span>
+                    <span>{isEn ? 'TonyEnglish Student Portal • Learning Hub' : 'TonyEnglish Student Portal • Góc Học Viên'}</span>
                   </div>
                   <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black mb-2.5 tracking-tight leading-tight">
                     {bannerConfig.greeting}, <span className="text-[#2ab4e8]">{displayUserName}</span>! <span>{bannerConfig.icon}</span>
@@ -2291,21 +2330,21 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                   {/* Quick Stats Strip (Đồng bộ với HomePage.tsx) */}
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 max-w-2xl">
                     <div className="bg-white/10 backdrop-blur-xs border border-white/15 rounded-xl px-3.5 py-2.5">
-                      <div className="text-[11px] font-bold uppercase tracking-wider text-sky-200/80">Khóa đang học</div>
-                      <div className="text-lg sm:text-xl font-black text-white mt-0.5">{courses.length} <span className="text-xs font-semibold text-slate-300">khóa</span></div>
+                      <div className="text-[11px] font-bold uppercase tracking-wider text-sky-200/80">{isEn ? 'Active Courses' : 'Khóa đang học'}</div>
+                      <div className="text-lg sm:text-xl font-black text-white mt-0.5">{courses.length} <span className="text-xs font-semibold text-slate-300">{isEn ? 'courses' : 'khóa'}</span></div>
                     </div>
                     <div className="bg-white/10 backdrop-blur-xs border border-white/15 rounded-xl px-3.5 py-2.5">
-                      <div className="text-[11px] font-bold uppercase tracking-wider text-sky-200/80">Bài hoàn thành</div>
-                      <div className="text-lg sm:text-xl font-black text-emerald-300 mt-0.5">{historyData.length} <span className="text-xs font-semibold text-slate-300">đề</span></div>
+                      <div className="text-[11px] font-bold uppercase tracking-wider text-sky-200/80">{isEn ? 'Completed' : 'Bài hoàn thành'}</div>
+                      <div className="text-lg sm:text-xl font-black text-emerald-300 mt-0.5">{historyData.length} <span className="text-xs font-semibold text-slate-300">{isEn ? 'tests' : 'đề'}</span></div>
                     </div>
                     <div className="bg-white/10 backdrop-blur-xs border border-white/15 rounded-xl px-3.5 py-2.5">
-                      <div className="text-[11px] font-bold uppercase tracking-wider text-sky-200/80">Giờ luyện tập</div>
+                      <div className="text-[11px] font-bold uppercase tracking-wider text-sky-200/80">{isEn ? 'Practice Time' : 'Giờ luyện tập'}</div>
                       <div className="text-lg sm:text-xl font-black text-[#2ab4e8] mt-0.5">{analyticsTotalTimeHours}h</div>
                     </div>
                     <div
                       onClick={() => setActiveTab('analytics')}
                       className="bg-white/10 hover:bg-white/15 backdrop-blur-xs border border-white/15 rounded-xl px-3.5 py-2.5 cursor-pointer transition-colors"
-                      title="Xem báo cáo chi tiết"
+                      title={isEn ? 'View detailed analytics' : 'Xem báo cáo chi tiết'}
                     >
                       <div className="text-[11px] font-bold uppercase tracking-wider text-amber-300/90 truncate">{heroTargetInfo.label}</div>
                       <div className="text-lg sm:text-xl font-black text-amber-300 mt-0.5">{heroTargetInfo.value} <span className="text-xs font-normal text-white/70">↗</span></div>
@@ -2321,16 +2360,18 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                     <div className="flex items-center justify-between mb-3">
                       <span className="text-[11px] font-extrabold uppercase tracking-wider text-amber-300 bg-amber-400/15 border border-amber-300/30 px-3 py-1 rounded-full inline-flex items-center gap-1.5">
                         <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
-                        <span>Lộ trình trọng tâm</span>
+                        <span>{isEn ? 'Priority Roadmap' : 'Lộ trình trọng tâm'}</span>
                       </span>
                       <span className="text-white/50 group-hover:text-white transition-colors">↗</span>
                     </div>
                     <h3 className="font-extrabold text-base sm:text-lg mb-2 leading-snug flex items-center gap-2">
                       <span>👨‍🏫</span>
-                      <span>Thầy Tony AI Chủ Nhiệm</span>
+                      <span>{isEn ? 'Teacher Tony AI Advisor' : 'Thầy Tony AI Chủ Nhiệm'}</span>
                     </h3>
                     <p className="text-xs text-slate-200/90 mb-4 leading-relaxed">
-                      Tự động phân tích tiến độ tổng thể, điểm số &amp; chỉ định công việc cần làm ngay hôm nay.
+                      {isEn
+                        ? 'Automatically analyzes your progress, exam scores & assigns your highest-impact tasks for today.'
+                        : 'Tự động phân tích tiến độ tổng thể, điểm số & chỉ định công việc cần làm ngay hôm nay.'}
                     </p>
                   </div>
                   <button
@@ -2341,7 +2382,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                     }}
                     className="w-full bg-[#2ab4e8] hover:bg-[#1fa0d4] text-white font-black py-2.5 px-4 rounded-xl text-[13px] transition-colors uppercase tracking-wider shadow-md cursor-pointer"
                   >
-                    Tư vấn &amp; Giao việc ngay →
+                    {isEn ? 'Get Advice & Daily Plan →' : 'Tư vấn & Giao việc ngay →'}
                   </button>
                 </div>
               </div>
@@ -2353,7 +2394,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 <div className="flex items-center gap-2 mb-3">
                   <Sparkles className="w-4 h-4 text-[#0a5482]" />
                   <span className="text-xs font-extrabold uppercase tracking-wider text-slate-500">
-                    Học tiếp 1 chạm • Vào thẳng bài gần nhất
+                    {isEn ? '1-Click Resume • Jump Straight Back In' : 'Học tiếp 1 chạm • Vào thẳng bài gần nhất'}
                   </span>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -2370,10 +2411,12 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                         <div className="min-w-0">
                           <div className="flex items-center gap-2 mb-0.5">
                             <span className="text-[10.5px] font-extrabold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200/70">
-                              {resumeLectureInfo.isRecent ? 'Đang học gần nhất' : 'Bài giảng gợi ý'}
+                              {resumeLectureInfo.isRecent
+                                ? isEn ? 'Recently Studied' : 'Đang học gần nhất'
+                                : isEn ? 'Recommended Lecture' : 'Bài giảng gợi ý'}
                             </span>
                             <span className="text-[11px] font-semibold text-slate-400 truncate">
-                              {resumeLectureInfo.course.title}
+                              {getLocalizedCourseTitle(resumeLectureInfo.course.title, lang)}
                             </span>
                           </div>
                           <h4 className="font-display font-extrabold text-[15px] sm:text-base text-slate-800 group-hover:text-[#0a5482] truncate">
@@ -2408,11 +2451,13 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                                 ? 'text-amber-800 bg-amber-50 border-amber-200'
                                 : 'text-[#0a5482] bg-sky-50 border-sky-200/80'
                             }`}>
-                              {resumeTestInfo.isDraft ? 'Đề đang làm dở' : 'Luyện đề tiếp theo'}
+                              {resumeTestInfo.isDraft
+                                ? isEn ? 'In Progress' : 'Đề đang làm dở'
+                                : isEn ? 'Next Practice Test' : 'Luyện đề tiếp theo'}
                             </span>
                             {resumeTestInfo.course && (
                               <span className="text-[11px] font-semibold text-slate-400 truncate">
-                                {resumeTestInfo.course.title}
+                                {getLocalizedCourseTitle(resumeTestInfo.course.title, lang)}
                               </span>
                             )}
                           </div>
@@ -2438,8 +2483,14 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                         ⏰
                     </div>
                     <div className="flex-1 min-w-0 w-full">
-                        <h3 className="font-black text-slate-800 text-lg sm:text-xl mb-1 tracking-tight">Nhiệm vụ cần hoàn thành</h3>
-                        <p className="text-slate-500 text-sm font-medium mb-4">Bạn có <span className="text-rose-600 font-bold">{upcomingDeadlines.length} bài tập</span> sắp đến hạn nộp.</p>
+                        <h3 className="font-black text-slate-800 text-lg sm:text-xl mb-1 tracking-tight">{isEn ? 'Upcoming Tasks' : 'Nhiệm vụ cần hoàn thành'}</h3>
+                        <p className="text-slate-500 text-sm font-medium mb-4">
+                          {isEn ? (
+                            <>You have <span className="text-rose-600 font-bold">{upcomingDeadlines.length} assignments</span> coming due soon.</>
+                          ) : (
+                            <>Bạn có <span className="text-rose-600 font-bold">{upcomingDeadlines.length} bài tập</span> sắp đến hạn nộp.</>
+                          )}
+                        </p>
                         
                         <div className="flex flex-col gap-2.5">
                             {upcomingDeadlines.slice(0, 3).map(t => {
@@ -2452,14 +2503,14 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                                             <span className="font-bold text-slate-700 text-[14px] sm:text-[15px] truncate group-hover:text-[#0a5482] transition-colors">{t.title}</span>
                                         </div>
                                         <span className={`shrink-0 text-[11px] font-black px-3 py-1 rounded-lg whitespace-nowrap border ${isOverdue ? 'bg-rose-100 text-rose-700 border-rose-200' : 'bg-amber-50 text-amber-700 border-amber-200'}`}>
-                                            {isOverdue ? '⚠️ QUÁ HẠN' : '⏳ ' + formatDate(t._deadlineStr)}
+                                            {isOverdue ? (isEn ? '⚠️ OVERDUE' : '⚠️ QUÁ HẠN') : '⏳ ' + formatDate(t._deadlineStr)}
                                         </span>
                                     </div>
                                 )
                             })}
                             {upcomingDeadlines.length > 3 && (
                                 <button onClick={() => setActiveTab('calendar')} className="text-[13px] font-bold text-[#0a5482] hover:text-[#2ab4e8] transition-colors self-start mt-1 cursor-pointer">
-                                    Xem thêm {upcomingDeadlines.length - 3} nhiệm vụ khác →
+                                    {isEn ? `View ${upcomingDeadlines.length - 3} more tasks →` : `Xem thêm ${upcomingDeadlines.length - 3} nhiệm vụ khác →`}
                                 </button>
                             )}
                         </div>
@@ -2473,9 +2524,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                     <span className="w-1.5 h-7 bg-[#0a5482] rounded-full"></span>
                     <div>
                         <span className="text-[11px] font-extrabold uppercase tracking-widest text-[#2ab4e8] block">
-                            Chương trình đào tạo &amp; Luyện đề
+                            {isEn ? 'Curriculum & Exam Practice' : 'Chương trình đào tạo & Luyện đề'}
                         </span>
-                        <h2 className="font-black text-xl sm:text-2xl md:text-3xl text-slate-900 tracking-tight m-0">Khóa học của tôi</h2>
+                        <h2 className="font-black text-xl sm:text-2xl md:text-3xl text-slate-900 tracking-tight m-0">{isEn ? 'My Courses' : 'Khóa học của tôi'}</h2>
                     </div>
                 </div>
                 <div className="relative w-full sm:w-64 z-30">
@@ -2484,7 +2535,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                         className="w-full bg-white border border-slate-200/90 rounded-xl px-4 py-2.5 flex items-center justify-between cursor-pointer hover:border-[#2ab4e8] shadow-2xs transition-all"
                     >
                         <span className="font-bold text-[13px] text-[#0a5482] truncate pr-2">
-                        {filterCourse === 'all' ? 'Tất cả khóa học' : courses.find(c => String(c.id) === String(filterCourse))?.title || 'Tất cả khóa học'}
+                        {filterCourse === 'all' ? (isEn ? 'All Courses' : 'Tất cả khóa học') : getLocalizedCourseTitle(courses.find(c => String(c.id) === String(filterCourse))?.title, lang) || (isEn ? 'All Courses' : 'Tất cả khóa học')}
                         </span>
                         <span className={`text-[#2ab4e8] text-[10px] transition-transform duration-300 ${filterCourseDropdownOpen ? 'rotate-180' : ''}`}>▼</span>
                     </div>
@@ -2497,7 +2548,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                             onClick={() => { setFilterCourse('all'); setFilterCourseDropdownOpen(false); }}
                             className={`px-4 py-2.5 text-[13px] rounded-lg font-medium cursor-pointer transition-colors ${filterCourse === 'all' ? 'bg-sky-50 text-[#0a5482] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
                             >
-                            🌟 Tất cả khóa học
+                            🌟 {isEn ? 'All Courses' : 'Tất cả khóa học'}
                             </div>
                             {courses.map(course => (
                             <div 
@@ -2505,7 +2556,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                                 onClick={() => { setFilterCourse(course.id); setFilterCourseDropdownOpen(false); }}
                                 className={`px-4 py-2.5 text-[13px] rounded-lg font-medium cursor-pointer transition-colors border-t border-slate-100 ${String(filterCourse) === String(course.id) ? 'bg-sky-50 text-[#0a5482] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
                             >
-                                📖 {course.title}
+                                📖 {getLocalizedCourseTitle(course.title, lang)}
                             </div>
                             ))}
                         </div>
@@ -2527,8 +2578,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             ) : courses.length === 0 ? (
               <div className="bg-white border border-slate-200/90 rounded-2xl sm:rounded-3xl py-20 text-center shadow-xs flex flex-col items-center">
                 <div className="w-20 h-20 bg-slate-50 rounded-full flex items-center justify-center text-4xl mb-4 grayscale opacity-50">🔒</div>
-                <h3 className="font-bold text-slate-700 text-xl mb-2">Bạn chưa tham gia khóa học nào</h3>
-                <p className="text-slate-500 font-medium max-w-sm">Vui lòng liên hệ Thầy Tony để được cấp quyền truy cập vào các bài giảng nhé!</p>
+                <h3 className="font-bold text-slate-700 text-xl mb-2">{isEn ? 'No courses enrolled yet' : 'Bạn chưa tham gia khóa học nào'}</h3>
+                <p className="text-slate-500 font-medium max-w-sm">{isEn ? 'Please contact Teacher Tony to activate access to your courses and practice tests!' : 'Vui lòng liên hệ Thầy Tony để được cấp quyền truy cập vào các bài giảng nhé!'}</p>
               </div>
             ) : (
               (() => {
@@ -2539,8 +2590,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                   return (
                     <div className="bg-white border border-slate-200/90 rounded-2xl sm:rounded-3xl py-20 text-center shadow-xs flex flex-col items-center">
                       <div className="w-20 h-20 bg-slate-50 rounded-full flex items-center justify-center text-4xl mb-4 grayscale opacity-50">🔍</div>
-                      <h3 className="font-bold text-slate-700 text-xl mb-2">Không tìm thấy khóa học</h3>
-                      <p className="text-slate-500 font-medium max-w-sm">Không có khóa học nào khớp với lựa chọn của bạn.</p>
+                      <h3 className="font-bold text-slate-700 text-xl mb-2">{isEn ? 'No courses found' : 'Không tìm thấy khóa học'}</h3>
+                      <p className="text-slate-500 font-medium max-w-sm">{isEn ? 'No courses match your current selection.' : 'Không có khóa học nào khớp với lựa chọn của bạn.'}</p>
                     </div>
                   );
                 }
@@ -2549,6 +2600,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                   <div className={`grid ${isSingle ? 'grid-cols-1' : 'grid-cols-1 lg:grid-cols-2'} gap-6 xl:gap-8`}>
                     {filteredCourses.map(course => {
                       const cover = getCourseCover(course);
+                      const localizedTitle = getLocalizedCourseTitle(course.title, lang);
                       const stats = courseStats[course.id] || { testCount: 0, lecCount: 0, completedTestIds: new Set(), completedLecIds: new Set() };
                       const isTrial = isCourseTrial(course.id);
                       
@@ -2568,7 +2620,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                           
                           {/* Image Top/Left Half */}
                           <div className={`relative overflow-hidden bg-slate-900 cursor-pointer ${isSingle ? 'w-full md:w-[44%] h-[230px] md:h-auto min-h-[290px]' : 'w-full h-[190px] sm:h-[215px]'}`} onClick={() => handleOpenCourse(course)}>
-                             <img src={cover.image} loading="lazy" alt={course.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
+                             <img src={cover.image} loading="lazy" alt={localizedTitle} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
                              <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/90 via-[#0f172a]/30 to-transparent"></div>
                              
                              <div className="absolute top-4 left-4 bg-[#0a5482]/90 backdrop-blur-md text-white px-3 py-1 rounded-full text-[11px] font-extrabold uppercase tracking-wider border border-white/15 shadow-sm">
@@ -2583,16 +2635,16 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                                    setUnlockModalCourse(course);
                                  }}
                                  className="absolute top-4 right-4 bg-gradient-to-r from-amber-400 to-yellow-400 hover:from-amber-500 hover:to-yellow-500 text-slate-950 px-3 py-1 rounded-full text-[10.5px] font-black uppercase tracking-wider border border-yellow-200 shadow-md flex items-center gap-1 cursor-pointer"
-                                 title="Bấm để đăng ký mở khóa trọn bộ khóa học này"
+                                 title={isEn ? 'Click to request full course unlock' : 'Bấm để đăng ký mở khóa trọn bộ khóa học này'}
                                >
                                  <span>🎁</span>
-                                 <span>Học thử • Mở khóa</span>
+                                 <span>{isEn ? 'Free Trial • Unlock' : 'Học thử • Mở khóa'}</span>
                                </button>
                              )}
                              <div className="absolute bottom-4 left-5 right-5">
                                <span className="text-[11px] font-bold uppercase tracking-widest text-[#2ab4e8] block mb-0.5">TonyEnglish Official Course</span>
                                <h4 className={`font-black ${isSingle ? 'text-2xl md:text-3xl' : 'text-xl md:text-2xl'} text-white leading-snug drop-shadow-sm`}>
-                                   {course.title}
+                                   {localizedTitle}
                                </h4>
                              </div>
                           </div>
@@ -2603,7 +2655,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                             {/* Overall Progress */}
                             <div className="mb-5">
                                 <div className="flex justify-between items-end mb-2">
-                                    <span className="text-[12px] font-extrabold text-slate-500 uppercase tracking-wider">Tiến độ hoàn thành khóa học</span>
+                                    <span className="text-[12px] font-extrabold text-slate-500 uppercase tracking-wider">{isEn ? 'Overall Course Progress' : 'Tiến độ hoàn thành khóa học'}</span>
                                     <span className="text-[18px] font-black text-[#0a5482]">{overallProgress}%</span>
                                 </div>
                                 <div className="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden border border-slate-200/60">
@@ -2615,10 +2667,10 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                             <div className="flex items-center gap-4 sm:gap-6 mb-6 bg-slate-50/90 p-4 rounded-2xl border border-slate-200/70">
                               <div className="flex-1">
                                   <div className="flex items-center justify-between mb-1">
-                                      <span className="flex items-center gap-1.5 text-[11px] font-extrabold text-slate-500 uppercase tracking-wider"><span>📖</span> Bài giảng</span>
+                                      <span className="flex items-center gap-1.5 text-[11px] font-extrabold text-slate-500 uppercase tracking-wider"><span>📖</span> {isEn ? 'Lectures' : 'Bài giảng'}</span>
                                       <span className="font-black text-emerald-600 text-[12px]">{lecProgress}%</span>
                                   </div>
-                                  <div className="font-black text-slate-800 text-[14px] mb-2">{stats.completedLecIds.size} / {stats.lecCount} <span className="text-[11px] font-semibold text-slate-400">bài học</span></div>
+                                  <div className="font-black text-slate-800 text-[14px] mb-2">{stats.completedLecIds.size} / {stats.lecCount} <span className="text-[11px] font-semibold text-slate-400">{isEn ? 'lessons' : 'bài học'}</span></div>
                                   <div className="w-full h-1.5 bg-slate-200 rounded-full overflow-hidden">
                                       <div className="h-full bg-emerald-500 rounded-full transition-all duration-1000" style={{ width: `${lecProgress}%` }}></div>
                                   </div>
@@ -2626,10 +2678,10 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                               <div className="w-px h-12 bg-slate-200"></div>
                               <div className="flex-1">
                                   <div className="flex items-center justify-between mb-1">
-                                      <span className="flex items-center gap-1.5 text-[11px] font-extrabold text-slate-500 uppercase tracking-wider"><span>📝</span> Kho đề thi</span>
+                                      <span className="flex items-center gap-1.5 text-[11px] font-extrabold text-slate-500 uppercase tracking-wider"><span>📝</span> {isEn ? 'Test Bank' : 'Kho đề thi'}</span>
                                       <span className="font-black text-[#0a5482] text-[12px]">{testProgress}%</span>
                                   </div>
-                                  <div className="font-black text-slate-800 text-[14px] mb-2">{stats.completedTestIds.size} / {stats.testCount} <span className="text-[11px] font-semibold text-slate-400">đề luyện</span></div>
+                                  <div className="font-black text-slate-800 text-[14px] mb-2">{stats.completedTestIds.size} / {stats.testCount} <span className="text-[11px] font-semibold text-slate-400">{isEn ? 'tests' : 'đề luyện'}</span></div>
                                   <div className="w-full h-1.5 bg-slate-200 rounded-full overflow-hidden">
                                       <div className="h-full bg-[#2ab4e8] rounded-full transition-all duration-1000" style={{ width: `${testProgress}%` }}></div>
                                   </div>
@@ -2643,7 +2695,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                                      resetWorkspaceAndChat(); 
                                      if(onOpenLecture) onOpenLecture(course.id);
                                  }} className="w-full bg-sky-50/80 hover:bg-sky-100 text-[#0a5482] border border-sky-200/90 font-extrabold text-[13px] py-3 px-4 rounded-xl transition-all flex items-center justify-center gap-2 uppercase tracking-wider cursor-pointer active:scale-95">
-                                     <span>📖</span> <span>Bài giảng lý thuyết</span>
+                                     <span>📖</span> <span>{isEn ? 'Theory Lectures' : 'Bài giảng lý thuyết'}</span>
                                  </button>
                                  {isTrial && (
                                    <button
@@ -2653,25 +2705,25 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                                        if (onOpenLecture) onOpenLecture(course.id);
                                      }}
                                      className="absolute inset-0 bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 hover:from-amber-500 hover:to-yellow-500 text-slate-950 border-2 border-amber-300 font-black text-[12.5px] py-3 px-3 rounded-xl shadow-md shadow-amber-500/25 flex items-center justify-center gap-1.5 uppercase tracking-wider cursor-pointer active:scale-95 transition-all z-10"
-                                     title="Bấm để Học thử Bài giảng lý thuyết"
+                                     title={isEn ? 'Preview free trial theory lectures' : 'Bấm để Học thử Bài giảng lý thuyết'}
                                    >
-                                     <span>🎁</span> <span>Học thử Lý thuyết</span>
+                                     <span>🎁</span> <span>{isEn ? 'Try Free Lectures' : 'Học thử Lý thuyết'}</span>
                                    </button>
                                  )}
                                </div>
 
                                <div className="relative flex-[1.3]">
                                  <button onClick={() => handleOpenCourse(course)} className="w-full bg-[#0a5482] hover:bg-[#084266] text-white font-extrabold text-[13px] py-3 px-4 rounded-xl transition-all shadow-md shadow-blue-900/15 flex items-center justify-center gap-2 uppercase tracking-wider cursor-pointer active:scale-95">
-                                     <span>🚀</span> <span>Vào kho đề &amp; Làm bài</span>
+                                     <span>🚀</span> <span>{isEn ? 'Open Test Bank' : 'Vào kho đề & Làm bài'}</span>
                                  </button>
                                  {isTrial && (
                                    <button
                                      type="button"
                                      onClick={() => handleOpenCourse(course)}
                                      className="absolute inset-0 bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-500 hover:from-amber-600 hover:to-yellow-500 text-slate-950 border-2 border-yellow-300 font-black text-[12.5px] py-3 px-3 rounded-xl shadow-md shadow-amber-500/30 flex items-center justify-center gap-1.5 uppercase tracking-wider cursor-pointer active:scale-95 transition-all z-10"
-                                     title="Bấm để Làm thử Kho đề thi"
+                                     title={isEn ? 'Try sample tests in the Test Bank' : 'Bấm để Làm thử Kho đề thi'}
                                    >
-                                     <span>⚡</span> <span>Làm thử Kho đề</span>
+                                     <span>⚡</span> <span>{isEn ? 'Try Practice Tests' : 'Làm thử Kho đề'}</span>
                                    </button>
                                  )}
                                </div>
@@ -2702,7 +2754,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 className="hover:text-[#0a5482] flex items-center gap-1 cursor-pointer transition-colors"
               >
                 <span>🎓</span>
-                <span>Góc học viên</span>
+                <span>{isEn ? 'Student Portal' : 'Góc học viên'}</span>
               </button>
               <span className="text-slate-300">/</span>
               <button
@@ -2717,7 +2769,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                   !currentFolderId ? 'text-[#0a5482] font-bold' : 'hover:text-[#0a5482]'
                 }`}
               >
-                {selectedCourse.title}
+                {getLocalizedCourseTitle(selectedCourse.title, lang)}
               </button>
               {breadcrumbs.map((b, i) => (
                 <React.Fragment key={b.id}>
@@ -2742,14 +2794,14 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                   <span>📚 TonyEnglish Course &amp; Test Library</span>
                   {(currentSubFolders.length > 0 || currentTests.length > 0) && (
                     <span className="bg-white/15 text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full border border-white/20 normal-case tracking-normal">
-                      {currentSubFolders.length > 0 ? `${currentSubFolders.length} danh mục` : ''}
+                      {currentSubFolders.length > 0 ? `${currentSubFolders.length} ${isEn ? 'folders' : 'danh mục'}` : ''}
                       {currentSubFolders.length > 0 && currentTests.length > 0 ? ' • ' : ''}
-                      {currentTests.length > 0 ? `${currentTests.length} bài tập` : ''}
+                      {currentTests.length > 0 ? `${currentTests.length} ${isEn ? 'tests' : 'bài tập'}` : ''}
                     </span>
                   )}
                 </div>
                 <h1 className="text-xl sm:text-2xl md:text-3xl font-black tracking-tight truncate">
-                  {breadcrumbs.length > 0 ? breadcrumbs[breadcrumbs.length - 1].title : selectedCourse.title}
+                  {breadcrumbs.length > 0 ? breadcrumbs[breadcrumbs.length - 1].title : getLocalizedCourseTitle(selectedCourse.title, lang)}
                 </h1>
               </div>
 
@@ -2774,7 +2826,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                   className="bg-white/10 hover:bg-white/20 text-white border border-white/20 font-bold text-xs sm:text-[13px] px-3.5 py-2 rounded-xl transition-all flex items-center gap-1.5 cursor-pointer"
                 >
                   <span>←</span>
-                  <span>Quay lại</span>
+                  <span>{isEn ? 'Back' : 'Quay lại'}</span>
                 </button>
 
                 {/* NÚT THẦY TONY AI (MỞ POPUP ĐỒNG NHẤT VỚI CÁC TAB KHÁC) */}
@@ -2782,10 +2834,10 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                   type="button"
                   onClick={() => handleOpenStudyCoachModal(String(selectedCourse.id))}
                   className="bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-300 hover:border-amber-400 font-extrabold text-xs sm:text-[13px] px-3.5 py-2 rounded-xl shadow-xs transition-all flex items-center justify-center gap-1.5 shrink-0 cursor-pointer active:scale-95"
-                  title="Mở Trợ lý Thầy Tony AI phân tích tiến độ & giao việc hôm nay"
+                  title={isEn ? 'Open Teacher Tony AI Advisor to analyze progress & daily plan' : 'Mở Trợ lý Thầy Tony AI phân tích tiến độ & giao việc hôm nay'}
                 >
                   <span className="text-base">👨‍🏫</span>
-                  <span>Thầy Tony AI</span>
+                  <span>{isEn ? 'Teacher Tony AI' : 'Thầy Tony AI'}</span>
                 </button>
 
                 {/* DROPDOWN CHUYỂN KHÓA HỌC */}
@@ -2797,7 +2849,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                     <div className="flex items-center gap-2 min-w-0 pr-1.5">
                       <span className="text-[#0a5482] text-xs">🎓</span>
                       <span className="font-bold text-xs text-[#0a5482] truncate">
-                        {selectedCourse ? selectedCourse.title : 'Chọn khóa học'}
+                        {selectedCourse ? getLocalizedCourseTitle(selectedCourse.title, lang) : (isEn ? 'Select course' : 'Chọn khóa học')}
                       </span>
                     </div>
                     <span className={`text-[#2ab4e8] text-[10px] transition-transform duration-300 shrink-0 ${filterCourseDropdownOpen ? 'rotate-180' : ''}`}>▼</span>
@@ -2817,7 +2869,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                           }}
                           className={`px-3.5 py-2 text-xs rounded-xl font-medium cursor-pointer transition-colors ${filterCourse === 'all' && !selectedCourse ? 'bg-sky-50 text-[#0a5482] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
                         >
-                          🌟 Tất cả khóa học (Góc học viên)
+                          🌟 {isEn ? 'All Courses (Dashboard)' : 'Tất cả khóa học (Góc học viên)'}
                         </div>
                         {courses.map(course => (
                           <div 
@@ -2830,7 +2882,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                             }}
                             className={`px-3.5 py-2 text-xs rounded-xl font-medium cursor-pointer transition-colors border-t border-slate-100 ${String(selectedCourse?.id) === String(course.id) ? 'bg-sky-50 text-[#0a5482] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
                           >
-                            📖 {course.title}
+                            📖 {getLocalizedCourseTitle(course.title, lang)}
                           </div>
                         ))}
                       </div>
@@ -2846,7 +2898,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                   }} 
                   className="w-full sm:w-auto bg-[#2ab4e8] hover:bg-[#1fa0d4] text-white font-extrabold text-xs sm:text-[13px] px-4 py-2 rounded-xl transition-all flex items-center justify-center gap-2 shadow-sm uppercase tracking-wider shrink-0 cursor-pointer active:scale-95"
                 >
-                  <span>📖</span> <span>Bài Giảng Lý Thuyết</span>
+                  <span>📖</span> <span>{isEn ? 'Theory Lectures' : 'Bài Giảng Lý Thuyết'}</span>
                 </button>
               </div>
             </div>
@@ -2860,14 +2912,16 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                   <div>
                     <div className="flex items-center gap-2 flex-wrap">
                       <span className="text-[11px] font-black uppercase tracking-wider bg-amber-200/80 text-amber-950 px-2 py-0.5 rounded-md">
-                        Chế độ Học Thử &amp; Làm Thử
+                        {isEn ? 'Free Trial & Preview Mode' : 'Chế độ Học Thử & Làm Thử'}
                       </span>
                       <span className="text-xs font-extrabold text-slate-800">
-                        Khóa học: {selectedCourse.title}
+                        {isEn ? 'Course:' : 'Khóa học:'} {getLocalizedCourseTitle(selectedCourse.title, lang)}
                       </span>
                     </div>
                     <p className="text-xs text-slate-600 font-medium mt-1">
-                      Các thư mục và đề đầu tiên đã được mở sáng miễn phí để bạn trải nghiệm. Các chuyên đề và đề còn lại có biểu tượng 🔒 dành cho học viên chính thức.
+                      {isEn
+                        ? 'The first topics and practice tests are unlocked free for you to explore. Remaining items with a 🔒 icon are reserved for enrolled students.'
+                        : 'Các thư mục và đề đầu tiên đã được mở sáng miễn phí để bạn trải nghiệm. Các chuyên đề và đề còn lại có biểu tượng 🔒 dành cho học viên chính thức.'}
                     </p>
                   </div>
                 </div>
@@ -2880,7 +2934,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                   className="w-full sm:w-auto bg-gradient-to-r from-[#0a5482] to-[#0f172a] hover:from-[#084266] hover:to-slate-900 text-amber-300 font-black text-xs px-4 py-2.5 rounded-xl shadow-sm transition-all flex items-center justify-center gap-1.5 shrink-0 cursor-pointer active:scale-95"
                 >
                   <span>🔓</span>
-                  <span>Mở khóa toàn bộ khóa học</span>
+                  <span>{isEn ? 'Unlock Full Course' : 'Mở khóa toàn bộ khóa học'}</span>
                 </button>
               </div>
             )}
@@ -2893,7 +2947,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                   <div className="flex items-center gap-2.5 mb-5">
                     <span className="w-1.5 h-6 bg-[#0a5482] rounded-full"></span>
                     <h3 className="font-black text-lg sm:text-xl text-slate-900 tracking-tight m-0">
-                      Danh mục chuyên đề &amp; Bộ đề
+                      {isEn ? 'Topics & Practice Sets' : 'Danh mục chuyên đề & Bộ đề'}
                     </h3>
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
@@ -2953,7 +3007,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                                 <div className="absolute top-3 left-4 flex items-center gap-1.5">
                                   <FolderOpen className={`w-4 h-4 ${palette.accent} opacity-90`} />
                                   <span className={`text-[10.5px] font-extrabold uppercase tracking-wider ${palette.accent} opacity-90`}>
-                                    {badgeText ? `Topic ${badgeText}` : 'Chuyên đề'}
+                                    {badgeText ? `Topic ${badgeText}` : (isEn ? 'Topic' : 'Chuyên đề')}
                                   </span>
                                 </div>
                               </>
@@ -2962,11 +3016,11 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                               <div className="absolute top-3 right-3 z-10">
                                 {isFolderLocked ? (
                                   <span className="bg-slate-900/85 text-slate-200 text-[10px] font-black uppercase px-2.5 py-1 rounded-full border border-white/20 flex items-center gap-1 shadow-sm">
-                                    <Lock className="w-3 h-3" /> <span>Đã khóa</span>
+                                    <Lock className="w-3 h-3" /> <span>{isEn ? 'Locked' : 'Đã khóa'}</span>
                                   </span>
                                 ) : (
                                   <span className="bg-gradient-to-r from-amber-400 to-yellow-400 text-slate-950 text-[10px] font-black uppercase px-2.5 py-1 rounded-full border border-yellow-200 flex items-center gap-1 shadow-sm">
-                                    <span>🎁</span> <span>Mở làm thử</span>
+                                    <span>🎁</span> <span>{isEn ? 'Free Trial' : 'Mở làm thử'}</span>
                                   </span>
                                 )}
                               </div>
@@ -2988,9 +3042,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                             {!isFolderLocked && testCount > 0 && childCount === 0 && (
                               <div className="space-y-1">
                                 <div className="flex items-center justify-between text-[11px] font-bold">
-                                  <span className="text-slate-400">Tiến độ luyện đề</span>
+                                  <span className="text-slate-400">{isEn ? 'Practice Progress' : 'Tiến độ luyện đề'}</span>
                                   <span className={completedInFolder === testCount ? 'text-emerald-600 font-extrabold' : 'text-[#0a5482] font-extrabold'}>
-                                    {completedInFolder}/{testCount} đề
+                                    {completedInFolder}/{testCount} {isEn ? 'tests' : 'đề'}
                                   </span>
                                 </div>
                                 <div className="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden">
@@ -3008,7 +3062,11 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                                   ? 'text-slate-500 bg-slate-200/80 border-slate-300'
                                   : palette.pill
                               }`}>
-                                  {isFolderLocked ? 'Khóa chính thức' : childCount > 0 ? `${childCount} thư mục` : `${testCount} bài tập`}
+                                  {isFolderLocked
+                                    ? (isEn ? 'Full Course Only' : 'Khóa chính thức')
+                                    : childCount > 0
+                                      ? `${childCount} ${isEn ? 'folders' : 'thư mục'}`
+                                      : `${testCount} ${isEn ? 'tests' : 'bài tập'}`}
                               </span>
                               <span className={`w-8 h-8 rounded-xl flex items-center justify-center font-bold transition-colors ${
                                 isFolderLocked
@@ -3036,21 +3094,21 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                     <div className="flex items-center gap-2.5">
                       <span className="w-1.5 h-6 bg-[#2ab4e8] rounded-full"></span>
                       <h3 className="font-black text-base sm:text-lg text-slate-900 tracking-tight m-0">
-                        Danh sách bài tập &amp; Đề luyện ({processedTests.length})
+                        {isEn ? `Exercises & Practice Tests (${processedTests.length})` : `Danh sách bài tập & Đề luyện (${processedTests.length})`}
                       </h3>
                     </div>
 
                     <div className="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
                       <div className="relative flex-1 sm:w-80">
-                        <input type="text" placeholder="Tìm kiếm bài tập..." value={searchTest} onChange={(e) => {setSearchTest(e.target.value); setTestPage(1);}} className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200/90 font-semibold text-[13.5px] outline-none focus:border-[#2ab4e8] focus:bg-white focus:ring-2 focus:ring-[#2ab4e8]/20 transition-all" />
+                        <input type="text" placeholder={isEn ? 'Search tests...' : 'Tìm kiếm bài tập...'} value={searchTest} onChange={(e) => {setSearchTest(e.target.value); setTestPage(1);}} className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200/90 font-semibold text-[13.5px] outline-none focus:border-[#2ab4e8] focus:bg-white focus:ring-2 focus:ring-[#2ab4e8]/20 transition-all" />
                         <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-sm">🔍</span>
                       </div>
 
                       <select value={sortTest} onChange={(e) => setSortTest(e.target.value)} className="bg-slate-50 border border-slate-200/90 rounded-xl px-3.5 py-2.5 font-bold text-[13px] text-[#0a5482] outline-none cursor-pointer focus:border-[#2ab4e8]">
-                        <option value="name-asc">Sắp xếp: A → Z</option>
-                        <option value="name-desc">Sắp xếp: Z → A</option>
-                        <option value="date-desc">Mới nhất</option>
-                        <option value="date-asc">Cũ nhất</option>
+                        <option value="name-asc">{isEn ? 'Sort: A → Z' : 'Sắp xếp: A → Z'}</option>
+                        <option value="name-desc">{isEn ? 'Sort: Z → A' : 'Sắp xếp: Z → A'}</option>
+                        <option value="date-desc">{isEn ? 'Newest' : 'Mới nhất'}</option>
+                        <option value="date-asc">{isEn ? 'Oldest' : 'Cũ nhất'}</option>
                       </select>
                     </div>
                   </div>
@@ -3078,11 +3136,11 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                         }
 
                         let statusConfig = {
-                          badge: isTrialCourseView ? "🎁 Đề làm thử" : "Chưa làm",
+                          badge: isTrialCourseView ? (isEn ? "🎁 Free Trial" : "🎁 Đề làm thử") : (isEn ? "Not Started" : "Chưa làm"),
                           badgeClass: isTrialCourseView
                             ? "text-amber-900 bg-amber-100 border border-amber-300"
                             : "text-slate-600 bg-slate-100 border border-slate-200/80",
-                          btnText: isTrialCourseView ? "⚡ Làm thử ngay →" : "Làm bài ngay →",
+                          btnText: isTrialCourseView ? (isEn ? "⚡ Try Now →" : "⚡ Làm thử ngay →") : (isEn ? "Start Test →" : "Làm bài ngay →"),
                           btnClass: isTrialCourseView
                             ? "bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 text-slate-950 border border-amber-300 shadow-xs hover:from-amber-500 hover:to-yellow-500"
                             : "bg-sky-50/90 text-[#0a5482] border border-sky-200/90 group-hover:bg-[#0a5482] group-hover:text-white group-hover:border-[#0a5482]"
@@ -3090,30 +3148,30 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                         
                         if (isTestLocked) {
                             statusConfig = {
-                              badge: "🔒 Đã khóa",
+                              badge: isEn ? "🔒 Locked" : "🔒 Đã khóa",
                               badgeClass: "text-slate-500 bg-slate-200 border border-slate-300",
-                              btnText: "🔒 Mở khóa đề thi →",
+                              btnText: isEn ? "🔒 Unlock Test →" : "🔒 Mở khóa đề thi →",
                               btnClass: "bg-slate-200 text-slate-500 border border-slate-300 hover:bg-slate-300"
                             };
                         }
                         else if (isCompleted) {
                             statusConfig = {
-                              badge: "✓ Hoàn thành",
+                              badge: isEn ? "✓ Completed" : "✓ Hoàn thành",
                               badgeClass: "text-emerald-700 bg-emerald-50 border border-emerald-200",
-                              btnText: "Làm lại đề →",
+                              btnText: isEn ? "Retake Test →" : "Làm lại đề →",
                               btnClass: "bg-emerald-50 text-emerald-700 border border-emerald-200 group-hover:bg-emerald-600 group-hover:text-white"
                             };
                         }
                         else if (inProgress) {
                             statusConfig = {
-                              badge: "⏳ Đang làm dở",
+                              badge: isEn ? "⏳ In Progress" : "⏳ Đang làm dở",
                               badgeClass: "text-amber-700 bg-amber-50 border border-amber-200",
-                              btnText: "Tiếp tục làm →",
+                              btnText: isEn ? "Continue →" : "Tiếp tục làm →",
                               btnClass: "bg-amber-500 text-white shadow-sm hover:bg-amber-600"
                             };
                         }
                         else if (isOverdue) {
-                            statusConfig.btnText = "Nộp muộn →";
+                            statusConfig.btnText = isEn ? "Submit Late →" : "Nộp muộn →";
                             statusConfig.btnClass = "bg-rose-50 text-rose-600 border border-rose-200 group-hover:bg-rose-600 group-hover:text-white";
                         }
 
@@ -3157,13 +3215,13 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                               
                               <div className="flex flex-wrap items-center gap-1.5 mb-2">
                                   {(test.content_json?.guide_videos?.length > 0 || test.content_json?.basicInfo?.guide_video_url || test.content_json?.guide_video_url) && (
-                                      <span className={`text-[10px] px-2 py-0.5 rounded-md font-bold tracking-wider flex items-center gap-1 ${isTestLocked ? 'bg-slate-200 text-slate-500 border border-slate-300' : 'bg-red-50 text-red-600 border border-red-100'}`} title="Có video hướng dẫn & giải đề">
-                                          🎬 Video giải đề{test.content_json?.guide_videos?.length > 1 ? ` (${test.content_json.guide_videos.length})` : ''}
+                                      <span className={`text-[10px] px-2 py-0.5 rounded-md font-bold tracking-wider flex items-center gap-1 ${isTestLocked ? 'bg-slate-200 text-slate-500 border border-slate-300' : 'bg-red-50 text-red-600 border border-red-100'}`} title={isEn ? 'Includes solution & walkthrough video' : 'Có video hướng dẫn & giải đề'}>
+                                          🎬 {isEn ? 'Solution Video' : 'Video giải đề'}{test.content_json?.guide_videos?.length > 1 ? ` (${test.content_json.guide_videos.length})` : ''}
                                       </span>
                                   )}
                                   {matchedClassId && !isCompleted && !isTestLocked && (
                                       <span className={`text-[10px] px-2 py-0.5 rounded-md uppercase font-bold tracking-wider ${isOverdue ? 'bg-rose-100 text-rose-600' : 'bg-orange-100 text-orange-600'}`}>
-                                          {isOverdue ? 'Quá hạn' : 'Hạn: ' + deadlineLabel}
+                                          {isOverdue ? (isEn ? 'Overdue' : 'Quá hạn') : (isEn ? 'Due: ' : 'Hạn: ') + deadlineLabel}
                                       </span>
                                   )}
                               </div>
@@ -3180,7 +3238,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                     {processedTests.length === 0 ? (
                       <div className="text-center py-16 text-slate-400 font-medium flex flex-col items-center justify-center bg-white rounded-2xl border border-dashed border-slate-300">
                         <svg className="w-10 h-10 mb-3 text-slate-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-                        Không tìm thấy bài học nào phù hợp.
+                        {isEn ? 'No matching tests found.' : 'Không tìm thấy bài học nào phù hợp.'}
                       </div>
                     ) : (
                       renderPagination(testPage, totalTestPages, setTestPage)
@@ -3192,12 +3250,12 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               {isLoading ? (
                 <div className="text-center py-20 bg-white rounded-2xl border border-slate-200/90 shadow-xs flex flex-col items-center justify-center">
                    <div className="w-10 h-10 border-4 border-sky-100 border-t-[#0a5482] rounded-full animate-spin mb-4"></div>
-                   <span className="text-slate-500 font-medium text-sm">Đang tải danh mục và bài tập...</span>
+                   <span className="text-slate-500 font-medium text-sm">{isEn ? 'Loading folders and tests...' : 'Đang tải danh mục và bài tập...'}</span>
                 </div>
               ) : currentSubFolders.length === 0 && currentTests.length === 0 && (
                 <div className="text-center py-20 bg-white rounded-2xl border border-slate-200/90 text-slate-400 font-medium text-base shadow-xs flex flex-col items-center justify-center">
                    <div className="text-5xl mb-4 grayscale opacity-30">📭</div>
-                   Thư mục này hiện đang trống.
+                   {isEn ? 'This folder is currently empty.' : 'Thư mục này hiện đang trống.'}
                 </div>
               )}
             </div>
@@ -3214,7 +3272,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               isAdmin={isTonyEnglishAdmin(currentUser, userProfile)}
               filterCourseId={filterCourse}
               enrolledCourseIds={isTonyEnglishAdmin(currentUser, userProfile) ? courses.map((c: any) => String(c.id)) : Array.from(enrolledCourseIdsSet)}
-              courseTitle={filterCourse === 'all' ? undefined : courses.find(c => String(c.id) === String(filterCourse))?.title}
+              courseTitle={filterCourse === 'all' ? undefined : getLocalizedCourseTitle(courses.find(c => String(c.id) === String(filterCourse))?.title, lang)}
               bottomActions={renderBottomControls}
               lectures={allLectures}
               onOpenLecture={handleGoToLecture}
@@ -3233,7 +3291,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 userId={currentUser?.id}
                 assignments={calendarAssignments} 
                 completedTestIds={completedTestIdsSet}
-                courseTitle={filterCourse === 'all' ? undefined : courses.find(c => String(c.id) === String(filterCourse))?.title}
+                courseTitle={filterCourse === 'all' ? undefined : getLocalizedCourseTitle(courses.find(c => String(c.id) === String(filterCourse))?.title, lang)}
                 lectures={allLectures}
                 rightActions={<div className="w-full sm:w-auto">{renderBottomControls}</div>}
                 onOpenLecture={handleGoToLecture}
@@ -3277,13 +3335,13 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 <div className="min-w-0 flex-1">
                   <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-xs border border-white/15 px-3 py-1 rounded-full text-[10px] sm:text-[11px] font-extrabold tracking-widest uppercase text-[#2ab4e8] mb-2.5 whitespace-nowrap">
                     <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
-                    <span>TonyEnglish Performance Analytics • Báo Cáo Hiệu Suất</span>
+                    <span>{isEn ? 'TonyEnglish Performance Analytics' : 'TonyEnglish Performance Analytics • Báo Cáo Hiệu Suất'}</span>
                   </div>
                   <h1 className="text-xl sm:text-2xl md:text-[26px] font-black tracking-tight text-white leading-tight">
-                    Báo Cáo Hiệu Suất{filterCourse !== 'all' && courses.find(c => String(c.id) === String(filterCourse))?.title ? ` — ${courses.find(c => String(c.id) === String(filterCourse))?.title}` : ''}
+                    {isEn ? 'Performance Analytics' : 'Báo Cáo Hiệu Suất'}{filterCourse !== 'all' && courses.find(c => String(c.id) === String(filterCourse))?.title ? ` — ${getLocalizedCourseTitle(courses.find(c => String(c.id) === String(filterCourse))?.title, lang)}` : ''}
                   </h1>
                   <p className="text-slate-200/85 text-xs sm:text-sm mt-1 font-medium">
-                    Phân tích kết quả luyện tập, biểu đồ 4 kỹ năng và nhật ký học tập chi tiết.
+                    {isEn ? 'Track test results, 4-skill progress charts, and detailed study activity logs.' : 'Phân tích kết quả luyện tập, biểu đồ 4 kỹ năng và nhật ký học tập chi tiết.'}
                   </p>
                 </div>
 
@@ -3296,21 +3354,21 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                         onClick={() => { setAnalyticsTestType('ielts'); setHistoryPage(1); }}
                         className={`flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg font-extrabold text-xs transition-all whitespace-nowrap cursor-pointer ${analyticsTestType === 'ielts' ? 'bg-white text-[#0a5482] shadow-xs' : 'text-white/85 hover:text-white hover:bg-white/10'}`}
                       >
-                        <span>🎯</span> <span>Luyện thi IELTS</span>
+                        <span>🎯</span> <span>{isEn ? 'IELTS Mock Tests' : 'Luyện thi IELTS'}</span>
                       </button>
                       <button
                         type="button"
                         onClick={() => { setAnalyticsTestType('ielts-standard'); setHistoryPage(1); }}
                         className={`flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg font-extrabold text-xs transition-all whitespace-nowrap cursor-pointer ${analyticsTestType === 'ielts-standard' ? 'bg-white text-[#0a5482] shadow-xs' : 'text-white/85 hover:text-white hover:bg-white/10'}`}
                       >
-                        <span>📝</span> <span>Bài Tập Bổ Trợ</span>
+                        <span>📝</span> <span>{isEn ? 'Supplementary Drills' : 'Bài Tập Bổ Trợ'}</span>
                       </button>
                       <button
                         type="button"
                         onClick={() => { setAnalyticsTestType('ielts-translation'); setAnalyticsView('activity'); setActivityPage(1); }}
                         className={`flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg font-extrabold text-xs transition-all whitespace-nowrap cursor-pointer ${analyticsTestType === 'ielts-translation' ? 'bg-white text-[#0a5482] shadow-xs' : 'text-white/85 hover:text-white hover:bg-white/10'}`}
                       >
-                        <span>📚</span> <span>Bài Đọc Dịch Cambridge</span>
+                        <span>📚</span> <span>{isEn ? 'Cambridge Translations' : 'Bài Đọc Dịch Cambridge'}</span>
                       </button>
                       {analyticsCourse === 'all' && courses.some(c => !((c.title||'').toLowerCase().includes('ielts') || c.type === 'IELTS')) && (
                         <button
@@ -3318,7 +3376,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                           onClick={() => { setAnalyticsTestType('standard'); setHistoryPage(1); }}
                           className={`flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg font-extrabold text-xs transition-all whitespace-nowrap cursor-pointer ${analyticsTestType === 'standard' ? 'bg-white text-[#0a5482] shadow-xs' : 'text-white/85 hover:text-white hover:bg-white/10'}`}
                         >
-                          <span>📖</span> <span>Bài tập khóa khác</span>
+                          <span>📖</span> <span>{isEn ? 'Other Courses' : 'Bài tập khóa khác'}</span>
                         </button>
                       )}
                     </div>
@@ -3329,9 +3387,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                     type="button"
                     onClick={() => setIsAnalyticsThemeModalOpen(true)} 
                     className="bg-white/12 hover:bg-white/20 active:scale-95 text-white text-xs sm:text-[13px] font-bold px-3.5 py-2 rounded-xl transition-all shadow-xs flex items-center gap-1.5 cursor-pointer shrink-0 border border-white/20 h-[38px]"
-                    title="Đổi giao diện màu nền"
+                    title={isEn ? 'Change background theme' : 'Đổi giao diện màu nền'}
                   >
-                    <span>🎨</span> <span className="hidden xl:inline">Giao diện</span>
+                    <span>🎨</span> <span className="hidden xl:inline">{isEn ? 'Theme' : 'Giao diện'}</span>
                   </button>
                 </div>
               </div>
@@ -3339,7 +3397,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               {/* DÒNG 2: LỐI TẮT HỌC TẬP & BỘ LỌC KHÓA HỌC */}
               <div className="relative z-30 pt-3 border-t border-white/15 flex flex-wrap items-center justify-between gap-2">
                 <span className="text-[11px] font-bold uppercase tracking-wider text-sky-200/80 hidden sm:inline">
-                  Lối tắt học tập &amp; Bộ lọc khóa học:
+                  {isEn ? 'Study Shortcuts & Course Filter:' : 'Lối tắt học tập & Bộ lọc khóa học:'}
                 </span>
                 <div className="w-full sm:w-auto flex justify-end ml-auto">
                   {renderBottomControls}
@@ -3357,8 +3415,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                   analyticsTotalTestsDone === 0 ? (
                     <div className="bg-white rounded-2xl sm:rounded-3xl border border-slate-200/90 py-14 text-center shadow-xs flex flex-col items-center justify-center p-6">
                       <div className="text-5xl mb-4 opacity-40 grayscale block">📊</div>
-                      <h3 className="text-lg md:text-xl font-black text-slate-800 mb-2">Chưa có dữ liệu làm bài kiểm tra hợp lệ</h3>
-                      <p className="text-slate-500 font-medium text-[13px] md:text-[14px] max-w-md">Hệ thống chỉ tính những bài kiểm tra đạt trên 3.0 điểm (hoặc IELTS Band &gt; 3.0) để đảm bảo phân tích của AI chính xác nhất.</p>
+                      <h3 className="text-lg md:text-xl font-black text-slate-800 mb-2">{isEn ? 'No valid test results yet' : 'Chưa có dữ liệu làm bài kiểm tra hợp lệ'}</h3>
+                      <p className="text-slate-500 font-medium text-[13px] md:text-[14px] max-w-md">{isEn ? 'Only tests scoring above 3.0 (or IELTS Band > 3.0) are counted to ensure accurate AI analysis.' : 'Hệ thống chỉ tính những bài kiểm tra đạt trên 3.0 điểm (hoặc IELTS Band > 3.0) để đảm bảo phân tích của AI chính xác nhất.'}</p>
                     </div>
                   ) : (
                   <>
@@ -3369,7 +3427,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                         <div className="relative z-10 mb-2">
                           <div className="flex items-center gap-1.5 whitespace-nowrap">
                             <span className="w-2 h-2 rounded-full bg-emerald-400 shrink-0"></span>
-                            <span className="font-extrabold text-slate-500 text-[10px] sm:text-[11px] uppercase tracking-wider group-hover:text-emerald-600 transition-colors">Đã làm</span>
+                            <span className="font-extrabold text-slate-500 text-[10px] sm:text-[11px] uppercase tracking-wider group-hover:text-emerald-600 transition-colors">{isEn ? 'Completed' : 'Đã làm'}</span>
                           </div>
                           <div className="font-black text-slate-800 text-2xl sm:text-[26px] leading-none mt-1.5">
                             {analyticsTotalTestsDone}
@@ -3385,7 +3443,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                                 </linearGradient>
                               </defs>
                               <XAxis dataKey="name" hide />
-                              <Tooltip labelFormatter={(label) => `Ngày ${label}`} formatter={(value: any) => [`${value} bài`, 'Tổng số bài']} contentStyle={{ borderRadius: '12px', fontSize: '12px', fontWeight: 'bold', border: 'none', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)' }} cursor={{ stroke: '#cbd5e1', strokeWidth: 1, strokeDasharray: '3 3' }} />
+                              <Tooltip labelFormatter={(label) => isEn ? `Date ${label}` : `Ngày ${label}`} formatter={(value: any) => [isEn ? `${value} tests` : `${value} bài`, isEn ? 'Total tests' : 'Tổng số bài']} contentStyle={{ borderRadius: '12px', fontSize: '12px', fontWeight: 'bold', border: 'none', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)' }} cursor={{ stroke: '#cbd5e1', strokeWidth: 1, strokeDasharray: '3 3' }} />
                               <Area type="monotone" dataKey="cumulativeDone" stroke="#10b981" strokeWidth={2.5} fill="url(#colorDone)" activeDot={{ r: 5, fill: '#10b981', stroke: '#fff', strokeWidth: 2 }} />
                             </AreaChart>
                           </ResponsiveContainer>
@@ -3397,7 +3455,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                         <div className="relative z-10 mb-2">
                           <div className="flex items-center gap-1.5 whitespace-nowrap">
                             <span className="w-2 h-2 rounded-full bg-[#2ab4e8] shrink-0"></span>
-                            <span className="font-extrabold text-slate-500 text-[10px] sm:text-[11px] uppercase tracking-wider group-hover:text-[#0a5482] transition-colors">Lượt làm</span>
+                            <span className="font-extrabold text-slate-500 text-[10px] sm:text-[11px] uppercase tracking-wider group-hover:text-[#0a5482] transition-colors">{isEn ? 'Attempts' : 'Lượt làm'}</span>
                           </div>
                           <div className="font-black text-slate-800 text-2xl sm:text-[26px] leading-none mt-1.5">
                             {analyticsTotalTestsDone}
@@ -3413,7 +3471,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                                 </linearGradient>
                               </defs>
                               <XAxis dataKey="name" hide />
-                              <Tooltip labelFormatter={(label) => `Ngày ${label}`} formatter={(value: any) => [`${value} lượt`, 'Tổng số lượt']} contentStyle={{ borderRadius: '12px', fontSize: '12px', fontWeight: 'bold', border: 'none', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)' }} cursor={{ stroke: '#cbd5e1', strokeWidth: 1, strokeDasharray: '3 3' }} />
+                              <Tooltip labelFormatter={(label) => isEn ? `Date ${label}` : `Ngày ${label}`} formatter={(value: any) => [isEn ? `${value} attempts` : `${value} lượt`, isEn ? 'Total attempts' : 'Tổng số lượt']} contentStyle={{ borderRadius: '12px', fontSize: '12px', fontWeight: 'bold', border: 'none', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)' }} cursor={{ stroke: '#cbd5e1', strokeWidth: 1, strokeDasharray: '3 3' }} />
                               <Area type="monotone" dataKey="attempts" stroke="#0a5482" strokeWidth={2.5} fill="url(#colorAttempts)" activeDot={{ r: 5, fill: '#0a5482', stroke: '#fff', strokeWidth: 2 }} />
                             </AreaChart>
                           </ResponsiveContainer>
@@ -3425,7 +3483,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                         <div className="relative z-10 mb-2">
                           <div className="flex items-center gap-1.5 whitespace-nowrap">
                             <span className="w-2 h-2 rounded-full bg-orange-400 shrink-0"></span>
-                            <span className="font-extrabold text-slate-500 text-[10px] sm:text-[11px] uppercase tracking-wider group-hover:text-orange-600 transition-colors">Giờ học</span>
+                            <span className="font-extrabold text-slate-500 text-[10px] sm:text-[11px] uppercase tracking-wider group-hover:text-orange-600 transition-colors">{isEn ? 'Study Hours' : 'Giờ học'}</span>
                           </div>
                           <div className="font-black text-slate-800 text-2xl sm:text-[26px] leading-none mt-1.5">
                             {analyticsTotalTimeHours}h
@@ -3441,7 +3499,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                                 </linearGradient>
                               </defs>
                               <XAxis dataKey="name" hide />
-                              <Tooltip labelFormatter={(label) => `Ngày ${label}`} formatter={(value: any) => [`${value} giờ`, 'Thời gian học']} contentStyle={{ borderRadius: '12px', fontSize: '12px', fontWeight: 'bold', border: 'none', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)' }} cursor={{ stroke: '#cbd5e1', strokeWidth: 1, strokeDasharray: '3 3' }} />
+                              <Tooltip labelFormatter={(label) => isEn ? `Date ${label}` : `Ngày ${label}`} formatter={(value: any) => [isEn ? `${value} hrs` : `${value} giờ`, isEn ? 'Study time' : 'Thời gian học']} contentStyle={{ borderRadius: '12px', fontSize: '12px', fontWeight: 'bold', border: 'none', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)' }} cursor={{ stroke: '#cbd5e1', strokeWidth: 1, strokeDasharray: '3 3' }} />
                               <Area type="monotone" dataKey="time" stroke="#f97316" strokeWidth={2.5} fill="url(#colorTime)" activeDot={{ r: 5, fill: '#f97316', stroke: '#fff', strokeWidth: 2 }} />
                             </AreaChart>
                           </ResponsiveContainer>
@@ -3452,7 +3510,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                       <div className="bg-gradient-to-br from-[#073b5c] via-[#0a5482] to-[#0f172a] rounded-2xl border border-slate-800/40 shadow-xs p-3.5 sm:p-4 flex flex-col justify-between text-white relative overflow-hidden group hover:shadow-md transition-all">
                         <div className="relative z-10">
                           <span className="text-[10px] font-extrabold tracking-widest text-[#2ab4e8] uppercase block mb-1 whitespace-nowrap">
-                            {isIeltsContext ? 'IELTS AVERAGE' : 'ĐIỂM TB'}
+                            {isIeltsContext ? 'IELTS AVERAGE' : (isEn ? 'AVG SCORE' : 'ĐIỂM TB')}
                           </span>
                           {isIeltsContext ? (
                             <div className="font-black text-2xl sm:text-[26px] text-white tracking-tight leading-none mt-1.5">
@@ -3469,7 +3527,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                             </div>
                           )}
                           <span className="text-[10px] font-medium text-sky-200/75 mt-2 block leading-snug">
-                            {isIeltsContext ? '(Dựa trên 4 bài gần nhất)' : '(Toàn hệ thống)'}
+                            {isIeltsContext ? (isEn ? '(Based on recent 4 tests)' : '(Dựa trên 4 bài gần nhất)') : (isEn ? '(All courses)' : '(Toàn hệ thống)')}
                           </span>
                         </div>
                         <div className="absolute -right-4 -bottom-4 w-20 h-20 bg-[#2ab4e8]/15 rounded-full blur-xl pointer-events-none"></div>
@@ -3479,7 +3537,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                       <div className="bg-[#0f172a] rounded-2xl border border-amber-500/40 shadow-xs p-3.5 sm:p-4 flex flex-col justify-between text-white relative overflow-hidden group hover:border-amber-400 transition-all">
                         <div className="relative z-10 flex-1 flex flex-col justify-between">
                           <span className="text-[10px] font-extrabold tracking-widest text-amber-400 uppercase block mb-1 whitespace-nowrap">
-                            MỤC TIÊU ĐIỂM
+                            {isEn ? 'TARGET SCORE' : 'MỤC TIÊU ĐIỂM'}
                           </span>
                           <div className="mt-1">
                             {isIeltsContext ? (
@@ -3489,7 +3547,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                                 onChange={(e) => handleUpdateTarget('ielts', e.target.value)}
                                 placeholder="N/A"
                                 className="font-black text-amber-400 text-2xl sm:text-[26px] leading-none bg-transparent w-full outline-none cursor-pointer placeholder:text-amber-400/30 relative z-10"
-                                title="Click để sửa"
+                                title={isEn ? 'Click to edit' : 'Click để sửa'}
                               />
                             ) : analyticsCourse !== 'all' ? (
                               <div className="relative z-10">
@@ -3513,12 +3571,12 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                             ) : (
                               <div className="relative z-10">
                                 <span className="font-black text-amber-400/30 text-2xl sm:text-[26px] leading-none">--</span>
-                                <p className="text-[10px] text-amber-200/40 mt-1">Chọn 1 khóa cụ thể</p>
+                                <p className="text-[10px] text-amber-200/40 mt-1">{isEn ? 'Select a course' : 'Chọn 1 khóa cụ thể'}</p>
                               </div>
                             )}
                           </div>
                           <span className="text-[10px] font-medium text-slate-400 mt-2 block">
-                            {isIeltsContext ? 'Click số để sửa' : analyticsCourse !== 'all' ? 'Click để đổi' : ''}
+                            {isIeltsContext ? (isEn ? 'Click number to edit' : 'Click số để sửa') : analyticsCourse !== 'all' ? (isEn ? 'Click to change' : 'Click để đổi') : ''}
                           </span>
                         </div>
                         <div className="absolute right-1 bottom-1 text-4xl opacity-10 pointer-events-none">🎯</div>
@@ -3553,7 +3611,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                             <div className="flex items-center gap-2.5 mb-3">
                               <span className="w-1.5 h-5 bg-[#0a5482] rounded-full"></span>
                               <div className="w-8 h-8 rounded-xl bg-sky-50 border border-sky-200/80 text-[#0a5482] flex items-center justify-center text-base">📈</div>
-                              <h3 className="font-black text-sm sm:text-base text-slate-900 tracking-tight">Biểu đồ 4 Kỹ Năng</h3>
+                              <h3 className="font-black text-sm sm:text-base text-slate-900 tracking-tight">{isEn ? '4-Skill Progress Chart' : 'Biểu đồ 4 Kỹ Năng'}</h3>
                             </div>
                             <div className="w-full bg-slate-50/60 rounded-2xl p-2.5 sm:p-3.5 border border-slate-200/70 flex items-center justify-center" style={{ minHeight: 280 }}>
                               <ResponsiveContainer width="99%" height={260}>
@@ -3561,7 +3619,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                                   <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0" />
                                   <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{ fontSize: 10, fill: '#64748b', fontWeight: 600 }} dy={10} />
                                   <YAxis domain={[0, 9]} ticks={[0, 3, 5, 7, 9]} axisLine={false} tickLine={false} tick={{ fontSize: 10, fill: '#64748b', fontWeight: 600 }} />
-                                  <Tooltip labelFormatter={(label) => `Ngày ${label}`} contentStyle={{ borderRadius: '12px', fontSize: '11px', fontWeight: 'bold', border: 'none', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)' }} cursor={{ stroke: '#cbd5e1', strokeWidth: 1, strokeDasharray: '3 3' }} />
+                                  <Tooltip labelFormatter={(label) => isEn ? `Date ${label}` : `Ngày ${label}`} contentStyle={{ borderRadius: '12px', fontSize: '11px', fontWeight: 'bold', border: 'none', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)' }} cursor={{ stroke: '#cbd5e1', strokeWidth: 1, strokeDasharray: '3 3' }} />
                                   <Legend iconType="circle" wrapperStyle={{ fontSize: '11px', fontWeight: 'bold', paddingTop: '10px' }} />
                                   
                                   <Line type="monotone" dataKey="Nghe" name="Listening" stroke="#10b981" strokeWidth={2.5} dot={{ r: 3, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 5 }} connectNulls={true} />
@@ -3578,7 +3636,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                             <div className="flex items-center gap-2.5 mb-3">
                               <span className="w-1.5 h-5 bg-[#2ab4e8] rounded-full"></span>
                               <div className="w-8 h-8 rounded-xl bg-sky-50 border border-sky-200/80 text-[#0a5482] flex items-center justify-center text-base">🎯</div>
-                              <h3 className="font-black text-sm sm:text-base text-slate-900 tracking-tight">Tỷ Lệ Đúng Từng Dạng (%)</h3>
+                              <h3 className="font-black text-sm sm:text-base text-slate-900 tracking-tight">{isEn ? 'Accuracy by Question Type (%)' : 'Tỷ Lệ Đúng Từng Dạng (%)'}</h3>
                             </div>
                             <div className="w-full bg-slate-50/60 rounded-2xl p-2.5 sm:p-3.5 border border-slate-200/70 flex items-center justify-center" style={{ minHeight: 280 }}>
                               <ResponsiveContainer width="99%" height={260}>
@@ -3586,10 +3644,10 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                                   <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0" />
                                   <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{ fontSize: 10, fill: '#64748b', fontWeight: 600 }} dy={10} />
                                   <YAxis domain={[0, 100]} ticks={[0, 25, 50, 75, 100]} axisLine={false} tickLine={false} tick={{ fontSize: 10, fill: '#64748b', fontWeight: 600 }} />
-                                  <Tooltip labelFormatter={(label) => `Ngày ${label}`} formatter={(value: any, name: string) => [`${value}%`, name]} contentStyle={{ borderRadius: '12px', fontSize: '11px', fontWeight: 'bold', border: 'none', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)' }} cursor={{ stroke: '#cbd5e1', strokeWidth: 1, strokeDasharray: '3 3' }} />
+                                  <Tooltip labelFormatter={(label) => isEn ? `Date ${label}` : `Ngày ${label}`} formatter={(value: any, name: string) => [`${value}%`, name]} contentStyle={{ borderRadius: '12px', fontSize: '11px', fontWeight: 'bold', border: 'none', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)' }} cursor={{ stroke: '#cbd5e1', strokeWidth: 1, strokeDasharray: '3 3' }} />
                                   <Legend iconType="circle" wrapperStyle={{ fontSize: '11px', fontWeight: 'bold', paddingTop: '10px' }} />
                                   
-                                  <Line type="monotone" dataKey="Điền từ" name="Điền từ" stroke="#10b981" strokeWidth={2.5} dot={{ r: 3, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 5 }} connectNulls={true} />
+                                  <Line type="monotone" dataKey="Điền từ" name={isEn ? 'Completion' : 'Điền từ'} stroke="#10b981" strokeWidth={2.5} dot={{ r: 3, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 5 }} connectNulls={true} />
                                   <Line type="monotone" dataKey="Nhận định" name="T/F/NG" stroke="#f97316" strokeWidth={2.5} dot={{ r: 3, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 5 }} connectNulls={true} />
                                   <Line type="monotone" dataKey="Trắc nghiệm" name="MCQ/Checkbox" stroke="#0a5482" strokeWidth={2.5} dot={{ r: 3, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 5 }} connectNulls={true} />
                                   <Line type="monotone" dataKey="Matching" name="Matching" stroke="#d946ef" strokeWidth={2.5} dot={{ r: 3, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 5 }} connectNulls={true} />
@@ -3602,21 +3660,24 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                         {/* THANH PROGRESS BAR NẰM NGANG - 4 CARD TRÊN 1 DÒNG */}
                         <div className="bg-slate-50/80 rounded-2xl p-4 sm:p-5 border border-slate-200/80">
                           <h3 className="font-black text-xs sm:text-[13px] text-slate-900 uppercase tracking-tight mb-3 flex items-center gap-2">
-                            <span className="text-emerald-500">🏆</span> Tỷ lệ đúng tích lũy theo dạng câu hỏi
+                            <span className="text-emerald-500">🏆</span> {isEn ? 'Cumulative Accuracy by Question Type' : 'Tỷ lệ đúng tích lũy theo dạng câu hỏi'}
                           </h3>
                           <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-3">
                             {Object.entries(ieltsTypeStats).map(([key, data]) => {
                               const percent = data.total > 0 ? Math.round((data.correct / data.total) * 100) : 0;
+                              const displayKey = isEn
+                                ? (key.includes('Completion') ? 'Completion (Fill-in)' : key.includes('T/F/NG') ? 'True / False / NG' : key.includes('MCQ') ? 'Multiple Choice' : 'Matching')
+                                : key;
                               return (
                                 <div key={key} className="bg-white border border-slate-200/90 rounded-xl p-3.5 hover:border-[#2ab4e8] hover:shadow-xs transition-all flex flex-col justify-between">
                                   <div className="flex justify-between items-start mb-1.5 gap-1">
-                                    <span className="font-bold text-slate-700 text-[11px] sm:text-xs truncate" title={key}>{key}</span>
+                                    <span className="font-bold text-slate-700 text-[11px] sm:text-xs truncate" title={displayKey}>{displayKey}</span>
                                     <span className="font-black text-[#0a5482] text-[13px] sm:text-[14px] shrink-0">{percent}%</span>
                                   </div>
                                   <div className="w-full h-1.5 sm:h-2 bg-slate-100 rounded-full overflow-hidden mb-1 border border-slate-200/50">
                                     <div className="h-full bg-gradient-to-r from-[#0a5482] to-[#2ab4e8] rounded-full transition-all duration-1000" style={{width: `${percent}%`}}></div>
                                   </div>
-                                  <p className="text-[10px] text-slate-400 font-bold text-right tracking-wider">{data.correct}/{data.total} câu</p>
+                                  <p className="text-[10px] text-slate-400 font-bold text-right tracking-wider">{data.correct}/{data.total} {isEn ? 'qs' : 'câu'}</p>
                                 </div>
                               );
                             })}
@@ -3638,15 +3699,15 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                         </span>
                         <div>
                           <div className="text-[10px] font-extrabold uppercase tracking-widest text-amber-300">
-                            Nhiệm Vụ Bắt Buộc Trong Lộ Trình IELTS Premium
+                            {isEn ? 'Mandatory Milestone in IELTS Premium Roadmap' : 'Nhiệm Vụ Bắt Buộc Trong Lộ Trình IELTS Premium'}
                           </div>
                           <h3 className="font-black text-base sm:text-lg text-white tracking-tight leading-snug">
-                            Tiến Độ Bài Dịch Đọc &amp; Bài Dịch Nghe Cambridge IELTS (Thư Viện)
+                            {isEn ? 'Cambridge IELTS Reading & Listening Translation Progress (Library)' : 'Tiến Độ Bài Dịch Đọc & Bài Dịch Nghe Cambridge IELTS (Thư Viện)'}
                           </h3>
                         </div>
                       </div>
                       <span className="text-xs font-extrabold bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 px-3 py-1 rounded-full">
-                        ● Tự động Track Log khi đọc bài
+                        {isEn ? '● Auto-tracked while reading' : '● Tự động Track Log khi đọc bài'}
                       </span>
                     </div>
 
@@ -3654,10 +3715,21 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                       <div className="p-3.5 sm:p-4 rounded-2xl bg-amber-50/85 border border-amber-200/90 text-xs sm:text-[13px] text-amber-950 leading-relaxed flex items-start gap-2.5">
                         <span className="text-base shrink-0 mt-0.5">💡</span>
                         <div>
-                          <span className="font-extrabold">Yêu cầu từ Thầy Tony:</span> Sau khi làm mỗi đề Listening / Reading trong bộ{' '}
-                          <span className="font-bold">Cambridge IELTS 01 – 21</span>, học viên <span className="font-extrabold underline">bắt buộc</span> phải vào mục{' '}
-                          <span className="font-bold">Thư Viện</span> để hoàn thành <span className="font-bold">Bài dịch đọc</span> (đối chiếu song ngữ từng khổ/từng câu) và{' '}
-                          <span className="font-bold">Bài dịch nghe</span> (nghe lại Audio kết hợp soi bản dịch). Hệ thống tự động ghi nhận từng bài em đã đọc vào tiến độ dưới đây.
+                          {isEn ? (
+                            <>
+                              <span className="font-extrabold">Teacher Tony&apos;s Requirement:</span> After completing each Listening / Reading test in{' '}
+                              <span className="font-bold">Cambridge IELTS 01 – 21</span>, students <span className="font-extrabold underline">must</span> visit the{' '}
+                              <span className="font-bold">Library</span> to review the <span className="font-bold">Reading Translation</span> (paragraph-by-paragraph bilingual check) and{' '}
+                              <span className="font-bold">Listening Translation</span> (re-listen to audio with script). Every article you study is tracked automatically below.
+                            </>
+                          ) : (
+                            <>
+                              <span className="font-extrabold">Yêu cầu từ Thầy Tony:</span> Sau khi làm mỗi đề Listening / Reading trong bộ{' '}
+                              <span className="font-bold">Cambridge IELTS 01 – 21</span>, học viên <span className="font-extrabold underline">bắt buộc</span> phải vào mục{' '}
+                              <span className="font-bold">Thư Viện</span> để hoàn thành <span className="font-bold">Bài dịch đọc</span> (đối chiếu song ngữ từng khổ/từng câu) và{' '}
+                              <span className="font-bold">Bài dịch nghe</span> (nghe lại Audio kết hợp soi bản dịch). Hệ thống tự động ghi nhận từng bài em đã đọc vào tiến độ dưới đây.
+                            </>
+                          )}
                         </div>
                       </div>
 
@@ -3672,21 +3744,21 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                                 </span>
                                 <div>
                                   <h4 className="font-black text-sm sm:text-[15px] text-slate-900 leading-tight">
-                                    Bài dịch đọc Cambridge IELTS
+                                    {isEn ? 'Cambridge IELTS Reading Translations' : 'Bài dịch đọc Cambridge IELTS'}
                                   </h4>
                                   <p className="text-[11.5px] text-slate-500 font-medium mt-0.5">
-                                    Trọn bộ Cam 01 – Cam 21 (252 bài đọc song ngữ)
+                                    {isEn ? 'Full Cam 01 – Cam 21 (252 bilingual passages)' : 'Trọn bộ Cam 01 – Cam 21 (252 bài đọc song ngữ)'}
                                   </p>
                                 </div>
                               </div>
                               <span className="px-2.5 py-1 rounded-lg bg-[#0a5482] text-white font-black text-xs shrink-0">
-                                {ieltsLibraryStats.readingCount} / {ieltsLibraryStats.readingTotal} bài
+                                {ieltsLibraryStats.readingCount} / {ieltsLibraryStats.readingTotal} {isEn ? 'articles' : 'bài'}
                               </span>
                             </div>
 
                             <div>
                               <div className="flex justify-between text-[11px] font-bold text-slate-500 mb-1">
-                                <span>Tiến độ hoàn thành bài dịch đọc</span>
+                                <span>{isEn ? 'Reading translation progress' : 'Tiến độ hoàn thành bài dịch đọc'}</span>
                                 <span className="text-[#0a5482] font-black">{ieltsLibraryStats.readingPercent}%</span>
                               </div>
                               <div className="w-full h-2.5 bg-slate-200/80 rounded-full overflow-hidden">
@@ -3700,7 +3772,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                             {ieltsLibraryStats.recentReading.length > 0 ? (
                               <div className="space-y-1.5 pt-1">
                                 <div className="text-[11px] font-extrabold uppercase tracking-wider text-slate-400">
-                                  Bài dịch đọc gần nhất:
+                                  {isEn ? 'Recently studied:' : 'Bài dịch đọc gần nhất:'}
                                 </div>
                                 {ieltsLibraryStats.recentReading.map((item) => (
                                   <div
@@ -3715,7 +3787,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                               </div>
                             ) : (
                               <p className="text-xs text-slate-400 italic py-1">
-                                Chưa có bài dịch đọc nào được ghi nhận. Hãy bấm nút bên dưới để bắt đầu đọc dịch!
+                                {isEn ? 'No reading translations logged yet. Click below to start studying!' : 'Chưa có bài dịch đọc nào được ghi nhận. Hãy bấm nút bên dưới để bắt đầu đọc dịch!'}
                               </p>
                             )}
                           </div>
@@ -3726,7 +3798,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                             className="w-full py-2.5 px-4 rounded-xl bg-[#0a5482] hover:bg-[#084266] text-white font-extrabold text-xs sm:text-[13px] transition flex items-center justify-center gap-2 shadow-xs cursor-pointer active:scale-95"
                           >
                             <span>📖</span>
-                            <span>Mở Bài Dịch Đọc Cambridge (01 – 21) →</span>
+                            <span>{isEn ? 'Open Cambridge Reading (01 – 21) →' : 'Mở Bài Dịch Đọc Cambridge (01 – 21) →'}</span>
                           </button>
                         </div>
 
@@ -3740,21 +3812,21 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                                 </span>
                                 <div>
                                   <h4 className="font-black text-sm sm:text-[15px] text-slate-900 leading-tight">
-                                    Bài dịch nghe Cambridge IELTS
+                                    {isEn ? 'Cambridge IELTS Listening Translations' : 'Bài dịch nghe Cambridge IELTS'}
                                   </h4>
                                   <p className="text-[11.5px] text-slate-500 font-medium mt-0.5">
-                                    Trọn bộ Cam 01 – Cam 21 (336 bài nghe + Audio)
+                                    {isEn ? 'Full Cam 01 – Cam 21 (336 listening scripts + Audio)' : 'Trọn bộ Cam 01 – Cam 21 (336 bài nghe + Audio)'}
                                   </p>
                                 </div>
                               </div>
                               <span className="px-2.5 py-1 rounded-lg bg-emerald-600 text-white font-black text-xs shrink-0">
-                                {ieltsLibraryStats.listeningCount} / {ieltsLibraryStats.listeningTotal} bài
+                                {ieltsLibraryStats.listeningCount} / {ieltsLibraryStats.listeningTotal} {isEn ? 'articles' : 'bài'}
                               </span>
                             </div>
 
                             <div>
                               <div className="flex justify-between text-[11px] font-bold text-slate-500 mb-1">
-                                <span>Tiến độ hoàn thành bài dịch nghe</span>
+                                <span>{isEn ? 'Listening translation progress' : 'Tiến độ hoàn thành bài dịch nghe'}</span>
                                 <span className="text-emerald-700 font-black">{ieltsLibraryStats.listeningPercent}%</span>
                               </div>
                               <div className="w-full h-2.5 bg-slate-200/80 rounded-full overflow-hidden">
@@ -3768,7 +3840,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                             {ieltsLibraryStats.recentListening.length > 0 ? (
                               <div className="space-y-1.5 pt-1">
                                 <div className="text-[11px] font-extrabold uppercase tracking-wider text-slate-400">
-                                  Bài dịch nghe gần nhất:
+                                  {isEn ? 'Recently studied:' : 'Bài dịch nghe gần nhất:'}
                                 </div>
                                 {ieltsLibraryStats.recentListening.map((item) => (
                                   <div
@@ -3783,7 +3855,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                               </div>
                             ) : (
                               <p className="text-xs text-slate-400 italic py-1">
-                                Chưa có bài dịch nghe nào được ghi nhận. Hãy bấm nút bên dưới để bắt đầu nghe dịch!
+                                {isEn ? 'No listening translations logged yet. Click below to start!' : 'Chưa có bài dịch nghe nào được ghi nhận. Hãy bấm nút bên dưới để bắt đầu nghe dịch!'}
                               </p>
                             )}
                           </div>
@@ -3794,7 +3866,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                             className="w-full py-2.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs sm:text-[13px] transition flex items-center justify-center gap-2 shadow-xs cursor-pointer active:scale-95"
                           >
                             <span>🎧</span>
-                            <span>Mở Bài Dịch Nghe Cambridge (01 – 21) →</span>
+                            <span>{isEn ? 'Open Cambridge Listening (01 – 21) →' : 'Mở Bài Dịch Nghe Cambridge (01 – 21) →'}</span>
                           </button>
                         </div>
                       </div>
@@ -3820,7 +3892,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                             : 'text-slate-600 hover:text-[#0a5482] hover:bg-white/50'
                         }`}
                       >
-                        <span>📋</span> Lịch sử làm bài
+                        <span>📋</span> {isEn ? 'Test History' : 'Lịch sử làm bài'}
                       </button>
                       <button
                         type="button"
@@ -3831,12 +3903,14 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                             : 'text-slate-600 hover:text-[#0a5482] hover:bg-white/50'
                         }`}
                       >
-                        <span>👀</span> Lịch sử hoạt động
+                        <span>👀</span> {isEn ? 'Activity Log' : 'Lịch sử hoạt động'}
                       </button>
                     </div>
 
                     <span className="text-xs font-extrabold text-[#0a5482] bg-sky-50 border border-sky-200/80 px-2.5 py-1 rounded-full">
-                      {analyticsView === 'scores' ? `${processedHistory.length} bài` : `${filteredActivities.length} hoạt động`}
+                      {analyticsView === 'scores'
+                        ? `${processedHistory.length} ${isEn ? 'tests' : 'bài'}`
+                        : `${filteredActivities.length} ${isEn ? 'events' : 'hoạt động'}`}
                     </span>
                   </div>
 
@@ -3847,17 +3921,17 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                         <table className="w-full text-left border-collapse min-w-[460px]">
                           <thead>
                             <tr className="border-b border-slate-200/80 text-[11px] text-slate-500 uppercase tracking-widest bg-slate-50/80">
-                              <th className="px-4 sm:px-5 py-3.5 font-extrabold">Tên bài kiểm tra</th>
-                              <th className="px-3 sm:px-4 py-3.5 font-extrabold text-center">Ngày</th>
-                              <th className="px-3 sm:px-4 py-3.5 font-extrabold text-center">Điểm số</th>
-                              <th className="px-4 sm:px-5 py-3.5 font-extrabold text-right">Chi tiết</th>
+                              <th className="px-4 sm:px-5 py-3.5 font-extrabold">{isEn ? 'Test Name' : 'Tên bài kiểm tra'}</th>
+                              <th className="px-3 sm:px-4 py-3.5 font-extrabold text-center">{isEn ? 'Date' : 'Ngày'}</th>
+                              <th className="px-3 sm:px-4 py-3.5 font-extrabold text-center">{isEn ? 'Score' : 'Điểm số'}</th>
+                              <th className="px-4 sm:px-5 py-3.5 font-extrabold text-right">{isEn ? 'Details' : 'Chi tiết'}</th>
                             </tr>
                           </thead>
                           <tbody className="divide-y divide-slate-100 bg-white">
                             {paginatedHistory.length === 0 ? (
                               <tr>
                                 <td colSpan={4} className="text-center py-12 text-slate-400 font-medium text-sm">
-                                  Chưa có bài kiểm tra nào được hoàn thành
+                                  {isEn ? 'No completed tests yet' : 'Chưa có bài kiểm tra nào được hoàn thành'}
                                 </td>
                               </tr>
                             ) : (
@@ -3908,7 +3982,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                                         onClick={() => setViewingHistoryDetail(history)} 
                                         className="inline-flex items-center bg-sky-50 border border-sky-200/90 text-[#0a5482] font-extrabold px-3 py-1.5 rounded-xl hover:border-[#0a5482] hover:bg-[#0a5482] hover:text-white transition-all text-[11px] uppercase tracking-wider shadow-2xs cursor-pointer"
                                       >
-                                        Chi tiết
+                                        {isEn ? 'Details' : 'Chi tiết'}
                                       </button>
                                     </td>
                                   </tr>
@@ -3926,7 +4000,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                         {paginatedActivities.length === 0 ? (
                           <div className="text-center py-16">
                             <p className="text-5xl mb-3">📭</p>
-                            <p className="text-slate-500 font-bold text-sm">Chưa có hoạt động nào được ghi nhận</p>
+                            <p className="text-slate-500 font-bold text-sm">{isEn ? 'No activity recorded yet' : 'Chưa có hoạt động nào được ghi nhận'}</p>
                           </div>
                         ) : (
                           <div className="relative pl-6 space-y-3 before:absolute before:left-2.5 before:top-2 before:bottom-2 before:w-0.5 before:bg-slate-200">
@@ -3941,34 +4015,34 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                               }
 
                               let icon = '📖';
-                              let title = 'HOÀN THÀNH BÀI GIẢNG';
+                              let title = isEn ? 'LECTURE COMPLETED' : 'HOÀN THÀNH BÀI GIẢNG';
                               let desc = '';
 
                               if (act.action_type === 'login') {
                                 icon = '🔑';
-                                title = 'ĐĂNG NHẬP HỆ THỐNG';
-                                desc = details?.message || 'Học sinh đăng nhập thành công vào LMS Tony English.';
+                                title = isEn ? 'SIGNED IN' : 'ĐĂNG NHẬP HỆ THỐNG';
+                                desc = isEn ? 'Signed in to TonyEnglish Student Portal.' : (details?.message || 'Học sinh đăng nhập thành công vào LMS Tony English.');
                               } else if (act.action_type === 'finish_test') {
                                 icon = '📝';
-                                title = 'NỘP BÀI KIỂM TRA';
-                                const testName = details?.test_title || details?.title || details?.name || 'Bài kiểm tra';
+                                title = isEn ? 'TEST SUBMITTED' : 'NỘP BÀI KIỂM TRA';
+                                const testName = details?.test_title || details?.title || details?.name || (isEn ? 'Practice Test' : 'Bài kiểm tra');
                                 const scorePart = (details?.score !== undefined && details?.total !== undefined)
-                                  ? ` • Điểm số: ${details.score}/${details.total}`
+                                  ? (isEn ? ` • Score: ${details.score}/${details.total}` : ` • Điểm số: ${details.score}/${details.total}`)
                                   : details?.score !== undefined
-                                    ? ` • Điểm: ${details.score}`
+                                    ? (isEn ? ` • Score: ${details.score}` : ` • Điểm: ${details.score}`)
                                     : '';
-                                desc = `Đã hoàn thành: "${testName}"${scorePart}`;
+                                desc = `${isEn ? 'Completed' : 'Đã hoàn thành'}: "${testName}"${scorePart}`;
                               } else if (act.action_type === 'call_tutor') {
                                 icon = '📞';
-                                title = 'HỎI ĐÁP GIA SƯ AI / VOICE';
-                                const durPart = details?.duration ? `Thời lượng: ${details.duration} giây` : '';
-                                const topicPart = details?.topic ? `Chủ đề: "${details.topic}"` : '';
-                                desc = [durPart, topicPart].filter(Boolean).join(' • ') || details?.message || 'Đã đàm thoại với gia sư AI.';
+                                title = isEn ? 'AI TUTOR / VOICE PRACTICE' : 'HỎI ĐÁP GIA SƯ AI / VOICE';
+                                const durPart = details?.duration ? (isEn ? `Duration: ${details.duration}s` : `Thời lượng: ${details.duration} giây`) : '';
+                                const topicPart = details?.topic ? (isEn ? `Topic: "${details.topic}"` : `Chủ đề: "${details.topic}"`) : '';
+                                desc = [durPart, topicPart].filter(Boolean).join(' • ') || details?.message || (isEn ? 'Practiced with AI Tutor.' : 'Đã đàm thoại với gia sư AI.');
                               } else if (act.action_type === 'finish_lecture') {
                                 icon = '📖';
-                                title = 'HOÀN THÀNH BÀI GIẢNG';
-                                const lecName = details?.lecture_title || details?.title || details?.name || (typeof details === 'string' ? details : 'Bài giảng');
-                                desc = `Đã học xong: "${lecName}"`;
+                                title = isEn ? 'LECTURE COMPLETED' : 'HOÀN THÀNH BÀI GIẢNG';
+                                const lecName = details?.lecture_title || details?.title || details?.name || (typeof details === 'string' ? details : (isEn ? 'Lecture' : 'Bài giảng'));
+                                desc = `${isEn ? 'Finished lesson' : 'Đã học xong'}: "${lecName}"`;
                               } else if (act.action_type === 'read_library') {
                                 icon =
                                   details?.activity_kind === 'watch_video' || details?.library_type === 'library_video'
@@ -3978,47 +4052,47 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                                     : '📚';
                                 title =
                                   details?.library_type === 'cambridge_reading_translation'
-                                    ? 'ĐỌC BÀI DỊCH ĐỌC CAMBRIDGE'
+                                    ? (isEn ? 'CAMBRIDGE READING TRANSLATION' : 'ĐỌC BÀI DỊCH ĐỌC CAMBRIDGE')
                                     : details?.library_type === 'cambridge_listening_translation'
-                                    ? 'NGHE & DỊCH CAMBRIDGE LISTENING'
+                                    ? (isEn ? 'CAMBRIDGE LISTENING TRANSLATION' : 'NGHE & DỊCH CAMBRIDGE LISTENING')
                                     : details?.activity_kind === 'watch_video' || details?.library_type === 'library_video'
-                                    ? 'XEM VIDEO THƯ VIỆN'
+                                    ? (isEn ? 'WATCHED LIBRARY VIDEO' : 'XEM VIDEO THƯ VIỆN')
                                     : details?.is_ebook || details?.activity_kind === 'read_ebook'
-                                    ? 'ĐỌC SÁCH E-BOOK THƯ VIỆN'
-                                    : 'ĐỌC TÀI LIỆU THƯ VIỆN';
-                                const artTitle = details?.article_title || details?.title || 'Tài liệu thư viện';
+                                    ? (isEn ? 'READ LIBRARY E-BOOK' : 'ĐỌC SÁCH E-BOOK THƯ VIỆN')
+                                    : (isEn ? 'READ LIBRARY ARTICLE' : 'ĐỌC TÀI LIỆU THƯ VIỆN');
+                                const artTitle = details?.article_title || details?.title || (isEn ? 'Library Article' : 'Tài liệu thư viện');
                                 const cateName = details?.sub_category_name || details?.category_name || '';
-                                const pagePart = details?.ebook_page ? ` • Trang ${details.ebook_page}${details.ebook_total_pages ? `/${details.ebook_total_pages}` : ''}` : '';
-                                desc = `Đã đọc: "${artTitle}"${cateName ? ` • (${cateName})` : ''}${pagePart}`;
+                                const pagePart = details?.ebook_page ? ` • ${isEn ? 'Page' : 'Trang'} ${details.ebook_page}${details.ebook_total_pages ? `/${details.ebook_total_pages}` : ''}` : '';
+                                desc = `${isEn ? 'Studied' : 'Đã đọc'}: "${artTitle}"${cateName ? ` • (${cateName})` : ''}${pagePart}`;
                               } else if (act.action_type === 'library_exercise') {
                                 icon = '🎯';
                                 title =
                                   details?.exercise_kind === 'video_quiz'
-                                    ? 'NỘP QUIZ VIDEO THƯ VIỆN'
+                                    ? (isEn ? 'SUBMITTED VIDEO QUIZ' : 'NỘP QUIZ VIDEO THƯ VIỆN')
                                     : details?.exercise_kind === 'speaking_podcast'
-                                    ? 'LUYỆN NÓI PODCAST THƯ VIỆN'
-                                    : 'NỘP BÀI TẬP THƯ VIỆN';
-                                const itemTitle = details?.item_title || details?.article_title || 'Bài tập thư viện';
+                                    ? (isEn ? 'SPEAKING PODCAST PRACTICE' : 'LUYỆN NÓI PODCAST THƯ VIỆN')
+                                    : (isEn ? 'SUBMITTED LIBRARY EXERCISE' : 'NỘP BÀI TẬP THƯ VIỆN');
+                                const itemTitle = details?.item_title || details?.article_title || (isEn ? 'Library Exercise' : 'Bài tập thư viện');
                                 const scoreStr =
                                   typeof details?.score === 'number' && typeof details?.total_questions === 'number'
-                                    ? ` • Đạt ${details.score}/${details.total_questions} câu (${details.percent ?? 0}%)`
+                                    ? (isEn ? ` • Scored ${details.score}/${details.total_questions} (${details.percent ?? 0}%)` : ` • Đạt ${details.score}/${details.total_questions} câu (${details.percent ?? 0}%)`)
                                     : '';
-                                desc = `Đã hoàn thành: "${itemTitle}"${scoreStr}`;
+                                desc = `${isEn ? 'Completed' : 'Đã hoàn thành'}: "${itemTitle}"${scoreStr}`;
                               } else {
                                 icon = '📌';
-                                title = (act.action_type || 'HOẠT ĐỘNG').toUpperCase();
+                                title = (act.action_type || (isEn ? 'ACTIVITY' : 'HOẠT ĐỘNG')).toUpperCase();
                                 if (details && typeof details === 'object') {
                                   desc = details.lecture_title 
-                                    ? `Đã học xong: "${details.lecture_title}"`
+                                    ? `${isEn ? 'Finished lesson' : 'Đã học xong'}: "${details.lecture_title}"`
                                     : details.test_title 
-                                      ? `Đã hoàn thành: "${details.test_title}"`
+                                      ? `${isEn ? 'Completed' : 'Đã hoàn thành'}: "${details.test_title}"`
                                       : details.message || details.title || '';
                                 } else {
                                   desc = typeof details === 'string' ? details : '';
                                 }
                               }
 
-                              const dateStr = new Date(act.created_at).toLocaleString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+                              const dateStr = new Date(act.created_at).toLocaleString(isEn ? 'en-GB' : 'vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' });
                               return (
                                 <div key={act.id || idx} className="relative group">
                                   <div className="absolute -left-[27px] top-1.5 w-6 h-6 rounded-full bg-white border-2 border-sky-400 flex items-center justify-center text-xs shadow-xs group-hover:scale-110 transition-transform">
@@ -4070,14 +4144,14 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2.5 mb-1.5">
                   <h2 className="text-2xl md:text-3xl font-black text-white tracking-tight">{displayUserName}</h2>
                   <span className="text-[#2ab4e8] font-extrabold text-[11px] bg-white/10 px-3 py-0.5 rounded-full border border-white/15 uppercase tracking-widest">
-                    {userProfile?.role === 'admin' ? 'Quản trị viên' : 'Học viên TonyEnglish'}
+                    {userProfile?.role === 'admin' ? (isEn ? 'Administrator' : 'Quản trị viên') : (isEn ? 'TonyEnglish Student' : 'Học viên TonyEnglish')}
                   </span>
                 </div>
                 <p className="text-slate-300 text-[14px] flex items-center justify-center sm:justify-start gap-1.5 font-medium">
                   <svg className="w-4 h-4 text-[#2ab4e8]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
-                  {currentUser?.email || "Chưa có email"}
+                  {currentUser?.email || (isEn ? 'No email set' : 'Chưa có email')}
                 </p>
               </div>
             </div>
@@ -4089,8 +4163,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                   👤
                 </div>
                 <div>
-                  <h3 className="font-black text-lg text-slate-800 tracking-tight">Thông Tin Cá Nhân</h3>
-                  <p className="text-slate-400 text-[13px]">Cập nhật họ tên hiển thị và mục tiêu học tập</p>
+                  <h3 className="font-black text-lg text-slate-800 tracking-tight">{isEn ? 'Personal Information' : 'Thông Tin Cá Nhân'}</h3>
+                  <p className="text-slate-400 text-[13px]">{isEn ? 'Update your display name and study target' : 'Cập nhật họ tên hiển thị và mục tiêu học tập'}</p>
                 </div>
               </div>
 
@@ -4109,31 +4183,31 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
               <form onSubmit={handleUpdateProfile} className="space-y-4">
                 <div className="space-y-1.5">
-                  <label className="text-[12px] font-bold text-slate-500 uppercase tracking-widest ml-1">Họ và tên</label>
+                  <label className="text-[12px] font-bold text-slate-500 uppercase tracking-widest ml-1">{isEn ? 'Full Name' : 'Họ và tên'}</label>
                   <input 
                     type="text" 
                     value={newFullName} 
                     onChange={e => setNewFullName(e.target.value)} 
                     className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 font-semibold text-slate-800 focus:border-[#2ab4e8] focus:bg-white focus:ring-4 focus:ring-[#2ab4e8]/10 outline-none transition-all text-[15px]" 
-                    placeholder="Nhập họ và tên..." 
+                    placeholder={isEn ? 'Enter your full name...' : 'Nhập họ và tên...'} 
                   />
                 </div>
                 
                 <div className="space-y-1.5">
-                  <label className="text-[12px] font-bold text-slate-500 uppercase tracking-widest ml-1">Mục tiêu IELTS / Điểm số</label>
+                  <label className="text-[12px] font-bold text-slate-500 uppercase tracking-widest ml-1">{isEn ? 'IELTS / Score Target' : 'Mục tiêu IELTS / Điểm số'}</label>
                   <input 
                     type="text" 
                     value={courseTargets.ielts || ''} 
                     onChange={e => handleUpdateTarget('ielts', e.target.value)} 
                     className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 font-semibold text-slate-800 focus:border-amber-500 focus:bg-white focus:ring-4 focus:ring-amber-500/10 outline-none transition-all text-[15px]" 
-                    placeholder="Ví dụ: 7.0 hoặc A*" 
+                    placeholder={isEn ? 'e.g., 7.0 or A*' : 'Ví dụ: 7.0 hoặc A*'} 
                   />
                 </div>
                 
                 <div className="space-y-1.5">
                   <div className="flex justify-between items-center ml-1">
-                    <label className="text-[12px] font-bold text-slate-500 uppercase tracking-widest">Email đăng nhập</label>
-                    <span className="text-[11px] text-slate-400 font-medium flex items-center gap-1">🔒 Cố định</span>
+                    <label className="text-[12px] font-bold text-slate-500 uppercase tracking-widest">{isEn ? 'Login Email' : 'Email đăng nhập'}</label>
+                    <span className="text-[11px] text-slate-400 font-medium flex items-center gap-1">🔒 {isEn ? 'Fixed' : 'Cố định'}</span>
                   </div>
                   <input 
                     type="email" 
@@ -4152,10 +4226,10 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                     {isUpdatingProfile ? (
                       <>
                         <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                        <span>Đang lưu...</span>
+                        <span>{isEn ? 'Saving...' : 'Đang lưu...'}</span>
                       </>
                     ) : (
-                      'Lưu Thông Tin Cá Nhân'
+                      isEn ? 'Save Personal Information' : 'Lưu Thông Tin Cá Nhân'
                     )}
                   </button>
                 </div>
@@ -4169,8 +4243,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                   🔐
                 </div>
                 <div>
-                  <h3 className="font-black text-lg text-slate-800 tracking-tight">Đổi Mật Khẩu Tài Khoản</h3>
-                  <p className="text-slate-400 text-[13px]">Bảo vệ tài khoản với mật khẩu mới có ít nhất 6 ký tự</p>
+                  <h3 className="font-black text-lg text-slate-800 tracking-tight">{isEn ? 'Change Password' : 'Đổi Mật Khẩu Tài Khoản'}</h3>
+                  <p className="text-slate-400 text-[13px]">{isEn ? 'Protect your account with a new password of at least 6 characters' : 'Bảo vệ tài khoản với mật khẩu mới có ít nhất 6 ký tự'}</p>
                 </div>
               </div>
 
@@ -4189,11 +4263,11 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
               <form onSubmit={handleChangePassword} className="space-y-4">
                 <div className="space-y-1.5">
-                  <label className="text-[12px] font-bold text-slate-500 uppercase tracking-widest ml-1">Mật khẩu mới</label>
+                  <label className="text-[12px] font-bold text-slate-500 uppercase tracking-widest ml-1">{isEn ? 'New Password' : 'Mật khẩu mới'}</label>
                   <div className="relative">
                     <input 
                       type={showNewPassword ? 'text' : 'password'}
-                      placeholder="Nhập mật khẩu mới (tối thiểu 6 ký tự)..." 
+                      placeholder={isEn ? 'Enter new password (min 6 characters)...' : 'Nhập mật khẩu mới (tối thiểu 6 ký tự)...'} 
                       value={newPassword} 
                       onChange={(e) => {
                         setNewPassword(e.target.value);
@@ -4221,11 +4295,11 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 </div>
 
                 <div className="space-y-1.5">
-                  <label className="text-[12px] font-bold text-slate-500 uppercase tracking-widest ml-1">Xác nhận mật khẩu mới</label>
+                  <label className="text-[12px] font-bold text-slate-500 uppercase tracking-widest ml-1">{isEn ? 'Confirm New Password' : 'Xác nhận mật khẩu mới'}</label>
                   <div className="relative">
                     <input 
                       type={showConfirmPassword ? 'text' : 'password'}
-                      placeholder="Nhập lại mật khẩu mới..." 
+                      placeholder={isEn ? 'Re-enter new password...' : 'Nhập lại mật khẩu mới...'} 
                       value={confirmPassword} 
                       onChange={(e) => {
                         setConfirmPassword(e.target.value);
@@ -4251,10 +4325,10 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                     </button>
                   </div>
                   {confirmPassword && newPassword && confirmPassword !== newPassword && (
-                    <p className="text-[12px] text-rose-500 font-semibold ml-1">Mật khẩu xác nhận không khớp!</p>
+                    <p className="text-[12px] text-rose-500 font-semibold ml-1">{isEn ? 'Passwords do not match!' : 'Mật khẩu xác nhận không khớp!'}</p>
                   )}
                   {confirmPassword && newPassword && confirmPassword === newPassword && (
-                    <p className="text-[12px] text-emerald-600 font-semibold ml-1 flex items-center gap-1">✓ Mật khẩu khớp</p>
+                    <p className="text-[12px] text-emerald-600 font-semibold ml-1 flex items-center gap-1">✓ {isEn ? 'Passwords match' : 'Mật khẩu khớp'}</p>
                   )}
                 </div>
 
@@ -4267,10 +4341,10 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                     {isChangingPassword ? (
                       <>
                         <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                        <span>Đang cập nhật mật khẩu...</span>
+                        <span>{isEn ? 'Updating password...' : 'Đang cập nhật mật khẩu...'}</span>
                       </>
                     ) : (
-                      'Cập Nhật Mật Khẩu Mới ➔'
+                      isEn ? 'Update New Password ➔' : 'Cập Nhật Mật Khẩu Mới ➔'
                     )}
                   </button>
                 </div>
@@ -4300,7 +4374,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 <span className="text-[#2ab4e8]">TONY</span>ENGLISH <span className="text-xs font-semibold text-slate-400">• Student Portal</span>
               </div>
               <p className="text-xs text-slate-500">
-                © 2013–2026 TonyEnglish.vn — Hệ sinh thái đào tạo Tiếng Anh &amp; Luyện thi thông minh tích hợp AI.
+                {isEn
+                  ? '© 2013–2026 TonyEnglish.vn — Smart AI-Powered English Training & Exam Ecosystem.'
+                  : '© 2013–2026 TonyEnglish.vn — Hệ sinh thái đào tạo Tiếng Anh & Luyện thi thông minh tích hợp AI.'}
               </p>
             </div>
           </div>
@@ -4315,7 +4391,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               }}
               className="hover:text-[#2ab4e8] transition-colors cursor-pointer"
             >
-              🏠 Trang chủ
+              🏠 {isEn ? 'Home' : 'Trang chủ'}
             </button>
             <span>•</span>
             <a
@@ -4328,7 +4404,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               }}
               className="hover:text-[#2ab4e8] transition-colors cursor-pointer"
             >
-              🎓 Các khóa học
+              🎓 {isEn ? 'Courses' : 'Các khóa học'}
             </a>
             <span>•</span>
             <a
@@ -4341,7 +4417,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               }}
               className="hover:text-[#2ab4e8] transition-colors cursor-pointer"
             >
-              📚 Thư viện bài đọc
+              📚 {isEn ? 'Reading Library' : 'Thư viện bài đọc'}
             </a>
             <span>•</span>
             <a
@@ -4354,7 +4430,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               }}
               className="hover:text-[#2ab4e8] transition-colors cursor-pointer"
             >
-              🎬 Kho Video
+              🎬 {isEn ? 'Videos' : 'Kho Video'}
             </a>
           </div>
         </div>
@@ -4366,7 +4442,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[100] flex items-center justify-center p-4 animate-in fade-in duration-200">
           <div className="bg-white rounded-3xl w-full max-w-lg shadow-2xl overflow-hidden border border-slate-200 animate-in zoom-in-95">
              <div className="bg-gradient-to-r from-[#0a5482] to-[#0f172a] px-7 py-5 text-white flex justify-between items-center">
-                <h3 className="font-black text-[13px] uppercase tracking-widest text-[#2ab4e8]">Bảng Kết Quả Làm Bài</h3>
+                <h3 className="font-black text-[13px] uppercase tracking-widest text-[#2ab4e8]">{isEn ? 'Test Result Summary' : 'Bảng Kết Quả Làm Bài'}</h3>
                 <button onClick={() => setViewingHistoryDetail(null)} className="text-white/70 hover:text-white w-8 h-8 rounded-full hover:bg-white/10 flex items-center justify-center transition-colors cursor-pointer">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
                 </button>
@@ -4375,15 +4451,15 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
              <div className="p-7 md:p-9">
                 <div className="text-center mb-7 border-b border-slate-100 pb-7">
                    <h2 className="text-xl sm:text-2xl font-black text-slate-800 mb-2 leading-tight">{viewingHistoryDetail.name}</h2>
-                   <p className="text-slate-500 font-medium text-[13px] mb-6">Nộp lúc: <span className="text-slate-700">{formatDate(viewingHistoryDetail.date)}</span></p>
+                   <p className="text-slate-500 font-medium text-[13px] mb-6">{isEn ? 'Submitted at:' : 'Nộp lúc:'} <span className="text-slate-700">{formatDate(viewingHistoryDetail.date)}</span></p>
                    
                    <div className="flex justify-center gap-4">
                       <div className="bg-slate-50 border border-slate-200 px-6 py-4 rounded-2xl flex-1 shadow-2xs">
-                         <p className="text-[11px] font-bold uppercase text-slate-500 tracking-widest mb-1">Thời gian</p>
-                         <p className="text-2xl font-black text-slate-800">{viewingHistoryDetail.timeSpent} <span className="text-[13px] font-bold text-slate-500 uppercase">phút</span></p>
+                         <p className="text-[11px] font-bold uppercase text-slate-500 tracking-widest mb-1">{isEn ? 'Time Spent' : 'Thời gian'}</p>
+                         <p className="text-2xl font-black text-slate-800">{viewingHistoryDetail.timeSpent} <span className="text-[13px] font-bold text-slate-500 uppercase">{isEn ? 'mins' : 'phút'}</span></p>
                       </div>
                       <div className="bg-emerald-50 border border-emerald-200 px-6 py-4 rounded-2xl flex-1 shadow-2xs">
-                         <p className="text-[11px] font-bold uppercase text-emerald-600 tracking-widest mb-1">Kết quả</p>
+                         <p className="text-[11px] font-bold uppercase text-emerald-600 tracking-widest mb-1">{isEn ? 'Result' : 'Kết quả'}</p>
                          <p className="text-2xl font-black text-emerald-600">
                            {viewingHistoryDetail.details?.bandScore ? `Band ${viewingHistoryDetail.details.bandScore}` : viewingHistoryDetail.scoreObj.display}
                          </p>
@@ -4433,14 +4509,14 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                             });
                             setViewingHistoryDetail(null);
                         } else {
-                            alert("Đề thi này không còn tồn tại trên hệ thống.");
+                            alert(isEn ? "This test no longer exists in the system." : "Đề thi này không còn tồn tại trên hệ thống.");
                         }
                     }} className="w-full bg-[#0a5482] hover:bg-[#084266] text-white font-black py-3.5 rounded-xl transition-colors uppercase tracking-wider text-[13px] shadow-md shadow-blue-900/15 cursor-pointer">
-                        Xem chi tiết chữa bài
+                        {isEn ? 'View Detailed Review' : 'Xem chi tiết chữa bài'}
                     </button>
                     
                     <button onClick={() => handleRetakeFromHistory(viewingHistoryDetail)} className="w-full bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold py-3.5 rounded-xl transition-colors uppercase tracking-wider text-[13px] cursor-pointer">
-                       Làm lại bài này ngay
+                       {isEn ? 'Retake This Test Now' : 'Làm lại bài này ngay'}
                     </button>
                 </div>
              </div>
@@ -4460,7 +4536,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               <span className="text-[11px] font-extrabold uppercase tracking-widest text-[#2ab4e8] block mb-1">TonyEnglish IELTS Testing</span>
               <h2 className="text-[20px] md:text-[22px] font-black text-slate-800 mb-2 leading-tight line-clamp-2" title={testToStart.title}>{testToStart.title}</h2>
               <p className="text-[14px] text-slate-500 font-medium">
-                Vui lòng chọn hình thức thi bạn muốn tham gia:
+                {isEn ? 'Please select your preferred exam format:' : 'Vui lòng chọn hình thức thi bạn muốn tham gia:'}
               </p>
             </div>
 
@@ -4475,8 +4551,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-[15.5px] font-black text-slate-800 group-hover:text-[#0a5482] transition-colors">Thi trên máy tính (Computer-delivered)</h3>
-                  <p className="text-[12.5px] text-slate-500 mt-0.5 font-medium">Giao diện chia đôi màn hình, highlight &amp; chấm điểm tự động</p>
+                  <h3 className="text-[15.5px] font-black text-slate-800 group-hover:text-[#0a5482] transition-colors">{isEn ? 'Computer-delivered IELTS' : 'Thi trên máy tính (Computer-delivered)'}</h3>
+                  <p className="text-[12.5px] text-slate-500 mt-0.5 font-medium">{isEn ? 'Split-screen UI, text highlighting & instant auto-scoring' : 'Giao diện chia đôi màn hình, highlight & chấm điểm tự động'}</p>
                 </div>
               </button>
 
@@ -4490,8 +4566,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-[15.5px] font-black text-slate-800 group-hover:text-emerald-600 transition-colors">Thi trên giấy (Paper-based)</h3>
-                  <p className="text-[12.5px] text-slate-500 mt-0.5 font-medium">Làm trên giấy, xem đề PDF &amp; nghe Audio</p>
+                  <h3 className="text-[15.5px] font-black text-slate-800 group-hover:text-emerald-600 transition-colors">{isEn ? 'Paper-based IELTS' : 'Thi trên giấy (Paper-based)'}</h3>
+                  <p className="text-[12.5px] text-slate-500 mt-0.5 font-medium">{isEn ? 'Practice with PDF exam papers & Audio player' : 'Làm trên giấy, xem đề PDF & nghe Audio'}</p>
                 </div>
               </button>
             </div>
@@ -4501,7 +4577,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 onClick={() => setShowModeSelection(false)}
                 className="text-[13px] font-black text-slate-400 hover:text-slate-600 hover:bg-slate-100 uppercase tracking-widest transition-colors py-2.5 px-8 rounded-xl cursor-pointer"
               >
-                Hủy bỏ
+                {isEn ? 'Cancel' : 'Hủy bỏ'}
               </button>
             </div>
 
@@ -4528,11 +4604,11 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               >
                 <CourseStudyCoach
                   courseId={activeCid}
-                  courseTitle={activeCoachCourse.title}
+                  courseTitle={getLocalizedCourseTitle(activeCoachCourse.title, lang)}
                   studentName={displayUserName}
                   availableCourses={supportedCoachCourses.map((c) => ({
                     id: String(c.id),
-                    title: c.title,
+                    title: getLocalizedCourseTitle(c.title, lang),
                   }))}
                   onSwitchCourse={(cid) => setCoachModalCourseId(cid)}
                   onClose={() => setIsStudyCoachModalOpen(false)}
@@ -4588,7 +4664,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={activeTab === 'library' ? 2.5 : 2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
             </svg>
           </div>
-          <span className="text-[10px] tracking-tight mt-0.5">Học tập</span>
+          <span className="text-[10px] tracking-tight mt-0.5">{isEn ? 'Study' : 'Học tập'}</span>
         </button>
 
         <button
@@ -4608,7 +4684,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={activeTab === 'calendar' ? 2.5 : 2} d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
             </svg>
           </div>
-          <span className="text-[10px] tracking-tight mt-0.5">Lịch báo bài</span>
+          <span className="text-[10px] tracking-tight mt-0.5">{isEn ? 'Calendar' : 'Lịch báo bài'}</span>
         </button>
 
         <button
@@ -4628,7 +4704,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={activeTab === 'board' ? 2.5 : 2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
             </svg>
           </div>
-          <span className="text-[10px] tracking-tight mt-0.5">Bảng việc</span>
+          <span className="text-[10px] tracking-tight mt-0.5">{isEn ? 'Tasks' : 'Bảng việc'}</span>
         </button>
 
         <button
@@ -4648,7 +4724,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={activeTab === 'analytics' ? 2.5 : 2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
             </svg>
           </div>
-          <span className="text-[10px] tracking-tight mt-0.5">Báo cáo</span>
+          <span className="text-[10px] tracking-tight mt-0.5">{isEn ? 'Analytics' : 'Báo cáo'}</span>
         </button>
       </nav>
 
@@ -4671,33 +4747,39 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 &times;
               </button>
               <span className="inline-flex items-center gap-1.5 bg-amber-400 text-slate-950 text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded-full mb-2">
-                <span>🔓</span> <span>Mở khóa trọn bộ khóa học Online</span>
+                <span>🔓</span> <span>{isEn ? 'Unlock Full Online Course' : 'Mở khóa trọn bộ khóa học Online'}</span>
               </span>
               <h3 className="text-xl sm:text-2xl font-black tracking-tight">
-                {unlockModalCourse.title}
+                {getLocalizedCourseTitle(unlockModalCourse.title, lang)}
               </h3>
               <p className="text-xs text-sky-200 font-medium mt-1">
-                Truy cập không giới hạn 100% Bài giảng lý thuyết, Kho đề Past Papers &amp; Trợ lý Thầy Tony AI
+                {isEn
+                  ? 'Unlimited access to 100% of Theory Lectures, Past Papers Test Bank & Teacher Tony AI'
+                  : 'Truy cập không giới hạn 100% Bài giảng lý thuyết, Kho đề Past Papers & Trợ lý Thầy Tony AI'}
               </p>
             </div>
 
             <div className="p-6 sm:p-8 space-y-5">
               <div className="bg-amber-50/80 border border-amber-200 rounded-2xl p-4 space-y-2">
                 <div className="text-xs font-black text-amber-900 uppercase tracking-wider">
-                  🌟 Quyền lợi Học viên Chính thức:
+                  🌟 {isEn ? 'Full Student Benefits:' : 'Quyền lợi Học viên Chính thức:'}
                 </div>
                 <ul className="text-xs sm:text-[13px] text-slate-700 font-medium space-y-1.5 list-none m-0 p-0">
                   <li className="flex items-start gap-2">
                     <span className="text-emerald-600 font-black">✓</span>
-                    <span>Mở khóa toàn bộ các chuyên đề Bài giảng Lý thuyết, Video giải đề &amp; Podcast học thuật.</span>
+                    <span>{isEn ? 'Unlock all Theory Lectures, walkthrough videos & academic podcasts.' : 'Mở khóa toàn bộ các chuyên đề Bài giảng Lý thuyết, Video giải đề & Podcast học thuật.'}</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-emerald-600 font-black">✓</span>
-                    <span>Làm toàn bộ đề thi Past Papers &amp; Topic Questions có chấm điểm tự động và lời giải chi tiết.</span>
+                    <span>{isEn ? 'Practice all Past Papers & Topic Questions with auto-grading and detailed explanations.' : 'Làm toàn bộ đề thi Past Papers & Topic Questions có chấm điểm tự động và lời giải chi tiết.'}</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-emerald-600 font-black">✓</span>
-                    <span>Trợ lý <b>Thầy Tony AI</b> kèm cặp 24/7, phân tích lỗ hổng kiến thức và giao lộ trình học hàng ngày.</span>
+                    <span>
+                      {isEn
+                        ? <>24/7 coaching from <b>Teacher Tony AI</b>, analyzing weak spots and building your daily roadmap.</>
+                        : <>Trợ lý <b>Thầy Tony AI</b> kèm cặp 24/7, phân tích lỗ hổng kiến thức và giao lộ trình học hàng ngày.</>}
+                    </span>
                   </li>
                 </ul>
               </div>
@@ -4706,17 +4788,19 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-5 text-center space-y-2">
                   <div className="text-3xl">🎉</div>
                   <h4 className="font-black text-emerald-800 text-base">
-                    Đã gửi yêu cầu mở khóa thành công!
+                    {isEn ? 'Unlock Request Sent Successfully!' : 'Đã gửi yêu cầu mở khóa thành công!'}
                   </h4>
                   <p className="text-xs text-emerald-700 font-medium leading-relaxed">
-                    Hệ thống đã ghi nhận yêu cầu mở khóa môn <b>{unlockModalCourse.title}</b> của bạn. Thầy Tony sẽ liên hệ hoặc kích hoạt môn học cho tài khoản <b>{currentUser?.email}</b> ngay!
+                    {isEn
+                      ? <>We have received your request to unlock <b>{getLocalizedCourseTitle(unlockModalCourse.title, lang)}</b>. Teacher Tony will contact you and activate it for <b>{currentUser?.email}</b> shortly!</>
+                      : <>Hệ thống đã ghi nhận yêu cầu mở khóa môn <b>{getLocalizedCourseTitle(unlockModalCourse.title, lang)}</b> của bạn. Thầy Tony sẽ liên hệ hoặc kích hoạt môn học cho tài khoản <b>{currentUser?.email}</b> ngay!</>}
                   </p>
                 </div>
               ) : (
                 <form onSubmit={handleRequestUnlockCourse} className="space-y-3.5">
                   <div>
                     <label className="text-[11px] font-extrabold text-slate-500 uppercase tracking-wider block mb-1.5">
-                      Số điện thoại / Zalo liên hệ kích hoạt nhanh *
+                      {isEn ? 'Phone / Zalo Number for Fast Activation *' : 'Số điện thoại / Zalo liên hệ kích hoạt nhanh *'}
                     </label>
                     <input
                       type="tel"
@@ -4724,7 +4808,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                       inputMode="numeric"
                       pattern="[0-9]{9,15}"
                       maxLength={15}
-                      placeholder="Nhập SĐT / Zalo của bạn (VD: 0987654321)"
+                      placeholder={isEn ? 'Enter your Phone / Zalo (e.g. 0987654321)' : 'Nhập SĐT / Zalo của bạn (VD: 0987654321)'}
                       value={unlockPhone}
                       onChange={(e) => setUnlockPhone(e.target.value.replace(/\D/g, '').slice(0, 15))}
                       className="w-full border border-slate-300 rounded-xl px-4 py-3 text-sm font-bold text-slate-800 outline-none focus:ring-2 focus:ring-[#2ab4e8]"
@@ -4735,7 +4819,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                     disabled={isSendingUnlockReq}
                     className="w-full bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 hover:from-amber-500 hover:to-yellow-500 text-slate-950 font-black py-3.5 rounded-xl shadow-md transition-all text-sm cursor-pointer active:scale-95"
                   >
-                    {isSendingUnlockReq ? '⏳ ĐANG GỬI YÊU CẦU...' : '🚀 ĐĂNG KÝ MỞ KHÓA KHÓA HỌC NÀY'}
+                    {isSendingUnlockReq
+                      ? (isEn ? '⏳ SENDING REQUEST...' : '⏳ ĐANG GỬI YÊU CẦU...')
+                      : (isEn ? '🚀 REQUEST FULL COURSE UNLOCK' : '🚀 ĐĂNG KÝ MỞ KHÓA KHÓA HỌC NÀY')}
                   </button>
                 </form>
               )}
@@ -4747,13 +4833,13 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                   rel="noreferrer"
                   className="w-full sm:w-auto flex-1 bg-sky-50 hover:bg-sky-100 text-[#0a5482] border border-sky-200 font-extrabold py-2.5 px-4 rounded-xl text-center transition-colors"
                 >
-                  💬 Chat Zalo tư vấn: 0935 058 688
+                  💬 {isEn ? 'Zalo Support: 0935 058 688' : 'Chat Zalo tư vấn: 0935 058 688'}
                 </a>
                 <a
                   href="tel:0935058688"
                   className="w-full sm:w-auto bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold py-2.5 px-4 rounded-xl text-center transition-colors"
                 >
-                  📞 Gọi Hotline
+                  📞 {isEn ? 'Call Hotline' : 'Gọi Hotline'}
                 </a>
               </div>
             </div>

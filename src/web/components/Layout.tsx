@@ -266,13 +266,21 @@ export const Layout: React.FC<{
     const cleanPhone = regPhone.replace(/\D/g, '').trim();
 
     if (!cleanName || !cleanPhone || !cleanEmail || regPassword.length < 6) {
-      setLoginError('Vui lòng điền đầy đủ Họ tên, Số điện thoại, Email và Mật khẩu (tối thiểu 6 ký tự).');
+      setLoginError(
+        lang === 'vi'
+          ? 'Vui lòng điền đầy đủ Họ tên, Số điện thoại, Email và Mật khẩu (tối thiểu 6 ký tự).'
+          : 'Please complete Full Name, Phone Number, Email, and Password (minimum 6 characters).'
+      );
       setLoginLoading(false);
       return;
     }
 
     if (!/^\d{9,15}$/.test(cleanPhone)) {
-      setLoginError('Số điện thoại không hợp lệ! Vui lòng chỉ nhập chữ số (9–15 số, ví dụ: 0987654321).');
+      setLoginError(
+        lang === 'vi'
+          ? 'Số điện thoại không hợp lệ! Vui lòng chỉ nhập chữ số (9–15 số, ví dụ: 0987654321).'
+          : 'Invalid phone number! Please enter digits only (9–15 digits, e.g. 0987654321).'
+      );
       setLoginLoading(false);
       return;
     }
@@ -350,9 +358,17 @@ export const Layout: React.FC<{
       onNavigateLms?.('portal');
     } catch (err: any) {
       if (err?.message?.includes('already registered')) {
-        setLoginError('Email này đã được đăng ký! Vui lòng chuyển sang tab Đăng nhập.');
+        setLoginError(
+          lang === 'vi'
+            ? 'Email này đã được đăng ký! Vui lòng chuyển sang tab Đăng nhập.'
+            : 'This email is already registered! Please switch to the Sign In tab.'
+        );
       } else {
-        setLoginError('Lỗi đăng ký: ' + (err?.message || 'Vui lòng thử lại.'));
+        setLoginError(
+          lang === 'vi'
+            ? 'Lỗi đăng ký: ' + (err?.message || 'Vui lòng thử lại.')
+            : 'Registration error: ' + (err?.message || 'Please try again.')
+        );
       }
     } finally {
       setLoginLoading(false);
@@ -450,7 +466,9 @@ export const Layout: React.FC<{
           if (!isAdmin && profile?.status === 'inactive') {
             await supabase.auth.signOut();
             setLoginError(
-              '⛔ Tài khoản học của bạn hiện đang ở trạng thái TẠM DỪNG. Vui lòng liên hệ Thầy Tony để được kích hoạt lại!'
+              lang === 'vi'
+                ? '⛔ Tài khoản học của bạn hiện đang ở trạng thái TẠM DỪNG. Vui lòng liên hệ Thầy Tony để được kích hoạt lại!'
+                : '⛔ Your student account is currently PAUSED. Please contact Mr. Tony to reactivate it!'
             );
             setLoginLoading(false);
             return;
@@ -473,13 +491,25 @@ export const Layout: React.FC<{
         setLoginModalOpen(false);
         navigate('/user/lecture');
       } else {
-        setLoginError('Sai thông tin đăng nhập! Vui lòng kiểm tra lại Email và Mật khẩu.');
+        setLoginError(
+          lang === 'vi'
+            ? 'Sai thông tin đăng nhập! Vui lòng kiểm tra lại Email và Mật khẩu.'
+            : 'Invalid login credentials! Please double-check your Email and Password.'
+        );
       }
     } catch (err: any) {
       if (err.message === 'TIMEOUT') {
-        setLoginError('⏳ Máy chủ đang phản hồi chậm. Vui lòng thử lại!');
+        setLoginError(
+          lang === 'vi'
+            ? '⏳ Máy chủ đang phản hồi chậm. Vui lòng thử lại!'
+            : '⏳ Server response timed out. Please try again!'
+        );
       } else {
-        setLoginError('Đã có lỗi xảy ra khi kết nối máy chủ.');
+        setLoginError(
+          lang === 'vi'
+            ? 'Đã có lỗi xảy ra khi kết nối máy chủ.'
+            : 'An error occurred while connecting to the server.'
+        );
       }
     } finally {
       setLoginLoading(false);

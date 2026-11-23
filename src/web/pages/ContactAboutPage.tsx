@@ -606,7 +606,9 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
                           : 'R2B 2219, Royal City, 72 Nguyễn Trãi, Thanh Xuân, Hà Nội'}
                       </p>
                       <p>
-                        <strong className="text-slate-800">📞 Điện thoại / Zalo:</strong>{' '}
+                        <strong className="text-slate-800">
+                          📞 {lang === 'vi' ? 'Điện thoại / Zalo' : 'Phone / Zalo'}:
+                        </strong>{' '}
                         <a
                           href="tel:0935058688"
                           onClick={() => trackUnifiedContact('Phone', 'ContactPage')}

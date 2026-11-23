@@ -1,8 +1,14 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { supabase } from './supabase';
 import { useTestGuideVideo, TestGuideVideoButton, TestGuideVideoPlayer, TestGuideVideoEditModal } from './TestGuideVideo';
+import { useLmsLang, LmsLangToggle } from './utils/lmsI18n';
 
 export default function IgcsePaperTest({ onBack, onStartTest, testData: propTestData }: { onBack?: () => void, onStartTest?: any, testData?: any }) {
+  const [lang, setLang] = useLmsLang();
+  const isEn = lang === 'en';
+  const isEnRef = useRef(isEn);
+  isEnRef.current = isEn;
+
   const [testData, setTestData] = useState<any>(() => {
       let raw = propTestData;
       if (!raw) {
@@ -59,7 +65,7 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
 
   const handleSafeExit = () => {
     if (!isReviewMode && !gradeResult) {
-      if (!window.confirm('Bạn đang làm bài thi IGCSE. Bạn có chắc muốn thoát ra ngoài không?')) return;
+      if (!window.confirm(isEn ? 'You are currently taking an IGCSE test. Are you sure you want to exit?' : 'Bạn đang làm bài thi IGCSE. Bạn có chắc muốn thoát ra ngoài không?')) return;
     }
     if (onBack) onBack();
   };
@@ -357,33 +363,33 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
     sci: {
       label: '🧪 Science',
       groups: [
-        { label: 'Chỉ số dưới', chars: ['₀','₁','₂','₃','₄','₅','₆','₇','₈','₉'] },
-        { label: 'Chỉ số trên', chars: ['⁰','¹','²','³','⁴','⁵','⁶','⁷','⁸','⁹','⁺','⁻','ⁿ'] },
-        { label: 'Hóa học & Vật lý', chars: ['→','⇌','Δ','°','±','×','÷','≈','≠','≤','≥','∞','α','β','γ','θ','λ','μ','Ω','π'] },
+        { label: isEn ? 'Subscript' : 'Chỉ số dưới', chars: ['₀','₁','₂','₃','₄','₅','₆','₇','₈','₉'] },
+        { label: isEn ? 'Superscript' : 'Chỉ số trên', chars: ['⁰','¹','²','³','⁴','⁵','⁶','⁷','⁸','⁹','⁺','⁻','ⁿ'] },
+        { label: isEn ? 'Chemistry & Physics' : 'Hóa học & Vật lý', chars: ['→','⇌','Δ','°','±','×','÷','≈','≠','≤','≥','∞','α','β','γ','θ','λ','μ','Ω','π'] },
       ]
     },
     geo: {
-      label: '📐 Hình học',
+      label: isEn ? '📐 Geometry' : '📐 Hình học',
       groups: [
-        { label: 'Hình học', chars: ['∠','△','⊥','∥','∼','≡','°'] },
-        { label: 'Ký hiệu', chars: ['π','√','²','³','±','≈','≠','≤','≥','∞','→','⇒','⇔'] },
+        { label: isEn ? 'Geometry' : 'Hình học', chars: ['∠','△','⊥','∥','∼','≡','°'] },
+        { label: isEn ? 'Symbols' : 'Ký hiệu', chars: ['π','√','²','³','±','≈','≠','≤','≥','∞','→','⇒','⇔'] },
       ]
     },
     alg: {
-      label: '📊 Đại số',
+      label: isEn ? '📊 Algebra' : '📊 Đại số',
       groups: [
-        { label: 'Chỉ số', chars: ['₀','₁','₂','₃','ₙ','⁰','¹','²','³','ⁿ','⁺','⁻'] },
-        { label: 'Phép toán', chars: ['±','∓','×','÷','·','√','∛','≈','≠','≡','∝','≤','≥'] },
-        { label: 'Cao cấp', chars: ['∫','Σ','∏','∂','∞','ℝ','ℤ','ℕ','|'] },
-        { label: 'Lượng giác', chars: ['θ','α','β','γ','φ','π','°'] },
+        { label: isEn ? 'Scripts' : 'Chỉ số', chars: ['₀','₁','₂','₃','ₙ','⁰','¹','²','³','ⁿ','⁺','⁻'] },
+        { label: isEn ? 'Operators' : 'Phép toán', chars: ['±','∓','×','÷','·','√','∛','≈','≠','≡','∝','≤','≥'] },
+        { label: isEn ? 'Advanced' : 'Cao cấp', chars: ['∫','Σ','∏','∂','∞','ℝ','ℤ','ℕ','|'] },
+        { label: isEn ? 'Trigonometry' : 'Lượng giác', chars: ['θ','α','β','γ','φ','π','°'] },
       ]
     },
     set: {
-      label: '{ } Tập hợp',
+      label: isEn ? '{ } Sets' : '{ } Tập hợp',
       groups: [
-        { label: 'Tập hợp', chars: ['∩','∪','⊂','⊆','⊃','⊇','∈','∉','∅'] },
+        { label: isEn ? 'Sets' : 'Tập hợp', chars: ['∩','∪','⊂','⊆','⊃','⊇','∈','∉','∅'] },
         { label: 'Logic', chars: ['∀','∃','¬','∧','∨','⇒','⇔','∴','∵'] },
-        { label: 'Mũi tên', chars: ['→','←','↔','⇒','⇐','⇔','↑','↓'] },
+        { label: isEn ? 'Arrows' : 'Mũi tên', chars: ['→','←','↔','⇒','⇐','⇔','↑','↓'] },
       ]
     },
   };
@@ -421,7 +427,7 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
           const { data, error } = await supabase.functions.invoke('igcse-grader', {
             body: { mode: 'ocr', image: base64 }
           });
-          if (error) { alert('Lỗi OCR: ' + error.message); }
+          if (error) { alert((isEnRef.current ? 'OCR Error: ' : 'Lỗi OCR: ') + error.message); }
           else if (data?.text) {
             const current = answers[subId] || '';
             handleAnswerChange(subId, current ? current + '\n' + data.text : data.text);
@@ -430,7 +436,7 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
         };
         reader.readAsDataURL(file);
       } catch(err) {
-        alert('Lỗi OCR'); setOcrLoading(prev => ({...prev, [subId]: false}));
+        alert(isEnRef.current ? 'OCR Error' : 'Lỗi OCR'); setOcrLoading(prev => ({...prev, [subId]: false}));
       }
     };
     input.click();
@@ -443,11 +449,11 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
     const currentAnswers = answersRef.current;
     const isExercise = testData?.content_json?.basicInfo?.category === 'exercise';
     if (!isForced && Object.keys(currentAnswers).length === 0) {
-      alert("⚠️ Bạn chưa điền câu trả lời nào cả!"); return;
+      alert(isEn ? "⚠️ You haven't entered any answers yet!" : "⚠️ Bạn chưa điền câu trả lời nào cả!"); return;
     }
     if (!isForced) {
-      if (!isExercise && timeLeft > 0 && !window.confirm("Bạn có chắc chắn muốn nộp bài thi?")) { return; }
-      if (isExercise && !window.confirm("Bạn có chắc chắn muốn nộp bài?")) { return; }
+      if (!isExercise && timeLeft > 0 && !window.confirm(isEn ? "Are you sure you want to submit the exam?" : "Bạn có chắc chắn muốn nộp bài thi?")) { return; }
+      if (isExercise && !window.confirm(isEn ? "Are you sure you want to submit your work?" : "Bạn có chắc chắn muốn nộp bài?")) { return; }
     }
 
     const rawTime = testData.json_config?.timeLimit || testData.timeLimit || testData.time_limit || 120;
@@ -486,7 +492,9 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
           if (val && typeof val === 'string' && val.startsWith('data:image')) {
               const compressedBase64 = await compressImage(val);
               imageAnswers.push({ questionId: key, base64: compressedBase64 });
-              textAnswers[key] = "[HỌC SINH ĐÃ CHỤP ẢNH BẢN VẼ - HÃY XEM TRONG PHẦN ĐÍNH KÈM]";
+              textAnswers[key] = isEn
+                ? "[STUDENT UPLOADED A DRAWING IMAGE - PLEASE VIEW IN THE ATTACHMENTS]"
+                : "[HỌC SINH ĐÃ CHỤP ẢNH BẢN VẼ - HÃY XEM TRONG PHẦN ĐÍNH KÈM]";
           } else {
               textAnswers[key] = val;
           }
@@ -498,12 +506,14 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
             testConfig: testData.json_config?.questions || [],
             textAnswers: textAnswers,
             imageAnswers: imageAnswers,
-            pdfUrl: testData.insert_pdf_url || testData.pdf_url || null
+            pdfUrl: testData.insert_pdf_url || testData.pdf_url || null,
+            lang: isEn ? 'en' : 'vi',
+            feedbackLanguage: isEn ? 'English' : 'Vietnamese'
         }
       });
 
-      if (error) throw new Error("Lỗi gọi Server: " + error.message);
-      if (data?.error) throw new Error("Lỗi chấm điểm: " + data.error);
+      if (error) throw new Error((isEn ? "Server error: " : "Lỗi gọi Server: ") + error.message);
+      if (data?.error) throw new Error((isEn ? "Grading error: " : "Lỗi chấm điểm: ") + data.error);
       
       let gradedData;
       try {
@@ -521,7 +531,9 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
           gradedData = {
               total_student_score: 0,
               total_max_score: 0,
-              general_feedback: "⚠️ AI trả về dữ liệu bị lỗi định dạng (chứa ký tự không hợp lệ). Dưới đây là nội dung thô AI trả về:\n\n" + JSON.stringify(data.result || data.rawText),
+              general_feedback: (isEn
+                ? "⚠️ AI returned malformed data (invalid characters). Raw AI output below:\n\n"
+                : "⚠️ AI trả về dữ liệu bị lỗi định dạng (chứa ký tự không hợp lệ). Dưới đây là nội dung thô AI trả về:\n\n") + JSON.stringify(data.result || data.rawText),
               details: []
           };
       }
@@ -576,9 +588,9 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
     } catch (err: any) {
       isFinishingRef.current = false;
       if (err.message && err.message.includes("Unexpected end of JSON input")) {
-          alert("❌ Không thể nộp bài do kết nối gián đoạn hoặc file ảnh quá nặng. Vui lòng thử nộp lại.");
+          alert(isEn ? "❌ Could not submit due to an interrupted connection or oversized image files. Please try again." : "❌ Không thể nộp bài do kết nối gián đoạn hoặc file ảnh quá nặng. Vui lòng thử nộp lại.");
       } else {
-          alert("❌ Có lỗi trong lúc chấm: " + err.message);
+          alert((isEn ? "❌ An error occurred while grading: " : "❌ Có lỗi trong lúc chấm: ") + err.message);
       }
     } finally {
       setIsSubmitting(false);
@@ -597,12 +609,12 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
         if (currentEndTime) {
             const remaining = Math.max(0, Math.floor((currentEndTime - Date.now()) / 1000));
             setTimeLeft(remaining);
-            if (remaining <= 0) { clearInterval(timer); alert("⏰ Hết giờ làm bài!"); handleSubmitRef.current(true); }
+            if (remaining <= 0) { clearInterval(timer); alert(isEnRef.current ? "⏰ Time's up!" : "⏰ Hết giờ làm bài!"); handleSubmitRef.current(true); }
         } else {
             setTimeLeft(prev => {
                 if (prev <= 1) {
                     clearInterval(timer);
-                    alert("⏰ Hết giờ làm bài!");
+                    alert(isEnRef.current ? "⏰ Time's up!" : "⏰ Hết giờ làm bài!");
                     handleSubmitRef.current(true);
                     return 0;
                 }
@@ -642,8 +654,12 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
   const callAiTutor = (questionText: string, studentAns: string, correctAnswer: string) => {
       const tutorContext = {
           overall: 'IGCSE Review',
-          transcript: `Câu hỏi: "${questionText}". \nĐáp án của học sinh: ${studentAns}. \nĐáp án đúng Cambridge MS: "${correctAnswer}".`,
-          feedback: "Bạn là gia sư Cambridge IGCSE. Học sinh đang xem lại bài thi và không hiểu câu này. Hãy chủ động chào, đọc câu hỏi và giải thích chi tiết tại sao đáp án đúng là như vậy, phân tích từng bước lập luận. Dùng giọng điệu ân cần, dễ hiểu, nếu có công thức hãy đọc rõ ràng."
+          transcript: isEn
+            ? `Question: "${questionText}". \nStudent's answer: ${studentAns}. \nCorrect Cambridge Mark Scheme answer: "${correctAnswer}".`
+            : `Câu hỏi: "${questionText}". \nĐáp án của học sinh: ${studentAns}. \nĐáp án đúng Cambridge MS: "${correctAnswer}".`,
+          feedback: isEn
+            ? "You are a Cambridge IGCSE tutor. The student is reviewing their exam and does not understand this question. Speak and explain exclusively in English. Warmly greet the student, read the question, and explain step-by-step why the official answer is correct. Use a supportive, clear tone and read any formulas clearly."
+            : "Bạn là gia sư Cambridge IGCSE. Học sinh đang xem lại bài thi và không hiểu câu này. Hãy chủ động chào, đọc câu hỏi và giải thích chi tiết tại sao đáp án đúng là như vậy, phân tích từng bước lập luận. Dùng giọng điệu ân cần, dễ hiểu, nếu có công thức hãy đọc rõ ràng."
       };
 
       sessionStorage.setItem('tony_live_mode', 'TUTOR');
@@ -667,15 +683,15 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
   if (isLoading) return (
     <div className="h-[100dvh] w-screen flex flex-col items-center justify-center bg-[#525659] text-white font-bold">
       <div className="animate-spin text-4xl mb-4">⏳</div>
-      <p>Đang tải đề thi IGCSE...</p>
+      <p>{isEn ? 'Loading IGCSE exam...' : 'Đang tải đề thi IGCSE...'}</p>
     </div>
   );
 
   // No test data
   if (!testData || (!isReviewMode && (!testData.json_config || !testData.json_config.questions))) return (
     <div className="h-[100dvh] w-screen flex flex-col items-center justify-center bg-[#525659] text-white font-bold gap-4">
-      <p>⚠️ Chưa có cấu hình đề thi trong hệ thống.</p>
-      <button onClick={onBack} className="bg-[#1e88e5] px-6 py-2 rounded hover:bg-blue-700 transition-colors">Quay lại</button>
+      <p>{isEn ? '⚠️ No exam configuration found in the system.' : '⚠️ Chưa có cấu hình đề thi trong hệ thống.'}</p>
+      <button onClick={onBack} className="bg-[#1e88e5] px-6 py-2 rounded hover:bg-blue-700 transition-colors">{isEn ? 'Go Back' : 'Quay lại'}</button>
     </div>
   );
 
@@ -692,36 +708,39 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
       {/* Header */}
       <header className="h-14 w-full bg-white border-b border-slate-300 flex items-center justify-between px-3 sm:px-6 shrink-0 z-20 box-border gap-2">
         <div className="flex items-center gap-2.5 sm:gap-4 overflow-hidden min-w-0">
-          <button type="button" onClick={handleSafeExit} className="text-slate-600 hover:text-[#0a5482] font-bold text-sm transition-colors whitespace-nowrap cursor-pointer">← Quay lại</button>
+          <button type="button" onClick={handleSafeExit} className="text-slate-600 hover:text-[#0a5482] font-bold text-sm transition-colors whitespace-nowrap cursor-pointer">← {isEn ? 'Back' : 'Quay lại'}</button>
           <div className="h-5 w-px bg-slate-300 hidden sm:block"></div>
           <div className="truncate flex items-baseline gap-2 min-w-0">
             <h1 className="font-bold text-slate-900 text-[14px] sm:text-[15px] leading-tight truncate">{isReviewMode ? `[REVIEW] ${testData.title}` : testData.title}</h1>
             {!isReviewMode && (
-              <span className="text-xs text-slate-400 whitespace-nowrap hidden xs:inline">({answeredCount}/{allSubQuestions.length} câu)</span>
+              <span className="text-xs text-slate-400 whitespace-nowrap hidden xs:inline">({answeredCount}/{allSubQuestions.length} {isEn ? 'questions' : 'câu'})</span>
             )}
           </div>
         </div>
-        {!gradeResult && !isReviewMode && (
-          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
-             <div className={`font-bold flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-lg text-xs sm:text-sm ${testData.content_json?.basicInfo?.category === 'exercise' ? 'text-[#0a5482] bg-sky-50 border border-sky-200' : (timeLeft <= 300 ? 'text-rose-600 bg-rose-50 border border-rose-200 animate-pulse' : 'text-slate-700 bg-slate-100')}`}>
-               {testData.content_json?.basicInfo?.category === 'exercise' ? 'BÀI TẬP' : <><span>⏱️</span> <span className="font-mono tracking-wider tabular-nums">{formatTime(timeLeft)}</span></>}
-             </div>
-             <button type="button" onClick={() => { if (!document.fullscreenElement) document.documentElement.requestFullscreen().catch(()=>{}); else document.exitFullscreen(); }} className="hidden sm:inline-flex text-slate-500 hover:text-[#0a5482] transition-colors text-lg px-1 cursor-pointer" title={isFullscreen ? 'Thoát toàn màn hình' : 'Toàn màn hình'}>
-               {isFullscreen ? '🔲' : '⛶'}
-             </button>
-             <button type="button" onClick={() => handleSubmit(false)} disabled={isSubmitting} className="bg-[#0a5482] hover:bg-[#084266] text-white font-bold text-xs sm:text-sm px-4 sm:px-6 py-1.5 rounded-lg transition-colors active:scale-95 disabled:opacity-50 whitespace-nowrap shadow-sm cursor-pointer">
-               {isSubmitting ? 'Đang chấm...' : 'Nộp Bài'}
-             </button>
-          </div>
-        )}
+        <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+          <LmsLangToggle lang={lang} setLang={setLang} variant="light" />
+          {!gradeResult && !isReviewMode && (
+            <>
+               <div className={`font-bold flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-lg text-xs sm:text-sm ${testData.content_json?.basicInfo?.category === 'exercise' ? 'text-[#0a5482] bg-sky-50 border border-sky-200' : (timeLeft <= 300 ? 'text-rose-600 bg-rose-50 border border-rose-200 animate-pulse' : 'text-slate-700 bg-slate-100')}`}>
+                 {testData.content_json?.basicInfo?.category === 'exercise' ? (isEn ? 'EXERCISE' : 'BÀI TẬP') : <><span>⏱️</span> <span className="font-mono tracking-wider tabular-nums">{formatTime(timeLeft)}</span></>}
+               </div>
+               <button type="button" onClick={() => { if (!document.fullscreenElement) document.documentElement.requestFullscreen().catch(()=>{}); else document.exitFullscreen(); }} className="hidden sm:inline-flex text-slate-500 hover:text-[#0a5482] transition-colors text-lg px-1 cursor-pointer" title={isFullscreen ? (isEn ? 'Exit fullscreen' : 'Thoát toàn màn hình') : (isEn ? 'Fullscreen' : 'Toàn màn hình')}>
+                 {isFullscreen ? '🔲' : '⛶'}
+               </button>
+               <button type="button" onClick={() => handleSubmit(false)} disabled={isSubmitting} className="bg-[#0a5482] hover:bg-[#084266] text-white font-bold text-xs sm:text-sm px-4 sm:px-6 py-1.5 rounded-lg transition-colors active:scale-95 disabled:opacity-50 whitespace-nowrap shadow-sm cursor-pointer">
+                 {isSubmitting ? (isEn ? 'Grading...' : 'Đang chấm...') : (isEn ? 'Submit' : 'Nộp Bài')}
+               </button>
+            </>
+          )}
+        </div>
       </header>
 
       {/* Submitting overlay */}
       {isSubmitting && (
         <div className="fixed inset-0 z-50 bg-slate-900/70 backdrop-blur-sm flex flex-col items-center justify-center text-white">
           <div className="w-16 h-16 border-4 border-white/30 border-t-white rounded-full animate-spin mb-6"></div>
-          <p className="text-xl font-bold mb-2">🧠 AI đang chấm bài...</p>
-          <p className="text-sm text-slate-300">Gemini Vision đang phân tích bài làm và hình vẽ của bạn</p>
+          <p className="text-xl font-bold mb-2">🧠 {isEn ? 'AI is grading your paper...' : 'AI đang chấm bài...'}</p>
+          <p className="text-sm text-slate-300">{isEn ? 'Gemini Vision is analyzing your answers and drawings' : 'Gemini Vision đang phân tích bài làm và hình vẽ của bạn'}</p>
         </div>
       )}
 
@@ -731,28 +750,28 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
         <div style={{ width: isDesktop ? `${leftWidth}%` : '100%' }} className="h-[46vh] md:h-full flex flex-col shrink-0 bg-[#525659] border-b md:border-b-0 border-slate-700">
           <div className="bg-[#323639] border-b border-[#202224] px-3 sm:px-4 flex justify-between items-center gap-2 h-10 shrink-0 shadow-sm overflow-x-auto no-scrollbar">
             <div className="flex items-center gap-2 shrink-0">
-              <span className="font-bold text-slate-300 text-[11px] uppercase tracking-widest shrink-0">📄 Đề thi Cambridge</span>
+              <span className="font-bold text-slate-300 text-[11px] uppercase tracking-widest shrink-0">📄 {isEn ? 'Cambridge Exam Paper' : 'Đề thi Cambridge'}</span>
               {testData.insert_pdf_url && (
                 <a
                   href={testData.insert_pdf_url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-2 py-0.5 rounded bg-white/10 hover:bg-white/20 text-slate-200 hover:text-white text-[11px] font-bold transition whitespace-nowrap"
-                  title="Mở file PDF trong tab mới"
+                  title={isEn ? 'Open PDF in a new tab' : 'Mở file PDF trong tab mới'}
                 >
-                  ↗ Mở PDF
+                  ↗ {isEn ? 'Open PDF' : 'Mở PDF'}
                 </a>
               )}
             </div>
             {!isReviewMode && (
               <div className="flex items-center gap-1 shrink-0">
-                <button onClick={() => setDrawMode(prev => prev === 'pen' ? null : 'pen')} className={`px-2 py-1 rounded text-[11px] font-bold transition-all ${drawMode === 'pen' ? 'bg-[#0a5482] text-white' : 'text-slate-400 hover:text-white'}`} title="Bút vẽ">✏️</button>
-                <button onClick={() => setDrawMode(prev => prev === 'line' ? null : 'line')} className={`px-2 py-1 rounded text-[11px] font-bold transition-all ${drawMode === 'line' ? 'bg-[#0a5482] text-white' : 'text-slate-400 hover:text-white'}`} title="Đường thẳng">📏</button>
-                <button onClick={() => setDrawMode(prev => prev === 'rect' ? null : 'rect')} className={`px-2 py-1 rounded text-[11px] font-bold transition-all ${drawMode === 'rect' ? 'bg-[#0a5482] text-white' : 'text-slate-400 hover:text-white'}`} title="Hình chữ nhật">▬</button>
-                <button onClick={() => setDrawMode(prev => prev === 'circle' ? null : 'circle')} className={`px-2 py-1 rounded text-[11px] font-bold transition-all ${drawMode === 'circle' ? 'bg-[#0a5482] text-white' : 'text-slate-400 hover:text-white'}`} title="Hình elip">⬭</button>
-                <button onClick={() => setDrawMode(prev => prev === 'triangle' ? null : 'triangle')} className={`px-2 py-1 rounded text-[11px] font-bold transition-all ${drawMode === 'triangle' ? 'bg-[#0a5482] text-white' : 'text-slate-400 hover:text-white'}`} title="Tam giác">△</button>
-                <button onClick={() => setDrawMode(prev => prev === 'text' ? null : 'text')} className={`px-2 py-1 rounded text-[11px] font-bold transition-all ${drawMode === 'text' ? 'bg-[#0a5482] text-white' : 'text-slate-400 hover:text-white'}`} title="Chữ">T</button>
-                <button onClick={() => setDrawMode(prev => prev === 'eraser' ? null : 'eraser')} className={`px-2 py-1 rounded text-[11px] font-bold transition-all ${drawMode === 'eraser' ? 'bg-orange-500 text-white' : 'text-slate-400 hover:text-white'}`} title="Tẩy">🧹</button>
+                <button onClick={() => setDrawMode(prev => prev === 'pen' ? null : 'pen')} className={`px-2 py-1 rounded text-[11px] font-bold transition-all ${drawMode === 'pen' ? 'bg-[#0a5482] text-white' : 'text-slate-400 hover:text-white'}`} title={isEn ? 'Pen' : 'Bút vẽ'}>✏️</button>
+                <button onClick={() => setDrawMode(prev => prev === 'line' ? null : 'line')} className={`px-2 py-1 rounded text-[11px] font-bold transition-all ${drawMode === 'line' ? 'bg-[#0a5482] text-white' : 'text-slate-400 hover:text-white'}`} title={isEn ? 'Straight line' : 'Đường thẳng'}>📏</button>
+                <button onClick={() => setDrawMode(prev => prev === 'rect' ? null : 'rect')} className={`px-2 py-1 rounded text-[11px] font-bold transition-all ${drawMode === 'rect' ? 'bg-[#0a5482] text-white' : 'text-slate-400 hover:text-white'}`} title={isEn ? 'Rectangle' : 'Hình chữ nhật'}>▬</button>
+                <button onClick={() => setDrawMode(prev => prev === 'circle' ? null : 'circle')} className={`px-2 py-1 rounded text-[11px] font-bold transition-all ${drawMode === 'circle' ? 'bg-[#0a5482] text-white' : 'text-slate-400 hover:text-white'}`} title={isEn ? 'Ellipse' : 'Hình elip'}>⬭</button>
+                <button onClick={() => setDrawMode(prev => prev === 'triangle' ? null : 'triangle')} className={`px-2 py-1 rounded text-[11px] font-bold transition-all ${drawMode === 'triangle' ? 'bg-[#0a5482] text-white' : 'text-slate-400 hover:text-white'}`} title={isEn ? 'Triangle' : 'Tam giác'}>△</button>
+                <button onClick={() => setDrawMode(prev => prev === 'text' ? null : 'text')} className={`px-2 py-1 rounded text-[11px] font-bold transition-all ${drawMode === 'text' ? 'bg-[#0a5482] text-white' : 'text-slate-400 hover:text-white'}`} title={isEn ? 'Text' : 'Chữ'}>T</button>
+                <button onClick={() => setDrawMode(prev => prev === 'eraser' ? null : 'eraser')} className={`px-2 py-1 rounded text-[11px] font-bold transition-all ${drawMode === 'eraser' ? 'bg-orange-500 text-white' : 'text-slate-400 hover:text-white'}`} title={isEn ? 'Eraser' : 'Tẩy'}>🧹</button>
                 {drawMode && (
                   <>
                     <div className="w-px h-4 bg-slate-600 mx-1"></div>
@@ -760,7 +779,7 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
                       <button key={c} onClick={() => setPenColor(c)} className={`w-5 h-5 rounded-full border-2 transition-transform shrink-0 ${penColor === c ? 'border-white scale-110' : 'border-slate-600'}`} style={{ backgroundColor: c }} />
                     ))}
                     <div className="w-px h-4 bg-slate-600 mx-1"></div>
-                    <button onClick={() => { const cv = drawCanvasRef.current; if (cv) { const ctx = cv.getContext('2d'); ctx?.clearRect(0,0,cv.width,cv.height); } }} className="px-2 py-1 rounded text-[11px] text-slate-400 hover:text-red-400 font-bold" title="Xóa tất cả">🗑️</button>
+                    <button onClick={() => { const cv = drawCanvasRef.current; if (cv) { const ctx = cv.getContext('2d'); ctx?.clearRect(0,0,cv.width,cv.height); } }} className="px-2 py-1 rounded text-[11px] text-slate-400 hover:text-red-400 font-bold" title={isEn ? 'Clear all' : 'Xóa tất cả'}>🗑️</button>
                   </>
                 )}
               </div>
@@ -772,8 +791,8 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
              ) : (
                <div className="flex flex-col items-center justify-center h-full text-slate-400 p-8 text-center bg-[#525659]">
                  <span className="text-5xl mb-4">📄</span>
-                 <p className="font-bold">Không có file PDF đề thi.</p>
-                 <p className="text-sm mt-2">Admin chưa upload PDF cho đề này.</p>
+                 <p className="font-bold">{isEn ? 'No exam PDF file available.' : 'Không có file PDF đề thi.'}</p>
+                 <p className="text-sm mt-2">{isEn ? 'No PDF has been uploaded for this exam yet.' : 'Admin chưa upload PDF cho đề này.'}</p>
                </div>
              )}
              {/* Drawing overlay canvas */}
@@ -849,7 +868,7 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
                      }}
                      className="absolute bg-white/90 border-2 border-[#1e88e5] rounded px-2 py-1 text-[14px] outline-none min-w-[120px]"
                      style={{ left: textPos.x, top: textPos.y, zIndex: 20 }}
-                     placeholder="Gõ text rồi Enter..."
+                     placeholder={isEn ? 'Type text and press Enter...' : 'Gõ text rồi Enter...'}
                    />
                  )}
                </>
@@ -866,7 +885,7 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
         <div style={{ width: isDesktop ? `calc(${100 - leftWidth}% - 6px)` : '100%' }} className="flex-1 md:flex-none md:h-full min-h-0 flex flex-col shrink-0 bg-[#f8fafc]">
           <div className="bg-[#323639] border-b border-[#202224] px-6 flex justify-between items-center h-10 shrink-0 shadow-sm">
             <span className="font-bold text-slate-300 text-[11px] uppercase tracking-widest flex items-center gap-2">
-              {gradeResult ? <><span>✅</span> Kết quả chấm điểm IGCSE</> : <><span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> Answer Sheet (Phiếu trả lời)</>}
+              {gradeResult ? <><span>✅</span> {isEn ? 'IGCSE Grading Results' : 'Kết quả chấm điểm IGCSE'}</> : <><span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> {isEn ? 'Answer Sheet' : 'Answer Sheet (Phiếu trả lời)'}</>}
             </span>
 
             {/* 🎬 NÚT BẬT / THÊM VIDEO HƯỚNG DẪN */}
@@ -944,14 +963,14 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
                                         {sub.type === 'short_answer' ? (
                                             <div className="relative">
                                                 <div className="flex items-center gap-2">
-                                                    <input ref={(el) => { inputRefs.current[sub.id] = el; }} type="text" value={answers[sub.id] || ''} onChange={(e) => handleAnswerChange(sub.id, e.target.value)} disabled={isReviewMode} placeholder="Điền đáp án ngắn..." className={`w-full max-w-sm px-4 py-2 border rounded-md text-[14px] outline-none transition-all ${isReviewMode ? 'bg-white border-slate-300' : 'focus:border-[#1e88e5] focus:ring-1 focus:ring-[#1e88e5]'}`}/>
+                                                    <input ref={(el) => { inputRefs.current[sub.id] = el; }} type="text" value={answers[sub.id] || ''} onChange={(e) => handleAnswerChange(sub.id, e.target.value)} disabled={isReviewMode} placeholder={isEn ? 'Enter short answer...' : 'Điền đáp án ngắn...'} className={`w-full max-w-sm px-4 py-2 border rounded-md text-[14px] outline-none transition-all ${isReviewMode ? 'bg-white border-slate-300' : 'focus:border-[#1e88e5] focus:ring-1 focus:ring-[#1e88e5]'}`}/>
                                                     {!isReviewMode && (
-                                                        <button type="button" onClick={() => setShowPalette(prev => ({...prev, [sub.id]: !prev[sub.id]}))} className={`shrink-0 px-2.5 py-1.5 rounded-md text-[12px] font-bold border transition-all ${showPalette[sub.id] ? 'bg-[#1e88e5] text-white border-[#1e88e5]' : 'bg-white text-slate-500 border-slate-300 hover:border-[#1e88e5] hover:text-[#1e88e5]'}`} title="Bảng ký tự công thức">
+                                                        <button type="button" onClick={() => setShowPalette(prev => ({...prev, [sub.id]: !prev[sub.id]}))} className={`shrink-0 px-2.5 py-1.5 rounded-md text-[12px] font-bold border transition-all ${showPalette[sub.id] ? 'bg-[#1e88e5] text-white border-[#1e88e5]' : 'bg-white text-slate-500 border-slate-300 hover:border-[#1e88e5] hover:text-[#1e88e5]'}`} title={isEn ? 'Formula symbol palette' : 'Bảng ký tự công thức'}>
                                                             f<sub>x</sub>
                                                         </button>
                                                     )}
                                                     {!isReviewMode && (
-                                                      <button type="button" onClick={() => handleOcr(sub.id)} disabled={ocrLoading[sub.id]} className="shrink-0 px-2.5 py-1.5 rounded-md text-[12px] font-bold border transition-all bg-white text-slate-500 border-slate-300 hover:border-emerald-500 hover:text-emerald-600 disabled:opacity-50" title="Chụp ảnh bài làm → AI chuyển thành text">
+                                                      <button type="button" onClick={() => handleOcr(sub.id)} disabled={ocrLoading[sub.id]} className="shrink-0 px-2.5 py-1.5 rounded-md text-[12px] font-bold border transition-all bg-white text-slate-500 border-slate-300 hover:border-emerald-500 hover:text-emerald-600 disabled:opacity-50" title={isEn ? 'Upload photo of your work → AI converts to text' : 'Chụp ảnh bài làm → AI chuyển thành text'}>
                                                         {ocrLoading[sub.id] ? '⏳' : '📷'}
                                                       </button>
                                                     )}
@@ -981,14 +1000,14 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
                                         ) : sub.type === 'long_answer' ? (
                                             <div className="relative">
                                                 <div className="flex items-start gap-2">
-                                                    <textarea ref={(el) => { inputRefs.current[sub.id] = el; }} value={answers[sub.id] || ''} onChange={(e) => handleAnswerChange(sub.id, e.target.value)} disabled={isReviewMode} placeholder="Viết câu trả lời tự luận..." className={`w-full px-4 py-3 border rounded-md min-h-[80px] text-[14px] outline-none transition-all resize-y ${isReviewMode ? 'bg-white border-slate-300' : 'focus:border-[#1e88e5] focus:ring-1 focus:ring-[#1e88e5]'}`}/>
+                                                    <textarea ref={(el) => { inputRefs.current[sub.id] = el; }} value={answers[sub.id] || ''} onChange={(e) => handleAnswerChange(sub.id, e.target.value)} disabled={isReviewMode} placeholder={isEn ? 'Write your detailed answer...' : 'Viết câu trả lời tự luận...'} className={`w-full px-4 py-3 border rounded-md min-h-[80px] text-[14px] outline-none transition-all resize-y ${isReviewMode ? 'bg-white border-slate-300' : 'focus:border-[#1e88e5] focus:ring-1 focus:ring-[#1e88e5]'}`}/>
                                                     {!isReviewMode && (
-                                                        <button type="button" onClick={() => setShowPalette(prev => ({...prev, [sub.id]: !prev[sub.id]}))} className={`shrink-0 mt-1 px-2.5 py-1.5 rounded-md text-[12px] font-bold border transition-all ${showPalette[sub.id] ? 'bg-[#1e88e5] text-white border-[#1e88e5]' : 'bg-white text-slate-500 border-slate-300 hover:border-[#1e88e5] hover:text-[#1e88e5]'}`} title="Bảng ký tự công thức">
+                                                        <button type="button" onClick={() => setShowPalette(prev => ({...prev, [sub.id]: !prev[sub.id]}))} className={`shrink-0 mt-1 px-2.5 py-1.5 rounded-md text-[12px] font-bold border transition-all ${showPalette[sub.id] ? 'bg-[#1e88e5] text-white border-[#1e88e5]' : 'bg-white text-slate-500 border-slate-300 hover:border-[#1e88e5] hover:text-[#1e88e5]'}`} title={isEn ? 'Formula symbol palette' : 'Bảng ký tự công thức'}>
                                                             f<sub>x</sub>
                                                         </button>
                                                     )}
                                                     {!isReviewMode && (
-                                                      <button type="button" onClick={() => handleOcr(sub.id)} disabled={ocrLoading[sub.id]} className="shrink-0 mt-1 px-2.5 py-1.5 rounded-md text-[12px] font-bold border transition-all bg-white text-slate-500 border-slate-300 hover:border-emerald-500 hover:text-emerald-600 disabled:opacity-50" title="Chụp ảnh bài làm → AI chuyển thành text">
+                                                      <button type="button" onClick={() => handleOcr(sub.id)} disabled={ocrLoading[sub.id]} className="shrink-0 mt-1 px-2.5 py-1.5 rounded-md text-[12px] font-bold border transition-all bg-white text-slate-500 border-slate-300 hover:border-emerald-500 hover:text-emerald-600 disabled:opacity-50" title={isEn ? 'Upload photo of your work → AI converts to text' : 'Chụp ảnh bài làm → AI chuyển thành text'}>
                                                         {ocrLoading[sub.id] ? '⏳' : '📷'}
                                                       </button>
                                                     )}
@@ -1032,7 +1051,7 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
                                             }}>
                                                 {answers[sub.id] ? (
                                                     <div className="relative inline-block border-2 border-slate-300 rounded-lg p-2 bg-white shadow-sm">
-                                                        <img src={answers[sub.id]} alt="Bài làm" className="max-h-[250px] object-contain rounded" />
+                                                        <img src={answers[sub.id]} alt={isEn ? 'Student work' : 'Bài làm'} className="max-h-[250px] object-contain rounded" />
                                                         {!isReviewMode && (
                                                             <button onClick={() => handleAnswerChange(sub.id, '')} className="absolute -top-3 -right-3 bg-red-500 text-white w-7 h-7 rounded-full shadow-md font-bold hover:scale-110 transition-transform">✕</button>
                                                         )}
@@ -1041,8 +1060,8 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
                                                     <label className={`flex flex-col items-center justify-center w-full h-32 border-2 border-dashed border-slate-300 rounded-lg bg-white transition-colors ${!isReviewMode ? 'cursor-pointer hover:bg-sky-50 hover:border-sky-400' : 'opacity-50'}`}>
                                                         <div className="flex flex-col items-center justify-center pt-5 pb-6">
                                                             <span className="text-3xl mb-2">📸</span>
-                                                            <p className="text-sm text-slate-500 font-semibold">Nhấn để chọn ảnh hoặc Ctrl+V để dán từ clipboard</p>
-                                                            <p className="text-xs text-slate-400 mt-1">Ảnh sẽ tự động nén nhỏ {"<"} 1MB</p>
+                                                            <p className="text-sm text-slate-500 font-semibold">{isEn ? 'Click to choose an image or press Ctrl+V to paste from clipboard' : 'Nhấn để chọn ảnh hoặc Ctrl+V để dán từ clipboard'}</p>
+                                                            <p className="text-xs text-slate-400 mt-1">{isEn ? 'Images are automatically compressed to < 1MB' : 'Ảnh sẽ tự động nén nhỏ < 1MB'}</p>
                                                         </div>
                                                         <input type="file" className="hidden" accept="image/*" onChange={(e) => {
                                                             if(e.target.files && e.target.files[0]) handleImageUpload(sub.id, e.target.files[0]);
@@ -1057,19 +1076,21 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
                                             <div className="mt-4 pt-4 border-t border-slate-200/60">
                                                 <div className="flex justify-between items-center mb-2">
                                                     <span className={`font-bold text-[12px] uppercase tracking-wider px-2 py-1 rounded ${isCorrect ? 'bg-emerald-200 text-emerald-800' : isWrong ? 'bg-red-200 text-red-800' : 'bg-orange-200 text-orange-800'}`}>
-                                                      Điểm đạt: {feedbackData.student_score} / {sub.max_marks}
+                                                      {isEn ? 'Score' : 'Điểm đạt'}: {feedbackData.student_score} / {sub.max_marks}
                                                     </span>
                                                 </div>
-                                                <p className="text-[13px] text-slate-700 mt-2 mb-3"><span className="font-bold text-slate-900">Nhận xét: </span> {feedbackData.examiner_comment}</p>
+                                                <p className="text-[13px] text-slate-700 mt-2 mb-3"><span className="font-bold text-slate-900">{isEn ? 'Examiner Comment: ' : 'Nhận xét: '}</span> {feedbackData.examiner_comment}</p>
                                                 <div className="bg-white p-3 rounded border border-slate-200 text-[13px]">
-                                                    <span className="font-bold text-slate-500 uppercase text-[10px] tracking-widest block mb-1">Đáp án đúng (Cambridge MS):</span>
+                                                    <span className="font-bold text-slate-500 uppercase text-[10px] tracking-widest block mb-1">{isEn ? 'Correct Answer (Cambridge MS):' : 'Đáp án đúng (Cambridge MS):'}</span>
                                                     <span className="font-medium text-emerald-600" dangerouslySetInnerHTML={{ __html: renderLatex(feedbackData.correct_answer || '') }} />
                                                 </div>
 
                                                 {!isCorrect && (
                                                     <div className="flex items-center gap-2 mt-4">
                                                         <button onClick={() => {
-                                                            const query = `Câu hỏi: "${latexToText(sub.label)}"\nĐáp án học sinh: "${answers[sub.id] || 'Bỏ trống'}"\nĐáp án đúng: "${latexToText(feedbackData.correct_answer || '')}"\n\nThầy giải thích chi tiết giúp em tại sao em sai ạ!`;
+                                                            const query = isEn
+                                                              ? `Question: "${latexToText(sub.label)}"\nStudent's answer: "${answers[sub.id] || 'Blank'}"\nCorrect answer: "${latexToText(feedbackData.correct_answer || '')}"\n\nPlease explain in English in detail why my answer is wrong and how to solve this question.`
+                                                              : `Câu hỏi: "${latexToText(sub.label)}"\nĐáp án học sinh: "${answers[sub.id] || 'Bỏ trống'}"\nĐáp án đúng: "${latexToText(feedbackData.correct_answer || '')}"\n\nThầy giải thích chi tiết giúp em tại sao em sai ạ!`;
                                                             const subjectTask = (testData?.test_type || testData?.skill || '').includes('Math') ? 'math' : 'Science';
                                                             // Open AI Sidebar for text chat
                                                             const btn = document.createElement('button');
@@ -1080,10 +1101,10 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
                                                             btn.click();
                                                             document.body.removeChild(btn);
                                                         }} className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-bold text-[12px] rounded-lg shadow-md hover:shadow-lg transition-all active:scale-95">
-                                                            💬 Chat Thầy AI
+                                                            💬 {isEn ? 'Chat with AI Teacher' : 'Chat Thầy AI'}
                                                         </button>
-                                                        <button onClick={() => callAiTutor(latexToText(sub.label), answers[sub.id] || "Bỏ trống", latexToText(feedbackData.correct_answer || ''))} className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-amber-400 to-orange-400 text-white font-bold text-[12px] rounded-lg shadow-md hover:shadow-lg transition-all active:scale-95">
-                                                            📞 Gọi Gia Sư
+                                                        <button onClick={() => callAiTutor(latexToText(sub.label), answers[sub.id] || (isEn ? "Blank" : "Bỏ trống"), latexToText(feedbackData.correct_answer || ''))} className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-amber-400 to-orange-400 text-white font-bold text-[12px] rounded-lg shadow-md hover:shadow-lg transition-all active:scale-95">
+                                                            📞 {isEn ? 'Call AI Tutor' : 'Gọi Gia Sư'}
                                                         </button>
                                                     </div>
                                                 )}

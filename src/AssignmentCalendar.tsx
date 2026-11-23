@@ -2,6 +2,7 @@ import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { supabase } from './supabase';
 import { BoardTheme, DEFAULT_BOARD_THEME, BoardThemeModal, createCustomTheme, loadTheme, saveTheme } from './ThemeModal';
 import { parseLectureFromItem, getDisplayDescription } from './lectureTaskUtils';
+import { useLmsLang } from './utils/lmsI18n';
 
 interface Assignment {
   id: string;
@@ -32,7 +33,8 @@ interface Props {
   userId?: string;
 }
 
-const WEEKDAYS = ['CN', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7'];
+const WEEKDAYS_VI = ['CN', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7'];
+const WEEKDAYS_EN = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
 const getLocalDateStr = (d: Date = new Date()) => {
   const y = d.getFullYear();
@@ -64,6 +66,9 @@ export default function AssignmentCalendar({
   onStartTest, 
   userId: propUserId 
 }: Props) {
+  const [lang] = useLmsLang();
+  const isEn = lang === 'en';
+  const WEEKDAYS = isEn ? WEEKDAYS_EN : WEEKDAYS_VI;
   const userId = propUserId || (assignments.length > 0 ? assignments[0].user_id : 'default');
   const [internalLectures, setInternalLectures] = useState<any[]>([]);
   useEffect(() => {
@@ -424,7 +429,7 @@ export default function AssignmentCalendar({
     handleSelectCalendarTheme(createCustomTheme(hex));
   };
 
-  const monthLabel = currentMonth.toLocaleDateString('vi-VN', { month: 'long', year: 'numeric' });
+  const monthLabel = currentMonth.toLocaleDateString(isEn ? 'en-US' : 'vi-VN', { month: 'long', year: 'numeric' });
 
   // Helper: get cell background based on status
   const getCellBg = (status: 'blue' | 'green' | 'red' | undefined, isSelected: boolean) => {
@@ -438,14 +443,14 @@ export default function AssignmentCalendar({
   const headerActions = topActions || rightActions;
 
   const selectedDateFormatted = selectedDate 
-    ? new Date(selectedDate + 'T00:00:00').toLocaleDateString('vi-VN', { day: 'numeric', month: 'long' })
+    ? new Date(selectedDate + 'T00:00:00').toLocaleDateString(isEn ? 'en-US' : 'vi-VN', { day: 'numeric', month: 'long' })
     : null;
 
   const rangeLabel = calendarMode === 'day' 
-    ? (selectedDateFormatted ? `Ngày ${selectedDateFormatted}` : 'Chưa chọn ngày')
+    ? (selectedDateFormatted ? (isEn ? selectedDateFormatted : `Ngày ${selectedDateFormatted}`) : (isEn ? 'No date selected' : 'Chưa chọn ngày'))
     : calendarMode === 'month'
       ? monthLabel
-      : 'Toàn bộ thời gian';
+      : (isEn ? 'All Time' : 'Toàn bộ thời gian');
 
   const progressPercent = selectedTasks.length > 0 
     ? Math.round((completedTotalCount / selectedTasks.length) * 100) 
@@ -477,13 +482,13 @@ export default function AssignmentCalendar({
               <div>
                 <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-xs border border-white/15 px-3 py-1 rounded-full text-[10px] sm:text-[11px] font-extrabold tracking-widest uppercase text-[#2ab4e8] mb-2.5">
                   <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                  TonyEnglish Study Schedule • Lịch Báo Bài
+                  {isEn ? 'TonyEnglish Study Schedule' : 'TonyEnglish Study Schedule • Lịch Báo Bài'}
                 </div>
                 <h1 className="text-xl sm:text-2xl md:text-[26px] font-black tracking-tight text-white leading-tight">
-                  Lịch Báo Bài{courseTitle ? ` — ${courseTitle}` : ''}
+                  {isEn ? 'Study Calendar' : 'Lịch Báo Bài'}{courseTitle ? ` — ${courseTitle}` : ''}
                 </h1>
                 <p className="text-slate-200/85 text-xs sm:text-sm mt-1 font-medium">
-                  Chọn ngày trên lịch để theo dõi tiến độ tự học và hoàn thành bài tập đúng hạn.
+                  {isEn ? 'Select a date on the calendar to track self-study tasks and complete assignments on time.' : 'Chọn ngày trên lịch để theo dõi tiến độ tự học và hoàn thành bài tập đúng hạn.'}
                 </p>
               </div>
 
@@ -493,7 +498,7 @@ export default function AssignmentCalendar({
                   type="button"
                   onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                   className="w-9 h-9 rounded-xl bg-white/15 hover:bg-white/25 border border-white/20 active:scale-95 text-white flex items-center justify-center font-bold text-base transition-all shadow-xs cursor-pointer"
-                  title="Tùy chọn khác"
+                  title={isEn ? 'More options' : 'Tùy chọn khác'}
                 >
                   ⋯
                 </button>
@@ -507,7 +512,7 @@ export default function AssignmentCalendar({
                         onClick={() => { setIsThemeModalOpen(true); setIsMobileMenuOpen(false); }}
                         className="w-full px-4 py-2.5 text-left text-xs font-bold hover:bg-slate-50 flex items-center gap-2.5 transition-colors cursor-pointer"
                       >
-                        <span className="text-base">🎨</span> Đổi giao diện màu nền
+                        <span className="text-base">🎨</span> {isEn ? 'Change background theme' : 'Đổi giao diện màu nền'}
                       </button>
                       {onOpenLecture && (
                         <button
@@ -515,7 +520,7 @@ export default function AssignmentCalendar({
                           onClick={() => { onOpenLecture(); setIsMobileMenuOpen(false); }}
                           className="w-full px-4 py-2.5 text-left text-xs font-bold hover:bg-emerald-50 text-emerald-700 flex items-center gap-2.5 transition-colors border-t border-slate-100 cursor-pointer"
                         >
-                          <span className="text-base">📖</span> Bài giảng lý thuyết
+                          <span className="text-base">📖</span> {isEn ? 'Theory Lectures' : 'Bài giảng lý thuyết'}
                         </button>
                       )}
                       {onStartTest && (
@@ -524,7 +529,7 @@ export default function AssignmentCalendar({
                           onClick={() => { onStartTest(''); setIsMobileMenuOpen(false); }}
                           className="w-full px-4 py-2.5 text-left text-xs font-bold hover:bg-sky-50 text-[#0a5482] flex items-center gap-2.5 transition-colors border-t border-slate-100 cursor-pointer"
                         >
-                          <span className="text-base">📚</span> Mở kho đề
+                          <span className="text-base">📚</span> {isEn ? 'Open Test Bank' : 'Mở kho đề'}
                         </button>
                       )}
                     </div>
@@ -550,8 +555,8 @@ export default function AssignmentCalendar({
               ) : (
                 <div className="bg-white/10 backdrop-blur-xs border border-white/15 rounded-xl px-3.5 py-2 text-xs text-slate-200 font-semibold self-start sm:self-auto">
                   {calendarMode === 'day' && !selectedDate 
-                    ? '👈 Chọn một ngày trên lịch để xem công việc'
-                    : `${rangeLabel}: Chưa có nhiệm vụ được giao`
+                    ? (isEn ? '👈 Pick a date on the calendar to view tasks' : '👈 Chọn một ngày trên lịch để xem công việc')
+                    : `${rangeLabel}: ${isEn ? 'No tasks assigned yet' : 'Chưa có nhiệm vụ được giao'}`
                   }
                 </div>
               )}
@@ -560,9 +565,9 @@ export default function AssignmentCalendar({
                 {/* MODE FILTER */}
                 <div className="flex bg-white/10 backdrop-blur-xs border border-white/15 rounded-xl p-1 gap-0.5">
                   {([
-                    { key: 'day' as const, label: 'Ngày' },
-                    { key: 'month' as const, label: 'Tháng' },
-                    { key: 'all' as const, label: 'Tất cả' },
+                    { key: 'day' as const, label: isEn ? 'Day' : 'Ngày' },
+                    { key: 'month' as const, label: isEn ? 'Month' : 'Tháng' },
+                    { key: 'all' as const, label: isEn ? 'All' : 'Tất cả' },
                   ]).map(m => (
                     <button
                       key={m.key}
@@ -582,18 +587,18 @@ export default function AssignmentCalendar({
                 <button 
                   onClick={goToday} 
                   className="bg-[#2ab4e8] hover:bg-[#1fa0d4] active:scale-95 text-white text-xs sm:text-[13px] font-extrabold px-3.5 sm:px-4 py-2 rounded-xl transition-all shadow-sm flex items-center gap-1.5 cursor-pointer shrink-0"
-                  title="Xem công việc hôm nay"
+                  title={isEn ? "Jump to today's tasks" : 'Xem công việc hôm nay'}
                 >
-                  <span>🎯</span> <span>Hôm nay</span>
+                  <span>🎯</span> <span>{isEn ? 'Today' : 'Hôm nay'}</span>
                 </button>
                 
                 {/* NÚT ĐỔI MÀU NỀN (desktop only, mobile hides it into ⋯) */}
                 <button 
                   onClick={() => setIsThemeModalOpen(true)} 
                   className="hidden sm:flex bg-white/12 hover:bg-white/20 border border-white/20 active:scale-95 text-white text-xs sm:text-[13px] font-bold px-3.5 py-2 rounded-xl transition-all shadow-xs items-center gap-1.5 cursor-pointer shrink-0"
-                  title="Đổi giao diện màu nền"
+                  title={isEn ? 'Change background theme' : 'Đổi giao diện màu nền'}
                 >
-                  <span>🎨</span> <span className="hidden xl:inline">Giao diện</span>
+                  <span>🎨</span> <span className="hidden xl:inline">{isEn ? 'Theme' : 'Giao diện'}</span>
                 </button>
               </div>
             </div>
@@ -602,7 +607,7 @@ export default function AssignmentCalendar({
           {headerActions && (
             <div className="relative z-30 pt-3 border-t border-white/15 flex flex-wrap items-center justify-between gap-2">
               <span className="text-[11px] font-bold uppercase tracking-wider text-sky-200/80 hidden sm:inline">
-                Lối tắt học tập &amp; Bộ lọc khóa học:
+                {isEn ? 'Study Shortcuts & Course Filter:' : 'Lối tắt học tập & Bộ lọc khóa học:'}
               </span>
               <div className="w-full sm:w-auto flex justify-end">
                 {headerActions}
@@ -669,9 +674,9 @@ export default function AssignmentCalendar({
 
               {/* LEGEND */}
               <div className="flex items-center justify-center gap-4 px-4 py-3.5 bg-slate-50/80 border-t border-slate-200/80 text-[11px] text-slate-600 font-bold">
-                <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-md bg-sky-100 border border-sky-300"></span> Đang giao</span>
-                <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-md bg-emerald-100 border border-emerald-300"></span> Hoàn thành</span>
-                <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-md bg-rose-100 border border-rose-300"></span> Quá hạn</span>
+                <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-md bg-sky-100 border border-sky-300"></span> {isEn ? 'Assigned' : 'Đang giao'}</span>
+                <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-md bg-emerald-100 border border-emerald-300"></span> {isEn ? 'Completed' : 'Hoàn thành'}</span>
+                <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-md bg-rose-100 border border-rose-300"></span> {isEn ? 'Overdue' : 'Quá hạn'}</span>
               </div>
             </div>
           </div>
@@ -690,15 +695,15 @@ export default function AssignmentCalendar({
                   </div>
                   <div className="min-w-0">
                     <h3 className="font-black text-slate-900 text-[15px] leading-tight truncate">
-                      Danh sách Công Việc
+                      {isEn ? 'Study Tasks' : 'Danh sách Công Việc'}
                     </h3>
                     <p className="text-[11.5px] text-slate-500 font-medium mt-0.5 truncate">
-                      Nhiệm vụ tự học, chép bài &amp; tài liệu
+                      {isEn ? 'Self-study tasks, note-taking & readings' : 'Nhiệm vụ tự học, chép bài & tài liệu'}
                     </p>
                   </div>
                 </div>
                 <span className="text-[11px] font-extrabold px-2.5 py-1 rounded-full bg-sky-50 text-[#0a5482] border border-sky-200/80 shrink-0">
-                  {completedManualCount}/{selectedManualTasks.length} xong
+                  {completedManualCount}/{selectedManualTasks.length} {isEn ? 'done' : 'xong'}
                 </span>
               </div>
 
@@ -707,13 +712,13 @@ export default function AssignmentCalendar({
                 {calendarMode === 'day' && !selectedDate ? (
                   <div className="h-full flex flex-col items-center justify-center text-center p-6 text-slate-400">
                     <span className="text-3xl mb-2">👈</span>
-                    <p className="text-xs font-semibold">Chọn một ngày trên lịch để xem công việc</p>
+                    <p className="text-xs font-semibold">{isEn ? 'Pick a date on the calendar to view tasks' : 'Chọn một ngày trên lịch để xem công việc'}</p>
                   </div>
                 ) : selectedManualTasks.length === 0 ? (
                   <div className="h-full flex flex-col items-center justify-center text-center p-6 text-slate-400">
                     <span className="text-3xl mb-2">📭</span>
-                    <p className="text-xs font-bold text-slate-600 mb-0.5">Không có công việc nào</p>
-                    <p className="text-[11px] text-slate-400">{rangeLabel} không có nhiệm vụ tự học nào</p>
+                    <p className="text-xs font-bold text-slate-600 mb-0.5">{isEn ? 'No tasks scheduled' : 'Không có công việc nào'}</p>
+                    <p className="text-[11px] text-slate-400">{rangeLabel} {isEn ? 'has no self-study tasks' : 'không có nhiệm vụ tự học nào'}</p>
                   </div>
                 ) : (
                   selectedManualTasks.map(task => (
@@ -731,7 +736,11 @@ export default function AssignmentCalendar({
                           onClick={() => handleToggleComplete(task)}
                           disabled={task.is_completed || isUpdating === task.id}
                           className="p-1.5 -m-1.5 mt-0 flex items-center justify-center shrink-0 cursor-pointer disabled:cursor-default group/chk"
-                          title={task.is_completed ? "Đã được giáo viên duyệt" : task.student_completed ? "Bấm để bỏ đánh dấu hoàn thành" : "Bấm để đánh dấu đã hoàn thành"}
+                          title={task.is_completed
+                            ? (isEn ? 'Approved by teacher' : 'Đã được giáo viên duyệt')
+                            : task.student_completed
+                              ? (isEn ? 'Click to unmark as done' : 'Bấm để bỏ đánh dấu hoàn thành')
+                              : (isEn ? 'Click to mark as completed' : 'Bấm để đánh dấu đã hoàn thành')}
                         >
                           <span
                             className={`w-5 h-5 rounded-full border-2 flex items-center justify-center transition-all ${
@@ -764,13 +773,13 @@ export default function AssignmentCalendar({
                           {/* Thông tin ngày giao bài */}
                           {task._effectiveDueDate && (
                             <div className="flex items-center gap-1.5 text-[11px] text-slate-500 font-medium mt-1.5">
-                              <span className="text-slate-400">📅 Ngày giao:</span>
+                              <span className="text-slate-400">📅 {isEn ? 'Due:' : 'Ngày giao:'}</span>
                               <span className="font-bold text-slate-700">
                                 {formatDateVN(task._effectiveDueDate)}
                               </span>
                               {task._effectiveDueDate !== task.due_date && (
                                 <span className="text-[10px] font-bold text-emerald-700 bg-emerald-100 px-1.5 py-0.5 rounded">
-                                  Đã hoàn thành sớm
+                                  {isEn ? 'Completed early' : 'Đã hoàn thành sớm'}
                                 </span>
                               )}
                             </div>
@@ -783,17 +792,17 @@ export default function AssignmentCalendar({
                                 <div className="flex items-center gap-2 flex-wrap">
                                   {task.is_completed && (
                                     <span className="text-[10px] font-extrabold bg-emerald-100 text-emerald-700 px-2.5 py-0.5 rounded-full">
-                                      ✅ Đã duyệt
+                                      ✅ {isEn ? 'Approved' : 'Đã duyệt'}
                                     </span>
                                   )}
                                   {task.student_completed && !task.is_completed && (
                                     <span className="text-[10px] font-extrabold bg-amber-100 text-amber-700 px-2.5 py-0.5 rounded-full">
-                                      ⏳ Chờ giáo viên duyệt
+                                      ⏳ {isEn ? 'Awaiting teacher review' : 'Chờ giáo viên duyệt'}
                                     </span>
                                   )}
                                   {!task.student_completed && !task.is_completed && (
                                     <span className="text-[10px] font-bold bg-slate-100 text-slate-500 px-2.5 py-0.5 rounded-full">
-                                      Chưa hoàn thành
+                                      {isEn ? 'Not completed' : 'Chưa hoàn thành'}
                                     </span>
                                   )}
                                 </div>
@@ -805,10 +814,10 @@ export default function AssignmentCalendar({
                                       onOpenLecture?.(lecMeta.courseId || undefined, lecMeta.lectureId || undefined);
                                     }}
                                     className="text-[11px] font-extrabold px-3 py-1.5 rounded-xl bg-sky-50 text-[#0a5482] hover:bg-[#0a5482] hover:text-white border border-sky-200/90 transition-all flex items-center gap-1.5 shrink-0 cursor-pointer shadow-2xs active:scale-95 ml-auto"
-                                    title="Đi tới bài giảng này"
+                                    title={isEn ? 'Go to this lecture' : 'Đi tới bài giảng này'}
                                   >
                                     <span>📖</span>
-                                    <span>Đến bài giảng →</span>
+                                    <span>{isEn ? 'Go to Lecture →' : 'Đến bài giảng →'}</span>
                                   </button>
                                 )}
                               </div>
@@ -833,15 +842,15 @@ export default function AssignmentCalendar({
                   </div>
                   <div className="min-w-0">
                     <h3 className="font-black text-slate-900 text-[15px] leading-tight truncate">
-                      Danh sách Bài Tập
+                      {isEn ? 'Practice Tests' : 'Danh sách Bài Tập'}
                     </h3>
                     <p className="text-[11.5px] text-slate-500 font-medium mt-0.5 truncate">
-                      Bài tập trong kho đề (Cần đạt ≥ 50%)
+                      {isEn ? 'Test bank assignments (Score ≥ 50% required)' : 'Bài tập trong kho đề (Cần đạt ≥ 50%)'}
                     </p>
                   </div>
                 </div>
                 <span className="text-[11px] font-extrabold px-2.5 py-1 rounded-full bg-sky-50 text-[#0a5482] border border-sky-200/80 shrink-0">
-                  {completedTestCount}/{selectedTestTasks.length} xong
+                  {completedTestCount}/{selectedTestTasks.length} {isEn ? 'done' : 'xong'}
                 </span>
               </div>
 
@@ -850,13 +859,13 @@ export default function AssignmentCalendar({
                 {calendarMode === 'day' && !selectedDate ? (
                   <div className="h-full flex flex-col items-center justify-center text-center p-6 text-slate-400">
                     <span className="text-3xl mb-2">👈</span>
-                    <p className="text-xs font-semibold">Chọn một ngày trên lịch để xem bài tập</p>
+                    <p className="text-xs font-semibold">{isEn ? 'Pick a date on the calendar to view tests' : 'Chọn một ngày trên lịch để xem bài tập'}</p>
                   </div>
                 ) : selectedTestTasks.length === 0 ? (
                   <div className="h-full flex flex-col items-center justify-center text-center p-6 text-slate-400">
                     <span className="text-3xl mb-2">📭</span>
-                    <p className="text-xs font-bold text-slate-600 mb-0.5">Không có bài tập nào</p>
-                    <p className="text-[11px] text-slate-400">{rangeLabel} không có bài tập trong kho</p>
+                    <p className="text-xs font-bold text-slate-600 mb-0.5">{isEn ? 'No tests scheduled' : 'Không có bài tập nào'}</p>
+                    <p className="text-[11px] text-slate-400">{rangeLabel} {isEn ? 'has no test bank assignments' : 'không có bài tập trong kho'}</p>
                   </div>
                 ) : (
                   selectedTestTasks.map(task => {
@@ -883,7 +892,9 @@ export default function AssignmentCalendar({
                                 ? 'bg-emerald-500 border-emerald-500 text-white' 
                                 : 'bg-slate-50 border-slate-300 text-slate-400'
                             }`}
-                            title={isDone ? "Bài tập đã nộp và đạt điểm yêu cầu (≥ 50%)" : "Cần nộp bài đạt từ 50% điểm trở lên"}
+                            title={isDone
+                              ? (isEn ? 'Submitted and passed (≥ 50%)' : 'Bài tập đã nộp và đạt điểm yêu cầu (≥ 50%)')
+                              : (isEn ? 'Requires at least 50% score to pass' : 'Cần nộp bài đạt từ 50% điểm trở lên')}
                           >
                             {isDone ? '✓' : '📝'}
                           </div>
@@ -903,13 +914,13 @@ export default function AssignmentCalendar({
                             {/* Thông tin ngày giao bài */}
                             {task._effectiveDueDate && (
                               <div className="flex items-center gap-1.5 text-[11px] text-slate-500 font-medium mt-1.5">
-                                <span className="text-slate-400">📅 Ngày giao:</span>
+                                <span className="text-slate-400">📅 {isEn ? 'Due:' : 'Ngày giao:'}</span>
                                 <span className="font-bold text-slate-700">
                                   {formatDateVN(task._effectiveDueDate)}
                                 </span>
                                 {task._effectiveDueDate !== task.due_date && (
                                   <span className="text-[10px] font-bold text-emerald-700 bg-emerald-100 px-1.5 py-0.5 rounded">
-                                    Đã hoàn thành sớm
+                                    {isEn ? 'Completed early' : 'Đã hoàn thành sớm'}
                                   </span>
                                 )}
                               </div>
@@ -921,12 +932,12 @@ export default function AssignmentCalendar({
                                 {isDone ? (
                                   <div className="flex items-center gap-1.5 flex-wrap">
                                     <span className="inline-flex items-center text-[10px] px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-700 font-extrabold">
-                                      ✓ Đã đạt
+                                      ✓ {isEn ? 'Passed' : 'Đã đạt'}
                                     </span>
                                     {testScore && (
                                       <span 
                                         className="inline-flex items-center gap-1 text-[10.5px] px-2.5 py-0.5 rounded-full bg-sky-50 text-[#0a5482] font-black border border-sky-200/90 shadow-2xs"
-                                        title={`Điểm làm gần đây: ${testScore.score}/${testScore.total_score} (${testScore.percent}%)`}
+                                        title={isEn ? `Latest score: ${testScore.score}/${testScore.total_score} (${testScore.percent}%)` : `Điểm làm gần đây: ${testScore.score}/${testScore.total_score} (${testScore.percent}%)`}
                                       >
                                         🎯 {testScore.total_score > 0 ? `${testScore.score}/${testScore.total_score}` : testScore.score}
                                         <span className="text-[9.5px] font-bold text-[#2ab4e8]">({testScore.percent}%)</span>
@@ -935,11 +946,11 @@ export default function AssignmentCalendar({
                                   </div>
                                 ) : testScore ? (
                                   <span className="inline-flex items-center gap-1 text-[10px] px-2.5 py-0.5 rounded-full bg-rose-100 text-rose-700 font-bold border border-rose-200">
-                                    ⚠️ Chưa đạt: {testScore.total_score > 0 ? `${testScore.score}/${testScore.total_score}` : testScore.score} ({testScore.percent}%) • Cần ≥ 50%
+                                    ⚠️ {isEn ? 'Not passed' : 'Chưa đạt'}: {testScore.total_score > 0 ? `${testScore.score}/${testScore.total_score}` : testScore.score} ({testScore.percent}%) • {isEn ? 'Need ≥ 50%' : 'Cần ≥ 50%'}
                                   </span>
                                 ) : (
                                   <span className="inline-flex items-center text-[10px] px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-500 font-semibold">
-                                    Chưa làm (Cần đạt ≥ 50%)
+                                    {isEn ? 'Not started (Need ≥ 50%)' : 'Chưa làm (Cần đạt ≥ 50%)'}
                                   </span>
                                 )}
                               </div>
@@ -949,25 +960,25 @@ export default function AssignmentCalendar({
                                 <button 
                                   onClick={() => task.test_id && onStartTest?.(task.test_id)}
                                   className="text-[11px] font-extrabold px-3 py-1.5 rounded-xl bg-emerald-50 hover:bg-emerald-600 text-emerald-700 hover:text-white border border-emerald-200 transition-colors flex items-center gap-1 shrink-0 cursor-pointer shadow-2xs"
-                                  title="Làm lại bài thi này"
+                                  title={isEn ? 'Retake this test' : 'Làm lại bài thi này'}
                                 >
-                                  <span>🔄</span> Làm lại
+                                  <span>🔄</span> {isEn ? 'Retake' : 'Làm lại'}
                                 </button>
                               ) : testScore ? (
                                 <button 
                                   onClick={() => task.test_id && onStartTest?.(task.test_id)}
                                   className="text-[11px] font-extrabold px-3.5 py-1.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white transition-colors flex items-center gap-1 shrink-0 cursor-pointer shadow-xs"
-                                  title="Làm lại để đạt điểm yêu cầu (≥ 50%)"
+                                  title={isEn ? 'Retake to reach ≥ 50%' : 'Làm lại để đạt điểm yêu cầu (≥ 50%)'}
                                 >
-                                  Làm lại để đạt điểm →
+                                  {isEn ? 'Retake to Pass →' : 'Làm lại để đạt điểm →'}
                                 </button>
                               ) : (
                                 <button 
                                   onClick={() => task.test_id && onStartTest?.(task.test_id)}
                                   className="text-[11px] font-extrabold px-3.5 py-1.5 rounded-xl bg-[#0a5482] hover:bg-[#084266] text-white transition-colors flex items-center gap-1 shrink-0 cursor-pointer shadow-xs"
-                                  title="Bắt đầu làm bài"
+                                  title={isEn ? 'Start practice test' : 'Bắt đầu làm bài'}
                                 >
-                                  Bắt đầu làm bài →
+                                  {isEn ? 'Start Test →' : 'Bắt đầu làm bài →'}
                                 </button>
                               )}
                             </div>

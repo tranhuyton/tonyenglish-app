@@ -3,6 +3,7 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { supabase } from './supabase';
+import { useLmsLang, getLmsLang, getLocalizedCourseTitle } from './utils/lmsI18n';
 
 // =========================================================================================
 // 🚀 CSS: STYLE CHỮ PHẤN VIẾT TAY CHO CHẾ ĐỘ BẢNG ĐEN
@@ -149,6 +150,8 @@ export default function LiveSpeakingTest({
     onOpenAI?: (passedMode?: string) => void,
     courseTitle?: string
 }) {
+  const [lang] = useLmsLang();
+  const isEn = lang === 'en';
   const [status, setStatus] = useState<'IDLE' | 'CONNECTING' | 'CONNECTED'>('IDLE');
   // 🚀 PERSIST: Đọc giọng đã chọn từ sessionStorage (nếu có)
   const [examiner, setExaminer] = useState<'TONY' | 'DIEP'>(() => {
@@ -267,17 +270,17 @@ export default function LiveSpeakingTest({
 
   // 🧭 Chế độ đàm thoại & chủ đề (Khai báo sớm để useMemo & functions dùng an toàn, không bị TDZ)
   const currentMode = (typeof window !== 'undefined' ? sessionStorage.getItem('tony_live_mode') : null) || 'EXAMINER';
-  const currentTopic = (typeof window !== 'undefined' ? sessionStorage.getItem('tony_live_topic') : null) || "Bài tập giao tiếp tổng hợp";
+  const currentTopic = (typeof window !== 'undefined' ? sessionStorage.getItem('tony_live_topic') : null) || (isEn ? "General Speaking Practice" : "Bài tập giao tiếp tổng hợp");
 
-  const isReflexMode = currentTopic.toLowerCase().includes('phản xạ') || currentTopic.toLowerCase().includes('luyện phản xạ') || currentTopic.toLowerCase().includes('giao tiếp') || Boolean(courseTitle && courseTitle.toLowerCase().includes('giao tiếp'));
+  const isReflexMode = currentTopic.toLowerCase().includes('phản xạ') || currentTopic.toLowerCase().includes('luyện phản xạ') || currentTopic.toLowerCase().includes('giao tiếp') || currentTopic.toLowerCase().includes('reflex') || Boolean(courseTitle && (courseTitle.toLowerCase().includes('giao tiếp') || courseTitle.toLowerCase().includes('communication')));
   const isIeltsMode = Boolean(courseTitle && courseTitle.toLowerCase().includes('ielts')) || currentTopic.toLowerCase().includes('ielts');
 
   const getDisplayTopic = () => {
-      if (currentMode === 'TUTOR') return "Chữa bài & Giải đáp thắc mắc chuyên sâu";
+      if (currentMode === 'TUTOR') return isEn ? "In-Depth Review & Q&A Tutoring" : "Chữa bài & Giải đáp thắc mắc chuyên sâu";
       if (currentTopic.startsWith('Hãy đóng vai là trợ lý luyện phản xạ') || currentTopic.includes('luyện phản xạ')) {
           const match = currentTopic.match(/luyện phản xạ\s+([^:.]+)/i);
-          if (match) return `Luyện phản xạ: ${match[1].trim()}`;
-          return "Luyện phản xạ: 10 cấu trúc câu giao tiếp cơ bản (Dò bài & Tình huống thực chiến)";
+          if (match) return isEn ? `Speaking Reflex: ${match[1].trim()}` : `Luyện phản xạ: ${match[1].trim()}`;
+          return isEn ? "Speaking Reflex: Core Communication Patterns & Live Practice" : "Luyện phản xạ: 10 cấu trúc câu giao tiếp cơ bản (Dò bài & Tình huống thực chiến)";
       }
       return currentTopic;
   };
@@ -350,17 +353,21 @@ export default function LiveSpeakingTest({
   // 🚀 KHỞI TẠO NÃO MẮT THẦN (VISION AI QUA EDGE FUNCTION - KHÔNG DÙNG WEBSOCKET)
   // =========================================================================================
   const startVisionSession = async (image: string, query: string, courseTitleOverride?: string) => {
+      const enNow = getLmsLang() === 'en';
       if (typeof window !== 'undefined') {
           (window as any).tonyPendingImage = null;
       }
       setIsPendingVision(false);
       setActiveVisionImage(image);
 
-      const finalCourseTitle = courseTitleOverride || courseTitle || sessionStorage.getItem('tony_live_topic') || "Tổng hợp";
+      const finalCourseTitle = getLocalizedCourseTitle(
+        courseTitleOverride || courseTitle || sessionStorage.getItem('tony_live_topic') || (enNow ? "General" : "Tổng hợp"),
+        enNow ? 'en' : 'vi'
+      );
       setIsVisionMode(true);
       setIsTextOnlyMode(true);
       setStatus('CONNECTED');
-      setMessages([{ role: 'user', text: `*(📸 Đã gửi ảnh bài tập)*\n\n${query}` }]);
+      setMessages([{ role: 'user', text: `*(📸 ${enNow ? 'Exercise image attached' : 'Đã gửi ảnh bài tập'})*\n\n${query}` }]);
       setIsProcessing(true);
       setLiveTranscript('');
 
@@ -371,7 +378,14 @@ export default function LiveSpeakingTest({
                   imageUrl: image,
                   content: query,
                   courseTitle: finalCourseTitle,
-                  prompt: `[KỶ LUẬT CHUYÊN MÔN TUYỆT ĐỐI]
+                  prompt: enNow
+                    ? `[STRICT SUBJECT & LANGUAGE DISCIPLINE]
+You are a dedicated AI tutor for the course "${finalCourseTitle}".
+Respond EXCLUSIVELY in clear, natural ENGLISH.
+1. Verify whether the image/question belongs to "${finalCourseTitle}".
+2. If completely unrelated to "${finalCourseTitle}", politely decline in one sentence stating it is outside the scope of "${finalCourseTitle}".
+3. If relevant, jump straight into a clear, step-by-step explanation. Use LaTeX ($...$ and $$...$$) for math formulas and **bold** for key terms and final answers so they highlight cleanly on the chalkboard.`
+                    : `[KỶ LUẬT CHUYÊN MÔN TUYỆT ĐỐI]
 Bạn là một gia sư AI nghiêm khắc chuyên dạy môn "${finalCourseTitle}".
 Bạn chỉ được phép giải quyết các câu hỏi và bài tập thuộc phạm vi môn học "${finalCourseTitle}".
 
@@ -393,10 +407,10 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
           });
 
           if (error || !data) {
-              throw new Error("Lỗi kết nối bộ não Mắt Thần.");
+              throw new Error(enNow ? "Failed to connect to Vision AI." : "Lỗi kết nối bộ não Mắt Thần.");
           }
 
-          const resultText = data.result || "Thầy đang bị mờ mắt một chút, em chụp lại đề bài gửi lại cho thầy/cô nhé.";
+          const resultText = data.result || (enNow ? "I couldn't read the image clearly — please try sending a clearer photo!" : "Thầy đang bị mờ mắt một chút, em chụp lại đề bài gửi lại cho thầy/cô nhé.");
           
           setIsProcessing(false);
           
@@ -424,7 +438,7 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
 
       } catch (err) {
           setIsProcessing(false);
-          setMessages(prev => [...prev, { role: 'model', text: "Hệ thống Mắt Thần đang quá tải, em vui lòng thử lại sau nhé!" }]);
+          setMessages(prev => [...prev, { role: 'model', text: enNow ? "Vision AI is currently busy. Please try again in a moment!" : "Hệ thống Mắt Thần đang quá tải, em vui lòng thử lại sau nhé!" }]);
       }
   };
 
@@ -576,18 +590,37 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
   };
 
   const buildSystemPrompt = () => {
+        const enNow = getLmsLang() === 'en';
         const mode = sessionStorage.getItem('tony_live_mode') || 'EXAMINER';
         const tutorDataRaw = sessionStorage.getItem('tony_tutor_data');
         const tutorData = tutorDataRaw ? JSON.parse(tutorDataRaw) : null;
-        const currentTopic = sessionStorage.getItem('tony_live_topic') || "Bài tập giao tiếp tổng hợp";
-        const teacherName = examiner === 'TONY' ? 'thầy Tôn' : 'cô Diệp';
+        const currentTopic = sessionStorage.getItem('tony_live_topic') || (enNow ? "General Speaking Practice" : "Bài tập giao tiếp tổng hợp");
+        const teacherName = enNow ? (examiner === 'TONY' ? 'Teacher Tony' : 'Teacher Diep') : (examiner === 'TONY' ? 'thầy Tôn' : 'cô Diệp');
 
         const hiddenContextRaw = sessionStorage.getItem('tony_lecture_context') || '';
         const imgRegex = /\[IMAGE_ANSWER:\s*(https?:\/\/[^\]]+)\]/g;
-        const cleanTextContext = hiddenContextRaw.replace(imgRegex, '[CÓ BỨC ẢNH ĐÁP ÁN ĐÍNH KÈM]').trim();
+        const cleanTextContext = hiddenContextRaw.replace(imgRegex, enNow ? '[ANSWER IMAGE ATTACHED]' : '[CÓ BỨC ẢNH ĐÁP ÁN ĐÍNH KÈM]').trim();
         const contextInstruction = cleanTextContext 
-            ? `\n\n[TÀI LIỆU DÀNH CHO BẠN ĐỂ DẠY HỌC SINH]:\n"""\n${cleanTextContext}\n"""` 
+            ? (enNow ? `\n\n[TEACHING REFERENCE MATERIAL]:\n"""\n${cleanTextContext}\n"""` : `\n\n[TÀI LIỆU DÀNH CHO BẠN ĐỂ DẠY HỌC SINH]:\n"""\n${cleanTextContext}\n"""`)
             : '';
+
+        if (enNow) {
+            const enStyleRule = isBlackboardMode
+                ? `[STRICT LANGUAGE & BOARD FORMATTING]: You MUST speak and write exclusively in warm, clear, natural ENGLISH. Your speech is displayed live on a Markdown chalkboard — use LaTeX ($...$ and $$...$$) for math formulas and **bold** for key terms and answers.`
+                : `[STRICT LANGUAGE RULE]: You MUST speak and respond exclusively in warm, natural, concise ENGLISH. Use **bold** for key expressions or answers.`;
+            if (mode === 'TUTOR' && tutorData) {
+                return `You are ${teacherName}. LESSON/TEST CONTEXT: ${tutorData.transcript}. MISSION: ${tutorData.feedback}. ${enStyleRule} ${contextInstruction}`;
+            }
+            const isReflex = currentTopic.toLowerCase().includes('phản xạ') || currentTopic.toLowerCase().includes('luyện phản xạ') || currentTopic.toLowerCase().includes('giao tiếp') || currentTopic.toLowerCase().includes('reflex') || (courseTitle && (courseTitle.toLowerCase().includes('giao tiếp') || courseTitle.toLowerCase().includes('communication')));
+            const isIelts = (courseTitle && courseTitle.toLowerCase().includes('ielts')) || currentTopic.toLowerCase().includes('ielts');
+            if (isReflex) {
+                return `You are ${teacherName}, an encouraging English Communication & Speaking Reflex Coach. NEVER claim to be an IELTS examiner. Topic/Instructions:\n"""\n${currentTopic}\n"""\nKeep responses concise (1–2 natural sentences), give constructive pronunciation/phrasing feedback, and guide the learner step by step in ENGLISH. ${enStyleRule} ${contextInstruction}`;
+            }
+            if (isIelts) {
+                return `You are IELTS Speaking Examiner ${teacherName}. Conduct a realistic, supportive IELTS Speaking session on the topic: "${currentTopic}". Listen carefully and respond naturally in ENGLISH. ${enStyleRule} ${contextInstruction}`;
+            }
+            return `You are ${teacherName}, a 1-on-1 English speaking tutor. Have a natural, encouraging English conversation and practice session on: "${currentTopic}". ${enStyleRule} ${contextInstruction}`;
+        }
 
         let promptKienNhan = isBlackboardMode 
         ? `[KỶ LUẬT THÉP VÀ CÁCH TRÌNH BÀY BẢNG]: Bạn bắt buộc dùng văn phong và từ vựng chuẩn miền Bắc (Hà Nội). Lời nói đang được chép lên bảng đen dạng Markdown. BẮT BUỘC dùng ký hiệu LaTeX ($...$ và $$...$$) để viết MỌI công thức toán học, và LUÔN LUÔN IN ĐẬM (**từ khóa**) các đáp án, danh từ riêng hoặc kết quả quan trọng để hệ thống tự vẽ bằng phấn vàng nổi bật. Tuyệt đối không tự giới thiệu mình là người Hà Nội hoặc nhắc đến xuất thân của mình với học sinh.`
@@ -682,9 +715,14 @@ ${currentTopic}
           isTextOnlyModeRef.current = true;
           setStatus('CONNECTED');
           
-          const welcomeMsg = examiner === 'TONY' 
-              ? "Chào em! Thầy đã nhìn thấy trang tài liệu PDF của em ở bên trái rồi. Em cần thầy trợ giúp giải câu nào hay phần nào trên trang này, hãy gõ câu hỏi xuống dưới nhé!"
-              : "Chào em! Cô đã nhìn thấy trang tài liệu PDF của em ở bên trái rồi. Em cần cô trợ giúp giải câu nào hay phần nào trên trang này, hãy gõ câu hỏi xuống dưới nhé!";
+          const enNow = getLmsLang() === 'en';
+          const welcomeMsg = enNow
+              ? (examiner === 'TONY'
+                  ? "Hello! I'm Teacher Tony and I can see your PDF page on the left. Which question or section on this page would you like me to explain? Just type your question below!"
+                  : "Hello! I'm Teacher Diep and I can see your PDF page on the left. Which question or section on this page would you like me to explain? Just type your question below!")
+              : (examiner === 'TONY' 
+                  ? "Chào em! Thầy đã nhìn thấy trang tài liệu PDF của em ở bên trái rồi. Em cần thầy trợ giúp giải câu nào hay phần nào trên trang này, hãy gõ câu hỏi xuống dưới nhé!"
+                  : "Chào em! Cô đã nhìn thấy trang tài liệu PDF của em ở bên trái rồi. Em cần cô trợ giúp giải câu nào hay phần nào trên trang này, hãy gõ câu hỏi xuống dưới nhé!");
           
           setMessages([{ role: 'model', text: welcomeMsg }]);
           setLiveTranscript('');
@@ -810,17 +848,23 @@ ${currentTopic}
                   
                   if (msg.setupComplete) {
                       isSetupCompleteRef.current = true;
-                      
-                      const currentTopic = sessionStorage.getItem('tony_live_topic') || "Bài tập giao tiếp tổng hợp";
-                      const teacherName = examiner === 'TONY' ? 'thầy Tôn' : 'cô Diệp';
-                      const isReflex = currentTopic.toLowerCase().includes('phản xạ') || currentTopic.toLowerCase().includes('luyện phản xạ') || currentTopic.toLowerCase().includes('giao tiếp') || (courseTitle && courseTitle.toLowerCase().includes('giao tiếp'));
+                      const enNow = getLmsLang() === 'en';
+                      const currentTopic = sessionStorage.getItem('tony_live_topic') || (enNow ? "General Speaking Practice" : "Bài tập giao tiếp tổng hợp");
+                      const teacherName = enNow ? (examiner === 'TONY' ? 'Teacher Tony' : 'Teacher Diep') : (examiner === 'TONY' ? 'thầy Tôn' : 'cô Diệp');
+                      const isReflex = currentTopic.toLowerCase().includes('phản xạ') || currentTopic.toLowerCase().includes('luyện phản xạ') || currentTopic.toLowerCase().includes('giao tiếp') || currentTopic.toLowerCase().includes('reflex') || (courseTitle && (courseTitle.toLowerCase().includes('giao tiếp') || courseTitle.toLowerCase().includes('communication')));
                       const isIelts = (courseTitle && courseTitle.toLowerCase().includes('ielts')) || currentTopic.toLowerCase().includes('ielts');
 
-                      let welcomePrompt = `[HỆ THỐNG]: Học sinh vừa bước vào lớp. Bạn là ${teacherName}. Hãy cất tiếng chào ngắn gọn và giới thiệu bản thân trong 1 câu.`;
+                      let welcomePrompt = enNow
+                        ? `[SYSTEM]: The student just entered the room. You are ${teacherName}. Greet them warmly in ENGLISH in 1 short sentence and ask how you can help.`
+                        : `[HỆ THỐNG]: Học sinh vừa bước vào lớp. Bạn là ${teacherName}. Hãy cất tiếng chào ngắn gọn và giới thiệu bản thân trong 1 câu.`;
                       if (isReflex) {
-                          welcomePrompt = `[HỆ THỐNG]: Học viên vừa bấm nút bắt đầu luyện tập phản xạ. Bạn là ${teacherName}. Hãy chào học viên ngắn gọn trong 1 câu (ví dụ: "Chào em, thầy Tôn đây, chúng ta cùng luyện phản xạ nhé!"), rồi đọc ngay câu tiếng Việt đầu tiên của Vòng 1 để em dịch sang tiếng Anh. Nhớ xưng Thầy/Cô và gọi Em.`;
+                          welcomePrompt = enNow
+                            ? `[SYSTEM]: The learner just started speaking reflex practice. You are ${teacherName}. Greet them warmly in 1 short ENGLISH sentence and immediately start the first practice prompt in English.`
+                            : `[HỆ THỐNG]: Học viên vừa bấm nút bắt đầu luyện tập phản xạ. Bạn là ${teacherName}. Hãy chào học viên ngắn gọn trong 1 câu (ví dụ: "Chào em, thầy Tôn đây, chúng ta cùng luyện phản xạ nhé!"), rồi đọc ngay câu tiếng Việt đầu tiên của Vòng 1 để em dịch sang tiếng Anh. Nhớ xưng Thầy/Cô và gọi Em.`;
                       } else if (isIelts) {
-                          welcomePrompt = `[HỆ THỐNG]: Thí sinh vừa bước vào phòng thi IELTS Speaking. Bạn là giám khảo ${teacherName}. Hãy chào thí sinh và bắt đầu câu hỏi đầu tiên của chủ đề "${currentTopic}".`;
+                          welcomePrompt = enNow
+                            ? `[SYSTEM]: The candidate just entered the IELTS Speaking test room. You are Examiner ${teacherName}. Greet them professionally in ENGLISH and ask the first question for the topic "${currentTopic}".`
+                            : `[HỆ THỐNG]: Thí sinh vừa bước vào phòng thi IELTS Speaking. Bạn là giám khảo ${teacherName}. Hãy chào thí sinh và bắt đầu câu hỏi đầu tiên của chủ đề "${currentTopic}".`;
                       }
 
                       ws.send(JSON.stringify({ 
@@ -947,7 +991,7 @@ ${currentTopic}
           };
       } catch (e: any) {
           console.error("Lỗi khởi tạo live speaking session:", e);
-          alert(`Lỗi: Không thể khởi tạo kết nối (${e?.message || e})`);
+          alert((getLmsLang() === 'en' ? 'Connection error: ' : 'Lỗi: Không thể khởi tạo kết nối (') + `${e?.message || e}` + (getLmsLang() === 'en' ? '' : ')'));
           setStatus('IDLE');
       }
   };
@@ -1001,14 +1045,22 @@ ${currentTopic}
           setMessages(prev => [...prev, { role: 'user', text: text }]);
           
           try {
-              const finalCourseTitle = courseTitle || sessionStorage.getItem('tony_live_topic') || "Tổng hợp";
+              const enNow = getLmsLang() === 'en';
+              const finalCourseTitle = getLocalizedCourseTitle(
+                courseTitle || sessionStorage.getItem('tony_live_topic') || (enNow ? "General" : "Tổng hợp"),
+                enNow ? 'en' : 'vi'
+              );
               const { data, error } = await supabase.functions.invoke('omni-vision-solver', {
                   body: {
                       imageUrl: activeVisionImage || undefined,
                       content: text,
                       history: messages,
                       courseTitle: finalCourseTitle,
-                      prompt: `[KỶ LUẬT CHUYÊN MÔN TUYỆT ĐỐI]
+                      prompt: enNow
+                        ? `[STRICT SUBJECT & LANGUAGE DISCIPLINE]
+You are a dedicated AI tutor for "${finalCourseTitle}". Respond EXCLUSIVELY in clear, natural ENGLISH.
+If the question is unrelated to "${finalCourseTitle}", politely decline. Otherwise, explain step-by-step directly, using LaTeX ($...$ and $$...$$) for math formulas and **bold** for key answers.`
+                        : `[KỶ LUẬT CHUYÊN MÔN TUYỆT ĐỐI]
 Bạn là một gia sư AI nghiêm khắc chuyên dạy môn "${finalCourseTitle}".
 Bạn chỉ được phép giải quyết các câu hỏi và bài tập thuộc phạm vi môn học "${finalCourseTitle}".
 
@@ -1029,9 +1081,9 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
                   }
               });
 
-              if (error || !data) throw new Error("Lỗi API Vision");
+              if (error || !data) throw new Error(enNow ? "Vision API Error" : "Lỗi API Vision");
 
-              const resultText = data.result || "Dạ hệ thống vừa gặp trục trặc một xíu, em gõ lại câu hỏi nha.";
+              const resultText = data.result || (enNow ? "Something went wrong — please try typing your question again." : "Dạ hệ thống vừa gặp trục trặc một xíu, em gõ lại câu hỏi nha.");
               setIsProcessing(false);
               
               // 🚀 Lại kích hoạt hiệu ứng viết phấn
@@ -1056,7 +1108,7 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
 
           } catch (err) {
               setIsProcessing(false);
-              setMessages(prev => [...prev, { role: 'model', text: "Hệ thống đang quá tải, em vui lòng thử lại sau nhé!" }]);
+              setMessages(prev => [...prev, { role: 'model', text: getLmsLang() === 'en' ? "The system is currently busy. Please try again shortly!" : "Hệ thống đang quá tải, em vui lòng thử lại sau nhé!" }]);
           }
           return;
       }
@@ -1071,7 +1123,7 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
               clientContent: { turns: [{ role: "user", parts: [{ text: text }] }], turnComplete: true }
           }));
       } else {
-          alert("Kết nối đang bị gián đoạn, vui lòng chờ...");
+          alert(getLmsLang() === 'en' ? "Connection interrupted, please wait..." : "Kết nối đang bị gián đoạn, vui lòng chờ...");
           setIsProcessing(false);
       }
   };
@@ -1115,8 +1167,8 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
                       for (let i = next.length - 1; i >= 0; i--) {
                           if (next[i].role === 'user') {
                               let currentText = next[i].text;
-                              if (currentText.startsWith('🎤') || currentText === '(Đã gửi đoạn hội thoại âm thanh)') {
-                                  next[i] = { ...next[i], text: finalSpeechText || "(Đã gửi đoạn hội thoại âm thanh)" };
+                              if (currentText.startsWith('🎤') || currentText === '(Đã gửi đoạn hội thoại âm thanh)' || currentText === '(Voice message sent)') {
+                                  next[i] = { ...next[i], text: finalSpeechText || (getLmsLang() === 'en' ? "(Voice message sent)" : "(Đã gửi đoạn hội thoại âm thanh)") };
                               }
                               break;
                           }
@@ -1141,7 +1193,7 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
               // 🚀 Nếu AI đang nói → ngắt lời
               if (isSpeaking) stopAIAudio();
               if (transcriptRef.current) {
-                  setMessages(prev => [...prev, { role: 'model', text: transcriptRef.current + ' _(bị ngắt)_' }]);
+                  setMessages(prev => [...prev, { role: 'model', text: transcriptRef.current + (getLmsLang() === 'en' ? ' _(interrupted)_' : ' _(bị ngắt)_') }]);
                   transcriptRef.current = '';
                   setLiveTranscript('');
               }
@@ -1153,7 +1205,7 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
               interruptedRef.current = true; // Bật flag → bỏ qua mọi modelTurn/turnComplete cũ
               
               // Thêm placeholder cho lời user
-              setMessages(prev => [...prev, { role: 'user', text: '🎤 Đang nghe...' }]);
+              setMessages(prev => [...prev, { role: 'user', text: getLmsLang() === 'en' ? '🎤 Listening...' : '🎤 Đang nghe...' }]);
               
               // 🚀 GỬI activityStart → server tự hiểu user đang interrupt
               wsRef.current.send(JSON.stringify({
@@ -1178,7 +1230,7 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
                   }
               }, 30000);
           } else {
-              alert("Kết nối đang bị gián đoạn, vui lòng chờ...");
+              alert(getLmsLang() === 'en' ? "Connection interrupted, please wait..." : "Kết nối đang bị gián đoạn, vui lòng chờ...");
           }
       }
   };
@@ -1264,7 +1316,9 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
           return (
               <div className="h-full flex flex-col items-center justify-center text-center opacity-30 italic text-slate-400" style={{fontFamily: 'sans-serif'}}>
                   <span className="text-4xl mb-4 grayscale">{isTextOnlyMode ? '💬' : '🎙️'}</span>
-                  <span className="text-[15px] font-medium">Bảng đen trống.<br/>Gõ câu hỏi vào thanh công cụ bên dưới để hỏi bài.</span>
+                  <span className="text-[15px] font-medium">
+                    {isEn ? (<>Blackboard is empty.<br/>Type a question below to start learning.</>) : (<>Bảng đen trống.<br/>Gõ câu hỏi vào thanh công cụ bên dưới để hỏi bài.</>)}
+                  </span>
               </div>
           );
       }
@@ -1272,50 +1326,57 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
           <>
              {messages.map((m, i) => (
                  <div key={i} className={`mb-1 p-2 rounded-xl ${m.role === 'user' ? 'bg-white/5 border border-white/10 text-sky-200' : 'text-white'}`}>
-                     <strong className="text-xs uppercase tracking-widest opacity-50 block mb-1 font-sans">{m.role === 'user' ? 'Câu hỏi của em:' : (examiner === 'TONY' ? 'Thầy Tôn:' : 'Cô Diệp:')}</strong>
+                     <strong className="text-xs uppercase tracking-widest opacity-50 block mb-1 font-sans">
+                       {m.role === 'user' ? (isEn ? 'Your Question:' : 'Câu hỏi của em:') : (examiner === 'TONY' ? (isEn ? 'Teacher Tony:' : 'Thầy Tôn:') : (isEn ? 'Teacher Diep:' : 'Cô Diệp:'))}
+                     </strong>
                      <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[[rehypeKatex, { throwOnError: false, strict: false }]]}>{m.text}</ReactMarkdown>
                  </div>
              ))}
              
              {liveTranscript && (
                  <div className="mb-1 p-2 rounded-xl text-white">
-                     <strong className="text-xs uppercase tracking-widest opacity-50 block mb-1 font-sans">{examiner === 'TONY' ? 'Thầy Tôn:' : 'Cô Diệp:'}</strong>
+                     <strong className="text-xs uppercase tracking-widest opacity-50 block mb-1 font-sans">{examiner === 'TONY' ? (isEn ? 'Teacher Tony:' : 'Thầy Tôn:') : (isEn ? 'Teacher Diep:' : 'Cô Diệp:')}</strong>
                      <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[[rehypeKatex, { throwOnError: false, strict: false }]]}>{liveTranscript}</ReactMarkdown>
                  </div>
              )}
              
              {isRecording && (
                  <div className="mb-1 p-2 rounded-xl bg-white/10 border border-[#0ea5e9]/50 text-sky-300 animate-pulse">
-                     <strong className="text-xs uppercase tracking-widest opacity-50 block mb-1 font-sans">Đang ghi âm...</strong>
-                     {currentDraft.trim() || "🎤 Đang thu âm giọng nói của em..."}
+                     <strong className="text-xs uppercase tracking-widest opacity-50 block mb-1 font-sans">{isEn ? 'Recording...' : 'Đang ghi âm...'}</strong>
+                     {currentDraft.trim() || (isEn ? "🎤 Listening to your voice..." : "🎤 Đang thu âm giọng nói của em...")}
                  </div>
              )}
              
              {isProcessing && !liveTranscript && (
                  <div className="text-amber-300 italic animate-pulse font-sans">
-                     Thầy cô đang đọc đề bài và viết bảng...
+                     {isEn ? 'Teacher is reading and writing on the board...' : 'Thầy cô đang đọc đề bài và viết bảng...'}
                  </div>
              )}
              <div ref={messagesEndRef} />
           </>
       );
-  }, [messages, liveTranscript, currentDraft, isRecording, isProcessing, isTextOnlyMode, examiner]);
+  }, [messages, liveTranscript, currentDraft, isRecording, isProcessing, isTextOnlyMode, examiner, isEn]);
 
   const renderedTraditionalMessages = useMemo(() => {
       if (messages.length === 0 && !isRecording && !liveTranscript && !currentDraft) {
           return (
               <div className="flex flex-col items-center justify-center h-full opacity-40">
                   <span className="text-3xl mb-2 grayscale">🎙️</span>
-                  <span className="italic text-sm font-medium">Lịch sử trống.<br/>Nhấn nút bên dưới để bắt đầu nói.</span>
+                  <span className="italic text-sm font-medium">
+                    {isEn ? (<>No history yet.<br/>Press the button below to start speaking.</>) : (<>Lịch sử trống.<br/>Nhấn nút bên dưới để bắt đầu nói.</>)}
+                  </span>
               </div>
           );
       }
+      const aiSpeakerLabel = isReflexMode
+        ? (examiner === 'TONY' ? (isEn ? 'Teacher Tony:' : 'Thầy Tôn:') : (isEn ? 'Teacher Diep:' : 'Cô Diệp:'))
+        : (isIeltsMode ? (isEn ? 'Examiner:' : 'Giám khảo:') : (examiner === 'TONY' ? (isEn ? 'Teacher Tony:' : 'Thầy Tôn:') : (isEn ? 'Teacher Diep:' : 'Cô Diệp:')));
       return (
           <div className="prose prose-slate prose-sm max-w-none font-medium text-slate-700 leading-relaxed space-y-4">
               {messages.map((m, i) => (
                   <div key={i} className={`p-3 rounded-lg ${m.role === 'user' ? 'bg-blue-50 text-blue-900 border border-blue-100' : 'bg-white border border-slate-200'}`}>
                       <strong className="block text-[10px] uppercase tracking-widest opacity-50 mb-1">
-                          {m.role === 'user' ? 'Em nói:' : (isReflexMode ? (examiner === 'TONY' ? 'Thầy Tôn:' : 'Cô Diệp:') : (isIeltsMode ? 'Giám khảo:' : (examiner === 'TONY' ? 'Thầy Tôn:' : 'Cô Diệp:')))}
+                          {m.role === 'user' ? (isEn ? 'You:' : 'Em nói:') : aiSpeakerLabel}
                       </strong>
                       <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[[rehypeKatex, { throwOnError: false, strict: false }]]}>{m.text}</ReactMarkdown>
                   </div>
@@ -1323,21 +1384,21 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
               
               {liveTranscript && (
                   <div className={`p-3 rounded-lg bg-white border border-slate-200`}>
-                      <strong className="block text-[10px] uppercase tracking-widest opacity-50 mb-1">{isReflexMode ? (examiner === 'TONY' ? 'Thầy Tôn:' : 'Cô Diệp:') : (isIeltsMode ? 'Giám khảo:' : (examiner === 'TONY' ? 'Thầy Tôn:' : 'Cô Diệp:'))}</strong>
+                      <strong className="block text-[10px] uppercase tracking-widest opacity-50 mb-1">{aiSpeakerLabel}</strong>
                       <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[[rehypeKatex, { throwOnError: false, strict: false }]]}>{liveTranscript}</ReactMarkdown>
                   </div>
               )}
               
               {isRecording && (
                   <div className="p-3 rounded-lg bg-blue-50/50 text-blue-900 border border-blue-100/50 border-dashed animate-pulse">
-                      <strong className="block text-[10px] uppercase tracking-widest opacity-50 mb-1">Đang ghi âm...</strong>
-                      {currentDraft.trim() || "🎤 Đang thu âm giọng nói của em..."}
+                      <strong className="block text-[10px] uppercase tracking-widest opacity-50 mb-1">{isEn ? 'Recording...' : 'Đang ghi âm...'}</strong>
+                      {currentDraft.trim() || (isEn ? "🎤 Listening to your voice..." : "🎤 Đang thu âm giọng nói của em...")}
                   </div>
               )}
               <div ref={messagesEndRef} />
           </div>
       );
-  }, [messages, isRecording, liveTranscript, currentDraft, examiner, isReflexMode, isIeltsMode]);
+  }, [messages, isRecording, liveTranscript, currentDraft, examiner, isReflexMode, isIeltsMode, isEn]);
   
   const handleYellowButtonClick = () => { 
       if (onOpenAI) {
@@ -1357,7 +1418,7 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
                   onTouchStart={handleDragStart}
                   style={{ transform: `translate3d(${position.x}px, ${position.y}px, 0)` }}
                   className={`fixed bottom-8 right-8 z-[100000] w-14 h-14 rounded-full flex items-center justify-center shadow-[0_10px_30px_rgba(0,0,0,0.5)] border-2 ${isDragging ? '' : 'transition-all duration-300 hover:scale-110 active:scale-95'} ${status === 'CONNECTED' ? (isRecording ? 'bg-red-500 border-red-300 animate-pulse' : (isSpeaking || isProcessing ? 'bg-sky-500 border-sky-300 animate-pulse' : 'bg-emerald-500 border-emerald-300')) : 'bg-indigo-600 border-indigo-400'}`} 
-                  title="Mở Bảng Giáo Viên"
+                  title={isEn ? "Open Teacher Blackboard" : "Mở Bảng Giáo Viên"}
               >
                   <span className="text-2xl">{status === 'CONNECTED' ? (isTextOnlyMode ? '💬' : '🎙️') : '👨‍🏫'}</span>
               </button>
@@ -1374,10 +1435,10 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
                     <div className="flex items-center gap-2.5 cursor-pointer flex-1 min-w-0" onClick={handleWidgetClick}>
                        <div className={`w-3 h-3 shrink-0 rounded-full ${isRecording ? 'bg-red-500 animate-pulse shadow-[0_0_10px_rgba(239,68,68,0.8)]' : (isSpeaking ? 'bg-sky-500 animate-pulse shadow-[0_0_10px_rgba(14,165,233,0.8)]' : (isProcessing ? 'bg-amber-500 animate-pulse' : 'bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.8)]'))}`}></div>
                        <span className="text-white font-semibold text-[13px] truncate">
-                           {isRecording ? 'Đang truyền trực tiếp...' : (isProcessing ? 'AI đang phân tích...' : (isSpeaking || liveTranscript ? 'Thầy cô đang nói...' : 'Sẵn sàng...'))}
+                           {isRecording ? (isEn ? 'Live speaking...' : 'Đang truyền trực tiếp...') : (isProcessing ? (isEn ? 'AI is analyzing...' : 'AI đang phân tích...') : (isSpeaking || liveTranscript ? (isEn ? 'Teacher is speaking...' : 'Thầy cô đang nói...') : (isEn ? 'Ready...' : 'Sẵn sàng...')))}
                        </span>
                     </div>
-                    <button onClick={onMaximize} className="text-slate-400 hover:text-white w-8 h-8 flex items-center justify-center bg-slate-800 rounded-full shrink-0 ml-2 border border-slate-600 shadow-sm transition-colors" title="Phóng to">
+                    <button onClick={onMaximize} className="text-slate-400 hover:text-white w-8 h-8 flex items-center justify-center bg-slate-800 rounded-full shrink-0 ml-2 border border-slate-600 shadow-sm transition-colors" title={isEn ? "Expand" : "Phóng to"}>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" /></svg>
                     </button>
                  </div>
@@ -1388,14 +1449,14 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
                              disabled={isProcessing && !isSpeaking} 
                              className={`flex-1 font-bold py-2 rounded-xl text-[12px] md:text-[13px] transition-all flex items-center justify-center gap-2 disabled:opacity-50 ${isRecording ? 'bg-red-500 hover:bg-red-600 text-white shadow-md shadow-red-900/50' : (isSpeaking ? 'bg-sky-500 hover:bg-sky-600 text-white shadow-md shadow-sky-900/50' : 'bg-[#0ea5e9] hover:bg-sky-500 text-white shadow-md shadow-sky-900/50')}`}
                          >
-                            {isRecording ? '⏹️ Xong' : (isSpeaking ? '⏹️ Ngắt lời' : '🎙️ Nhấn nói')}
+                            {isRecording ? (isEn ? '⏹️ Done' : '⏹️ Xong') : (isSpeaking ? (isEn ? '⏹️ Interrupt' : '⏹️ Ngắt lời') : (isEn ? '🎙️ Speak' : '🎙️ Nhấn nói'))}
                          </button>
                      )}
                      <button 
                          onClick={handleUserHangUp} 
                          className="flex-1 bg-slate-800 hover:bg-red-600 text-slate-300 hover:text-white font-bold py-2 rounded-xl text-[12px] md:text-[13px] transition-all flex items-center justify-center gap-2 border border-slate-600 hover:border-red-500"
                      >
-                         🛑 Dập máy
+                         {isEn ? '🛑 End Call' : '🛑 Dập máy'}
                      </button>
                  </div>
               </div>
@@ -1458,15 +1519,15 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
                       {status === 'CONNECTED' && (
                           <span className={`text-[9px] uppercase tracking-widest font-bold mt-1 leading-none transition-colors ${isTextOnlyMode ? 'text-sky-400' : (isRecording ? 'text-red-400' : (isProcessing ? 'text-amber-400' : (isSpeaking || liveTranscript ? 'text-emerald-400' : 'text-slate-500')))}`}>
                               {isTextOnlyMode 
-                                  ? (isVisionMode ? "💬 Giải bài tập bằng ảnh" : "💬 Chat văn bản") 
-                                  : (isRecording ? "🔴 Đang ghi âm" : (isProcessing ? "🧠 AI đang suy nghĩ..." : (isSpeaking || liveTranscript ? "🟢 Thầy cô đang nói..." : "⏳ Sẵn sàng lượt tiếp")))}
+                                  ? (isVisionMode ? (isEn ? "💬 Image Exercise Solver" : "💬 Giải bài tập bằng ảnh") : (isEn ? "💬 Text Chat" : "💬 Chat văn bản")) 
+                                  : (isRecording ? (isEn ? "🔴 Recording" : "🔴 Đang ghi âm") : (isProcessing ? (isEn ? "🧠 AI is thinking..." : "🧠 AI đang suy nghĩ...") : (isSpeaking || liveTranscript ? (isEn ? "🟢 Teacher is speaking..." : "🟢 Thầy cô đang nói...") : (isEn ? "⏳ Ready for next turn" : "⏳ Sẵn sàng lượt tiếp"))))}
                           </span>
                       )}
                   </div>
               </div>
               <div className="flex items-center gap-1">
                  {status === 'CONNECTED' && (
-                     <button onClick={() => {setMessages([]); setCurrentDraft('');}} className="text-[11px] text-slate-400 hover:text-white bg-white/5 hover:bg-white/10 px-3 py-1.5 rounded-lg font-bold uppercase tracking-wide transition-colors mr-2 border border-white/10">Xóa Bảng</button>
+                     <button onClick={() => {setMessages([]); setCurrentDraft('');}} className="text-[11px] text-slate-400 hover:text-white bg-white/5 hover:bg-white/10 px-3 py-1.5 rounded-lg font-bold uppercase tracking-wide transition-colors mr-2 border border-white/10">{isEn ? 'Clear Board' : 'Xóa Bảng'}</button>
                  )}
                  <button onClick={toggleFullscreen} className="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-white/10 text-slate-400 transition-colors">
                      {isFullscreen ? (
@@ -1487,22 +1548,22 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
                   isPendingVision ? (
                       <div className="m-auto flex flex-col items-center opacity-70">
                           <div className="w-12 h-12 border-4 border-slate-700 border-t-[#0ea5e9] rounded-full animate-spin mb-4" />
-                          <div className="text-slate-400 font-bold tracking-widest text-xs uppercase animate-pulse">Đang chuẩn bị bảng đen...</div>
+                          <div className="text-slate-400 font-bold tracking-widest text-xs uppercase animate-pulse">{isEn ? 'Preparing blackboard...' : 'Đang chuẩn bị bảng đen...'}</div>
                       </div>
                   ) : (
                       <div className="m-auto text-center animate-in zoom-in-95 max-w-sm w-full bg-slate-900/80 p-8 rounded-[2rem] border border-slate-700/50 backdrop-blur-md shadow-2xl">
                          <div className="w-20 h-20 bg-gradient-to-tr from-[#0ea5e9] to-indigo-500 rounded-full flex items-center justify-center text-4xl shadow-lg border border-white/20 mx-auto mb-6">👨‍🏫</div>
-                         <h3 className="text-xl font-black text-white mb-2 tracking-tight">Học Phần Gia Sư</h3>
-                         <p className="text-[13px] text-slate-400 mb-8 font-medium">Vui lòng lựa chọn Thầy/Cô để mở kết nối đàm thoại giảng bài trực tiếp.</p>
+                         <h3 className="text-xl font-black text-white mb-2 tracking-tight">{isEn ? 'AI Tutor Session' : 'Học Phần Gia Sư'}</h3>
+                         <p className="text-[13px] text-slate-400 mb-8 font-medium">{isEn ? 'Choose a tutor to start your live interactive lesson.' : 'Vui lòng lựa chọn Thầy/Cô để mở kết nối đàm thoại giảng bài trực tiếp.'}</p>
                          
                          <div className="flex justify-center gap-4 mb-8">
                             <button onClick={() => { setExaminer('TONY'); sessionStorage.setItem('tony_voice_examiner', 'TONY'); }} className={`flex-1 py-4 rounded-2xl border-2 flex flex-col items-center gap-2 transition-all duration-300 ${examiner === 'TONY' ? 'bg-[#0ea5e9]/20 border-[#0ea5e9] shadow-[0_0_20px_rgba(14,165,233,0.3)]' : 'bg-slate-800 border-slate-700 opacity-70 hover:opacity-100 hover:border-slate-500'}`}>
                                 <span className="text-3xl drop-shadow-md">👨‍🏫</span>
-                                <span className={`text-[12px] font-black uppercase tracking-widest ${examiner === 'TONY' ? 'text-[#0ea5e9]' : 'text-slate-400'}`}>Thầy Tôn</span>
+                                <span className={`text-[12px] font-black uppercase tracking-widest ${examiner === 'TONY' ? 'text-[#0ea5e9]' : 'text-slate-400'}`}>{isEn ? 'Teacher Tony' : 'Thầy Tôn'}</span>
                             </button>
                             <button onClick={() => { setExaminer('DIEP'); sessionStorage.setItem('tony_voice_examiner', 'DIEP'); }} className={`flex-1 py-4 rounded-2xl border-2 flex flex-col items-center gap-2 transition-all duration-300 ${examiner === 'DIEP' ? 'bg-[#0ea5e9]/20 border-[#0ea5e9] shadow-[0_0_20px_rgba(14,165,233,0.3)]' : 'bg-slate-800 border-slate-700 opacity-70 hover:opacity-100 hover:border-slate-500'}`}>
                                 <span className="text-3xl drop-shadow-md">👩‍🏫</span>
-                                <span className={`text-[12px] font-black uppercase tracking-widest ${examiner === 'DIEP' ? 'text-[#0ea5e9]' : 'text-slate-400'}`}>Cô Diệp</span>
+                                <span className={`text-[12px] font-black uppercase tracking-widest ${examiner === 'DIEP' ? 'text-[#0ea5e9]' : 'text-slate-400'}`}>{isEn ? 'Teacher Diep' : 'Cô Diệp'}</span>
                             </button>
                          </div>
     
@@ -1511,16 +1572,16 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
                                  onClick={() => startSession(true)} 
                                  className="w-full bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-black py-4 rounded-xl shadow-[0_10px_25px_rgba(16,185,129,0.35)] relative overflow-hidden flex items-center justify-center gap-2 text-sm uppercase tracking-wide active:scale-95 transition-all border border-emerald-400/20"
                              >
-                                 💬 Vào Lớp (Chỉ Chat Nhắn Tin)
+                                 {isEn ? '💬 Join Class (Text Chat)' : '💬 Vào Lớp (Chỉ Chat Nhắn Tin)'}
                                  <span className="absolute top-0 right-0 bg-yellow-400 text-slate-900 text-[8px] font-extrabold px-2.5 py-0.5 rounded-bl-lg uppercase tracking-wider shadow-sm">
-                                     Hiệu quả & Tiết kiệm ⭐
+                                     {isEn ? 'Fast & Recommended ⭐' : 'Hiệu quả & Tiết kiệm ⭐'}
                                  </span>
                              </button>
                              <button 
                                  onClick={() => startSession(false)} 
                                  className="w-full bg-slate-800/80 hover:bg-slate-700 text-slate-400 hover:text-slate-300 font-bold py-3 rounded-xl border border-slate-700 transition-all flex items-center justify-center gap-2 text-sm uppercase tracking-wide active:scale-95"
                              >
-                                 📞 Vào Lớp (Đàm Thoại Voice)
+                                 {isEn ? '📞 Join Class (Live Voice)' : '📞 Vào Lớp (Đàm Thoại Voice)'}
                              </button>
                          </div>
                       </div>
@@ -1530,7 +1591,7 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
               {status === 'CONNECTING' && (
                   <div className="m-auto flex flex-col items-center opacity-70">
                       <div className="w-12 h-12 border-4 border-slate-700 border-t-[#0ea5e9] rounded-full animate-spin mb-4" />
-                      <div className="text-slate-400 font-bold tracking-widest text-xs uppercase animate-pulse">Đang mời giáo viên vào lớp...</div>
+                      <div className="text-slate-400 font-bold tracking-widest text-xs uppercase animate-pulse">{isEn ? 'Connecting to tutor...' : 'Đang mời giáo viên vào lớp...'}</div>
                   </div>
               )}
 
@@ -1556,7 +1617,7 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
                                        sendTextMessage();
                                    }
                                }}
-                               placeholder={isRecording ? "Đang thu âm qua mic..." : "💬 Gõ câu hỏi vào đây (Enter để gửi)..."}
+                               placeholder={isRecording ? (isEn ? "Recording via microphone..." : "Đang thu âm qua mic...") : (isEn ? "💬 Type your question here (Press Enter to send)..." : "💬 Gõ câu hỏi vào đây (Enter để gửi)...")}
                                disabled={isRecording || isProcessing}
                                className="w-full bg-slate-800/80 text-white placeholder-slate-400 text-[16px] md:text-[14px] rounded-full px-4 py-2.5 border border-slate-600 focus:outline-none focus:border-[#0ea5e9] transition-colors"
                            />
@@ -1568,7 +1629,7 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
                                     onClick={handleToggleRecording} 
                                     disabled={isProcessing && !isSpeaking}
                                     className={`w-11 h-11 rounded-full flex items-center justify-center transition-all font-bold disabled:opacity-50 ${isRecording ? 'bg-red-500 text-white shadow-[0_0_15px_rgba(239,68,68,0.5)]' : (isSpeaking ? 'bg-sky-500 text-white shadow-[0_0_15px_rgba(14,165,233,0.5)]' : 'bg-emerald-500 text-white hover:bg-emerald-400')}`}
-                                    title={isRecording ? "Kết thúc ghi âm" : (isSpeaking ? "Ngắt lời Thầy/Cô" : "Nhấn để nói")}
+                                    title={isRecording ? (isEn ? "Stop recording" : "Kết thúc ghi âm") : (isSpeaking ? (isEn ? "Interrupt teacher" : "Ngắt lời Thầy/Cô") : (isEn ? "Press to speak" : "Nhấn để nói"))}
                                 >
                                     <span className="text-xl">{isRecording ? '⏹️' : (isSpeaking ? '⏹️' : '🎙️')}</span>
                                 </button>
@@ -1577,7 +1638,7 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
                                     onClick={sendTextMessage}
                                     disabled={isProcessing || !chatInput.trim()}
                                     className="w-11 h-11 bg-emerald-500 hover:bg-emerald-400 text-white rounded-full flex items-center justify-center transition-all disabled:opacity-50"
-                                    title="Gửi tin nhắn"
+                                    title={isEn ? "Send message" : "Gửi tin nhắn"}
                                 >
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5"><path d="M3.478 2.404a.75.75 0 00-.926.941l2.432 7.905H13.5a.75.75 0 010 1.5H4.984l-2.432 7.905a.75.75 0 00.926.94 60.519 60.519 0 0018.445-8.986.75.75 0 000-1.218A60.517 60.517 0 003.478 2.404z" /></svg>
                                 </button>
@@ -1585,7 +1646,7 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
                             <button 
                                 onClick={handleUserHangUp} 
                                 className="w-11 h-11 bg-red-500/20 hover:bg-red-500 text-red-500 hover:text-white rounded-full flex items-center justify-center transition-all active:scale-95 border border-red-500/50 hover:border-red-500"
-                                title="Rời phòng đàm thoại"
+                                title={isEn ? "Leave session" : "Rời phòng đàm thoại"}
                             >
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
                             </button>
@@ -1612,26 +1673,32 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
                  // Không minimize → sidebar hiện cùng lúc với cuộc gọi
              }}
              className="absolute top-4 right-4 md:top-6 md:right-6 text-white hover:text-white transition-all flex items-center gap-2 font-bold bg-gradient-to-r from-amber-500 to-orange-500 px-4 py-2.5 md:px-5 md:py-3 rounded-2xl shadow-[0_10px_25px_rgba(245,158,11,0.3)] z-20 hover:scale-105 active:scale-95 hover:shadow-[0_15px_35px_rgba(245,158,11,0.4)]"
-             title={currentMode === 'TUTOR' ? 'Mở lại khung Chat Text' : (isReflexMode ? 'Xem mẫu câu phản xạ' : 'Xem gợi ý kịch bản IELTS')}
+             title={currentMode === 'TUTOR' ? (isEn ? 'Reopen Text Chat' : 'Mở lại khung Chat Text') : (isReflexMode ? (isEn ? 'View reflex sentence patterns' : 'Xem mẫu câu phản xạ') : (isEn ? 'View IELTS script hints' : 'Xem gợi ý kịch bản IELTS'))}
           >
              <span className="text-xl drop-shadow-sm">💬</span> 
              <span className="hidden sm:inline text-[13px] md:text-[14px] drop-shadow-sm uppercase tracking-wider">
-                 {currentMode === 'TUTOR' ? 'Mở khung chat' : (isReflexMode ? 'Cấu trúc câu' : 'Kịch bản AI')}
+                 {currentMode === 'TUTOR' ? (isEn ? 'Open Chat' : 'Mở khung chat') : (isReflexMode ? (isEn ? 'Sentence Patterns' : 'Cấu trúc câu') : (isEn ? 'AI Script' : 'Kịch bản AI'))}
              </span>
           </button>
       )}
 
       <div className="bg-white p-6 md:p-10 rounded-[2.5rem] shadow-[0_30px_80px_rgba(0,0,0,0.5)] max-w-[600px] w-full text-center relative z-10 max-h-[90dvh] flex flex-col my-auto overflow-hidden ring-1 ring-slate-900/5">
         <button onClick={handleBackClick} className="absolute top-6 left-6 text-slate-500 hover:text-slate-800 bg-slate-100 hover:bg-slate-200 px-4 py-2.5 rounded-xl text-[13px] font-bold transition-all shadow-sm border border-slate-200 z-20 flex items-center gap-2 uppercase tracking-wide">
-          {status !== 'IDLE' ? '⬇ Thu nhỏ' : '🚪 Thoát'}
+          {status !== 'IDLE' ? (isEn ? '⬇ Minimize' : '⬇ Thu nhỏ') : (isEn ? '🚪 Exit' : '🚪 Thoát')}
         </button>
 
         <div className="mb-8 mt-12 md:mt-10 shrink-0">
            <h2 className="text-2xl md:text-[32px] font-black mb-2 text-slate-800 tracking-tight leading-tight">
-               {currentMode === 'TUTOR' ? 'Gia Sư Giải Đáp 1-1' : (isReflexMode ? 'Phòng Luyện Phản Xạ 1-1' : 'Phòng Luyện Nói 1-1')}
+               {currentMode === 'TUTOR' ? (isEn ? '1-on-1 AI Tutor' : 'Gia Sư Giải Đáp 1-1') : (isReflexMode ? (isEn ? '1-on-1 Speaking Reflex Room' : 'Phòng Luyện Phản Xạ 1-1') : (isEn ? '1-on-1 Speaking Room' : 'Phòng Luyện Nói 1-1'))}
            </h2>
            <p className="text-[#0ea5e9] font-bold text-[13px] md:text-[15px] uppercase tracking-widest">
-               {currentMode === 'TUTOR' ? 'Phân tích nội dung bài học cùng chuyên gia' : (isReflexMode ? 'Luyện phản xạ giao tiếp cùng Huấn luyện viên AI' : (isIeltsMode ? 'Đàm thoại trực tiếp với Giám khảo IELTS' : 'Đàm thoại tiếng Anh 1-1 cùng Huấn luyện viên AI'))}
+               {currentMode === 'TUTOR'
+                 ? (isEn ? 'Interactive lesson & answer breakdown with AI' : 'Phân tích nội dung bài học cùng chuyên gia')
+                 : (isReflexMode
+                     ? (isEn ? 'Practice speaking reflexes with your AI coach' : 'Luyện phản xạ giao tiếp cùng Huấn luyện viên AI')
+                     : (isIeltsMode
+                         ? (isEn ? 'Live conversation with an IELTS AI Examiner' : 'Đàm thoại trực tiếp với Giám khảo IELTS')
+                         : (isEn ? '1-on-1 English conversation with your AI coach' : 'Đàm thoại tiếng Anh 1-1 cùng Huấn luyện viên AI')))}
            </p>
         </div>
 
@@ -1643,34 +1710,34 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
                       <div className="absolute inset-0 border-4 border-[#0ea5e9] border-t-transparent rounded-full animate-spin"></div>
                   </div>
                   <div className="text-slate-500 font-black tracking-widest uppercase text-sm animate-pulse">
-                      Đang tải đề bài...
+                      {isEn ? 'Loading question...' : 'Đang tải đề bài...'}
                   </div>
               </div>
           ) : (
               <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 overflow-y-auto custom-scrollbar flex-1 pb-2 px-2">
                  <div className="bg-slate-50 p-5 md:p-6 rounded-2xl border border-slate-200 mb-8 text-left shadow-sm flex flex-col">
-                    <span className="block text-[11px] uppercase tracking-widest text-slate-500 font-bold mb-2 shrink-0">Chủ đề đàm thoại:</span>
+                    <span className="block text-[11px] uppercase tracking-widest text-slate-500 font-bold mb-2 shrink-0">{isEn ? 'Speaking Topic:' : 'Chủ đề đàm thoại:'}</span>
                     <div className="text-[15px] font-semibold text-slate-800 whitespace-pre-wrap leading-relaxed">
                         {getDisplayTopic()}
                     </div>
                  </div>
                  
                  <div className="mb-8 shrink-0">
-                    <h3 className="text-[12px] font-black text-slate-400 uppercase tracking-widest mb-4">{isIeltsMode ? 'Lựa chọn Giám khảo' : 'Lựa chọn Huấn luyện viên'}</h3>
+                    <h3 className="text-[12px] font-black text-slate-400 uppercase tracking-widest mb-4">{isIeltsMode ? (isEn ? 'Choose Examiner' : 'Lựa chọn Giám khảo') : (isEn ? 'Choose Coach' : 'Lựa chọn Huấn luyện viên')}</h3>
                     <div className="flex justify-center gap-4">
                         <button onClick={() => { setExaminer('TONY'); sessionStorage.setItem('tony_voice_examiner', 'TONY'); }} className={`relative flex-1 py-4 rounded-2xl flex flex-col items-center gap-2 border-2 transition-all duration-300 ${examiner === 'TONY' ? 'bg-[#0ea5e9]/10 border-[#0ea5e9] shadow-sm' : 'bg-white border-slate-200 text-slate-500 hover:border-[#0ea5e9]/50'}`}>
                            <div className="text-4xl drop-shadow-sm mb-1">👨‍🏫</div>
-                           <span className={`text-[13px] font-black uppercase tracking-wider ${examiner === 'TONY' ? 'text-[#0ea5e9]' : 'text-slate-500'}`}>Thầy Tôn</span>
+                           <span className={`text-[13px] font-black uppercase tracking-wider ${examiner === 'TONY' ? 'text-[#0ea5e9]' : 'text-slate-500'}`}>{isEn ? 'Teacher Tony' : 'Thầy Tôn'}</span>
                         </button>
                         <button onClick={() => { setExaminer('DIEP'); sessionStorage.setItem('tony_voice_examiner', 'DIEP'); }} className={`relative flex-1 py-4 rounded-2xl flex flex-col items-center gap-2 border-2 transition-all duration-300 ${examiner === 'DIEP' ? 'bg-purple-500/10 border-purple-500 shadow-sm' : 'bg-white border-slate-200 text-slate-500 hover:border-purple-500/50'}`}>
                            <div className="text-4xl drop-shadow-sm mb-1">👩‍🏫</div>
-                           <span className={`text-[13px] font-black uppercase tracking-wider ${examiner === 'DIEP' ? 'text-purple-600' : 'text-slate-500'}`}>Cô Diệp</span>
+                           <span className={`text-[13px] font-black uppercase tracking-wider ${examiner === 'DIEP' ? 'text-purple-600' : 'text-slate-500'}`}>{isEn ? 'Teacher Diep' : 'Cô Diệp'}</span>
                         </button>
                     </div>
                  </div>
                  
                  <button onClick={() => startSession(false)} className="w-full shrink-0 bg-[#0ea5e9] hover:bg-[#0284c7] text-white font-black py-4 md:py-5 rounded-2xl text-[15px] md:text-[16px] shadow-[0_10px_30px_rgba(14,165,233,0.3)] flex items-center justify-center gap-3 active:scale-95 transition-all uppercase tracking-wide">
-                     <span className="text-xl">📞</span> {isReflexMode ? 'Bắt Đầu Luyện Phản Xạ' : 'Bắt Đầu Đàm Thoại'}
+                     <span className="text-xl">📞</span> {isReflexMode ? (isEn ? 'Start Reflex Practice' : 'Bắt Đầu Luyện Phản Xạ') : (isEn ? 'Start Live Session' : 'Bắt Đầu Đàm Thoại')}
                  </button>
               </div>
           )
@@ -1683,7 +1750,7 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
                     <div className="absolute inset-0 border-4 border-[#0ea5e9] border-t-transparent rounded-full animate-spin"></div>
                 </div>
                 <div className="text-slate-500 font-black tracking-widest uppercase text-sm animate-pulse">
-                    Đang kết nối WebSocket...
+                    {isEn ? 'Connecting WebSocket...' : 'Đang kết nối WebSocket...'}
                 </div>
             </div>
         )}
@@ -1699,7 +1766,7 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
             </div>
             
             <p className={`shrink-0 font-black mb-6 tracking-widest uppercase text-[10px] md:text-[11px] px-4 py-1.5 rounded-full border shadow-sm transition-colors ${isRecording ? 'bg-red-50 text-red-600 border-red-200' : (isProcessing && !liveTranscript ? "bg-amber-50 text-amber-600 border-amber-200" : (isSpeaking || liveTranscript ? 'bg-sky-50 text-[#0ea5e9] border-sky-200 animate-pulse' : 'bg-slate-50 text-slate-500 border-slate-200'))}`}>
-                {isRecording ? "🔴 ĐANG THU ÂM TRỰC TIẾP" : (isProcessing && !liveTranscript ? "🧠 AI ĐANG SUY NGHĨ..." : (isSpeaking || liveTranscript ? "🟢 THẦY CÔ ĐANG NÓI..." : "⏳ SẴN SÀNG LƯỢT TIẾP THEO"))}
+                {isRecording ? (isEn ? "🔴 RECORDING LIVE" : "🔴 ĐANG THU ÂM TRỰC TIẾP") : (isProcessing && !liveTranscript ? (isEn ? "🧠 AI IS THINKING..." : "🧠 AI ĐANG SUY NGHĨ...") : (isSpeaking || liveTranscript ? (isEn ? "🟢 TEACHER IS SPEAKING..." : "🟢 THẦY CÔ ĐANG NÓI...") : (isEn ? "⏳ READY FOR NEXT TURN" : "⏳ SẴN SÀNG LƯỢT TIẾP THEO")))}
             </p>
             
             <div className="bg-slate-50 rounded-2xl p-5 md:p-6 w-full text-left h-32 md:h-48 overflow-y-auto mb-8 border border-slate-200 shadow-inner custom-scrollbar flex-1 min-h-[140px]">
@@ -1713,13 +1780,13 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
                     className={`flex-1 font-black py-4 rounded-xl flex items-center justify-center gap-2 transition-all active:scale-95 shadow-md border-2 text-[13px] uppercase tracking-wide disabled:opacity-50 ${isRecording ? 'bg-red-500 text-white border-red-500 shadow-red-500/30' : (isSpeaking ? 'bg-sky-500 text-white border-sky-500' : 'bg-[#0ea5e9] text-white border-[#0ea5e9] hover:bg-sky-500')}`}
                 >
                    <span className="text-xl">{isRecording ? '⏹️' : (isSpeaking ? '⏹️' : '🎙️')}</span> 
-                   {isRecording ? 'Gửi trả lời' : (isSpeaking ? 'Ngắt lời' : 'Nhấn nói')}
+                   {isRecording ? (isEn ? 'Send Answer' : 'Gửi trả lời') : (isSpeaking ? (isEn ? 'Interrupt' : 'Ngắt lời') : (isEn ? 'Press to Speak' : 'Nhấn nói'))}
                 </button>
                 <button 
                     onClick={handleUserHangUp} 
                     className="flex-1 bg-white hover:bg-red-50 text-red-500 font-black py-4 rounded-xl flex items-center justify-center gap-2 active:scale-95 transition-all border-2 border-red-200 hover:border-red-500 text-[13px] uppercase tracking-wide shadow-sm"
                 >
-                    🚪 Rời phòng
+                    {isEn ? '🚪 Leave Room' : '🚪 Rời phòng'}
                 </button>
             </div>
           </div>

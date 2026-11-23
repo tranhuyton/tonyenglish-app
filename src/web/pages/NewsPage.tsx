@@ -1,7 +1,8 @@
-import React, { Suspense, useEffect, useRef, useState } from 'react';
+import React, { Suspense, useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useParams, useSearchParams } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import { useApp } from '../context/AppContext';
+import { getLocalizedArticle } from '../data/studyTipsEn';
 import {
   resolveUploadUrl,
   stripTags,
@@ -169,10 +170,16 @@ const ArticleInteractiveQuiz: React.FC<{
               </div>
               <p className="text-xs sm:text-sm opacity-90 font-medium">
                 {scorePercent === 100
-                  ? 'Xuất sắc! Bạn đã nắm vững toàn bộ nội dung bài đọc.'
+                  ? lang === 'vi'
+                    ? 'Xuất sắc! Bạn đã nắm vững toàn bộ nội dung bài đọc.'
+                    : 'Excellent! You mastered every question in this passage.'
                   : scorePercent >= 80
-                  ? 'Rất tốt! Xem lại phần giải thích bên dưới cho các câu hỏi trong bài nhé.'
-                  : 'Hãy xem kỹ lời giải thích và dẫn chứng dưới mỗi câu hỏi để hiểu sâu bài đọc hơn nhé!'}
+                  ? lang === 'vi'
+                    ? 'Rất tốt! Xem lại phần giải thích bên dưới cho các câu hỏi trong bài nhé.'
+                    : 'Great job! Review the explanations below to polish every detail.'
+                  : lang === 'vi'
+                  ? 'Hãy xem kỹ lời giải thích và dẫn chứng dưới mỗi câu hỏi để hiểu sâu bài đọc hơn nhé!'
+                  : 'Review the explanations and textual evidence below each question to deepen your understanding!'}
               </p>
               <div className="flex flex-wrap gap-1.5 pt-1">
                 {questions.map((q, idx) => {
@@ -187,8 +194,10 @@ const ArticleInteractiveQuiz: React.FC<{
                           : 'bg-rose-600 text-white border-rose-600'
                       }`}
                     >
-                      <span>Câu {idx + 1}:</span>
-                      <span>{isRight ? '✓ Đúng' : `✗ (${q.correctAnswer})`}</span>
+                      <span>{lang === 'vi' ? `Câu ${idx + 1}:` : `Q${idx + 1}:`}</span>
+                      <span>
+                        {isRight ? (lang === 'vi' ? '✓ Đúng' : '✓ Correct') : `✗ (${q.correctAnswer})`}
+                      </span>
                     </span>
                   );
                 })}
@@ -237,7 +246,7 @@ const ArticleInteractiveQuiz: React.FC<{
                           : 'bg-rose-600 text-white'
                       }`}
                     >
-                      Câu {idx + 1}
+                      {lang === 'vi' ? `Câu ${idx + 1}` : `Q${idx + 1}`}
                     </span>
                     <div className="text-[15.5px] sm:text-[16.5px] font-bold text-slate-800 leading-relaxed">
                       {q.question}
@@ -254,7 +263,11 @@ const ArticleInteractiveQuiz: React.FC<{
                           : 'bg-amber-100 text-amber-800 border border-amber-200'
                       }`}
                     >
-                      {isCorrect ? '✓ Chính xác' : isWrong ? '✗ Chưa đúng' : '⚠ Chưa chọn'}
+                      {isCorrect
+                        ? lang === 'vi' ? '✓ Chính xác' : '✓ Correct'
+                        : isWrong
+                        ? lang === 'vi' ? '✗ Chưa đúng' : '✗ Incorrect'
+                        : lang === 'vi' ? '⚠ Chưa chọn' : '⚠ Unanswered'}
                     </span>
                   )}
                 </div>
@@ -394,6 +407,7 @@ const ArticleInteractiveQuiz: React.FC<{
 const SPEED_OPTIONS = [0.75, 1, 1.25, 1.5];
 
 const ArticleAudioPlayer: React.FC<{ src: string }> = ({ src }) => {
+  const { lang } = useApp();
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
@@ -505,15 +519,17 @@ const ArticleAudioPlayer: React.FC<{ src: string }> = ({ src }) => {
           </span>
           <div>
             <div className="font-black text-sm sm:text-base text-[#0a5482] leading-tight flex items-center gap-2">
-              <span>Audio Luyện Nghe</span>
+              <span>{lang === 'vi' ? 'Audio Luyện Nghe' : 'Listening Audio'}</span>
               {isPlaying && (
                 <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-bold bg-sky-100 text-[#0a5482]">
-                  ● Đang phát
+                  {lang === 'vi' ? '● Đang phát' : '● Playing'}
                 </span>
               )}
             </div>
             <div className="text-xs text-slate-500 hidden sm:block">
-              Kéo thanh trượt bên dưới hoặc bấm nút để tua nhanh và nghe cùng bài đọc
+              {lang === 'vi'
+                ? 'Kéo thanh trượt bên dưới hoặc bấm nút để tua nhanh và nghe cùng bài đọc'
+                : 'Drag the scrubber below or use skip buttons to listen along with the passage'}
             </div>
           </div>
         </div>
@@ -524,7 +540,7 @@ const ArticleAudioPlayer: React.FC<{ src: string }> = ({ src }) => {
             type="button"
             onClick={() => skipSeconds(-10)}
             className="px-2.5 sm:px-3 py-2 rounded-xl bg-slate-100 hover:bg-sky-50 text-slate-700 hover:text-[#0a5482] border border-slate-200/80 hover:border-sky-200 font-extrabold text-xs sm:text-sm transition active:scale-95 cursor-pointer"
-            title="Tua lùi 10 giây"
+            title={lang === 'vi' ? 'Tua lùi 10 giây' : 'Rewind 10 seconds'}
           >
             ⏪ -10s
           </button>
@@ -532,7 +548,7 @@ const ArticleAudioPlayer: React.FC<{ src: string }> = ({ src }) => {
             type="button"
             onClick={() => skipSeconds(-5)}
             className="px-2.5 sm:px-3 py-2 rounded-xl bg-slate-100 hover:bg-sky-50 text-slate-700 hover:text-[#0a5482] border border-slate-200/80 hover:border-sky-200 font-extrabold text-xs sm:text-sm transition active:scale-95 cursor-pointer hidden xs:inline-flex sm:inline-flex"
-            title="Tua lùi 5 giây"
+            title={lang === 'vi' ? 'Tua lùi 5 giây' : 'Rewind 5 seconds'}
           >
             -5s
           </button>
@@ -545,14 +561,14 @@ const ArticleAudioPlayer: React.FC<{ src: string }> = ({ src }) => {
             }`}
           >
             <span>{isPlaying ? '⏸' : '▶'}</span>
-            <span>{isPlaying ? 'Tạm dừng' : 'Phát Audio'}</span>
+            <span>{isPlaying ? (lang === 'vi' ? 'Tạm dừng' : 'Pause') : (lang === 'vi' ? 'Phát Audio' : 'Play Audio')}</span>
           </button>
 
           <button
             type="button"
             onClick={() => skipSeconds(5)}
             className="px-2.5 sm:px-3 py-2 rounded-xl bg-slate-100 hover:bg-sky-50 text-slate-700 hover:text-[#0a5482] border border-slate-200/80 hover:border-sky-200 font-extrabold text-xs sm:text-sm transition active:scale-95 cursor-pointer hidden xs:inline-flex sm:inline-flex"
-            title="Tua tới 5 giây"
+            title={lang === 'vi' ? 'Tua tới 5 giây' : 'Forward 5 seconds'}
           >
             +5s
           </button>
@@ -560,7 +576,7 @@ const ArticleAudioPlayer: React.FC<{ src: string }> = ({ src }) => {
             type="button"
             onClick={() => skipSeconds(10)}
             className="px-2.5 sm:px-3 py-2 rounded-xl bg-slate-100 hover:bg-sky-50 text-slate-700 hover:text-[#0a5482] border border-slate-200/80 hover:border-sky-200 font-extrabold text-xs sm:text-sm transition active:scale-95 cursor-pointer"
-            title="Tua tới 10 giây"
+            title={lang === 'vi' ? 'Tua tới 10 giây' : 'Forward 10 seconds'}
           >
             +10s ⏩
           </button>
@@ -579,7 +595,7 @@ const ArticleAudioPlayer: React.FC<{ src: string }> = ({ src }) => {
                     ? 'bg-[#0a5482] text-white shadow-2xs'
                     : 'text-slate-600 hover:text-[#0a5482]'
                 }`}
-                title={`Tốc độ ${rate}x`}
+                title={lang === 'vi' ? `Tốc độ ${rate}x` : `Speed ${rate}x`}
               >
                 {rate}x
               </button>
@@ -590,7 +606,7 @@ const ArticleAudioPlayer: React.FC<{ src: string }> = ({ src }) => {
             type="button"
             onClick={toggleMute}
             className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-slate-100 hover:bg-sky-50 border border-slate-200/80 text-slate-600 hover:text-[#0a5482] flex items-center justify-center text-sm transition cursor-pointer"
-            title={isMuted ? 'Bật tiếng' : 'Tắt tiếng'}
+            title={isMuted ? (lang === 'vi' ? 'Bật tiếng' : 'Unmute') : (lang === 'vi' ? 'Tắt tiếng' : 'Mute')}
           >
             {isMuted ? '🔇' : '🔊'}
           </button>
@@ -605,12 +621,16 @@ const ArticleAudioPlayer: React.FC<{ src: string }> = ({ src }) => {
             }`}
             title={
               isSticky
-                ? 'Đang bật Tự cuộn theo trang đọc (Bấm để quay về Ghim cố định ở đầu bài)'
-                : 'Đang Ghim cố định ở đầu bài viết (Bấm để bật chế độ Tự cuộn theo trang)'
+                ? lang === 'vi'
+                  ? 'Đang bật Tự cuộn theo trang đọc (Bấm để quay về Ghim cố định ở đầu bài)'
+                  : 'Floating on scroll (Click to pin at top)'
+                : lang === 'vi'
+                ? 'Đang Ghim cố định ở đầu bài viết (Bấm để bật chế độ Tự cuộn theo trang)'
+                : 'Pinned at top (Click to float on scroll)'
             }
           >
             <span>📌</span>
-            <span>{isSticky ? 'Tự cuộn' : 'Ghim'}</span>
+            <span>{isSticky ? (lang === 'vi' ? 'Tự cuộn' : 'Float') : (lang === 'vi' ? 'Ghim' : 'Pin')}</span>
           </button>
         </div>
       </div>
@@ -676,13 +696,16 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
 
   // List view state
   const [currentCategory, setCurrentCategory] = useState<any | null>(null);
-  const [newsList, setNewsList] = useState<any[]>([]);
+  const [rawNewsList, setNewsList] = useState<any[]>([]);
   const [totalCount, setTotalCount] = useState(0);
   const [loading, setLoading] = useState(false);
 
   // Detail view state
-  const [article, setArticle] = useState<any | null>(null);
-  const [relatedNews, setRelatedNews] = useState<any[]>([]);
+  const [rawArticle, setArticle] = useState<any | null>(null);
+  const [rawRelatedNews, setRelatedNews] = useState<any[]>([]);
+  const newsList = useMemo(() => rawNewsList.map((n) => getLocalizedArticle(n, lang)), [rawNewsList, lang]);
+  const article = useMemo(() => getLocalizedArticle(rawArticle, lang), [rawArticle, lang]);
+  const relatedNews = useMemo(() => rawRelatedNews.map((r) => getLocalizedArticle(r, lang)), [rawRelatedNews, lang]);
   const [showViTranslation, setShowViTranslation] = useState(false);
   const [showAudioPlayer, setShowAudioPlayer] = useState(false);
   const [showQuestion, setShowQuestion] = useState(false);
@@ -1333,14 +1356,14 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                                 : 'text-slate-500 hover:text-[#0a5482]'
                             }`}
                           >
-                            📚 Tất cả ({subs.length} quyển)
+                            📚 {lang === 'vi' ? `Tất cả (${subs.length} quyển)` : `All (${subs.length} books)`}
                           </Link>
                           <button
                             type="button"
                             onClick={() => setOpenParentId(null)}
                             className="text-[11px] font-semibold text-slate-400 hover:text-slate-600 cursor-pointer"
                           >
-                            Thu gọn ▲
+                            {lang === 'vi' ? 'Thu gọn ▲' : 'Collapse ▲'}
                           </button>
                         </div>
                         <div className="grid grid-cols-3 gap-1.5">
@@ -1479,11 +1502,17 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                         <div>
                           <div className="text-xs sm:text-sm font-black text-slate-800">
                             {Number(activeParentCate.news_cc_id) === 38
-                              ? `Tiến độ Bài dịch Đọc Cambridge IELTS của bạn: Đã hoàn thành ${camReadingReadCount} / 252 bài`
-                              : `Tiến độ Bài dịch Nghe Cambridge IELTS của bạn: Đã hoàn thành ${camListeningReadCount} / 336 bài`}
+                              ? lang === 'vi'
+                                ? `Tiến độ Bài dịch Đọc Cambridge IELTS của bạn: Đã hoàn thành ${camReadingReadCount} / 252 bài`
+                                : `Your Cambridge IELTS Reading Progress: Completed ${camReadingReadCount} / 252 passages`
+                              : lang === 'vi'
+                              ? `Tiến độ Bài dịch Nghe Cambridge IELTS của bạn: Đã hoàn thành ${camListeningReadCount} / 336 bài`
+                              : `Your Cambridge IELTS Listening Progress: Completed ${camListeningReadCount} / 336 transcripts`}
                           </div>
                           <div className="text-[11.5px] text-slate-500 font-medium">
-                            Mỗi bài bạn mở đọc/nghe dịch đều được tự động lưu vào Nhật ký &amp; Tiến độ học IELTS Premium.
+                            {lang === 'vi'
+                              ? 'Mỗi bài bạn mở đọc/nghe dịch đều được tự động lưu vào Nhật ký & Tiến độ học IELTS Premium.'
+                              : 'Every passage you open is automatically saved to your IELTS Premium Activity Log & Progress.'}
                           </div>
                         </div>
                       </div>
@@ -1498,7 +1527,7 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                         }}
                         className="px-3.5 py-2 rounded-xl bg-[#0a5482] hover:bg-[#084266] text-white text-xs font-extrabold shrink-0 transition cursor-pointer self-start sm:self-center"
                       >
-                        📈 Xem Tiến Độ Học IELTS →
+                        {lang === 'vi' ? '📈 Xem Tiến Độ Học IELTS →' : '📈 View IELTS Progress →'}
                       </button>
                     </div>
                   )}
@@ -1760,7 +1789,7 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                             }}
                             className="bg-orange-50 hover:bg-[#ff6600] text-[#c2410c] hover:text-white border border-orange-200 font-black text-sm px-4 py-2 rounded-full transition shadow-2xs cursor-pointer"
                           >
-                            🎧 Luyện Podcast & Cụm từ da cam ↓
+                            {lang === 'vi' ? '🎧 Luyện Podcast & Cụm từ da cam ↓' : '🎧 Speaking Podcast & Key Phrases ↓'}
                           </button>
                         )}
                         {article.news_desc_vi &&
@@ -1771,7 +1800,10 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                               onClick={() => setShowViTranslation(!showViTranslation)}
                               className="bg-sky-50 hover:bg-[#0a5482] text-[#0a5482] hover:text-white border border-sky-200 font-black text-sm px-4 py-2 rounded-full transition shadow-2xs cursor-pointer"
                             >
-                              🌐 {showViTranslation ? 'Xem bản Tiếng Anh (ENG)' : 'Xem bản dịch Tiếng Việt (VIE)'}
+                              🌐{' '}
+                              {showViTranslation
+                                ? lang === 'vi' ? 'Xem bản Tiếng Anh (ENG)' : 'View English Version (ENG)'
+                                : lang === 'vi' ? 'Xem bản dịch Tiếng Việt (VIE)' : 'View Vietnamese Translation (VIE)'}
                             </button>
                           )}
                       </div>
@@ -1870,8 +1902,12 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                                 )}
                                 <p className="text-xs sm:text-sm text-slate-500">
                                   {article.news_audio_file && article.news_audio_file.trim() !== ''
-                                    ? 'Chọn chế độ hiển thị để vừa nghe Audio vừa luyện dịch theo khổ hoặc đối chiếu từng câu'
-                                    : 'Chọn chế độ hiển thị để luyện đọc hiểu theo khổ hoặc đối chiếu từng câu'}
+                                    ? lang === 'vi'
+                                      ? 'Chọn chế độ hiển thị để vừa nghe Audio vừa luyện dịch theo khổ hoặc đối chiếu từng câu'
+                                      : 'Choose a reading view to listen along in paragraph bilingual, sentence-by-sentence, or English-only mode'
+                                    : lang === 'vi'
+                                    ? 'Chọn chế độ hiển thị để luyện đọc hiểu theo khổ hoặc đối chiếu từng câu'
+                                    : 'Choose a reading view: bilingual paragraphs, sentence-by-sentence, or English only'}
                                 </p>
                               </div>
 
@@ -1886,7 +1922,7 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                                   }`}
                                 >
                                   <span>📑</span>
-                                  <span>Theo khổ</span>
+                                  <span>{lang === 'vi' ? 'Theo khổ' : 'Paragraphs'}</span>
                                 </button>
                                 <button
                                   type="button"
@@ -1898,7 +1934,7 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                                   }`}
                                 >
                                   <span>🔍</span>
-                                  <span>Từng câu</span>
+                                  <span>{lang === 'vi' ? 'Từng câu' : 'Sentences'}</span>
                                 </button>
                                 <button
                                   type="button"
@@ -1910,7 +1946,7 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                                   }`}
                                 >
                                   <span className={`px-1 py-0.5 rounded text-[9.5px] font-black ${camMode === 'english' ? 'bg-white/20 text-white' : 'bg-sky-100 text-[#0a5482]'}`}>EN</span>
-                                  <span>Tiếng Anh</span>
+                                  <span>{lang === 'vi' ? 'Tiếng Anh' : 'English'}</span>
                                 </button>
                               </div>
                             </div>

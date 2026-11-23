@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { supabase, isTonyEnglishAuthUser, isTonyEnglishAdmin } from './supabase';
+import { useLmsLang } from './utils/lmsI18n';
 
 // Cached admin check per authenticated session (strictly defaults to false until verified)
 let cachedAdminUserId: string | null = null;
@@ -405,6 +406,8 @@ export function TestGuideVideoButton({
   buttonTheme?: 'dark' | 'light';
   isAdmin?: boolean;
 }) {
+  const [lang] = useLmsLang();
+  const isEn = lang === 'en';
   const canEdit = useIsGuideVideoAdmin(isAdmin);
   const count = videos && videos.length > 0 ? videos.length : (videoUrl && videoUrl.trim() !== '' ? 1 : 0);
   const hasVideo = count > 0;
@@ -427,13 +430,13 @@ export function TestGuideVideoButton({
                 ? 'bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white border border-blue-400/30'
                 : 'bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white'
             }`}
-            title={isOpen ? 'Đóng video hướng dẫn' : `Bật video hướng dẫn & gợi ý cách giải (${count} video)`}
+            title={isOpen ? (isEn ? 'Close video guide' : 'Đóng video hướng dẫn') : (isEn ? `Watch walkthrough & hint video (${count})` : `Bật video hướng dẫn & gợi ý cách giải (${count} video)`)}
           >
             <span className="text-[13px]">{isOpen ? '⏹' : '🎬'}</span>
             <span>
               {isOpen
-                ? 'Đóng Video'
-                : `${isReviewMode ? 'Video chữa đề' : 'Video gợi ý / giải'}${count > 1 ? ` (${count})` : ''}`}
+                ? (isEn ? 'Close Video' : 'Đóng Video')
+                : `${isReviewMode ? (isEn ? 'Solution Video' : 'Video chữa đề') : (isEn ? 'Hint / Guide Video' : 'Video gợi ý / giải')}${count > 1 ? ` (${count})` : ''}`}
             </span>
             {!isOpen && (
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping ml-0.5"></span>
@@ -449,8 +452,8 @@ export function TestGuideVideoButton({
                   ? 'text-slate-400 hover:text-white hover:bg-white/10'
                   : 'text-slate-500 hover:text-slate-800 hover:bg-slate-200'
               }`}
-              title="Quản lý / Thêm nhiều video hướng dẫn"
-              aria-label="Quản lý video hướng dẫn"
+              title={isEn ? "Manage / add guide videos" : "Quản lý / Thêm nhiều video hướng dẫn"}
+              aria-label={isEn ? "Manage guide videos" : "Quản lý video hướng dẫn"}
             >
               ⚙️
             </button>
@@ -465,10 +468,10 @@ export function TestGuideVideoButton({
               ? 'text-slate-400 hover:text-white hover:bg-white/10 border-slate-600'
               : 'text-slate-500 hover:text-blue-600 hover:bg-blue-50 border-slate-300'
           }`}
-          title="Tải lên hoặc dán link video hướng dẫn cho đề thi này"
+          title={isEn ? "Upload or paste a guide video link for this test" : "Tải lên hoặc dán link video hướng dẫn cho đề thi này"}
         >
           <span>➕</span>
-          <span>Thêm Video gợi ý</span>
+          <span>{isEn ? 'Add Guide Video' : 'Thêm Video gợi ý'}</span>
         </button>
       ) : null}
     </div>
@@ -497,6 +500,8 @@ export function TestGuideVideoPlayer({
   onToggleTheater: (open: boolean) => void;
   testTitle?: string;
 }) {
+  const [lang] = useLmsLang();
+  const isEn = lang === 'en';
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
   const prevIsOpenRef = useRef<boolean>(isOpen);
@@ -598,7 +603,7 @@ export function TestGuideVideoPlayer({
     return (
       <div className="px-3 py-2 bg-[#1f1f23] border-b border-[#3f3f46] flex flex-wrap items-center gap-1.5">
         <span className="text-[11px] font-bold text-slate-400 mr-1 shrink-0">
-          📚 Chọn video ({effectiveVideos.length}):
+          {isEn ? `📚 Select video (${effectiveVideos.length}):` : `📚 Chọn video (${effectiveVideos.length}):`}
         </span>
         {effectiveVideos.map((v, idx) => {
           const isSelected = idx === safeIdx;
@@ -674,13 +679,13 @@ export function TestGuideVideoPlayer({
           key="inline-theater-placeholder"
           className="w-full max-w-[860px] mx-auto my-2.5 rounded-2xl bg-slate-900/5 border border-dashed border-slate-300 aspect-video flex flex-col items-center justify-center gap-2.5 text-slate-500 text-xs font-medium shrink-0"
         >
-          <span>🎬 Video đang phát ở chế độ phóng to toàn màn hình</span>
+          <span>{isEn ? '🎬 Video is playing in fullscreen theater mode' : '🎬 Video đang phát ở chế độ phóng to toàn màn hình'}</span>
           <button
             type="button"
             onClick={handleExitTheater}
             className="px-3 py-1.5 bg-white hover:bg-slate-100 text-slate-700 border border-slate-300 rounded-lg text-[11.5px] font-bold transition shadow-sm cursor-pointer"
           >
-            🗗 Thu nhỏ về khung này
+            {isEn ? '🗗 Return to inline player' : '🗗 Thu nhỏ về khung này'}
           </button>
         </div>
       ) : null}
@@ -708,7 +713,7 @@ export function TestGuideVideoPlayer({
                 <div className="flex items-center gap-3 truncate">
                   <span className="text-red-500 text-lg shrink-0">▶</span>
                   <h3 className="font-bold text-base sm:text-lg truncate">
-                    {testTitle ? `[Video Hướng Dẫn] ${testTitle}` : (activeItem?.title || 'Video hướng dẫn & gợi ý cách giải')}
+                    {testTitle ? (isEn ? `[Video Guide] ${testTitle}` : `[Video Hướng Dẫn] ${testTitle}`) : (activeItem?.title || (isEn ? 'Walkthrough & Solution Video' : 'Video hướng dẫn & gợi ý cách giải'))}
                   </h3>
                 </div>
                 <div className="flex items-center gap-2 shrink-0">
@@ -716,17 +721,17 @@ export function TestGuideVideoPlayer({
                     type="button"
                     onClick={handleExitTheater}
                     className="px-3.5 py-1.5 bg-slate-700 hover:bg-slate-600 text-white rounded-lg font-bold text-xs sm:text-sm transition flex items-center gap-1.5 shadow-lg cursor-pointer"
-                    title="Thu nhỏ về khung bên dưới và tiếp tục xem"
+                    title={isEn ? "Minimize back to inline view and keep watching" : "Thu nhỏ về khung bên dưới và tiếp tục xem"}
                   >
-                    ✕ Thoát toàn màn hình
+                    {isEn ? '✕ Exit Fullscreen' : '✕ Thoát toàn màn hình'}
                   </button>
                   <button
                     type="button"
                     onClick={handleCloseCompletely}
                     className="px-3.5 py-1.5 bg-red-600 hover:bg-red-700 text-white rounded-lg font-bold text-xs sm:text-sm transition flex items-center gap-1.5 shadow-lg cursor-pointer"
-                    title="Đóng hẳn video"
+                    title={isEn ? "Close video completely" : "Đóng hẳn video"}
                   >
-                    ⏹ Đóng hẳn
+                    {isEn ? '⏹ Close Video' : '⏹ Đóng hẳn'}
                   </button>
                 </div>
               </>
@@ -734,7 +739,7 @@ export function TestGuideVideoPlayer({
               <>
                 <div className="flex items-center gap-2 font-bold truncate">
                   <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse shrink-0" />
-                  <span className="truncate">{activeItem?.title || 'Video hướng dẫn & gợi ý giải bài'}</span>
+                  <span className="truncate">{activeItem?.title || (isEn ? 'Walkthrough & Solution Video' : 'Video hướng dẫn & gợi ý giải bài')}</span>
                   <span className="text-[10px] font-semibold px-2 py-0.5 rounded-md bg-sky-500/20 text-sky-300 border border-sky-400/30 uppercase tracking-wider shrink-0">
                     {sourceInfo.type === 'youtube' ? 'YouTube' : sourceInfo.type === 'drive' ? 'Google Drive' : sourceInfo.type === 'direct' ? 'Full HD 1080p' : 'Embed'}
                   </span>
@@ -744,17 +749,17 @@ export function TestGuideVideoPlayer({
                     type="button"
                     onClick={handleOpenTheater}
                     className="px-2.5 py-1 bg-white/10 hover:bg-white/20 text-slate-200 hover:text-white rounded-lg text-[11px] font-semibold transition flex items-center gap-1 cursor-pointer"
-                    title="Mở toàn màn hình và phát tiếp từ chỗ đang xem"
+                    title={isEn ? "Expand to fullscreen theater mode" : "Mở toàn màn hình và phát tiếp từ chỗ đang xem"}
                   >
-                    <span>⛶</span> Phóng to
+                    <span>⛶</span> {isEn ? 'Expand' : 'Phóng to'}
                   </button>
                   <button
                     type="button"
                     onClick={handleCloseCompletely}
                     className="px-2.5 py-1 text-slate-400 hover:text-red-400 hover:bg-white/10 rounded-lg transition font-bold cursor-pointer"
-                    title="Đóng video"
+                    title={isEn ? "Close video" : "Đóng video"}
                   >
-                    ✕ Đóng
+                    {isEn ? '✕ Close' : '✕ Đóng'}
                   </button>
                 </div>
               </>

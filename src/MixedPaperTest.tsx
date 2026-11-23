@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { supabase } from './supabase';
 import { normalizeHtmlImages, applySmartMcqImageSizing, scanContainerMcqImages, McqImageZoomModal } from './mcqImageUtils';
 import { gradeAIQuestions, AIGradeResult } from './utils/aiGrader';
+import { useLmsLang, LmsLangToggle } from './utils/lmsI18n';
 import './tailwind.css';
 
 // --- CÁC HÀM LOGIC DÙNG CHUNG TỪ COMPUTER TEST ---
@@ -125,6 +126,11 @@ const cleanHtmlContent = (html: any) => {
 
 // --- COMPONENT CHÍNH ---
 export default function MixedPaperTest({ onBack, testData, onFinish }: { onBack: () => void, testData?: any, onFinish?: (res: any) => void }) {
+  const [lang, setLang] = useLmsLang();
+  const isEn = lang === 'en';
+  const isEnRef = useRef(isEn);
+  isEnRef.current = isEn;
+
   let safeTestData = testData;
   if (typeof safeTestData === 'string') {
     try { safeTestData = JSON.parse(safeTestData); } catch (e) { }
@@ -302,7 +308,7 @@ export default function MixedPaperTest({ onBack, testData, onFinish }: { onBack:
   const [timeLeft, setTimeLeft] = useState(() => parseInitialTime(basicInfo.timeLimit));
 
   const clearDraft = () => {
-    if(window.confirm('Xóa bản nháp và làm lại từ đầu?')) { 
+    if(window.confirm(isEn ? 'Clear draft and restart from scratch?' : 'Xóa bản nháp và làm lại từ đầu?')) { 
       if (safeTestData?.id) {
         localStorage.removeItem(`ielts_paper_ans_${safeTestData.id}`);
         localStorage.removeItem(`ielts_paper_endtime_${safeTestData.id}`);
@@ -321,7 +327,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
   const isForced = forceAutoSubmit === true;
   if (!isReviewMode) {
     if (isSubmitting || isFinishingRef.current) return;
-    if (!isForced && !window.confirm("Bạn có chắc chắn muốn nộp bài thi?")) return;
+    if (!isForced && !window.confirm(isEn ? "Are you sure you want to submit the test?" : "Bạn có chắc chắn muốn nộp bài thi?")) return;
     isFinishingRef.current = true;
     setIsSubmitting(true);
     // 🔒 Đọc answers từ ref để chống stale closure khi timer hết giờ gọi
@@ -413,7 +419,9 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
               question_id: qIdStr,
               student_score: exactMatch ? 1 : 0,
               max_score: defaultMax,
-              examiner_comment: exactMatch ? 'Câu trả lời chính xác theo đáp án mẫu.' : 'Chưa có câu trả lời hợp lệ.'
+              examiner_comment: exactMatch
+                ? (isEn ? 'Correct answer matching the answer key.' : 'Câu trả lời chính xác theo đáp án mẫu.')
+                : (isEn ? 'No valid answer provided.' : 'Chưa có câu trả lời hợp lệ.')
             };
             aiGradeResult!.details.push(d);
           } else if (exactMatch && Number(d.student_score || 0) < Number(d.max_score || 1)) {
@@ -524,7 +532,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
   handleFinishRef.current = handleFinish;
 
   const resetTest = () => {
-    if (window.confirm("Làm lại từ đầu? Mọi đáp án sẽ bị xóa.")) { 
+    if (window.confirm(isEn ? "Restart from scratch? All answers will be cleared." : "Làm lại từ đầu? Mọi đáp án sẽ bị xóa.")) { 
       isFinishingRef.current = false;
       if (safeTestData?.id) {
         localStorage.removeItem(`ielts_paper_ans_${safeTestData.id}`);
@@ -613,14 +621,14 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
             setTimeLeft(remaining);
             if (remaining <= 0) {
                 clearInterval(timer);
-                alert("⏰ Hết giờ!");
+                alert(isEnRef.current ? "⏰ Time's up!" : "⏰ Hết giờ!");
                 handleFinishRef.current(true);
             }
         } else { 
             setTimeLeft(prev => {
                 if (prev <= 1) {
                     clearInterval(timer);
-                    alert("⏰ Hết giờ!");
+                    alert(isEnRef.current ? "⏰ Time's up!" : "⏰ Hết giờ!");
                     handleFinishRef.current(true);
                     return 0;
                 }
@@ -697,7 +705,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
           currentRange.surroundContents(span); 
           const rect = span.getBoundingClientRect();
           setStickyNote({ show: true, id: noteId, text: '', x: rect.left, y: rect.bottom + 10 });
-      } catch (e) { alert("Chỉ bôi đen gọn trong 1 đoạn văn!"); }
+      } catch (e) { alert(isEn ? "Please select text within a single paragraph!" : "Chỉ bôi đen gọn trong 1 đoạn văn!"); }
       setHighlightMenu({ ...highlightMenu, show: false }); 
       window.getSelection()?.removeAllRanges();
     }
@@ -824,8 +832,14 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
     }));
     
     const safeContent = String(qContent || '').replace(stripHtmlRegex, '').trim();
-    const safeExplanation = String(qExplanation || 'Không có lời giải thích riêng cho câu hỏi này. Thầy/Cô hãy giải thích dựa trên đề bài và ngữ cảnh.').replace(stripHtmlRegex, '').trim();
-    const displayPrompt = `**Câu hỏi số ${questionIndexMap[questionId] || questionId}:**\n${safeContent}\n\n**Đáp án & Giải thích gốc:**\n${safeExplanation}`;
+    const safeExplanation = String(
+      qExplanation || (isEn
+        ? 'No separate explanation available for this question. Please explain based on the question and context.'
+        : 'Không có lời giải thích riêng cho câu hỏi này. Thầy/Cô hãy giải thích dựa trên đề bài và ngữ cảnh.')
+    ).replace(stripHtmlRegex, '').trim();
+    const displayPrompt = isEn
+      ? `Please explain in English.\n\n**Question ${questionIndexMap[questionId] || questionId}:**\n${safeContent}\n\n**Answer & Original Explanation:**\n${safeExplanation}`
+      : `**Câu hỏi số ${questionIndexMap[questionId] || questionId}:**\n${safeContent}\n\n**Đáp án & Giải thích gốc:**\n${safeExplanation}`;
     
     const fakeBtn = document.createElement('button');
     fakeBtn.className = 'btn-ai-trigger hidden';
@@ -839,14 +853,18 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
   // 🚀 TÍNH NĂNG GỌI GIA SƯ (VOICE) VÀ AUTO-NAVIGATE
   const callTutorForQuestion = (q: any) => {
       const plainContent = String(q.content || '').replace(stripHtmlRegex, '').trim();
-      const plainExplanation = String(q.explanation || 'Không có lời giải thích.').replace(stripHtmlRegex, '').trim();
+      const plainExplanation = String(q.explanation || (isEn ? 'No explanation provided.' : 'Không có lời giải thích.')).replace(stripHtmlRegex, '').trim();
       const correctAns = String(q.correctAnswer || '');
-      const userAns = String(answers[String(q.id)] || '(trống)');
+      const userAns = String(answers[String(q.id)] || (isEn ? '(blank)' : '(trống)'));
       
       const tutorContext = {
           overall: scoreResult.band,
-          transcript: `Câu hỏi: "${plainContent}". \nĐáp án của học sinh: ${userAns}. \nĐáp án đúng: ${correctAns}. \nGiải thích gốc: "${plainExplanation}".`,
-          feedback: "Bạn là gia sư IELTS. Học sinh đang xem lại câu hỏi này trong phần Review. Hãy chủ động chào và giải thích chi tiết tại sao đáp án lại như vậy, phân tích từ vựng/ngữ pháp liên quan. Dùng giọng điệu tự nhiên, ân cần như đang dạy kèm 1-1."
+          transcript: isEn
+            ? `Question: "${plainContent}". \nStudent's answer: ${userAns}. \nCorrect answer: ${correctAns}. \nOriginal explanation: "${plainExplanation}".`
+            : `Câu hỏi: "${plainContent}". \nĐáp án của học sinh: ${userAns}. \nĐáp án đúng: ${correctAns}. \nGiải thích gốc: "${plainExplanation}".`,
+          feedback: isEn
+            ? "You are an IELTS tutor. Speak and explain strictly in English. The student is reviewing this question in Review Mode. Proactively greet the student and explain in detail why the answer is correct, analyzing relevant vocabulary and grammar. Use a natural, warm 1-on-1 tutoring tone."
+            : "Bạn là gia sư IELTS. Học sinh đang xem lại câu hỏi này trong phần Review. Hãy chủ động chào và giải thích chi tiết tại sao đáp án lại như vậy, phân tích từ vựng/ngữ pháp liên quan. Dùng giọng điệu tự nhiên, ân cần như đang dạy kèm 1-1."
       };
       
       sessionStorage.setItem('tony_live_mode', 'TUTOR');
@@ -897,11 +915,11 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
               return (
                 <span key={pathKey} className="relative inline-flex flex-col items-center mx-1 align-baseline -translate-y-1">
                   <span className={`px-2.5 py-0.5 text-[14px] font-bold text-slate-800 rounded shadow-sm border ${isCorrect ? 'bg-emerald-100 border-emerald-300' : 'bg-red-100 border-red-300'}`}>
-                    {displayIndex}. {userAns || '(trống)'}
+                    {displayIndex}. {userAns || (isEn ? '(blank)' : '(trống)')}
                   </span>
                   {!isCorrect && correctAns && (
                     <span className="absolute top-full mt-1 text-[11px] text-emerald-800 font-bold bg-emerald-100 px-2 py-0.5 border border-emerald-300 rounded text-center whitespace-nowrap z-10 shadow-md">
-                      ĐA: {correctAns}
+                      {isEn ? 'Ans' : 'ĐA'}: {correctAns}
                     </span>
                   )}
                 </span>
@@ -928,7 +946,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                     <button onClick={(e) => { e.stopPropagation(); removeMultiDragItem(qNum, idx); }} className="ml-1.5 hover:text-red-500 text-[12px] font-black">✕</button>
                                 </span>
                             ))}
-                            <span className="text-gray-400 text-[12px] italic px-1">{items.length > 0 ? '+ Thả thêm' : 'Thả các từ vào đây'}</span>
+                            <span className="text-gray-400 text-[12px] italic px-1">{items.length > 0 ? (isEn ? '+ Drop more' : '+ Thả thêm') : (isEn ? 'Drop words here' : 'Thả các từ vào đây')}</span>
                         </span>
                     );
                 }
@@ -948,7 +966,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                 <span className="truncate">{displayUserAns}</span>
                                 <button onClick={(e) => { e.stopPropagation(); clearDragAnswer(qNum); }} className="ml-2 hover:text-red-500 text-[14px] font-black">✕</button>
                             </div>
-                        ) : ( <span className="text-gray-400 text-[13px] italic w-full text-center">Thả vào đây</span> )}
+                        ) : ( <span className="text-gray-400 text-[13px] italic w-full text-center">{isEn ? 'Drop here' : 'Thả vào đây'}</span> )}
                     </span>
                 );
             }
@@ -967,7 +985,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                       onChange={(e) => handleAnswer(qNum, e.target.value)}
                       className="border-b-2 border-gray-400 bg-transparent focus:border-blue-600 rounded-none px-1 py-0.5 outline-none text-blue-800 font-bold text-[14px] min-w-[100px] max-w-[200px] cursor-pointer"
                     >
-                      <option value="">-- Chọn --</option>
+                      <option value="">{isEn ? '-- Select --' : '-- Chọn --'}</option>
                       {validOptions.map((opt:string, oIdx:number) => {
                          const val = opt.replace(stripHtmlRegex, '').trim();
                          // Cho phép chọn lại cùng 1 đáp án nhiều lần cho dạng Droplist
@@ -1061,7 +1079,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
         const remaining = Math.max(0, Math.floor((currentEndTime - Date.now()) / 1000));
         setTimeLeft(remaining);
         if (remaining <= 0 && basicInfo?.category !== 'exercise') {
-            alert("⏰ Bài thi này đã hết thời gian làm bài!");
+            alert(isEn ? "⏰ Time for this test has expired!" : "⏰ Bài thi này đã hết thời gian làm bài!");
             handleFinishRef.current(true);
             return;
         }
@@ -1069,7 +1087,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
     if (globalAudioRef.current && isListening) { 
         globalAudioRef.current.play().catch(e => { 
             console.error("Autoplay blocked:", e); 
-            alert("Trình duyệt chặn phát âm thanh. Vui lòng bấm Bắt Đầu lại."); 
+            alert(isEn ? "Browser blocked audio playback. Please click Start again." : "Trình duyệt chặn phát âm thanh. Vui lòng bấm Bắt Đầu lại."); 
         });
     }
   };
@@ -1077,25 +1095,37 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
   // MÀN HÌNH CHƯA BẮT ĐẦU THI
   if (!testStarted) {
     return (
-      <div className="flex flex-col h-[100dvh] items-center justify-center bg-[#f3f4f6] font-serif">
+      <div className="flex flex-col h-[100dvh] items-center justify-center bg-[#f3f4f6] font-serif relative">
+        <div className="absolute top-4 right-4 font-sans">
+          <LmsLangToggle lang={lang} setLang={setLang} variant="light" />
+        </div>
         {isListening && audioPlaylist.length > 0 && <audio ref={globalAudioRef} src={audioPlaylist[0]} preload="auto" className="hidden" />}
         <div className="bg-white p-10 rounded-2xl shadow-xl text-center max-w-lg border border-gray-200 w-full font-sans">
           <div className="text-6xl mb-6">{isListening ? '🎧' : '📝'}</div>
           <h1 className="text-2xl font-black text-slate-800 mb-2">{safeTestData?.title || basicInfo.title}</h1>
           {basicInfo?.category === 'exercise' ? (
-              <p className="text-emerald-600 font-black tracking-widest uppercase mb-8">BÀI TẬP</p>
+              <p className="text-emerald-600 font-black tracking-widest uppercase mb-8">{isEn ? 'PRACTICE' : 'BÀI TẬP'}</p>
           ) : (
-              <p className="text-slate-500 mb-8 font-medium">Thời gian: {formatTime(parseInitialTime(basicInfo.timeLimit))}</p>
+              <p className="text-slate-500 mb-8 font-medium">{isEn ? 'Time limit' : 'Thời gian'}: {formatTime(parseInitialTime(basicInfo.timeLimit))}</p>
           )}
           {isListening && (
             <div className="bg-amber-50 border border-amber-200 p-4 rounded-lg text-amber-700 text-[13px] font-medium mb-8 text-left leading-relaxed shadow-inner">
-              <span className="font-bold">⚠️ LƯU Ý THI LISTENING:</span> Hệ thống sẽ <span className="font-bold underline">tự động phát liên tục</span> các Audio từ Part 1 đến Part 4.
-              <br/><br/>Bạn chỉ có thể chỉnh âm lượng (Volume), KHÔNG THỂ tạm dừng hay tua lại trong quá trình làm bài.
+              {isEn ? (
+                <>
+                  <span className="font-bold">⚠️ LISTENING TEST NOTE:</span> The system will <span className="font-bold underline">automatically play</span> all audio tracks continuously from Part 1 to Part 4.
+                  <br/><br/>You can only adjust the volume; you CANNOT pause or rewind during the test.
+                </>
+              ) : (
+                <>
+                  <span className="font-bold">⚠️ LƯU Ý THI LISTENING:</span> Hệ thống sẽ <span className="font-bold underline">tự động phát liên tục</span> các Audio từ Part 1 đến Part 4.
+                  <br/><br/>Bạn chỉ có thể chỉnh âm lượng (Volume), KHÔNG THỂ tạm dừng hay tua lại trong quá trình làm bài.
+                </>
+              )}
             </div>
           )}
           <div className="flex gap-4 justify-center">
-            <button onClick={onBack} className="px-6 py-3 rounded-lg font-bold text-slate-500 hover:bg-slate-100 border border-slate-300 transition">Quay lại</button>
-            <button onClick={handleStartTest} className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-8 py-3 rounded-lg shadow-lg transition">Bắt Đầu Làm Bài</button>
+            <button onClick={onBack} className="px-6 py-3 rounded-lg font-bold text-slate-500 hover:bg-slate-100 border border-slate-300 transition">{isEn ? 'Back' : 'Quay lại'}</button>
+            <button onClick={handleStartTest} className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-8 py-3 rounded-lg shadow-lg transition">{isEn ? 'Start Test' : 'Bắt Đầu Làm Bài'}</button>
           </div>
         </div>
       </div>
@@ -1323,11 +1353,11 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
               <button onClick={() => setStickyNote({...stickyNote, show: false})} className="text-white text-xs">✕</button>
           </div>
           <div className="bg-[#f8f5dc] p-3 relative">
-            <textarea autoFocus value={stickyNote.text} onChange={(e) => setStickyNote({ ...stickyNote, text: e.target.value })} className="w-full h-32 bg-transparent outline-none resize-none text-sm" placeholder="Nhập ghi chú..." disabled={isReviewMode} />
+            <textarea autoFocus value={stickyNote.text} onChange={(e) => setStickyNote({ ...stickyNote, text: e.target.value })} className="w-full h-32 bg-transparent outline-none resize-none text-sm" placeholder={isEn ? "Type your note..." : "Nhập ghi chú..."} disabled={isReviewMode} />
             {!isReviewMode && (
               <div className="flex justify-between items-center mt-2 border-t border-gray-300/50 pt-2">
-                  <button onClick={() => { const span = document.querySelector(`span[data-note-id="${stickyNote.id}"]`) as HTMLElement; if (span && span.parentNode) span.parentNode.replaceChild(document.createTextNode(span.textContent || ''), span); setStickyNote({ ...stickyNote, show: false }); }} className="text-red-500 text-xs font-bold underline">Xóa Note</button>
-                  <button onClick={() => { const span = document.querySelector(`span[data-note-id="${stickyNote.id}"]`) as HTMLElement; if (span) span.dataset.noteText = stickyNote.text; setStickyNote({ ...stickyNote, show: false }); }} className="bg-[#3b82f6] text-white text-xs font-bold px-4 py-1.5 rounded">Lưu</button>
+                  <button onClick={() => { const span = document.querySelector(`span[data-note-id="${stickyNote.id}"]`) as HTMLElement; if (span && span.parentNode) span.parentNode.replaceChild(document.createTextNode(span.textContent || ''), span); setStickyNote({ ...stickyNote, show: false }); }} className="text-red-500 text-xs font-bold underline">{isEn ? 'Delete Note' : 'Xóa Note'}</button>
+                  <button onClick={() => { const span = document.querySelector(`span[data-note-id="${stickyNote.id}"]`) as HTMLElement; if (span) span.dataset.noteText = stickyNote.text; setStickyNote({ ...stickyNote, show: false }); }} className="bg-[#3b82f6] text-white text-xs font-bold px-4 py-1.5 rounded">{isEn ? 'Save' : 'Lưu'}</button>
               </div>
             )}
           </div>
@@ -1337,15 +1367,15 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
       {/* HEADER PAPER */}
       <header className="relative bg-white border-b border-gray-300 px-3 sm:px-6 py-3 flex flex-wrap lg:flex-nowrap justify-between items-center gap-2 sm:gap-4 shadow-sm z-20 shrink-0 font-sans">
         <div className="flex items-center gap-2 sm:gap-4 min-w-0">
-          <button onClick={onBack} className="text-gray-600 hover:bg-gray-100 text-sm px-3 py-1.5 rounded-lg font-bold border border-gray-300 transition shrink-0">⬅ Thoát</button>
-          <div className="font-bold text-base sm:text-lg text-gray-800 border-l border-gray-300 pl-3 sm:pl-4 truncate max-w-[180px] sm:max-w-xs md:max-w-md">{isReviewMode ? `[CHỮA BÀI] ${safeTestData?.title || basicInfo.title}` : (safeTestData?.title || basicInfo.title)}</div>
+          <button onClick={onBack} className="text-gray-600 hover:bg-gray-100 text-sm px-3 py-1.5 rounded-lg font-bold border border-gray-300 transition shrink-0">{isEn ? '⬅ Exit' : '⬅ Thoát'}</button>
+          <div className="font-bold text-base sm:text-lg text-gray-800 border-l border-gray-300 pl-3 sm:pl-4 truncate max-w-[180px] sm:max-w-xs md:max-w-md">{isReviewMode ? `${isEn ? '[REVIEW]' : '[CHỮA BÀI]'} ${safeTestData?.title || basicInfo.title}` : (safeTestData?.title || basicInfo.title)}</div>
         </div>
 
         {/* THIẾT KẾ LẠI HEADER CHO LISTENING */}
         {isListening && !isReviewMode && (
           <div className="flex-1 max-w-lg mx-2 sm:mx-8 flex items-center justify-center">
              <div className="flex items-center gap-3 bg-gray-100 px-4 py-1.5 rounded-full border border-gray-200">
-                <span className="text-lg" title="Chỉnh âm lượng">🔊</span>
+                <span className="text-lg" title={isEn ? "Adjust volume" : "Chỉnh âm lượng"}>🔊</span>
                 <input type="range" min="0" max="1" step="0.05" defaultValue="1" onChange={(e) => { if(globalAudioRef.current) globalAudioRef.current.volume = parseFloat(e.target.value) }} className="w-32 accent-blue-500 cursor-pointer" />
              </div>
           </div>
@@ -1358,8 +1388,12 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                 onClick={() => {
                   const tutorContext = {
                     overall: scoreResult.band,
-                    transcript: `Bài test: ${basicInfo.title}. Điểm số: ${scoreResult.score}/${scoreResult.total} (Band ${scoreResult.band}).`,
-                    feedback: "Bạn là gia sư IELTS. Học sinh vừa hoàn thành bài kiểm tra Reading/Listening và đang xem lại điểm. Hãy gửi lời chào chúc mừng/động viên dựa trên điểm số, sau đó gợi ý học sinh đọc câu hỏi mà họ không hiểu để bạn phân tích chi tiết và đưa ra lời giải thích chuyên sâu."
+                    transcript: isEn
+                      ? `Test: ${basicInfo.title}. Score: ${scoreResult.score}/${scoreResult.total} (Band ${scoreResult.band}).`
+                      : `Bài test: ${basicInfo.title}. Điểm số: ${scoreResult.score}/${scoreResult.total} (Band ${scoreResult.band}).`,
+                    feedback: isEn
+                      ? "You are an IELTS tutor. Speak and explain strictly in English. The student has just completed a Reading/Listening test and is reviewing their score. Greet and encourage them based on their score, then invite them to ask about any question they didn't understand so you can analyze it in detail and give a thorough explanation."
+                      : "Bạn là gia sư IELTS. Học sinh vừa hoàn thành bài kiểm tra Reading/Listening và đang xem lại điểm. Hãy gửi lời chào chúc mừng/động viên dựa trên điểm số, sau đó gợi ý học sinh đọc câu hỏi mà họ không hiểu để bạn phân tích chi tiết và đưa ra lời giải thích chuyên sâu."
                   };
                   sessionStorage.setItem('tony_live_mode', 'TUTOR');
                   sessionStorage.setItem('tony_tutor_data', JSON.stringify(tutorContext));
@@ -1368,16 +1402,17 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                 }}
                 className="bg-emerald-600 hover:bg-emerald-500 text-white px-4 sm:px-5 py-1.5 rounded-full text-[12px] sm:text-[13px] font-bold transition uppercase tracking-wider shadow flex items-center gap-2 whitespace-nowrap"
              >
-                 📞 Gọi Gia Sư AI
+                 {isEn ? '📞 Call AI Tutor' : '📞 Gọi Gia Sư AI'}
              </button>
           </div>
         )}
 
         <div className="flex items-center gap-2 sm:gap-4 shrink-0">
-          {!isReviewMode && <button onClick={clearDraft} className="text-sm text-gray-500 hover:text-red-500 font-medium whitespace-nowrap">Xóa nháp</button>}
-          {isReviewMode && <button onClick={resetTest} className="text-xs sm:text-sm bg-gray-100 hover:bg-gray-200 px-2.5 sm:px-3 py-1.5 rounded font-bold transition border border-gray-300 whitespace-nowrap">🔄 Làm Lại</button>}
+          <LmsLangToggle lang={lang} setLang={setLang} variant="light" />
+          {!isReviewMode && <button onClick={clearDraft} className="text-sm text-gray-500 hover:text-red-500 font-medium whitespace-nowrap">{isEn ? 'Clear Draft' : 'Xóa nháp'}</button>}
+          {isReviewMode && <button onClick={resetTest} className="text-xs sm:text-sm bg-gray-100 hover:bg-gray-200 px-2.5 sm:px-3 py-1.5 rounded font-bold transition border border-gray-300 whitespace-nowrap">{isEn ? '🔄 Retry' : '🔄 Làm Lại'}</button>}
           <div className={`font-mono text-base sm:text-xl px-3 sm:px-4 py-1 rounded-md shadow-inner tracking-wider font-bold whitespace-nowrap ${isReviewMode ? 'bg-emerald-600 text-white' : (basicInfo?.category === 'exercise' ? 'bg-[#0ea5e9] text-white' : 'bg-gray-800 text-white')}`}>
-              {isReviewMode ? `Band ${scoreResult.band}` : (basicInfo?.category === 'exercise' ? 'BÀI TẬP' : formatTime(timeLeft))}
+              {isReviewMode ? `Band ${scoreResult.band}` : (basicInfo?.category === 'exercise' ? (isEn ? 'PRACTICE' : 'BÀI TẬP') : formatTime(timeLeft))}
           </div>
         </div>
       </header>
@@ -1416,7 +1451,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                     <div>
                       <div className="inline-flex items-center gap-1.5 text-[11px] font-extrabold uppercase tracking-widest text-[#2ab4e8] mb-1">
                         <span>📊</span>
-                        <span>Kết quả bài làm</span>
+                        <span>{isEn ? 'Test Results' : 'Kết quả bài làm'}</span>
                       </div>
                       <div className="flex flex-wrap items-baseline gap-3">
                         <span className="text-4xl sm:text-5xl font-black tracking-tight tabular-nums">
@@ -1424,7 +1459,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                           <span className="text-xl sm:text-2xl text-sky-200/70 font-bold"> / {scoreResult.total}</span>
                         </span>
                         <span className={`px-2.5 py-0.5 rounded-full text-xs font-black border ${badgeStyle}`}>
-                          {pct}% chính xác
+                          {isEn ? `${pct}% accuracy` : `${pct}% chính xác`}
                         </span>
                         {scoreResult.band && (
                           <span className="px-2.5 py-0.5 rounded-full text-xs font-black bg-amber-400/20 text-amber-200 border border-amber-300/35">
@@ -1435,10 +1470,10 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                     </div>
                     <div className="flex flex-wrap items-center gap-2 text-xs font-bold">
                       <span className="px-3 py-1.5 rounded-xl bg-emerald-500/15 border border-emerald-400/25 text-emerald-200">
-                        ✅ Đúng: {scoreResult.score}
+                        {isEn ? `✅ Correct: ${scoreResult.score}` : `✅ Đúng: ${scoreResult.score}`}
                       </span>
                       <span className="px-3 py-1.5 rounded-xl bg-rose-500/15 border border-rose-400/25 text-rose-200">
-                        ❌ Sai/Trống: {wrongCount}
+                        {isEn ? `❌ Wrong/Blank: ${wrongCount}` : `❌ Sai/Trống: ${wrongCount}`}
                       </span>
                     </div>
                   </div>
@@ -1446,27 +1481,27 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                     <div className={`h-full bg-gradient-to-r ${accentGrad} rounded-full transition-all duration-500`} style={{ width: `${pct}%` }} />
                   </div>
                   <div className="relative z-10 mt-4 pt-3.5 border-t border-white/10 flex flex-wrap items-center justify-between gap-2">
-                    <span className="text-xs text-sky-100/80 font-medium">Lọc nhanh câu hỏi khi chữa bài:</span>
+                    <span className="text-xs text-sky-100/80 font-medium">{isEn ? 'Quick filter questions during review:' : 'Lọc nhanh câu hỏi khi chữa bài:'}</span>
                     <div className="inline-flex bg-slate-900/45 p-1 rounded-xl border border-white/15 gap-1">
                       <button
                         type="button"
                         onClick={() => setReviewFilter('all')}
                         className={`px-3 py-1.5 rounded-lg text-xs font-extrabold transition cursor-pointer ${reviewFilter === 'all' ? 'bg-white text-[#0a5482] shadow-xs' : 'text-sky-100 hover:text-white'}`}
                       >
-                        Tất cả ({scoreResult.total})
+                        {isEn ? `All (${scoreResult.total})` : `Tất cả (${scoreResult.total})`}
                       </button>
                       <button
                         type="button"
                         onClick={() => setReviewFilter('wrong')}
                         className={`px-3 py-1.5 rounded-lg text-xs font-extrabold transition cursor-pointer ${reviewFilter === 'wrong' ? 'bg-rose-500 text-white shadow-xs' : 'text-rose-200 hover:text-white'}`}
                       >
-                        ❌ Chỉ câu sai ({wrongCount})
+                        {isEn ? `❌ Incorrect only (${wrongCount})` : `❌ Chỉ câu sai (${wrongCount})`}
                       </button>
                     </div>
                   </div>
                   {reviewFilter === 'wrong' && wrongCount === 0 && scoreResult.total > 0 && (
                     <div className="relative z-10 mt-3 p-3 rounded-xl bg-emerald-500/20 border border-emerald-400/35 text-emerald-100 text-xs font-bold text-center">
-                      🎉 Tuyệt vời! Bạn đã làm đúng 100% — không có câu sai nào!
+                      {isEn ? '🎉 Awesome! You got 100% correct — no mistakes at all!' : '🎉 Tuyệt vời! Bạn đã làm đúng 100% — không có câu sai nào!'}
                     </div>
                   )}
                 </div>
@@ -1612,7 +1647,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                       </div>
                                       {wordBankItems.length > 0 && (
                                           <div className="mt-8 p-5 bg-gray-50 border border-gray-200 rounded-lg">
-                                              <p className="text-[13px] font-black text-gray-600 uppercase tracking-widest mb-4">Danh sách từ (Word Bank)</p>
+                                              <p className="text-[13px] font-black text-gray-600 uppercase tracking-widest mb-4">{isEn ? 'Word Bank' : 'Danh sách từ (Word Bank)'}</p>
                                               <div className="flex flex-wrap gap-3">
                                                   {wordBankItems.map((item, idx) => {
                                                       const text = item.replace(stripHtmlRegex, '').trim();
@@ -1629,20 +1664,20 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                       {/* 🚀 THÊM BLOCK REVIEW & GỌI GIA SƯ CHO CÂU ĐIỀN TỪ Ở PAPER TEST */}
                                       {isReviewMode && (
                                          <div className="w-full mt-8 border-t border-slate-300 pt-6 font-sans">
-                                            <p className="text-[14px] font-black text-black uppercase mb-4 tracking-widest">💡 Giải thích chi tiết & Gia sư AI:</p>
+                                            <p className="text-[14px] font-black text-black uppercase mb-4 tracking-widest">{isEn ? '💡 Detailed Explanation & AI Tutor:' : '💡 Giải thích chi tiết & Gia sư AI:'}</p>
                                             <div className="space-y-4">
                                                {(Array.isArray(sec.questions) ? sec.questions : []).map((q: any) => {
                                                   if (!q?.id) return null;
                                                   const qIdx = questionIndexMap[String(q.id)] || q.id;
                                                   const isInlineRight = isAnswerCorrect(String(answers[String(q.id)] || ''), String(q.correctAnswer || ''));
                                                   if (reviewFilter === 'wrong' && isInlineRight) return null;
-                                                  const explanationText = q.explanation || 'Không có lời giải thích.';
-                                                  const qContentForAI = q.content || sec.content || 'Điền từ vào chỗ trống trong đoạn văn.';
+                                                  const explanationText = q.explanation || (isEn ? 'No explanation provided.' : 'Không có lời giải thích.');
+                                                  const qContentForAI = q.content || sec.content || (isEn ? 'Fill in the blanks in the passage.' : 'Điền từ vào chỗ trống trong đoạn văn.');
                                                   
                                                   return (
                                                       <div key={`expl-${q.id}`} className="bg-white p-5 border border-slate-200 rounded-lg shadow-sm">
                                                           <div className="flex items-center gap-2 mb-2">
-                                                              <span className="bg-slate-800 text-white font-bold px-2 py-0.5 text-[13px] rounded">Câu {qIdx}</span>
+                                                              <span className="bg-slate-800 text-white font-bold px-2 py-0.5 text-[13px] rounded">{isEn ? `Question ${qIdx}` : `Câu ${qIdx}`}</span>
                                                           </div>
                                                           <div className="text-[15px] text-gray-700 italic font-serif format-passage html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(explanationText) }} />
                                                           
@@ -1651,8 +1686,8 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                                             return (
                                                               <div className="mt-4 p-4 rounded-xl bg-blue-50 border border-blue-200">
                                                                 <div className="flex items-center justify-between mb-2">
-                                                                  <span className="font-bold text-[14px] text-blue-800">🤖 AI Chấm Điểm</span>
-                                                                  <span className="font-bold text-[14px] text-blue-800">{aiItem?.student_score} / {aiItem?.max_score} điểm</span>
+                                                                  <span className="font-bold text-[14px] text-blue-800">{isEn ? '🤖 AI Grading' : '🤖 AI Chấm Điểm'}</span>
+                                                                  <span className="font-bold text-[14px] text-blue-800">{aiItem?.student_score} / {aiItem?.max_score} {isEn ? 'pts' : 'điểm'}</span>
                                                                 </div>
                                                                 <p className="text-[14px] text-slate-700 italic">{aiItem?.examiner_comment}</p>
                                                               </div>
@@ -1661,10 +1696,10 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                                           
                                                           <div className="flex items-center gap-2 mt-4 pt-4 border-t border-slate-100">
                                                               <button onClick={(e) => { e.stopPropagation(); askAIToExplain(String(q.id), qContentForAI, explanationText); }} className="px-4 py-1.5 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded text-[13px] transition shadow-sm border border-blue-600">
-                                                                 💬 Chat với AI
+                                                                 {isEn ? '💬 Chat with AI' : '💬 Chat với AI'}
                                                               </button>
                                                               <button onClick={(e) => { e.stopPropagation(); callTutorForQuestion({ ...q, content: qContentForAI }); }} className="px-4 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded text-[13px] transition shadow-sm border border-emerald-600 flex items-center gap-1">
-                                                                 📞 Gọi Gia sư (Voice)
+                                                                 {isEn ? '📞 Call Tutor (Voice)' : '📞 Gọi Gia sư (Voice)'}
                                                               </button>
                                                           </div>
                                                       </div>
@@ -1700,7 +1735,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                           <div className="flex gap-4 mb-2">
                                             <span className="font-bold text-gray-800 shrink-0 w-6 text-right pt-[2px]">{displayIndex}.</span>
                                             <div className="flex-1 min-w-0">
-                                              {isReviewMode && (<div className="mb-3">{isCorrect ? <span className="text-[11px] font-bold bg-emerald-100 text-emerald-700 px-3 py-1 rounded">✅ ĐÚNG</span> : <span className="text-[11px] font-bold bg-red-100 text-red-700 px-3 py-1 rounded">❌ SAI</span>}</div>)}
+                                              {isReviewMode && (<div className="mb-3">{isCorrect ? <span className="text-[11px] font-bold bg-emerald-100 text-emerald-700 px-3 py-1 rounded">{isEn ? '✅ CORRECT' : '✅ ĐÚNG'}</span> : <span className="text-[11px] font-bold bg-red-100 text-red-700 px-3 py-1 rounded">{isEn ? '❌ INCORRECT' : '❌ SAI'}</span>}</div>)}
                                               {q.content && <div className="text-[16px] mb-4 font-serif leading-relaxed format-passage html-content-renderer">{renderHtmlWithHoles(q.content, {})}</div>}
                                               {q.imageUrl && (
                                                 <div className="mb-4">
@@ -1755,11 +1790,11 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                               
                                               {isReviewMode && (
                                                 <div className="mt-6 pt-4 border-t border-gray-200 font-sans">
-                                                  <p className="text-[12px] font-black text-amber-600 uppercase mb-2">💡 Giải thích đáp án:</p>
-                                                  <div className="text-[14px] text-gray-700 italic font-serif format-passage html-content-renderer">{renderHtmlWithHoles(q.explanation || "Không có lời giải thích.", {})}</div>
+                                                  <p className="text-[12px] font-black text-amber-600 uppercase mb-2">{isEn ? '💡 Answer Explanation:' : '💡 Giải thích đáp án:'}</p>
+                                                  <div className="text-[14px] text-gray-700 italic font-serif format-passage html-content-renderer">{renderHtmlWithHoles(q.explanation || (isEn ? "No explanation provided." : "Không có lời giải thích."), {})}</div>
                                                   <div className="flex items-center gap-2 mt-3">
-                                                      <button onClick={(e) => { e.stopPropagation(); askAIToExplain(String(q.id), q.content, q.explanation || 'Không có lời giải thích.'); }} className="px-3 py-1 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded text-[12px] transition shadow-sm border border-blue-600">✨ Hỏi AI giải thích chi tiết</button>
-                                                      <button onClick={(e) => { e.stopPropagation(); callTutorForQuestion(q); }} className="px-3 py-1 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded text-[12px] transition shadow-sm border border-emerald-600 flex items-center gap-1">📞 Gọi Gia sư</button>
+                                                      <button onClick={(e) => { e.stopPropagation(); askAIToExplain(String(q.id), q.content, q.explanation || (isEn ? 'No explanation provided.' : 'Không có lời giải thích.')); }} className="px-3 py-1 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded text-[12px] transition shadow-sm border border-blue-600">{isEn ? '✨ Ask AI to explain in detail' : '✨ Hỏi AI giải thích chi tiết'}</button>
+                                                      <button onClick={(e) => { e.stopPropagation(); callTutorForQuestion(q); }} className="px-3 py-1 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded text-[12px] transition shadow-sm border border-emerald-600 flex items-center gap-1">{isEn ? '📞 Call Tutor' : '📞 Gọi Gia sư'}</button>
                                                   </div>
                                                 </div>
                                               )}
@@ -1775,7 +1810,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                       <div className="flex gap-4 mb-4">
                                         <span className="font-bold text-gray-800 shrink-0 w-6 text-right pt-[2px]">{displayIndex}.</span>
                                         <div className="flex-1 min-w-0">
-                                          {isReviewMode && (<div className="mb-3">{isCorrect ? <span className="text-[11px] font-bold bg-emerald-100 text-emerald-700 px-3 py-1 rounded">✅ ĐÚNG</span> : <span className="text-[11px] font-bold bg-red-100 text-red-700 px-3 py-1 rounded">❌ SAI</span>}</div>)}
+                                          {isReviewMode && (<div className="mb-3">{isCorrect ? <span className="text-[11px] font-bold bg-emerald-100 text-emerald-700 px-3 py-1 rounded">{isEn ? '✅ CORRECT' : '✅ ĐÚNG'}</span> : <span className="text-[11px] font-bold bg-red-100 text-red-700 px-3 py-1 rounded">{isEn ? '❌ INCORRECT' : '❌ SAI'}</span>}</div>)}
                                           {q.content && <div className="text-[16px] mb-4 font-serif leading-relaxed format-passage html-content-renderer">{renderHtmlWithHoles(q.content, {})}</div>}
                                           {q.imageUrl && (
                                             <div className="mb-4">
@@ -1831,11 +1866,11 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                           
                                           {isReviewMode && (
                                             <div className="mt-6 pt-4 border-t border-gray-200 font-sans">
-                                              <p className="text-[12px] font-black text-amber-600 uppercase mb-2">💡 Giải thích đáp án:</p>
-                                              <div className="text-[14px] text-gray-700 italic font-serif format-passage html-content-renderer">{renderHtmlWithHoles(q.explanation || "Không có lời giải thích.", {})}</div>
+                                              <p className="text-[12px] font-black text-amber-600 uppercase mb-2">{isEn ? '💡 Answer Explanation:' : '💡 Giải thích đáp án:'}</p>
+                                              <div className="text-[14px] text-gray-700 italic font-serif format-passage html-content-renderer">{renderHtmlWithHoles(q.explanation || (isEn ? "No explanation provided." : "Không có lời giải thích."), {})}</div>
                                               <div className="flex items-center gap-2 mt-3">
-                                                  <button onClick={(e) => { e.stopPropagation(); askAIToExplain(String(q.id), q.content, q.explanation || 'Không có lời giải thích.'); }} className="px-3 py-1 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded text-[12px] transition shadow-sm border border-blue-600">✨ Hỏi AI giải thích chi tiết</button>
-                                                  <button onClick={(e) => { e.stopPropagation(); callTutorForQuestion(q); }} className="px-3 py-1 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded text-[12px] transition shadow-sm border border-emerald-600 flex items-center gap-1">📞 Gọi Gia sư</button>
+                                                  <button onClick={(e) => { e.stopPropagation(); askAIToExplain(String(q.id), q.content, q.explanation || (isEn ? 'No explanation provided.' : 'Không có lời giải thích.')); }} className="px-3 py-1 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded text-[12px] transition shadow-sm border border-blue-600">{isEn ? '✨ Ask AI to explain in detail' : '✨ Hỏi AI giải thích chi tiết'}</button>
+                                                  <button onClick={(e) => { e.stopPropagation(); callTutorForQuestion(q); }} className="px-3 py-1 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded text-[12px] transition shadow-sm border border-emerald-600 flex items-center gap-1">{isEn ? '📞 Call Tutor' : '📞 Gọi Gia sư'}</button>
                                               </div>
                                             </div>
                                           )}
@@ -1884,9 +1919,9 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                                  {isReviewMode ? (
                                                      <div className="flex items-center gap-2 justify-start md:justify-end w-full">
                                                          <div className={`px-4 py-1.5 rounded font-bold text-[14px] border min-w-[140px] text-center ${isCorrect ? 'bg-emerald-100 text-emerald-800 border-emerald-300' : 'bg-red-100 text-red-800 border-red-300'}`}>
-                                                            {userAns || '(trống)'}
+                                                            {userAns || (isEn ? '(blank)' : '(trống)')}
                                                          </div>
-                                                         {!isCorrect && <div className="text-[12px] font-bold text-emerald-700 bg-emerald-100 border border-emerald-300 px-2 py-0.5 rounded whitespace-nowrap">ĐA: {correctAns}</div>}
+                                                         {!isCorrect && <div className="text-[12px] font-bold text-emerald-700 bg-emerald-100 border border-emerald-300 px-2 py-0.5 rounded whitespace-nowrap">{isEn ? 'Ans' : 'ĐA'}: {correctAns}</div>}
                                                      </div>
                                                   ) : (
                                                      <select 
@@ -1911,11 +1946,11 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                             
                                             {isReviewMode && (
                                                <div className="w-full mt-2 border-t border-gray-300 pt-3 flex-none basis-full font-sans">
-                                                  <p className="text-[12px] font-black text-amber-600 uppercase mb-2">💡 Giải thích đáp án:</p>
-                                                  <div className="text-[14px] text-gray-600 italic leading-relaxed font-serif format-passage html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.explanation || 'Không có lời giải thích.') }} />
+                                                  <p className="text-[12px] font-black text-amber-600 uppercase mb-2">{isEn ? '💡 Answer Explanation:' : '💡 Giải thích đáp án:'}</p>
+                                                  <div className="text-[14px] text-gray-600 italic leading-relaxed font-serif format-passage html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.explanation || (isEn ? 'No explanation provided.' : 'Không có lời giải thích.')) }} />
                                                   <div className="flex items-center gap-2 mt-3">
-                                                      <button onClick={(e) => { e.stopPropagation(); askAIToExplain(String(q.id), q.content, q.explanation || 'Không có lời giải thích.'); }} className="mt-2 px-3 py-1 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded text-[12px] transition shadow-sm border border-blue-600">✨ Hỏi AI giải thích thêm</button>
-                                                      <button onClick={(e) => { e.stopPropagation(); callTutorForQuestion(q); }} className="mt-2 px-3 py-1 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded text-[12px] transition shadow-sm border border-emerald-600 flex items-center gap-1">📞 Gọi Gia sư</button>
+                                                      <button onClick={(e) => { e.stopPropagation(); askAIToExplain(String(q.id), q.content, q.explanation || (isEn ? 'No explanation provided.' : 'Không có lời giải thích.')); }} className="mt-2 px-3 py-1 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded text-[12px] transition shadow-sm border border-blue-600">{isEn ? '✨ Ask AI for more details' : '✨ Hỏi AI giải thích thêm'}</button>
+                                                      <button onClick={(e) => { e.stopPropagation(); callTutorForQuestion(q); }} className="mt-2 px-3 py-1 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded text-[12px] transition shadow-sm border border-emerald-600 flex items-center gap-1">{isEn ? '📞 Call Tutor' : '📞 Gọi Gia sư'}</button>
                                                   </div>
                                                </div>
                                             )}
@@ -1936,27 +1971,27 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                     </div>
                                     {isReviewMode && (
                                        <div className="w-full mt-8 border-t border-slate-300 pt-6 font-sans">
-                                          <p className="text-[14px] font-black text-black uppercase mb-4 tracking-widest">💡 Giải thích chi tiết & Gia sư AI:</p>
+                                          <p className="text-[14px] font-black text-black uppercase mb-4 tracking-widest">{isEn ? '💡 Detailed Explanation & AI Tutor:' : '💡 Giải thích chi tiết & Gia sư AI:'}</p>
                                           <div className="space-y-4">
                                              {(Array.isArray(sec.questions) ? sec.questions : []).map((q: any) => {
                                                 if (!q?.id) return null;
                                                 const qIdx = questionIndexMap[String(q.id)] || q.id;
-                                                const explanationText = q.explanation || 'Không có lời giải thích.';
-                                                const qContentForAI = q.content || sec.content || 'Kéo thả đáp án vào chỗ trống.';
+                                                const explanationText = q.explanation || (isEn ? 'No explanation provided.' : 'Không có lời giải thích.');
+                                                const qContentForAI = q.content || sec.content || (isEn ? 'Drag and drop answers into the blanks.' : 'Kéo thả đáp án vào chỗ trống.');
                                                 
                                                 return (
                                                     <div key={`expl-${q.id}`} className="bg-white p-5 border border-slate-200 rounded-lg shadow-sm">
                                                         <div className="flex items-center gap-2 mb-2">
-                                                            <span className="bg-slate-800 text-white font-bold px-2 py-0.5 text-[13px] rounded">Câu {qIdx}</span>
+                                                            <span className="bg-slate-800 text-white font-bold px-2 py-0.5 text-[13px] rounded">{isEn ? `Question ${qIdx}` : `Câu ${qIdx}`}</span>
                                                         </div>
                                                         <div className="text-[15px] text-gray-700 italic font-serif format-passage html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(explanationText) }} />
                                                         
                                                         <div className="flex items-center gap-2 mt-4 pt-4 border-t border-slate-100">
                                                             <button onClick={(e) => { e.stopPropagation(); askAIToExplain(String(q.id), qContentForAI, explanationText); }} className="px-4 py-1.5 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded text-[13px] transition shadow-sm border border-blue-600">
-                                                               💬 Chat với AI
+                                                               {isEn ? '💬 Chat with AI' : '💬 Chat với AI'}
                                                             </button>
                                                             <button onClick={(e) => { e.stopPropagation(); callTutorForQuestion({ ...q, content: qContentForAI }); }} className="px-4 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded text-[13px] transition shadow-sm border border-emerald-600 flex items-center gap-1">
-                                                               📞 Gọi Gia sư (Voice)
+                                                               {isEn ? '📞 Call Tutor (Voice)' : '📞 Gọi Gia sư (Voice)'}
                                                             </button>
                                                         </div>
                                                     </div>
@@ -2005,9 +2040,9 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                                   {isReviewMode ? (
                                                     <div className="flex items-center gap-2 justify-start md:justify-end w-full">
                                                         <div className={`px-4 py-1.5 rounded font-bold text-[14px] border min-w-[140px] text-center ${isCorrect ? 'bg-emerald-100 text-emerald-800 border-emerald-300' : 'bg-red-100 text-red-800 border-red-300'}`}>
-                                                           {displayUserAns || '(trống)'}
+                                                           {displayUserAns || (isEn ? '(blank)' : '(trống)')}
                                                         </div>
-                                                        {!isCorrect && <div className="text-[12px] font-bold text-emerald-700 bg-emerald-100 border border-emerald-300 px-2 py-0.5 rounded whitespace-nowrap">ĐA: {correctAns}</div>}
+                                                        {!isCorrect && <div className="text-[12px] font-bold text-emerald-700 bg-emerald-100 border border-emerald-300 px-2 py-0.5 rounded whitespace-nowrap">{isEn ? 'Ans' : 'ĐA'}: {correctAns}</div>}
                                                     </div>
                                                   ) : (
                                                     <span 
@@ -2021,7 +2056,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                                             <button onClick={(e) => { e.stopPropagation(); clearDragAnswer(String(q.id)); }} className="ml-2 hover:text-red-500 text-[12px] font-black">✕</button>
                                                         </div>
                                                       ) : (
-                                                        <span className="text-gray-400 text-[13px] italic w-full text-center">Thả vào đây</span>
+                                                        <span className="text-gray-400 text-[13px] italic w-full text-center">{isEn ? 'Drop here' : 'Thả vào đây'}</span>
                                                       )}
                                                     </span>
                                                   )}
@@ -2030,11 +2065,11 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                             
                                             {isReviewMode && (
                                                <div className="w-full mt-2 border-t border-gray-300 pt-3 flex-none basis-full font-sans">
-                                                  <p className="text-[12px] font-black text-amber-600 uppercase mb-2">💡 Giải thích đáp án:</p>
-                                                  <div className="text-[14px] text-gray-700 italic leading-relaxed font-serif format-passage html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.explanation || 'Không có lời giải thích.') }} />
+                                                  <p className="text-[12px] font-black text-amber-600 uppercase mb-2">{isEn ? '💡 Answer Explanation:' : '💡 Giải thích đáp án:'}</p>
+                                                  <div className="text-[14px] text-gray-700 italic leading-relaxed font-serif format-passage html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.explanation || (isEn ? 'No explanation provided.' : 'Không có lời giải thích.')) }} />
                                                   <div className="flex items-center gap-2 mt-3">
-                                                      <button onClick={(e) => { e.stopPropagation(); askAIToExplain(String(q.id), q.content, q.explanation || 'Không có lời giải thích.'); }} className="px-3 py-1 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded text-[12px] transition shadow-sm border border-blue-600">✨ Hỏi AI giải thích thêm</button>
-                                                      <button onClick={(e) => { e.stopPropagation(); callTutorForQuestion(q); }} className="px-3 py-1 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded text-[12px] transition shadow-sm border border-emerald-600 flex items-center gap-1">📞 Gọi Gia sư</button>
+                                                      <button onClick={(e) => { e.stopPropagation(); askAIToExplain(String(q.id), q.content, q.explanation || (isEn ? 'No explanation provided.' : 'Không có lời giải thích.')); }} className="px-3 py-1 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded text-[12px] transition shadow-sm border border-blue-600">{isEn ? '✨ Ask AI for more details' : '✨ Hỏi AI giải thích thêm'}</button>
+                                                      <button onClick={(e) => { e.stopPropagation(); callTutorForQuestion(q); }} className="px-3 py-1 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded text-[12px] transition shadow-sm border border-emerald-600 flex items-center gap-1">{isEn ? '📞 Call Tutor' : '📞 Gọi Gia sư'}</button>
                                                   </div>
                                                </div>
                                             )}
@@ -2048,7 +2083,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                 {/* KHO TỪ KÉO THẢ */}
                                 {!isReviewMode && (
                                   <div className="mt-10 p-6 bg-gray-50 border border-gray-200 rounded-lg shadow-inner">
-                                    <p className="text-[13px] font-black text-gray-600 uppercase tracking-widest mb-4">Danh sách lựa chọn (Kéo từ đây):</p>
+                                    <p className="text-[13px] font-black text-gray-600 uppercase tracking-widest mb-4">{isEn ? 'Options List (Drag from here):' : 'Danh sách lựa chọn (Kéo từ đây):'}</p>
                                     <div className="flex flex-wrap gap-3">
                                       {(() => {
                                         let allOptions: string[] = [];
@@ -2120,7 +2155,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
 
                                 {isReviewMode && (
                                   <div className="mt-10 p-6 bg-gray-50 border border-gray-200 rounded-lg shadow-inner font-sans">
-                                    <p className="text-[13px] font-black text-gray-500 uppercase tracking-widest mb-4">Danh sách lựa chọn:</p>
+                                    <p className="text-[13px] font-black text-gray-500 uppercase tracking-widest mb-4">{isEn ? 'Options List:' : 'Danh sách lựa chọn:'}</p>
                                     <div className="flex flex-wrap gap-3">
                                       {(() => {
                                         let allOptions: string[] = [];
@@ -2193,7 +2228,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                                 
                                                 if (isChecked) {
                                                     if (currentSelected.length >= maxAllowed) {
-                                                        alert(`Lưu ý: Nhóm câu hỏi này chỉ yêu cầu chọn tối đa ${maxAllowed} đáp án.`);
+                                                        alert(isEn ? `Note: You can select at most ${maxAllowed} answers for this question group.` : `Lưu ý: Nhóm câu hỏi này chỉ yêu cầu chọn tối đa ${maxAllowed} đáp án.`);
                                                         return prev;
                                                     }
                                                     if (!currentSelected.includes(optionValue)) currentSelected.push(optionValue);
@@ -2306,16 +2341,16 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
 
                                               {isReviewMode && (
                                                 <div className="mt-6 ml-[3.5rem] pt-4 border-t border-gray-200 font-sans">
-                                                   <p className="text-[12px] font-black text-amber-600 uppercase mb-3">💡 Giải thích đáp án:</p>
+                                                   <p className="text-[12px] font-black text-amber-600 uppercase mb-3">{isEn ? '💡 Answer Explanation:' : '💡 Giải thích đáp án:'}</p>
                                                    {combo.map((q:any) => {
                                                        if (!q.explanation || String(q.explanation).trim() === '') return null;
                                                        return (
                                                            <div key={q.id} className="text-[14px] text-gray-600 italic leading-relaxed mb-3 last:mb-0 font-serif format-passage html-content-renderer">
-                                                               <span className="font-bold text-white px-2 py-0.5 bg-gray-600 rounded text-[11px] mr-2">Câu {questionIndexMap[String(q.id)] || q.id}</span>
+                                                               <span className="font-bold text-white px-2 py-0.5 bg-gray-600 rounded text-[11px] mr-2">{isEn ? `Question ${questionIndexMap[String(q.id)] || q.id}` : `Câu ${questionIndexMap[String(q.id)] || q.id}`}</span>
                                                                <span dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.explanation) }} />
                                                                <div className="flex items-center gap-2 mt-3">
-                                                                   <button onClick={(e) => { e.stopPropagation(); askAIToExplain(String(q.id), q.content, q.explanation); }} className="px-3 py-1 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded text-[12px] transition shadow-sm border border-blue-600">✨ Hỏi AI giải thích chi tiết</button>
-                                                                   <button onClick={(e) => { e.stopPropagation(); callTutorForQuestion(q); }} className="px-3 py-1 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded text-[12px] transition shadow-sm border border-emerald-600 flex items-center gap-1">📞 Gọi Gia sư</button>
+                                                                   <button onClick={(e) => { e.stopPropagation(); askAIToExplain(String(q.id), q.content, q.explanation); }} className="px-3 py-1 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded text-[12px] transition shadow-sm border border-blue-600">{isEn ? '✨ Ask AI to explain in detail' : '✨ Hỏi AI giải thích chi tiết'}</button>
+                                                                   <button onClick={(e) => { e.stopPropagation(); callTutorForQuestion(q); }} className="px-3 py-1 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded text-[12px] transition shadow-sm border border-emerald-600 flex items-center gap-1">{isEn ? '📞 Call Tutor' : '📞 Gọi Gia sư'}</button>
                                                                </div>
                                                            </div>
                                                        );
@@ -2355,14 +2390,14 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                               value={userAns}
                                               onChange={(e) => handleAnswer(qIdStr, e.target.value)}
                                               disabled={isReviewMode}
-                                              placeholder="Nhập câu trả lời của bạn vào đây..."
+                                              placeholder={isEn ? "Type your answer here..." : "Nhập câu trả lời của bạn vào đây..."}
                                               className={`w-full p-4 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none resize-y min-h-[150px] font-sans ${isReviewMode ? 'bg-gray-50' : 'bg-white'}`}
                                             />
                                             {isReviewMode && aiItem && (
                                               <div className="mt-4 p-4 rounded-xl bg-blue-50 border border-blue-200">
                                                 <div className="flex items-center justify-between mb-2">
-                                                  <span className="font-bold text-[14px] text-blue-800">🤖 AI Chấm Điểm</span>
-                                                  <span className="font-bold text-[14px] text-blue-800">{aiItem.student_score} / {aiItem.max_score} điểm</span>
+                                                  <span className="font-bold text-[14px] text-blue-800">{isEn ? '🤖 AI Grading' : '🤖 AI Chấm Điểm'}</span>
+                                                  <span className="font-bold text-[14px] text-blue-800">{aiItem.student_score} / {aiItem.max_score} {isEn ? 'pts' : 'điểm'}</span>
                                                 </div>
                                                 <p className="text-[14px] text-slate-700 italic">{aiItem.examiner_comment}</p>
                                               </div>
@@ -2371,13 +2406,13 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                               <div className="mt-4 pt-4 border-t border-gray-200 font-sans">
                                                 {q.explanation && (
                                                   <>
-                                                    <p className="text-[12px] font-black text-amber-600 uppercase mb-2">💡 Gợi ý / Đáp án mẫu:</p>
+                                                    <p className="text-[12px] font-black text-amber-600 uppercase mb-2">{isEn ? '💡 Hint / Sample Answer:' : '💡 Gợi ý / Đáp án mẫu:'}</p>
                                                     <div className="text-[14px] text-gray-700 italic font-serif format-passage html-content-renderer mb-3">{renderHtmlWithHoles(q.explanation, {})}</div>
                                                   </>
                                                 )}
                                                 <div className="flex items-center gap-2">
-                                                  <button onClick={(e) => { e.stopPropagation(); askAIToExplain(qIdStr, q.content, q.explanation || 'Câu hỏi tự luận viết đoạn văn.'); }} className="px-3 py-1 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded text-[12px] transition shadow-sm border border-blue-600">💬 Chat với AI</button>
-                                                  <button onClick={(e) => { e.stopPropagation(); callTutorForQuestion(q); }} className="px-3 py-1 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded text-[12px] transition shadow-sm border border-emerald-600 flex items-center gap-1">📞 Gọi Gia sư</button>
+                                                  <button onClick={(e) => { e.stopPropagation(); askAIToExplain(qIdStr, q.content, q.explanation || (isEn ? 'Open-ended paragraph writing question.' : 'Câu hỏi tự luận viết đoạn văn.')); }} className="px-3 py-1 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded text-[12px] transition shadow-sm border border-blue-600">{isEn ? '💬 Chat with AI' : '💬 Chat với AI'}</button>
+                                                  <button onClick={(e) => { e.stopPropagation(); callTutorForQuestion(q); }} className="px-3 py-1 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded text-[12px] transition shadow-sm border border-emerald-600 flex items-center gap-1">{isEn ? '📞 Call Tutor' : '📞 Gọi Gia sư'}</button>
                                                 </div>
                                               </div>
                                             )}
@@ -2431,7 +2466,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
             checked={!!reviewFlags[activeQuestionId]}
             onChange={() => setReviewFlags(prev => ({...prev, [activeQuestionId]: !prev[activeQuestionId]}))}
           />
-          <label htmlFor="review" className="text-[14px] font-bold text-gray-700 cursor-pointer mt-0.5 whitespace-nowrap">Đánh dấu</label>
+          <label htmlFor="review" className="text-[14px] font-bold text-gray-700 cursor-pointer mt-0.5 whitespace-nowrap">{isEn ? 'Flag' : 'Đánh dấu'}</label>
         </div>
 
         <div className="flex-1 flex gap-2 overflow-x-auto px-4 py-1 custom-scrollbar justify-start items-center min-h-[44px]">
@@ -2529,7 +2564,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
 
         <div className="ml-4 shrink-0 flex items-center gap-3 border-l border-gray-300 pl-4">
           <button onClick={() => handleFinish(false)} disabled={isSubmitting} className={`font-bold text-sm px-8 py-2.5 rounded shadow-md transition disabled:opacity-60 disabled:cursor-wait ${isReviewMode ? 'bg-emerald-600 hover:bg-emerald-500 text-white' : 'bg-blue-600 hover:bg-blue-500 text-white'}`}>
-            {isSubmitting ? '🤖 AI đang chấm...' : (isReviewMode ? 'Thoát' : 'Nộp Bài')}
+            {isSubmitting ? (isEn ? '🤖 AI Grading...' : '🤖 AI đang chấm...') : (isReviewMode ? (isEn ? 'Exit' : 'Thoát') : (isEn ? 'Submit' : 'Nộp Bài'))}
           </button>
         </div>
       </footer>

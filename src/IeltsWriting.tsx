@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { supabase } from './supabase';
 import './tailwind.css';
+import { useLmsLang, LmsLangToggle } from './utils/lmsI18n';
 
 // --- BỘ ICON CHUẨN IDP ---
 const UserIcon = () => <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5"><path fillRule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clipRule="evenodd" /></svg>;
@@ -12,6 +13,8 @@ const ItalicIcon = () => <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24
 const UnderlineIcon = () => <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4"><path fillRule="evenodd" d="M6 3.75a.75.75 0 01.75.75v8.25a5.25 5.25 0 0010.5 0V4.5a.75.75 0 011.5 0v8.25a6.75 6.75 0 01-13.5 0V4.5a.75.75 0 01.75-.75zM3.75 20.25a.75.75 0 01.75-.75h15a.75.75 0 010 1.5h-15a.75.75 0 01-.75-.75z" clipRule="evenodd" /></svg>;
 
 export default function IeltsWriting({ onBack, testData: propTestData, onFinish }: { onBack?: () => void, testData?: any, onFinish?: (res: any) => void }) {
+  const [lang, setLang] = useLmsLang();
+  const isEn = lang === 'en';
   
   const [testData, setTestData] = useState<any>(() => {
      if (propTestData) return propTestData;
@@ -93,7 +96,7 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
   const handleSafeExit = () => {
     const hasDraft = Object.values(answers).some((v) => String(v || '').trim().length > 0);
     if (!isSubmitted && hasDraft) {
-      if (!window.confirm('Bạn đang có bài viết chưa nộp. Bạn có chắc muốn thoát không?')) return;
+      if (!window.confirm(isEn ? 'You have an unsubmitted essay. Are you sure you want to exit?' : 'Bạn đang có bài viết chưa nộp. Bạn có chắc muốn thoát không?')) return;
     }
     if (onBack) onBack();
   };
@@ -176,10 +179,10 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
 
     if (!isForced) {
       if (totalWords < 50) {
-        alert("Bạn chưa viết đủ bài. Vui lòng hoàn thiện tối thiểu 50 từ trước khi nộp.");
+        alert(isEn ? "Your essay is too short. Please write at least 50 words before submitting." : "Bạn chưa viết đủ bài. Vui lòng hoàn thiện tối thiểu 50 từ trước khi nộp.");
         return;
       }
-      if (!window.confirm("Bạn có chắc chắn muốn nộp bài thi? Hệ thống sẽ gửi bài cho Giám khảo AI chấm điểm.")) return;
+      if (!window.confirm(isEn ? "Are you sure you want to submit your test? Your essay will be sent to the AI Examiner for grading." : "Bạn có chắc chắn muốn nộp bài thi? Hệ thống sẽ gửi bài cho Giám khảo AI chấm điểm.")) return;
     }
 
     isFinishingRef.current = true;
@@ -199,7 +202,37 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
          }
       });
 
-      const prompt = `
+      const prompt = isEn ? `
+        You are a dedicated, encouraging IELTS Writing Examiner. Do not overly penalize minor phrasing slips if the main ideas remain clear. If the essay demonstrates strong argument structure and rich vocabulary, consider awarding higher bands (from 7.0 to 8.5).
+        IMPORTANT: Write ALL feedback, criterion comments, corrections, and generalFeedback strictly in English.
+
+        EXAM PROMPT INFORMATION (Task 1 and Task 2 instructions):
+        ${JSON.stringify(allQuestions.map((q, i) => `Task ${i+1} (${q.secTitle}): ${q.secContent} ${q.content}`))}
+
+        Note: For Task 1, chart/diagram/map images are attached. CAREFULLY ANALYZE these images to verify whether the candidate accurately described the figures and key features (for Task Achievement).
+
+        STUDENT'S ESSAY RESPONSES (mapped by question ID):
+        ${JSON.stringify(currentAnswers)}
+
+        Analyze all tasks completed by the student and return ONLY the exact JSON format below (no markdown code fences):
+        {
+          "overall": 7.5,
+          "tasks": [
+            {
+              "task_name": "Task 1",
+              "score": 7.0,
+              "criteria": [
+                { "name": "Task Achievement", "score": 7.0, "comment": "Detailed English feedback referencing the original chart/prompt..." },
+                { "name": "Coherence & Cohesion", "score": 7.0, "comment": "Detailed English feedback..." },
+                { "name": "Lexical Resource", "score": 7.5, "comment": "Detailed English feedback..." },
+                { "name": "Grammatical Range", "score": 7.0, "comment": "Detailed English feedback..." }
+              ],
+              "feedback": "Student's essay text annotated with <span class='bg-red-200 text-red-800 line-through px-1'>incorrect phrase</span> and <span class='bg-emerald-200 text-emerald-800 font-bold px-1'>improved phrase</span>..."
+            }
+          ],
+          "generalFeedback": "Overall English summary of strengths and areas for improvement..."
+        }
+      ` : `
         Bạn là một Giám khảo IELTS tận tâm, chấm điểm theo hướng khuyến khích học sinh. Không quá khắt khe ở các lỗi diễn đạt nhỏ nếu ý chính vẫn rõ ràng. Bài viết có sử dụng cấu trúc lập luận tốt và từ vựng phong phú thì nên cân nhắc ưu tiên mức điểm cao (từ 7.0 đến 8.5).
         
         THÔNG TIN ĐỀ BÀI (Chứa các yêu cầu của Task 1 và Task 2):
@@ -238,8 +271,8 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
         }
       });
 
-      if (error) throw new Error("Lỗi gọi Server: " + error.message);
-      if (data?.error) throw new Error("Lỗi chấm điểm AI: " + data.error);
+      if (error) throw new Error((isEn ? "Server error: " : "Lỗi gọi Server: ") + error.message);
+      if (data?.error) throw new Error((isEn ? "AI grading error: " : "Lỗi chấm điểm AI: ") + data.error);
 
       const textResponse = data.result.replace(/\u0060{3}(json)?/gi, "").trim();
       const parsedResult = JSON.parse(textResponse);
@@ -268,7 +301,7 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
     } catch (error: any) {
       isFinishingRef.current = false;
       console.error("LỖI CHI TIẾT:", error);
-      alert("Hệ thống chấm điểm AI bị lỗi. Vui lòng thử lại: " + error.message);
+      alert((isEn ? "AI grading system error. Please try again: " : "Hệ thống chấm điểm AI bị lỗi. Vui lòng thử lại: ") + error.message);
     } finally {
       setIsGrading(false);
     }
@@ -280,14 +313,14 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
   if (!testData || allQuestions.length === 0) {
     return (
       <div className="h-[100dvh] w-full flex flex-col items-center justify-center gap-4 bg-[#eeeeee] font-bold text-slate-800 p-6 text-center">
-        <p className="text-base">⚠️ Không tìm thấy nội dung đề thi IELTS Writing.</p>
+        <p className="text-base">⚠️ {isEn ? 'IELTS Writing exam content not found.' : 'Không tìm thấy nội dung đề thi IELTS Writing.'}</p>
         {onBack && (
           <button
             type="button"
             onClick={onBack}
             className="px-5 py-2.5 bg-[#0a5482] hover:bg-[#084266] text-white rounded-xl text-sm font-bold transition shadow-sm cursor-pointer"
           >
-            ← Quay lại
+            ← {isEn ? 'Back' : 'Quay lại'}
           </button>
         )}
       </div>
@@ -315,14 +348,15 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
            {isSubmitted ? 'TEST FINISHED' : formatTime(timeLeft)}
         </div>
 
-        <div className="flex items-center justify-end gap-3 shrink-0 flex-1">
+        <div className="flex items-center justify-end gap-2 sm:gap-3 shrink-0 flex-1">
+           <LmsLangToggle lang={lang} setLang={setLang} variant="dark" />
            {isSubmitted ? (
               <button type="button" onClick={onBack} className="text-[13px] font-bold bg-[#2ab4e8] hover:bg-[#1fa0d4] text-white px-4 py-1.5 rounded-lg transition cursor-pointer">
-                Quay lại Góc Học Viên
+                {isEn ? 'Back to Student Portal' : 'Quay lại Góc Học Viên'}
               </button>
            ) : (
               <button type="button" onClick={handleSafeExit} className="text-[13px] font-bold px-3.5 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-slate-100 border border-white/15 transition cursor-pointer">
-                Thoát
+                {isEn ? 'Exit' : 'Thoát'}
               </button>
            )}
         </div>
@@ -336,8 +370,8 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
              </svg>
              <span className="font-black text-xl text-[#0a5482]">AI</span>
           </div>
-          <h2 className="text-xl font-black text-slate-800 mb-2">Đang chấm điểm IELTS Writing...</h2>
-          <p className="text-slate-500 text-sm font-medium">Vui lòng đợi trong giây lát để giám khảo AI phân tích bài viết của bạn.</p>
+          <h2 className="text-xl font-black text-slate-800 mb-2">{isEn ? 'Grading IELTS Writing...' : 'Đang chấm điểm IELTS Writing...'}</h2>
+          <p className="text-slate-500 text-sm font-medium">{isEn ? 'Please wait a moment while the AI Examiner evaluates your essay.' : 'Vui lòng đợi trong giây lát để giám khảo AI phân tích bài viết của bạn.'}</p>
         </div>
       )}
 
@@ -403,7 +437,7 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
                         Task {currentTaskIndex + 1}
                       </span>
                       <span className={`text-xs font-bold px-2.5 py-0.5 rounded-full border ${meetsTarget ? 'bg-emerald-50 text-emerald-700 border-emerald-200' : 'bg-amber-50 text-amber-800 border-amber-200'}`}>
-                        {currentWordCount} / {minTargetWords}+ từ
+                        {currentWordCount} / {minTargetWords}+ {isEn ? 'words' : 'từ'}
                       </span>
                    </div>
                    <div className="flex items-center gap-1 bg-white border border-slate-200 rounded-lg p-0.5">
@@ -417,7 +451,7 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
                               ? 'bg-[#0a5482] text-white'
                               : 'text-slate-600 hover:bg-slate-100'
                           }`}
-                          title={`Cỡ chữ ${sz}`}
+                          title={isEn ? `Font size ${sz}` : `Cỡ chữ ${sz}`}
                         >
                           {sz === 'S' ? 'A-' : sz === 'M' ? 'A' : 'A+'}
                         </button>
@@ -436,7 +470,7 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
               
               <div className="mt-2.5 flex items-center justify-between text-[13px] text-slate-600 font-bold tracking-wide">
                 <span>Word Count: <strong className={meetsTarget ? 'text-emerald-700' : 'text-slate-900'}>{currentWordCount}</strong></span>
-                <span className="text-xs font-medium text-slate-500">Mục tiêu tối thiểu: {minTargetWords} từ</span>
+                <span className="text-xs font-medium text-slate-500">{isEn ? `Minimum target: ${minTargetWords} words` : `Mục tiêu tối thiểu: ${minTargetWords} từ`}</span>
               </div>
 
             </section>
@@ -492,7 +526,7 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
                   onClick={() => handleSubmit(false)}
                   className="bg-[#0a5482] hover:bg-[#084266] text-white px-5 sm:px-6 py-2 rounded-xl text-[13px] sm:text-[14px] font-black transition uppercase tracking-wide shadow-sm cursor-pointer"
                 >
-                  Nộp bài
+                  {isEn ? 'Submit' : 'Nộp bài'}
                 </button>
              </div>
 
@@ -514,7 +548,7 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
                     ✍️ IELTS Writing AI Evaluation
                   </span>
                   <h2 className="text-2xl sm:text-3xl font-black tracking-tight mb-1">{basicInfo.title}</h2>
-                  <p className="text-sky-100/80 text-sm">Kết quả đánh giá theo 4 tiêu chí chuẩn giám khảo IELTS</p>
+                  <p className="text-sky-100/80 text-sm">{isEn ? 'Evaluated across the 4 official IELTS Writing criteria' : 'Kết quả đánh giá theo 4 tiêu chí chuẩn giám khảo IELTS'}</p>
                 </div>
                 <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl px-8 py-4 text-center shrink-0">
                   <span className="text-[11px] font-extrabold text-sky-200 uppercase tracking-widest block mb-1">Overall Band</span>
@@ -524,7 +558,7 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
             </div>
 
             <div className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/90 shadow-sm">
-                <h3 className="font-black text-lg text-[#0a5482] mb-3.5 flex items-center gap-2">💡 Nhận xét tổng quan</h3>
+                <h3 className="font-black text-lg text-[#0a5482] mb-3.5 flex items-center gap-2">💡 {isEn ? 'Overall Feedback' : 'Nhận xét tổng quan'}</h3>
                 <div className="p-5 bg-sky-50/70 border border-sky-200/70 rounded-xl text-[15px] leading-[1.8] font-medium text-slate-800 font-sans">
                   {aiResult.generalFeedback}
                 </div>
@@ -550,7 +584,7 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
                 </div>
 
                 <div>
-                  <h4 className="font-black text-base text-slate-800 mb-3">✍️ Bài làm &amp; Gợi ý sửa lỗi chi tiết</h4>
+                  <h4 className="font-black text-base text-slate-800 mb-3">✍️ {isEn ? 'Your Essay & Detailed Corrections' : 'Bài làm & Gợi ý sửa lỗi chi tiết'}</h4>
                   <div className="p-5 sm:p-6 bg-slate-50 border border-slate-200/80 rounded-xl text-[15.5px] leading-[1.85] font-sans text-slate-800" dangerouslySetInnerHTML={{__html: task.feedback}} />
                 </div>
               </div>
