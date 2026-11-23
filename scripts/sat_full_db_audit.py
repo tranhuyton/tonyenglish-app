@@ -114,20 +114,20 @@ def main():
                     game_cards += len(s.get('questions') or [])
 
     print(f"R&W Skill Drills:       {rw_drills}/16 ({rw_drill_qs} Qs)")
-    print(f"R&W Adaptive Mocks:     {rw_mocks}/4 ({rw_mock_qs} Qs)")
+    print(f"R&W Adaptive Mocks:     {rw_mocks}/8 ({rw_mock_qs} Qs)")
     print(f"Math Skill Drills:      {math_drills}/12 ({math_drill_qs} Qs)")
-    print(f"Math Adaptive Mocks:    {math_mocks}/4 ({math_mock_qs} Qs)")
+    print(f"Math Adaptive Mocks:    {math_mocks}/8 ({math_mock_qs} Qs)")
     print(f"Interactive Speed Games:{game_count}/12 ({game_cards} cards: 500 Vocab + 100 Math Formulas)")
     print(f"TOTAL SAT BLUEBOOK QUESTIONS: {rw_drill_qs + rw_mock_qs + math_drill_qs + math_mock_qs}")
 
     if rw_drills != 16:
         errors.append(f"Expected 16 R&W drills, got {rw_drills}")
-    if rw_mocks != 4:
-        errors.append(f"Expected 4 R&W mocks, got {rw_mocks}")
+    if rw_mocks != 8 or rw_mock_qs != 648:
+        errors.append(f"Expected 8 R&W mocks (648 Qs), got {rw_mocks} ({rw_mock_qs})")
     if math_drills != 12 or math_drill_qs != 180:
         errors.append(f"Expected 12 Math drills (180 Qs), got {math_drills} ({math_drill_qs})")
-    if math_mocks != 4 or math_mock_qs != 264:
-        errors.append(f"Expected 4 Math mocks (264 Qs), got {math_mocks} ({math_mock_qs})")
+    if math_mocks != 8 or math_mock_qs != 528:
+        errors.append(f"Expected 8 Math mocks (528 Qs), got {math_mocks} ({math_mock_qs})")
     if game_count != 12 or game_cards != 600:
         errors.append(f"Expected 12 games (600 cards), got {game_count} ({game_cards})")
 

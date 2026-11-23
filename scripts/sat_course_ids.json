@@ -62,7 +62,11 @@
     "mock_01": "5aa708ac-79f8-46b0-a0fd-da95248b3263",
     "mock_02": "ce09f7d3-7b23-47e4-84a1-4e881f0f5fc0",
     "mock_03": "23c217e0-3697-4167-bf32-3c328a4cb108",
-    "mock_04": "40587f91-c199-4337-9cad-28c6f561ff33"
+    "mock_04": "40587f91-c199-4337-9cad-28c6f561ff33",
+    "mock_05": "7c140728-a229-4b19-96e6-ed2f44065133",
+    "mock_06": "6aed2e42-02a7-4b46-ab1e-fadabccdbc21",
+    "mock_07": "771e3013-f81c-4779-9ad2-1410b7b92369",
+    "mock_08": "310471be-69cf-44bc-a461-2f688cfda4b6"
   },
   "vocab_games": {
     "sat_vocab_01": "15081527-e79b-402e-ada6-a956b9263814",
@@ -108,7 +112,11 @@
     "math_mock_01": "90fc52bf-ccc4-4423-a3cd-c41fd76d1810",
     "math_mock_02": "4f48d9f5-6115-4dc5-a0c2-d261e5ae107c",
     "math_mock_03": "7b95ad1a-1673-40e9-9d7f-021194d89d10",
-    "math_mock_04": "f12f3c69-2138-4d2e-9837-9e55770c1abc"
+    "math_mock_04": "f12f3c69-2138-4d2e-9837-9e55770c1abc",
+    "math_mock_05": "5dad1c25-34fd-44a9-9b68-cae4df916296",
+    "math_mock_06": "3fe56d5c-1ef9-46d8-8fff-666c0305b387",
+    "math_mock_07": "744c2c33-e447-4ab5-9fd6-102300547798",
+    "math_mock_08": "86c26d32-4d94-4af1-8e03-167705797039"
   },
   "math_games": {
     "sat_math_game_01": "b8a0d916-9f86-4772-ad7f-301c31d69f83",
