@@ -3700,6 +3700,33 @@ export default function LectureViewer({
            activeLecture?.course_id === '179f939c-2bf9-459a-8a14-78a14d2933cd';
   }, [course, currentCourseId, courseId, activeLecture]);
 
+  const isIdiomsCourse = useMemo(() => {
+    const courseTitle = course?.title?.toLowerCase() || '';
+    return courseTitle.includes('thành ngữ') ||
+           courseTitle.includes('idiom') ||
+           currentCourseId === '5dd295cc-9065-4202-b985-6cba8b0742eb' ||
+           courseId === '5dd295cc-9065-4202-b985-6cba8b0742eb' ||
+           activeLecture?.course_id === '5dd295cc-9065-4202-b985-6cba8b0742eb';
+  }, [course, currentCourseId, courseId, activeLecture]);
+
+  const isEmailWritingCourse = useMemo(() => {
+    const courseTitle = course?.title?.toLowerCase() || '';
+    return courseTitle.includes('viết email') ||
+           courseTitle.includes('email') ||
+           currentCourseId === '5abb1d62-79bb-4ab9-bf5f-fa9ef7cde73b' ||
+           courseId === '5abb1d62-79bb-4ab9-bf5f-fa9ef7cde73b' ||
+           activeLecture?.course_id === '5abb1d62-79bb-4ab9-bf5f-fa9ef7cde73b';
+  }, [course, currentCourseId, courseId, activeLecture]);
+
+  const isJobInterviewCourse = useMemo(() => {
+    const courseTitle = course?.title?.toLowerCase() || '';
+    return courseTitle.includes('phỏng vấn') ||
+           courseTitle.includes('interview') ||
+           currentCourseId === '51f048e8-de68-4a87-adc7-eabfcbb6ec21' ||
+           courseId === '51f048e8-de68-4a87-adc7-eabfcbb6ec21' ||
+           activeLecture?.course_id === '51f048e8-de68-4a87-adc7-eabfcbb6ec21';
+  }, [course, currentCourseId, courseId, activeLecture]);
+
   const isESLCourse = useMemo(() => {
     const courseTitle = course?.title?.toLowerCase() || '';
     return courseTitle.includes('esl') || courseTitle.includes('0510');
@@ -6010,6 +6037,69 @@ export default function LectureViewer({
                             )}
                           </div>
                         )}
+                        {/* Tab bar 3 trang riêng cho 3 khóa Giao tiếp Nâng cao: Thành ngữ, Viết Email & Phỏng vấn Xin việc */}
+                        {(isIdiomsCourse || isEmailWritingCourse || isJobInterviewCourse) && totalPages > 1 && (
+                          <div className="flex items-center gap-2 sm:gap-2.5 mb-5 sm:mb-8 flex-wrap px-2 sm:px-0">
+                            <button
+                              type="button"
+                              onClick={() => { setCurrentPage(1); persistPage(1); }}
+                              className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all border cursor-pointer ${
+                                currentPage === 1
+                                  ? 'bg-[#0a5482] text-white border-[#0a5482] shadow-md shadow-[#0a5482]/20'
+                                  : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50 hover:border-slate-300'
+                              }`}
+                            >
+                              <span>{isIdiomsCourse ? '🎧' : isEmailWritingCourse ? '✉️' : '🎤'}</span>
+                              <span>
+                                {isIdiomsCourse
+                                  ? '10 Thành ngữ & Audio (Trang 1)'
+                                  : isEmailWritingCourse
+                                  ? 'Cụm từ & 3 Mẫu Email (Trang 1)'
+                                  : 'Chiến lược & 2 Bài Mẫu STAR (Trang 1)'}
+                              </span>
+                            </button>
+                            {totalPages >= 2 && (
+                              <button
+                                type="button"
+                                onClick={() => { setCurrentPage(2); persistPage(2); }}
+                                className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all border cursor-pointer ${
+                                  currentPage === 2
+                                    ? 'bg-emerald-600 text-white border-emerald-600 shadow-md shadow-emerald-600/20'
+                                    : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50 hover:border-slate-300'
+                                }`}
+                              >
+                                <span>{isIdiomsCourse ? '💬' : isEmailWritingCourse ? '🔄' : '🚨'}</span>
+                                <span>
+                                  {isIdiomsCourse
+                                    ? 'Hội thoại & IELTS Band 8+ (Trang 2)'
+                                    : isEmailWritingCourse
+                                    ? 'Sửa lỗi & Đối chiếu Song ngữ (Trang 2)'
+                                    : 'Tránh Bẫy & Đối chiếu Song ngữ (Trang 2)'}
+                                </span>
+                              </button>
+                            )}
+                            {totalPages >= 3 && (
+                              <button
+                                type="button"
+                                onClick={() => { setCurrentPage(3); persistPage(3); }}
+                                className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all border cursor-pointer ${
+                                  currentPage === 3
+                                    ? 'bg-orange-600 text-white border-orange-600 shadow-md shadow-orange-600/20'
+                                    : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50 hover:border-slate-300'
+                                }`}
+                              >
+                                <span>{isIdiomsCourse ? '🧠' : isEmailWritingCourse ? '📋' : '📝'}</span>
+                                <span>
+                                  {isIdiomsCourse
+                                    ? 'Active Recall — Luyện trí nhớ (Trang 3)'
+                                    : isEmailWritingCourse
+                                    ? 'Biểu mẫu & Active Recall (Trang 3)'
+                                    : 'Khung Tự Soạn & Active Recall (Trang 3)'}
+                                </span>
+                              </button>
+                            )}
+                          </div>
+                        )}
                         {/* Tab bar cho các bài Past Papers 2 trang của Economics (tránh gắn nhầm Bản Tiếng Anh / Bản Tiếng Việt) */}
                         {isEconomicsCourse && !activeLecture?.title?.toLowerCase().includes('podcast') && !(activeLectureId && LECTURE_PODCAST_COUNT[activeLectureId]) && !LECTURE_MANIFEST_MAP[activeLectureId] && totalPages === 2 && (
                           <div className="flex items-center gap-2 sm:gap-2.5 mb-5 sm:mb-8 flex-wrap px-2 sm:px-0">
@@ -6165,6 +6255,9 @@ export default function LectureViewer({
                            !activeLecture?.title?.toLowerCase().includes('podcast') &&
                            !(activeLectureId && LECTURE_PODCAST_COUNT[activeLectureId]) &&
                            !isOfficeEnglishCourse &&
+                           !isIdiomsCourse &&
+                           !isEmailWritingCourse &&
+                           !isJobInterviewCourse &&
                            !isEconomicsCourse &&
                            !(activeLectureId && LECTURE_MANIFEST_MAP[activeLectureId]) &&
                            smartPageTabs.length > 1 && (

@@ -20,9 +20,6 @@ export interface CourseShowcaseConfig {
   items: CourseShowcaseItem[];
 }
 
-// Excluded intentionally per request:
-// - cc_id 128 (Thành ngữ thông dụng) — chưa tạo trên hệ thống
-// - cc_id 124 (Học viết Email) — chưa tạo trên hệ thống
 const GALLERY_BY_COURSE_ID: Record<number, CourseShowcaseConfig> = {
   // 111: Giao tiếp Căn bản (parent)
   111: {
@@ -232,54 +229,210 @@ const GALLERY_BY_COURSE_ID: Record<number, CourseShowcaseConfig> = {
     ],
   },
 
-  // 129: Giao tiếp Nâng cao (parent — showcases Tiếng Anh văn phòng since Idioms & Email are skipped)
+  // 129: Giao tiếp Nâng cao (parent — showcases all 4 child courses: Văn phòng, Thành ngữ, Email, Phỏng vấn)
   129: {
-    headingVi: 'Hình ảnh thực tế hệ thống học tập Giao tiếp Nâng cao & Công sở',
-    headingEn: 'Real LMS Previews: Advanced & Business English',
+    headingVi: 'Hình ảnh thực tế hệ thống học tập Giao tiếp Nâng cao & Công sở (4 Học phần)',
+    headingEn: 'Real LMS Previews: Advanced & Business English (4 Modules)',
     subheadingVi:
-      'Trải nghiệm trước giao diện 13 chuyên đề Tiếng Anh Văn phòng & Thương mại (52 bài học tích hợp từ vựng chuyên ngành, hội thoại doanh nghiệp và bài nghe thuyết trình ngắn).',
+      'Trọn bộ 4 học phần Giao tiếp Nâng cao trên nền tảng LMS: Tiếng Anh Văn phòng (52 bài), 150 Thành ngữ thông dụng (15 bài), Học viết Email (60 mẫu Email), và Luyện Phỏng vấn Xin việc (24 tình huống STAR + Mock Interview AI).',
     subheadingEn:
-      'Preview our 13 Corporate & Business English modules (52 interactive lessons covering business collocations, workplace dialogues, and short talks).',
+      'Four complete Advanced Communication tracks on our LMS: Office English (52 lessons), 150 Idioms & Phrases, Business Email Writing (60 models), and Job Interview English (24 STAR lessons + AI Mock Interviews).',
     items: [
       {
         src: '/images/course-showcases/vp_01_office_intro.webp',
         category: 'theory',
-        badgeVi: '📘 Từ vựng Chuyên đề',
-        badgeEn: '📘 Topic Vocabulary',
-        titleVi: 'Chuyên đề 1: Trong văn phòng — Business Collocations',
-        titleEn: 'Module 1: Offices — Business Collocations',
-        descVi: 'Hệ thống hóa cụm từ kết hợp chuyên nghiệp trong doanh nghiệp kèm phiên âm, nghĩa Việt và audio.',
-        descEn: 'Structured corporate collocations with phonetics, Vietnamese meanings, and audio.',
+        badgeVi: '📘 Tiếng Anh Văn phòng',
+        badgeEn: '📘 Office English',
+        titleVi: '13 Chuyên đề Tiếng Anh Văn phòng — Business Collocations',
+        titleEn: '13 Corporate Modules — Business Collocations',
+        descVi: 'Hệ thống hóa cụm từ kết hợp chuyên nghiệp trong doanh nghiệp kèm audio chuẩn, đối chiếu song ngữ và Learn by Heart.',
+        descEn: 'Structured corporate collocations with native audio, bilingual views, and active recall.',
       },
       {
-        src: '/images/course-showcases/vp_02_office_conversation.webp',
-        category: 'practice',
-        badgeVi: '🎧 Hội thoại Công sở',
-        badgeEn: '🎧 Workplace Dialogue',
-        titleVi: 'Hội thoại thực tế nơi làm việc (Conversation)',
-        titleEn: 'Authentic Workplace Conversations',
-        descVi: 'Mô phỏng tình huống họp hành, trao đổi công việc và đàm phán kèm audio bản xứ.',
-        descEn: 'Simulated meetings, workplace coordination, and business discussions with native audio.',
-      },
-      {
-        src: '/images/course-showcases/vp_03_finance_budgeting.webp',
+        src: '/images/course-showcases/id_01_cards.webp',
         category: 'theory',
-        badgeVi: '📘 Đối chiếu Song ngữ',
-        badgeEn: '📘 Bilingual Parallel',
-        titleVi: 'Chuyên đề 9: Tài chính & Ngân sách — Đối chiếu Song ngữ 2 cột',
-        titleEn: 'Module 9: Finance & Budgeting — Parallel Bilingual View',
-        descVi: 'Vừa nghe audio vừa đối chiếu bản tiếng Anh – bản dịch tiếng Việt song song cho 13 lĩnh vực doanh nghiệp.',
-        descEn: 'Listen alongside side-by-side English & Vietnamese translations across 13 business sectors.',
+        badgeVi: '📘 Thành ngữ Thông dụng',
+        badgeEn: '📘 Idioms & Phrases',
+        titleVi: '150 Thành ngữ bản xứ kèm Audio Anh – Anh & IELTS Band 8+',
+        titleEn: '150 Native Idioms with British Audio & IELTS Band 8+',
+        descVi: '15 chủ đề thành ngữ thực chiến phân chia 3 trang tương tác: Thẻ nghĩa & Audio, Hội thoại ứng dụng và Active Recall.',
+        descEn: '15 themed idiom lessons across 3 interactive tabs: Audio Cards, Real Dialogues, and Active Recall.',
       },
       {
-        src: '/images/course-showcases/vp_04_short_talk_practice.webp',
+        src: '/images/course-showcases/em_04_writing_ai.webp',
         category: 'practice',
-        badgeVi: '🎧 Learn by Heart',
-        badgeEn: '🎧 Active Recall',
-        titleVi: 'Phương pháp Learn by Heart — Active Recall cụm từ công sở',
-        titleEn: 'Learn by Heart — Active Recall for Business Collocations',
-        descVi: 'Tự kiểm tra trí nhớ qua các cụm từ in đậm màu cam kèm chế độ làm mờ tiếng Việt để phản xạ ngay tại lớp.',
-        descEn: 'Test active recall on highlighted collocations with blur-to-test mode for rapid retention.',
+        badgeVi: '✍️ Thực hành Viết Email AI',
+        badgeEn: '✍️ AI Email Writing Lab',
+        titleVi: '60 Mẫu Email Thương mại & Phòng luyện viết Email chấm AI',
+        titleEn: '60 Business Email Models & AI-Graded Writing Practice',
+        descVi: 'Rèn văn phong chuẩn quốc tế qua 5 cấp độ từ cơ bản đến đàm phán, kèm thực hành viết trực tiếp có AI góp ý chi tiết.',
+        descEn: 'Master international email etiquette across 5 levels with hands-on split-screen AI writing feedback.',
+      },
+      {
+        src: '/images/course-showcases/iv_01_star_models.webp',
+        category: 'theory',
+        badgeVi: '🎤 Luyện Phỏng vấn STAR',
+        badgeEn: '🎤 STAR Interview Mastery',
+        titleVi: '24 Tình huống Phỏng vấn Xin việc (Fresher & Senior + Mock AI)',
+        titleEn: '24 Job Interview Scenarios (Fresher & Senior + AI Mock)',
+        descVi: 'Phân tích ý đồ nhà tuyển dụng, bài mẫu 2 cấp độ kèm Audio, né bẫy Red Flag và luyện Phỏng vấn Thử chấm chữa AI.',
+        descEn: 'Recruiter-intent insights, Fresher & Senior audio models, Red-Flag traps, and AI Mock Interviews.',
+      },
+    ],
+  },
+
+  // 128: Thành ngữ thông dụng
+  128: {
+    headingVi: 'Hình ảnh thực tế Bài giảng & Kho đề Thành ngữ Thông dụng (150 Idioms)',
+    headingEn: 'Real LMS Previews: 150 Essential Idioms & Phrases',
+    subheadingVi:
+      '15 chủ đề tinh tuyển gồm 150 thành ngữ thông dụng nhất trong công sở, đời sống và IELTS Speaking Band 8.0+ — tích hợp Audio Anh – Anh, hội thoại mẫu, luyện nhớ Active Recall và 150 câu trắc nghiệm.',
+    subheadingEn:
+      '15 curated themes covering 150 essential workplace, daily & IELTS Band 8.0+ idioms — with British English audio, natural dialogues, Active Recall drills, and 150 MCQ questions.',
+    items: [
+      {
+        src: '/images/course-showcases/id_01_cards.webp',
+        category: 'theory',
+        badgeVi: '📘 10 Thành ngữ & Audio',
+        badgeEn: '📘 Idiom Cards & Audio',
+        titleVi: 'Trang 1: Thẻ 10 Thành ngữ kèm Audio Anh – Anh & Sắc thái dùng',
+        titleEn: 'Page 1: 10 Idiom Cards with British Audio & Register Tags',
+        descVi: 'Trình phát audio chỉnh tốc độ 0.8x/1.0x/1.2x kèm giải nghĩa tiếng Anh – Việt, ví dụ thực tế và ghi chú bối cảnh chuẩn xác.',
+        descEn: 'Speed-controlled native audio player with clear definitions, authentic examples, and usage notes.',
+      },
+      {
+        src: '/images/course-showcases/id_02_dialogue_ielts.webp',
+        category: 'theory',
+        badgeVi: '💬 Hội thoại & IELTS 8+',
+        badgeEn: '💬 Dialogue & IELTS 8+',
+        titleVi: 'Trang 2: Hội thoại bản xứ Song ngữ & Bài mẫu IELTS Speaking',
+        titleEn: 'Page 2: Bilingual Workplace Dialogue & IELTS Band 8+ Model',
+        descVi: 'Hiểu ngay cách lồng ghép tự nhiên nhiều thành ngữ trong cùng một cuộc trò chuyện và bài nói IELTS đạt điểm Lexical Resource cao.',
+        descEn: 'See idioms woven naturally into real conversations and high-scoring IELTS Speaking answers.',
+      },
+      {
+        src: '/images/course-showcases/id_03_active_recall.webp',
+        category: 'practice',
+        badgeVi: '🧠 Active Recall',
+        badgeEn: '🧠 Active Recall Drill',
+        titleVi: 'Trang 3: Phản xạ Active Recall — Tự bật thành ngữ từ gợi ý Việt',
+        titleEn: 'Page 3: Active Recall — Instant Vietnamese-to-Idiom Recall',
+        descVi: 'Chế độ ẩn/hiện đáp án màu cam tương tác giúp học viên tự kiểm tra trí nhớ và biến thành ngữ thành phản xạ nói thật.',
+        descEn: 'Interactive hide/reveal orange cues turn passive recognition into active speaking fluency.',
+      },
+      {
+        src: '/images/course-showcases/id_04_mcq_test.webp',
+        category: 'practice',
+        badgeVi: '📝 Kho đề 150 câu MCQ',
+        badgeEn: '📝 150-Question Test Bank',
+        titleVi: 'Kho 15 đề Trắc nghiệm ứng dụng ngữ cảnh chấm điểm tức thì',
+        titleEn: '15 Contextual MCQ Tests with Instant Explanations',
+        descVi: 'Mỗi chủ đề đi kèm đề test 10 câu hỏi tình huống thực tế, chấm điểm tự động và giải thích chi tiết từng đáp án.',
+        descEn: 'Each theme pairs with a 10-question contextual test featuring auto-grading and Vietnamese explanations.',
+      },
+    ],
+  },
+
+  // 124: Học viết Email
+  124: {
+    headingVi: 'Hình ảnh thực tế Bài giảng & Thực hành Viết Email Chuyên nghiệp',
+    headingEn: 'Real LMS Previews: Business Email Writing (5 Levels · 60 Models)',
+    subheadingVi:
+      '20 bài giảng chia làm 5 cấp độ gồm 60 mẫu Email thương mại chuẩn quốc tế kèm Audio Anh – Anh, bảng sửa lỗi Vietlish → Pro, biểu mẫu Copy-Ready, 100 câu trắc nghiệm và 15 đề thực hành viết Email chấm AI.',
+    subheadingEn:
+      '20 lessons across 5 levels featuring 60 workplace email models with British audio, Vietlish-to-Pro upgrades, copy-ready templates, 100 MCQs, and 15 AI-graded email writing tasks.',
+    items: [
+      {
+        src: '/images/course-showcases/em_01_models.webp',
+        category: 'theory',
+        badgeVi: '✉️ 60 Mẫu Email chuẩn',
+        badgeEn: '✉️ 60 Email Models',
+        titleVi: 'Trang 1: Cụm từ đắt giá & 3 Mẫu Email thực tế kèm Audio đọc mẫu',
+        titleEn: 'Page 1: Power Email Phrases & 3 Realistic Models with Audio',
+        descVi: 'Nắm trọn Subject Line sắc nét, sắc thái trang trọng (Register & Tone) và cấu trúc email súc tích cho từng tình huống công sở.',
+        descEn: 'Master sharp subject lines, tone calibration, and crisp international email structure.',
+      },
+      {
+        src: '/images/course-showcases/em_02_upgrades_bilingual.webp',
+        category: 'theory',
+        badgeVi: '🔄 Sửa lỗi & Song ngữ',
+        badgeEn: '🔄 Upgrades & Bilingual',
+        titleVi: 'Trang 2: Nâng cấp câu Vietlish thô → Chuẩn quốc tế & Đối chiếu Song ngữ',
+        titleEn: 'Page 2: Awkward vs Professional Upgrades & Bilingual Parallel',
+        descVi: 'Chỉ rõ vì sao cách diễn đạt dịch từng chữ dễ gây hiểu lầm, đồng thời đối chiếu song ngữ 2 cột đầy đủ cả 3 bức email.',
+        descEn: 'Side-by-side comparison fixing blunt phrasing plus full English-Vietnamese bilingual columns.',
+      },
+      {
+        src: '/images/course-showcases/em_03_template_recall.webp',
+        category: 'practice',
+        badgeVi: '📋 Biểu mẫu & Recall',
+        badgeEn: '📋 Templates & Recall',
+        titleVi: 'Trang 3: Khung Email Copy-Ready & Luyện phản xạ Active Recall',
+        titleEn: 'Page 3: Copy-Ready Email Templates & Active Recall',
+        descVi: 'Kho khung mẫu tham chiếu nhanh dùng ngay trong công việc kết hợp bài tự kiểm tra viết lại câu chuyên nghiệp.',
+        descEn: 'Quick-reference templates ready for daily work paired with interactive phrasing recall drills.',
+      },
+      {
+        src: '/images/course-showcases/em_04_writing_ai.webp',
+        category: 'practice',
+        badgeVi: '🤖 Viết Email AI Chấm',
+        badgeEn: '🤖 AI Email Writing Lab',
+        titleVi: 'Phòng thực hành chia đôi màn hình — Viết Email & AI chấm chữa 24/7',
+        titleEn: 'Split-Screen Writing Lab — Draft Emails with 24/7 AI Coaching',
+        descVi: 'Đề bài tình huống doanh nghiệp bên trái, khung soạn thảo bên phải — nộp bài xong nhận bài mẫu chuẩn và AI góp ý chi tiết.',
+        descEn: 'Realistic business briefs on the left, drafting editor on the right, with model answers and AI feedback.',
+      },
+    ],
+  },
+
+  // 142: Luyện Phỏng vấn Xin việc
+  142: {
+    headingVi: 'Hình ảnh thực tế khóa học Luyện Phỏng vấn Xin việc (Job Interview English)',
+    headingEn: 'Real LMS Previews: Job Interview English (24 STAR Lessons)',
+    subheadingVi:
+      '24 tình huống phỏng vấn cốt lõi chia làm 6 chuyên đề với bài mẫu song song 2 cấp độ (Fresher & Senior), Audio bản xứ Anh – Anh, nhận diện bẫy Red Flag, 60 câu trắc nghiệm và 24 đề Mock Interview chấm AI.',
+    subheadingEn:
+      '24 core interview scenarios across 6 modules with parallel Fresher & Senior British-audio models, Red-Flag trap guides, 60 strategy MCQs, and 24 AI-coached Mock Interviews.',
+    items: [
+      {
+        src: '/images/course-showcases/iv_01_star_models.webp',
+        category: 'theory',
+        badgeVi: '🎤 Chiến lược & Bài mẫu',
+        badgeEn: '🎤 STAR Strategy & Models',
+        titleVi: 'Trang 1: Ý đồ Nhà tuyển dụng, Công thức STAR & 2 Bài Mẫu Fresher/Senior',
+        titleEn: 'Page 1: Recruiter Intent, STAR Formula & Fresher/Senior Models',
+        descVi: 'Phân tích góc nhìn thật của Hiring Manager kèm Audio Anh – Anh và 2 phiên bản trả lời riêng cho sinh viên mới ra trường & quản lý.',
+        descEn: 'Decode recruiter intent with native British audio and tailored Fresher & Senior answers.',
+      },
+      {
+        src: '/images/course-showcases/iv_02_traps_bilingual.webp',
+        category: 'theory',
+        badgeVi: '🚨 Né Bẫy & Song ngữ',
+        badgeEn: '🚨 Traps & Bilingual',
+        titleVi: 'Trang 2: 3 Bẫy Trả lời Mất điểm (Red Flags) & Đối chiếu Song ngữ 2 cột',
+        titleEn: 'Page 2: 3 Red-Flag Traps vs Winning Reframes & Bilingual View',
+        descVi: 'Giúp ứng viên tránh tuyệt đối các câu trả lời sáo rỗng, đổ lỗi hay tự hạ giá trị, kèm bản dịch đối chiếu từng ý chi tiết.',
+        descEn: 'Eliminate cliché or risky answers with concrete reframes and side-by-side bilingual scripts.',
+      },
+      {
+        src: '/images/course-showcases/iv_03_mcq_strategy.webp',
+        category: 'practice',
+        badgeVi: '📝 Trắc nghiệm Chiến lược',
+        badgeEn: '📝 Strategy MCQ Bank',
+        titleVi: 'Kho 60 câu Trắc nghiệm Phản xạ Né Bẫy & Chọn Câu Trả Lời Ghi Điểm',
+        titleEn: '60-Question Interview Strategy & Trap-Avoidance Tests',
+        descVi: 'Luyện tư duy chọn phản hồi khéo léo nhất trước các câu hỏi hóc búa về điểm yếu, xung đột, khoảng trống CV và mức lương.',
+        descEn: 'Sharpen judgment across tricky questions on weaknesses, conflict, CV gaps, and salary.',
+      },
+      {
+        src: '/images/course-showcases/iv_04_mock_interview_ai.webp',
+        category: 'practice',
+        badgeVi: '🤖 Mock Interview AI',
+        badgeEn: '🤖 AI Mock Interview',
+        titleVi: 'Phòng Phỏng vấn Thử Thực chiến (24 câu hỏi) — AI đóng vai Hiring Manager',
+        titleEn: '24-Prompt Mock Interview Simulator — AI Hiring Manager Feedback',
+        descVi: 'Thực hành trả lời trực tiếp theo khung STAR với đề bài và gợi ý ở khung trái, nộp bài nhận nhận xét chuyên sâu ngay lập tức.',
+        descEn: 'Practice full STAR responses in a split-screen simulator with instant structured coaching.',
       },
     ],
   },

@@ -103,6 +103,10 @@ const getCourseCover = (course: any) => {
   if (t.includes('math')) return { image: 'https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&q=80&w=800', badge: 'Mathematics', color: 'text-purple-600' };
   if (t.includes('econ')) return { image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=800', badge: 'Economics', color: 'text-amber-600' };
   if (t.includes('business')) return { image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800', badge: 'Business', color: 'text-blue-600' };
+  if (t.includes('thành ngữ') || t.includes('idiom')) return { image: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&q=80&w=800', badge: 'Idioms & Phrases', color: 'text-violet-600' };
+  if (t.includes('viết email') || t.includes('email')) return { image: 'https://images.unsplash.com/photo-1596526131083-e8c633c948d2?auto=format&fit=crop&q=80&w=800', badge: 'Business Email', color: 'text-sky-600' };
+  if (t.includes('phỏng vấn') || t.includes('interview')) return { image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800', badge: 'Job Interview', color: 'text-emerald-600' };
+  if (t.includes('văn phòng')) return { image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800', badge: 'Office English', color: 'text-blue-600' };
   if (t.includes('pronunciation') || t.includes('phát âm')) return { image: 'https://images.unsplash.com/photo-1590402494587-44b71d7772f6?auto=format&fit=crop&q=80&w=800', badge: 'Pronunciation', color: 'text-rose-500' };
   if (t.includes('reflex') || t.includes('phản ứng') || t.includes('phản xạ')) return { image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=800', badge: 'Comm. Reflex', color: 'text-orange-500' };
   if (t.includes('communication') || t.includes('giao tiếp')) return { image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800', badge: 'Communication', color: 'text-pink-600' };
