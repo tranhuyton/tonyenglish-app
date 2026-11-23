@@ -10,7 +10,8 @@
     "math_m1": "9a5550f6-8568-4385-8ae3-cbe5f4d597cf",
     "math_m2": "7f9ffbf5-7462-4182-972f-7442d1962abd",
     "math_m3": "d85a1a1e-2b65-40a6-b7a9-c098b60ae86b",
-    "math_m4": "149c64b9-96f8-4b83-a0ba-a48e52c979e6"
+    "math_m4": "149c64b9-96f8-4b83-a0ba-a48e52c979e6",
+    "boss_m10": "e3b9ca50-2bfe-4e7a-9faa-e3f96fb50b20"
   },
   "folders": {
     "rw_root": "5b9c521c-0944-4918-89e7-2d69f0f31a17",
@@ -20,7 +21,8 @@
     "math_root": "2002ed35-7cde-4d8d-8569-c10ad2cb27c5",
     "math_drills": "4b2ad6f4-aa26-472c-803b-003eea68fbe5",
     "math_mocks": "1c39a172-fa5a-4199-acef-2da0b5a9cd8a",
-    "math_games": "5ce90bd0-54ec-436f-a0bf-e5857190546a"
+    "math_games": "5ce90bd0-54ec-436f-a0bf-e5857190546a",
+    "boss_drills": "a4d8becb-8db6-402c-9c4b-202894740bfc"
   },
   "lectures": {
     "1_1": "762e8fcc-2bb8-4809-a1be-3e2356caf576",
@@ -121,5 +123,25 @@
   "math_games": {
     "sat_math_game_01": "b8a0d916-9f86-4772-ad7f-301c31d69f83",
     "sat_math_game_02": "c3d0df56-28f1-4879-8e91-084b83235413"
+  },
+  "boss_lectures": {
+    "b1": "16c2812c-2c68-4822-9dd9-a92b2423c6d7",
+    "b2": "f6527f18-451a-4b62-8163-9082d247186f",
+    "b3": "6b9d4436-d9ba-4f58-9759-3397cfebd0ea",
+    "b4": "cd61099c-b3d3-4f5e-8e12-b56ee20b87a4",
+    "b5": "031bc130-f1a2-40d6-acca-0e81abc4acae",
+    "b6": "4656dcfa-15a3-451b-980a-fd30777fcadd",
+    "b7": "1fbd532b-d17d-4215-bb09-6ae0459fc31c",
+    "b8": "c96990cd-a6b9-400f-a4dd-cf95ce008b61"
+  },
+  "boss_drills": {
+    "boss_drill_1": "82c270bc-dca9-4fcb-a991-2e3fbb96ce3c",
+    "boss_drill_2": "d035b805-69d2-4814-a5e2-1c0db40493ca",
+    "boss_drill_3": "09e64c99-876f-4011-8083-e57f6910f572",
+    "boss_drill_4": "2db5ffd7-87d4-4f0d-978e-f6d949d303ec",
+    "boss_drill_5": "5ccc27da-b74f-4832-80bb-be969c315a3a",
+    "boss_drill_6": "56ee59e1-a124-4b1b-9195-97cb06352511",
+    "boss_drill_7": "5d258f84-c998-46af-b639-30cace04e619",
+    "boss_drill_8": "ac174c4e-f511-4e84-b27a-ef25297e5b24"
   }
 }

@@ -270,6 +270,18 @@ const LECTURE_MANIFEST_MAP: Record<string, string> = {
   '7389328b-e5ab-46e7-b67d-c5a22db3787b': '/audio/lectures/sat_math/m4_1/manifest.json', // 4.1 Triangles, Parallel Lines, Similarity & Special Right Triangles
   '6195da02-0b58-4df2-bedd-defeb99999e8': '/audio/lectures/sat_math/m4_2/manifest.json', // 4.2 Circle Equations, Completing the Square, Arcs & Radians
   '2182c73d-37ce-4864-802e-d5d57a2dd5d0': '/audio/lectures/sat_math/m4_3/manifest.json', // 4.3 Trigonometry (SOH-CAH-TOA, Cofunctions) & 3D Solid Scaling
+
+  // =========================================================================
+  // DIGITAL SAT 1500+ — HARD M2 BOSS MASTERCLASS (750–800 SPRINT) AUDIO
+  // =========================================================================
+  '16c2812c-2c68-4822-9dd9-a92b2423c6d7': '/audio/lectures/sat_boss/b1/manifest.json', // R&W Boss 1: Dense Science Logic & Multi-Variable Mapping
+  'f6527f18-451a-4b62-8163-9082d247186f': '/audio/lectures/sat_boss/b2/manifest.json', // R&W Boss 2: 50/50 Trap Elimination — The 1-Millimeter Rule
+  '6b9d4436-d9ba-4f58-9759-3397cfebd0ea': '/audio/lectures/sat_boss/b3/manifest.json', // R&W Boss 3: Archaic Literature, 19th-Century Poetry & Dual-Text Nuance
+  'cd61099c-b3d3-4f5e-8e12-b56ee20b87a4': '/audio/lectures/sat_boss/b4/manifest.json', // R&W Boss 4: 32-Minute Time-Triage SOP & Nested Hard Grammar Combos
+  '031bc130-f1a2-40d6-acca-0e81abc4acae': '/audio/lectures/sat_boss/b5/manifest.json', // Math Boss 1: Desmos Advanced Hacks — Multi-Param Regression & Lists
+  '4656dcfa-15a3-451b-980a-fd30777fcadd': '/audio/lectures/sat_boss/b6/manifest.json', // Math Boss 2: Parametric Quadratics, Integer Bounds & Hidden Substitutions
+  '1fbd532b-d17d-4215-bb09-6ae0459fc31c': '/audio/lectures/sat_boss/b7/manifest.json', // Math Boss 3: Hard M2 Geometry, Coordinate Circles & 3D Composite Solids
+  'c96990cd-a6b9-400f-a4dd-cf95ce008b61': '/audio/lectures/sat_boss/b8/manifest.json', // Math Boss 4: SPR Grid-In Trap-Proofing — 10 Deadly 800-Point Pitfalls
 };
 
 type LectureVideoItem = { title: string; videoId: string };

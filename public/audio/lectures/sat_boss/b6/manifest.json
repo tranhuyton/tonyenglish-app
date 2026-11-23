@@ -1,0 +1,66 @@
+{
+  "lectureId": "4656dcfa-15a3-451b-980a-fd30777fcadd",
+  "courseTitle": "Digital SAT 1500+ (Hard M2 Boss Masterclass)",
+  "lectureTitle": "Math Boss 2: Parametric Quadratics, Integer Bounds & Hidden Substitutions",
+  "totalDuration": 148.03,
+  "majorSections": [
+    {
+      "title": "Chặn biên số nguyên tham số k",
+      "startSegmentId": "intbounds"
+    },
+    {
+      "title": "4 Dạng Bậc hai Ngụy trang",
+      "startSegmentId": "usub"
+    },
+    {
+      "title": "Biến thể Vieta 800",
+      "startSegmentId": "vieta_adv"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Tổng quan Bậc hai Tham số & Ẩn phụ 800",
+      "selector": "#sec-header",
+      "en": "In the final stretch of Hard Module Two, quadratic concepts hide behind integer parameter bounds, disguised quartic or radical equations, and symmetric root expressions like r squared plus s squared. Let us dismantle all three.",
+      "vi": "Ở chặng nước rút cuối Hard Module 2, kiến thức bậc hai thường ẩn mình sau các bài toán chặn biên số nguyên tham số k, phương trình bậc 4 hoặc căn thức ngụy trang và các biểu thức đối xứng như r bình cộng s bình. Chúng ta sẽ tháo gỡ sạch cả ba dạng này.",
+      "duration": 29.13,
+      "startTime": 0.0,
+      "endTime": 29.13,
+      "audioUrl": "/audio/lectures/sat_boss/b6/intro.mp3"
+    },
+    {
+      "id": "intbounds",
+      "title": "Chặn biên số nguyên tham số k",
+      "selector": "#sec-intbounds",
+      "en": "For integer-bound discriminant questions, always check whether the inequality is strict or inclusive. Two distinct real roots require delta strictly greater than zero; no real roots require delta strictly less than zero; and at least one real root includes zero. If your bound says k is strictly less than sixteen, the greatest integer is fifteen, never sixteen.",
+      "vi": "Với bài toán tìm số nguyên lớn nhất hay nhỏ nhất của tham số k theo biệt thức delta, hãy soi thật kỹ dấu bất đẳng thức có lấy dấu bằng hay không. Hai nghiệm phân biệt đòi delta lớn hơn hẳn 0, vô nghiệm đòi nhỏ hơn hẳn 0, còn ít nhất một nghiệm mới cho phép bằng 0. Nếu ra k nhỏ hơn hẳn 16 thì số nguyên lớn nhất là 15.",
+      "duration": 44.15,
+      "startTime": 29.13,
+      "endTime": 73.28,
+      "audioUrl": "/audio/lectures/sat_boss/b6/intbounds.mp3"
+    },
+    {
+      "id": "usub",
+      "title": "4 Mặt nạ Phương trình Bậc hai Ngụy trang",
+      "selector": "#sec-usub",
+      "en": "Watch for four classic u-substitutions: u equals x squared, u equals a shifted block like x minus four, u equals root x, and u equals two to the x. Always remember to solve back for x at the end, and reject negative u values whenever u represents a square, a square root, or an exponential.",
+      "vi": "Nhận diện ngay 4 kiểu đặt ẩn phụ kinh điển: u bằng x bình, u bằng cụm x trừ c, u bằng căn x và u bằng 2 mũ x. Luôn nhớ trả lại biến x ở bước cuối cùng và loại ngay các nghiệm u âm nếu u đại diện cho bình phương, căn bậc hai hoặc hàm mũ.",
+      "duration": 34.77,
+      "startTime": 73.28,
+      "endTime": 108.05,
+      "audioUrl": "/audio/lectures/sat_boss/b6/usub.mp3"
+    },
+    {
+      "id": "vieta_adv",
+      "title": "Biến thể Vieta r² + s² và 1/r + 1/s",
+      "selector": "#sec-vieta-adv",
+      "en": "Never plug ugly irrational roots into r squared plus s squared. Use the symmetric Vieta identity: r squared plus s squared equals S squared minus two P, where S is negative b over a and P is c over a. Similarly, one over r plus one over s simplifies instantly to negative b over c.",
+      "vi": "Đừng bao giờ thay nghiệm căn bậc hai xấu vào r bình cộng s bình. Hãy dùng hằng đẳng thức Vieta: r bình cộng s bình bằng S bình trừ hai P, với S là tổng hai nghiệm và P là tích hai nghiệm. Tương tự, một trên r cộng một trên s rút gọn siêu gọn thành trừ b trên c.",
+      "duration": 39.98,
+      "startTime": 108.05,
+      "endTime": 148.03,
+      "audioUrl": "/audio/lectures/sat_boss/b6/vieta_adv.mp3"
+    }
+  ]
+}

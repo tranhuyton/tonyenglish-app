@@ -1,0 +1,66 @@
+{
+  "lectureId": "c96990cd-a6b9-400f-a4dd-cf95ce008b61",
+  "courseTitle": "Digital SAT 1500+ (Hard M2 Boss Masterclass)",
+  "lectureTitle": "Math Boss 4: SPR Grid-In Trap-Proofing — 10 Deadly 800-Point Pitfalls",
+  "totalDuration": 173.51,
+  "majorSections": [
+    {
+      "title": "Top 5 Bẫy Đại số & Hàm số",
+      "startSegmentId": "top5"
+    },
+    {
+      "title": "Top 5 Bẫy Đơn vị, % & kπ",
+      "startSegmentId": "bot5"
+    },
+    {
+      "title": "4 Luật nhập SPR chuẩn Bluebook",
+      "startSegmentId": "spr_format"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Tổng quan Lá chắn Chống bẫy SPR 800",
+      "selector": "#sec-header",
+      "en": "Welcome to the final capstone lesson of Digital SAT 1500 Plus! On multiple-choice questions, an off-by-one mistake often fails to match the four options, giving you a second chance. On Student-Produced Response grid-ins, there is no safety net. Let us build a ten-point shield to guarantee your 800.",
+      "vi": "Chào mừng bạn đến với bài giảng chốt hạ của khóa Digital SAT 1500 Plus! Ở câu trắc nghiệm, nếu tính nhầm bạn còn thấy lệch bốn đáp án để kịp sửa. Nhưng ở dạng tự điền số SPR, không có lưới an toàn nào cả. Hãy cùng dựng bộ lá chắn 10 điểm để khóa chắc mốc 800 Toán.",
+      "duration": 38.08,
+      "startTime": 0.0,
+      "endTime": 38.08,
+      "audioUrl": "/audio/lectures/sat_boss/b8/intro.mp3"
+    },
+    {
+      "id": "top5",
+      "title": "5 Bẫy Đại số & Hàm số hay mất oan nhất",
+      "selector": "#sec-top5",
+      "en": "Check these five algebraic traps before typing any answer: first, confirm whether the prompt asks for x or an expression like five x minus three or the diameter; second, test radical and rational roots for extraneous solutions; third, divide by the leading coefficient a in Vieta and circle equations; fourth, count a double root only once when asked for distinct solutions; and fifth, check table column headers for shifted functions.",
+      "vi": "Kiểm tra 5 cái bẫy đại số sau trước khi nhập số: một là soi kỹ đề hỏi x hay hỏi biểu thức như 5x trừ 3 hay đường kính; hai là luôn thử lại nghiệm căn thức và phân thức loại nghiệm ngoại lai; ba là nhớ chia hệ số a trong Vieta và đường tròn; bốn là chỉ tính nghiệm kép một lần nếu đề nói distinct solutions; và năm là đọc kỹ tiêu đề cột bảng dữ liệu xem hàm có bị dịch chuyển không.",
+      "duration": 49.62,
+      "startTime": 38.08,
+      "endTime": 87.7,
+      "audioUrl": "/audio/lectures/sat_boss/b8/top5.mp3"
+    },
+    {
+      "id": "bot5",
+      "title": "5 Bẫy Đơn vị, Phần trăm, Thống kê & kπ",
+      "selector": "#sec-bot5",
+      "en": "Next, guard against five applied traps: square or cube linear factors for area and volume conversions; translate p percent greater than as one plus p over one hundred; round integer inequalities in the exact required direction; restrict conditional probability denominators to the stated group; and when a question asks for k where the answer is k pi, enter only the number k without multiplying by pi.",
+      "vi": "Tiếp theo, cảnh giác 5 bẫy ứng dụng: luôn bình phương hoặc lập phương hệ số khi đổi diện tích và thể tích; dịch đúng lớn hơn p phần trăm là cộng thêm vào 100 phần trăm gốc; làm tròn đúng chiều bất đẳng thức số nguyên; thu gọn mẫu số xác suất có điều kiện đúng hàng cột đề nêu; và khi đề hỏi hệ số k của k pi thì chỉ nhập đúng con số k.",
+      "duration": 44.99,
+      "startTime": 87.7,
+      "endTime": 132.69,
+      "audioUrl": "/audio/lectures/sat_boss/b8/bot5.mp3"
+    },
+    {
+      "id": "spr_format",
+      "title": "4 Luật nhập SPR chuẩn Bluebook",
+      "selector": "#sec-spr-format",
+      "en": "Finally, master SPR entry rules: always enter repeating fractions like two thirds as exact fractions rather than rounded decimals, never type mixed numbers, place a minus sign cleanly at the front for negative answers, and verify the Answer Preview box before clicking Next. You are now fully equipped to crush the Digital SAT 1500 Plus!",
+      "vi": "Cuối cùng, nhớ 4 luật nhập ô SPR: luôn nhập phân số tối giản như 2 trên 3 thay vì làm tròn số thập phân vô hạn, tuyệt đối không nhập hỗn số, đặt dấu trừ ở đầu cho số âm và liếc nhanh khung Answer Preview trước khi chuyển câu. Chúc bạn bùng nổ điểm số 1500 cộng trong kỳ thi Digital SAT!",
+      "duration": 40.82,
+      "startTime": 132.69,
+      "endTime": 173.51,
+      "audioUrl": "/audio/lectures/sat_boss/b8/spr_format.mp3"
+    }
+  ]
+}

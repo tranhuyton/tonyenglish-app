@@ -1,0 +1,66 @@
+{
+  "lectureId": "16c2812c-2c68-4822-9dd9-a92b2423c6d7",
+  "courseTitle": "Digital SAT 1500+ (Hard M2 Boss Masterclass)",
+  "lectureTitle": "R&W Boss 1: Dense Science Logic & Multi-Variable Mapping",
+  "totalDuration": 143.41,
+  "majorSections": [
+    {
+      "title": "Khung xương 4 ô H-V-R-C",
+      "startSegmentId": "skeleton"
+    },
+    {
+      "title": "Biến gây nhiễu & Support/Weaken",
+      "startSegmentId": "confound"
+    },
+    {
+      "title": "Suy luận Q15 nhiều bước",
+      "startSegmentId": "infer_chain"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Tổng quan R&W Boss 1: Khoa học mật độ cao",
+      "selector": "#sec-header",
+      "en": "Welcome to the Hard Module Two Boss Masterclass! Questions eleven through fifteen on Hard Reading and Writing are where 1450 scorers get separated from 1550 plus scorers. Today we turn dense, intimidating scientific passages into simple X, Y, and Z causal chains.",
+      "vi": "Chào mừng bạn đến với chuỗi bài giảng chuyên sâu Hard Module 2 Boss Masterclass! Cụm câu 11 đến 15 phần Reading and Writing Hard chính là nơi phân tách mốc 1450 với mốc 1550 trở lên. Hôm nay ta sẽ biến những đoạn khoa học dày đặc thuật ngữ thành sơ đồ nhân quả X, Y, Z cực kỳ đơn giản.",
+      "duration": 39.23,
+      "startTime": 0.0,
+      "endTime": 39.23,
+      "audioUrl": "/audio/lectures/sat_boss/b1/intro.mp3"
+    },
+    {
+      "id": "skeleton",
+      "title": "Khung xương 4 ô H-V-R-C",
+      "selector": "#sec-skeleton",
+      "en": "Never waste precious seconds trying to pronounce or translate intimidating scientific jargon. Replace complex chemical or biological names with simple placeholders like X, Y, and Z, and map four boxes in your head: the Hypothesis, the experimental Variables, the measured Results, and the logical Conclusion.",
+      "vi": "Đừng bao giờ phí giây quý giá để dịch hay đánh vần những thuật ngữ sinh hóa dài ngoằng. Hãy thay thế tên khoa học phức tạp bằng X, Y, Z và dựng nhanh 4 ô trong đầu: Giả thuyết, Biến thí nghiệm, Kết quả đo được và Kết luận logic.",
+      "duration": 35.22,
+      "startTime": 39.23,
+      "endTime": 74.45,
+      "audioUrl": "/audio/lectures/sat_boss/b1/skeleton.mp3"
+    },
+    {
+      "id": "confound",
+      "title": "Biến gây nhiễu & Đòn Support/Weaken",
+      "selector": "#sec-confound",
+      "en": "To weaken a causal claim that X causes Y, look for one of three attacks: a confounding variable Z that changed alongside X, a control group without X that still produced Y, or reverse causality where Y actually caused X. On quantitative charts, verify both factual accuracy and logical relevance to the claim.",
+      "vi": "Để làm suy yếu giả thuyết X gây ra Y, hãy săn đúng một trong ba đòn đánh: một biến gây nhiễu Z thay đổi song hành cùng X, nhóm đối chứng không có X nhưng vẫn ra kết quả Y, hoặc đảo ngược nhân quả khi Y mới là nguyên nhân gây ra X. Với câu bảng biểu số liệu, luôn kiểm tra cả hai tầng: đúng số và trúng luận điểm.",
+      "duration": 37.94,
+      "startTime": 74.45,
+      "endTime": 112.39,
+      "audioUrl": "/audio/lectures/sat_boss/b1/confound.mp3"
+    },
+    {
+      "id": "infer_chain",
+      "title": "Suy luận nhiều bước ở Q15",
+      "selector": "#sec-infer-chain",
+      "en": "On the toughest inference questions, compare the main experiment with the follow-up test introduced after words like however or yet. Whatever specific pathway was blocked or altered in the second condition is almost always the exact mechanism that fills the final blank.",
+      "vi": "Ở câu suy luận khó nhất Q15, hãy so sánh thí nghiệm chính với thí nghiệm phụ xuất hiện ngay sau các từ nối tương phản như however hoặc yet. Chính cơ chế bị chặn lại hoặc bị thay đổi ở điều kiện thứ hai hầu như luôn là mảnh ghép điền vào chỗ trống cuối cùng.",
+      "duration": 31.02,
+      "startTime": 112.39,
+      "endTime": 143.41,
+      "audioUrl": "/audio/lectures/sat_boss/b1/infer_chain.mp3"
+    }
+  ]
+}

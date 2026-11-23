@@ -1,0 +1,66 @@
+{
+  "lectureId": "031bc130-f1a2-40d6-acca-0e81abc4acae",
+  "courseTitle": "Digital SAT 1500+ (Hard M2 Boss Masterclass)",
+  "lectureTitle": "Math Boss 1: Desmos Advanced Hacks — Multi-Param Regression & Lists",
+  "totalDuration": 146.78,
+  "majorSections": [
+    {
+      "title": "Hồi quy Đồng nhất thức (~)",
+      "startSegmentId": "reg_id"
+    },
+    {
+      "title": "Hồi quy Parabol, Đường tròn & Lists",
+      "startSegmentId": "sys_reg"
+    },
+    {
+      "title": "Giới hạn miền bằng ngoặc nhọn {}",
+      "startSegmentId": "domain_trick"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Tổng quan Desmos Nâng cao 800",
+      "selector": "#sec-header",
+      "en": "Every student knows how to graph a line in Desmos. What separates a 720 Math scorer from an effortless 800 scorer is knowing how to weaponize Desmos regressions and lists to solve multi-parameter identity equations in ten seconds flat.",
+      "vi": "Học sinh nào cũng biết vẽ đường thẳng bằng Desmos. Nhưng điều phân biệt mốc 720 với điểm tuyệt đối 800 là khả năng biến hồi quy dấu ngã và danh sách list thành vũ khí giải gọn mọi bài toán đồng nhất thức đa tham số chỉ trong 10 giây.",
+      "duration": 29.78,
+      "startTime": 0.0,
+      "endTime": 29.78,
+      "audioUrl": "/audio/lectures/sat_boss/b5/intro.mp3"
+    },
+    {
+      "id": "reg_id",
+      "title": "Hồi quy Đồng nhất thức (~) 10 giây",
+      "selector": "#sec-reg-id",
+      "en": "Whenever a problem states that two algebraic expressions are equivalent for all values of x and asks for constants A, B, or C, define a short list x one equals zero, one, three, four, six, and type the identity with a tilde instead of an equals sign. Desmos instantly outputs exact values for every constant with zero algebra errors. Just avoid reserved letters like e, r, x, or y as parameters.",
+      "vi": "Hễ gặp bài toán cho hai biểu thức bằng nhau với mọi x và yêu cầu tìm hằng số A, B, C, hãy gõ một danh sách x một gồm vài số an toàn tránh mẫu bằng 0, rồi gõ nguyên biểu thức nhưng đổi dấu bằng thành dấu ngã hồi quy. Desmos sẽ trả về ngay giá trị chính xác của từng hằng số mà không lo sai dấu. Nhớ tránh dùng chữ e, r, x, y làm tên tham số.",
+      "duration": 52.82,
+      "startTime": 29.78,
+      "endTime": 82.6,
+      "audioUrl": "/audio/lectures/sat_boss/b5/reg_id.mp3"
+    },
+    {
+      "id": "sys_reg",
+      "title": "Hồi quy Parabol, Đường tròn & List 4 đáp án",
+      "selector": "#sec-sys-reg",
+      "en": "You can also fit parabolas, exponentials, and even circles directly from three table points using tilde regression, then immediately evaluate the fitted function at any target value. And when testing four multiple-choice constants for k, put all four choices in a bracketed list so Desmos plots every candidate at once.",
+      "vi": "Bạn cũng có thể tìm chính xác phương trình parabol, hàm mũ hay thậm chí cả đường tròn từ bảng ba điểm bằng hồi quy dấu ngã, sau đó tính thẳng giá trị hàm tại điểm đề hỏi. Khi cần thử bốn giá trị tham số k của 4 đáp án, hãy gộp cả bốn số vào dấu ngoặc vuông để Desmos vẽ cùng lúc một lượt.",
+      "duration": 37.84,
+      "startTime": 82.6,
+      "endTime": 120.44,
+      "audioUrl": "/audio/lectures/sat_boss/b5/sys_reg.mp3"
+    },
+    {
+      "id": "domain_trick",
+      "title": "Giới hạn miền bằng ngoặc nhọn {}",
+      "selector": "#sec-domain-trick",
+      "en": "Use curly braces to restrict the domain of any function—for instance, plotting f of x only for x between one and six—so you can click the true maximum or minimum on that exact interval without falling for an out-of-domain vertex.",
+      "vi": "Dùng dấu ngoặc nhọn để giới hạn miền xác định của hàm số, ví dụ chỉ vẽ trên đoạn từ 1 đến 6, giúp bạn bấm chính xác điểm cực đại hay cực tiểu trên đoạn đó mà không bao giờ chọn nhầm đỉnh nằm ngoài miền.",
+      "duration": 26.34,
+      "startTime": 120.44,
+      "endTime": 146.78,
+      "audioUrl": "/audio/lectures/sat_boss/b5/domain_trick.mp3"
+    }
+  ]
+}

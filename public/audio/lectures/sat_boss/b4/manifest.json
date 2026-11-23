@@ -1,0 +1,66 @@
+{
+  "lectureId": "cd61099c-b3d3-4f5e-8e12-b56ee20b87a4",
+  "courseTitle": "Digital SAT 1500+ (Hard M2 Boss Masterclass)",
+  "lectureTitle": "R&W Boss 4: 32-Minute Time-Triage SOP & Nested Hard Grammar Combos",
+  "totalDuration": 159.17,
+  "majorSections": [
+    {
+      "title": "Lộ trình Đảo thứ tự 32 phút",
+      "startSegmentId": "triage"
+    },
+    {
+      "title": "4 Combo Ngữ pháp xếp tầng",
+      "startSegmentId": "nested"
+    },
+    {
+      "title": "Transitions & Synthesis 750+",
+      "startSegmentId": "trans_synth"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Tổng quan Quản trị 32 Phút & Ngữ pháp xếp tầng",
+      "selector": "#sec-header",
+      "en": "Even brilliant readers lose forty points on Hard Module Two simply by running out of time and rushing through the grammar questions at the end. In this lesson, you will master the exact 32-minute pacing order used by 780-plus scorers along with the four trickiest nested grammar traps.",
+      "vi": "Ngay cả những thí sinh đọc rất giỏi vẫn mất oan 40 điểm trên Hard Module 2 chỉ vì hết giờ và phải làm vội nhóm câu ngữ pháp ở cuối bài. Bài học này sẽ trang bị cho bạn đúng thứ tự phân bổ 32 phút của nhóm 780 cộng cùng 4 combo ngữ pháp xếp tầng hiểm hóc nhất.",
+      "duration": 34.31,
+      "startTime": 0.0,
+      "endTime": 34.31,
+      "audioUrl": "/audio/lectures/sat_boss/b4/intro.mp3"
+    },
+    {
+      "id": "triage",
+      "title": "Lộ trình Đảo thứ tự 32 phút",
+      "selector": "#sec-triage",
+      "en": "Do not march blindly from question one to question twenty-seven. Finish Words in Context one through five in four minutes, then jump immediately via the Navigator to questions sixteen through twenty-seven to lock in all twelve grammar, transition, and synthesis points in eight minutes. That leaves a full twenty calm minutes—two minutes per question—for the ten toughest reading passages.",
+      "vi": "Đừng làm tuần tự một mạch từ câu 1 tới câu 27. Hãy xử lý xong câu 1 đến câu 5 trong 4 phút, sau đó bấm Navigator nhảy thẳng sang câu 16 đến 27 để khóa chắc trọn vẹn 12 điểm Ngữ pháp, Từ nối và Tổng hợp ghi chú chỉ trong 8 phút. Bạn sẽ còn nguyên 20 phút thảnh thơi, tức trọn 2 phút cho mỗi câu trong 10 bài đọc nặng nhất từ câu 6 đến câu 15.",
+      "duration": 47.1,
+      "startTime": 34.31,
+      "endTime": 81.41,
+      "audioUrl": "/audio/lectures/sat_boss/b4/triage.mp3"
+    },
+    {
+      "id": "nested",
+      "title": "4 Combo Ngữ pháp Xếp tầng Hard M2",
+      "selector": "#sec-nested",
+      "en": "Watch for four favorite Hard Module Two grammar traps: first, super-commas where semicolons separate complex list items that already contain commas; second, inverted sentences where the true subject sits after the verb; third, fragment traps disguising a participle like having remained as a main verb; and fourth, zero commas around a title directly preceding a person’s name.",
+      "vi": "Cảnh giác bốn bẫy ngữ pháp xếp tầng ưa thích của Hard Module 2: một là dấu chấm phẩy super-comma dùng để tách các mục liệt kê đã có dấu phẩy bên trong; hai là câu đảo ngữ có chủ ngữ thật nằm sau động từ; ba là bẫy thiếu động từ chính khi nhầm V-ing thành vị ngữ; và bốn là không đặt dấu phẩy quanh chức danh đứng sát ngay trước tên riêng.",
+      "duration": 42.66,
+      "startTime": 81.41,
+      "endTime": 124.07,
+      "audioUrl": "/audio/lectures/sat_boss/b4/nested.mp3"
+    },
+    {
+      "id": "trans_synth",
+      "title": "Transitions sắc thái mịn & Synthesis đa điều kiện",
+      "selector": "#sec-trans-synth",
+      "en": "For high-level transitions, distinguish indeed, which reinforces the same subject, from similarly, which pivots to a second parallel case. And on Rhetorical Synthesis, read the prompt goal before the bullet points and verify that your choice satisfies every single constraint in that goal.",
+      "vi": "Với từ nối nâng cao, phân biệt rạch ròi indeed dùng để nhấn sâu thêm cùng một chủ thể với similarly dùng để chuyển sang đối tượng song song thứ hai. Còn với câu tổng hợp ghi chú, luôn đọc kỹ mục tiêu câu hỏi trước khi đọc các gạch đầu dòng và kiểm tra đáp án có đáp ứng đủ mọi điều kiện hay không.",
+      "duration": 35.1,
+      "startTime": 124.07,
+      "endTime": 159.17,
+      "audioUrl": "/audio/lectures/sat_boss/b4/trans_synth.mp3"
+    }
+  ]
+}

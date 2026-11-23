@@ -149,6 +149,7 @@ def upsert_sat_drill(drill_key, title, order_index, content_json, folder_key='rw
         'rw_mocks': 'mocks',
         'math_drills': 'math_drills',
         'math_mocks': 'math_mocks',
+        'boss_drills': 'boss_drills',
     }
     bucket = bucket_map.get(folder_key, 'drills')
     existing_id = ids.get(bucket, {}).get(drill_key)

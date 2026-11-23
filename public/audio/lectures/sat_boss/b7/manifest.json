@@ -1,0 +1,66 @@
+{
+  "lectureId": "1fbd532b-d17d-4215-bb09-6ae0459fc31c",
+  "courseTitle": "Digital SAT 1500+ (Hard M2 Boss Masterclass)",
+  "lectureTitle": "Math Boss 3: Hard M2 Geometry, Coordinate Circles & 3D Composite Solids",
+  "totalDuration": 142.22,
+  "majorSections": [
+    {
+      "title": "Đường tròn tọa độ & A = ½rs",
+      "startSegmentId": "coord_circ"
+    },
+    {
+      "title": "Đường cao h² = pq & Lượng giác",
+      "startSegmentId": "alt_trig"
+    },
+    {
+      "title": "Nón cụt k³ & Khối ghép 3D",
+      "startSegmentId": "composite3d"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Tổng quan Hình học 780–800 & 3D Ghép",
+      "selector": "#sec-header",
+      "en": "The hardest Geometry questions at the end of Module Two combine coordinate algebra, circle theorems, right-triangle altitudes, and composite 3D solids. Master four compact shortcuts and these twenty-point bosses become straightforward.",
+      "vi": "Những câu hình học khó nhất cuối Module 2 thường kết hợp tọa độ, định lý đường tròn, đường cao tam giác vuông và hình khối 3D ghép. Nắm chắc bốn phím tắt tinh gọn sau sẽ biến những câu trùm cuối 20 điểm này trở nên cực kỳ dễ xử lý.",
+      "duration": 29.73,
+      "startTime": 0.0,
+      "endTime": 29.73,
+      "audioUrl": "/audio/lectures/sat_boss/b7/intro.mp3"
+    },
+    {
+      "id": "coord_circ",
+      "title": "Đường tròn tọa độ, Tiếp tuyến & Phím tắt A = ½rs",
+      "selector": "#sec-coord-circ",
+      "en": "A circle tangent to the x-axis has radius equal to the absolute value of its y-coordinate k, and any tangent line is perpendicular to the radius at the point of tangency—giving you either a negative reciprocal slope or a right triangle for the Pythagorean theorem. And whenever you know radius r and arc length s, skip finding the angle and use sector area equals one half times r times s.",
+      "vi": "Đường tròn tiếp xúc trục hoành có bán kính bằng trị tuyệt đối tung độ tâm k, và tiếp tuyến luôn vuông góc bán kính tại tiếp điểm, cho ta ngay hệ số góc nghịch đảo đổi dấu hoặc tam giác vuông để dùng Pythagoras. Đặc biệt khi biết bán kính r và độ dài cung s, đừng tính góc mà nhân thẳng diện tích quạt bằng một nửa r nhân s.",
+      "duration": 43.22,
+      "startTime": 29.73,
+      "endTime": 72.95,
+      "audioUrl": "/audio/lectures/sat_boss/b7/coord_circ.mp3"
+    },
+    {
+      "id": "alt_trig",
+      "title": "Đường cao tam giác vuông h² = pq & Dấu ASTC",
+      "selector": "#sec-alt-trig",
+      "en": "Drawing an altitude to the hypotenuse of a right triangle splits it into two smaller triangles similar to the whole, yielding the instant formula h squared equals p times q. For radian trig angles beyond ninety degrees, check the quadrant sign using All Students Take Calculus—or verify in Desmos Radian mode.",
+      "vi": "Kẻ đường cao xuống cạnh huyền của tam giác vuông tạo ra ba tam giác đồng dạng và hệ thức vàng h bình bằng p nhân q. Với góc lượng giác radian lớn hơn 90 độ, nhớ xét đúng dấu âm dương theo từng góc phần tư hoặc kiểm chứng ngay bằng Desmos ở chế độ Radian.",
+      "duration": 34.6,
+      "startTime": 72.95,
+      "endTime": 107.55,
+      "audioUrl": "/audio/lectures/sat_boss/b7/alt_trig.mp3"
+    },
+    {
+      "id": "composite3d",
+      "title": "Hình nón cụt (Frustum) & Diện tích khối ghép",
+      "selector": "#sec-composite3d",
+      "en": "For a frustum or truncated pyramid, never memorize a messy formula—subtract the smaller top cone from the full cone using the volume scaling ratio k cubed. And for hollowed-out solids, remember that an interior carved surface adds new exposed surface area rather than subtracting it.",
+      "vi": "Với hình nón cụt hay chóp cụt, đừng thuộc công thức rườm rà mà hãy lấy hình lớn trừ phần đỉnh nhỏ bằng tỉ lệ thể tích k lập phương. Còn với diện tích toàn phần của hình khối khoét rỗng, nhớ rằng mặt khoét bên trong là bề mặt lộ thiên mới nên phải cộng thêm diện tích xung quanh chứ không được trừ đi.",
+      "duration": 34.67,
+      "startTime": 107.55,
+      "endTime": 142.22,
+      "audioUrl": "/audio/lectures/sat_boss/b7/composite3d.mp3"
+    }
+  ]
+}

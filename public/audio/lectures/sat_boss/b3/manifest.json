@@ -1,0 +1,66 @@
+{
+  "lectureId": "6b9d4436-d9ba-4f58-9759-3397cfebd0ea",
+  "courseTitle": "Digital SAT 1500+ (Hard M2 Boss Masterclass)",
+  "lectureTitle": "R&W Boss 3: Archaic Literature, 19th-Century Poetry & Dual-Text Nuance",
+  "totalDuration": 137.4,
+  "majorSections": [
+    {
+      "title": "Giải mã Thơ & Văn xuôi cổ",
+      "startSegmentId": "poetry"
+    },
+    {
+      "title": "Trích dẫn văn học đủ vế",
+      "startSegmentId": "lit_ev"
+    },
+    {
+      "title": "3 Mô hình Dual-Text 750+",
+      "startSegmentId": "dual"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Tổng quan Văn học cổ, Thơ & Dual-Text",
+      "selector": "#sec-header",
+      "en": "Nineteenth-century poetry, archaic prose, and nuanced Dual-Text passages intimidate even fluent English readers. Yet you do not need to be a literature professor to ace them—you just need a systematic decoding method.",
+      "vi": "Thơ thế kỷ 19, văn xuôi cổ đảo ngữ và các đoạn Dual-Text tinh tế có thể làm chùn bước cả những thí sinh tiếng Anh rất giỏi. Nhưng bạn không cần là giáo sư văn học để lấy trọn điểm — bạn chỉ cần một quy trình giải mã có hệ thống.",
+      "duration": 27.76,
+      "startTime": 0.0,
+      "endTime": 27.76,
+      "audioUrl": "/audio/lectures/sat_boss/b3/intro.mp3"
+    },
+    {
+      "id": "poetry",
+      "title": "Duỗi thẳng cú pháp Thơ & Văn cổ",
+      "selector": "#sec-poetry",
+      "en": "When reading poetry, never stop at line breaks—follow the punctuation until a period or semicolon ends the sentence. Strip away interrupting prepositional phrases to locate the core subject and verb, and label the emotional shift from beginning to end. That tone shift alone eliminates three wrong answers almost immediately.",
+      "vi": "Khi đọc thơ, tuyệt đối đừng dừng mắt ở cuối dòng thơ mà hãy đọc liền mạch theo dấu chấm và chấm phẩy. Gạt bỏ các cụm giới từ chen ngang để bắt đúng chủ ngữ và động từ chính, đồng thời gắn nhãn sự chuyển biến cảm xúc từ đầu tới cuối khổ thơ.",
+      "duration": 35.25,
+      "startTime": 27.76,
+      "endTime": 63.01,
+      "audioUrl": "/audio/lectures/sat_boss/b3/poetry.mp3"
+    },
+    {
+      "id": "lit_ev",
+      "title": "Trích dẫn văn học 2 vế",
+      "selector": "#sec-lit-ev",
+      "en": "For literary quotation questions, underline every key adjective or tension in the prompt claim. If the claim states that a character feels both admiration and unease, a quotation showing only admiration is a half-right trap. The right quote must deliver every single element of the claim.",
+      "vi": "Với câu chọn trích dẫn văn học, hãy gạch chân mọi tính từ hoặc sắc thái kép trong nhận định đề cho. Nếu nhận định nói nhân vật vừa ngưỡng mộ vừa bất an, câu trích dẫn chỉ thể hiện sự ngưỡng mộ chính là bẫy đúng một nửa. Đáp án chuẩn phải khớp trọn vẹn tất cả các vế.",
+      "duration": 35.06,
+      "startTime": 63.01,
+      "endTime": 98.07,
+      "audioUrl": "/audio/lectures/sat_boss/b3/lit_ev.mp3"
+    },
+    {
+      "id": "dual",
+      "title": "Quan hệ Dual-Text tinh tế ở Hard M2",
+      "selector": "#sec-dual",
+      "en": "On Hard Module Two, Text Two rarely calls Text One completely false. Instead, look for qualified agreement, a shared observation explained by a different mechanism, or a methodological critique pointing out insufficient evidence. Always double-check the direction of the question: is Text Two responding to Text One, or vice versa?",
+      "vi": "Trên Hard Module 2, Text 2 hiếm khi bác bỏ sạch trơn Text 1. Thay vào đó hãy chú ý ba mô hình tinh vi: đồng tình có điều kiện, cùng hiện tượng nhưng khác cơ chế giải thích, hoặc phê bình phương pháp nghiên cứu thiếu bằng chứng. Luôn kiểm tra đúng chiều câu hỏi đang xét Text 2 phản hồi Text 1 hay ngược lại.",
+      "duration": 39.33,
+      "startTime": 98.07,
+      "endTime": 137.4,
+      "audioUrl": "/audio/lectures/sat_boss/b3/dual.mp3"
+    }
+  ]
+}

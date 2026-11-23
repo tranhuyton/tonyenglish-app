@@ -1,0 +1,66 @@
+{
+  "lectureId": "f6527f18-451a-4b62-8163-9082d247186f",
+  "courseTitle": "Digital SAT 1500+ (Hard M2 Boss Masterclass)",
+  "lectureTitle": "R&W Boss 2: 50/50 Trap Elimination — The 1-Millimeter Rule",
+  "totalDuration": 148.0,
+  "majorSections": [
+    {
+      "title": "5 Bẫy lệch 1 milimét",
+      "startSegmentId": "anatomy"
+    },
+    {
+      "title": "Soi kính lúp đối đầu 50/50",
+      "startSegmentId": "method"
+    },
+    {
+      "title": "8 Từ nghĩa thứ cấp Hard M2",
+      "startSegmentId": "wic750"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Tổng quan Phá bẫy 50/50 (750–800)",
+      "selector": "#sec-header",
+      "en": "Almost every high-scoring SAT student knows the frustration of narrowing a question down to two tempting choices and picking the wrong one. On Hard Module Two, the runner-up trap is designed to look ninety percent right while hiding a single fatal distortion.",
+      "vi": "Hầu như học sinh điểm cao nào cũng từng trải qua cảm giác cay đắng khi loại còn đúng 2 đáp án 50/50 rồi lại chọn nhầm câu bẫy. Ở Hard Module 2, đáp án nhiễu hạng hai được thiết kế đúng tới 90 phần trăm nhưng gài đúng một từ lệch chết người.",
+      "duration": 31.17,
+      "startTime": 0.0,
+      "endTime": 31.17,
+      "audioUrl": "/audio/lectures/sat_boss/b2/intro.mp3"
+    },
+    {
+      "id": "anatomy",
+      "title": "5 Cái bẫy Lệch 1 Milimét",
+      "selector": "#sec-anatomy",
+      "en": "Memorize the five classic 750-plus traps: first, one-word extremity like solely or proved; second, an unstated comparison claiming A is greater than B when the passage never ranked them; third, reverse causal direction; fourth, half-right choices that sneak an unsupported claim after the final comma; and fifth, collocation mismatches in Words in Context.",
+      "vi": "Hãy khắc cốt ghi tâm 5 cái bẫy kinh điển của vùng 750 cộng: một là từ cực đoan như solely hay proved; hai là so sánh ngầm không có trong bài kiểu A hơn B; ba là đảo ngược chiều nhân quả; bốn là bẫy nửa đầu đúng nhưng nửa cuối sau dấu phẩy tự suy diễn thêm; và năm là từ đồng nghĩa nhưng sai ngữ cảnh kết hợp.",
+      "duration": 43.02,
+      "startTime": 31.17,
+      "endTime": 74.19,
+      "audioUrl": "/audio/lectures/sat_boss/b2/anatomy.mp3"
+    },
+    {
+      "id": "method",
+      "title": "Kỹ thuật Soi Kính Lúp Đối Đầu",
+      "selector": "#sec-method",
+      "en": "When stuck between two finalists, stop rereading the entire passage. Instead, run a Head-to-Head Diff Check: isolate the exact two or three words where Choice B and Choice D disagree, check that exact detail in the text, and eliminate whichever choice contains even a single word you have to guess or stretch to justify.",
+      "vi": "Khi phân vân giữa hai đáp án cuối, đừng đọc lại cả bài một cách dàn trải. Thay vào đó, hãy soi kính lúp đối đầu: khoanh đúng 2 đến 3 từ mà hai đáp án khác nhau, đối chiếu đúng chi tiết đó trong bài và loại thẳng đáp án nào chứa dù chỉ một từ khiến bạn phải tự suy diễn thêm.",
+      "duration": 37.34,
+      "startTime": 74.19,
+      "endTime": 111.53,
+      "audioUrl": "/audio/lectures/sat_boss/b2/method.mp3"
+    },
+    {
+      "id": "wic750",
+      "title": "8 Từ vựng Nghĩa thứ cấp sát thủ",
+      "selector": "#sec-wic750",
+      "en": "Finally, watch for classic secondary meanings on Hard Words in Context: temper means to moderate, check means to restrain, qualify means to limit a claim, wanting means lacking, pedestrian means dull, novel means original, arresting means striking, and credit means to believe or attribute.",
+      "vi": "Cuối cùng, hãy nằm lòng 8 nghĩa thứ cấp sát thủ hay xuất hiện nhất: temper là tiết chế, check là kiềm chế chặn lại, qualify là đặt giới hạn cho nhận định, wanting là thiếu hụt, pedestrian là tẻ nhạt, novel là mới lạ, arresting là cuốn hút mạnh mẽ và credit là tin tưởng hoặc quy công trạng.",
+      "duration": 36.47,
+      "startTime": 111.53,
+      "endTime": 148.0,
+      "audioUrl": "/audio/lectures/sat_boss/b2/wic750.mp3"
+    }
+  ]
+}
