@@ -14,6 +14,7 @@ import { supabase } from '../lib/supabase';
 import { useApp } from '../context/AppContext';
 import { fixLegacyHtmlContent, updatePageSeo } from '../lib/utils';
 import { trackTonyContact, trackUnifiedViewCourse } from '../../lib/googleAnalytics';
+import { CourseShowcaseGallery } from '../components/CourseShowcaseGallery';
 
 const CONTACT_ZALO_URL = 'https://zalo.me/0935058688';
 const CONTACT_PHONE = '0935058688';
@@ -731,6 +732,12 @@ export const CoursesPage: React.FC = () => {
                     onClick={handleProseClick}
                     dangerouslySetInnerHTML={{ __html: fixLegacyHtmlContent(courseDescHtml) }}
                   />
+
+                  {/* Curated Live LMS Screenshots: Theory Lectures & Practice Test Bank */}
+                  {currentCourse && (
+                    <CourseShowcaseGallery courseId={Number(currentCourse.cc_id)} lang={lang} />
+                  )}
+
                   <div className="rounded-xl bg-sky-50/90 border border-sky-200 px-4 py-3.5 flex flex-wrap items-center justify-between gap-2">
                     <div className="space-y-0.5">
                       <div className="text-sm sm:text-base font-extrabold text-slate-800">
