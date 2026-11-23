@@ -1,0 +1,66 @@
+{
+  "lectureId": "6195da02-0b58-4df2-bedd-defeb99999e8",
+  "courseTitle": "Digital SAT 1500+ (Math)",
+  "lectureTitle": "4.2 Circle Equations, Completing the Square, Arcs & Radians",
+  "totalDuration": 161.27,
+  "majorSections": [
+    {
+      "title": "Hoàn thành bình phương",
+      "startSegmentId": "circle_eq"
+    },
+    {
+      "title": "Radian, Cung & Quạt",
+      "startSegmentId": "radians"
+    },
+    {
+      "title": "Góc nội tiếp & Tiếp tuyến",
+      "startSegmentId": "theorems"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Tổng quan Đường tròn trên Digital SAT",
+      "selector": "#sec-header",
+      "en": "Circle problems are guaranteed on every single Digital SAT Math test—from completing the square in the coordinate plane to radian arc lengths and tangent lines. Let us make circles automatic.",
+      "vi": "Bài toán đường tròn chắc chắn xuất hiện trong mọi đề thi SAT Math, từ hoàn thành bình phương trong mặt phẳng tọa độ cho đến độ dài cung theo radian và tiếp tuyến. Hãy biến chuyên đề này thành điểm chắc chắn trong túi bạn.",
+      "duration": 24.95,
+      "startTime": 0.0,
+      "endTime": 24.95,
+      "audioUrl": "/audio/lectures/sat_math/m4_2/intro.mp3"
+    },
+    {
+      "id": "circle_eq",
+      "title": "Hoàn thành bình phương & Desmos Check",
+      "selector": "#sec-circle-eq",
+      "en": "In standard circle form, x minus h squared plus y minus k squared equals r squared. To convert expanded form, first divide out any leading coefficient other than one. Then take half of the x coefficient and half of the y coefficient, square both, and add them to the right side. Finally, always take the square root of the right side to get the radius, never stop at r squared. You can also type the raw equation directly into Desmos to read the exact diameter visually.",
+      "vi": "Phương trình chuẩn của đường tròn là x trừ h tất cả bình cộng y trừ k tất cả bình bằng r bình. Khi gặp dạng khai triển, nếu trước x bình và y bình có hệ số khác 1 thì phải chia trước. Sau đó lấy một nửa hệ số x và y, bình phương rồi cộng cả hai vào vế phải. Nhớ lấy căn bậc hai vế phải để ra bán kính r, tuyệt đối đừng chọn nhầm r bình. Mẹo nhanh nhất là gõ thẳng phương trình vào Desmos để đo trực tiếp.",
+      "duration": 56.68,
+      "startTime": 24.95,
+      "endTime": 81.63,
+      "audioUrl": "/audio/lectures/sat_math/m4_2/circle_eq.mp3"
+    },
+    {
+      "id": "radians",
+      "title": "Radian, Độ dài cung & Diện tích quạt",
+      "selector": "#sec-radians",
+      "en": "To convert radians to degrees instantly, simply replace pi with one hundred eighty degrees. For arc length and sector area, remember the golden proportion: the central angle over the full circle equals arc length over circumference, which also equals sector area over full circle area. When theta is in radians, arc length simplifies cleanly to r times theta.",
+      "vi": "Để đổi từ radian sang độ trong nháy mắt, chỉ cần thay chữ pi bằng 180 độ. Với độ dài cung và diện tích quạt, hãy nhớ tỉ lệ vàng: góc ở tâm chia cả vòng tròn bằng độ dài cung chia chu vi, và bằng diện tích quạt chia diện tích cả hình tròn. Khi góc đo bằng radian, độ dài cung rút gọn siêu đẹp thành r nhân theta.",
+      "duration": 44.99,
+      "startTime": 81.63,
+      "endTime": 126.62,
+      "audioUrl": "/audio/lectures/sat_math/m4_2/radians.mp3"
+    },
+    {
+      "id": "theorems",
+      "title": "Góc nội tiếp, Tiếp tuyến & Vị trí điểm",
+      "selector": "#sec-theorems",
+      "en": "Keep three circle theorems ready for Hard Module Two: an inscribed angle is always half the central angle intercepting the same arc; a tangent line is always perpendicular to the radius at the point of tangency; and plugging a point into the circle equation tells you whether it lies inside, on, or outside the circle.",
+      "vi": "Ghi nhớ ba định lý đường tròn cho Module 2 Hard: góc nội tiếp luôn bằng một nửa góc ở tâm cùng chắn một cung; tiếp tuyến luôn vuông góc với bán kính tại tiếp điểm; và thay tọa độ điểm vào phương trình đường tròn cho biết ngay điểm đó nằm trong, trên hay ngoài đường tròn.",
+      "duration": 34.65,
+      "startTime": 126.62,
+      "endTime": 161.27,
+      "audioUrl": "/audio/lectures/sat_math/m4_2/theorems.mp3"
+    }
+  ]
+}

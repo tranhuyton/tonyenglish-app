@@ -1,0 +1,66 @@
+{
+  "lectureId": "631197e5-ec02-4224-8d4a-63a152fcc416",
+  "courseTitle": "Digital SAT 1500+ (Math)",
+  "lectureTitle": "2.4 Nonlinear Systems, Radicals, Absolute Value & Transformations",
+  "totalDuration": 140.77,
+  "majorSections": [
+    {
+      "title": "Hệ đường thẳng & Parabol",
+      "startSegmentId": "nonlin"
+    },
+    {
+      "title": "Căn thức & Giá trị tuyệt đối",
+      "startSegmentId": "rad_abs"
+    },
+    {
+      "title": "Biến đổi đồ thị f(x − h) + k",
+      "startSegmentId": "transform"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Tổng quan Hệ phi tuyến, Căn thức & Biến đổi hàm",
+      "selector": "#sec-header",
+      "en": "This final lesson of Advanced Math targets the exact topics that separate a 720 from a perfect 800: line-parabola tangent systems, extraneous radical roots, absolute value traps, and function transformations.",
+      "vi": "Bài học cuối của Module Advanced Math nhắm thẳng vào bốn chuyên đề phân tách mốc 720 với điểm tuyệt đối 800: hệ tiếp xúc đường thẳng parabol, nghiệm ngoại lai căn thức, bẫy giá trị tuyệt đối và phép biến đổi đồ thị hàm số.",
+      "duration": 27.83,
+      "startTime": 0.0,
+      "endTime": 27.83,
+      "audioUrl": "/audio/lectures/sat_math/m2_4/intro.mp3"
+    },
+    {
+      "id": "nonlin",
+      "title": "Hệ đường thẳng & Parabol tiếp xúc",
+      "selector": "#sec-nonlin",
+      "en": "When a system pairs a line with a parabola, set the two y expressions equal and move everything to one side to form a single quadratic. If the system has exactly one solution, the line is tangent to the parabola and the discriminant must equal zero. You can always verify the exact tangent point visually in Desmos.",
+      "vi": "Khi hệ gồm một đường thẳng và một parabol, hãy cho hai vế y bằng nhau rồi chuyển hết sang một vế thành phương trình bậc hai. Nếu hệ có đúng một nghiệm, đường thẳng tiếp xúc parabol và biệt thức delta phải bằng không. Bạn luôn có thể kiểm chứng ngay điểm tiếp xúc trên Desmos.",
+      "duration": 37.29,
+      "startTime": 27.83,
+      "endTime": 65.12,
+      "audioUrl": "/audio/lectures/sat_math/m2_4/nonlin.mp3"
+    },
+    {
+      "id": "rad_abs",
+      "title": "Căn thức, Lũy thừa hữu tỉ & Giá trị tuyệt đối",
+      "selector": "#sec-rad-abs",
+      "en": "For radical equations, squaring both sides can create fake extraneous roots. Always check that the non-radical side is zero or positive. For fractional exponents, remember Power on top, Root on bottom. For absolute value equations, isolate the bars first: if the bars equal a negative number, there is immediately no solution.",
+      "vi": "Với phương trình căn thức, bình phương hai vế có thể sinh ra nghiệm ngoại lai, vì vậy luôn phải thử lại để chắc chắn vế không chứa căn không âm. Với lũy thừa phân số, tử số là số mũ còn mẫu số là bậc căn. Với giá trị tuyệt đối, luôn cô lập dấu trị tuyệt đối trước: nếu bằng một số âm thì kết luận ngay vô nghiệm.",
+      "duration": 41.75,
+      "startTime": 65.12,
+      "endTime": 106.87,
+      "audioUrl": "/audio/lectures/sat_math/m2_4/rad_abs.mp3"
+    },
+    {
+      "id": "transform",
+      "title": "Phép biến đổi hàm f(x − h) + k",
+      "selector": "#sec-transform",
+      "en": "For function transformations, remember inside is opposite and outside is direct. Adding k outside shifts the graph up k units. Replacing x with x minus h inside shifts the graph right by h units, while x plus h shifts it left by h units.",
+      "vi": "Với phép tịnh tiến đồ thị, hãy nhớ câu thần chú trong ngoặc đi ngược, ngoài ngoặc đi xuôi. Cộng k bên ngoài sẽ đẩy đồ thị lên trên k đơn vị. Còn bên trong ngoặc, x trừ h là dịch sang phải h đơn vị, trong khi x cộng h lại dịch sang trái h đơn vị.",
+      "duration": 33.9,
+      "startTime": 106.87,
+      "endTime": 140.77,
+      "audioUrl": "/audio/lectures/sat_math/m2_4/transform.mp3"
+    }
+  ]
+}

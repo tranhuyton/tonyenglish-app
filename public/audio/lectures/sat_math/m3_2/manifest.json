@@ -1,0 +1,66 @@
+{
+  "lectureId": "8b787d64-6f9b-4fd5-bd3d-3a880856ef46",
+  "courseTitle": "Digital SAT 1500+ (Math)",
+  "lectureTitle": "3.2 Statistics, Probability, Margin of Error & Study Design",
+  "totalDuration": 164.58,
+  "majorSections": [
+    {
+      "title": "Mean, Median & Standard Deviation",
+      "startSegmentId": "stats"
+    },
+    {
+      "title": "Xác suất có điều kiện & Residuals",
+      "startSegmentId": "prob"
+    },
+    {
+      "title": "Margin of Error & Study Design",
+      "startSegmentId": "moe"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Tổng quan Thống kê, Xác suất & Thiết kế Nghiên cứu",
+      "selector": "#sec-header",
+      "en": "Data analysis and statistics reward conceptual clarity over heavy calculation. On the Digital SAT, understanding how shifts affect standard deviation, how conditional probability restricts the denominator, and what random assignment proves will earn you fast, guaranteed points.",
+      "vi": "Phần Thống kê và Xác suất trên Digital SAT ưu tiên sự sắc bén về bản chất hơn là tính toán nặng. Chỉ cần hiểu rõ độ lệch chuẩn đổi ra sao khi cộng hằng số, mẫu số xác suất có điều kiện là gì và sự khác nhau giữa chọn mẫu ngẫu nhiên với phân nhóm ngẫu nhiên, bạn sẽ ăn trọn điểm mảng này rất nhanh.",
+      "duration": 35.25,
+      "startTime": 0.0,
+      "endTime": 35.25,
+      "audioUrl": "/audio/lectures/sat_math/m3_2/intro.mp3"
+    },
+    {
+      "id": "stats",
+      "title": "Mean, Median, SD & Quy tắc Dịch chuyển",
+      "selector": "#sec-stats",
+      "en": "Standard deviation measures how spread out data points are from the mean. If you add a constant c to every data point, the mean and median both increase by c, while the range and standard deviation stay completely unchanged because the spacing between values did not change. Removing an extreme outlier pulls the mean sharply and lowers the standard deviation, while barely moving the median.",
+      "vi": "Độ lệch chuẩn đo mức độ phân tán của các số liệu quanh giá trị trung bình. Khi bạn cộng cùng một hằng số c vào mọi phần tử, cả mean và median đều tăng thêm c, nhưng range và độ lệch chuẩn hoàn toàn không đổi vì khoảng cách giữa các số giữ nguyên. Còn khi xóa bỏ một giá trị ngoại lai outlier, mean thay đổi mạnh và độ lệch chuẩn giảm mạnh, trong khi median hầu như ít đổi.",
+      "duration": 46.53,
+      "startTime": 35.25,
+      "endTime": 81.78,
+      "audioUrl": "/audio/lectures/sat_math/m3_2/stats.mp3"
+    },
+    {
+      "id": "prob",
+      "title": "Xác suất có điều kiện & Residuals",
+      "selector": "#sec-prob",
+      "en": "In two-way probability tables, look for conditional phrasing like given that or if a member of group A is chosen at random. That condition shrinks your denominator from the grand total down to just that specific row or column total. On scatterplots, a residual equals the actual observed y value minus the line of best fit predicted y value.",
+      "vi": "Trong bảng xác suất hai chiều, hãy soi kỹ các cụm điều kiện như given that hoặc nếu chọn ngẫu nhiên một người trong nhóm A. Khi đó mẫu số không phải tổng toàn bảng mà thu gọn lại đúng tổng của hàng hoặc cột điều kiện đó. Trên biểu đồ phân tán, phần dư residual bằng giá trị thực tế trừ giá trị dự đoán trên đường xu hướng.",
+      "duration": 39.9,
+      "startTime": 81.78,
+      "endTime": 121.68,
+      "audioUrl": "/audio/lectures/sat_math/m3_2/prob.mp3"
+    },
+    {
+      "id": "moe",
+      "title": "Margin of Error & Random Selection vs Assignment",
+      "selector": "#sec-moe",
+      "en": "A margin of error creates a range of plausible values for the sampled population, never a hundred-percent guarantee, and larger sample sizes produce smaller margins of error. Finally, remember the golden rule of study design: random selection allows you to generalize to that exact population, while only random assignment in an experiment allows you to claim cause and effect.",
+      "vi": "Sai số biên tạo ra một khoảng giá trị hợp lý plausible values cho đúng quần thể được lấy mẫu, tuyệt đối không phải khẳng định chắc chắn trăm phần trăm, và cỡ mẫu càng lớn thì sai số biên càng nhỏ. Cuối cùng, nhớ quy tắc vàng: chọn mẫu ngẫu nhiên cho phép suy rộng ra đúng quần thể đó, còn chỉ có phân nhóm ngẫu nhiên trong thí nghiệm mới được phép kết luận quan hệ nhân quả.",
+      "duration": 42.9,
+      "startTime": 121.68,
+      "endTime": 164.58,
+      "audioUrl": "/audio/lectures/sat_math/m3_2/moe.mp3"
+    }
+  ]
+}

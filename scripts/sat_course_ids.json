@@ -6,13 +6,21 @@
     "rw_m2": "dddb717d-2e4e-451e-9b21-12395e7b953b",
     "rw_m3": "8607d21b-57eb-402d-ab1b-b88b5f9aba03",
     "rw_m4": "beceac49-6721-443d-a162-9e0688701b18",
-    "rw_m5": "3fd9786b-a3e7-47f9-be90-d111ddb54964"
+    "rw_m5": "3fd9786b-a3e7-47f9-be90-d111ddb54964",
+    "math_m1": "9a5550f6-8568-4385-8ae3-cbe5f4d597cf",
+    "math_m2": "7f9ffbf5-7462-4182-972f-7442d1962abd",
+    "math_m3": "d85a1a1e-2b65-40a6-b7a9-c098b60ae86b",
+    "math_m4": "149c64b9-96f8-4b83-a0ba-a48e52c979e6"
   },
   "folders": {
     "rw_root": "5b9c521c-0944-4918-89e7-2d69f0f31a17",
     "rw_drills": "05a5dd52-660f-4c37-b7ed-800cbad9244d",
     "rw_mocks": "9c1414db-7cf8-480f-af64-b439db6c975b",
-    "rw_vocab": "040aaca0-a8bb-4c20-835b-28357f11fefb"
+    "rw_vocab": "040aaca0-a8bb-4c20-835b-28357f11fefb",
+    "math_root": "2002ed35-7cde-4d8d-8569-c10ad2cb27c5",
+    "math_drills": "4b2ad6f4-aa26-472c-803b-003eea68fbe5",
+    "math_mocks": "1c39a172-fa5a-4199-acef-2da0b5a9cd8a",
+    "math_games": "5ce90bd0-54ec-436f-a0bf-e5857190546a"
   },
   "lectures": {
     "1_1": "762e8fcc-2bb8-4809-a1be-3e2356caf576",
@@ -67,5 +75,43 @@
     "sat_vocab_08": "9444323e-2bfd-4ec4-95e3-d6767dd96d36",
     "sat_vocab_09": "0b1021bc-811d-4cee-a604-ea32b08e1d0c",
     "sat_vocab_10": "81727bcc-b583-45af-9e9d-320f17efa004"
+  },
+  "math_lectures": {
+    "m1_1": "265277b7-5b30-4d6a-97af-eadc6ee2c4ed",
+    "m1_2": "d9f97cd0-2b8d-448f-9c97-b5f1867eccd4",
+    "m1_3": "ba597e4d-2c87-43ee-9c28-6d78155b3c99",
+    "m2_1": "a8675f9b-ac8f-4f0b-be91-638c549357b2",
+    "m2_2": "6b70c3a3-98ea-41c1-88ad-c2d28076d88e",
+    "m2_3": "89e4f31d-0101-448a-a2b4-41aa6e3d1d8f",
+    "m2_4": "631197e5-ec02-4224-8d4a-63a152fcc416",
+    "m3_1": "edfd6d4e-90ac-4ee0-b005-6a9e9f7af02c",
+    "m3_2": "8b787d64-6f9b-4fd5-bd3d-3a880856ef46",
+    "m4_1": "7389328b-e5ab-46e7-b67d-c5a22db3787b",
+    "m4_2": "6195da02-0b58-4df2-bedd-defeb99999e8",
+    "m4_3": "2182c73d-37ce-4864-802e-d5d57a2dd5d0"
+  },
+  "math_drills": {
+    "drill_m1_1": "f97b95d5-2d64-421f-b23d-7a63dabd6807",
+    "drill_m1_2": "d26cbb32-2195-42fa-85e5-9d416d1a0ce7",
+    "drill_m1_3": "7a6a74e9-8f00-48d5-b885-106f60fd2054",
+    "drill_m2_1": "963dff5f-65f9-42fc-bbc9-6d5cb542deb6",
+    "drill_m2_2": "edbc41f9-52cd-49bb-8ced-b470102e8d2a",
+    "drill_m2_3": "9384a984-1064-4650-bfcc-d7679d6e6a33",
+    "drill_m2_4": "92cbb5be-e68b-4046-b8d6-e1637d560331",
+    "drill_m3_1": "1f622994-e57e-42e6-b84b-8d842ea5b013",
+    "drill_m3_2": "cd82b4a1-3816-4a4e-8dcc-4dcb12b5fa05",
+    "drill_m4_1": "73acab91-7527-4e77-82bf-f55ceb4f5a0d",
+    "drill_m4_2": "289f1d91-16c2-40cb-9784-74936b2ac9b7",
+    "drill_m4_3": "77efe042-0ae5-4cfe-94c3-02ca7586ed79"
+  },
+  "math_mocks": {
+    "math_mock_01": "90fc52bf-ccc4-4423-a3cd-c41fd76d1810",
+    "math_mock_02": "4f48d9f5-6115-4dc5-a0c2-d261e5ae107c",
+    "math_mock_03": "7b95ad1a-1673-40e9-9d7f-021194d89d10",
+    "math_mock_04": "f12f3c69-2138-4d2e-9837-9e55770c1abc"
+  },
+  "math_games": {
+    "sat_math_game_01": "b8a0d916-9f86-4772-ad7f-301c31d69f83",
+    "sat_math_game_02": "c3d0df56-28f1-4879-8e91-084b83235413"
   }
 }

@@ -1,0 +1,66 @@
+{
+  "lectureId": "2182c73d-37ce-4864-802e-d5d57a2dd5d0",
+  "courseTitle": "Digital SAT 1500+ (Math)",
+  "lectureTitle": "4.3 Trigonometry (SOH-CAH-TOA, Cofunctions) & 3D Solid Scaling",
+  "totalDuration": 155.65,
+  "majorSections": [
+    {
+      "title": "SOH-CAH-TOA & sin A = cos B",
+      "startSegmentId": "sohcahtoa"
+    },
+    {
+      "title": "Góc đặc biệt & Radian",
+      "startSegmentId": "unitcircle"
+    },
+    {
+      "title": "Luật tỉ lệ 3D k : k² : k³",
+      "startSegmentId": "solids"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Tổng quan Lượng giác & Hình khối 3D 800",
+      "selector": "#sec-header",
+      "en": "Welcome to the final Math theory lesson! Trigonometry and 3D solid scaling appear right at the top of Hard Module Two, yet once you recognize the complementary angle identity and the k, k-squared, k-cubed scaling ladder, these become some of the cleanest questions on the test.",
+      "vi": "Chào mừng bạn đến với bài giảng lý thuyết cuối cùng của khóa SAT Math 1500 Plus! Lượng giác và tỉ lệ hình khối 3D thường là những câu chốt ở cuối Module 2 Hard, nhưng một khi nắm chắc định lý góc phụ nhau và bậc thang tỉ lệ k, k bình, k lập phương, đây lại là những câu cực kỳ gọn và đẹp.",
+      "duration": 33.88,
+      "startTime": 0.0,
+      "endTime": 33.88,
+      "audioUrl": "/audio/lectures/sat_math/m4_3/intro.mp3"
+    },
+    {
+      "id": "sohcahtoa",
+      "title": "SOH-CAH-TOA, Góc phụ nhau & Tính bất biến",
+      "selector": "#sec-sohcahtoa",
+      "en": "Beyond basic SOH-CAH-TOA, remember two high-yield SAT rules. First, for complementary angles that add up to ninety degrees, the sine of one angle always equals the cosine of the other. Second, trigonometric ratios depend solely on angle size—if two right triangles are similar, their sines, cosines, and tangents are identical even if one triangle is five times larger.",
+      "vi": "Bên cạnh công thức sin cos tan cơ bản, hãy khắc cốt ghi tâm hai quy tắc vàng. Thứ nhất, với hai góc nhọn phụ nhau có tổng bằng 90 độ thì sin góc này luôn bằng cos góc kia. Thứ hai, tỉ số lượng giác chỉ phụ thuộc vào số đo góc: hai tam giác vuông đồng dạng dù kích thước lớn gấp 5 lần nhau vẫn có giá trị sin, cos và tan hoàn toàn bằng nhau.",
+      "duration": 47.03,
+      "startTime": 33.88,
+      "endTime": 80.91,
+      "audioUrl": "/audio/lectures/sat_math/m4_3/sohcahtoa.mp3"
+    },
+    {
+      "id": "unitcircle",
+      "title": "Góc lượng giác đặc biệt & Cài đặt Desmos",
+      "selector": "#sec-unitcircle",
+      "en": "Know the exact sine and cosine values for pi over six, pi over four, and pi over three. And remember to check the wrench icon in Desmos to make sure you are in Radian or Degree mode before evaluating any trig function.",
+      "vi": "Thuộc nằm lòng bảng giá trị lượng giác của các góc 30, 45 và 60 độ dưới dạng radian. Và khi kiểm tra bằng Desmos, luôn bấm vào biểu tượng cài đặt cờ lê góc phải để chọn đúng chế độ Radian hoặc Degree trước khi tính.",
+      "duration": 28.38,
+      "startTime": 80.91,
+      "endTime": 109.29,
+      "audioUrl": "/audio/lectures/sat_math/m4_3/unitcircle.mp3"
+    },
+    {
+      "id": "solids",
+      "title": "Luật Tỉ lệ 3D k : k² : k³",
+      "selector": "#sec-solids",
+      "en": "All volume formulas are provided in the Bluebook Reference Sheet. What you must master is the 3D scaling ladder: for any two similar solids, if lengths scale by k, surface areas scale by k squared, and volumes scale by k cubed. If you are given a surface area ratio first, take the square root to find k, and then cube k to get the volume ratio.",
+      "vi": "Mọi công thức thể tích hình trụ, nón, cầu, chóp đều có sẵn trong bảng Reference Sheet của Bluebook. Điều bạn cần thuộc nằm lòng là bậc thang tỉ lệ 3D: khi hai khối đồng dạng có tỉ lệ cạnh là k thì tỉ lệ diện tích toàn phần là k bình phương và tỉ lệ thể tích là k lập phương. Nếu đề cho tỉ lệ diện tích trước, hãy lấy căn bậc hai để tìm k, sau đó lập phương lên để ra tỉ lệ thể tích.",
+      "duration": 46.36,
+      "startTime": 109.29,
+      "endTime": 155.65,
+      "audioUrl": "/audio/lectures/sat_math/m4_3/solids.mp3"
+    }
+  ]
+}

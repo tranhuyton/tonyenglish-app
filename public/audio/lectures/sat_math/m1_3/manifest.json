@@ -1,0 +1,66 @@
+{
+  "lectureId": "ba597e4d-2c87-43ee-9c28-6d78155b3c99",
+  "courseTitle": "Digital SAT 1500+ (Math)",
+  "lectureTitle": "1.3 Linear Inequalities, Systems of Inequalities & Feasible Regions",
+  "totalDuration": 154.36,
+  "majorSections": [
+    {
+      "title": "Đổi chiều dấu & Bẫy số nguyên",
+      "startSegmentId": "flip"
+    },
+    {
+      "title": "Miền nghiệm 2 ẩn & Desmos",
+      "startSegmentId": "quadrants"
+    },
+    {
+      "title": "Quy tắc Đỉnh giao điểm Hard M2",
+      "startSegmentId": "param_ineq"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Tổng quan Bất phương trình tuyến tính",
+      "selector": "#sec-header",
+      "en": "Linear inequalities test precision. One flipped sign, one careless rounding step, or one missed dashed boundary line can cost you ten points. Let us lock down every inequality rule and Desmos visual trick.",
+      "vi": "Bất phương trình bậc nhất là bài kiểm tra sự cẩn thận tuyệt đối. Chỉ cần quên đổi chiều dấu, làm tròn nhầm hướng hoặc nhầm đường biên nét đứt với nét liền là mất ngay 10 điểm. Chúng ta sẽ khóa chặt mọi quy tắc và mẹo Desmos cho chuyên đề này.",
+      "duration": 28.74,
+      "startTime": 0.0,
+      "endTime": 28.74,
+      "audioUrl": "/audio/lectures/sat_math/m1_3/intro.mp3"
+    },
+    {
+      "id": "flip",
+      "title": "Đổi chiều dấu & Bẫy làm tròn số nguyên",
+      "selector": "#sec-flip",
+      "en": "Whenever you multiply or divide both sides of an inequality by a negative number, immediately flip the inequality sign. In word problems, translate at least as greater than or equal to, and at most as less than or equal to. For integer constraints, never blindly round to the nearest integer: if x is at most fourteen point eight, the maximum integer is fourteen, not fifteen.",
+      "vi": "Mỗi khi nhân hoặc chia hai vế cho số âm, phải đảo chiều dấu ngay lập tức. Trong bài toán lời văn, at least là lớn hơn hoặc bằng, còn at most là nhỏ hơn hoặc bằng. Đặc biệt với điều kiện số nguyên, tuyệt đối không làm tròn theo kiểu gần nhất: nếu x nhỏ hơn hoặc bằng 14 phẩy 8 thì số nguyên lớn nhất là 14, còn nếu n lớn hơn hoặc bằng 6 phẩy 2 thì số nguyên nhỏ nhất phải là 7.",
+      "duration": 48.38,
+      "startTime": 28.74,
+      "endTime": 77.12,
+      "audioUrl": "/audio/lectures/sat_math/m1_3/flip.mp3"
+    },
+    {
+      "id": "quadrants",
+      "title": "Miền nghiệm 2 ẩn & Desmos Shading",
+      "selector": "#sec-quadrants",
+      "en": "For two-variable systems of inequalities, type both inequalities directly into Desmos. The overlapping darkest shaded region is your feasible region. You can visually spot which quadrant contains no solutions in three seconds. Just remember that points sitting right on a dashed line are not solutions.",
+      "vi": "Với hệ bất phương trình hai ẩn, hãy gõ thẳng cả hai bất phương trình vào Desmos. Vùng tô màu đậm nhất chồng lên nhau chính là miền nghiệm chung. Bạn sẽ nhìn ra ngay góc phần tư nào không có nghiệm nào chỉ trong 3 giây. Chỉ cần nhớ điểm nằm trên đường nét đứt không thuộc miền nghiệm.",
+      "duration": 36.18,
+      "startTime": 77.12,
+      "endTime": 113.3,
+      "audioUrl": "/audio/lectures/sat_math/m1_3/quadrants.mp3"
+    },
+    {
+      "id": "param_ineq",
+      "title": "Quy tắc Đỉnh giao điểm cho câu Max/Min Hard M2",
+      "selector": "#sec-param-ineq",
+      "en": "On Hard Module Two, you are often asked for the maximum or minimum possible value of y, x, or a linear combination inside a feasible region. By the Corner-Point Rule, extreme values of linear systems always occur at the intersection vertex of the boundary lines. Set the boundary equations equal, or click the vertex directly in Desmos.",
+      "vi": "Trong Module 2 Hard, đề hay hỏi giá trị lớn nhất hoặc nhỏ nhất của y hoặc x trong miền nghiệm của hai bất phương trình. Theo quy tắc Đỉnh giao điểm, giá trị cực trị luôn xảy ra ngay tại giao điểm của hai đường biên. Chỉ cần cho hai đường biên bằng nhau hoặc bấm vào đỉnh giao điểm trên Desmos là ra ngay đáp án.",
+      "duration": 41.06,
+      "startTime": 113.3,
+      "endTime": 154.36,
+      "audioUrl": "/audio/lectures/sat_math/m1_3/param_ineq.mp3"
+    }
+  ]
+}

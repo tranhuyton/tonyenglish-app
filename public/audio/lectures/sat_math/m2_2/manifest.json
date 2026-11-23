@@ -1,0 +1,66 @@
+{
+  "lectureId": "6b70c3a3-98ea-41c1-88ad-c2d28076d88e",
+  "courseTitle": "Digital SAT 1500+ (Math)",
+  "lectureTitle": "2.2 Polynomials, Factor Theorem & Rational Equations",
+  "totalDuration": 130.09,
+  "majorSections": [
+    {
+      "title": "Định lý Nhân tử & Số dư",
+      "startSegmentId": "factor"
+    },
+    {
+      "title": "Đồng nhất hệ số",
+      "startSegmentId": "matching"
+    },
+    {
+      "title": "Phân thức & Nghiệm ngoại lai",
+      "startSegmentId": "rational"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Tổng quan Đa thức & Phân thức",
+      "selector": "#sec-header",
+      "en": "Polynomials and rational equations look intimidating because of long algebraic expressions, yet the SAT tests a remarkably clean set of structural ideas: the Factor Theorem, matching coefficients, and checking for extraneous roots.",
+      "vi": "Đa thức và phương trình phân thức trông có vẻ cồng kềnh với nhiều biểu thức dài, nhưng thực chất SAT chỉ xoay quanh ba ý tưởng cấu trúc rất gọn: Định lý nhân tử, đồng nhất hệ số và kiểm tra nghiệm ngoại lai.",
+      "duration": 26.22,
+      "startTime": 0.0,
+      "endTime": 26.22,
+      "audioUrl": "/audio/lectures/sat_math/m2_2/intro.mp3"
+    },
+    {
+      "id": "factor",
+      "title": "Định lý Nhân tử & Bội nghiệm",
+      "selector": "#sec-factor",
+      "en": "The Factor Theorem states that x minus a is a factor of polynomial p of x if and only if p of a equals zero. More generally, the remainder when dividing p of x by x minus a is simply p of a. On graphs, odd-multiplicity roots cross the x-axis, while even-multiplicity roots touch and bounce off the x-axis.",
+      "vi": "Định lý nhân tử khẳng định x trừ a là nhân tử của đa thức p x khi và chỉ khi p tại a bằng 0. Tổng quát hơn, số dư khi chia p x cho x trừ a chính bằng p tại a. Trên đồ thị, nghiệm bội lẻ sẽ cắt xuyên qua trục hoành, còn nghiệm bội chẵn sẽ chạm trục hoành rồi bật ngược lại.",
+      "duration": 38.54,
+      "startTime": 26.22,
+      "endTime": 64.76,
+      "audioUrl": "/audio/lectures/sat_math/m2_2/factor.mp3"
+    },
+    {
+      "id": "matching",
+      "title": "Đồng nhất hệ số & Hằng đẳng thức",
+      "selector": "#sec-matching",
+      "en": "When two polynomial expressions are stated to be equivalent for all values of x, expand both sides and match the coefficients of x squared, x, and the constant term separately. Also stay alert for disguised differences of squares like x to the fourth minus sixteen.",
+      "vi": "Khi hai đa thức bằng nhau với mọi x, hãy khai triển rồi đồng nhất từng hệ số của x bình, x và hằng số tự do. Đừng quên nhận diện nhanh hiệu hai bình phương ngụy trang ở bậc cao như x mũ bốn trừ mười sáu.",
+      "duration": 29.7,
+      "startTime": 64.76,
+      "endTime": 94.46,
+      "audioUrl": "/audio/lectures/sat_math/m2_2/matching.mp3"
+    },
+    {
+      "id": "rational",
+      "title": "Phương trình phân thức & Nghiệm ngoại lai",
+      "selector": "#sec-rational",
+      "en": "After clearing denominators in a rational equation, always plug your candidate solutions back into the original denominators. Any value that makes a denominator equal to zero is an extraneous root and must be rejected. In Desmos, graphing both sides automatically avoids extraneous intersections.",
+      "vi": "Sau khi quy đồng khử mẫu trong phương trình phân thức, bắt buộc phải thế nghiệm ngược lại kiểm tra mẫu số ban đầu. Bất kỳ giá trị nào làm mẫu bằng không đều là nghiệm ngoại lai và phải loại bỏ. Mẹo nhanh trên Desmos là vẽ cả hai vế để thấy đúng các giao điểm hợp lệ.",
+      "duration": 35.63,
+      "startTime": 94.46,
+      "endTime": 130.09,
+      "audioUrl": "/audio/lectures/sat_math/m2_2/rational.mp3"
+    }
+  ]
+}

@@ -254,6 +254,22 @@ const LECTURE_MANIFEST_MAP: Record<string, string> = {
   '987fafaa-1b5b-4465-8b15-42726144a03f': '/audio/lectures/sat_rw/5_3/manifest.json', // 5.3 Command of Evidence — Literary & Historical Quotations
   '2a04e519-685c-433a-8064-378947cdc9cb': '/audio/lectures/sat_rw/5_4/manifest.json', // 5.4 Command of Evidence — Quantitative Charts & Tables
   '6a789ece-9e81-434c-a54c-39200c650561': '/audio/lectures/sat_rw/5_5/manifest.json', // 5.5 Inferences: Tight Deductive Completion (1-Millimeter Rule)
+
+  // =========================================================================
+  // DIGITAL SAT 1500+ — MATH BILINGUAL AUDIO LECTURES (US-EN + VI)
+  // =========================================================================
+  '265277b7-5b30-4d6a-97af-eadc6ee2c4ed': '/audio/lectures/sat_math/m1_1/manifest.json', // 1.1 Desmos 800 Speed Playbook & Linear Equations/Systems
+  'd9f97cd0-2b8d-448f-9c97-b5f1867eccd4': '/audio/lectures/sat_math/m1_2/manifest.json', // 1.2 Linear Functions, Slope-Intercept Models & Word Problems
+  'ba597e4d-2c87-43ee-9c28-6d78155b3c99': '/audio/lectures/sat_math/m1_3/manifest.json', // 1.3 Linear Inequalities, Systems of Inequalities & Feasible Regions
+  'a8675f9b-ac8f-4f0b-be91-638c549357b2': '/audio/lectures/sat_math/m2_1/manifest.json', // 2.1 Quadratics Mastery: Discriminant, Vertex Form & Vieta
+  '6b70c3a3-98ea-41c1-88ad-c2d28076d88e': '/audio/lectures/sat_math/m2_2/manifest.json', // 2.2 Polynomials, Factor Theorem & Rational Equations
+  '89e4f31d-0101-448a-a2b4-41aa6e3d1d8f': '/audio/lectures/sat_math/m2_3/manifest.json', // 2.3 Exponential Growth/Decay & Compound Scaling
+  '631197e5-ec02-4224-8d4a-63a152fcc416': '/audio/lectures/sat_math/m2_4/manifest.json', // 2.4 Nonlinear Systems, Radicals, Absolute Value & Transformations
+  'edfd6d4e-90ac-4ee0-b005-6a9e9f7af02c': '/audio/lectures/sat_math/m3_1/manifest.json', // 3.1 Ratios, Rates, Squared/Cubed Units & Percent Traps
+  '8b787d64-6f9b-4fd5-bd3d-3a880856ef46': '/audio/lectures/sat_math/m3_2/manifest.json', // 3.2 Statistics, Probability, Margin of Error & Study Design
+  '7389328b-e5ab-46e7-b67d-c5a22db3787b': '/audio/lectures/sat_math/m4_1/manifest.json', // 4.1 Triangles, Parallel Lines, Similarity & Special Right Triangles
+  '6195da02-0b58-4df2-bedd-defeb99999e8': '/audio/lectures/sat_math/m4_2/manifest.json', // 4.2 Circle Equations, Completing the Square, Arcs & Radians
+  '2182c73d-37ce-4864-802e-d5d57a2dd5d0': '/audio/lectures/sat_math/m4_3/manifest.json', // 4.3 Trigonometry (SOH-CAH-TOA, Cofunctions) & 3D Solid Scaling
 };
 
 type LectureVideoItem = { title: string; videoId: string };

@@ -1,0 +1,66 @@
+{
+  "lectureId": "edfd6d4e-90ac-4ee0-b005-6a9e9f7af02c",
+  "courseTitle": "Digital SAT 1500+ (Math)",
+  "lectureTitle": "3.1 Ratios, Rates, Squared/Cubed Units & Percent Traps",
+  "totalDuration": 125.28,
+  "majorSections": [
+    {
+      "title": "Đổi đơn vị Bình/Lập phương",
+      "startSegmentId": "units"
+    },
+    {
+      "title": "Phần trăm & Mẹo đặt 100",
+      "startSegmentId": "percent"
+    },
+    {
+      "title": "Density & Average Speed",
+      "startSegmentId": "density"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Tổng quan Tỉ lệ, Đơn vị & Phần trăm 800",
+      "selector": "#sec-header",
+      "en": "Problem-Solving and Data Analysis looks straightforward, yet it hides two of the deadliest wording traps on the SAT: squared or cubed unit conversions and the difference between p percent of versus p percent greater than.",
+      "vi": "Chuyên đề Tỉ lệ và Phần trăm tưởng chừng dễ ăn điểm, nhưng lại ẩn chứa hai cái bẫy ngôn từ nguy hiểm nhất đề SAT: đổi đơn vị diện tích, thể tích và sự khác biệt giữa p phần trăm của với lớn hơn p phần trăm.",
+      "duration": 25.34,
+      "startTime": 0.0,
+      "endTime": 25.34,
+      "audioUrl": "/audio/lectures/sat_math/m3_1/intro.mp3"
+    },
+    {
+      "id": "units",
+      "title": "Bẫy Đổi đơn vị Diện tích & Thể tích",
+      "selector": "#sec-units",
+      "en": "Whenever you convert area units like square inches to square feet, you must square the linear conversion factor. One foot is twelve inches, so one square foot is one hundred forty-four square inches, not twelve. For volume conversions, cube the linear factor.",
+      "vi": "Mỗi khi đổi đơn vị diện tích như từ inch vuông sang feet vuông, bạn bắt buộc phải bình phương hệ số quy đổi chiều dài. Một foot bằng 12 inch, nên một foot vuông phải bằng 144 inch vuông chứ không phải 12. Tương tự với thể tích thì phải lập phương hệ số.",
+      "duration": 32.42,
+      "startTime": 25.34,
+      "endTime": 57.76,
+      "audioUrl": "/audio/lectures/sat_math/m3_1/units.mp3"
+    },
+    {
+      "id": "percent",
+      "title": "Ngôn ngữ phần trăm & Mẹo đặt 100",
+      "selector": "#sec-percent",
+      "en": "Read percent wording like a lawyer. A is one hundred fifty percent of B means multiply B by one point five. But A is one hundred fifty percent greater than B means add one hundred fifty percent on top of one hundred percent, multiplying B by two point five! For successive percent changes, multiply the factors rather than adding percentages, and plug in one hundred for algebraic percent chains.",
+      "vi": "Đọc từ ngữ phần trăm phải chính xác tuyệt đối. A bằng 150 phần trăm của B là nhân với 1 phẩy 5. Nhưng A lớn hơn B 150 phần trăm nghĩa là cộng thêm 150 phần trăm vào 100 phần trăm gốc, tức phải nhân với 2 phẩy 5! Với chuỗi phần trăm liên tiếp, hãy nhân các hệ số và đặt ẩn cuối bằng 100 để tính nhẩm trong 5 giây.",
+      "duration": 46.05,
+      "startTime": 57.76,
+      "endTime": 103.81,
+      "audioUrl": "/audio/lectures/sat_math/m3_1/percent.mp3"
+    },
+    {
+      "id": "density",
+      "title": "Khối lượng riêng & Vận tốc trung bình",
+      "selector": "#sec-density",
+      "en": "Remember density equals mass divided by volume, and average speed always equals total distance divided by total time—never average the two speeds directly when the travel times differ.",
+      "vi": "Nhớ công thức khối lượng riêng bằng khối lượng chia thể tích, và vận tốc trung bình luôn bằng tổng quãng đường chia tổng thời gian, tuyệt đối không lấy trung bình cộng hai vận tốc.",
+      "duration": 21.47,
+      "startTime": 103.81,
+      "endTime": 125.28,
+      "audioUrl": "/audio/lectures/sat_math/m3_1/density.mp3"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "lectureId": "265277b7-5b30-4d6a-97af-eadc6ee2c4ed",
+  "courseTitle": "Digital SAT 1500+ (Math)",
+  "lectureTitle": "1.1 Desmos 800 Speed Playbook & Linear Equations/Systems",
+  "totalDuration": 199.62,
+  "majorSections": [
+    {
+      "title": "Cấu trúc 44 câu & 4 Domains",
+      "startSegmentId": "blueprint"
+    },
+    {
+      "title": "4 Vũ khí Desmos 10 giây",
+      "startSegmentId": "desmos"
+    },
+    {
+      "title": "Hệ phương trình tham số",
+      "startSegmentId": "systems"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Tổng quan Digital SAT Math 1500+",
+      "selector": "#sec-header",
+      "en": "Welcome to Digital SAT Math 1500 Plus! To reach 780 to 800 on the Math section, you need two superpowers: rock-solid algebraic intuition and ruthless speed with the built-in Desmos graphing calculator. Let us unlock both right now.",
+      "vi": "Chào mừng bạn đến với khóa Digital SAT Math 1500 Plus! Để chạm ngưỡng 780 đến 800 điểm Toán, bạn cần hai siêu năng lực: tư duy đại số sắc bén và tốc độ làm chủ máy tính đồ thị Desmos tích hợp sẵn. Chúng ta bắt đầu ngay bài học nền tảng quan trọng nhất này.",
+      "duration": 33.35,
+      "startTime": 0.0,
+      "endTime": 33.35,
+      "audioUrl": "/audio/lectures/sat_math/m1_1/intro.mp3"
+    },
+    {
+      "id": "blueprint",
+      "title": "Cấu trúc 44 câu & 4 Content Domains",
+      "selector": "#sec-blueprint",
+      "en": "Digital SAT Math consists of two thirty-five-minute modules with twenty-two questions each. Seventy percent of the test comes from Algebra and Advanced Math, while the remaining thirty percent covers Problem Solving, Data Analysis, Geometry, and Trigonometry. Aim to finish the first fifteen questions of Hard Module Two in fifteen minutes so you save twenty full minutes for the toughest seven questions at the end.",
+      "vi": "Phần Toán gồm 2 module, mỗi module 22 câu trong 35 phút, tức trung bình 95 giây một câu. Có tới 70 phần trăm đề thi nằm ở hai mảng Algebra và Advanced Math, 30 phần trăm còn lại là Data Analysis và Geometry. Bí quyết đạt 800 là ở Module 2 Hard, hãy xử lý gọn 15 câu đầu trong 15 phút để dành trọn 20 phút cho 7 câu khó nhất ở cuối.",
+      "duration": 48.95,
+      "startTime": 33.35,
+      "endTime": 82.3,
+      "audioUrl": "/audio/lectures/sat_math/m1_1/blueprint.mp3"
+    },
+    {
+      "id": "desmos",
+      "title": "4 Vũ khí Desmos 10 giây",
+      "selector": "#sec-desmos",
+      "en": "Desmos is allowed on every single Math question. Master four moves: first, graph two equations and click the gray intersection dot. Second, enter a table of points and run a tilde regression to find exact linear or quadratic coefficients instantly. Third, add sliders for unknown constants like k. Fourth, graph equivalent expressions to verify they overlap completely. Always replace variables like t or n with x and y so Desmos plots them properly.",
+      "vi": "Desmos được dùng xuyên suốt cả bài thi Toán. Hãy thuộc nằm lòng 4 tuyệt chiêu: một là vẽ 2 phương trình rồi bấm thẳng chấm xám giao điểm; hai là nhập bảng dữ liệu rồi dùng dấu ngã hồi quy để tìm hệ số m, b, a, c trong 3 giây; ba là dùng thanh trượt slider cho tham số k; bốn là vẽ 2 hàm f x và g x xem có trùng khít không để kiểm tra biểu thức tương đương. Nhớ luôn đổi các ẩn t, n, p thành x và y khi gõ vào Desmos.",
+      "duration": 58.91,
+      "startTime": 82.3,
+      "endTime": 141.21,
+      "audioUrl": "/audio/lectures/sat_math/m1_1/desmos.mp3"
+    },
+    {
+      "id": "systems",
+      "title": "Hệ phương trình tham số & Mẹo ghép biểu thức",
+      "selector": "#sec-systems",
+      "en": "For a linear system in standard form, compare the coefficient ratios. If a one over a two equals b one over b two, the lines have the same slope. If that ratio does not equal c one over c two, the lines are parallel and there is no solution. If all three ratios are equal, the lines coincide and there are infinitely many solutions. Also, when a question asks for an expression like two x plus two y, try adding or subtracting the equations directly before solving for x and y individually.",
+      "vi": "Với hệ phương trình bậc nhất dạng chuẩn, đừng biến đổi rườm rà mà hãy so thẳng tỉ số hệ số. Khi a một trên a hai bằng b một trên b hai nhưng khác c một trên c hai, hai đường thẳng song song nên hệ vô nghiệm. Khi cả ba tỉ số bằng nhau, hai đường thẳng trùng nhau nên hệ có vô số nghiệm. Ngoài ra, khi đề hỏi trực tiếp một biểu thức như 2x cộng 2y, hãy thử cộng hoặc trừ hai phương trình trước khi mất công tìm lẻ từng ẩn.",
+      "duration": 58.41,
+      "startTime": 141.21,
+      "endTime": 199.62,
+      "audioUrl": "/audio/lectures/sat_math/m1_1/systems.mp3"
+    }
+  ]
+}

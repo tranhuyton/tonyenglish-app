@@ -1,0 +1,66 @@
+{
+  "lectureId": "7389328b-e5ab-46e7-b67d-c5a22db3787b",
+  "courseTitle": "Digital SAT 1500+ (Math)",
+  "lectureTitle": "4.1 Triangles, Parallel Lines, Similarity & Special Right Triangles",
+  "totalDuration": 160.13,
+  "majorSections": [
+    {
+      "title": "Góc song song & Đa giác",
+      "startSegmentId": "angles"
+    },
+    {
+      "title": "Tam giác đồng dạng & k²",
+      "startSegmentId": "similar"
+    },
+    {
+      "title": "30-60-90 & 45-45-90",
+      "startSegmentId": "special"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Tổng quan Hình học phẳng & Tam giác",
+      "selector": "#sec-header",
+      "en": "Geometry and Trigonometry make up fifteen percent of Digital SAT Math, and these questions frequently show up as high-value problems near the end of Hard Module Two. Let us lock down angles, similar triangles, and special right triangles.",
+      "vi": "Hình học và Lượng giác chiếm 15 phần trăm bài thi Toán SAT và thường xuất hiện ở nhóm câu điểm cao cuối Module 2 Hard. Bài học này sẽ khóa chặt ba vũ khí cốt lõi: góc song song, tam giác đồng dạng và tam giác vuông đặc biệt.",
+      "duration": 29.54,
+      "startTime": 0.0,
+      "endTime": 29.54,
+      "audioUrl": "/audio/lectures/sat_math/m4_1/intro.mp3"
+    },
+    {
+      "id": "angles",
+      "title": "Góc song song, Góc ngoài & Đa giác",
+      "selector": "#sec-angles",
+      "en": "When a transversal cuts two parallel lines, you only have two angle sizes: all acute angles are equal, all obtuse angles are equal, and any acute plus obtuse angle equals one hundred eighty degrees. Also remember the Exterior Angle Theorem: an exterior angle of a triangle equals the sum of the two remote interior angles.",
+      "vi": "Khi một đường thẳng cắt hai đường song song, thực chất chỉ có đúng hai cỡ góc: tất cả góc nhọn bằng nhau, tất cả góc tù bằng nhau, và một góc nhọn cộng một góc tù bằng 180 độ. Đừng quên định lý góc ngoài tam giác bằng tổng hai góc trong không kề với nó.",
+      "duration": 36.45,
+      "startTime": 29.54,
+      "endTime": 65.99,
+      "audioUrl": "/audio/lectures/sat_math/m4_1/angles.mp3"
+    },
+    {
+      "id": "similar",
+      "title": "Tam giác đồng dạng & Bẫy tỉ số diện tích k²",
+      "selector": "#sec-similar",
+      "en": "In similar triangles, two big traps catch students. First, in nested triangles where a parallel segment cuts across a larger triangle, always compare the small side to the ENTIRE big side, never to the bottom segment alone. Second, if the linear scale factor is k, the ratio of their areas is k squared.",
+      "vi": "Trong bài tam giác đồng dạng có hai cái bẫy kinh điển. Thứ nhất, với hai tam giác lồng nhau có đoạn song song, luôn so cạnh nhỏ với toàn bộ cạnh lớn chứ không so với đoạn dư phía dưới. Thứ hai, nếu tỉ số cạnh là k thì tỉ số diện tích bắt buộc phải là k bình phương.",
+      "duration": 37.41,
+      "startTime": 65.99,
+      "endTime": 103.4,
+      "audioUrl": "/audio/lectures/sat_math/m4_1/similar.mp3"
+    },
+    {
+      "id": "special",
+      "title": "Pythagoras & Tam giác đặc biệt 30-60-90 / 45-45-90",
+      "selector": "#sec-special",
+      "en": "Memorize the four classic Pythagorean triples: 3-4-5, 5-12-13, 8-15-17, and 7-24-25. For 30-60-90 triangles, the sides follow the ratio x to x root three to two x, which also gives the height of an equilateral triangle as s root three over two. For 45-45-90 triangles, the diagonal of a square of side s is always s root two.",
+      "vi": "Hãy thuộc lòng bốn bộ ba Pythagoras kinh điển: 3-4-5, 5-12-13, 8-15-17 và 7-24-25. Trong tam giác 30-60-90, tỉ lệ ba cạnh là x, x căn 3 và 2x, từ đó suy ra ngay đường cao tam giác đều cạnh s bằng s căn 3 chia 2. Còn trong tam giác 45-45-90, đường chéo hình vuông cạnh s luôn bằng s căn 2.",
+      "duration": 56.73,
+      "startTime": 103.4,
+      "endTime": 160.13,
+      "audioUrl": "/audio/lectures/sat_math/m4_1/special.mp3"
+    }
+  ]
+}

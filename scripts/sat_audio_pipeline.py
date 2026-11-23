@@ -107,13 +107,13 @@ async def generate_segment_audio(seg, output_dir, temp_dir):
                 pass
     return get_audio_duration(final_mp3)
 
-async def generate_lecture_audio(lecture_code, lecture_id, course_title, lecture_title, segments, major_sections):
-    output_dir = os.path.join(ROOT_DIR, 'public', 'audio', 'lectures', 'sat_rw', lecture_code)
-    temp_dir = os.path.join(ROOT_DIR, 'scratch', f'audio_temp_sat_rw_{lecture_code}')
+async def generate_lecture_audio(lecture_code, lecture_id, course_title, lecture_title, segments, major_sections, subject='sat_rw'):
+    output_dir = os.path.join(ROOT_DIR, 'public', 'audio', 'lectures', subject, lecture_code)
+    temp_dir = os.path.join(ROOT_DIR, 'scratch', f'audio_temp_{subject}_{lecture_code}')
     os.makedirs(output_dir, exist_ok=True)
     os.makedirs(temp_dir, exist_ok=True)
 
-    print(f"\n[AUDIO] sat_rw/{lecture_code}: {lecture_title} ({len(segments)} segments)")
+    print(f"\n[AUDIO] {subject}/{lecture_code}: {lecture_title} ({len(segments)} segments)", flush=True)
     curr_time = 0.0
     for seg in segments:
         dur = await generate_segment_audio(seg, output_dir, temp_dir)
@@ -121,7 +121,7 @@ async def generate_lecture_audio(lecture_code, lecture_id, course_title, lecture
         seg['startTime'] = round(curr_time, 2)
         curr_time += dur
         seg['endTime'] = round(curr_time, 2)
-        seg['audioUrl'] = f"/audio/lectures/sat_rw/{lecture_code}/{seg['id']}.mp3"
+        seg['audioUrl'] = f"/audio/lectures/{subject}/{lecture_code}/{seg['id']}.mp3"
 
     total_dur = round(curr_time, 2)
     manifest = {
@@ -135,8 +135,8 @@ async def generate_lecture_audio(lecture_code, lecture_id, course_title, lecture
     manifest_path = os.path.join(output_dir, 'manifest.json')
     with open(manifest_path, 'w', encoding='utf-8') as f:
         json.dump(manifest, f, indent=2, ensure_ascii=False)
-    print(f"  [OK] manifest.json written ({total_dur}s)")
-    return f"/audio/lectures/sat_rw/{lecture_code}/manifest.json"
+    print(f"  [OK] manifest.json written ({total_dur}s)", flush=True)
+    return f"/audio/lectures/{subject}/{lecture_code}/manifest.json"
 
 def upsert_sat_drill(drill_key, title, order_index, content_json, folder_key='rw_drills'):
     ids = load_ids()
@@ -144,7 +144,14 @@ def upsert_sat_drill(drill_key, title, order_index, content_json, folder_key='rw
     folder_id = ids['folders'][folder_key]
 
     content_json['basicInfo']['courseId'] = course_id
-    existing_id = ids.get('drills', {}).get(drill_key) if folder_key == 'rw_drills' else ids.get('mocks', {}).get(drill_key)
+    bucket_map = {
+        'rw_drills': 'drills',
+        'rw_mocks': 'mocks',
+        'math_drills': 'math_drills',
+        'math_mocks': 'math_mocks',
+    }
+    bucket = bucket_map.get(folder_key, 'drills')
+    existing_id = ids.get(bucket, {}).get(drill_key)
 
     payload = {
         'course_id': course_id,
@@ -159,7 +166,7 @@ def upsert_sat_drill(drill_key, title, order_index, content_json, folder_key='rw
     if existing_id:
         res = sb.table('tests').update(payload).eq('id', existing_id).execute().data
         if res:
-            print(f"  [UPDATED TEST] {title} ({existing_id})")
+            print(f"  [UPDATED TEST] {title} ({existing_id})", flush=True)
             return existing_id
 
     # Check by course_id + title to stay idempotent
@@ -167,17 +174,16 @@ def upsert_sat_drill(drill_key, title, order_index, content_json, folder_key='rw
     if found:
         tid = found[0]['id']
         sb.table('tests').update(payload).eq('id', tid).execute()
-        print(f"  [UPDATED TEST] {title} ({tid})")
+        print(f"  [UPDATED TEST] {title} ({tid})", flush=True)
     else:
         tid = sb.table('tests').insert(payload).execute().data[0]['id']
-        print(f"  [CREATED TEST] {title} ({tid})")
+        print(f"  [CREATED TEST] {title} ({tid})", flush=True)
 
-    bucket = 'drills' if folder_key == 'rw_drills' else 'mocks'
     ids.setdefault(bucket, {})[drill_key] = tid
     save_ids(ids)
     return tid
 
-def upsert_sat_lecture(lecture_code, module_key, title, order_index, html_content, drill_id=None, drill_title=None, extra_manual_task=None):
+def upsert_sat_lecture(lecture_code, module_key, title, order_index, html_content, drill_id=None, drill_title=None, extra_manual_task=None, id_bucket='lectures'):
     ids = load_ids()
     course_id = ids['course_id']
     module_id = ids['modules'][module_key]
@@ -203,7 +209,7 @@ def upsert_sat_lecture(lecture_code, module_key, title, order_index, html_conten
             'test_id': drill_id,
         })
 
-    existing_id = ids.get('lectures', {}).get(lecture_code)
+    existing_id = ids.get(id_bucket, {}).get(lecture_code)
     payload = {
         'course_id': course_id,
         'module_id': module_id,
@@ -218,17 +224,17 @@ def upsert_sat_lecture(lecture_code, module_key, title, order_index, html_conten
         res = sb.table('lectures').update(payload).eq('id', existing_id).execute().data
         if res:
             lec_id = existing_id
-            print(f"  [UPDATED LECTURE] {title} ({lec_id})")
+            print(f"  [UPDATED LECTURE] {title} ({lec_id})", flush=True)
 
     if not lec_id:
         found = sb.table('lectures').select('id').eq('module_id', module_id).eq('title', title).execute().data
         if found:
             lec_id = found[0]['id']
             sb.table('lectures').update(payload).eq('id', lec_id).execute()
-            print(f"  [UPDATED LECTURE] {title} ({lec_id})")
+            print(f"  [UPDATED LECTURE] {title} ({lec_id})", flush=True)
         else:
             lec_id = sb.table('lectures').insert(payload).execute().data[0]['id']
-            print(f"  [CREATED LECTURE] {title} ({lec_id})")
+            print(f"  [CREATED LECTURE] {title} ({lec_id})", flush=True)
 
     # Upsert page 1 in lecture_pages
     pages = sb.table('lecture_pages').select('id').eq('lecture_id', lec_id).eq('page_number', 1).execute().data
@@ -241,7 +247,7 @@ def upsert_sat_lecture(lecture_code, module_key, title, order_index, html_conten
             'content_html': html_content,
         }).execute()
 
-    ids.setdefault('lectures', {})[lecture_code] = lec_id
+    ids.setdefault(id_bucket, {})[lecture_code] = lec_id
     save_ids(ids)
     return lec_id
 

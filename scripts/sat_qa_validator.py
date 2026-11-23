@@ -1,12 +1,22 @@
 import sys
+import re
 
 VALID_LABELS = {'A', 'B', 'C', 'D'}
-VALID_DOMAINS = {
+VALID_RW_DOMAINS = {
     'Standard English Conventions',
     'Expression of Ideas',
     'Craft and Structure',
     'Information and Ideas',
 }
+VALID_MATH_DOMAINS = {
+    'Algebra',
+    'Advanced Math',
+    'Problem-Solving and Data Analysis',
+    'Geometry and Trigonometry',
+}
+VALID_DOMAINS = VALID_RW_DOMAINS | VALID_MATH_DOMAINS
+
+SPR_NUM_RE = re.compile(r'^-?(\d+(\.\d+)?|\.\d+)(/(\d+(\.\d+)?|\.\d+))?$')
 
 def validate_question(q, idx, context_name=''):
     errors = []
@@ -19,10 +29,32 @@ def validate_question(q, idx, context_name=''):
         errors.append(f"{prefix} Invalid domain: {q.get('domain')}")
     if not q.get('skill') or len(q['skill']) < 3:
         errors.append(f"{prefix} Missing skill")
-    if not q.get('stimulusHtml') or len(q['stimulusHtml'].strip()) < 25:
+    if not q.get('stimulusHtml') or len(q['stimulusHtml'].strip()) < 15:
         errors.append(f"{prefix} Stimulus too short or missing")
-    if not q.get('questionHtml') or len(q['questionHtml'].strip()) < 15:
+    if not q.get('questionHtml') or len(q['questionHtml'].strip()) < 10:
         errors.append(f"{prefix} Question stem too short or missing")
+
+    qfmt = q.get('questionFormat', 'mcq')
+    exp = q.get('explanation') or {}
+    if not exp.get('summaryVi') or len(exp['summaryVi'].strip()) < 20:
+        errors.append(f"{prefix} Missing or too short summaryVi")
+
+    if qfmt == 'spr':
+        acc = q.get('acceptedAnswers') or []
+        ans = str(q.get('correctAnswer') or '').strip()
+        if not ans:
+            errors.append(f"{prefix} SPR missing correctAnswer")
+        if not acc:
+            errors.append(f"{prefix} SPR missing acceptedAnswers")
+        for a in acc:
+            s = str(a).strip()
+            if not SPR_NUM_RE.match(s):
+                errors.append(f"{prefix} Invalid SPR acceptedAnswer format: {a}")
+            elif '/' in s:
+                den = float(s.split('/')[1])
+                if den == 0:
+                    errors.append(f"{prefix} Division by zero in SPR acceptedAnswer: {a}")
+        return errors
 
     opts = q.get('options') or []
     if len(opts) != 4:
@@ -44,9 +76,6 @@ def validate_question(q, idx, context_name=''):
     if ans not in VALID_LABELS:
         errors.append(f"{prefix} Invalid correctAnswer: {ans}")
 
-    exp = q.get('explanation') or {}
-    if not exp.get('summaryVi') or len(exp['summaryVi'].strip()) < 20:
-        errors.append(f"{prefix} Missing or too short summaryVi")
     oa = exp.get('optionAnalysis') or {}
     for lbl in ['A', 'B', 'C', 'D']:
         item = oa.get(lbl)
@@ -87,20 +116,22 @@ def validate_sat_test(content_json, test_title=''):
             errors.append(f"[{test_title}:{m_name}] Empty questions")
             continue
         ans_counts = {'A': 0, 'B': 0, 'C': 0, 'D': 0}
+        mcq_count = 0
         for i, q in enumerate(qs):
             if q.get('id') in all_ids:
                 errors.append(f"[{test_title}:{m_name}] Duplicate question id: {q.get('id')}")
             all_ids.add(q.get('id'))
             errors.extend(validate_question(q, i, f"{test_title}:{m_name}"))
-            if q.get('correctAnswer') in ans_counts:
+            if q.get('questionFormat', 'mcq') != 'spr' and q.get('correctAnswer') in ans_counts:
                 ans_counts[q['correctAnswer']] += 1
-        # Check answer balance (no single letter > 55% for >=10 questions)
-        if len(qs) >= 10:
-            max_ratio = max(ans_counts.values()) / len(qs)
+                mcq_count += 1
+        # Check answer balance for MCQ questions (no single letter > 55% for >=10 MCQ questions)
+        if mcq_count >= 10:
+            max_ratio = max(ans_counts.values()) / mcq_count
             if max_ratio > 0.55:
                 errors.append(f"[{test_title}:{m_name}] Imbalanced answer keys: {ans_counts}")
 
     return errors
 
 if __name__ == '__main__':
-    print("SAT QA Validator ready.")
+    print("SAT QA Validator (R&W + Math + SPR) ready.")

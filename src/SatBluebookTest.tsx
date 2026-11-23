@@ -27,11 +27,18 @@ import {
   Layers,
   Filter,
   SlidersHorizontal,
+  Calculator,
+  Compass,
+  X,
+  ExternalLink,
+  Zap,
 } from 'lucide-react';
+import katex from 'katex';
+import 'katex/dist/katex.min.css';
 import { supabase } from './supabase';
 
 // ============================================================================
-// TYPES — DIGITAL SAT BLUEBOOK SCHEMA
+// TYPES — DIGITAL SAT BLUEBOOK SCHEMA (R&W + MATH)
 // ============================================================================
 
 export type SatChoiceLabel = 'A' | 'B' | 'C' | 'D';
@@ -53,13 +60,17 @@ export interface SatQuestion {
   domain: string;
   skill: string;
   difficulty?: string;
+  questionFormat?: 'mcq' | 'spr';
   stimulusHtml: string;
   questionHtml: string;
   options: SatOptionItem[];
-  correctAnswer: SatChoiceLabel;
+  correctAnswer: string;
+  acceptedAnswers?: string[];
+  correctDisplay?: string;
   explanation?: {
     summaryVi: string;
     keyTakeaway?: string;
+    desmosTipVi?: string;
     optionAnalysis?: Partial<Record<SatChoiceLabel, SatOptionAnalysisItem>>;
   };
 }
@@ -160,17 +171,295 @@ function computeSatRwScaledScore(
   }
 }
 
+// ============================================================================
+// DIGITAL SAT MATH SCALED SCORE CONVERSION (200 - 800)
+// Calibrated to College Board Bluebook 44-question Multistage Adaptive Math
+// ============================================================================
+
+function computeSatMathScaledScore(
+  m1Correct: number,
+  m1Total: number,
+  m2Correct: number,
+  m2Total: number,
+  route: 'hard' | 'lower'
+): number {
+  const totalCorrect = m1Correct + m2Correct;
+  const totalQ = Math.max(1, m1Total + m2Total);
+  const ratio = totalCorrect / totalQ;
+
+  if (route === 'hard') {
+    const missed = Math.max(0, totalQ - totalCorrect);
+    if (totalQ === 44) {
+      const hardMap: Record<number, number> = {
+        0: 800,
+        1: 790,
+        2: 780,
+        3: 760,
+        4: 750,
+        5: 740,
+        6: 730,
+        7: 710,
+        8: 700,
+        9: 690,
+        10: 680,
+        11: 660,
+        12: 650,
+        13: 640,
+        14: 620,
+        15: 610,
+        16: 600,
+      };
+      if (missed in hardMap) return hardMap[missed];
+      const rawEst = 600 - (missed - 16) * 10;
+      return Math.max(460, Math.min(800, Math.round(rawEst / 10) * 10));
+    }
+    const scaled = 480 + ratio * 320;
+    return Math.max(460, Math.min(800, Math.round(scaled / 10) * 10));
+  } else {
+    const scaled = 200 + ratio * 400;
+    return Math.max(200, Math.min(600, Math.round(scaled / 10) * 10));
+  }
+}
+
+// ============================================================================
+// MATH LATEX (KaTeX) & SPR GRID-IN GRADING HELPERS
+// Uses \( ... \) for inline math and \[ ... \] for display math so currency $50
+// in word problems never collides with LaTeX delimiters.
+// ============================================================================
+
+function renderMathHtml(rawHtml?: string): string {
+  if (!rawHtml) return '';
+  if (!rawHtml.includes('\\(') && !rawHtml.includes('\\[')) return rawHtml;
+  let out = rawHtml.replace(/\\\[([\s\S]*?)\\\]/g, (_m, expr) => {
+    try {
+      return katex.renderToString(expr.trim(), { displayMode: true, throwOnError: false, strict: false });
+    } catch {
+      return expr;
+    }
+  });
+  out = out.replace(/\\\(([\s\S]*?)\\\)/g, (_m, expr) => {
+    try {
+      return katex.renderToString(expr.trim(), { displayMode: false, throwOnError: false, strict: false });
+    } catch {
+      return expr;
+    }
+  });
+  return out;
+}
+
+function parseSatNumericValue(raw: string): number | null {
+  const s = (raw || '').trim().replace(/\s+/g, '');
+  if (!s) return null;
+  if (!/^-?(\d+(\.\d+)?|\.\d+)(\/(\d+(\.\d+)?|\.\d+))?$/.test(s)) return null;
+  if (s.includes('/')) {
+    const parts = s.split('/');
+    if (parts.length !== 2) return null;
+    const num = Number(parts[0]);
+    const den = Number(parts[1]);
+    if (!Number.isFinite(num) || !Number.isFinite(den) || den === 0) return null;
+    return num / den;
+  }
+  const val = Number(s);
+  return Number.isFinite(val) ? val : null;
+}
+
+function isSatQuestionCorrect(q: SatQuestion, userRaw?: string): boolean {
+  if (!userRaw || !userRaw.trim()) return false;
+  if (q.questionFormat === 'spr') {
+    const cleanUser = userRaw.trim().replace(/\s+/g, '');
+    const candidates =
+      q.acceptedAnswers && q.acceptedAnswers.length > 0
+        ? q.acceptedAnswers
+        : [String(q.correctAnswer || '')];
+    for (const acc of candidates) {
+      const cleanAcc = String(acc).trim().replace(/\s+/g, '');
+      if (cleanUser.toLowerCase() === cleanAcc.toLowerCase()) return true;
+    }
+    const uVal = parseSatNumericValue(cleanUser);
+    if (uVal === null) return false;
+    for (const acc of candidates) {
+      const aVal = parseSatNumericValue(String(acc));
+      if (aVal !== null) {
+        const tol = 1e-4 * Math.max(1, Math.abs(aVal));
+        if (Math.abs(uVal - aVal) <= tol) return true;
+      }
+    }
+    return false;
+  }
+  return userRaw === q.correctAnswer;
+}
+
+function formatSprPreviewLatex(raw: string): string {
+  const s = (raw || '').trim().replace(/\s+/g, '');
+  if (!s) return '';
+  const fracMatch = s.match(/^(-?)(\d+(?:\.\d+)?)\/(\d+(?:\.\d+)?)$/);
+  if (fracMatch) {
+    return `${fracMatch[1]}\\frac{${fracMatch[2]}}{${fracMatch[3]}}`;
+  }
+  return s;
+}
+
 const DEFAULT_RW_DIRECTIONS = `
   <p class="mb-2">The questions in this section address a number of important reading and writing skills. Each question includes one or more passages, which may include a table or graph. Read each passage and question carefully, and then choose the best answer to the question based on the passage(s).</p>
   <p>All questions in this section are multiple-choice with four answer choices. Each question has a single best answer.</p>
 `;
+
+const DEFAULT_MATH_DIRECTIONS = `
+  <p class="mb-2">The questions in this section address a number of important math skills. Use of a calculator is permitted for all questions. A built-in Desmos Graphing Calculator and Reference Sheet are available in the top toolbar.</p>
+  <p class="mb-2">Unless otherwise indicated, all variables and expressions represent real numbers, figures are drawn to scale, and all figures lie in a plane.</p>
+  <p>For <b>Student-Produced Response</b> questions, enter a single exact integer, decimal, or fraction (e.g. <code>-3/4</code>, <code>0.75</code>, or <code>.75</code>). Do not enter mixed numbers.</p>
+`;
+
+const MATH_DOMAINS_SET = new Set([
+  'Algebra',
+  'Advanced Math',
+  'Problem-Solving and Data Analysis',
+  'Geometry and Trigonometry',
+]);
 
 const DOMAIN_ORDER = [
   'Standard English Conventions',
   'Expression of Ideas',
   'Craft and Structure',
   'Information and Ideas',
+  'Algebra',
+  'Advanced Math',
+  'Problem-Solving and Data Analysis',
+  'Geometry and Trigonometry',
 ];
+
+function SatMathReferenceModal({ onClose }: { onClose: () => void }) {
+  return (
+    <div className="fixed inset-0 z-50 bg-slate-900/50 backdrop-blur-xs flex items-center justify-center p-4">
+      <div className="bg-white rounded-2xl border border-slate-300 shadow-2xl max-w-3xl w-full max-h-[88vh] flex flex-col overflow-hidden">
+        <div className="px-5 py-3.5 bg-[#0f172a] text-white flex items-center justify-between shrink-0">
+          <div className="flex items-center gap-2">
+            <Compass className="w-4 h-4 text-sky-300" />
+            <span className="font-black text-sm tracking-tight">Official Digital SAT Math Reference Sheet</span>
+          </div>
+          <button
+            onClick={onClose}
+            className="p-1.5 rounded-lg hover:bg-white/15 text-slate-200 hover:text-white cursor-pointer"
+          >
+            <X className="w-4 h-4" />
+          </button>
+        </div>
+
+        <div className="p-5 sm:p-6 overflow-y-auto space-y-5 text-slate-800 text-xs sm:text-sm">
+          {/* 2D Geometry Grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <div className="rounded-xl border border-slate-200 p-3 text-center bg-slate-50/70">
+              <svg viewBox="0 0 100 72" className="w-20 h-14 mx-auto mb-1">
+                <circle cx="50" cy="36" r="28" fill="#eff6ff" stroke="#1e3a8a" strokeWidth="2" />
+                <line x1="50" y1="36" x2="78" y2="36" stroke="#1e3a8a" strokeWidth="1.8" />
+                <circle cx="50" cy="36" r="2.2" fill="#1e3a8a" />
+                <text x="62" y="32" fontSize="11" fontStyle="italic" fill="#0f172a">r</text>
+              </svg>
+              <div className="font-bold text-slate-900">Circle</div>
+              <div className="font-mono text-[12px] text-blue-900">A = πr² &nbsp;|&nbsp; C = 2πr</div>
+            </div>
+
+            <div className="rounded-xl border border-slate-200 p-3 text-center bg-slate-50/70">
+              <svg viewBox="0 0 100 72" className="w-20 h-14 mx-auto mb-1">
+                <rect x="16" y="16" width="68" height="40" fill="#eff6ff" stroke="#1e3a8a" strokeWidth="2" />
+                <text x="48" y="68" fontSize="11" fontStyle="italic" fill="#0f172a">ℓ</text>
+                <text x="87" y="40" fontSize="11" fontStyle="italic" fill="#0f172a">w</text>
+              </svg>
+              <div className="font-bold text-slate-900">Rectangle</div>
+              <div className="font-mono text-[12px] text-blue-900">A = ℓw</div>
+            </div>
+
+            <div className="rounded-xl border border-slate-200 p-3 text-center bg-slate-50/70">
+              <svg viewBox="0 0 100 72" className="w-20 h-14 mx-auto mb-1">
+                <polygon points="15,58 85,58 42,14" fill="#eff6ff" stroke="#1e3a8a" strokeWidth="2" />
+                <line x1="42" y1="14" x2="42" y2="58" stroke="#1e3a8a" strokeWidth="1.5" strokeDasharray="3 2" />
+                <rect x="42" y="51" width="7" height="7" fill="none" stroke="#1e3a8a" strokeWidth="1.2" />
+                <text x="45" y="42" fontSize="10" fontStyle="italic" fill="#0f172a">h</text>
+                <text x="48" y="69" fontSize="10" fontStyle="italic" fill="#0f172a">b</text>
+              </svg>
+              <div className="font-bold text-slate-900">Triangle</div>
+              <div className="font-mono text-[12px] text-blue-900">A = ½bh</div>
+            </div>
+
+            <div className="rounded-xl border border-slate-200 p-3 text-center bg-slate-50/70">
+              <svg viewBox="0 0 100 72" className="w-20 h-14 mx-auto mb-1">
+                <polygon points="18,58 82,58 18,16" fill="#eff6ff" stroke="#1e3a8a" strokeWidth="2" />
+                <rect x="18" y="50" width="8" height="8" fill="none" stroke="#1e3a8a" strokeWidth="1.4" />
+                <text x="8" y="40" fontSize="11" fontStyle="italic" fill="#0f172a">a</text>
+                <text x="48" y="69" fontSize="11" fontStyle="italic" fill="#0f172a">b</text>
+                <text x="53" y="34" fontSize="11" fontStyle="italic" fill="#0f172a">c</text>
+              </svg>
+              <div className="font-bold text-slate-900">Pythagorean</div>
+              <div className="font-mono text-[12px] text-blue-900">c² = a² + b²</div>
+            </div>
+          </div>
+
+          {/* Special Right Triangles */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className="rounded-xl border border-indigo-200 bg-indigo-50/50 p-3.5 flex items-center gap-4">
+              <svg viewBox="0 0 120 76" className="w-28 h-16 shrink-0">
+                <polygon points="18,62 102,62 18,14" fill="#ffffff" stroke="#3730a3" strokeWidth="2" />
+                <rect x="18" y="54" width="8" height="8" fill="none" stroke="#3730a3" strokeWidth="1.3" />
+                <text x="6" y="41" fontSize="10" fontStyle="italic" fill="#1e1b4b">x</text>
+                <text x="48" y="73" fontSize="10" fontStyle="italic" fill="#1e1b4b">x√3</text>
+                <text x="62" y="33" fontSize="10" fontStyle="italic" fill="#1e1b4b">2x</text>
+                <text x="21" y="29" fontSize="8.5" fill="#4338ca">60°</text>
+                <text x="77" y="59" fontSize="8.5" fill="#4338ca">30°</text>
+              </svg>
+              <div>
+                <div className="font-black text-indigo-950">30°–60°–90° Special Right</div>
+                <div className="text-xs text-slate-700 mt-1">
+                  Tỉ lệ 3 cạnh: <b>x : x√3 : 2x</b> (đối diện 30° : 60° : 90°).
+                </div>
+              </div>
+            </div>
+
+            <div className="rounded-xl border border-indigo-200 bg-indigo-50/50 p-3.5 flex items-center gap-4">
+              <svg viewBox="0 0 100 76" className="w-24 h-16 shrink-0">
+                <polygon points="20,62 76,62 20,10" fill="#ffffff" stroke="#3730a3" strokeWidth="2" />
+                <rect x="20" y="54" width="8" height="8" fill="none" stroke="#3730a3" strokeWidth="1.3" />
+                <text x="9" y="40" fontSize="10" fontStyle="italic" fill="#1e1b4b">s</text>
+                <text x="45" y="73" fontSize="10" fontStyle="italic" fill="#1e1b4b">s</text>
+                <text x="51" y="33" fontSize="10" fontStyle="italic" fill="#1e1b4b">s√2</text>
+                <text x="23" y="27" fontSize="8.5" fill="#4338ca">45°</text>
+                <text x="57" y="59" fontSize="8.5" fill="#4338ca">45°</text>
+              </svg>
+              <div>
+                <div className="font-black text-indigo-950">45°–45°–90° Special Right</div>
+                <div className="text-xs text-slate-700 mt-1">
+                  Tỉ lệ 3 cạnh: <b>s : s : s√2</b> (đường chéo hình vuông).
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* 3D Volumes */}
+          <div className="grid grid-cols-2 sm:grid-cols-5 gap-2.5">
+            {[
+              { name: 'Rect. Prism', formula: 'V = ℓwh' },
+              { name: 'Cylinder', formula: 'V = πr²h' },
+              { name: 'Sphere', formula: 'V = (4/3)πr³' },
+              { name: 'Cone', formula: 'V = (1/3)πr²h' },
+              { name: 'Pyramid', formula: 'V = (1/3)ℓwh' },
+            ].map((s) => (
+              <div key={s.name} className="rounded-xl border border-slate-200 bg-slate-50 p-3 text-center">
+                <div className="text-[11px] font-bold text-slate-600">{s.name}</div>
+                <div className="font-mono font-black text-xs text-slate-900 mt-1">{s.formula}</div>
+              </div>
+            ))}
+          </div>
+
+          {/* Official Notes */}
+          <div className="rounded-xl bg-blue-50 border border-blue-200 p-3.5 text-xs text-slate-700 space-y-1">
+            <div>• The number of degrees of arc in a circle is <b>360</b>.</div>
+            <div>• The number of radians of arc in a circle is <b>2π</b>.</div>
+            <div>• The sum of the measures in degrees of the angles of a triangle is <b>180</b>.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 const HIGHLIGHT_STYLES: Record<'yellow' | 'cyan' | 'pink', { bg: string; ring: string; label: string }> = {
   yellow: { bg: '#fef08a', ring: '#eab308', label: 'Vàng' },
@@ -205,7 +494,15 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
 
   const isAdaptiveMock = content?.mode === 'adaptive_mock';
   const testTitle = safeTest?.title || content?.basicInfo?.title || 'Digital SAT Practice';
-  const routingThreshold = content?.basicInfo?.routingThreshold ?? 18;
+
+  const isMathSection = useMemo(() => {
+    const sec = (content?.section || '').toLowerCase();
+    if (sec === 'math' || sec.includes('math')) return true;
+    const sampleQs = content?.drillModule?.questions || content?.module1?.questions || [];
+    return sampleQs.some((q) => MATH_DOMAINS_SET.has(q.domain));
+  }, [content]);
+
+  const routingThreshold = content?.basicInfo?.routingThreshold ?? (isMathSection ? 15 : 18);
 
   const isHistoryReview = Boolean(safeTest?.isReview);
   const pastDetails = safeTest?.past_details || safeTest?.details || {};
@@ -229,7 +526,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
   const [directHardMode, setDirectHardMode] = useState<boolean>(false);
 
   // ---- ANSWERS, FLAGS, ELIMINATIONS, HIGHLIGHTS ----
-  const [answers, setAnswers] = useState<Record<string, SatChoiceLabel>>(() => {
+  const [answers, setAnswers] = useState<Record<string, string>>(() => {
     const past = safeTest?.past_answers || pastDetails?.userAnswers;
     return past && typeof past === 'object' ? { ...past } : {};
   });
@@ -246,6 +543,18 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
   });
   const [eliminated, setEliminated] = useState<Record<string, Record<string, boolean>>>({});
   const [eliminatorEnabled, setEliminatorEnabled] = useState<boolean>(false);
+
+  // ---- MATH TOOLS (DESMOS GRAPHING CALCULATOR & REFERENCE SHEET) ----
+  const [showCalculator, setShowCalculator] = useState<boolean>(false);
+  const [hasOpenedCalculator, setHasOpenedCalculator] = useState<boolean>(false);
+  const [calcExpanded, setCalcExpanded] = useState<boolean>(false);
+  const [calcMode, setCalcMode] = useState<'sat' | 'standard'>('sat');
+  const [showReference, setShowReference] = useState<boolean>(false);
+
+  const toggleCalculator = () => {
+    setHasOpenedCalculator(true);
+    setShowCalculator((v) => !v);
+  };
 
   // Per-question Highlights & Notes
   const [highlightsByQ, setHighlightsByQ] = useState<Record<string, HighlightNote[]>>({});
@@ -346,7 +655,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
     return completedQuestionList.filter((q) => {
       if (reviewModuleFilter !== 'all' && q.moduleTag !== reviewModuleFilter) return false;
       if (reviewFilter === 'incorrect') {
-        return answers[q.id] !== q.correctAnswer;
+        return !isSatQuestionCorrect(q, answers[q.id]);
       }
       if (reviewFilter === 'flagged') {
         return Boolean(flagged[q.id]);
@@ -370,7 +679,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
     const skillStats: Record<string, { correct: number; total: number; domain: string }> = {};
 
     completedQuestionList.forEach((q) => {
-      const isRight = answers[q.id] === q.correctAnswer;
+      const isRight = isSatQuestionCorrect(q, answers[q.id]);
       if (isRight) totalCorrect++;
 
       if (q.moduleTag === 'm1') {
@@ -397,13 +706,21 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
 
     let scaledScore: number | null = null;
     if (isAdaptiveMock && !directHardMode) {
-      scaledScore = computeSatRwScaledScore(
-        m1Correct,
-        m1Total,
-        m2Correct,
-        m2Total,
-        m2Route === 'lower' ? 'lower' : 'hard'
-      );
+      scaledScore = isMathSection
+        ? computeSatMathScaledScore(
+            m1Correct,
+            m1Total,
+            m2Correct,
+            m2Total,
+            m2Route === 'lower' ? 'lower' : 'hard'
+          )
+        : computeSatRwScaledScore(
+            m1Correct,
+            m1Total,
+            m2Correct,
+            m2Total,
+            m2Route === 'lower' ? 'lower' : 'hard'
+          );
     }
 
     return {
@@ -418,7 +735,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
       domainStats,
       skillStats,
     };
-  }, [completedQuestionList, answers, isAdaptiveMock, directHardMode, m2Route]);
+  }, [completedQuestionList, answers, isAdaptiveMock, directHardMode, m2Route, isMathSection]);
 
   // ---- TIMER TICK ----
   useEffect(() => {
@@ -507,7 +824,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
         if (currentIdx > 0) setCurrentIdx((i) => i - 1);
       } else if (e.key.toLowerCase() === 'f') {
         setFlagged((prev) => ({ ...prev, [activeQuestion.id]: !prev[activeQuestion.id] }));
-      } else {
+      } else if (activeQuestion.questionFormat !== 'spr') {
         const keyMap: Record<string, SatChoiceLabel> = {
           '1': 'A',
           '2': 'B',
@@ -552,7 +869,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
       setDirectHardMode(true);
       setActiveStage('m2_hard');
       setM2Route('hard');
-      setSecondsLeft((content.module2_hard.timeLimitMinutes || 32) * 60);
+      setSecondsLeft((content.module2_hard.timeLimitMinutes || (isMathSection ? 35 : 32)) * 60);
       setPhase('testing');
       return;
     }
@@ -560,11 +877,21 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
     setDirectHardMode(false);
     setActiveStage('m1');
     setM2Route('hard');
-    setSecondsLeft((content?.module1?.timeLimitMinutes || 32) * 60);
+    setSecondsLeft((content?.module1?.timeLimitMinutes || (isMathSection ? 35 : 32)) * 60);
     setPhase('testing');
   };
 
   // ---- SELECT & ELIMINATE ----
+  const handleSprChange = (qId: string, val: string) => {
+    setAnswers((prev) => {
+      if (!val) {
+        const copy = { ...prev };
+        delete copy[qId];
+        return copy;
+      }
+      return { ...prev, [qId]: val };
+    });
+  };
   const handleSelectOption = (qId: string, label: SatChoiceLabel) => {
     setAnswers((prev) => ({ ...prev, [qId]: label }));
     // Un-eliminate if the user selects it
@@ -651,28 +978,29 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
 
   const renderHighlightedStimulusHtml = useCallback((html: string, qId: string) => {
     const list = highlightsByQ[qId];
-    if (!list || list.length === 0) return html;
-    let out = html;
-    list.forEach((item) => {
-      const escaped = item.text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-      const bg = HIGHLIGHT_STYLES[item.color].bg;
-      const titleAttr = item.note ? ` title="Note: ${item.note.replace(/"/g, '&quot;')}"` : '';
-      // Replace first plain-text occurrence safely outside HTML tags
-      const parts = out.split(/(<[^>]+>)/g);
-      let replaced = false;
-      for (let i = 0; i < parts.length; i++) {
-        if (parts[i].startsWith('<')) continue;
-        if (!replaced && new RegExp(escaped).test(parts[i])) {
-          parts[i] = parts[i].replace(
-            new RegExp(escaped),
-            `<mark style="background:${bg}; padding:1px 2px; border-radius:3px; color:#0f172a;"${titleAttr}>$&</mark>`
-          );
-          replaced = true;
+    let out = html || '';
+    if (list && list.length > 0) {
+      list.forEach((item) => {
+        const escaped = item.text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const bg = HIGHLIGHT_STYLES[item.color].bg;
+        const titleAttr = item.note ? ` title="Note: ${item.note.replace(/"/g, '&quot;')}"` : '';
+        // Replace first plain-text occurrence safely outside HTML tags
+        const parts = out.split(/(<[^>]+>)/g);
+        let replaced = false;
+        for (let i = 0; i < parts.length; i++) {
+          if (parts[i].startsWith('<')) continue;
+          if (!replaced && new RegExp(escaped).test(parts[i])) {
+            parts[i] = parts[i].replace(
+              new RegExp(escaped),
+              `<mark style="background:${bg}; padding:1px 2px; border-radius:3px; color:#0f172a;"${titleAttr}>$&</mark>`
+            );
+            replaced = true;
+          }
         }
-      }
-      out = parts.join('');
-    });
-    return out;
+        out = parts.join('');
+      });
+    }
+    return renderMathHtml(out);
   }, [highlightsByQ]);
 
   // ---- SAVE RESULT TO SUPABASE ----
@@ -703,7 +1031,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
         const skillStats: Record<string, { correct: number; total: number }> = {};
 
         list.forEach((q) => {
-          const ok = answers[q.id] === q.correctAnswer;
+          const ok = isSatQuestionCorrect(q, answers[q.id]);
           if (ok) rawCorrect++;
           if (isAdaptiveMock && !directHardMode) {
             if (m1Qs.some((m) => m.id === q.id)) {
@@ -726,7 +1054,21 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
         const totalQ = list.length;
         const scaled =
           isAdaptiveMock && !directHardMode
-            ? computeSatRwScaledScore(m1Correct, m1Qs.length, m2Correct, m2Qs.length, finalRoute === 'lower' ? 'lower' : 'hard')
+            ? isMathSection
+              ? computeSatMathScaledScore(
+                  m1Correct,
+                  m1Qs.length,
+                  m2Correct,
+                  m2Qs.length,
+                  finalRoute === 'lower' ? 'lower' : 'hard'
+                )
+              : computeSatRwScaledScore(
+                  m1Correct,
+                  m1Qs.length,
+                  m2Correct,
+                  m2Qs.length,
+                  finalRoute === 'lower' ? 'lower' : 'hard'
+                )
             : null;
 
         const savedScore = scaled !== null ? scaled : rawCorrect;
@@ -806,6 +1148,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
       testTitle,
       totalTimeSpentSecs,
       onFinish,
+      isMathSection,
     ]
   );
 
@@ -819,7 +1162,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
       const m1Qs = content?.module1?.questions || [];
       let m1Score = 0;
       m1Qs.forEach((q) => {
-        if (answers[q.id] === q.correctAnswer) m1Score++;
+        if (isSatQuestionCorrect(q, answers[q.id])) m1Score++;
       });
       const route: 'hard' | 'lower' = m1Score >= routingThreshold ? 'hard' : 'lower';
       setM2Route(route);
@@ -840,7 +1183,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
     const nextMod = m2Route === 'lower' ? content?.module2_lower || content?.module2_hard : content?.module2_hard;
     setActiveStage(nextStage);
     setCurrentIdx(0);
-    setSecondsLeft((nextMod?.timeLimitMinutes || 32) * 60);
+    setSecondsLeft((nextMod?.timeLimitMinutes || (isMathSection ? 35 : 32)) * 60);
     setPhase('testing');
   };
 
@@ -850,6 +1193,81 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
     }
     onBack();
   };
+
+  // Persistent Desmos Graphing Calculator + Official Reference Sheet Overlays
+  const mathOverlays = isMathSection ? (
+    <>
+      {hasOpenedCalculator && (
+        <div
+          className={`${
+            showCalculator ? 'fixed' : 'hidden'
+          } z-50 bottom-20 right-4 bg-white rounded-2xl border-2 border-slate-300 shadow-2xl flex flex-col overflow-hidden transition-all ${
+            calcExpanded
+              ? 'w-[min(94vw,820px)] h-[min(78vh,640px)]'
+              : 'w-[min(94vw,470px)] h-[min(72vh,540px)]'
+          }`}
+        >
+          <div className="shrink-0 px-3.5 py-2 bg-[#0f172a] text-white flex items-center justify-between gap-2">
+            <div className="flex items-center gap-2 min-w-0">
+              <Calculator className="w-4 h-4 text-emerald-400 shrink-0" />
+              <span className="text-xs font-black truncate">Desmos Graphing Calculator (SAT Bluebook)</span>
+            </div>
+            <div className="flex items-center gap-1.5 shrink-0">
+              <button
+                type="button"
+                onClick={() => setCalcMode((m) => (m === 'sat' ? 'standard' : 'sat'))}
+                className="px-2 py-0.5 rounded bg-white/10 hover:bg-white/20 text-[10px] font-bold text-sky-200 cursor-pointer"
+                title="Đổi phiên bản Desmos (SAT Testing / Standard)"
+              >
+                {calcMode === 'sat' ? 'SAT Mode' : 'Full Mode'}
+              </button>
+              <a
+                href={
+                  calcMode === 'sat'
+                    ? 'https://www.desmos.com/testing/cb-sat-ap/graphing'
+                    : 'https://www.desmos.com/calculator'
+                }
+                target="_blank"
+                rel="noreferrer"
+                className="p-1 rounded hover:bg-white/15 text-slate-300 hover:text-white"
+                title="Mở Desmos ở tab mới"
+              >
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+              <button
+                type="button"
+                onClick={() => setCalcExpanded((v) => !v)}
+                className="p-1 rounded hover:bg-white/15 text-slate-300 hover:text-white cursor-pointer"
+                title={calcExpanded ? 'Thu nhỏ' : 'Mở rộng'}
+              >
+                {calcExpanded ? <Minimize2 className="w-3.5 h-3.5" /> : <Maximize2 className="w-3.5 h-3.5" />}
+              </button>
+              <button
+                type="button"
+                onClick={() => setShowCalculator(false)}
+                className="p-1 rounded hover:bg-rose-500/30 text-slate-300 hover:text-white cursor-pointer"
+                title="Ẩn máy tính (vẫn giữ nguyên hàm đang vẽ)"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+          </div>
+          <iframe
+            key={calcMode}
+            src={
+              calcMode === 'sat'
+                ? 'https://www.desmos.com/testing/cb-sat-ap/graphing'
+                : 'https://www.desmos.com/calculator'
+            }
+            title="SAT Desmos Graphing Calculator"
+            className="flex-1 w-full border-0 bg-white"
+            allow="clipboard-read; clipboard-write"
+          />
+        </div>
+      )}
+      {showReference && <SatMathReferenceModal onClose={() => setShowReference(false)} />}
+    </>
+  ) : null;
 
   // ============================================================================
   // RENDER: EMPTY / INVALID TEST FALLBACK
@@ -878,11 +1296,12 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
   // RENDER 1: INTRO / PRE-EXAM LAUNCH SCREEN (BLUEBOOK STYLE)
   // ============================================================================
   if (phase === 'intro') {
+    const m1Len = content.module1?.questions?.length || (isMathSection ? 22 : 27);
     const qCount = isAdaptiveMock
-      ? (content.module1?.questions?.length || 27) * 2
+      ? m1Len * 2
       : content.drillModule?.questions?.length || 0;
     const modTime = isAdaptiveMock
-      ? content.module1?.timeLimitMinutes || 32
+      ? content.module1?.timeLimitMinutes || (isMathSection ? 35 : 32)
       : content.drillModule?.timeLimitMinutes || content.basicInfo?.targetTimeMinutes || 20;
 
     return (
@@ -898,7 +1317,9 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
                 TonyEnglish Bluebook™ Simulator
               </div>
               <div className="text-[11px] font-semibold text-slate-500">
-                Digital SAT 1500+ • Reading &amp; Writing Engine
+                {isMathSection
+                  ? 'Digital SAT 1500+ • Math & Desmos Engine'
+                  : 'Digital SAT 1500+ • Reading & Writing Engine'}
               </div>
             </div>
           </div>
@@ -916,7 +1337,11 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
             <div className="bg-gradient-to-r from-[#0f172a] via-[#1e3a8a] to-[#0050b3] p-7 sm:p-8 text-white relative overflow-hidden">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 border border-white/25 text-xs font-bold tracking-wide uppercase mb-4">
                 <Sparkles className="w-3.5 h-3.5 text-amber-300" />
-                {isAdaptiveMock ? 'Full-Length Adaptive Mock Test' : 'Bluebook Skill Drill • Target 1500+'}
+                {isAdaptiveMock
+                  ? isMathSection
+                    ? 'Full-Length Adaptive Math Mock Test'
+                    : 'Full-Length Adaptive Mock Test'
+                  : 'Bluebook Skill Drill • Target 1500+'}
               </div>
               <h1 className="text-2xl sm:text-3xl font-black tracking-tight leading-tight">
                 {testTitle}
@@ -933,7 +1358,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
                   <div className="text-[11px] font-bold uppercase tracking-wider text-slate-500">Số câu hỏi</div>
                   <div className="mt-1 text-xl sm:text-2xl font-black text-slate-900">{qCount}</div>
                   <div className="text-[11px] text-slate-500">
-                    {isAdaptiveMock ? '2 Modules × 27' : 'Chuẩn Bluebook'}
+                    {isAdaptiveMock ? `2 Modules × ${m1Len}` : 'Chuẩn Bluebook'}
                   </div>
                 </div>
                 <div className="rounded-2xl bg-slate-50 border border-slate-200 p-4 text-center">
@@ -949,7 +1374,11 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
                     {isAdaptiveMock ? 'Adaptive' : '1500+ Drill'}
                   </div>
                   <div className="text-[11px] text-slate-500">
-                    {isAdaptiveMock ? 'Thang 200–800' : 'Trap Analysis'}
+                    {isAdaptiveMock
+                      ? 'Thang 200–800'
+                      : isMathSection
+                      ? 'MCQ + Grid-In'
+                      : 'Trap Analysis'}
                   </div>
                 </div>
               </div>
@@ -960,12 +1389,28 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
                   <Info className="w-4 h-4" /> Công cụ mô phỏng chuẩn Bluebook đã tích hợp
                 </div>
                 <ul className="text-xs sm:text-sm text-slate-700 space-y-1.5 list-disc pl-5">
-                  <li>
-                    <b>Highlight &amp; Ghi chú:</b> Bôi đen bất kỳ cụm từ nào trong đoạn văn bên trái để tô màu &amp; ghi chú ý chính.
-                  </li>
-                  <li>
-                    <b>Option Eliminator (ABC):</b> Bật nút gạch loại trừ để gạch ngang đáp án bẫy y hệt khi thi thật.
-                  </li>
+                  {isMathSection ? (
+                    <>
+                      <li>
+                        <b>Máy tính đồ thị Desmos (SAT Edition):</b> Mở ngay trên thanh công cụ — giữ nguyên đồ thị &amp; bảng hồi quy khi chuyển câu.
+                      </li>
+                      <li>
+                        <b>Reference Sheet chuẩn College Board:</b> Bảng công thức Hình học 2D, 3D &amp; Tam giác đặc biệt 30–60–90, 45–45–90 tra nhanh 1 chạm.
+                      </li>
+                      <li>
+                        <b>Hỗ trợ cả Trắc nghiệm (MCQ) &amp; Tự điền số (SPR Grid-In):</b> Tự động nhận diện phân số (<code>-3/4</code>), số thập phân (<code>-0.75</code>) tương đương.
+                      </li>
+                    </>
+                  ) : (
+                    <>
+                      <li>
+                        <b>Highlight &amp; Ghi chú:</b> Bôi đen bất kỳ cụm từ nào trong đoạn văn bên trái để tô màu &amp; ghi chú ý chính.
+                      </li>
+                      <li>
+                        <b>Option Eliminator (ABC):</b> Bật nút gạch loại trừ để gạch ngang đáp án bẫy y hệt khi thi thật.
+                      </li>
+                    </>
+                  )}
                   <li>
                     <b>Mark for Review &amp; Question Navigator:</b> Gắn cờ câu khó và nhảy nhanh giữa các câu; phím tắt{' '}
                     <code className="px-1 py-0.5 bg-white border border-blue-200 rounded text-[11px] font-bold">A–D</code>,{' '}
@@ -974,7 +1419,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
                   </li>
                   {isAdaptiveMock && (
                     <li>
-                      <b>Phân nhánh Thích ứng (Adaptive Routing):</b> Đạt từ <b>{routingThreshold}/27</b> ở Module 1 để vào nhánh <b>Module 2 Hard (vùng 650–800)</b>.
+                      <b>Phân nhánh Thích ứng (Adaptive Routing):</b> Đạt từ <b>{routingThreshold}/{m1Len}</b> ở Module 1 để vào nhánh <b>Module 2 Hard (vùng 650–800)</b>.
                     </li>
                   )}
                 </ul>
@@ -993,7 +1438,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
                   <button
                     onClick={() => startTest(true)}
                     className="py-3.5 px-5 rounded-xl bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-300 font-extrabold text-xs sm:text-sm transition flex items-center justify-center gap-1.5 cursor-pointer"
-                    title="Chế độ luyện trực tiếp 27 câu Hard Module 2 cho mục tiêu 750–800"
+                    title={`Chế độ luyện trực tiếp ${m1Len} câu Hard Module 2 cho mục tiêu 750–800`}
                   >
                     <Target className="w-4 h-4 text-amber-600" />
                     <span>Luyện thẳng Module 2 Hard</span>
@@ -1012,7 +1457,9 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
   // ============================================================================
   if (phase === 'routing_transition') {
     const m1Qs = content.module1?.questions || [];
-    const m1Right = m1Qs.filter((q) => answers[q.id] === q.correctAnswer).length;
+    const m1Right = m1Qs.filter((q) => isSatQuestionCorrect(q, answers[q.id])).length;
+    const defaultModLen = isMathSection ? 22 : 27;
+    const defaultModMin = isMathSection ? 35 : 32;
 
     return (
       <div className="min-h-screen bg-[#f8fafc] flex flex-col items-center justify-center p-6">
@@ -1035,8 +1482,8 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
               <div className="text-[11px] font-bold uppercase text-slate-500">Module 2</div>
               <div className="text-lg font-black text-slate-900">
                 {m2Route === 'hard'
-                  ? content.module2_hard?.questions?.length || 27
-                  : content.module2_lower?.questions?.length || 27}{' '}
+                  ? content.module2_hard?.questions?.length || defaultModLen
+                  : content.module2_lower?.questions?.length || defaultModLen}{' '}
                 câu hỏi
               </div>
             </div>
@@ -1045,8 +1492,8 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
               <div className="text-[11px] font-bold uppercase text-slate-500">Thời gian</div>
               <div className="text-lg font-black text-[#1e3a8a]">
                 {m2Route === 'hard'
-                  ? content.module2_hard?.timeLimitMinutes || 32
-                  : content.module2_lower?.timeLimitMinutes || 32}{' '}
+                  ? content.module2_hard?.timeLimitMinutes || defaultModMin
+                  : content.module2_lower?.timeLimitMinutes || defaultModMin}{' '}
                 phút
               </div>
             </div>
@@ -1139,14 +1586,20 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
                 <h1 className="text-2xl sm:text-3xl font-black">{testTitle}</h1>
                 <p className="text-blue-100 text-sm max-w-xl">
                   {analytics.scaledScore !== null
-                    ? analytics.scaledScore >= 750
-                      ? 'Xuất sắc! Phong độ Reading & Writing của bạn đang đạt chuẩn mục tiêu 1500+ (750–800 R&W).'
+                    ? analytics.scaledScore >= (isMathSection ? 780 : 750)
+                      ? isMathSection
+                        ? 'Xuất sắc! Phong độ Math của bạn đang ở ngưỡng 780–800 — sẵn sàng chinh phục SAT 1500+!'
+                        : 'Xuất sắc! Phong độ Reading & Writing của bạn đang đạt chuẩn mục tiêu 1500+ (750–800 R&W).'
                       : analytics.scaledScore >= 700
-                      ? 'Rất tốt! Bạn đã vượt mốc 700 R&W — hãy mở Chữa bài chi tiết để xử lý nốt 4–7 bẫy Hard Module 2.'
+                      ? isMathSection
+                        ? 'Rất tốt! Bạn đã vượt mốc 700 Math — hãy mở Chữa bài chi tiết để luyện mẹo Desmos 10 giây và xử lý các câu Hard Module 2.'
+                        : 'Rất tốt! Bạn đã vượt mốc 700 R&W — hãy mở Chữa bài chi tiết để xử lý nốt 4–7 bẫy Hard Module 2.'
+                      : isMathSection
+                      ? 'Hãy xem kỹ phân tích 4 Content Domains, lời giải đại số từng bước và mẹo Desmos để nâng tốc độ lên ngưỡng 750–800.'
                       : 'Hãy xem kỹ phân tích 4 Content Domains và bẫy đáp án từng câu để nâng tốc độ Grammar và độ chính xác Reading.'
                     : analytics.accuracyPct >= 85
                     ? 'Độ chính xác ấn tượng ở ngưỡng 1500+! Xem nhanh các câu sai/đánh dấu để khóa chắc tuyệt đối kỹ năng này.'
-                    : 'Hãy bấm "Chữa bài chi tiết" để đọc phân tích bẫy A/B/C/D cho từng câu chưa đúng nhé.'}
+                    : 'Hãy bấm "Chữa bài chi tiết" để đọc lời giải chi tiết và phân tích bẫy cho từng câu chưa đúng nhé.'}
                 </p>
                 {isSavingResult && (
                   <div className="text-xs text-sky-200 animate-pulse">Đang lưu kết quả vào hồ sơ học tập...</div>
@@ -1158,7 +1611,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
                 {analytics.scaledScore !== null ? (
                   <>
                     <div className="text-[11px] font-bold uppercase tracking-widest text-blue-200">
-                      Reading &amp; Writing Score
+                      {isMathSection ? 'Math Section Score' : 'Reading & Writing Score'}
                     </div>
                     <div className="text-5xl font-black tracking-tight mt-1 text-white">
                       {analytics.scaledScore}
@@ -1214,7 +1667,9 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
                 <div className="text-[11px] text-blue-200 font-semibold">Tốc độ trung bình</div>
                 <div className="text-lg font-black">
                   {avgSecPerQ}s / câu
-                  <span className="text-xs font-normal text-blue-200 ml-1">(chuẩn ≤71s)</span>
+                  <span className="text-xs font-normal text-blue-200 ml-1">
+                    (chuẩn ≤{isMathSection ? 95 : 71}s)
+                  </span>
                 </div>
               </div>
             </div>
@@ -1332,13 +1787,13 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
   }
 
   // ============================================================================
-  // RENDER 4: REVIEW MODE (DETAILED 4-OPTION TRAP ANALYSIS)
+  // RENDER 4: REVIEW MODE (DETAILED TRAP ANALYSIS + MATH STEP-BY-STEP & DESMOS)
   // ============================================================================
   if (phase === 'review') {
     const q = activeReviewQuestion;
     const safeIdx = Math.min(reviewIdx, Math.max(0, filteredReviewQuestions.length - 1));
     const userAns = q ? answers[q.id] : undefined;
-    const isCorrect = q ? userAns === q.correctAnswer : false;
+    const isCorrect = q ? isSatQuestionCorrect(q, userAns) : false;
 
     return (
       <div className="h-screen flex flex-col bg-[#f8fafc] overflow-hidden">
@@ -1359,13 +1814,34 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
                 {analytics.scaledScore !== null
                   ? `Scaled Score: ${analytics.scaledScore}/800 • `
                   : ''}
-                Đúng {analytics.totalCorrect}/{analytics.totalQ} ({analytics.accuracyPct}%) • Click đúp từ bất kỳ để tra từ điển
+                Đúng {analytics.totalCorrect}/{analytics.totalQ} ({analytics.accuracyPct}%)
+                {!isMathSection && ' • Click đúp từ bất kỳ để tra từ điển'}
               </div>
             </div>
           </div>
 
           {/* Filter Bar */}
           <div className="flex flex-wrap items-center gap-2">
+            {isMathSection && (
+              <>
+                <button
+                  onClick={toggleCalculator}
+                  className={`px-2.5 py-1.5 rounded-lg border text-xs font-bold inline-flex items-center gap-1 transition cursor-pointer ${
+                    showCalculator
+                      ? 'bg-emerald-600 text-white border-emerald-600'
+                      : 'bg-white border-slate-300 text-slate-700 hover:bg-emerald-50 hover:border-emerald-400'
+                  }`}
+                >
+                  <Calculator className="w-3.5 h-3.5" /> Desmos
+                </button>
+                <button
+                  onClick={() => setShowReference(true)}
+                  className="px-2.5 py-1.5 rounded-lg border border-slate-300 bg-white hover:bg-blue-50 hover:border-blue-400 text-xs font-bold text-slate-700 inline-flex items-center gap-1 cursor-pointer"
+                >
+                  <Compass className="w-3.5 h-3.5" /> Reference
+                </button>
+              </>
+            )}
             {isAdaptiveMock && !directHardMode && (
               <div className="inline-flex rounded-lg bg-slate-100 p-0.5 text-xs font-bold">
                 {(['all', 'm1', 'm2'] as const).map((m) => (
@@ -1425,7 +1901,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
         {/* Question Strip */}
         <div className="shrink-0 bg-white border-b border-slate-200 px-4 py-2 overflow-x-auto flex items-center gap-1.5">
           {filteredReviewQuestions.map((item, i) => {
-            const ok = answers[item.id] === item.correctAnswer;
+            const ok = isSatQuestionCorrect(item, answers[item.id]);
             const isActive = i === safeIdx;
             return (
               <button
@@ -1476,6 +1952,11 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
                   <span className="px-2.5 py-1 rounded-md bg-slate-900 text-white text-xs font-black">
                     {q.moduleLabel} • Câu {q.number}
                   </span>
+                  {q.questionFormat === 'spr' && (
+                    <span className="px-2.5 py-1 rounded-md bg-purple-50 text-purple-800 border border-purple-200 text-xs font-black">
+                      SPR Grid-In
+                    </span>
+                  )}
                   <span className="px-2.5 py-1 rounded-md bg-blue-50 text-[#1e3a8a] border border-blue-200 text-xs font-bold">
                     {q.domain}
                   </span>
@@ -1490,7 +1971,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
                 </div>
 
                 <div
-                  className="sat-stimulus-prose font-serif text-[16px] leading-[1.8] text-slate-900 space-y-4"
+                  className={`sat-stimulus-prose ${isMathSection ? 'font-sans' : 'font-serif'} text-[16px] leading-[1.8] text-slate-900 space-y-4`}
                   dangerouslySetInnerHTML={{ __html: renderHighlightedStimulusHtml(q.stimulusHtml, q.id) }}
                 />
               </div>
@@ -1518,8 +1999,9 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
                         {isCorrect ? 'Chính xác!' : 'Chưa chính xác'}
                       </div>
                       <div className="text-xs opacity-90">
-                        Bạn chọn: <b>{userAns || 'Bỏ trống'}</b> • Đáp án đúng:{' '}
-                        <b>{q.correctAnswer}</b>
+                        Bạn {q.questionFormat === 'spr' ? 'nhập' : 'chọn'}:{' '}
+                        <b>{userAns || 'Bỏ trống'}</b> • Đáp án đúng:{' '}
+                        <b>{q.correctDisplay || q.correctAnswer}</b>
                       </div>
                     </div>
                   </div>
@@ -1546,78 +2028,127 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
                 {/* Question Stem */}
                 <div
                   className="text-[15.5px] font-semibold text-slate-900 leading-relaxed"
-                  dangerouslySetInnerHTML={{ __html: q.questionHtml }}
+                  dangerouslySetInnerHTML={{ __html: renderMathHtml(q.questionHtml) }}
                 />
 
-                {/* 4 Options with Trap Breakdown */}
-                <div className="space-y-3">
-                  {q.options.map((opt) => {
-                    const isRightOpt = opt.label === q.correctAnswer;
-                    const isUserWrongOpt = userAns === opt.label && !isRightOpt;
-                    const analysis = q.explanation?.optionAnalysis?.[opt.label];
-
-                    return (
+                {/* SPR Comparison Card OR 4 MCQ Options with Trap Breakdown */}
+                {q.questionFormat === 'spr' ? (
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div
+                      className={`rounded-xl border-2 p-4 ${
+                        isCorrect
+                          ? 'bg-emerald-50/70 border-emerald-500'
+                          : 'bg-rose-50/70 border-rose-400'
+                      }`}
+                    >
+                      <div className="text-[11px] font-black uppercase tracking-wider text-slate-500 mb-1">
+                        Đáp án bạn nhập
+                      </div>
                       <div
-                        key={opt.label}
-                        className={`rounded-xl border-2 p-4 transition ${
-                          isRightOpt
-                            ? 'bg-emerald-50/70 border-emerald-500'
-                            : isUserWrongOpt
-                            ? 'bg-rose-50/70 border-rose-400'
-                            : 'bg-white border-slate-200'
-                        }`}
-                      >
-                        <div className="flex items-start gap-3">
-                          <span
-                            className={`w-7 h-7 rounded-full shrink-0 flex items-center justify-center font-black text-xs border ${
-                              isRightOpt
-                                ? 'bg-emerald-600 text-white border-emerald-600'
-                                : isUserWrongOpt
-                                ? 'bg-rose-600 text-white border-rose-600'
-                                : 'bg-slate-100 text-slate-700 border-slate-300'
-                            }`}
-                          >
-                            {opt.label}
-                          </span>
-                          <div className="flex-1 min-w-0">
-                            <div
-                              className="text-sm font-semibold text-slate-900 leading-relaxed"
-                              dangerouslySetInnerHTML={{ __html: opt.text }}
-                            />
-                            {analysis && (
-                              <div className="mt-2.5 pt-2.5 border-t border-slate-200/80 text-xs leading-relaxed">
-                                <span
-                                  className={`inline-block px-2 py-0.5 rounded font-black mr-2 mb-1 ${
-                                    isRightOpt
-                                      ? 'bg-emerald-600 text-white'
-                                      : 'bg-slate-800 text-amber-300'
-                                  }`}
-                                >
-                                  {analysis.trapTag || (isRightOpt ? 'Đáp án đúng' : 'Bẫy nhiễu')}
-                                </span>
-                                <span className="text-slate-700">{analysis.reasonVi}</span>
-                              </div>
-                            )}
+                        className="text-xl font-black text-slate-900"
+                        dangerouslySetInnerHTML={{
+                          __html: userAns
+                            ? renderMathHtml(`\\(${formatSprPreviewLatex(userAns)}\\)`)
+                            : '<span class="text-slate-400 text-sm font-semibold">Bỏ trống</span>',
+                        }}
+                      />
+                    </div>
+                    <div className="rounded-xl border-2 border-emerald-500 bg-emerald-50/70 p-4">
+                      <div className="text-[11px] font-black uppercase tracking-wider text-emerald-700 mb-1">
+                        Đáp án chuẩn được chấp nhận
+                      </div>
+                      <div className="text-xl font-black text-emerald-950 font-mono">
+                        {q.correctDisplay || (q.acceptedAnswers || [q.correctAnswer]).join(' | ')}
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="space-y-3">
+                    {q.options.map((opt) => {
+                      const isRightOpt = opt.label === q.correctAnswer;
+                      const isUserWrongOpt = userAns === opt.label && !isRightOpt;
+                      const analysis = q.explanation?.optionAnalysis?.[opt.label];
+
+                      return (
+                        <div
+                          key={opt.label}
+                          className={`rounded-xl border-2 p-4 transition ${
+                            isRightOpt
+                              ? 'bg-emerald-50/70 border-emerald-500'
+                              : isUserWrongOpt
+                              ? 'bg-rose-50/70 border-rose-400'
+                              : 'bg-white border-slate-200'
+                          }`}
+                        >
+                          <div className="flex items-start gap-3">
+                            <span
+                              className={`w-7 h-7 rounded-full shrink-0 flex items-center justify-center font-black text-xs border ${
+                                isRightOpt
+                                  ? 'bg-emerald-600 text-white border-emerald-600'
+                                  : isUserWrongOpt
+                                  ? 'bg-rose-600 text-white border-rose-600'
+                                  : 'bg-slate-100 text-slate-700 border-slate-300'
+                              }`}
+                            >
+                              {opt.label}
+                            </span>
+                            <div className="flex-1 min-w-0">
+                              <div
+                                className="text-sm font-semibold text-slate-900 leading-relaxed"
+                                dangerouslySetInnerHTML={{ __html: renderMathHtml(opt.text) }}
+                              />
+                              {analysis && (
+                                <div className="mt-2.5 pt-2.5 border-t border-slate-200/80 text-xs leading-relaxed">
+                                  <span
+                                    className={`inline-block px-2 py-0.5 rounded font-black mr-2 mb-1 ${
+                                      isRightOpt
+                                        ? 'bg-emerald-600 text-white'
+                                        : 'bg-slate-800 text-amber-300'
+                                    }`}
+                                  >
+                                    {analysis.trapTag || (isRightOpt ? 'Đáp án đúng' : 'Bẫy nhiễu')}
+                                  </span>
+                                  <span
+                                    className="text-slate-700"
+                                    dangerouslySetInnerHTML={{ __html: renderMathHtml(analysis.reasonVi) }}
+                                  />
+                                </div>
+                              )}
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    );
-                  })}
-                </div>
+                      );
+                    })}
+                  </div>
+                )}
 
-                {/* Core Summary & 1500+ Golden Takeaway */}
+                {/* Core Summary, Desmos 10s Tip & 1500+ Golden Takeaway */}
                 {q.explanation && (
                   <div className="rounded-2xl bg-white border border-blue-200 shadow-sm p-5 space-y-3">
                     <div className="text-xs font-black uppercase tracking-wider text-[#1e3a8a] flex items-center gap-1.5">
-                      <Sparkles className="w-4 h-4 text-blue-600" /> Phân tích chiến lược 1500+
+                      <Sparkles className="w-4 h-4 text-blue-600" />
+                      {isMathSection ? 'Lời giải chi tiết & Chiến lược 800 Math' : 'Phân tích chiến lược 1500+'}
                     </div>
-                    <p className="text-sm text-slate-800 leading-relaxed whitespace-pre-line">
-                      {q.explanation.summaryVi}
-                    </p>
+                    <div
+                      className="text-sm text-slate-800 leading-relaxed whitespace-pre-line"
+                      dangerouslySetInnerHTML={{ __html: renderMathHtml(q.explanation.summaryVi) }}
+                    />
+                    {q.explanation.desmosTipVi && (
+                      <div className="rounded-xl bg-emerald-50 border border-emerald-200 px-4 py-3 text-xs sm:text-sm text-emerald-950 font-medium">
+                        <div className="font-black text-emerald-800 flex items-center gap-1.5 mb-1">
+                          <Zap className="w-4 h-4 text-emerald-600" /> Mẹo Desmos 10 giây (800-Level Shortcut)
+                        </div>
+                        <div
+                          dangerouslySetInnerHTML={{ __html: renderMathHtml(q.explanation.desmosTipVi) }}
+                        />
+                      </div>
+                    )}
                     {q.explanation.keyTakeaway && (
                       <div className="rounded-xl bg-amber-50 border border-amber-200 px-4 py-3 text-xs sm:text-sm text-amber-950 font-semibold">
                         <span className="font-black text-amber-700">💡 Quy tắc vàng 1500+: </span>
-                        {q.explanation.keyTakeaway}
+                        <span
+                          dangerouslySetInnerHTML={{ __html: renderMathHtml(q.explanation.keyTakeaway) }}
+                        />
                       </div>
                     )}
                   </div>
@@ -1626,6 +2157,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
             </div>
           </div>
         )}
+        {mathOverlays}
       </div>
     );
   }
@@ -1754,7 +2286,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
         {/* Left: Section Title & Directions */}
         <div className="flex flex-col min-w-0">
           <div className="text-xs sm:text-sm font-black text-slate-900 truncate max-w-[180px] sm:max-w-[300px]">
-            {currentModule?.title || 'Section 1: Reading and Writing'}
+            {currentModule?.title || (isMathSection ? 'Section 2: Math' : 'Section 1: Reading and Writing')}
           </div>
           <button
             onClick={() => setShowDirections((v) => !v)}
@@ -1789,8 +2321,38 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
           </button>
         </div>
 
-        {/* Right: Bluebook Tools (Highlights, Font Size, Fullscreen, Exit) */}
+        {/* Right: Bluebook Tools (Desmos & Reference for Math, Highlights, Font Size, Fullscreen, Exit) */}
         <div className="flex items-center gap-1.5 sm:gap-2">
+          {isMathSection && (
+            <>
+              <button
+                onClick={toggleCalculator}
+                className={`px-2.5 py-1.5 rounded-lg border text-xs font-bold inline-flex items-center gap-1.5 transition cursor-pointer ${
+                  showCalculator
+                    ? 'bg-emerald-600 border-emerald-600 text-white shadow-sm'
+                    : 'bg-white border-slate-300 text-slate-700 hover:bg-emerald-50 hover:border-emerald-400'
+                }`}
+                title="Mở Máy tính đồ thị Desmos (SAT Edition)"
+              >
+                <Calculator className="w-3.5 h-3.5" />
+                <span className="hidden md:inline">Calculator</span>
+              </button>
+
+              <button
+                onClick={() => setShowReference((v) => !v)}
+                className={`px-2.5 py-1.5 rounded-lg border text-xs font-bold inline-flex items-center gap-1.5 transition cursor-pointer ${
+                  showReference
+                    ? 'bg-[#0050b3] border-[#0050b3] text-white shadow-sm'
+                    : 'bg-white border-slate-300 text-slate-700 hover:bg-blue-50 hover:border-blue-400'
+                }`}
+                title="Bảng công thức Hình học SAT Reference Sheet"
+              >
+                <Compass className="w-3.5 h-3.5" />
+                <span className="hidden md:inline">Reference</span>
+              </button>
+            </>
+          )}
+
           <button
             onClick={() => setShowHighlightsDrawer((v) => !v)}
             className={`px-2.5 py-1.5 rounded-lg border text-xs font-bold inline-flex items-center gap-1.5 transition cursor-pointer ${
@@ -1801,7 +2363,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
             title="Bôi đen đoạn văn bên trái để Highlight & Ghi chú"
           >
             <Highlighter className="w-3.5 h-3.5" />
-            <span className="hidden md:inline">Highlights</span>
+            <span className="hidden lg:inline">Highlights</span>
             {activeHighlights.length > 0 && (
               <span className="px-1.5 py-0.2 rounded-full bg-amber-400 text-amber-950 text-[10px] font-black">
                 {activeHighlights.length}
@@ -1850,7 +2412,9 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
       {showDirections && (
         <div className="absolute top-16 left-4 sm:left-6 z-40 max-w-lg bg-white rounded-2xl border border-slate-300 shadow-2xl p-5 text-sm text-slate-700 leading-relaxed">
           <div className="flex items-center justify-between mb-2">
-            <span className="font-black text-slate-900">Directions — Reading and Writing</span>
+            <span className="font-black text-slate-900">
+              {isMathSection ? 'Directions — Math' : 'Directions — Reading and Writing'}
+            </span>
             <button
               onClick={() => setShowDirections(false)}
               className="text-xs font-bold text-[#0050b3] hover:underline cursor-pointer"
@@ -1860,7 +2424,9 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
           </div>
           <div
             dangerouslySetInnerHTML={{
-              __html: currentModule?.directionsHtml || DEFAULT_RW_DIRECTIONS,
+              __html:
+                currentModule?.directionsHtml ||
+                (isMathSection ? DEFAULT_MATH_DIRECTIONS : DEFAULT_RW_DIRECTIONS),
             }}
           />
         </div>
@@ -1987,9 +2553,22 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
               .sat-stimulus-prose li { margin-bottom: 6px; }
             `}</style>
             <div
-              className={`sat-stimulus-prose max-w-2xl mx-auto font-serif ${stimulusFontClass} leading-[1.85] text-slate-900 space-y-4`}
+              className={`sat-stimulus-prose max-w-2xl mx-auto ${isMathSection ? 'font-sans' : 'font-serif'} ${stimulusFontClass} leading-[1.85] text-slate-900 space-y-4`}
               dangerouslySetInnerHTML={{ __html: renderHighlightedStimulusHtml(q.stimulusHtml, q.id) }}
             />
+            {q.questionFormat === 'spr' && (
+              <div className="max-w-2xl mx-auto mt-6 rounded-2xl border border-slate-200 bg-slate-50 p-4 text-xs text-slate-700 space-y-2 leading-relaxed">
+                <div className="font-black text-slate-900 uppercase tracking-wide text-[11px]">
+                  Student-Produced Response Directions
+                </div>
+                <ul className="list-disc pl-4 space-y-1">
+                  <li>Nhập một đáp án số chính xác (số nguyên, phân số <code>a/b</code>, hoặc số thập phân).</li>
+                  <li>Với phân số hoặc số thập phân tương đương (ví dụ <code>3/4</code>, <code>0.75</code>, <code>.75</code>), mọi cách viết đúng đều được chấm điểm tối đa.</li>
+                  <li>Nếu đáp án là số âm, đặt dấu trừ <code>-</code> ở đầu (ví dụ <code>-5/2</code> hoặc <code>-2.5</code>).</li>
+                  <li><b>Không nhập hỗn số</b>: thay vì <code>1 1/2</code>, hãy nhập <code>3/2</code> hoặc <code>1.5</code>.</li>
+                </ul>
+              </div>
+            )}
           </div>
 
           {/* DRAGGABLE CENTER DIVIDER (Desktop) */}
@@ -2003,7 +2582,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
             <div className="w-1 h-10 rounded-full bg-slate-400" />
           </div>
 
-          {/* RIGHT PANE: QUESTION & 4 CHOICES */}
+          {/* RIGHT PANE: QUESTION & CHOICES / SPR GRID-IN */}
           <div
             data-pane="right"
             className="h-1/2 lg:h-full overflow-y-auto px-6 sm:px-10 py-6 sm:py-8 bg-white border-t lg:border-t-0 border-slate-200"
@@ -2034,85 +2613,139 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
                   </button>
                 </div>
 
-                {/* Official ABC Option Eliminator Toggle */}
-                <button
-                  onClick={() => setEliminatorEnabled((v) => !v)}
-                  className={`px-2.5 py-1 rounded-lg border text-xs font-black tracking-tight transition cursor-pointer ${
-                    eliminatorEnabled
-                      ? 'bg-[#0050b3] text-white border-[#0050b3] shadow-sm'
-                      : 'bg-white text-slate-700 border-slate-300 hover:bg-slate-200'
-                  }`}
-                  title="Bật/Tắt chế độ gạch loại trừ đáp án sai (Option Eliminator)"
-                >
-                  <span className="line-through decoration-2">ABC</span>
-                </button>
+                {/* Official ABC Option Eliminator Toggle (MCQ only) */}
+                {q.questionFormat !== 'spr' ? (
+                  <button
+                    onClick={() => setEliminatorEnabled((v) => !v)}
+                    className={`px-2.5 py-1 rounded-lg border text-xs font-black tracking-tight transition cursor-pointer ${
+                      eliminatorEnabled
+                        ? 'bg-[#0050b3] text-white border-[#0050b3] shadow-sm'
+                        : 'bg-white text-slate-700 border-slate-300 hover:bg-slate-200'
+                    }`}
+                    title="Bật/Tắt chế độ gạch loại trừ đáp án sai (Option Eliminator)"
+                  >
+                    <span className="line-through decoration-2">ABC</span>
+                  </button>
+                ) : (
+                  <span className="px-2.5 py-1 rounded-lg bg-purple-100 text-purple-800 text-[11px] font-black">
+                    Student-Produced Response
+                  </span>
+                )}
               </div>
 
               {/* Question Prompt */}
               <div
                 className={`${stimulusFontClass} font-medium text-slate-900 leading-relaxed select-text`}
-                dangerouslySetInnerHTML={{ __html: q.questionHtml }}
+                dangerouslySetInnerHTML={{ __html: renderMathHtml(q.questionHtml) }}
               />
 
-              {/* 4 Answer Choice Cards */}
-              <div className="space-y-3 pt-1">
-                {q.options.map((opt) => {
-                  const isSelected = answers[q.id] === opt.label;
-                  const isEliminated = Boolean(eliminated[q.id]?.[opt.label]);
-
-                  return (
-                    <div key={opt.label} className="flex items-center gap-2">
-                      <button
-                        type="button"
-                        onClick={() => handleSelectOption(q.id, opt.label)}
-                        className={`flex-1 text-left rounded-xl border-2 px-4 py-3.5 transition flex items-start gap-3.5 relative cursor-pointer ${
-                          isSelected
-                            ? 'border-[#0050b3] bg-blue-50/60 shadow-sm'
-                            : isEliminated
-                            ? 'border-slate-200 bg-slate-50/70 opacity-50'
-                            : 'border-slate-300 bg-white hover:border-[#0050b3]/60 hover:bg-slate-50'
-                        }`}
-                      >
-                        <span
-                          className={`w-7 h-7 rounded-full shrink-0 flex items-center justify-center font-black text-xs border-2 mt-0.5 transition ${
-                            isSelected
-                              ? 'bg-[#0050b3] text-white border-[#0050b3]'
-                              : 'bg-white text-slate-800 border-slate-700'
-                          }`}
-                        >
-                          {opt.label}
-                        </span>
-                        <span
-                          className={`flex-1 text-[15px] leading-relaxed text-slate-900 ${
-                            isEliminated ? 'line-through decoration-slate-500 decoration-2' : ''
-                          }`}
-                          dangerouslySetInnerHTML={{ __html: opt.text }}
-                        />
-                      </button>
-
-                      {/* Option Eliminator Strikethrough Button */}
-                      {eliminatorEnabled && (
+              {/* SPR Grid-In Box OR 4 Answer Choice Cards */}
+              {q.questionFormat === 'spr' ? (
+                <div className="space-y-4 pt-2">
+                  <div className="rounded-2xl border-2 border-slate-300 focus-within:border-[#0050b3] bg-slate-50/50 p-5 space-y-3 transition">
+                    <label className="block text-xs font-black uppercase tracking-wider text-slate-600">
+                      Nhập đáp án số của bạn (Exact Answer)
+                    </label>
+                    <div className="flex items-center gap-2">
+                      <input
+                        type="text"
+                        inputMode="decimal"
+                        value={answers[q.id] || ''}
+                        onChange={(e) => handleSprChange(q.id, e.target.value)}
+                        placeholder="VD: 12, -3/4, 0.75"
+                        maxLength={14}
+                        className="flex-1 bg-white border-2 border-slate-300 focus:border-[#0050b3] rounded-xl px-4 py-3 font-mono text-lg font-black text-slate-900 outline-none select-text"
+                      />
+                      {answers[q.id] && (
                         <button
                           type="button"
-                          onClick={() => toggleEliminateOption(q.id, opt.label)}
-                          className={`shrink-0 w-9 h-9 rounded-full border text-xs font-black transition flex items-center justify-center cursor-pointer ${
-                            isEliminated
-                              ? 'bg-slate-800 text-white border-slate-800'
-                              : 'bg-white text-slate-600 border-slate-300 hover:bg-slate-100'
-                          }`}
-                          title={isEliminated ? 'Khôi phục đáp án' : `Gạch loại trừ đáp án ${opt.label}`}
+                          onClick={() => handleSprChange(q.id, '')}
+                          className="px-3 py-3 rounded-xl border border-slate-300 bg-white hover:bg-slate-100 text-xs font-bold text-slate-600 cursor-pointer"
                         >
-                          {isEliminated ? (
-                            <span className="text-[10px]">Undo</span>
-                          ) : (
-                            <span className="line-through">{opt.label}</span>
-                          )}
+                          Xóa
                         </button>
                       )}
                     </div>
-                  );
-                })}
-              </div>
+                    {answers[q.id] && parseSatNumericValue(answers[q.id]) === null && (
+                      <div className="text-xs font-bold text-rose-600 flex items-center gap-1.5">
+                        <AlertTriangle className="w-3.5 h-3.5" />
+                        Định dạng chưa hợp lệ — chỉ nhập số, dấu chấm <code>.</code>, dấu gạch phân số <code>/</code> hoặc dấu âm <code>-</code> ở đầu.
+                      </div>
+                    )}
+                    <div className="pt-2 border-t border-slate-200 flex items-center justify-between">
+                      <span className="text-xs font-bold text-slate-500">Answer Preview:</span>
+                      <div
+                        className="min-h-[32px] px-4 py-1 rounded-lg bg-white border border-slate-200 text-lg font-bold text-slate-900 flex items-center"
+                        dangerouslySetInnerHTML={{
+                          __html:
+                            answers[q.id] && parseSatNumericValue(answers[q.id]) !== null
+                              ? renderMathHtml(`\\(${formatSprPreviewLatex(answers[q.id])}\\)`)
+                              : '<span class="text-slate-400 text-xs font-normal">—</span>',
+                        }}
+                      />
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <div className="space-y-3 pt-1">
+                  {q.options.map((opt) => {
+                    const isSelected = answers[q.id] === opt.label;
+                    const isEliminated = Boolean(eliminated[q.id]?.[opt.label]);
+
+                    return (
+                      <div key={opt.label} className="flex items-center gap-2">
+                        <button
+                          type="button"
+                          onClick={() => handleSelectOption(q.id, opt.label)}
+                          className={`flex-1 text-left rounded-xl border-2 px-4 py-3.5 transition flex items-start gap-3.5 relative cursor-pointer ${
+                            isSelected
+                              ? 'border-[#0050b3] bg-blue-50/60 shadow-sm'
+                              : isEliminated
+                              ? 'border-slate-200 bg-slate-50/70 opacity-50'
+                              : 'border-slate-300 bg-white hover:border-[#0050b3]/60 hover:bg-slate-50'
+                          }`}
+                        >
+                          <span
+                            className={`w-7 h-7 rounded-full shrink-0 flex items-center justify-center font-black text-xs border-2 mt-0.5 transition ${
+                              isSelected
+                                ? 'bg-[#0050b3] text-white border-[#0050b3]'
+                                : 'bg-white text-slate-800 border-slate-700'
+                            }`}
+                          >
+                            {opt.label}
+                          </span>
+                          <span
+                            className={`flex-1 text-[15px] leading-relaxed text-slate-900 ${
+                              isEliminated ? 'line-through decoration-slate-500 decoration-2' : ''
+                            }`}
+                            dangerouslySetInnerHTML={{ __html: renderMathHtml(opt.text) }}
+                          />
+                        </button>
+
+                        {/* Option Eliminator Strikethrough Button */}
+                        {eliminatorEnabled && (
+                          <button
+                            type="button"
+                            onClick={() => toggleEliminateOption(q.id, opt.label)}
+                            className={`shrink-0 w-9 h-9 rounded-full border text-xs font-black transition flex items-center justify-center cursor-pointer ${
+                              isEliminated
+                                ? 'bg-slate-800 text-white border-slate-800'
+                                : 'bg-white text-slate-600 border-slate-300 hover:bg-slate-100'
+                            }`}
+                            title={isEliminated ? 'Khôi phục đáp án' : `Gạch loại trừ đáp án ${opt.label}`}
+                          >
+                            {isEliminated ? (
+                              <span className="text-[10px]">Undo</span>
+                            ) : (
+                              <span className="line-through">{opt.label}</span>
+                            )}
+                          </button>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -2265,6 +2898,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
           </div>
         </div>
       )}
+      {mathOverlays}
     </div>
   );
 }

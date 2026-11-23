@@ -1,0 +1,66 @@
+{
+  "lectureId": "d9f97cd0-2b8d-448f-9c97-b5f1867eccd4",
+  "courseTitle": "Digital SAT 1500+ (Math)",
+  "lectureTitle": "1.2 Linear Functions, Slope-Intercept Models & Word Problems",
+  "totalDuration": 157.79,
+  "majorSections": [
+    {
+      "title": "Slope, Intercepts & Bẫy bước nhảy",
+      "startSegmentId": "slope"
+    },
+    {
+      "title": "Song song, Vuông góc & Tịnh tiến",
+      "startSegmentId": "perp"
+    },
+    {
+      "title": "Bảng dữ liệu lệch & Desmos",
+      "startSegmentId": "table_models"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Tổng quan Hàm bậc nhất & Bài toán thực tế",
+      "selector": "#sec-header",
+      "en": "Linear functions are the backbone of SAT Algebra. Even on Hard Module Two, the College Board loves disguising simple lines inside word problems, standard form equations, and shifted data tables. Let us strip away every disguise.",
+      "vi": "Hàm số bậc nhất là xương sống của phần Đại số SAT. Ngay cả trong Module 2 Hard, College Board rất thích ngụy trang những đường thẳng quen thuộc dưới dạng bài toán lời văn, phương trình dạng chuẩn hoặc bảng dữ liệu bị dịch chuyển. Hãy cùng bóc tách từng dạng một.",
+      "duration": 30.47,
+      "startTime": 0.0,
+      "endTime": 30.47,
+      "audioUrl": "/audio/lectures/sat_math/m1_2/intro.mp3"
+    },
+    {
+      "id": "slope",
+      "title": "Slope, Intercepts & Bẫy bước nhảy",
+      "selector": "#sec-slope",
+      "en": "Remember the three linear forms. In standard form A x plus B y equals C, the slope is immediately negative A over B, and the y-intercept is C over B. Watch out for the step-size trap: the slope tells you the change in y when x increases by one unit, so if a question asks about an increase of five units in x, multiply the slope by five.",
+      "vi": "Hãy ghi nhớ nhanh công thức dạng chuẩn A x cộng B y bằng C: hệ số góc lập tức là trừ A trên B, và tung độ gốc là C trên B. Đặc biệt cảnh giác bẫy bước nhảy: hệ số góc chỉ cho biết mức thay đổi của y khi x tăng một đơn vị, nên nếu đề hỏi x tăng thêm năm đơn vị thì bắt buộc phải nhân hệ số góc với năm.",
+      "duration": 39.88,
+      "startTime": 30.47,
+      "endTime": 70.35,
+      "audioUrl": "/audio/lectures/sat_math/m1_2/slope.mp3"
+    },
+    {
+      "id": "perp",
+      "title": "Song song, Vuông góc & Tịnh tiến",
+      "selector": "#sec-perp",
+      "en": "Perpendicular lines have negative reciprocal slopes, meaning their product is negative one. In standard form, a line perpendicular to A x plus B y equals C always has the form B x minus A y equals D—just swap A and B and flip the middle sign. For horizontal shifts, moving a graph h units to the right replaces x with x minus h inside the parentheses, which changes the y-intercept by negative m times h.",
+      "vi": "Hai đường thẳng vuông góc có tích hai hệ số góc bằng trừ một, tức nghịch đảo và đổi dấu. Ở dạng chuẩn, đường vuông góc với A x cộng B y bằng C luôn có dạng B x trừ A y bằng D: chỉ cần đổi chỗ A, B và đổi dấu ở giữa trong 2 giây. Khi tịnh tiến đồ thị sang phải h đơn vị, ta thay x bằng x trừ h trong ngoặc nên tung độ gốc sẽ thay đổi một lượng bằng trừ m nhân h chứ không phải trừ h.",
+      "duration": 52.77,
+      "startTime": 70.35,
+      "endTime": 123.12,
+      "audioUrl": "/audio/lectures/sat_math/m1_2/perp.mp3"
+    },
+    {
+      "id": "table_models",
+      "title": "Bảng dữ liệu bị dịch chuyển & Desmos",
+      "selector": "#sec-table-models",
+      "en": "Hard questions frequently give you a table for f of x minus a constant, or a multiple of f of x, instead of f of x directly. Always reconstruct the true values of f of x first, then run a quick linear regression y one tilde m x one plus b in Desmos to guarantee zero sign errors.",
+      "vi": "Các câu khó hay cho bảng giá trị của f x trừ đi một hằng số thay vì f x trực tiếp. Luôn luôn khôi phục cột giá trị thực của f x trước, sau đó gõ hồi quy tuyến tính y một ngã m x một cộng b trong Desmos để chắc chắn không bao giờ nhầm dấu.",
+      "duration": 34.67,
+      "startTime": 123.12,
+      "endTime": 157.79,
+      "audioUrl": "/audio/lectures/sat_math/m1_2/table_models.mp3"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "lectureId": "a8675f9b-ac8f-4f0b-be91-638c549357b2",
+  "courseTitle": "Digital SAT 1500+ (Math)",
+  "lectureTitle": "2.1 Quadratics Mastery: Discriminant, Vertex Form & Vieta",
+  "totalDuration": 159.74,
+  "majorSections": [
+    {
+      "title": "3 dạng Parabol & Tính đối xứng",
+      "startSegmentId": "threeforms"
+    },
+    {
+      "title": "Biệt thức Δ = b² − 4ac",
+      "startSegmentId": "discriminant"
+    },
+    {
+      "title": "Định lý Vieta",
+      "startSegmentId": "vieta"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Tổng quan Quadratics 800",
+      "selector": "#sec-header",
+      "en": "Quadratics are the single highest-yield topic in SAT Advanced Math. Almost every Hard Module Two contains at least three quadratic questions testing vertex form, the discriminant, and Vieta formulas. Master these three tools and you turn the hardest questions into five-second wins.",
+      "vi": "Phương trình và hàm bậc hai là chuyên đề mang lại nhiều điểm nhất trong phần Advanced Math. Hầu như mọi đề Module 2 Hard đều có ít nhất 3 câu bậc hai kiểm tra dạng đỉnh, biệt thức delta và định lý Vieta. Nắm chắc ba công cụ này sẽ biến những câu khó nhất thành điểm số trong 5 giây.",
+      "duration": 36.02,
+      "startTime": 0.0,
+      "endTime": 36.02,
+      "audioUrl": "/audio/lectures/sat_math/m2_1/intro.mp3"
+    },
+    {
+      "id": "threeforms",
+      "title": "3 dạng Parabol & Tính đối xứng",
+      "selector": "#sec-threeforms",
+      "en": "Know what each quadratic form reveals as a constant. Standard form reveals the y-intercept c. Vertex form reveals the minimum or maximum value k at x equals h. Factored form reveals the x-intercepts r and s. Also remember symmetry: if two different inputs give the same output, like f of three equals f of eleven, the vertex x-coordinate is simply their average, seven.",
+      "vi": "Hãy thuộc chính xác mỗi dạng parabol làm lộ thông số nào: dạng chuẩn cho biết ngay tung độ gốc c; dạng đỉnh cho thấy giá trị cực đại hoặc cực tiểu k tại x bằng h; dạng tích cho biết ngay hai hoành độ giao điểm trục Ox. Đừng quên mẹo đối xứng: nếu f tại 3 bằng f tại 11 thì hoành độ đỉnh chính là trung bình cộng của 3 và 11, tức bằng 7.",
+      "duration": 46.38,
+      "startTime": 36.02,
+      "endTime": 82.4,
+      "audioUrl": "/audio/lectures/sat_math/m2_1/threeforms.mp3"
+    },
+    {
+      "id": "discriminant",
+      "title": "Biệt thức Δ = b² − 4ac & 2 Cái bẫy",
+      "selector": "#sec-discriminant",
+      "en": "Whenever a quadratic question mentions two real solutions, exactly one real solution, or no real solutions, immediately think of the discriminant: b squared minus four a c. Positive means two solutions, zero means one, and negative means none. Always move every term to one side equal to zero first so you never misread the sign of c.",
+      "vi": "Hễ thấy câu hỏi bậc hai nhắc tới hai nghiệm thực, đúng một nghiệm thực hoặc vô nghiệm thực, hãy nghĩ ngay lập tức tới biệt thức delta bằng b bình phương trừ bốn a c. Dương là 2 nghiệm, bằng 0 là 1 nghiệm kép, âm là vô nghiệm. Nhớ luôn chuyển hết mọi số hạng sang một vế bằng 0 trước khi lấy dấu của hệ số c.",
+      "duration": 41.06,
+      "startTime": 82.4,
+      "endTime": 123.46,
+      "audioUrl": "/audio/lectures/sat_math/m2_1/discriminant.mp3"
+    },
+    {
+      "id": "vieta",
+      "title": "Định lý Vieta (−b/a, c/a)",
+      "selector": "#sec-vieta",
+      "en": "Never waste time using the quadratic formula when a question asks for the sum or product of solutions. By Vieta formulas, the sum of solutions is negative b over a, and the product of solutions is c over a. Just verify that real solutions actually exist, and watch carefully for the phrase distinct solutions in case of a double root.",
+      "vi": "Tuyệt đối đừng mất công bấm nghiệm lẻ khi đề hỏi tổng hoặc tích các nghiệm. Theo Vieta, tổng hai nghiệm bằng trừ b trên a, còn tích hai nghiệm bằng c trên a. Chỉ cần kiểm tra có nghiệm thực và đọc kỹ xem đề có từ distinct solutions hay không để tránh cộng trùng nghiệm kép.",
+      "duration": 36.28,
+      "startTime": 123.46,
+      "endTime": 159.74,
+      "audioUrl": "/audio/lectures/sat_math/m2_1/vieta.mp3"
+    }
+  ]
+}

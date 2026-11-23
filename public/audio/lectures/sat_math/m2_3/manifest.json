@@ -1,0 +1,66 @@
+{
+  "lectureId": "89e4f31d-0101-448a-a2b4-41aa6e3d1d8f",
+  "courseTitle": "Digital SAT 1500+ (Math)",
+  "lectureTitle": "2.3 Exponential Growth/Decay & Compound Scaling",
+  "totalDuration": 161.82,
+  "majorSections": [
+    {
+      "title": "Linear vs Exponential & Cơ số (1 ± r)",
+      "startSegmentId": "exp_core"
+    },
+    {
+      "title": "Bẫy chu kỳ số mũ t/k",
+      "startSegmentId": "timestep"
+    },
+    {
+      "title": "Bẫy y-intercept & Tiệm cận",
+      "startSegmentId": "yint_trap"
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "title": "Tổng quan Hàm mũ & Tăng trưởng kép",
+      "selector": "#sec-header",
+      "en": "Exponential functions appear in nearly every SAT Math module. While the formula a times b to the x looks simple, Hard Module Two disguises y-intercepts inside shifted exponents and swaps time units between months, quarters, and years.",
+      "vi": "Hàm số mũ xuất hiện trong hầu như mọi đề SAT Math. Công thức a nhân b mũ x tưởng rất đơn giản, nhưng ở Module 2 Hard đề luôn giấu tung độ gốc bên trong số mũ bị dịch chuyển và đổi đơn vị thời gian giữa tháng, quý và năm.",
+      "duration": 30.33,
+      "startTime": 0.0,
+      "endTime": 30.33,
+      "audioUrl": "/audio/lectures/sat_math/m2_3/intro.mp3"
+    },
+    {
+      "id": "exp_core",
+      "title": "Cơ số tăng/giảm phần trăm (1 ± r)",
+      "selector": "#sec-exp-core",
+      "en": "Always separate linear change, which adds a constant amount, from exponential change, which multiplies by a constant factor. If a quantity decreases by eighteen percent each hour, the decay factor is one minus zero point one eight, which is zero point eight two, never zero point one eight.",
+      "vi": "Hãy luôn phân biệt thay đổi tuyến tính là cộng thêm một lượng cố định, còn hàm mũ là nhân với một tỉ lệ cố định. Nếu một đại lượng giảm 18 phần trăm mỗi giờ, cơ số phải là 1 trừ 0 phẩy 18 bằng 0 phẩy 82, tuyệt đối không lấy 0 phẩy 18.",
+      "duration": 33.9,
+      "startTime": 30.33,
+      "endTime": 64.23,
+      "audioUrl": "/audio/lectures/sat_math/m2_3/exp_core.mp3"
+    },
+    {
+      "id": "timestep",
+      "title": "Bẫy chu kỳ số mũ t/k và kt",
+      "selector": "#sec-timestep",
+      "en": "To avoid flipping the exponent fraction, run the One-Cycle Test. If a population doubles every six years and t is in years, plugging in t equals six must make the exponent equal to one, so the exponent must be t divided by six. Conversely, if interest compounds quarterly four times a year, plugging in t equals one year must give four periods, so the exponent is four t.",
+      "vi": "Để không bao giờ chia nhầm hay nhân nhầm số mũ, hãy dùng phép thử 1 chu kỳ. Nếu quần thể tăng gấp đôi sau mỗi 6 năm và t tính bằng năm, thay t bằng 6 phải làm số mũ bằng 1, nên số mũ là t chia 6. Ngược lại, nếu lãi gộp theo quý 4 lần mỗi năm, thay t bằng 1 phải ra 4 kỳ, nên số mũ là 4t.",
+      "duration": 46.6,
+      "startTime": 64.23,
+      "endTime": 110.83,
+      "audioUrl": "/audio/lectures/sat_math/m2_3/timestep.mp3"
+    },
+    {
+      "id": "yint_trap",
+      "title": "Bẫy y-intercept khi số mũ lệch & Tiệm cận",
+      "selector": "#sec-yint-trap",
+      "en": "Watch out for shifted exponents like five times three to the power of x minus two. The y-intercept is not five—plugging in x equals zero gives five times three to the negative two, or five ninths. Rewrite the expression as five ninths times three to the x so the true y-intercept appears directly as a coefficient. And if there is a vertical shift plus c, the horizontal asymptote is y equals c and the y-intercept is a plus c.",
+      "vi": "Cực kỳ cảnh giác dạng số mũ lệch như 5 nhân 3 mũ x trừ 2. Tung độ gốc không phải là 5, vì khi thay x bằng 0 ta ra 5 nhân 3 mũ trừ 2 bằng 5 phần 9. Hãy tách thành 5 phần 9 nhân 3 mũ x để làm lộ tung độ gốc. Ngoài ra nếu hàm có cộng thêm hằng số c phía sau, tiệm cận ngang là y bằng c và tung độ gốc là a cộng c.",
+      "duration": 50.99,
+      "startTime": 110.83,
+      "endTime": 161.82,
+      "audioUrl": "/audio/lectures/sat_math/m2_3/yint_trap.mp3"
+    }
+  ]
+}
