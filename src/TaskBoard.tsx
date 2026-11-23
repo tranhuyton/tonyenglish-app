@@ -1175,12 +1175,53 @@ export default function TaskBoard({
         }
 
         return (
-          <div key={board.title} className="w-full flex-1 min-h-0 sm:min-h-[540px] flex flex-col relative overflow-hidden h-[calc(100dvh-235px)] max-h-[760px]">
-            {/* Board - Horizontal Scroll like Trello with smooth mobile snap */}
+          <div key={board.title} className="w-full flex flex-col relative">
+            {/* Mobile Dots Carousel & Column Navigation (top-accessible on mobile when columns expand naturally) */}
+            {board.columns.length > 1 && (
+              <div className="sm:hidden flex items-center justify-between px-3 py-1.5 mb-2.5 rounded-2xl shrink-0 z-20 bg-slate-900/85 backdrop-blur-xs shadow-xs">
+                <button
+                  type="button"
+                  onClick={() => scrollToColumn(Math.max(0, activeMobileColIndex - 1))}
+                  disabled={activeMobileColIndex === 0}
+                  className="w-10 h-10 rounded-full bg-white/20 hover:bg-white/30 active:scale-90 disabled:opacity-20 text-white flex items-center justify-center text-lg font-bold transition-all cursor-pointer"
+                  aria-label="Cột trước"
+                >
+                  ‹
+                </button>
+
+                <div className="flex items-center gap-1.5 max-w-[220px] overflow-x-auto py-1 px-1 custom-scrollbar">
+                  {board.columns.map((c, i) => (
+                    <button
+                      key={c.name}
+                      type="button"
+                      onClick={() => scrollToColumn(i)}
+                      className={`transition-all duration-300 rounded-full cursor-pointer shrink-0 ${
+                        activeMobileColIndex === i 
+                          ? 'w-6 h-2 bg-[#2ab4e8] shadow-md' 
+                          : 'w-2 h-2 bg-white/40 hover:bg-white/70'
+                      }`}
+                      title={`Chuyển tới cột: ${parseModuleTheme(c.name).cleanTitle}`}
+                    />
+                  ))}
+                </div>
+
+                <button
+                  type="button"
+                  onClick={() => scrollToColumn(Math.min(board.columns.length - 1, activeMobileColIndex + 1))}
+                  disabled={activeMobileColIndex === board.columns.length - 1}
+                  className="w-10 h-10 rounded-full bg-white/20 hover:bg-white/30 active:scale-90 disabled:opacity-20 text-white flex items-center justify-center text-lg font-bold transition-all cursor-pointer"
+                  aria-label="Cột tiếp theo"
+                >
+                  ›
+                </button>
+              </div>
+            )}
+
+            {/* Board - Horizontal Scroll for multi-column boards, unified native page vertical scroll */}
             <div 
               ref={boardScrollContainerRef}
               onScroll={handleBoardScroll}
-              className={`flex-1 min-h-0 h-full flex flex-row gap-3.5 sm:gap-4 overflow-x-auto overflow-y-hidden pb-3 sm:pb-4 pt-1 board-horizontal-scrollbar items-start w-full px-0.5 snap-x snap-mandatory sm:snap-none ${
+              className={`flex flex-row gap-3.5 sm:gap-4 overflow-x-auto pb-4 pt-1 board-horizontal-scrollbar items-start w-full px-0.5 snap-x snap-mandatory sm:snap-none ${
                 boardTheme.isDark ? 'dark-theme' : ''
               }`}
               style={{
@@ -1258,7 +1299,7 @@ export default function TaskBoard({
                       setDraggedColName(null);
                       setDragOverColName(null);
                     }}
-                    className={`board-column flex-none w-[86vw] max-w-[340px] sm:w-[295px] snap-center sm:snap-align-none rounded-2xl border p-2.5 sm:p-3 flex flex-col max-h-full min-h-0 transition-all duration-200 shadow-xs ${
+                    className={`board-column flex-none w-[86vw] max-w-[340px] sm:w-[295px] snap-center sm:snap-align-none rounded-2xl border p-2.5 sm:p-3 flex flex-col transition-all duration-200 shadow-xs ${
                       isDragging 
                         ? 'opacity-30 scale-95 border-dashed border-2 border-[#2ab4e8] bg-sky-50/50' 
                         : isDragOver
@@ -1268,7 +1309,6 @@ export default function TaskBoard({
                     style={{
                       backgroundColor: effectiveBg,
                       borderColor: effectiveBorder,
-                      maxHeight: '100%'
                     }}
                   >
                     {/* Column Header */}
@@ -1314,14 +1354,8 @@ export default function TaskBoard({
                       </div>
                     </div>
                 
-                    {/* Cards List inside column with vertical scroll */}
-                    <div 
-                      className="flex-1 overflow-y-auto column-cards-scrollbar pr-1 flex flex-col gap-2.5 min-h-0 pt-0.5"
-                      style={{
-                        WebkitOverflowScrolling: 'touch',
-                        touchAction: 'pan-x pan-y',
-                      }}
-                    >
+                    {/* Cards List inside column (expands naturally with unified page vertical scroll) */}
+                    <div className="flex flex-col gap-2.5 pt-0.5">
                       {col.cards.map(card => {
                         const progressPct = card.totalCount > 0 ? Math.round((card.completedCount / card.totalCount) * 100) : 0;
                         const manualItems = card.items.filter(i => i.task_type === 'manual');
@@ -1424,45 +1458,6 @@ export default function TaskBoard({
                   </div>
                 );
               })}
-            </div>
-
-            {/* Mobile Dots Carousel & Column Navigation */}
-            <div className="sm:hidden flex items-center justify-between px-4 py-2 shrink-0 z-20 bg-slate-900/80 backdrop-blur-xs">
-              <button
-                type="button"
-                onClick={() => scrollToColumn(Math.max(0, activeMobileColIndex - 1))}
-                disabled={activeMobileColIndex === 0}
-                className="w-10 h-10 rounded-full bg-white/20 hover:bg-white/30 active:scale-90 disabled:opacity-20 text-white flex items-center justify-center text-lg font-bold transition-all cursor-pointer"
-                aria-label="Cột trước"
-              >
-                ‹
-              </button>
-
-              <div className="flex items-center gap-1.5 max-w-[220px] overflow-x-auto py-1 px-1 custom-scrollbar">
-                {board.columns.map((c, i) => (
-                  <button
-                    key={c.name}
-                    type="button"
-                    onClick={() => scrollToColumn(i)}
-                    className={`transition-all duration-300 rounded-full cursor-pointer shrink-0 ${
-                      activeMobileColIndex === i 
-                        ? 'w-6 h-2 bg-[#2ab4e8] shadow-md' 
-                        : 'w-2 h-2 bg-white/40 hover:bg-white/70'
-                    }`}
-                    title={`Chuyển tới cột: ${parseModuleTheme(c.name).cleanTitle}`}
-                  />
-                ))}
-              </div>
-
-              <button
-                type="button"
-                onClick={() => scrollToColumn(Math.min(board.columns.length - 1, activeMobileColIndex + 1))}
-                disabled={activeMobileColIndex === board.columns.length - 1}
-                className="w-10 h-10 rounded-full bg-white/20 hover:bg-white/30 active:scale-90 disabled:opacity-20 text-white flex items-center justify-center text-lg font-bold transition-all cursor-pointer"
-                aria-label="Cột tiếp theo"
-              >
-                ›
-              </button>
             </div>
           </div>
         );

@@ -2097,7 +2097,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   );
 
   return (
-    <div className={`bg-slate-50 font-sans text-slate-800 overscroll-none w-full flex flex-col pb-16 lg:pb-0 ${activeTab === 'board' ? 'h-[100dvh] overflow-hidden' : 'min-h-[100dvh]'}`}>
+    <div className="bg-slate-50 font-sans text-slate-800 overscroll-none w-full flex flex-col pb-16 lg:pb-0 min-h-[100dvh]">
       {/* UNIFIED MODERN GLASSMORPHIC LMS HEADER (Single-Bar Clean App Workspace) */}
       <header className="bg-white/90 backdrop-blur-lg border-b border-slate-200/80 sticky top-0 z-40 shadow-2xs shrink-0">
         <div className="max-w-7xl w-full mx-auto px-3.5 sm:px-6 h-16 sm:h-[72px] flex items-center justify-between gap-2 sm:gap-4 transition-all">
@@ -2262,7 +2262,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         </div>
       </header>
 
-      <main className="flex-1 w-full min-h-0 max-w-7xl mx-auto px-3.5 sm:px-6 py-5 sm:py-8 overflow-y-auto custom-scrollbar flex flex-col" style={{ WebkitOverflowScrolling: 'touch' }}>
+      <main className="flex-1 w-full max-w-7xl mx-auto px-3.5 sm:px-6 py-5 sm:py-8 flex flex-col">
         
         {activeTab === 'library' && activeView === 'dashboard' && (
           <div className="animate-in fade-in duration-500">
@@ -3204,7 +3204,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             📅 TRANG LỊCH BÁO BÀI (ASSIGNMENT CALENDAR) VÀ BẢNG CÔNG VIỆC
             ===================================================================== */}
         {activeTab === 'board' && currentUser && (
-          <div className="w-full flex-1 min-h-0 h-full flex flex-col animate-in fade-in duration-500 relative">
+          <div className="w-full flex flex-col animate-in fade-in duration-500 relative">
             <TaskBoard 
               userId={currentUser.id} 
               isAdmin={isTonyEnglishAdmin(currentUser, userProfile)}
