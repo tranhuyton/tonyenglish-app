@@ -106,7 +106,7 @@ const getCourseCover = (course: any) => {
   if (t.includes('reflex') || t.includes('phản ứng') || t.includes('phản xạ')) return { image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=800', badge: 'Comm. Reflex', color: 'text-orange-500' };
   if (t.includes('communication') || t.includes('giao tiếp')) return { image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800', badge: 'Communication', color: 'text-pink-600' };
   if (t.includes('esl') || t.includes('english')) return { image: 'https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&q=80&w=800', badge: 'ESL Program', color: 'text-rose-600' };
-  if (t.includes('sat') || course.type === 'SAT') return { image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80&w=800', badge: 'Digital SAT 1500+', color: 'text-[#1e3a8a]' };
+  if (t.includes('sat') || course.type === 'SAT') return { image: '/images/sat_cover.jpg', badge: 'Digital SAT 1500+', color: 'text-[#1e3a8a]' };
   if (t.includes('ielts') || course.type === 'IELTS') return { image: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=800', badge: 'IELTS Mastery', color: 'text-blue-600' };
   return { image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800', badge: course.type || 'Khóa học', color: 'text-slate-600' };
 };
