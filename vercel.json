@@ -44,6 +44,21 @@
       ],
       "destination": "https://tonyenglish.vn/:path*",
       "permanent": true
+    },
+    {
+      "source": "/courses/toeic",
+      "destination": "/courses/business-office-english",
+      "permanent": true
+    },
+    {
+      "source": "/courses/toeic.html",
+      "destination": "/courses/business-office-english",
+      "permanent": true
+    },
+    {
+      "source": "/vi/courses/toeic.html",
+      "destination": "/courses/business-office-english",
+      "permanent": true
     }
   ],
   "rewrites": [

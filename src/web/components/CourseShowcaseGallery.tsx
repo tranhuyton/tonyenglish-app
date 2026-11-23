@@ -239,7 +239,7 @@ const GALLERY_BY_COURSE_ID: Record<number, CourseShowcaseConfig> = {
       'Four complete Advanced Communication tracks on our LMS: Office English (52 lessons), 150 Idioms & Phrases, Business Email Writing (60 models), and Job Interview English (24 STAR lessons + AI Mock Interviews).',
     items: [
       {
-        src: '/images/course-showcases/vp_01_office_intro.webp',
+        src: '/images/course-showcases/vp_01_office_intro.webp?v=2',
         category: 'theory',
         badgeVi: '📘 Tiếng Anh Văn phòng',
         badgeEn: '📘 Office English',
@@ -447,7 +447,7 @@ const GALLERY_BY_COURSE_ID: Record<number, CourseShowcaseConfig> = {
       '52 lessons across 13 core corporate topics — each structured into Introduction, Workplace Conversation, Short Talk 1, and Short Talk 2.',
     items: [
       {
-        src: '/images/course-showcases/vp_01_office_intro.webp',
+        src: '/images/course-showcases/vp_01_office_intro.webp?v=2',
         category: 'theory',
         badgeVi: '📘 Bài giảng Từ vựng',
         badgeEn: '📘 Vocabulary Lecture',
@@ -457,7 +457,7 @@ const GALLERY_BY_COURSE_ID: Record<number, CourseShowcaseConfig> = {
         descEn: 'High-frequency workplace collocations presented in practical corporate contexts.',
       },
       {
-        src: '/images/course-showcases/vp_02_office_conversation.webp',
+        src: '/images/course-showcases/vp_02_office_conversation.webp?v=2',
         category: 'practice',
         badgeVi: '🎧 Hội thoại Thực chiến',
         badgeEn: '🎧 Dialogue Drill',
@@ -467,7 +467,7 @@ const GALLERY_BY_COURSE_ID: Record<number, CourseShowcaseConfig> = {
         descEn: 'Listen to realistic workplace dialogues and practice professional responses.',
       },
       {
-        src: '/images/course-showcases/vp_03_finance_budgeting.webp',
+        src: '/images/course-showcases/vp_03_finance_budgeting.webp?v=2',
         category: 'theory',
         badgeVi: '📘 Đối chiếu Song ngữ',
         badgeEn: '📘 Bilingual Parallel',
@@ -477,7 +477,7 @@ const GALLERY_BY_COURSE_ID: Record<number, CourseShowcaseConfig> = {
         descEn: 'Specialized vocabulary for Finance, Accounting, HR & Manufacturing with parallel translations.',
       },
       {
-        src: '/images/course-showcases/vp_04_short_talk_practice.webp',
+        src: '/images/course-showcases/vp_04_short_talk_practice.webp?v=2',
         category: 'practice',
         badgeVi: '🎧 Learn by Heart',
         badgeEn: '🎧 Active Recall',
