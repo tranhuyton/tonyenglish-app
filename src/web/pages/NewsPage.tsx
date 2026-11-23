@@ -1122,15 +1122,26 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
 
   useEffect(() => {
     if (mode === 'detail' && article) {
-      updatePageSeo(article.news_title, article.news_desc || article.news_content);
+      const thumbUrl = article.news_thumb ? resolveUploadUrl(article.news_thumb) : '';
+      const safeImage = thumbUrl && !thumbUrl.includes('No_Image') ? thumbUrl : undefined;
+      const artSlug = (article.news_title_url || '').trim();
+      updatePageSeo(article.news_title, article.news_desc || article.news_content, {
+        type: 'article',
+        image: safeImage,
+        canonicalPath: artSlug ? `/news/view/${artSlug}` : undefined,
+      });
     } else {
+      const cateSlug = currentCategory ? (currentCategory.news_cc_name_url || '').trim() : '';
       updatePageSeo(
         cateDisplayName,
         currentCategory
           ? lang === 'vi'
             ? currentCategory.news_cc_desc_vi || currentCategory.news_cc_desc
             : currentCategory.news_cc_desc
-          : undefined
+          : undefined,
+        {
+          canonicalPath: cateSlug ? `/news/category/${cateSlug}` : '/news',
+        }
       );
     }
   }, [mode, article, cateDisplayName, currentCategory, lang]);

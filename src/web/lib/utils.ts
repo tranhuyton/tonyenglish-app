@@ -583,15 +583,95 @@ export function parseArticleInteractiveQuiz(article: any): ReadingQuizQuestion[]
   return questions;
 }
 
-export function updatePageSeo(title: string, description?: string) {
-  if (typeof document === 'undefined') return;
-  document.title = title ? `${title} | TonyEnglish` : 'TonyEnglish - Gia sư Tiếng Anh 1 kèm 1 cùng Thầy Tony (Giao Tiếp, IELTS & IGCSE)';
-  const descText = description ? truncateWords(description, 160) : 'TonyEnglish.vn - Trang học liệu cá nhân & Lớp gia sư 1 kèm 1 cùng Thầy Tony (Giao tiếp tiếng Anh, IELTS, Cambridge IGCSE) kết hợp thư viện bài đọc và video luyện nghe trực tuyến.';
-  let metaDesc = document.querySelector('meta[name="description"]');
-  if (!metaDesc) {
-    metaDesc = document.createElement('meta');
-    metaDesc.setAttribute('name', 'description');
-    document.head.appendChild(metaDesc);
+export interface PageSeoOptions {
+  canonicalPath?: string;
+  image?: string;
+  type?: 'website' | 'article';
+  noindex?: boolean;
+}
+
+const SITE_ORIGIN = 'https://tonyenglish.vn';
+const DEFAULT_OG_IMAGE = `${SITE_ORIGIN}/images/courses/course-overview.jpg`;
+
+function normalizeCanonicalPath(rawPath: string): string {
+  let p = (rawPath || '/').split('?')[0].split('#')[0].trim();
+  if (!p.startsWith('/')) p = `/${p}`;
+  p = p
+    .replace(/^\/(?:vi|en)(?=\/|$)/i, '')
+    .replace(/\.html$/i, '')
+    .replace(/^\/khoa-hoc(?=\/|$)/i, '/courses')
+    .replace(/^\/(?:hoc-thu|dang-ky|promo)(?=\/|$)/i, '/courses')
+    .replace(/^\/courses\/online$/i, '/courses')
+    .replace(/^\/about-us(?=\/|$)/i, '/about')
+    .replace(/^\/videocate(?=\/|$)/i, '/videos')
+    .replace(/^\/news\/index$/i, '/news')
+    .replace(/^\/view\/(.+)$/i, '/news/view/$1')
+    .replace(/\/+$/, '');
+  return p || '/';
+}
+
+function upsertMetaTag(attrName: 'name' | 'property', attrValue: string, content: string) {
+  let el = document.querySelector(`meta[${attrName}="${attrValue}"]`);
+  if (!el) {
+    el = document.createElement('meta');
+    el.setAttribute(attrName, attrValue);
+    document.head.appendChild(el);
   }
-  metaDesc.setAttribute('content', descText);
+  el.setAttribute('content', content);
+}
+
+function upsertCanonicalLink(href: string) {
+  let link = document.querySelector('link[rel="canonical"]');
+  if (!link) {
+    link = document.createElement('link');
+    link.setAttribute('rel', 'canonical');
+    document.head.appendChild(link);
+  }
+  link.setAttribute('href', href);
+}
+
+export function updatePageSeo(title: string, description?: string, seoOptions?: PageSeoOptions) {
+  if (typeof document === 'undefined') return;
+  const fullTitle = title
+    ? `${title} | TonyEnglish`
+    : 'TonyEnglish - Gia sư 1 kèm 1 cùng Thầy Tony (IELTS, Cambridge IGCSE/A-Level, Digital SAT & Giao Tiếp)';
+  document.title = fullTitle;
+
+  const descText = description
+    ? truncateWords(description, 160)
+    : 'TonyEnglish.vn - Lớp gia sư 1 kèm 1 trực tiếp cùng Thầy Tony (7 năm tu nghiệp UK) tại R2B 2219 Royal City, Hà Nội & Online: Luyện thi IELTS, Cambridge IGCSE / A-Level, Digital SAT 1500+ và Tiếng Anh Giao Tiếp. Học thử miễn phí 2-3 buổi. Zalo/Hotline: 0935 058 688.';
+
+  const rawPath =
+    seoOptions?.canonicalPath ||
+    (typeof window !== 'undefined' ? window.location.pathname : '/');
+  const canonicalUrl = `${SITE_ORIGIN}${normalizeCanonicalPath(rawPath)}`;
+
+  const rawImg = (seoOptions?.image || '').trim();
+  const ogImage = rawImg
+    ? /^https?:\/\//i.test(rawImg)
+      ? rawImg
+      : `${SITE_ORIGIN}${rawImg.startsWith('/') ? rawImg : `/${rawImg}`}`
+    : DEFAULT_OG_IMAGE;
+
+  const ogType = seoOptions?.type || 'website';
+  const robotsValue = seoOptions?.noindex
+    ? 'noindex, nofollow'
+    : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
+
+  upsertMetaTag('name', 'description', descText);
+  upsertMetaTag('name', 'robots', robotsValue);
+  upsertCanonicalLink(canonicalUrl);
+
+  upsertMetaTag('property', 'og:type', ogType);
+  upsertMetaTag('property', 'og:site_name', 'TonyEnglish');
+  upsertMetaTag('property', 'og:locale', 'vi_VN');
+  upsertMetaTag('property', 'og:title', fullTitle);
+  upsertMetaTag('property', 'og:description', descText);
+  upsertMetaTag('property', 'og:url', canonicalUrl);
+  upsertMetaTag('property', 'og:image', ogImage);
+
+  upsertMetaTag('name', 'twitter:card', 'summary_large_image');
+  upsertMetaTag('name', 'twitter:title', fullTitle);
+  upsertMetaTag('name', 'twitter:description', descText);
+  upsertMetaTag('name', 'twitter:image', ogImage);
 }

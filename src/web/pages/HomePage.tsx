@@ -29,6 +29,7 @@ import {
   fixLegacyHtmlContent,
   updatePageSeo,
 } from '../lib/utils';
+import { trackUnifiedContact } from '../../lib/googleAnalytics';
 
 type CardVariant = 'default' | 'horizontal' | 'compact';
 
@@ -159,7 +160,8 @@ export const HomePage: React.FC = () => {
   useEffect(() => {
     updatePageSeo(
       '',
-      'TonyEnglish.vn - Trang học liệu cá nhân & Gia sư 1 kèm 1 cùng Thầy Tony (Tiếng Anh Giao tiếp, IELTS, Cambridge IGCSE tại nhà riêng R2B Royal City & Online).'
+      'TonyEnglish.vn - Lớp gia sư 1 kèm 1 trực tiếp cùng Thầy Tony (7 năm tu nghiệp UK) tại nhà riêng R2B 2219 Royal City & Online: IELTS, Cambridge IGCSE / A-Level, Digital SAT 1500+ & Giao tiếp. Học thử miễn phí 2-3 buổi. Zalo/Hotline: 0935 058 688.',
+      { canonicalPath: '/', image: '/images/courses/course-overview.jpg' }
     );
   }, []);
 
@@ -679,6 +681,7 @@ export const HomePage: React.FC = () => {
                     href="https://zalo.me/0935058688"
                     target="_blank"
                     rel="noreferrer"
+                    onClick={() => trackUnifiedContact('Zalo', 'HomePage_Hero_Mobile')}
                     className="md:hidden inline-flex items-center gap-1.5 text-xs font-bold text-sky-200 hover:text-white bg-white/10 border border-white/15 px-3.5 py-2.5 rounded-xl transition-colors"
                   >
                     <MessageCircle className="w-3.5 h-3.5 text-[#2ab4e8]" />
@@ -1274,6 +1277,7 @@ export const HomePage: React.FC = () => {
                     href="https://zalo.me/0935058688"
                     target="_blank"
                     rel="noreferrer"
+                    onClick={() => trackUnifiedContact('Zalo', 'HomePage_Sidebar_Consult')}
                     className="bg-[#0a5482] hover:bg-[#084266] text-white font-extrabold text-xs px-3 py-2.5 rounded-xl transition inline-flex items-center justify-center gap-1.5 shadow-xs whitespace-nowrap"
                   >
                     <MessageCircle className="w-3.5 h-3.5 text-[#2ab4e8] shrink-0" />
@@ -1565,6 +1569,7 @@ export const HomePage: React.FC = () => {
                 href="https://zalo.me/0935058688"
                 target="_blank"
                 rel="noreferrer"
+                onClick={() => trackUnifiedContact('Zalo', 'HomePage_Bottom_CTA')}
                 className="bg-white/12 hover:bg-white/22 text-white border border-white/25 font-bold text-sm px-5 py-3 rounded-2xl backdrop-blur-xs transition-all active:scale-95 inline-flex items-center gap-2 whitespace-nowrap"
               >
                 <Phone className="w-4 h-4 text-[#2ab4e8] shrink-0" />

@@ -1,5 +1,36 @@
+# TonyEnglish.vn robots.txt
+# Allows major search engines and AI search crawlers to index public courses, library & GEO resources.
+
 User-agent: *
 Allow: /
+Disallow: /admin
 Disallow: /admincp
+Disallow: /lms
+Disallow: /portal
+Disallow: /user/
+Disallow: /trial/
+
+# Explicitly welcome AI Search & GEO crawlers
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
 
 Sitemap: https://tonyenglish.vn/sitemap.xml
+# AI / LLM Context: https://tonyenglish.vn/llms.txt

@@ -23,6 +23,7 @@ import {
 } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 import { supabase, isTonyEnglishAuthUser, isTonyEnglishAdmin, TONYENGLISH_APP_ID } from '../lib/supabase';
+import { trackUnifiedContact, trackUnifiedLead } from '../../lib/googleAnalytics';
 
 export const Layout: React.FC<{
   children: React.ReactNode;
@@ -345,20 +346,7 @@ export const Layout: React.FC<{
       }
 
       setLoginModalOpen(false);
-      try {
-        const w = window as any;
-        if (typeof w.gtag === 'function') {
-          w.gtag('event', 'sign_up', {
-            method: 'email',
-            has_phone: Boolean(cleanPhone),
-            signup_source: 'trial_modal',
-          });
-          w.gtag('event', 'generate_lead', {
-            lead_source: 'trial_modal',
-            has_phone: Boolean(cleanPhone),
-          });
-        }
-      } catch (e) {}
+      trackUnifiedLead('trial_modal', 'Trial_Account_Registration', Boolean(cleanPhone));
       onNavigateLms?.('portal');
     } catch (err: any) {
       if (err?.message?.includes('already registered')) {
@@ -582,6 +570,7 @@ export const Layout: React.FC<{
           <div className="flex items-center gap-4">
             <a
               href="tel:0935058688"
+              onClick={() => trackUnifiedContact('Phone', 'Header_TopBar')}
               className="inline-flex items-center gap-1.5 text-slate-200 hover:text-[#2ab4e8] font-semibold transition"
             >
               <Phone className="w-3.5 h-3.5 text-[#2ab4e8]" />
@@ -591,6 +580,7 @@ export const Layout: React.FC<{
               href="https://zalo.me/0935058688"
               target="_blank"
               rel="noreferrer"
+              onClick={() => trackUnifiedContact('Zalo', 'Header_TopBar')}
               className="hidden lg:inline-flex items-center gap-1.5 text-cyan-300 hover:text-white font-semibold transition"
             >
               <MessageCircle className="w-3.5 h-3.5" />
@@ -1045,10 +1035,20 @@ export const Layout: React.FC<{
             )}
 
             <div className="pt-2 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-slate-500 px-1">
-              <a href="tel:0935058688" className="inline-flex items-center gap-1.5 text-[#0a5482] font-bold">
+              <a
+                href="tel:0935058688"
+                onClick={() => trackUnifiedContact('Phone', 'Mobile_Drawer')}
+                className="inline-flex items-center gap-1.5 text-[#0a5482] font-bold"
+              >
                 <Phone className="w-3.5 h-3.5" /> {phoneText}
               </a>
-              <a href="https://zalo.me/0935058688" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-sky-600 font-bold">
+              <a
+                href="https://zalo.me/0935058688"
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => trackUnifiedContact('Zalo', 'Mobile_Drawer')}
+                className="inline-flex items-center gap-1.5 text-sky-600 font-bold"
+              >
                 <MessageCircle className="w-3.5 h-3.5" /> {lang === 'vi' ? 'Zalo tư vấn' : 'Zalo Chat'}
               </a>
             </div>
@@ -1094,7 +1094,11 @@ export const Layout: React.FC<{
                 </p>
                 <p className="flex items-center gap-2.5">
                   <Phone className="w-4 h-4 text-[#2ab4e8] shrink-0" />
-                  <a href="tel:0935058688" className="hover:text-white transition">
+                  <a
+                    href="tel:0935058688"
+                    onClick={() => trackUnifiedContact('Phone', 'Footer')}
+                    className="hover:text-white transition"
+                  >
                     {lang === 'vi' ? 'Liên hệ:' : 'Contact:'} {phoneText}
                   </a>
                 </p>
@@ -1104,6 +1108,7 @@ export const Layout: React.FC<{
                     href="https://zalo.me/0935058688"
                     target="_blank"
                     rel="noreferrer"
+                    onClick={() => trackUnifiedContact('Zalo', 'Footer')}
                     className="text-cyan-400 hover:text-cyan-300 font-semibold transition"
                   >
                     {lang === 'vi' ? 'Zalo tư vấn: 0935 058 688' : 'Zalo Consultation: 0935 058 688'}

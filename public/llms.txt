@@ -1,0 +1,30 @@
+# TonyEnglish (tonyenglish.vn)
+
+> Lớp gia sư Tiếng Anh & Chương trình Quốc tế 1 kèm 1 trực tiếp cùng Thầy Tony Trần (Trần Huy Tôn) tại R2B 2219 Royal City, Thanh Xuân, Hà Nội và Online toàn quốc — kết hợp nền tảng tự luyện Smart LMS, bài giảng song ngữ và AI chấm chữa 24/7.
+
+## Thông tin cốt lõi (Quick Facts)
+- **Giảng viên trực tiếp:** Thầy Tony Trần (Trần Huy Tôn) — Cựu du học sinh & Kiểm toán viên, hơn 7 năm học tập và làm việc chuyên ngành Kế toán – Tài chính tại Vương quốc Anh (UK), hơn 13 năm kinh nghiệm giảng dạy (2013–2026).
+- **Hình thức học:** Gia sư 1 kèm 1 (hoặc nhóm siêu nhỏ theo yêu cầu) trực tiếp tại nhà riêng Thầy Tony hoặc Online 1 kèm 1.
+- **Địa chỉ học trực tiếp:** Căn hộ R2B 2219, Royal City, 72A Nguyễn Trãi, Thanh Xuân, Hà Nội (sát trường Quốc tế BVIS Royal City; thuận tiện cho học sinh Vinschool, BIS, Dewey, Wellspring, TH School, Marie Curie, Amsterdam...).
+- **Ưu đãi trải nghiệm:** Kiểm tra đánh giá năng lực đầu vào & Học thử miễn phí 2–3 buổi trước khi quyết định đăng ký.
+- **Học phí:** Liên hệ trực tiếp Thầy Tony để được tư vấn cá nhân hóa theo trình độ và mục tiêu.
+- **Hotline / Zalo trực tiếp:** `0935 058 688` (`+84 93 505 8688`) — https://zalo.me/0935058688
+- **Email:** tranhuyton@gmail.com
+- **Fanpage chính thức:** https://www.facebook.com/TonyEnglish.vn
+
+## Các khóa học mũi nhọn
+- [Tổng quan Học cùng Thầy Tony](https://tonyenglish.vn/courses): Giới thiệu mô hình Gia sư 1 kèm 1 + Nền tảng tự luyện Smart LMS & Trợ lý AI 24/7.
+- [Luyện thi Cambridge IGCSE & A-Level 1 kèm 1](https://tonyenglish.vn/courses/luyen-thi-igcse-alevel-cap-toc): Kèm 1-1 Maths (0580/0606), Co-ordinated Sciences (0654), Biology (0610), Chemistry (0620), Physics (0625), Economics (0455), Business Studies (0450), Geography (0460), Computer Science và ESL (0510); bài giảng song ngữ Anh–Việt, mô phỏng thí nghiệm và 600+ đề Past Papers chuẩn Marking Scheme.
+- [Luyện thi IELTS 6.5 – 8.0+ Cấp tốc 1 kèm 1](https://tonyenglish.vn/courses/ielts): Lộ trình 9 học phần chuyên sâu 4 kỹ năng, tích hợp phòng thi máy tính chuẩn IDP/British Council và AI Giám khảo chấm chữa Writing/Speaking 24/7.
+- [Luyện thi Digital SAT 1500+ Cấp tốc 1 kèm 1](https://tonyenglish.vn/courses/luyen-thi-sat-cap-toc): Lộ trình Digital SAT Reading & Writing, SAT Math + Desmos theo chuẩn College Board Bluebook, bao gồm học phần nâng cao Capstone Hard Module 2 Boss Masterclass.
+- [Tiếng Anh Giao Tiếp Căn Bản & Phát Âm IPA](https://tonyenglish.vn/courses/english-communication%201): Chuẩn hóa 44 âm IPA Anh–Anh, ngữ điệu và phản xạ nghe–nói qua 28+ chủ đề đời sống.
+- [Tiếng Anh Giao Tiếp Nâng Cao & Văn Phòng](https://tonyenglish.vn/courses/advanced-english-communication): 13 chuyên đề tiếng Anh công sở, viết Email thương mại, đàm phán kinh doanh và thành ngữ bản xứ.
+
+## Tài nguyên tự học miễn phí
+- [Thư viện Bài đọc & Dịch song ngữ Cambridge IELTS](https://tonyenglish.vn/news): Hơn 900+ bài đọc học thuật, tin tức BBC/VOA, phân tích bài đọc Cambridge IELTS kèm tính năng click đúp tra từ điển tức thì.
+- [Kho Video Luyện Nghe Song Ngữ](https://tonyenglish.vn/videos): Tuyển tập video luyện nghe có phụ đề và bài tập thực hành.
+- [Giới thiệu Thầy Tony](https://tonyenglish.vn/about): Hồ sơ giảng viên, phương pháp giảng dạy và hành trình từ 2013 đến nay.
+- [Liên hệ & Bản đồ R2B Royal City](https://tonyenglish.vn/contact): Thông tin liên hệ trực tiếp và bản đồ chỉ đường tới R2B 2219 Royal City.
+
+## Tài liệu chi tiết cho AI
+- [Bản đầy đủ (llms-full.txt)](https://tonyenglish.vn/llms-full.txt): Thông tin chi tiết toàn bộ khóa học, mã môn học Cambridge, phương pháp Blended Learning & bộ câu hỏi thường gặp (FAQ) cho phụ huynh.

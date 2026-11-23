@@ -18,6 +18,7 @@ import {
 import { supabase } from '../lib/supabase';
 import { useApp } from '../context/AppContext';
 import { fixLegacyHtmlContent, updatePageSeo } from '../lib/utils';
+import { trackUnifiedContact, trackUnifiedLead } from '../../lib/googleAnalytics';
 
 export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' | 'sitemap' }> = ({ mode }) => {
   const { slug } = useParams<{ slug?: string }>();
@@ -130,6 +131,7 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
       setContactError(error.message);
     } else {
       setContactSubmitted(true);
+      trackUnifiedLead('contact_page_form', 'ContactPage_Inquiry', Boolean(strippedPhone));
       setContactName('');
       setContactPhone('');
       setContactEmail('');
@@ -605,7 +607,11 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
                       </p>
                       <p>
                         <strong className="text-slate-800">📞 Điện thoại / Zalo:</strong>{' '}
-                        <a href="tel:0935058688" className="text-[#0a5482] font-bold hover:underline">
+                        <a
+                          href="tel:0935058688"
+                          onClick={() => trackUnifiedContact('Phone', 'ContactPage')}
+                          className="text-[#0a5482] font-bold hover:underline"
+                        >
                           +84 93 505 8688
                         </a>
                         {' • '}
@@ -613,6 +619,7 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
                           href="https://zalo.me/0935058688"
                           target="_blank"
                           rel="noreferrer"
+                          onClick={() => trackUnifiedContact('Zalo', 'ContactPage')}
                           className="text-[#0068ff] font-bold hover:underline"
                         >
                           Chat Zalo

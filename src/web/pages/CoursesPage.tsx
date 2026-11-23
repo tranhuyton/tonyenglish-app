@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import {
   Home,
@@ -13,7 +13,7 @@ import {
 import { supabase } from '../lib/supabase';
 import { useApp } from '../context/AppContext';
 import { fixLegacyHtmlContent, updatePageSeo } from '../lib/utils';
-import { trackTonyContact } from '../../lib/googleAnalytics';
+import { trackTonyContact, trackUnifiedViewCourse } from '../../lib/googleAnalytics';
 
 const CONTACT_ZALO_URL = 'https://zalo.me/0935058688';
 const CONTACT_PHONE = '0935058688';
@@ -291,9 +291,36 @@ export const CoursesPage: React.FC = () => {
           )
       : baseCourseDescHtml;
 
+  const lastTrackedCourseKeyRef = useRef<string>('');
+
+  const resolveCourseOgImage = (course: any | null): string => {
+    const cid = course ? Number(course.cc_id) : 0;
+    const pid = course ? Number(course.cc_parent) : 0;
+    if (cid === 127 || pid === 127) return '/images/courses/course-ielts.jpg';
+    if (cid === 132 || pid === 132) return '/images/courses/course-igcse.jpg';
+    if (cid === 133 || pid === 133) return '/images/courses/course-sat.jpg';
+    if (cid === 111 || pid === 111) return '/images/courses/course-comm-basic.jpg';
+    if (cid === 129 || pid === 129) return '/images/courses/course-comm-advanced.jpg';
+    return '/images/courses/course-overview.jpg';
+  };
+
   useEffect(() => {
-    updatePageSeo(courseTitle, courseDescHtml);
-  }, [courseTitle, courseDescHtml]);
+    if (isResolvingSpecificCourse) return;
+    const canonicalSlug = currentCourse ? (currentCourse.cc_name_url || '').trim() : '';
+    const canonicalPath = canonicalSlug ? `/courses/${encodeURIComponent(canonicalSlug).replace(/%2F/gi, '/')}` : '/courses';
+    updatePageSeo(courseTitle, courseDescHtml, {
+      canonicalPath,
+      image: resolveCourseOgImage(currentCourse),
+    });
+
+    if (categoriesLoaded) {
+      const courseKey = currentCourse ? `course_${currentCourse.cc_id}` : 'course_overview';
+      if (lastTrackedCourseKeyRef.current !== courseKey) {
+        lastTrackedCourseKeyRef.current = courseKey;
+        trackUnifiedViewCourse(courseTitle, currentCourse ? String(currentCourse.cc_id) : 'overview');
+      }
+    }
+  }, [courseTitle, courseDescHtml, currentCourse, isResolvingSpecificCourse, categoriesLoaded]);
 
   const childCoursesOfCurrent = currentCourse ? subCategories(currentCourse.cc_id) : [];
 
