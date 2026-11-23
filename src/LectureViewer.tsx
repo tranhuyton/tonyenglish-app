@@ -1729,7 +1729,9 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
      <head>
        <meta charset="utf-8">
        <meta name="viewport" content="width=device-width, initial-scale=1">
-       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
        <style>
          :root {
             --brand-color: #0ea5e9;
@@ -1743,12 +1745,21 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
              height: max-content !important;
              min-height: 0 !important;
              margin: 0; padding: 0; 
-             font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+             font-family: 'Be Vietnam Pro', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
              color: var(--text-main);
              background: transparent; overflow: hidden; 
              line-height: 1.75;
              font-size: 17px;
              -webkit-font-smoothing: antialiased;
+         }
+         button, input, select, textarea {
+             font-family: inherit;
+         }
+         [style*="font-family: 'Inter'"],
+         [style*='font-family: "Inter"'],
+         [style*="font-family:Inter"],
+         [style*="font-family: Inter"] {
+             font-family: 'Be Vietnam Pro', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
          }
          * { 
              box-sizing: border-box; 
