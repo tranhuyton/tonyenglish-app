@@ -9,6 +9,10 @@ import {
   History,
   ChevronDown,
   ChevronUp,
+  ChevronLeft,
+  ChevronRight,
+  X,
+  ZoomIn,
 } from 'lucide-react';
 import { supabase } from '../lib/supabase';
 import { useApp } from '../context/AppContext';
@@ -19,6 +23,32 @@ import { CourseShowcaseGallery } from '../components/CourseShowcaseGallery';
 const CONTACT_ZALO_URL = 'https://zalo.me/0935058688';
 const CONTACT_PHONE = '0935058688';
 const CONTACT_PHONE_DISPLAY = '0935 058 688';
+
+const WEB_2026_CAPTIONS: Record<string, string> = {
+  '01_bai_giang_ngu_am_1.png': '1. Giao diện Bài giảng Ngữ âm: Vị trí Cấu Âm & Sơ đồ nguyên âm chuẩn Anh-Anh',
+  '02_bai_giang_ngu_am_2.png': '2. Giao diện Bài giảng Ngữ âm: Hệ thống Nguyên Âm Đơn & Âm thanh tương tác',
+  '03_goc_hoc_vien_ai.png': '3. Góc Học Viên tích hợp lộ trình cá nhân hóa & Trợ lý AI 24/7',
+  '04_lich_bao_bai.png': '4. Lịch báo bài & theo dõi tiến độ học tập từng ngày cùng Thầy Tony',
+  '05_bai_giang_igcse_song_ngu.png': '5. Bài giảng Song ngữ Cambridge IGCSE kèm Video & Audio giảng bài',
+  '06_thu_vien_click_dup_tra_tu.png': '6. Thư viện đọc hiểu tích hợp Click đúp tra từ điển nhanh tức thì',
+  '07_thu_vien_cambridge_song_ngu.png': '7. Thư viện tài liệu & sách học thuật Cambridge song ngữ Anh – Việt',
+  '08_tu_dien_anh_viet.png': '8. Hệ thống Từ điển Anh – Việt tích hợp sẵn trên mọi trang học',
+  '09_tu_dien_viet_anh.png': '9. Hệ thống Từ điển Việt – Anh tra cứu nhanh từ vựng & cụm từ',
+  '10_kho_video_phu_de.png': '10. Kho Video luyện nghe có phụ đề song ngữ tương tác',
+};
+
+const LEGACY_GALLERY_ITEMS = [
+  { src: '/images/legacy-2017/01_2017_01_23_3_bai_giang_ngu_am_1.png', caption: '1. Giao diện Bài giảng Ngữ âm: Vị trí Cấu Âm (2017)' },
+  { src: '/images/legacy-2017/02_2017_01_23_1_bai_giang_ngu_am_2.png', caption: '2. Giao diện Bài giảng Ngữ âm: Nguyên Âm Đơn (2017)' },
+  { src: '/images/legacy-2017/03_2017_01_23_2_muc_tin_nhan.png', caption: '3. Giao diện mục Tin nhắn trao đổi với Thầy Tony (2017)' },
+  { src: '/images/legacy-2017/04_2017_01_23_5_thong_bao_tin_nhan.png', caption: '4. Giao diện khi có thông báo tin nhắn mới (2017)' },
+  { src: '/images/legacy-2017/05_2017_01_23_6_cau_hinh_tai_khoan.png', caption: '5. Giao diện Cấu hình tài khoản & Chọn khóa học (2017)' },
+  { src: '/images/legacy-2017/06_2017_01_17_1_tra_tu_click_dup.png', caption: '6. Tính năng tra từ nhanh bằng Click đúp trong Thư viện (2017)' },
+  { src: '/images/legacy-2017/07_2017_01_23_7_so_tay_ghi_chep.png', caption: '7. Tính năng Sổ tay ghi chép từ vựng cá nhân (2017)' },
+  { src: '/images/legacy-2017/08_2017_01_17_2_tu_dien_anh_viet.png', caption: '8. Thanh tra từ điển từ Anh sang Việt (2017)' },
+  { src: '/images/legacy-2017/09_2017_01_17_3_tu_dien_viet_anh.png', caption: '9. Thanh tra từ điển từ Việt sang Anh (2017)' },
+  { src: '/images/legacy-2017/10_2017_01_17_5_tinh_nang_khac.png', caption: '10. Các tính năng Tìm kiếm, Nhận diện giọng nói & Dịch câu (2017)' },
+];
 
 // Button tap fires Contact only (prevents premature Lead inflation from cancelled calls / blocked WebView popups)
 const trackCourseConversion = (method: 'Zalo' | 'Phone' | 'Messenger', courseName: string) => {
@@ -74,6 +104,10 @@ export const CoursesPage: React.FC = () => {
   const [mobileCateOpen, setMobileCateOpen] = useState(false);
   const [showMobileStickyBar, setShowMobileStickyBar] = useState(false);
   const [showLegacyGallery, setShowLegacyGallery] = useState(false);
+  const [imageLightbox, setImageLightbox] = useState<{
+    items: { src: string; caption: string }[];
+    index: number;
+  } | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -230,8 +264,56 @@ export const CoursesPage: React.FC = () => {
     return () => window.removeEventListener('keydown', onKeyDown);
   }, [showZaloModal]);
 
+  useEffect(() => {
+    if (!imageLightbox) return;
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setImageLightbox(null);
+      } else if (e.key === 'ArrowRight') {
+        setImageLightbox((prev) =>
+          prev ? { ...prev, index: (prev.index + 1) % prev.items.length } : null
+        );
+      } else if (e.key === 'ArrowLeft') {
+        setImageLightbox((prev) =>
+          prev ? { ...prev, index: (prev.index - 1 + prev.items.length) % prev.items.length } : null
+        );
+      }
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => {
+      document.body.style.overflow = prevOverflow;
+      window.removeEventListener('keydown', onKeyDown);
+    };
+  }, [imageLightbox]);
+
   const handleProseClick = (e: React.MouseEvent<HTMLDivElement>) => {
-    const anchor = (e.target as HTMLElement | null)?.closest('a');
+    const target = e.target as HTMLElement | null;
+    const clickedImg = target?.closest('img') as HTMLImageElement | null;
+    if (clickedImg) {
+      e.preventDefault();
+      const allImgs = Array.from(e.currentTarget.querySelectorAll('img')) as HTMLImageElement[];
+      const items = allImgs
+        .map((img) => {
+          const src = img.getAttribute('src') || img.src || '';
+          const fileName = src.split('/').pop()?.split('?')[0] || '';
+          const caption =
+            (img.getAttribute('alt') || '').trim() ||
+            (img.getAttribute('title') || '').trim() ||
+            WEB_2026_CAPTIONS[fileName] ||
+            courseTitle;
+          return { src, caption };
+        })
+        .filter((item) => Boolean(item.src));
+      const clickedIndex = allImgs.indexOf(clickedImg);
+      if (items.length > 0) {
+        setImageLightbox({ items, index: clickedIndex >= 0 ? clickedIndex : 0 });
+      }
+      return;
+    }
+
+    const anchor = target?.closest('a');
     if (!anchor) return;
     const href = (anchor.getAttribute('href') || '').trim();
     if (/zalo\.me/i.test(href)) {
@@ -728,7 +810,7 @@ export const CoursesPage: React.FC = () => {
               {courseDescHtml && (
                 <div className="pt-2 sm:pt-3 space-y-6">
                   <div
-                    className="legacy-prose course-tab-prose text-left sm:text-justify max-w-[74ch]"
+                    className="legacy-prose course-tab-prose text-left sm:text-justify max-w-[74ch] [&_img]:cursor-zoom-in [&_img]:rounded-xl [&_img]:border [&_img]:border-slate-200/90 [&_img]:shadow-2xs [&_img]:transition-all [&_img:hover]:ring-2 [&_img:hover]:ring-[#2ab4e8]/70 [&_img:hover]:shadow-lg"
                     onClick={handleProseClick}
                     dangerouslySetInnerHTML={{ __html: fixLegacyHtmlContent(courseDescHtml) }}
                   />
@@ -789,24 +871,29 @@ export const CoursesPage: React.FC = () => {
                   {showLegacyGallery && (
                     <div className="p-4 sm:p-6 border-t border-amber-200/70 bg-white space-y-5">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        {[
-                          { src: '/images/legacy-2017/01_2017_01_23_3_bai_giang_ngu_am_1.png', caption: '1. Giao diện Bài giảng Ngữ âm: Vị trí Cấu Âm (2017)' },
-                          { src: '/images/legacy-2017/02_2017_01_23_1_bai_giang_ngu_am_2.png', caption: '2. Giao diện Bài giảng Ngữ âm: Nguyên Âm Đơn (2017)' },
-                          { src: '/images/legacy-2017/03_2017_01_23_2_muc_tin_nhan.png', caption: '3. Giao diện mục Tin nhắn trao đổi với Thầy Tony (2017)' },
-                          { src: '/images/legacy-2017/04_2017_01_23_5_thong_bao_tin_nhan.png', caption: '4. Giao diện khi có thông báo tin nhắn mới (2017)' },
-                          { src: '/images/legacy-2017/05_2017_01_23_6_cau_hinh_tai_khoan.png', caption: '5. Giao diện Cấu hình tài khoản & Chọn khóa học (2017)' },
-                          { src: '/images/legacy-2017/06_2017_01_17_1_tra_tu_click_dup.png', caption: '6. Tính năng tra từ nhanh bằng Click đúp trong Thư viện (2017)' },
-                          { src: '/images/legacy-2017/07_2017_01_23_7_so_tay_ghi_chep.png', caption: '7. Tính năng Sổ tay ghi chép từ vựng cá nhân (2017)' },
-                          { src: '/images/legacy-2017/08_2017_01_17_2_tu_dien_anh_viet.png', caption: '8. Thanh tra từ điển từ Anh sang Việt (2017)' },
-                          { src: '/images/legacy-2017/09_2017_01_17_3_tu_dien_viet_anh.png', caption: '9. Thanh tra từ điển từ Việt sang Anh (2017)' },
-                          { src: '/images/legacy-2017/10_2017_01_17_5_tinh_nang_khac.png', caption: '10. Các tính năng Tìm kiếm, Nhận diện giọng nói & Dịch câu (2017)' },
-                        ].map((item) => (
-                          <div key={item.src} className="rounded-xl border border-slate-200 overflow-hidden bg-slate-50 shadow-2xs">
-                            <img src={item.src} alt={item.caption} className="w-full h-auto object-cover" loading="lazy" />
-                            <div className="px-3 py-2 text-center text-xs font-semibold text-slate-600 border-t border-slate-200/80">
+                        {LEGACY_GALLERY_ITEMS.map((item, idx) => (
+                          <button
+                            key={item.src}
+                            type="button"
+                            onClick={() => setImageLightbox({ items: LEGACY_GALLERY_ITEMS, index: idx })}
+                            className="group text-left rounded-xl border border-slate-200 hover:border-[#2ab4e8] overflow-hidden bg-slate-50 shadow-2xs hover:shadow-md transition cursor-zoom-in"
+                          >
+                            <div className="relative overflow-hidden">
+                              <img
+                                src={item.src}
+                                alt={item.caption}
+                                className="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-300"
+                                loading="lazy"
+                              />
+                              <span className="absolute bottom-2 right-2 inline-flex items-center gap-1 px-2 py-1 rounded-lg bg-slate-900/80 text-white text-[11px] font-bold opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity shadow-sm">
+                                <ZoomIn className="w-3.5 h-3.5" />
+                                <span>{lang === 'vi' ? 'Phóng to' : 'Zoom'}</span>
+                              </span>
+                            </div>
+                            <div className="px-3 py-2 text-center text-xs font-semibold text-slate-600 group-hover:text-[#0a5482] border-t border-slate-200/80">
                               {item.caption}
                             </div>
-                          </div>
+                          </button>
                         ))}
                       </div>
                     </div>
@@ -1019,6 +1106,80 @@ export const CoursesPage: React.FC = () => {
           <span>Zalo: {CONTACT_PHONE_DISPLAY}</span>
         </a>
       </div>
+
+      {/* IMAGE LIGHTBOX MODAL FOR COURSE OVERVIEW (2026 & 2013-2017 SCREENSHOTS) */}
+      {imageLightbox && imageLightbox.items[imageLightbox.index] && (
+        <div
+          className="fixed inset-0 z-[70] bg-slate-950/90 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6"
+          onClick={() => setImageLightbox(null)}
+        >
+          <div
+            role="dialog"
+            aria-modal="true"
+            className="relative max-w-6xl w-full flex flex-col items-center gap-3"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="w-full flex items-center justify-between gap-3 text-white px-1">
+              <div className="flex items-center gap-2 min-w-0">
+                <span className="px-2.5 py-1 rounded-lg bg-white/15 border border-white/20 text-xs font-extrabold shrink-0">
+                  {imageLightbox.index + 1} / {imageLightbox.items.length}
+                </span>
+                <span className="font-bold text-sm sm:text-base truncate">
+                  {imageLightbox.items[imageLightbox.index].caption}
+                </span>
+              </div>
+              <button
+                type="button"
+                onClick={() => setImageLightbox(null)}
+                className="w-9 h-9 rounded-full bg-white/15 hover:bg-white/25 text-white flex items-center justify-center transition cursor-pointer shrink-0"
+                aria-label={lang === 'vi' ? 'Đóng' : 'Close'}
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <div className="relative w-full flex items-center justify-center">
+              {imageLightbox.items.length > 1 && (
+                <button
+                  type="button"
+                  onClick={() =>
+                    setImageLightbox((prev) =>
+                      prev
+                        ? { ...prev, index: (prev.index - 1 + prev.items.length) % prev.items.length }
+                        : null
+                    )
+                  }
+                  className="absolute left-2 sm:left-3 z-10 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-slate-900/75 hover:bg-slate-900 text-white border border-white/20 flex items-center justify-center shadow-lg transition cursor-pointer"
+                  aria-label="Previous image"
+                >
+                  <ChevronLeft className="w-6 h-6" />
+                </button>
+              )}
+
+              <img
+                src={imageLightbox.items[imageLightbox.index].src}
+                alt={imageLightbox.items[imageLightbox.index].caption}
+                className="max-h-[78vh] w-auto max-w-full rounded-xl sm:rounded-2xl border border-white/15 shadow-2xl object-contain bg-white"
+              />
+
+              {imageLightbox.items.length > 1 && (
+                <button
+                  type="button"
+                  onClick={() =>
+                    setImageLightbox((prev) =>
+                      prev ? { ...prev, index: (prev.index + 1) % prev.items.length } : null
+                    )
+                  }
+                  className="absolute right-2 sm:right-3 z-10 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-slate-900/75 hover:bg-slate-900 text-white border border-white/20 flex items-center justify-center shadow-lg transition cursor-pointer"
+                  aria-label="Next image"
+                >
+                  <ChevronRight className="w-6 h-6" />
+                </button>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* ANTI-BLOCK ZALO CONNECT MODAL FOR FACEBOOK/INSTAGRAM IN-APP BROWSERS */}
       {showZaloModal && (
