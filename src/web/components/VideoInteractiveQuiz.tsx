@@ -82,10 +82,11 @@ export const VideoInteractiveQuiz: React.FC<VideoInteractiveQuizProps> = ({
   const [confirmPartial, setConfirmPartial] = useState(false);
   const [emptyWarning, setEmptyWarning] = useState(false);
   const [filterMode, setFilterMode] = useState<'all' | 'review' | 'correct'>('all');
-  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(true);
 
   const quizTopRef = useRef<HTMLDivElement | null>(null);
   const startedAtRef = useRef<number>(Date.now());
+  const hasOpenedRef = useRef<boolean>(false);
 
   useEffect(() => {
     setSelectedAnswers({});
@@ -93,9 +94,21 @@ export const VideoInteractiveQuiz: React.FC<VideoInteractiveQuizProps> = ({
     setConfirmPartial(false);
     setEmptyWarning(false);
     setFilterMode('all');
-    setIsCollapsed(false);
+    setIsCollapsed(true);
+    hasOpenedRef.current = false;
     startedAtRef.current = Date.now();
   }, [videoId]);
+
+  const handleToggleCollapse = () => {
+    setIsCollapsed((prev) => {
+      const next = !prev;
+      if (!next && !hasOpenedRef.current) {
+        hasOpenedRef.current = true;
+        startedAtRef.current = Date.now();
+      }
+      return next;
+    });
+  };
 
   const totalQuestions = questions.length;
   const answeredCount = Object.keys(selectedAnswers).length;
@@ -260,7 +273,18 @@ export const VideoInteractiveQuiz: React.FC<VideoInteractiveQuizProps> = ({
       className="rounded-2xl sm:rounded-3xl border border-sky-200/90 bg-gradient-to-b from-sky-50/50 via-white to-white shadow-sm overflow-hidden scroll-mt-24"
     >
       {/* QUIZ HEADER BAR */}
-      <div className="bg-gradient-to-r from-[#0a5482] via-[#0d6296] to-[#0f172a] px-4 sm:px-6 py-4 text-white flex flex-wrap items-center justify-between gap-3">
+      <div
+        role="button"
+        tabIndex={0}
+        onClick={handleToggleCollapse}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            handleToggleCollapse();
+          }
+        }}
+        className="bg-gradient-to-r from-[#0a5482] via-[#0d6296] to-[#0f172a] px-4 sm:px-6 py-4 text-white flex flex-wrap items-center justify-between gap-3 cursor-pointer select-none hover:brightness-105 transition"
+      >
         <div className="flex items-center gap-3 min-w-0">
           <div className="w-10 h-10 rounded-xl bg-white/20 border border-white/20 flex items-center justify-center text-xl shrink-0">
             📝
@@ -294,13 +318,16 @@ export const VideoInteractiveQuiz: React.FC<VideoInteractiveQuizProps> = ({
 
           <button
             type="button"
-            onClick={() => setIsCollapsed((prev) => !prev)}
+            onClick={(e) => {
+              e.stopPropagation();
+              handleToggleCollapse();
+            }}
             className="text-xs font-bold bg-white/10 hover:bg-white/20 border border-white/20 px-3 py-1.5 rounded-xl transition cursor-pointer"
           >
             {isCollapsed
               ? lang === 'vi'
                 ? 'Mở Quiz ▼'
-                : 'Expand ▼'
+                : 'Open Quiz ▼'
               : lang === 'vi'
               ? 'Thu gọn ▲'
               : 'Collapse ▲'}

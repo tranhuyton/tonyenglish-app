@@ -101,7 +101,9 @@ const getCourseCover = (course: any) => {
   if (t.includes('physics')) return { image: '/images/physics_cover.jpg', badge: 'Physics', color: 'text-indigo-600' };
   if (t.includes('geography')) return { image: 'https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80&w=800', badge: 'Geography', color: 'text-amber-600' };
   if (t.includes('science')) return { image: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=800', badge: 'Science', color: 'text-teal-600' };
-  if (t.includes('math')) return { image: 'https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&q=80&w=800', badge: 'Mathematics', color: 'text-purple-600' };
+  if (t.includes('0606') || (t.includes('additional') && t.includes('math'))) return { image: '/images/maths_0606_cover.jpg', badge: 'Additional Maths 0606', color: 'text-purple-600' };
+  if (t.includes('0580')) return { image: '/images/maths_0580_cover.jpg', badge: 'Mathematics 0580', color: 'text-sky-600' };
+  if (t.includes('math')) return { image: '/images/maths_0580_cover.jpg', badge: 'Mathematics', color: 'text-purple-600' };
   if (t.includes('econ')) return { image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=800', badge: 'Economics', color: 'text-amber-600' };
   if (t.includes('business')) return { image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800', badge: 'Business', color: 'text-blue-600' };
   if (t.includes('thành ngữ') || t.includes('idiom')) return { image: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&q=80&w=800', badge: 'Idioms & Phrases', color: 'text-violet-600' };
