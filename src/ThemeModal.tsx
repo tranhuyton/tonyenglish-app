@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Palette, X, Check, RotateCcw } from 'lucide-react';
 import { useLmsLang } from './utils/lmsI18n';
 
 // ============================================================================
@@ -221,20 +222,23 @@ export function BoardThemeModal({
       />
       <div className="relative bg-white rounded-3xl shadow-2xl border border-slate-200 w-full max-w-lg overflow-hidden flex flex-col z-10 animate-in zoom-in-95 duration-200">
         {/* Header */}
-        <div className="px-6 py-4 border-b border-slate-100 flex items-center justify-between bg-slate-50/70">
-          <div className="flex items-center gap-2.5">
-            <span className="text-2xl">🎨</span>
+        <div className="px-6 py-4 border-b border-slate-100 flex items-center justify-between bg-slate-50/80">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-sky-50 border border-sky-200/80 text-[#0a5482] flex items-center justify-center shrink-0">
+              <Palette className="w-5 h-5" />
+            </div>
             <div>
-              <h3 className="font-bold text-slate-800 text-base">{isEn ? 'Background Theme' : 'Đổi màu nền (Trello Style)'}</h3>
-              <p className="text-slate-400 text-xs mt-0.5">{isEn ? 'Choose your favorite workspace background theme' : 'Chọn màu nền yêu thích cho không gian làm việc'}</p>
+              <h3 className="font-bold text-slate-800 text-base">{isEn ? 'Workspace Theme' : 'Đổi màu nền không gian học'}</h3>
+              <p className="text-slate-500 text-xs mt-0.5">{isEn ? 'Customize this tab’s background palette' : 'Tùy chỉnh bảng màu riêng cho khu vực này'}</p>
             </div>
           </div>
           <button
             type="button"
             onClick={onClose}
-            className="w-8 h-8 rounded-full bg-white hover:bg-slate-100 border border-slate-200 text-slate-500 flex items-center justify-center font-bold text-sm transition-all cursor-pointer shadow-xs"
+            aria-label={isEn ? 'Close' : 'Đóng'}
+            className="w-8 h-8 rounded-xl bg-white hover:bg-rose-50 border border-slate-200 text-slate-500 hover:text-rose-600 flex items-center justify-center transition-all cursor-pointer shadow-2xs"
           >
-            ✕
+            <X className="w-4 h-4" />
           </button>
         </div>
 
@@ -258,7 +262,7 @@ export function BoardThemeModal({
                     }}
                     className={`rounded-2xl p-2.5 border text-left transition-all cursor-pointer flex flex-col gap-2 group hover:scale-[1.02] hover:shadow-md ${
                       isSelected 
-                        ? 'border-sky-500 ring-2 ring-sky-400/40 shadow-sm bg-sky-50/20' 
+                        ? 'border-[#0a5482] ring-2 ring-[#0a5482]/25 shadow-sm bg-sky-50/30' 
                         : 'border-slate-200 hover:border-slate-300 bg-white'
                     }`}
                   >
@@ -274,18 +278,18 @@ export function BoardThemeModal({
                       />
                       {/* Mini Columns */}
                       <div className="flex gap-1 h-6">
-                        <div className="w-1/3 bg-white/90 rounded-sm shadow-2xs" />
-                        <div className="w-1/3 bg-white/90 rounded-sm shadow-2xs" />
-                        <div className="w-1/3 bg-white/90 rounded-sm shadow-2xs" />
+                        <div className={`w-1/3 rounded-sm shadow-2xs ${theme.id === 'midnight-dark' ? 'bg-slate-700/90 border border-slate-600/60' : 'bg-white/90'}`} />
+                        <div className={`w-1/3 rounded-sm shadow-2xs ${theme.id === 'midnight-dark' ? 'bg-slate-700/90 border border-slate-600/60' : 'bg-white/90'}`} />
+                        <div className={`w-1/3 rounded-sm shadow-2xs ${theme.id === 'midnight-dark' ? 'bg-slate-700/90 border border-slate-600/60' : 'bg-white/90'}`} />
                       </div>
                     </div>
 
-                    <div className="flex items-center justify-between px-0.5">
-                      <span className="font-bold text-xs text-slate-700 truncate group-hover:text-sky-600">
+                    <div className="flex items-center justify-between px-0.5 gap-1">
+                      <span className="font-bold text-xs text-slate-700 truncate group-hover:text-[#0a5482]">
                         {isEn ? (THEME_NAMES_EN[theme.id] || theme.name) : theme.name}
                       </span>
                       {isSelected && (
-                        <span className="text-[11px] font-black text-sky-600 shrink-0">✓</span>
+                        <Check className="w-3.5 h-3.5 text-[#0a5482] shrink-0" />
                       )}
                     </div>
                   </button>
@@ -311,7 +315,7 @@ export function BoardThemeModal({
                 value={customHex}
                 onChange={(e) => setCustomHex(e.target.value)}
                 placeholder="#0079bf"
-                className="flex-1 px-3.5 py-2 text-xs font-mono font-bold rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:border-sky-500 outline-none uppercase"
+                className="flex-1 px-3.5 py-2 text-xs font-mono font-bold rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:border-[#0a5482] outline-none uppercase"
               />
               <button
                 type="button"
@@ -319,7 +323,7 @@ export function BoardThemeModal({
                   onApplyCustomColor(customHex);
                   onClose();
                 }}
-                className="px-4 py-2 rounded-xl text-xs font-bold text-white bg-sky-600 hover:bg-sky-700 transition-all cursor-pointer shadow-xs active:scale-95 shrink-0"
+                className="px-4 py-2 rounded-xl text-xs font-bold text-white bg-[#0a5482] hover:bg-[#084266] transition-all cursor-pointer shadow-xs active:scale-95 shrink-0"
               >
                 {isEn ? 'Apply' : 'Áp dụng'}
               </button>
@@ -335,9 +339,10 @@ export function BoardThemeModal({
               onSelectTheme(DEFAULT_BOARD_THEME);
               onClose();
             }}
-            className="text-xs font-bold text-slate-500 hover:text-sky-600 transition-colors cursor-pointer"
+            className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-600 hover:text-[#0a5482] transition-colors cursor-pointer"
           >
-            ↺ {isEn ? 'Reset to Default Theme' : 'Khôi phục giao diện chuẩn (Mặc định)'}
+            <RotateCcw className="w-3.5 h-3.5" />
+            <span>{isEn ? 'Reset to Default Theme' : 'Khôi phục giao diện chuẩn (Mặc định)'}</span>
           </button>
           <button
             type="button"

@@ -1142,7 +1142,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
               <span className="font-bold text-[14px] mr-1.5 text-slate-500">{displayIndex}.</span>
               <input
                 type="text"
-                className="w-28 border-b-[2px] border-slate-300 focus:outline-none focus:border-[#0ea5e9] bg-transparent text-center text-[#0ea5e9] font-bold px-1 text-[15px] pb-[1px] transition-colors"
+                className="w-28 border-b-[2px] border-slate-300 focus:outline-none focus:border-[#0a5482] bg-transparent text-center text-[#0a5482] font-bold px-1 text-[15px] pb-[1px] transition-colors"
                 value={userAns}
                 onChange={(e) => handleAnswer(qNum, e.target.value)}
                 autoComplete="off"
@@ -1249,7 +1249,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
             <span className="font-bold text-[14px] mr-1.5 text-slate-500">{displayIndex}.</span>
             <input 
               type="text" 
-              className="w-28 border-b-[2px] border-slate-300 focus:outline-none focus:border-[#0ea5e9] bg-transparent text-center text-[#0ea5e9] font-bold px-1 text-[15px] pb-[1px] transition-colors" 
+              className="w-28 border-b-[2px] border-slate-300 focus:outline-none focus:border-[#0a5482] bg-transparent text-center text-[#0a5482] font-bold px-1 text-[15px] pb-[1px] transition-colors" 
               value={userAns} 
               onChange={(e) => handleAnswer(qNum, e.target.value)} 
               autoComplete="off" 
@@ -1298,15 +1298,17 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
   // =========================================================================================
   const renderTestLayout = () => {
     return (
-      <div className="flex flex-col h-[100dvh] font-sans bg-[#f1f5f9] overflow-hidden text-slate-800">
+      <div className="flex flex-col h-[100dvh] font-sans bg-[#f8fafc] overflow-hidden text-slate-800">
         
-        <header className={`h-[60px] border-b border-slate-200 flex justify-between items-center px-4 md:px-6 shrink-0 shadow-sm z-20 ${isReviewMode ? 'bg-emerald-700 text-white border-none' : 'bg-white text-slate-800'}`}>
-          <div className="font-black text-[15px] md:text-[16px] flex items-center gap-2 md:gap-3 uppercase tracking-tight truncate min-w-0">
-            <span className={`text-lg md:text-xl shrink-0 ${isReviewMode ? 'opacity-100' : 'opacity-70'}`}>
-                {(isListening && hasAnyAudio) ? '🎧' : '📖'}
-            </span>
+        <header className={`h-[60px] border-b flex justify-between items-center px-4 md:px-6 shrink-0 shadow-sm z-20 ${isReviewMode ? 'bg-gradient-to-r from-[#073b5c] via-[#0a5482] to-[#0f172a] text-white border-white/15' : 'bg-white text-slate-800 border-slate-200'}`}>
+          <div className="font-black text-[15px] md:text-[16px] flex items-center gap-2 md:gap-2.5 uppercase tracking-tight truncate min-w-0">
+            {isReviewMode && (
+              <span className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 text-[11px] font-black tracking-wider shrink-0">
+                {isEn ? 'REVIEW' : 'CHỮA BÀI'}
+              </span>
+            )}
             <span className="truncate max-w-[150px] sm:max-w-xs md:max-w-xl">
-                {isReviewMode ? `[${isEn ? 'REVIEW' : 'CHỮA BÀI'}] ${safeData?.title || basicInfo?.title}` : (safeData?.title || basicInfo?.title)}
+                {safeData?.title || basicInfo?.title}
             </span>
           </div>
 
@@ -1346,7 +1348,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
             {!isReviewMode && testStarted && (
                <div className="flex items-center gap-2 md:gap-3">
                  {basicInfo?.category === 'exercise' ? (
-                     <span className="text-[#0ea5e9] font-black tracking-wider uppercase text-[13px] md:text-[15px] whitespace-nowrap">{isEn ? 'PRACTICE' : 'BÀI TẬP'}</span>
+                     <span className="text-[#0a5482] font-black tracking-wider uppercase text-[13px] md:text-[15px] whitespace-nowrap">{isEn ? 'PRACTICE' : 'BÀI TẬP'}</span>
                  ) : (
                      <>
                          <span className="text-rose-500 font-black tracking-wider uppercase text-[13px] md:text-[15px] whitespace-nowrap hidden sm:inline">{isEn ? 'EXAM' : 'ĐỀ THI'}</span>
@@ -2566,7 +2568,7 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                                               else if (isPartial) containerClass += "border-amber-300 bg-amber-50/30";
                                               else containerClass += "border-red-300 bg-red-50/30";
                                           } else {
-                                              containerClass += "border-slate-200 hover:border-[#0ea5e9]/40";
+                                              containerClass += "border-slate-200 hover:border-[#0a5482]/40";
                                           }
 
                                           const handleComboChange = (optionValue: string, isChecked: boolean) => {

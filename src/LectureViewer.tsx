@@ -11,6 +11,30 @@ import { Wt1StudioModal, Wt1VocabBankModal, Wt1StudioOpenPayload } from './Wt1St
 import { useLmsLang, LmsLangToggle, getLocalizedCourseTitle } from './utils/lmsI18n';
 import { ImageLightboxModal, LightboxState } from './mcqImageUtils';
 import { LECTURE_MCQ_GRADER_CSS, buildLectureMcqGraderScript } from './utils/lectureMcqGrader';
+import {
+  ChevronLeft,
+  Home,
+  PanelLeft,
+  ChevronDown,
+  Search,
+  Palette,
+  SlidersHorizontal,
+  Maximize2,
+  Minimize2,
+  Calendar,
+  ClipboardList,
+  Library,
+  Sparkles,
+  Bot,
+  BookOpen,
+  Gift,
+  X,
+  MoreHorizontal,
+  Mic,
+  BarChart3,
+  PenTool,
+  Type,
+} from 'lucide-react';
 
 const LECTURE_MANIFEST_MAP: Record<string, string> = {
   '6286cb6f-b4ac-495b-b2ea-5a2bab09f764': '/audio/lectures/geography/1_1/manifest.json', // 1.1
@@ -3719,6 +3743,7 @@ export default function LectureViewer({
   };
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isDisplayMenuOpen, setIsDisplayMenuOpen] = useState(false);
   const [lockedTrialLecture, setLockedTrialLecture] = useState<{ id: string; title: string } | null>(null);
   const [isVideoCollapsed, setIsVideoCollapsed] = useState(false);
   const [selectedVideoSubIndex, setSelectedVideoSubIndex] = useState<number>(0);
@@ -5188,7 +5213,7 @@ export default function LectureViewer({
     <div className="flex flex-col h-[100dvh] w-full bg-[#f8fafc] font-sans text-slate-800 overflow-hidden relative overscroll-none">
       
       <header 
-         className={`relative h-[64px] backdrop-blur-md text-white flex items-center px-3.5 sm:px-5 md:px-6 shrink-0 ${isCourseDropdownOpen || isMobileMenuOpen ? 'z-[60]' : 'z-40'} shadow-md justify-between border-b border-white/15 transition-all duration-300`}
+         className={`relative h-[64px] backdrop-blur-md text-white flex items-center px-3.5 sm:px-5 md:px-6 shrink-0 ${isCourseDropdownOpen || isMobileMenuOpen || isDisplayMenuOpen ? 'z-[60]' : 'z-40'} shadow-md justify-between border-b border-white/15 transition-all duration-300`}
          style={{
              background: lectureTheme?.titleBg || 'linear-gradient(135deg, #073b5c 0%, #0a5482 55%, #0f172a 100%)',
              color: lectureTheme?.titleText || '#ffffff'
@@ -5207,28 +5232,7 @@ export default function LectureViewer({
                 className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-xl bg-white/12 hover:bg-white/22 border border-white/15 transition-all shrink-0 cursor-pointer" 
                 title={isEn ? 'Back to Student Portal' : 'Quay lại Góc học viên'}
             >
-               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4 sm:w-5 sm:h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>
-            </button>
-            <button 
-                onClick={() => {
-                  try {
-                    sessionStorage.setItem('lms_last_student_view', 'lecture');
-                    localStorage.setItem('lms_last_student_view', 'lecture');
-                    if (currentCourseId) {
-                      sessionStorage.setItem('lms_active_course_id', currentCourseId);
-                      localStorage.setItem('lms_active_course_id', currentCourseId);
-                    }
-                  } catch (e) {}
-                  window.history.pushState(null, '', '/');
-                  window.dispatchEvent(new CustomEvent('tony-close-sidebar'));
-                  window.dispatchEvent(new CustomEvent('tony-navigate', { detail: 'home' }));
-                }} 
-                className="hidden sm:flex w-9 h-9 sm:w-10 sm:h-10 items-center justify-center rounded-xl bg-white/12 hover:bg-white/22 border border-white/15 transition-all shrink-0 cursor-pointer" 
-                title={isEn ? 'Go to TonyEnglish.vn Homepage' : 'Về trang chủ TonyEnglish.vn'}
-            >
-               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.2} stroke="currentColor" className="w-4 h-4 sm:w-5 sm:h-5">
-                 <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-               </svg>
+               <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
             </button>
             <button 
                 onClick={() => setIsSidebarOpen(!isSidebarOpen)} 
@@ -5237,15 +5241,15 @@ export default function LectureViewer({
                 }`}
                 title={isEn ? 'Toggle lesson curriculum sidebar' : 'Đóng/Mở mục lục bài giảng'}
             >
-               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M4 6h16M4 12h16M4 18h7" /></svg>
+               <PanelLeft className="w-4 h-4 sm:w-5 sm:h-5" />
             </button>
             
-            {/* 🎓 THANH LỌC / CHUYỂN KHÓA HỌC */}
+            {/* THANH LỌC / CHUYỂN KHÓA HỌC */}
             <div className="relative shrink-0" ref={courseDropdownRef}>
                <button 
                   type="button"
                   onClick={() => setIsCourseDropdownOpen(!isCourseDropdownOpen)}
-                  className="flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3.5 py-1.5 rounded-xl bg-white/12 hover:bg-white/22 border border-white/20 transition-all text-left shadow-xs hover:border-white/35 group max-w-[125px] xs:max-w-[160px] sm:max-w-[270px] md:max-w-[330px] cursor-pointer"
+                  className="flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3.5 py-1.5 rounded-xl bg-white/12 hover:bg-white/22 border border-white/20 transition-all text-left shadow-xs hover:border-white/35 group max-w-[155px] xs:max-w-[190px] sm:max-w-[290px] md:max-w-[360px] cursor-pointer"
                   title={isEn ? 'Click to switch course' : 'Bấm để lọc / chuyển khóa học khác'}
                >
                   <div className="flex flex-col min-w-0 flex-1">
@@ -5253,9 +5257,7 @@ export default function LectureViewer({
                         <span className="text-[13px] sm:text-[14.5px] font-black text-white truncate leading-tight tracking-tight">
                            {course?.title ? getLocalizedCourseTitle(course.title, lang) : (isEn ? 'Loading course...' : 'Đang tải khóa học...')}
                         </span>
-                        <span className={`text-[10px] text-[#2ab4e8] transition-transform duration-200 shrink-0 ${isCourseDropdownOpen ? 'rotate-180' : ''}`}>
-                           ▼
-                        </span>
+                        <ChevronDown className={`w-3.5 h-3.5 text-sky-300 transition-transform duration-200 shrink-0 ${isCourseDropdownOpen ? 'rotate-180' : ''}`} />
                      </div>
                      <div className="hidden sm:flex items-center gap-2 mt-0.5">
                         <div className="w-20 sm:w-24 h-1.5 bg-white/20 rounded-full overflow-hidden">
@@ -5272,7 +5274,7 @@ export default function LectureViewer({
                      <div className="p-3 bg-slate-50 border-b border-slate-100">
                         <div className="flex items-center justify-between mb-2">
                            <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
-                              <span>📚</span> {isEn ? 'Select Course' : 'Chọn khóa học'}
+                              <Library className="w-3.5 h-3.5 text-[#0a5482]" /> {isEn ? 'Select Course' : 'Chọn khóa học'}
                            </span>
                            <span className="text-[11px] font-extrabold text-[#0a5482] bg-sky-50 border border-sky-200/80 px-2 py-0.5 rounded-full">
                               {availableCourses.length} {isEn ? 'courses' : 'khóa'}
@@ -5285,19 +5287,17 @@ export default function LectureViewer({
                                  placeholder={isEn ? 'Search courses...' : 'Tìm khóa học...'}
                                  value={courseFilterQuery}
                                  onChange={(e) => setCourseFilterQuery(e.target.value)}
-                                 className="w-full px-3 py-1.5 pl-8 text-[13px] bg-white border border-slate-200 rounded-xl focus:outline-none focus:border-[#2ab4e8] focus:ring-2 focus:ring-[#2ab4e8]/20 text-slate-800 placeholder-slate-400"
+                                 className="w-full px-3 py-1.5 pl-8 text-[13px] bg-white border border-slate-200 rounded-xl focus:outline-none focus:border-[#0a5482] focus:ring-2 focus:ring-[#0a5482]/15 text-slate-800 placeholder-slate-400"
                                  onClick={(e) => e.stopPropagation()}
                                  autoFocus
                               />
-                              <svg className="w-4 h-4 absolute left-2.5 top-1/2 -translate-y-1/2 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                              </svg>
+                              <Search className="w-4 h-4 absolute left-2.5 top-1/2 -translate-y-1/2 text-slate-400" />
                               {courseFilterQuery && (
                                  <button 
                                     onClick={() => setCourseFilterQuery('')}
-                                    className="absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 text-xs"
+                                    className="absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 cursor-pointer"
                                  >
-                                    ✕
+                                    <X className="w-3.5 h-3.5" />
                                  </button>
                               )}
                            </div>
@@ -5306,7 +5306,7 @@ export default function LectureViewer({
 
                      <div className="overflow-y-auto p-1.5 custom-scrollbar flex-1 space-y-1 max-h-[300px]">
                         {filteredAvailableCourses.length === 0 ? (
-                           <div className="p-6 text-center text-slate-400 text-[13px]">
+                           <div className="p-6 text-center text-slate-500 text-[13px]">
                               {isEn ? 'No courses found' : 'Không tìm thấy khóa học nào'}
                            </div>
                         ) : (
@@ -5323,7 +5323,7 @@ export default function LectureViewer({
                                     }`}
                                  >
                                     <div className="flex items-center gap-2.5 min-w-0 flex-1">
-                                       <span className="text-base shrink-0">{isSelected ? '📖' : '📘'}</span>
+                                       <BookOpen className={`w-4 h-4 shrink-0 ${isSelected ? 'text-[#0a5482]' : 'text-slate-400 group-hover:text-[#0a5482]'}`} />
                                        <span className="truncate">{getLocalizedCourseTitle(c.title, lang)}</span>
                                     </div>
                                     {isSelected ? (
@@ -5343,62 +5343,18 @@ export default function LectureViewer({
                   </div>
                )}
             </div>
-             
-            {/* 🎨 NÚT ĐỔI MÀU NỀN BÊN PHẢI NÚT CHUYỂN KHÓA HỌC */}
-            <button
-              type="button"
-              onClick={() => setIsLectureThemeModalOpen(true)}
-              className="hidden sm:flex items-center justify-center w-9 h-9 rounded-xl transition-all bg-white/12 hover:bg-white/22 text-white border border-white/20 shadow-xs active:scale-95 shrink-0 cursor-pointer"
-              title={isEn ? 'Change lecture background theme' : 'Đổi màu nền bài giảng'}
-            >
-              <span className="text-sm sm:text-base">🎨</span>
-            </button>
-
-            {/* 🔤 CHỈNH CỠ CHỮ NHANH (A- / A+) */}
-            <div className="hidden sm:flex items-center bg-white/12 border border-white/20 rounded-xl h-9 p-0.5 shrink-0">
-              <button
-                type="button"
-                onClick={() => stepFontScale(-1)}
-                disabled={lectureFontScale <= 85}
-                className="px-2 h-full rounded-lg text-xs font-extrabold text-white/90 hover:text-white hover:bg-white/15 disabled:opacity-35 transition cursor-pointer"
-                title={isEn ? 'Decrease font size' : 'Thu nhỏ cỡ chữ'}
-              >
-                A-
-              </button>
-              <button
-                type="button"
-                onClick={resetFontScale}
-                className="px-1.5 h-full text-[11px] font-bold text-sky-200 hover:text-white transition cursor-pointer tabular-nums"
-                title={isEn ? 'Reset font size (100%)' : 'Đặt lại cỡ chữ mặc định (100%)'}
-              >
-                {lectureFontScale}%
-              </button>
-              <button
-                type="button"
-                onClick={() => stepFontScale(1)}
-                disabled={lectureFontScale >= 130}
-                className="px-2 h-full rounded-lg text-xs font-extrabold text-white/90 hover:text-white hover:bg-white/15 disabled:opacity-35 transition cursor-pointer"
-                title={isEn ? 'Increase font size' : 'Phóng to cỡ chữ'}
-              >
-                A+
-              </button>
-            </div>
           </div>
 
-
-
-         {/* 📖 NÚT MỞ TỪ ĐIỂN - CHÍNH GIỮA */}
+         {/* NÚT MỞ TỪ ĐIỂN - CHÍNH GIỮA */}
          <div className="hidden lg:flex flex-1 justify-center mx-3 max-w-sm relative">
            <button
              type="button"
              onClick={() => window.dispatchEvent(new CustomEvent('tony-open-standalone-dictionary'))}
-             className="w-full max-w-[320px] flex items-center justify-between bg-white/12 hover:bg-white/20 rounded-xl border border-white/20 transition-all px-3.5 h-9 cursor-pointer group"
+             className="w-full max-w-[300px] flex items-center justify-between bg-white/12 hover:bg-white/20 rounded-xl border border-white/20 transition-all px-3.5 h-9 cursor-pointer group"
              title={isEn ? 'Open Dictionary (or double-click any word in the lesson)' : 'Mở Từ điển Anh-Việt / Việt-Anh (hoặc click đúp bất kỳ từ nào trong bài)'}
            >
              <span className="flex items-center gap-2 min-w-0">
-               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4 text-sky-200 group-hover:text-white shrink-0">
-                 <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-               </svg>
+               <Search className="w-4 h-4 text-sky-200 group-hover:text-white shrink-0" />
                <span className="text-white/80 group-hover:text-white text-[13px] font-semibold truncate">
                  {isEn ? 'Dictionary Lookup...' : 'Tra từ điển EN ↔ VI...'}
                </span>
@@ -5409,23 +5365,26 @@ export default function LectureViewer({
            </button>
          </div>
 
-          <div className="flex items-center gap-1.5 sm:gap-2.5 shrink-0 ml-2">
-              <LmsLangToggle lang={lang} setLang={setLang} variant="dark" />
-              {/* 📱 NÚT MENU THAO TÁC NHANH CHO DI ĐỘNG & TABLET (< lg) */}
+          <div className="flex items-center gap-1.5 sm:gap-2 shrink-0 ml-2">
+              <div className="lg:hidden">
+                <LmsLangToggle lang={lang} setLang={setLang} variant="dark" />
+              </div>
+
+              {/* NÚT MENU THAO TÁC NHANH CHO DI ĐỘNG & TABLET (< lg) */}
               <div className="relative lg:hidden">
                 <button
                   type="button"
                   onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                  className="w-9 h-9 rounded-xl flex items-center justify-center bg-white/15 hover:bg-white/25 text-white font-black text-base transition-all active:scale-95 border border-white/20 shadow-xs cursor-pointer"
+                  className="w-9 h-9 rounded-xl flex items-center justify-center bg-white/15 hover:bg-white/25 text-white transition-all active:scale-95 border border-white/20 shadow-xs cursor-pointer"
                   title={isEn ? 'Tools & navigation menu' : 'Menu chức năng & điều hướng'}
                 >
-                  ⋯
+                  <MoreHorizontal className="w-5 h-5" />
                 </button>
 
                 {isMobileMenuOpen && (
                   <>
                     <div className="fixed inset-0 z-40" onClick={() => setIsMobileMenuOpen(false)} />
-                    <div className="absolute right-0 top-full mt-2 w-56 bg-white rounded-2xl shadow-2xl border border-slate-100 py-1.5 z-50 text-slate-800 animate-in fade-in slide-in-from-top-2 duration-150">
+                    <div className="absolute right-0 top-full mt-2 w-60 bg-white rounded-2xl shadow-2xl border border-slate-200 py-1.5 z-50 text-slate-800 animate-in fade-in slide-in-from-top-2 duration-150">
                       <button
                         type="button"
                         onClick={() => {
@@ -5434,7 +5393,7 @@ export default function LectureViewer({
                         }}
                         className="w-full text-left px-4 py-2.5 text-[13px] font-bold text-[#0a5482] hover:bg-sky-50 flex items-center gap-2.5 transition-colors cursor-pointer"
                       >
-                        <span>📖</span> {isEn ? 'Dictionary EN ↔ VI' : 'Tra từ điển EN ↔ VI'}
+                        <BookOpen className="w-4 h-4 text-[#0a5482]" /> {isEn ? 'Dictionary EN ↔ VI' : 'Tra từ điển EN ↔ VI'}
                       </button>
                       <div className="h-px bg-slate-100 my-1" />
                       <button
@@ -5447,7 +5406,7 @@ export default function LectureViewer({
                         }}
                         className="w-full text-left px-4 py-2.5 text-[13px] font-semibold text-slate-700 hover:bg-sky-50 hover:text-[#0a5482] flex items-center gap-2.5 transition-colors cursor-pointer"
                       >
-                        <span>📅</span> {isEn ? 'Study Calendar' : 'Lịch báo bài'}
+                        <Calendar className="w-4 h-4 text-slate-500" /> {isEn ? 'Study Calendar' : 'Lịch báo bài'}
                       </button>
                       <button
                         onClick={() => {
@@ -5459,7 +5418,7 @@ export default function LectureViewer({
                         }}
                         className="w-full text-left px-4 py-2.5 text-[13px] font-semibold text-slate-700 hover:bg-sky-50 hover:text-[#0a5482] flex items-center gap-2.5 transition-colors cursor-pointer"
                       >
-                        <span>📋</span> {isEn ? 'Task Board' : 'Bảng công việc'}
+                        <ClipboardList className="w-4 h-4 text-slate-500" /> {isEn ? 'Task Board' : 'Bảng công việc'}
                       </button>
                       <button
                         onClick={() => {
@@ -5472,7 +5431,7 @@ export default function LectureViewer({
                         }}
                         className="w-full text-left px-4 py-2.5 text-[13px] font-semibold text-slate-700 hover:bg-sky-50 hover:text-[#0a5482] flex items-center gap-2.5 transition-colors cursor-pointer"
                       >
-                        <span>📚</span> {isEn ? 'Test Bank' : 'Kho đề bài tập'}
+                        <Library className="w-4 h-4 text-slate-500" /> {isEn ? 'Test Bank' : 'Kho đề bài tập'}
                       </button>
                       {isCoachSupportedCourse(currentCourseId, course?.title) && (
                         <button
@@ -5482,12 +5441,12 @@ export default function LectureViewer({
                           }}
                           className="sm:hidden w-full text-left px-4 py-2.5 text-[13px] font-bold text-[#0a5482] bg-sky-50/70 hover:bg-sky-100 flex items-center gap-2.5 transition-colors cursor-pointer"
                         >
-                          <span>🧭</span> {isEn ? 'Teacher Tony AI Roadmap' : 'Lộ trình học AI Tutor'}
+                          <Sparkles className="w-4 h-4 text-amber-500" /> {isEn ? 'Teacher Tony AI Roadmap' : 'Lộ trình học AI Tutor'}
                         </button>
                       )}
                       {(course?.title || '').toLowerCase().includes('ielts') && (
                         <div className="sm:hidden border-t border-slate-100 mt-1 pt-1">
-                          <div className="px-4 py-1 text-[10px] font-extrabold uppercase tracking-wider text-slate-400">
+                          <div className="px-4 py-1 text-[10px] font-extrabold uppercase tracking-wider text-slate-500">
                             {isEn ? 'IELTS AI Assistants' : 'Trợ lý IELTS AI'}
                           </div>
                           <button
@@ -5498,7 +5457,7 @@ export default function LectureViewer({
                             }}
                             className="w-full text-left px-4 py-2 text-[13px] font-bold text-rose-600 hover:bg-rose-50 flex items-center gap-2.5 transition-colors cursor-pointer"
                           >
-                            <span>🎙️</span> Tutor Speaking (Spk)
+                            <Mic className="w-4 h-4" /> Tutor Speaking (Spk)
                           </button>
                           <button
                             type="button"
@@ -5508,7 +5467,7 @@ export default function LectureViewer({
                             }}
                             className="w-full text-left px-4 py-2 text-[13px] font-bold text-emerald-700 hover:bg-emerald-50 flex items-center gap-2.5 transition-colors cursor-pointer"
                           >
-                            <span>📊</span> Tutor Writing Task 1 (WT1)
+                            <BarChart3 className="w-4 h-4" /> Tutor Writing Task 1 (WT1)
                           </button>
                           <button
                             type="button"
@@ -5516,9 +5475,9 @@ export default function LectureViewer({
                               setIsMobileMenuOpen(false);
                               onOpenAI?.('ielts', activeLecture?.title, undefined, 'task2');
                             }}
-                            className="w-full text-left px-4 py-2 text-[13px] font-bold text-violet-700 hover:bg-violet-50 flex items-center gap-2.5 transition-colors cursor-pointer"
+                            className="w-full text-left px-4 py-2 text-[13px] font-bold text-indigo-700 hover:bg-indigo-50 flex items-center gap-2.5 transition-colors cursor-pointer"
                           >
-                            <span>✍️</span> Tutor Writing Task 2 (WT2)
+                            <PenTool className="w-4 h-4" /> Tutor Writing Task 2 (WT2)
                           </button>
                         </div>
                       )}
@@ -5528,9 +5487,9 @@ export default function LectureViewer({
                           setIsMobileMenuOpen(false);
                           setIsLectureThemeModalOpen(true);
                         }}
-                        className="sm:hidden w-full text-left px-4 py-2.5 text-[13px] font-semibold text-slate-700 hover:bg-sky-50 hover:text-[#0a5482] flex items-center gap-2.5 transition-colors border-t border-slate-100 mt-1 cursor-pointer"
+                        className="w-full text-left px-4 py-2.5 text-[13px] font-semibold text-slate-700 hover:bg-sky-50 hover:text-[#0a5482] flex items-center gap-2.5 transition-colors border-t border-slate-100 mt-1 cursor-pointer"
                       >
-                        <span>🎨</span> {isEn ? 'Change background theme' : 'Đổi màu nền bài giảng'}
+                        <Palette className="w-4 h-4 text-[#0a5482]" /> {isEn ? 'Change background theme' : 'Đổi màu nền bài giảng'}
                       </button>
                       <button
                         type="button"
@@ -5548,12 +5507,14 @@ export default function LectureViewer({
                           window.dispatchEvent(new CustomEvent('tony-close-sidebar'));
                           window.dispatchEvent(new CustomEvent('tony-navigate', { detail: 'home' }));
                         }}
-                        className="sm:hidden w-full text-left px-4 py-2.5 text-[13px] font-semibold text-slate-700 hover:bg-sky-50 hover:text-[#0a5482] flex items-center gap-2.5 transition-colors cursor-pointer"
+                        className="w-full text-left px-4 py-2.5 text-[13px] font-semibold text-slate-700 hover:bg-sky-50 hover:text-[#0a5482] flex items-center gap-2.5 transition-colors cursor-pointer"
                       >
-                        <span>🏠</span> {isEn ? 'TonyEnglish Homepage' : 'Về trang chủ TonyEnglish'}
+                        <Home className="w-4 h-4 text-slate-500" /> {isEn ? 'TonyEnglish Homepage' : 'Về trang chủ TonyEnglish'}
                       </button>
-                      <div className="sm:hidden px-4 py-2 border-t border-slate-100 flex items-center justify-between gap-2 mt-1">
-                        <span className="text-[12px] font-bold text-slate-600">🔤 {isEn ? 'Font Size' : 'Cỡ chữ'}</span>
+                      <div className="px-4 py-2 border-t border-slate-100 flex items-center justify-between gap-2 mt-1">
+                        <span className="text-[12px] font-bold text-slate-600 flex items-center gap-1.5">
+                          <Type className="w-3.5 h-3.5 text-slate-500" /> {isEn ? 'Font Size' : 'Cỡ chữ'}
+                        </span>
                         <div className="flex items-center gap-1 bg-slate-100 rounded-lg p-0.5">
                           <button
                             type="button"
@@ -5585,7 +5546,7 @@ export default function LectureViewer({
                 )}
               </div>
 
-              {/* 🖥️ CÁC NÚT ĐIỀU HƯỚNG TRÊN MÀN HÌNH LỚN (>= sm): Phân cấp rõ ràng Nhóm điều hướng phụ vs Nhóm Trợ lý AI */}
+              {/* CÁC NÚT ĐIỀU HƯỚNG TRÊN MÀN HÌNH LỚN (>= lg) */}
               <div className="hidden lg:flex items-center bg-white/10 border border-white/15 rounded-xl p-0.5 gap-0.5">
                 <button
                     onClick={() => {
@@ -5597,7 +5558,7 @@ export default function LectureViewer({
                     className="flex items-center gap-1.5 px-2.5 h-8 rounded-lg text-[12px] font-semibold transition-all text-white/90 hover:text-white hover:bg-white/15 cursor-pointer"
                     title={isEn ? 'Go to course Study Calendar' : 'Đi đến Lịch báo bài của khóa học'}
                 >
-                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-3.5 h-3.5 text-sky-300"><path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>
+                   <Calendar className="w-3.5 h-3.5 text-sky-300" />
                    <span>{isEn ? 'Calendar' : 'Lịch báo bài'}</span>
                 </button>
                 <button
@@ -5610,7 +5571,7 @@ export default function LectureViewer({
                     className="flex items-center gap-1.5 px-2.5 h-8 rounded-lg text-[12px] font-semibold transition-all text-white/90 hover:text-white hover:bg-white/15 cursor-pointer"
                     title={isEn ? 'Go to course Task Board' : 'Đi đến Bảng công việc của khóa học'}
                 >
-                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-3.5 h-3.5 text-sky-300"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" /></svg>
+                   <ClipboardList className="w-3.5 h-3.5 text-sky-300" />
                    <span>{isEn ? 'Tasks' : 'Bảng việc'}</span>
                 </button>
                 <button
@@ -5624,7 +5585,7 @@ export default function LectureViewer({
                     className="flex items-center gap-1.5 px-2.5 h-8 rounded-lg text-[12px] font-semibold transition-all text-white/90 hover:text-white hover:bg-white/15 cursor-pointer"
                     title={isEn ? 'Go to course Test Bank' : 'Đi đến kho đề của khóa học'}
                 >
-                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-3.5 h-3.5 text-sky-300"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" /></svg>
+                   <Library className="w-3.5 h-3.5 text-sky-300" />
                    <span>{isEn ? 'Test Bank' : 'Kho đề'}</span>
                 </button>
               </div>
@@ -5635,7 +5596,7 @@ export default function LectureViewer({
                       className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 md:px-3.5 md:h-9 rounded-xl text-[12.5px] md:text-[13px] font-extrabold transition-all bg-amber-400/15 hover:bg-amber-400/25 text-amber-200 border border-amber-300/35 shadow-2xs cursor-pointer"
                       title={isEn ? 'Open Teacher Tony AI Advisor to analyze progress & daily tasks' : 'Mở Trợ lý Thầy Tony AI tự động phân tích điểm số & giao việc tiếp theo'}
                   >
-                     <span>👨‍🏫</span>
+                     <Sparkles className="w-3.5 h-3.5 text-amber-300 shrink-0" />
                      <span className="hidden sm:inline">{isEn ? 'Teacher Tony AI' : 'Thầy Tony AI'}</span>
                   </button>
               )}
@@ -5646,48 +5607,154 @@ export default function LectureViewer({
                               onOpenAI('tutor'); 
                           }
                       }} 
-                      className="flex items-center gap-1.5 px-2.5 sm:px-3.5 py-1.5 md:h-9 rounded-xl text-xs sm:text-[13px] font-extrabold transition-all bg-[#2ab4e8] hover:bg-[#1fa0d4] text-white shadow-xs border border-white/25 cursor-pointer shrink-0"
+                      className="flex items-center gap-1.5 px-2.5 sm:px-3.5 py-1.5 md:h-9 rounded-xl text-xs sm:text-[13px] font-extrabold transition-all bg-[#0284c7] hover:bg-[#0369a1] text-white shadow-xs border border-white/25 cursor-pointer shrink-0"
                       title={isEn ? 'Open Tony AI Tutor Assistant' : 'Mở trợ lý học tập Tony AI Tutor'}
                   >
-                     <span>🤖</span> <span className="hidden sm:inline">AI Tutor</span>
+                     <Bot className="w-4 h-4 shrink-0" /> <span className="hidden sm:inline">AI Tutor</span>
                   </button>
               )}
              {(course?.title || '').toLowerCase().includes('ielts') && (
-                 <>
-                 <button 
-                     onClick={() => onOpenAI?.('ielts', activeLecture?.title, undefined, 'speaking')} 
-                     className="hidden sm:flex w-9 h-9 rounded-xl items-center justify-center transition-all bg-gradient-to-br from-pink-400 to-rose-500 text-white shadow-sm border border-white/20 hover:scale-105 shrink-0 cursor-pointer"
-                     title="Tutor Speaking"
-                 >
-                     <span className="text-[10px] md:text-[11px] font-extrabold leading-tight">Spk</span>
-                 </button>
-                 <button 
-                     onClick={() => onOpenAI?.('ielts', activeLecture?.title, undefined, 'task1')} 
-                     className="hidden sm:flex w-9 h-9 rounded-xl items-center justify-center transition-all bg-gradient-to-br from-emerald-400 to-teal-500 text-white shadow-sm border border-white/20 hover:scale-105 shrink-0 cursor-pointer"
-                     title="Tutor Writing Task 1"
-                 >
-                     <span className="text-[10px] md:text-[11px] font-extrabold leading-tight">WT1</span>
-                 </button>
-                 <button 
-                     onClick={() => onOpenAI?.('ielts', activeLecture?.title, undefined, 'task2')} 
-                     className="hidden sm:flex w-9 h-9 rounded-xl items-center justify-center transition-all bg-gradient-to-br from-violet-400 to-purple-500 text-white shadow-sm border border-white/20 hover:scale-105 shrink-0 cursor-pointer"
-                     title="Tutor Writing Task 2"
-                 >
-                     <span className="text-[10px] md:text-[11px] font-extrabold leading-tight">WT2</span>
-                 </button>
-                 </>
+                 <div className="hidden sm:flex items-center bg-white/10 border border-white/15 rounded-xl p-0.5 gap-0.5 shrink-0">
+                   <button 
+                       onClick={() => onOpenAI?.('ielts', activeLecture?.title, undefined, 'speaking')} 
+                       className="h-8 px-2 rounded-lg flex items-center gap-1 transition-all text-white/90 hover:text-white hover:bg-white/15 cursor-pointer"
+                       title="Tutor Speaking"
+                   >
+                       <Mic className="w-3.5 h-3.5 text-rose-300" />
+                       <span className="text-[11px] font-extrabold leading-none">Spk</span>
+                   </button>
+                   <button 
+                       onClick={() => onOpenAI?.('ielts', activeLecture?.title, undefined, 'task1')} 
+                       className="h-8 px-2 rounded-lg flex items-center gap-1 transition-all text-white/90 hover:text-white hover:bg-white/15 cursor-pointer"
+                       title="Tutor Writing Task 1"
+                   >
+                       <BarChart3 className="w-3.5 h-3.5 text-emerald-300" />
+                       <span className="text-[11px] font-extrabold leading-none">WT1</span>
+                   </button>
+                   <button 
+                       onClick={() => onOpenAI?.('ielts', activeLecture?.title, undefined, 'task2')} 
+                       className="h-8 px-2 rounded-lg flex items-center gap-1 transition-all text-white/90 hover:text-white hover:bg-white/15 cursor-pointer"
+                       title="Tutor Writing Task 2"
+                   >
+                       <PenTool className="w-3.5 h-3.5 text-indigo-300" />
+                       <span className="text-[11px] font-extrabold leading-none">WT2</span>
+                   </button>
+                 </div>
              )}
-             <button 
-                 onClick={toggleFullScreen} 
-                 className="hidden md:flex w-9 h-9 rounded-xl items-center justify-center bg-white/12 hover:bg-white/22 border border-white/15 text-white transition-all cursor-pointer"
-                 title={isFullscreen ? (isEn ? 'Exit fullscreen' : 'Thoát toàn màn hình') : (isEn ? 'Fullscreen' : 'Toàn màn hình')}
-             >
-                {isFullscreen ? (
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5l5.25 5.25" /></svg>
-                ) : (
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0-4.5L15 15" /></svg>
+
+             {/* POPOVER HIỂN THỊ & TIỆN ÍCH (DESKTOP >= lg): Gom Theme, Cỡ chữ, Ngôn ngữ, Toàn màn hình, Trang chủ */}
+             <div className="relative hidden lg:block">
+                <button
+                  type="button"
+                  onClick={() => setIsDisplayMenuOpen(!isDisplayMenuOpen)}
+                  className={`flex items-center gap-1.5 h-9 px-2.5 rounded-xl border text-[12px] font-bold transition-all cursor-pointer ${
+                    isDisplayMenuOpen
+                      ? 'bg-white/25 border-white/35 text-white'
+                      : 'bg-white/12 hover:bg-white/22 border-white/15 text-white/95'
+                  }`}
+                  title={isEn ? 'Display & reading settings' : 'Tùy chỉnh hiển thị (Cỡ chữ, Màu nền, Ngôn ngữ, Toàn màn hình)'}
+                >
+                  <SlidersHorizontal className="w-4 h-4" />
+                  <span className="hidden xl:inline">{isEn ? 'Display' : 'Hiển thị'}</span>
+                </button>
+
+                {isDisplayMenuOpen && (
+                  <>
+                    <div className="fixed inset-0 z-40" onClick={() => setIsDisplayMenuOpen(false)} />
+                    <div className="absolute right-0 top-full mt-2 w-64 bg-white rounded-2xl shadow-2xl border border-slate-200 p-2 z-50 text-slate-800 animate-in fade-in slide-in-from-top-2 duration-150 space-y-1">
+                      <div className="px-2.5 py-2 flex items-center justify-between gap-2">
+                        <span className="text-[12px] font-bold text-slate-600 flex items-center gap-2">
+                          <Type className="w-4 h-4 text-[#0a5482]" />
+                          {isEn ? 'Font Size' : 'Cỡ chữ'}
+                        </span>
+                        <div className="flex items-center gap-1 bg-slate-100 rounded-lg p-0.5">
+                          <button
+                            type="button"
+                            onClick={() => stepFontScale(-1)}
+                            disabled={lectureFontScale <= 85}
+                            className="px-2 py-1 rounded-md text-xs font-extrabold text-slate-700 hover:bg-white disabled:opacity-35 cursor-pointer"
+                            title={isEn ? 'Decrease font size' : 'Thu nhỏ cỡ chữ'}
+                          >
+                            A-
+                          </button>
+                          <button
+                            type="button"
+                            onClick={resetFontScale}
+                            className="px-1.5 py-1 text-[11px] font-bold text-[#0a5482] tabular-nums cursor-pointer"
+                            title={isEn ? 'Reset font size (100%)' : 'Đặt lại cỡ chữ mặc định (100%)'}
+                          >
+                            {lectureFontScale}%
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => stepFontScale(1)}
+                            disabled={lectureFontScale >= 130}
+                            className="px-2 py-1 rounded-md text-xs font-extrabold text-slate-700 hover:bg-white disabled:opacity-35 cursor-pointer"
+                            title={isEn ? 'Increase font size' : 'Phóng to cỡ chữ'}
+                          >
+                            A+
+                          </button>
+                        </div>
+                      </div>
+
+                      <div className="px-2.5 py-2 flex items-center justify-between gap-2 border-t border-slate-100">
+                        <span className="text-[12px] font-bold text-slate-600">
+                          {isEn ? 'Language' : 'Ngôn ngữ'}
+                        </span>
+                        <LmsLangToggle lang={lang} setLang={setLang} />
+                      </div>
+
+                      <div className="h-px bg-slate-100 my-1" />
+
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setIsDisplayMenuOpen(false);
+                          setIsLectureThemeModalOpen(true);
+                        }}
+                        className="w-full text-left px-2.5 py-2 rounded-xl text-[13px] font-semibold text-slate-700 hover:bg-sky-50 hover:text-[#0a5482] flex items-center gap-2.5 transition-colors cursor-pointer"
+                      >
+                        <Palette className="w-4 h-4 text-[#0a5482]" />
+                        <span>{isEn ? 'Background Theme' : 'Đổi màu nền bài giảng'}</span>
+                      </button>
+
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setIsDisplayMenuOpen(false);
+                          toggleFullScreen();
+                        }}
+                        className="w-full text-left px-2.5 py-2 rounded-xl text-[13px] font-semibold text-slate-700 hover:bg-sky-50 hover:text-[#0a5482] flex items-center gap-2.5 transition-colors cursor-pointer"
+                      >
+                        {isFullscreen ? <Minimize2 className="w-4 h-4 text-slate-500" /> : <Maximize2 className="w-4 h-4 text-slate-500" />}
+                        <span>{isFullscreen ? (isEn ? 'Exit Fullscreen' : 'Thoát toàn màn hình') : (isEn ? 'Fullscreen Mode' : 'Toàn màn hình')}</span>
+                      </button>
+
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setIsDisplayMenuOpen(false);
+                          try {
+                            sessionStorage.setItem('lms_last_student_view', 'lecture');
+                            localStorage.setItem('lms_last_student_view', 'lecture');
+                            if (currentCourseId) {
+                              sessionStorage.setItem('lms_active_course_id', currentCourseId);
+                              localStorage.setItem('lms_active_course_id', currentCourseId);
+                            }
+                          } catch (e) {}
+                          window.history.pushState(null, '', '/');
+                          window.dispatchEvent(new CustomEvent('tony-close-sidebar'));
+                          window.dispatchEvent(new CustomEvent('tony-navigate', { detail: 'home' }));
+                        }}
+                        className="w-full text-left px-2.5 py-2 rounded-xl text-[13px] font-semibold text-slate-700 hover:bg-sky-50 hover:text-[#0a5482] flex items-center gap-2.5 transition-colors cursor-pointer"
+                      >
+                        <Home className="w-4 h-4 text-slate-500" />
+                        <span>{isEn ? 'TonyEnglish Homepage' : 'Về trang chủ TonyEnglish'}</span>
+                      </button>
+                    </div>
+                  </>
                 )}
-             </button>
+             </div>
           </div>
       </header>
 
@@ -5708,23 +5775,23 @@ export default function LectureViewer({
                   <div className="flex items-center gap-2.5">
                     <span className="w-1.5 h-5 bg-[#0a5482] rounded-full"></span>
                     <div>
-                      <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#2ab4e8] block leading-none mb-0.5">
+                      <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#0284c7] block leading-none mb-0.5">
                         TonyEnglish Curriculum
                       </span>
                       <h3 className="font-black text-slate-900 text-[15px] tracking-tight leading-tight">{isEn ? 'Course Curriculum' : 'Nội dung khóa học'}</h3>
                     </div>
                     {isTrialMode && (
-                      <span className="bg-amber-100 text-amber-700 border border-amber-200 text-[10px] font-black uppercase px-2 py-0.5 rounded-full">
-                        🎁 {isEn ? 'Free Trial' : 'Học thử'}
+                      <span className="bg-amber-100 text-amber-800 border border-amber-200 text-[10px] font-black uppercase px-2 py-0.5 rounded-full inline-flex items-center gap-1">
+                        <Gift className="w-3 h-3 shrink-0" /> {isEn ? 'Free Trial' : 'Học thử'}
                       </span>
                     )}
                   </div>
                   <button 
                       onClick={() => setIsSidebarOpen(false)} 
-                      className="md:hidden w-8 h-8 rounded-full bg-slate-200/60 hover:bg-slate-200 flex items-center justify-center font-bold text-slate-500 hover:text-slate-700 text-sm transition-colors"
+                      className="md:hidden w-8 h-8 rounded-full bg-slate-200/60 hover:bg-slate-200 flex items-center justify-center text-slate-500 hover:text-slate-700 transition-colors cursor-pointer"
                       title={isEn ? 'Close list' : 'Đóng danh sách'}
                   >
-                      ✕
+                      <X className="w-4 h-4" />
                   </button>
               </div>
               <div className="flex flex-col gap-1.5 bg-white border border-slate-200/80 rounded-xl p-2.5 shadow-2xs">

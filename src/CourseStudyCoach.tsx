@@ -10,6 +10,24 @@ import {
   extractStudentFirstName,
 } from './globalTutorContext';
 import { useLmsLang, getLocalizedCourseTitle } from './utils/lmsI18n';
+import {
+  ClipboardList,
+  BookOpen,
+  Target,
+  Library,
+  BarChart3,
+  RefreshCw,
+  Sparkles,
+  Camera,
+  Send,
+  X,
+  ChevronDown,
+  ChevronUp,
+  Zap,
+  GraduationCap,
+  Lightbulb,
+  MonitorPlay,
+} from 'lucide-react';
 
 export interface StudyCoachProps {
   courseId: string;
@@ -661,19 +679,19 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
     <div
       className={`${
         onClose ? '' : 'mb-8'
-      } rounded-2xl sm:rounded-3xl border-2 border-[#2ab4e8]/45 bg-white shadow-lg transition-all`}
+      } rounded-2xl sm:rounded-3xl border border-slate-200/90 ring-1 ring-[#0a5482]/10 bg-white shadow-lg transition-all`}
     >
       {/* TOP HEADER BAR OF AI STUDY COACH */}
       <div
-        className={`bg-gradient-to-r from-[#072f49] via-[#0a5482] to-[#0f172a] px-4 sm:px-5 py-2.5 sm:py-3 text-white flex flex-wrap items-center justify-between gap-2.5 rounded-t-[14px] sm:rounded-t-[22px] ${
-          isWindowCollapsed ? 'rounded-b-[14px] sm:rounded-b-[22px]' : ''
+        className={`bg-gradient-to-r from-[#073b5c] via-[#0a5482] to-[#0f172a] px-4 sm:px-5 py-2.5 sm:py-3 text-white flex flex-wrap items-center justify-between gap-2.5 rounded-t-[15px] sm:rounded-t-[23px] ${
+          isWindowCollapsed ? 'rounded-b-[15px] sm:rounded-b-[23px]' : ''
         }`}
       >
         <div className="flex items-center gap-2 sm:gap-2.5 min-w-0 flex-wrap">
-          <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-[#2ab4e8] to-sky-400 text-slate-950 flex items-center justify-center text-xl shadow-md shrink-0">
-            👨‍🏫
+          <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-amber-400/15 border border-amber-300/35 text-amber-300 flex items-center justify-center shadow-sm shrink-0">
+            <Sparkles className="w-5 h-5" />
           </div>
-          <span className="bg-emerald-400/20 text-emerald-300 border border-emerald-400/30 text-[10px] sm:text-[11px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full flex items-center gap-1.5 min-w-0">
+          <span className="bg-emerald-400/15 text-emerald-200 border border-emerald-400/30 text-[10px] sm:text-[11px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full flex items-center gap-1.5 min-w-0">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping shrink-0" />
             <span className="truncate">
               {isEn ? (
@@ -683,8 +701,9 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
               )}
             </span>
           </span>
-          <span className="bg-[#0f172a]/85 text-sky-200 border border-sky-400/35 text-[11px] sm:text-xs font-extrabold px-2.5 py-1 rounded-xl flex items-center gap-1.5 max-w-[200px] sm:max-w-[260px] truncate">
-            <span className="truncate">🎓 {localizedCourseName}</span>
+          <span className="bg-white/10 text-sky-100 border border-white/15 text-[11px] sm:text-xs font-bold px-2.5 py-1 rounded-xl flex items-center gap-1.5 max-w-[200px] sm:max-w-[260px] truncate">
+            <GraduationCap className="w-3.5 h-3.5 text-sky-300 shrink-0" />
+            <span className="truncate">{localizedCourseName}</span>
           </span>
         </div>
 
@@ -701,7 +720,7 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
               }
             >
               <span>{isStatsCollapsed ? (isEn ? 'Show Summary' : 'Hiện tóm tắt') : (isEn ? 'Hide Summary' : 'Ẩn tóm tắt')}</span>
-              <span>{isStatsCollapsed ? '▼' : '▲'}</span>
+              {isStatsCollapsed ? <ChevronDown className="w-3.5 h-3.5" /> : <ChevronUp className="w-3.5 h-3.5" />}
             </button>
           )}
 
@@ -709,19 +728,20 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
             <button
               type="button"
               onClick={() => setIsWindowCollapsed(!isWindowCollapsed)}
-              className="bg-amber-400/20 hover:bg-amber-400/30 text-amber-200 border border-amber-300/40 text-xs font-extrabold px-3 py-1.5 rounded-xl transition cursor-pointer flex items-center gap-1.5"
+              className="bg-amber-400/15 hover:bg-amber-400/25 text-amber-200 border border-amber-300/35 text-xs font-extrabold px-3 py-1.5 rounded-xl transition cursor-pointer flex items-center gap-1.5"
               title={isWindowCollapsed ? (isEn ? 'Expand Teacher Tony AI window' : 'Mở lại cửa sổ tư vấn Thầy Tony AI') : (isEn ? 'Collapse Teacher Tony AI window' : 'Thu gọn toàn bộ cửa sổ Thầy Tony AI')}
             >
-              <span>{isWindowCollapsed ? (isEn ? 'Open Chat ▼' : 'Mở cửa sổ chat ▼') : (isEn ? 'Collapse ▲' : 'Thu gọn cửa sổ ▲')}</span>
+              <span>{isWindowCollapsed ? (isEn ? 'Open Chat' : 'Mở cửa sổ chat') : (isEn ? 'Collapse' : 'Thu gọn cửa sổ')}</span>
+              {isWindowCollapsed ? <ChevronDown className="w-3.5 h-3.5" /> : <ChevronUp className="w-3.5 h-3.5" />}
             </button>
           ) : (
             <button
               type="button"
               onClick={onClose}
-              className="px-3 py-1.5 rounded-xl bg-rose-500/80 hover:bg-rose-600 text-white border border-rose-400/50 font-black text-xs flex items-center gap-1.5 transition cursor-pointer"
+              className="px-3 py-1.5 rounded-xl bg-white/12 hover:bg-rose-600 text-white border border-white/20 hover:border-rose-500 font-bold text-xs flex items-center gap-1.5 transition cursor-pointer"
               title={isEn ? 'Close Teacher Tony AI' : 'Đóng cửa sổ Thầy Tony AI'}
             >
-              <span>✕</span>
+              <X className="w-3.5 h-3.5" />
               <span className="hidden sm:inline">{isEn ? 'Close' : 'Đóng'}</span>
             </button>
           )}
@@ -729,7 +749,7 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
       </div>
 
       {!isWindowCollapsed && (
-        <div className="p-3 sm:p-4 space-y-3.5 bg-gradient-to-b from-sky-50/50 to-white rounded-b-[14px] sm:rounded-b-[22px]">
+        <div className="p-3 sm:p-4 space-y-3.5 bg-gradient-to-b from-slate-50/80 to-white rounded-b-[15px] sm:rounded-b-[23px]">
           {/* 1. REAL-TIME STUDENT X-RAY RADAR (4 THẺ DỮ LIỆU TỔNG THỂ THỰC TẾ) */}
           {!isStatsCollapsed && snapshot && (
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3 animate-in fade-in duration-150">
@@ -742,11 +762,12 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
                     { onOpenLecture, onSelectFolder, onNavigate }
                   )
                 }
-                className="bg-white hover:bg-sky-50/60 border border-slate-200/90 hover:border-[#2ab4e8] rounded-xl sm:rounded-2xl p-2.5 sm:p-3.5 shadow-2xs transition cursor-pointer flex flex-col justify-between"
+                className="bg-white hover:bg-sky-50/50 border border-slate-200/90 hover:border-[#0a5482]/50 rounded-xl sm:rounded-2xl p-2.5 sm:p-3.5 shadow-2xs transition cursor-pointer flex flex-col justify-between"
               >
                 <div className="flex items-center justify-between gap-2">
-                  <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-500">
-                    {isEn ? '📋 Task Board' : '📋 Bảng công việc'}
+                  <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
+                    <ClipboardList className="w-3.5 h-3.5 text-[#0a5482] shrink-0" />
+                    <span>{isEn ? 'Task Board' : 'Bảng công việc'}</span>
                   </span>
                   <span className="text-xs font-black text-[#0a5482] bg-sky-50 px-2 py-0.5 rounded-full border border-sky-200">
                     {snapshot.taskProgress.percent}%
@@ -779,11 +800,12 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
                     );
                   }
                 }}
-                className="bg-white hover:bg-emerald-50/60 border border-slate-200/90 hover:border-emerald-400 rounded-2xl p-3.5 shadow-2xs transition cursor-pointer flex flex-col justify-between"
+                className="bg-white hover:bg-emerald-50/50 border border-slate-200/90 hover:border-emerald-400 rounded-2xl p-3.5 shadow-2xs transition cursor-pointer flex flex-col justify-between"
               >
                 <div className="flex items-center justify-between gap-2">
-                  <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-500">
-                    {isEn ? '📖 Next Lesson' : '📖 Bài cần học ngay'}
+                  <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
+                    <BookOpen className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                    <span>{isEn ? 'Next Lesson' : 'Bài cần học ngay'}</span>
                   </span>
                   <span className="text-[10.5px] font-black text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
                     {snapshot.taskProgress.inProgressLectures.length > 0
@@ -810,11 +832,12 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
                     { onOpenLecture, onSelectFolder, onNavigate }
                   )
                 }
-                className="bg-white hover:bg-amber-50/60 border border-slate-200/90 hover:border-amber-400 rounded-2xl p-3.5 shadow-2xs transition cursor-pointer flex flex-col justify-between"
+                className="bg-white hover:bg-amber-50/50 border border-slate-200/90 hover:border-amber-400 rounded-2xl p-3.5 shadow-2xs transition cursor-pointer flex flex-col justify-between"
               >
                 <div className="flex items-center justify-between gap-2">
-                  <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-500">
-                    {isEn ? '🎯 Latest Test' : '🎯 Điểm Test gần nhất'}
+                  <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
+                    <Target className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+                    <span>{isEn ? 'Latest Test' : 'Điểm Test gần nhất'}</span>
                   </span>
                   {latestTest && (
                     <span
@@ -854,11 +877,12 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
                       { onOpenLecture, onSelectFolder, onNavigate }
                     )
                   }
-                  className="bg-white hover:bg-indigo-50/60 border border-slate-200/90 hover:border-indigo-400 rounded-2xl p-3.5 shadow-2xs transition cursor-pointer flex flex-col justify-between"
+                  className="bg-white hover:bg-indigo-50/50 border border-slate-200/90 hover:border-indigo-400 rounded-2xl p-3.5 shadow-2xs transition cursor-pointer flex flex-col justify-between"
                 >
                   <div className="flex items-center justify-between gap-2">
-                    <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-500">
-                      {isEn ? '📚 Cambridge Library' : '📚 Thư viện Dịch Cam'}
+                    <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
+                      <Library className="w-3.5 h-3.5 text-indigo-600 shrink-0" />
+                      <span>{isEn ? 'Cambridge Library' : 'Thư viện Dịch Cam'}</span>
                     </span>
                     <span className="text-[10.5px] font-black text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full border border-indigo-200">
                       {isEn ? 'Required' : 'Bắt buộc'}
@@ -883,11 +907,12 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
                       { onOpenLecture, onSelectFolder, onNavigate }
                     )
                   }
-                  className="bg-white hover:bg-indigo-50/60 border border-slate-200/90 hover:border-indigo-400 rounded-2xl p-3.5 shadow-2xs transition cursor-pointer flex flex-col justify-between"
+                  className="bg-white hover:bg-indigo-50/50 border border-slate-200/90 hover:border-indigo-400 rounded-2xl p-3.5 shadow-2xs transition cursor-pointer flex flex-col justify-between"
                 >
                   <div className="flex items-center justify-between gap-2">
-                    <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-500">
-                      {isEn ? '📊 Total Tests' : '📊 Tổng số bài thi'}
+                    <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
+                      <BarChart3 className="w-3.5 h-3.5 text-indigo-600 shrink-0" />
+                      <span>{isEn ? 'Total Tests' : 'Tổng số bài thi'}</span>
                     </span>
                     <span className="text-[10.5px] font-black text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full border border-indigo-200 truncate max-w-[110px]">
                       {isIgcse0654 ? 'IGCSE 0654' : (isEn ? 'Test Bank' : 'Kho đề & Thi')}
@@ -907,8 +932,8 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
           )}
 
           {/* 2. DYNAMIC AI CONVERSATION & ACTIONABLE ADVICE STREAM */}
-          <div className="bg-white rounded-2xl border border-sky-200/90 shadow-xs overflow-hidden">
-            <div className="bg-sky-50/80 border-b border-sky-100 px-4 py-2.5 flex items-center justify-between gap-2 flex-wrap">
+          <div className="bg-white rounded-2xl border border-slate-200/90 shadow-xs overflow-hidden">
+            <div className="bg-slate-50 border-b border-slate-200/80 px-4 py-2.5 flex items-center justify-between gap-2 flex-wrap">
               <div className="flex items-center gap-2 flex-wrap">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                 <span className="text-xs font-extrabold uppercase tracking-wider text-[#0a5482] flex items-center gap-1.5 flex-wrap">
@@ -921,10 +946,10 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
                   type="button"
                   onClick={handleRefreshDiagnosis}
                   disabled={isAiThinking || isLoadingSnapshot}
-                  className="text-[11px] font-extrabold text-emerald-800 hover:bg-emerald-100 bg-emerald-50 border border-emerald-300 px-2.5 py-1 rounded-lg transition cursor-pointer flex items-center gap-1.5 disabled:opacity-50"
+                  className="text-[11px] font-extrabold text-[#0a5482] hover:bg-sky-100 bg-sky-50 border border-sky-200 px-2.5 py-1 rounded-lg transition cursor-pointer flex items-center gap-1.5 disabled:opacity-50"
                   title={isEn ? 'Rescan latest scores & progress for updated AI advice' : 'Quét lại điểm số & tiến độ mới nhất để Thầy AI tư vấn lại'}
                 >
-                  <span className={isAiThinking || isLoadingSnapshot ? 'animate-spin' : ''}>🔄</span>
+                  <RefreshCw className={`w-3.5 h-3.5 ${isAiThinking || isLoadingSnapshot ? 'animate-spin' : ''}`} />
                   <span>{isEn ? 'Re-analyze Progress' : 'Phân tích lại tiến độ'}</span>
                 </button>
               </div>
@@ -962,8 +987,8 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
                   } animate-in fade-in duration-200`}
                 >
                   {msg.role === 'ai' && (
-                    <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#0a5482] to-[#073b5c] text-white flex items-center justify-center shrink-0 mr-3 mt-0.5 shadow-xs text-base">
-                      👨‍🏫
+                    <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#0a5482] to-[#073b5c] text-amber-300 flex items-center justify-center shrink-0 mr-3 mt-0.5 shadow-xs">
+                      <Sparkles className="w-4 h-4" />
                     </div>
                   )}
 
@@ -997,7 +1022,7 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
                         {msg.actions && msg.actions.length > 0 && (
                           <div className="mt-4 pt-3.5 border-t border-slate-200/80">
                             <div className="text-[11px] font-black uppercase tracking-wider text-[#0a5482] mb-2 flex items-center gap-1.5">
-                              <span>⚡</span>
+                              <Zap className="w-3.5 h-3.5 text-amber-500 shrink-0" />
                               <span>{isEn ? 'Click below to jump straight into your assigned tasks:' : 'Bấm vào đây để thực hiện ngay các việc Thầy vừa giao:'}</span>
                             </div>
                             <div className="flex flex-wrap gap-2">
@@ -1042,13 +1067,13 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
 
               {isAiThinking && (
                 <div className="flex items-center gap-3 text-slate-600 text-xs sm:text-sm font-semibold py-2">
-                  <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-[#0a5482] to-[#073b5c] text-white flex items-center justify-center shrink-0">
-                    👨‍🏫
+                  <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-[#0a5482] to-[#073b5c] text-amber-300 flex items-center justify-center shrink-0">
+                    <Sparkles className="w-4 h-4" />
                   </div>
                   <div className="bg-slate-100 border border-slate-200 px-4 py-2.5 rounded-2xl flex items-center gap-2">
-                    <span className="w-2 h-2 bg-[#2ab4e8] rounded-full animate-bounce" />
+                    <span className="w-2 h-2 bg-[#0284c7] rounded-full animate-bounce" />
                     <span className="w-2 h-2 bg-[#0a5482] rounded-full animate-bounce [animation-delay:150ms]" />
-                    <span className="w-2 h-2 bg-[#2ab4e8] rounded-full animate-bounce [animation-delay:300ms]" />
+                    <span className="w-2 h-2 bg-[#0284c7] rounded-full animate-bounce [animation-delay:300ms]" />
                     <span className="ml-1 text-slate-600">
                       {isEn ? (
                         <>
@@ -1072,8 +1097,9 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
             {/* 3. QUICK FOCUS PROMPTS & DIRECT CHAT INPUT */}
             <div className="p-3.5 sm:p-4 bg-slate-50 border-t border-slate-200/80 space-y-3">
               <div className="flex items-center gap-1.5 flex-wrap">
-                <span className="text-[11px] font-extrabold text-slate-500 mr-1">
-                  {isEn ? '💡 Want to focus on a specific skill today? Ask Teacher Tony:' : '💡 Muốn đổi kỹ năng học hôm nay? Bấm hỏi Thầy ngay:'}
+                <span className="text-[11px] font-extrabold text-slate-500 mr-1 inline-flex items-center gap-1">
+                  <Lightbulb className="w-3.5 h-3.5 text-amber-500 shrink-0" />
+                  <span>{isEn ? 'Want to focus on a specific skill today? Ask Teacher Tony:' : 'Muốn đổi kỹ năng học hôm nay? Bấm hỏi Thầy ngay:'}</span>
                 </span>
                 {quickPrompts.map((qp, idx) => (
                   <button
@@ -1101,14 +1127,17 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
                       <button
                         type="button"
                         onClick={() => setAttachedImage(null)}
-                        className="absolute -top-1 -right-1 w-5 h-5 bg-rose-500 hover:bg-rose-600 text-white rounded-full flex items-center justify-center text-[10px] font-bold shadow cursor-pointer"
+                        className="absolute -top-1 -right-1 w-5 h-5 bg-rose-500 hover:bg-rose-600 text-white rounded-full flex items-center justify-center shadow cursor-pointer"
                         title={isEn ? 'Remove image' : 'Xóa ảnh'}
                       >
-                        ✕
+                        <X className="w-3 h-3" />
                       </button>
                     </div>
                     <div className="text-xs">
-                      <div className="font-extrabold text-[#0a5482]">{isEn ? '📸 Exercise image attached' : '📸 Đã đính kèm ảnh bài tập'}</div>
+                      <div className="font-extrabold text-[#0a5482] flex items-center gap-1.5">
+                        <Camera className="w-3.5 h-3.5 text-[#0a5482] shrink-0" />
+                        <span>{isEn ? 'Exercise image attached' : 'Đã đính kèm ảnh bài tập'}</span>
+                      </div>
                       <div className="text-slate-500 text-[11px]">
                         {isEn ? (
                           <>Click <b>"Ask AI Coach"</b> to solve right here, or open on the Blackboard for live explanation</>
@@ -1123,7 +1152,7 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
                     onClick={handleOpenImageOnBlackboard}
                     className="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-extrabold px-3 py-2 rounded-xl shadow-2xs transition cursor-pointer flex items-center gap-1.5"
                   >
-                    <span>👨‍🏫</span>
+                    <MonitorPlay className="w-3.5 h-3.5" />
                     <span>{isEn ? 'Solve Live on Blackboard' : 'Đưa ảnh lên Bảng Đen giảng trực tiếp'}</span>
                   </button>
                 </div>
@@ -1140,10 +1169,10 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
                   type="button"
                   onClick={() => fileInputRef.current?.click()}
                   disabled={isAiThinking}
-                  className="bg-white hover:bg-sky-50 text-[#0a5482] border border-slate-300 hover:border-[#2ab4e8] font-bold text-xs sm:text-sm px-3 py-2.5 rounded-xl shadow-2xs transition cursor-pointer shrink-0 flex items-center gap-1.5 disabled:opacity-40"
+                  className="bg-white hover:bg-sky-50 text-[#0a5482] border border-slate-300 hover:border-[#0a5482] font-bold text-xs sm:text-sm px-3 py-2.5 rounded-xl shadow-2xs transition cursor-pointer shrink-0 flex items-center gap-1.5 disabled:opacity-40"
                   title={isEn ? 'Upload an exercise image or press Ctrl+V to paste a screenshot' : 'Tải ảnh bài tập lên hoặc bấm Ctrl+V để dán ảnh chụp màn hình'}
                 >
-                  <span>📷</span>
+                  <Camera className="w-4 h-4" />
                   <span className="hidden sm:inline">{isEn ? 'Upload' : 'Tải ảnh'}</span>
                 </button>
                 <input
@@ -1165,7 +1194,7 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
                       ? 'Ask Teacher Tony or press Ctrl+V to paste a question image (e.g. "What should I study today?")...'
                       : 'Nhắn hỏi Thầy hoặc Ctrl+V dán ảnh bài tập (VD: "Thầy giải giúp em câu này / hôm nay em nên học gì?")...'
                   }
-                  className="flex-1 min-w-0 bg-white border border-slate-300 focus:border-[#2ab4e8] rounded-xl px-4 py-2.5 text-xs sm:text-sm font-medium text-slate-800 outline-none shadow-2xs"
+                  className="flex-1 min-w-0 bg-white border border-slate-300 focus:border-[#0a5482] rounded-xl px-4 py-2.5 text-xs sm:text-sm font-medium text-slate-800 outline-none shadow-2xs"
                 />
                 <button
                   type="submit"
@@ -1173,7 +1202,7 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
                   className="bg-[#0a5482] hover:bg-[#084266] text-white font-extrabold text-xs sm:text-sm px-4 py-2.5 rounded-xl shadow-xs transition cursor-pointer disabled:opacity-40 shrink-0 flex items-center gap-1.5"
                 >
                   <span>{isEn ? 'Ask AI Coach' : 'Hỏi Thầy AI'}</span>
-                  <span>➤</span>
+                  <Send className="w-3.5 h-3.5" />
                 </button>
               </form>
             </div>

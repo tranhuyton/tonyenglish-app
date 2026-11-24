@@ -11,6 +11,26 @@ import {
   FolderOpen,
   FileText,
   Lock,
+  Calendar,
+  ClipboardList,
+  BarChart3,
+  Palette,
+  Target,
+  Trophy,
+  TrendingUp,
+  User,
+  Settings,
+  LogOut,
+  Gift,
+  Zap,
+  Search,
+  ChevronDown,
+  Library,
+  KeyRound,
+  Check,
+  AlertTriangle,
+  Maximize2,
+  Minimize2,
 } from 'lucide-react';
 import { supabase, isTonyEnglishAuthUser, isTonyEnglishAdmin } from './supabase';
 import AssignmentCalendar from './AssignmentCalendar';
@@ -2062,10 +2082,10 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   if (hour >= 5 && hour < 12) {
       bannerConfig = {
         greeting: isEn ? 'Good morning' : 'Chào buổi sáng',
-        gradient: 'from-[#0284c7] via-[#0a5482] to-[#0f766e]',
-        stripe: 'from-amber-400 via-emerald-400 to-sky-400',
-        orb1: 'bg-amber-300/25',
-        orb2: 'bg-emerald-300/20',
+        gradient: 'from-[#073b5c] via-[#0a5482] to-[#0f172a]',
+        stripe: 'from-[#2ab4e8] via-amber-400 to-emerald-400',
+        orb1: 'bg-[#2ab4e8]/20',
+        orb2: 'bg-amber-300/15',
         icon: '🌅',
         subtitle: isEn
           ? 'Start your day with focus and energy! Consistent daily effort builds extraordinary results.'
@@ -2074,10 +2094,10 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   } else if (hour >= 12 && hour < 18) {
       bannerConfig = {
         greeting: isEn ? 'Good afternoon' : 'Chào buổi chiều',
-        gradient: 'from-[#0369a1] via-[#1d4ed8] to-[#4338ca]',
-        stripe: 'from-rose-500 via-amber-400 to-sky-400',
-        orb1: 'bg-amber-300/25',
-        orb2: 'bg-rose-400/20',
+        gradient: 'from-[#073b5c] via-[#0a5482] to-[#0f172a]',
+        stripe: 'from-[#2ab4e8] via-amber-400 to-[#0a5482]',
+        orb1: 'bg-[#2ab4e8]/20',
+        orb2: 'bg-amber-300/15',
         icon: '🌤️',
         subtitle: isEn
           ? 'Keep pushing toward your goals! Stay focused and sharpen your skills step by step.'
@@ -2086,10 +2106,10 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   } else {
       bannerConfig = {
         greeting: isEn ? 'Good evening' : 'Chào buổi tối',
-        gradient: 'from-[#1e3a8a] via-[#312e81] to-[#0f172a]',
-        stripe: 'from-amber-400 via-rose-400 to-indigo-400',
-        orb1: 'bg-amber-300/25',
-        orb2: 'bg-indigo-400/25',
+        gradient: 'from-[#073b5c] via-[#0a5482] to-[#0f172a]',
+        stripe: 'from-indigo-400 via-[#2ab4e8] to-amber-400',
+        orb1: 'bg-indigo-400/20',
+        orb2: 'bg-[#2ab4e8]/15',
         icon: '🌙',
         subtitle: isEn
           ? 'A quiet evening is the best time to review lessons and consolidate what you learned today.'
@@ -2124,26 +2144,26 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         <button
           type="button"
           onClick={() => handleOpenStudyCoachModal()}
-          className="bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-300 hover:border-amber-400 font-extrabold text-xs sm:text-[13px] px-3 sm:px-3.5 py-2 rounded-xl shadow-2xs transition-all flex items-center justify-center gap-1.5 hover:shadow hover:-translate-y-0.5 active:scale-95 cursor-pointer shrink-0"
+          className="bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-300/90 hover:border-amber-400 font-extrabold text-xs sm:text-[13px] px-3 sm:px-3.5 py-2 rounded-xl shadow-2xs transition-all flex items-center justify-center gap-1.5 hover:shadow hover:-translate-y-0.5 active:scale-95 cursor-pointer shrink-0"
           title={isEn ? 'Open Teacher Tony AI Advisor to review progress & today’s tasks' : 'Mở Trợ lý Thầy Tony AI phân tích tiến độ & giao việc hôm nay'}
         >
-          <span className="text-base">👨‍🏫</span> <span className="truncate">{isEn ? 'Teacher Tony AI' : 'Thầy Tony AI'}</span>
+          <Sparkles className="w-3.5 h-3.5 text-amber-600 shrink-0" /> <span className="truncate">{isEn ? 'Teacher Tony AI' : 'Thầy Tony AI'}</span>
         </button>
         <button
           type="button"
           onClick={() => handleGoToLecture()}
-          className="bg-white hover:bg-emerald-50 text-emerald-700 hover:text-emerald-800 border border-emerald-200/90 hover:border-emerald-400 font-bold text-xs sm:text-[13px] px-3 sm:px-3.5 py-2 rounded-xl shadow-2xs transition-all flex items-center justify-center gap-1.5 hover:shadow hover:-translate-y-0.5 active:scale-95 cursor-pointer shrink-0"
+          className="bg-white hover:bg-sky-50 text-[#0a5482] border border-slate-200/90 hover:border-[#0a5482]/40 font-bold text-xs sm:text-[13px] px-3 sm:px-3.5 py-2 rounded-xl shadow-2xs transition-all flex items-center justify-center gap-1.5 hover:shadow hover:-translate-y-0.5 active:scale-95 cursor-pointer shrink-0"
           title={isEn ? 'Open theory lectures' : 'Mở bài giảng lý thuyết'}
         >
-          <span className="text-base">📖</span> <span className="truncate">{isEn ? 'Lectures' : 'Bài giảng'}</span>
+          <BookOpen className="w-3.5 h-3.5 text-emerald-600 shrink-0" /> <span className="truncate">{isEn ? 'Lectures' : 'Bài giảng'}</span>
         </button>
         <button
           type="button"
           onClick={() => handleGoToTestBank()}
-          className="bg-white hover:bg-sky-50 text-[#0a5482] hover:text-[#084266] border border-sky-200/90 hover:border-[#2ab4e8] font-bold text-xs sm:text-[13px] px-3 sm:px-3.5 py-2 rounded-xl shadow-2xs transition-all flex items-center justify-center gap-1.5 hover:shadow hover:-translate-y-0.5 active:scale-95 cursor-pointer shrink-0"
+          className="bg-white hover:bg-sky-50 text-[#0a5482] border border-slate-200/90 hover:border-[#0a5482]/40 font-bold text-xs sm:text-[13px] px-3 sm:px-3.5 py-2 rounded-xl shadow-2xs transition-all flex items-center justify-center gap-1.5 hover:shadow hover:-translate-y-0.5 active:scale-95 cursor-pointer shrink-0"
           title={isEn ? 'Open Test Bank' : 'Mở kho đề'}
         >
-          <span className="text-base">📚</span> <span>{isEn ? 'Test Bank' : 'Kho đề'}</span>
+          <Library className="w-3.5 h-3.5 text-[#0284c7] shrink-0" /> <span>{isEn ? 'Test Bank' : 'Kho đề'}</span>
         </button>
       </div>
 
@@ -2151,14 +2171,14 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
       <div className="relative w-full sm:w-64 z-40">
         <div 
           onClick={() => setFilterCourseDropdownOpen(!filterCourseDropdownOpen)}
-          className="w-full bg-white hover:bg-sky-50/50 border border-slate-200/90 hover:border-[#2ab4e8] rounded-xl px-4 py-2 flex items-center justify-between cursor-pointer shadow-2xs transition-all"
+          className="w-full bg-white hover:bg-sky-50/50 border border-slate-200/90 hover:border-[#0284c7] rounded-xl px-4 py-2 flex items-center justify-between cursor-pointer shadow-2xs transition-all"
         >
           <span className="font-bold text-[13px] text-[#0a5482] truncate pr-2">
             {filterCourse === 'all'
               ? isEn ? 'All Courses' : 'Tất cả khóa học'
               : getLocalizedCourseTitle(courses.find(c => String(c.id) === String(filterCourse))?.title, lang) || (isEn ? 'All Courses' : 'Tất cả khóa học')}
           </span>
-          <span className={`text-[#2ab4e8] text-[10px] transition-transform duration-300 shrink-0 ${filterCourseDropdownOpen ? 'rotate-180' : ''}`}>▼</span>
+          <ChevronDown className={`w-4 h-4 text-[#0284c7] transition-transform duration-300 shrink-0 ${filterCourseDropdownOpen ? 'rotate-180' : ''}`} />
         </div>
         
         {filterCourseDropdownOpen && (
@@ -2171,9 +2191,10 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                   setAnalyticsCourse('all');
                   setFilterCourseDropdownOpen(false);
                 }}
-                className={`px-4 py-2.5 text-[13px] font-medium rounded-lg cursor-pointer transition-colors ${filterCourse === 'all' ? 'bg-sky-50 text-[#0a5482] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
+                className={`px-3.5 py-2.5 text-[13px] font-medium rounded-lg cursor-pointer transition-colors flex items-center gap-2 ${filterCourse === 'all' ? 'bg-sky-50 text-[#0a5482] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
               >
-                🌟 {isEn ? 'All Courses' : 'Tất cả khóa học'}
+                <Sparkles className="w-3.5 h-3.5 text-amber-500 shrink-0" />
+                <span>{isEn ? 'All Courses' : 'Tất cả khóa học'}</span>
               </div>
               {courses.map(course => (
                 <div 
@@ -2183,9 +2204,10 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                     setAnalyticsCourse(course.id);
                     setFilterCourseDropdownOpen(false);
                   }}
-                  className={`px-4 py-2.5 text-[13px] font-medium rounded-lg cursor-pointer transition-colors border-t border-slate-100 ${String(filterCourse) === String(course.id) ? 'bg-sky-50 text-[#0a5482] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
+                  className={`px-3.5 py-2.5 text-[13px] font-medium rounded-lg cursor-pointer transition-colors border-t border-slate-100 flex items-center gap-2 ${String(filterCourse) === String(course.id) ? 'bg-sky-50 text-[#0a5482] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
                 >
-                  📖 {getLocalizedCourseTitle(course.title, lang)}
+                  <BookOpen className="w-3.5 h-3.5 text-[#0284c7] shrink-0" />
+                  <span className="truncate">{getLocalizedCourseTitle(course.title, lang)}</span>
                 </div>
               ))}
             </div>
@@ -2197,26 +2219,26 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
   const renderBottomControls = (
     <div className="shrink-0 p-0 flex items-center justify-center relative z-30 w-full sm:w-auto">
-      <div className="bg-white border border-slate-200/90 shadow-xs rounded-xl p-1.5 sm:px-2.5 sm:py-1 flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 transition-all w-full sm:w-auto">
-        <div className="grid grid-cols-3 sm:flex items-center gap-1.5 sm:gap-2 w-full sm:w-auto">
+      <div className="bg-white/10 backdrop-blur-md border border-white/15 rounded-xl p-1.5 sm:px-2 sm:py-1.5 flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 transition-all w-full sm:w-auto">
+        <div className="grid grid-cols-3 sm:flex items-center gap-1.5 sm:gap-1.5 w-full sm:w-auto">
           {/* NÚT THẦY TONY AI */}
           <button
             type="button"
             onClick={() => handleOpenStudyCoachModal()}
-            className="bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-300 hover:border-amber-400 font-extrabold text-[11px] sm:text-xs px-2 sm:px-3 py-1.5 rounded-lg shadow-2xs transition-all flex items-center justify-center gap-1 sm:gap-1.5 cursor-pointer shrink-0 active:scale-95"
+            className="bg-gradient-to-r from-amber-400 to-yellow-400 hover:from-amber-500 hover:to-yellow-500 text-slate-950 font-extrabold text-[11px] sm:text-xs px-2.5 sm:px-3 py-1.5 rounded-lg shadow-2xs transition-all flex items-center justify-center gap-1.5 cursor-pointer shrink-0 active:scale-95"
             title={isEn ? 'Open Teacher Tony AI Advisor to review progress & today’s tasks' : 'Mở Trợ lý Thầy Tony AI phân tích tiến độ & giao việc hôm nay'}
           >
-            <span className="text-sm">👨‍🏫</span> <span className="truncate">{isEn ? 'Teacher Tony AI' : 'Thầy Tony AI'}</span>
+            <Sparkles className="w-3.5 h-3.5 shrink-0" /> <span className="truncate">{isEn ? 'Teacher Tony AI' : 'Thầy Tony AI'}</span>
           </button>
 
           {/* NÚT BÀI GIẢNG */}
           <button
             type="button"
             onClick={() => handleGoToLecture()}
-            className="bg-white hover:bg-emerald-50 text-emerald-700 hover:text-emerald-800 border border-emerald-200 hover:border-emerald-400 font-bold text-[11px] sm:text-xs px-2 sm:px-3 py-1.5 rounded-lg shadow-2xs transition-all flex items-center justify-center gap-1 sm:gap-1.5 cursor-pointer shrink-0 active:scale-95"
+            className="bg-white/15 hover:bg-white/25 text-white border border-white/20 font-bold text-[11px] sm:text-xs px-2.5 sm:px-3 py-1.5 rounded-lg transition-all flex items-center justify-center gap-1.5 cursor-pointer shrink-0 active:scale-95"
             title={isEn ? 'Open theory lectures' : 'Mở bài giảng lý thuyết'}
           >
-            <span className="text-sm">📖</span>
+            <BookOpen className="w-3.5 h-3.5 text-emerald-300 shrink-0" />
             <span className="truncate">
               {isEn ? (
                 <>Lectures<span className="hidden md:inline"> &amp; Theory</span></>
@@ -2230,36 +2252,36 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
           <button
             type="button"
             onClick={() => handleGoToTestBank()}
-            className="bg-white hover:bg-sky-50 text-[#0a5482] hover:text-[#084266] border border-sky-200 hover:border-[#2ab4e8] font-bold text-[11px] sm:text-xs px-2 sm:px-3 py-1.5 rounded-lg shadow-2xs transition-all flex items-center justify-center gap-1 sm:gap-1.5 cursor-pointer shrink-0 active:scale-95"
+            className="bg-white/15 hover:bg-white/25 text-white border border-white/20 font-bold text-[11px] sm:text-xs px-2.5 sm:px-3 py-1.5 rounded-lg transition-all flex items-center justify-center gap-1.5 cursor-pointer shrink-0 active:scale-95"
             title={isEn ? 'Open Test Bank' : 'Mở kho đề'}
           >
-            <span className="text-sm">📚</span> <span className="truncate">{isEn ? 'Test Bank' : 'Kho đề'}</span>
+            <Library className="w-3.5 h-3.5 text-sky-200 shrink-0" /> <span className="truncate">{isEn ? 'Test Bank' : 'Kho đề'}</span>
           </button>
         </div>
 
-        <div className="h-4 w-px bg-slate-200 hidden sm:block"></div>
+        <div className="h-4 w-px bg-white/20 hidden sm:block"></div>
 
         {/* DROPDOWN CHỌN KHÓA HỌC */}
         <div className="relative w-full sm:w-56 z-50">
           <div 
             onClick={() => setFilterCourseDropdownOpen(!filterCourseDropdownOpen)}
-            className="w-full bg-white hover:bg-sky-50/50 border border-sky-200 hover:border-[#2ab4e8] rounded-lg px-2.5 py-1.5 flex items-center justify-between cursor-pointer shadow-2xs transition-all"
+            className="w-full bg-white/95 hover:bg-white border border-white/30 rounded-lg px-2.5 py-1.5 flex items-center justify-between cursor-pointer shadow-2xs transition-all"
           >
             <div className="flex items-center gap-1.5 min-w-0 pr-1.5">
-              <span className="text-slate-400 text-xs">🎓</span>
+              <GraduationCap className="w-3.5 h-3.5 text-[#0a5482] shrink-0" />
               <span className="font-bold text-xs text-[#0a5482] truncate">
                 {filterCourse === 'all'
                   ? isEn ? 'All Courses' : 'Tất cả khóa học'
                   : getLocalizedCourseTitle(courses.find(c => String(c.id) === String(filterCourse))?.title, lang) || (isEn ? 'All Courses' : 'Tất cả khóa học')}
               </span>
             </div>
-            <span className={`text-[#2ab4e8] text-[10px] transition-transform duration-300 shrink-0 ${filterCourseDropdownOpen ? 'rotate-180' : ''}`}>▼</span>
+            <ChevronDown className={`w-3.5 h-3.5 text-[#0a5482] transition-transform duration-300 shrink-0 ${filterCourseDropdownOpen ? 'rotate-180' : ''}`} />
           </div>
           
           {filterCourseDropdownOpen && (
             <>
               <div className="fixed inset-0 z-40" onClick={() => setFilterCourseDropdownOpen(false)}></div>
-              <div className="absolute top-full right-0 mt-2 w-full min-w-[240px] max-h-72 overflow-y-auto bg-white border border-slate-200 rounded-2xl shadow-2xl z-50 animate-in fade-in slide-in-from-top-2 custom-scrollbar p-1">
+              <div className="absolute top-full right-0 mt-2 w-full min-w-[240px] max-h-72 overflow-y-auto bg-white border border-slate-200 rounded-2xl shadow-2xl z-50 animate-in fade-in slide-in-from-top-2 custom-scrollbar p-1 text-left">
                 <div 
                   onClick={() => {
                     setFilterCourse('all');
@@ -2270,9 +2292,10 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                       setSelectedCourseId(null);
                     }
                   }}
-                  className={`px-3.5 py-2 text-xs rounded-xl font-medium cursor-pointer transition-colors ${filterCourse === 'all' ? 'bg-sky-50 text-[#0a5482] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
+                  className={`px-3.5 py-2 text-xs rounded-xl font-medium cursor-pointer transition-colors flex items-center gap-2 ${filterCourse === 'all' ? 'bg-sky-50 text-[#0a5482] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
                 >
-                  🌟 {isEn ? 'All Courses' : 'Tất cả khóa học'}
+                  <Sparkles className="w-3.5 h-3.5 text-amber-500 shrink-0" />
+                  <span>{isEn ? 'All Courses' : 'Tất cả khóa học'}</span>
                 </div>
                 {courses.map(course => (
                   <div 
@@ -2285,9 +2308,10 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                         handleOpenCourse(course);
                       }
                     }}
-                    className={`px-3.5 py-2 text-xs rounded-xl font-medium cursor-pointer transition-colors border-t border-slate-100 ${String(filterCourse) === String(course.id) ? 'bg-sky-50 text-[#0a5482] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
+                    className={`px-3.5 py-2 text-xs rounded-xl font-medium cursor-pointer transition-colors border-t border-slate-100 flex items-center gap-2 ${String(filterCourse) === String(course.id) ? 'bg-sky-50 text-[#0a5482] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
                   >
-                    📖 {getLocalizedCourseTitle(course.title, lang)}
+                    <BookOpen className="w-3.5 h-3.5 text-[#0284c7] shrink-0" />
+                    <span className="truncate">{getLocalizedCourseTitle(course.title, lang)}</span>
                   </div>
                 ))}
               </div>
@@ -2324,16 +2348,16 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             />
             <div className="flex flex-col items-start leading-none">
               <div className="font-display font-black text-[18px] sm:text-[22px] tracking-tight">
-                <span className="text-[#2ab4e8]">TONY</span>
+                <span className="text-[#0284c7]">TONY</span>
                 <span className="text-[#0a5482]">ENGLISH</span>
               </div>
-              <span className="text-[9.5px] sm:text-[10.5px] font-bold uppercase tracking-widest text-slate-400 mt-0.5 hidden sm:block">
+              <span className="text-[9.5px] sm:text-[10.5px] font-bold uppercase tracking-widest text-slate-500 mt-0.5 hidden sm:block">
                 Student Learning Portal
               </span>
             </div>
           </div>
 
-          {/* Desktop Navigation Tabs (Synchronized with Layout.tsx navItems; lg+ to avoid tablet overflow) */}
+          {/* Desktop Navigation Tabs (Synchronized with Layout.tsx; Lucide icons & cohesive Academic Navy) */}
           <div className="hidden lg:flex items-center gap-1 xl:gap-1.5">
             <button 
               onClick={() => { 
@@ -2346,10 +2370,10 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               className={`px-3.5 lg:px-4 py-2 rounded-xl text-[14px] lg:text-[15px] font-bold transition-all whitespace-nowrap inline-flex items-center gap-2 cursor-pointer ${
                 activeTab === 'library'
                   ? 'bg-sky-50 text-[#0a5482] shadow-2xs border border-sky-200/90'
-                  : 'text-slate-700 hover:text-[#0a5482] hover:bg-sky-50/50 border border-transparent'
+                  : 'text-slate-600 hover:text-[#0a5482] hover:bg-slate-50 border border-transparent'
               }`}
             >
-              <svg className={`w-4 h-4 ${activeTab === 'library' ? 'text-sky-600' : 'text-slate-400'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+              <BookOpen className={`w-4 h-4 ${activeTab === 'library' ? 'text-[#0284c7]' : 'text-slate-400'}`} />
               <span>{isEn ? 'Study & Tests' : 'Học tập & Kho đề'}</span>
             </button>
             <button 
@@ -2359,24 +2383,22 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               }} 
               className={`px-3.5 lg:px-4 py-2 rounded-xl text-[14px] lg:text-[15px] font-bold transition-all whitespace-nowrap inline-flex items-center gap-2 cursor-pointer ${
                 activeTab === 'calendar'
-                  ? 'bg-emerald-50 text-emerald-700 shadow-2xs border border-emerald-200/90'
-                  : 'text-slate-700 hover:text-emerald-700 hover:bg-emerald-50/50 border border-transparent'
+                  ? 'bg-sky-50 text-[#0a5482] shadow-2xs border border-sky-200/90'
+                  : 'text-slate-600 hover:text-[#0a5482] hover:bg-slate-50 border border-transparent'
               }`}
             >
-              <svg className={`w-4 h-4 ${activeTab === 'calendar' ? 'text-emerald-600' : 'text-slate-400'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>
+              <Calendar className={`w-4 h-4 ${activeTab === 'calendar' ? 'text-emerald-600' : 'text-slate-400'}`} />
               <span>{isEn ? 'Calendar' : 'Lịch báo bài'}</span>
             </button>
             <button 
               onClick={() => { resetWorkspaceAndChat(); setActiveTab('board'); }}
               className={`px-3.5 lg:px-4 py-2 rounded-xl text-[14px] lg:text-[15px] font-bold transition-all whitespace-nowrap inline-flex items-center gap-2 cursor-pointer ${
                 activeTab === 'board'
-                  ? 'bg-amber-50 text-amber-800 shadow-2xs border border-amber-200/90'
-                  : 'text-slate-700 hover:text-amber-700 hover:bg-amber-50/50 border border-transparent'
+                  ? 'bg-sky-50 text-[#0a5482] shadow-2xs border border-sky-200/90'
+                  : 'text-slate-600 hover:text-[#0a5482] hover:bg-slate-50 border border-transparent'
               }`}
             >
-              <svg className={`w-4 h-4 ${activeTab === 'board' ? 'text-amber-600' : 'text-slate-400'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-              </svg>
+              <ClipboardList className={`w-4 h-4 ${activeTab === 'board' ? 'text-amber-600' : 'text-slate-400'}`} />
               <span>{isEn ? 'Task Board' : 'Bảng công việc'}</span>
             </button>
             <button 
@@ -2386,11 +2408,11 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               }} 
               className={`px-3.5 lg:px-4 py-2 rounded-xl text-[14px] lg:text-[15px] font-bold transition-all whitespace-nowrap inline-flex items-center gap-2 cursor-pointer ${
                 activeTab === 'analytics'
-                  ? 'bg-indigo-50 text-indigo-700 shadow-2xs border border-indigo-200/90'
-                  : 'text-slate-700 hover:text-indigo-700 hover:bg-indigo-50/50 border border-transparent'
+                  ? 'bg-sky-50 text-[#0a5482] shadow-2xs border border-sky-200/90'
+                  : 'text-slate-600 hover:text-[#0a5482] hover:bg-slate-50 border border-transparent'
               }`}
             >
-              <svg className={`w-4 h-4 ${activeTab === 'analytics' ? 'text-indigo-600' : 'text-slate-400'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+              <BarChart3 className={`w-4 h-4 ${activeTab === 'analytics' ? 'text-indigo-600' : 'text-slate-400'}`} />
               <span>{isEn ? 'Analytics' : 'Báo cáo'}</span>
             </button>
           </div>
@@ -2409,25 +2431,25 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               className="hidden sm:inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-slate-100/90 hover:bg-sky-50 text-[#0a5482] border border-slate-200/80 hover:border-sky-200 text-xs sm:text-[13px] font-bold transition-all cursor-pointer shrink-0"
               title={isEn ? 'Return to TonyEnglish.vn Homepage, Library & Video Store' : 'Quay ra Cổng thông tin, Thư viện bài đọc & Kho Video TonyEnglish.vn'}
             >
-              <Globe className="w-3.5 h-3.5 text-[#2ab4e8]" />
+              <Globe className="w-3.5 h-3.5 text-[#0284c7]" />
               <span>{isEn ? 'Home' : 'Trang chủ'}</span>
             </button>
 
             <div className="hidden lg:flex items-center">
               <button onClick={toggleFullScreen} className="w-9 h-9 rounded-xl flex items-center justify-center text-slate-500 hover:bg-slate-100 border border-transparent hover:border-slate-200 hover:text-[#0a5482] transition-colors cursor-pointer" title={isEn ? 'Fullscreen' : 'Toàn màn hình'}>
-                {isFullscreen ? <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5l5.25 5.25" /></svg> : <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0-4.5L15 15" /></svg>}
+                {isFullscreen ? <Minimize2 className="w-4 h-4" /> : <Maximize2 className="w-4 h-4" />}
               </button>
             </div>
 
             <div className="relative" ref={dropdownRef}>
-              <button onClick={() => setIsDropdownOpen(!isDropdownOpen)} className="flex items-center gap-2.5 bg-slate-50 hover:bg-sky-50/60 pr-2 pl-3.5 py-1.5 rounded-xl border border-slate-200/90 shadow-2xs hover:border-[#2ab4e8] transition-all focus:outline-none group cursor-pointer">
+              <button onClick={() => setIsDropdownOpen(!isDropdownOpen)} className="flex items-center gap-2.5 bg-slate-50 hover:bg-sky-50/60 pr-2 pl-3.5 py-1.5 rounded-xl border border-slate-200/90 shadow-2xs hover:border-[#0284c7] transition-all focus:outline-none group cursor-pointer">
                 <div className="text-right hidden sm:block">
                   <div className="font-black text-[13px] text-slate-800 group-hover:text-[#0a5482] transition-colors leading-tight">{displayUserName}</div>
-                  <div className="text-[10px] font-bold text-[#2ab4e8] uppercase tracking-wider mt-0.5">
+                  <div className="text-[10px] font-bold text-[#0284c7] uppercase tracking-wider mt-0.5">
                     {userProfile?.role === 'admin' ? (isEn ? 'Admin' : 'Quản trị') : (isEn ? 'Student' : 'Học viên')}
                   </div>
                 </div>
-                <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-gradient-to-br from-[#2ab4e8] to-[#0a5482] text-white flex items-center justify-center font-black shadow-xs text-[13px]">
+                <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-gradient-to-br from-[#0284c7] to-[#0a5482] text-white flex items-center justify-center font-black shadow-xs text-[13px]">
                   {displayUserInitial}
                 </div>
               </button>
@@ -2439,27 +2461,31 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                     window.history.pushState({}, '', '/');
                     onNavigate?.('home');
                     setIsDropdownOpen(false); 
-                  }} className="sm:hidden w-full text-left px-5 py-3 text-sm font-bold text-[#0a5482] hover:bg-sky-50 flex items-center gap-2 transition-colors border-b border-slate-100">
-                    <span>🌐</span> {isEn ? 'Homepage & Library' : 'Trang chủ & Thư viện'}
+                  }} className="sm:hidden w-full text-left px-4 py-2.5 text-sm font-bold text-[#0a5482] hover:bg-sky-50 flex items-center gap-2.5 transition-colors border-b border-slate-100 cursor-pointer">
+                    <Globe className="w-4 h-4 text-[#0284c7]" />
+                    <span>{isEn ? 'Homepage & Library' : 'Trang chủ & Thư viện'}</span>
                   </button>
                   <button onClick={() => { 
                     resetWorkspaceAndChat(); 
                     setActiveTab('profile'); 
                     setIsDropdownOpen(false); 
-                  }} className="w-full text-left px-5 py-2.5 text-sm font-semibold text-slate-700 hover:bg-sky-50 hover:text-[#0a5482] transition-colors flex items-center gap-2 cursor-pointer">
-                    👤 {isEn ? 'Account Settings' : 'Cấu hình tài khoản'}
+                  }} className="w-full text-left px-4 py-2.5 text-sm font-semibold text-slate-700 hover:bg-sky-50 hover:text-[#0a5482] transition-colors flex items-center gap-2.5 cursor-pointer">
+                    <User className="w-4 h-4 text-slate-500" />
+                    <span>{isEn ? 'Account Settings' : 'Cấu hình tài khoản'}</span>
                   </button>
                   {userProfile?.role === 'admin' && (
                     <button onClick={() => {
                       resetWorkspaceAndChat();
                       if(onNavigate) onNavigate('admin');
-                    }} className="w-full text-left px-5 py-2.5 text-sm font-black text-[#0a5482] hover:bg-sky-50 transition-colors cursor-pointer">
-                      ⚙️ {isEn ? 'Admin Panel' : 'Trang Quản Trị'}
+                    }} className="w-full text-left px-4 py-2.5 text-sm font-bold text-[#0a5482] hover:bg-sky-50 transition-colors flex items-center gap-2.5 cursor-pointer">
+                      <Settings className="w-4 h-4 text-[#0a5482]" />
+                      <span>{isEn ? 'Admin Panel' : 'Trang Quản Trị'}</span>
                     </button>
                   )}
                   <div className="h-px bg-slate-100 my-1"></div>
-                  <button onClick={handleLogout} className="w-full text-left px-5 py-2.5 text-sm font-bold text-red-600 hover:bg-red-50 transition-colors cursor-pointer">
-                    🚪 {isEn ? 'Sign Out' : 'Đăng xuất'}
+                  <button onClick={handleLogout} className="w-full text-left px-4 py-2.5 text-sm font-bold text-rose-600 hover:bg-rose-50 transition-colors flex items-center gap-2.5 cursor-pointer">
+                    <LogOut className="w-4 h-4" />
+                    <span>{isEn ? 'Sign Out' : 'Đăng xuất'}</span>
                   </button>
                 </div>
               )}
@@ -2473,19 +2499,19 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         {activeTab === 'library' && activeView === 'dashboard' && (
           <div className="animate-in fade-in duration-500">
             {/* 🚀 HERO BANNER ĐỒNG BỘ TONYENGLISH.VN */}
-            <div className={`relative bg-gradient-to-r ${bannerConfig.gradient} rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 mb-8 sm:mb-10 overflow-hidden shadow-lg border border-white/15`}>
-              <div className={`absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r ${bannerConfig.stripe}`} />
+            <div className={`relative bg-gradient-to-br ${bannerConfig.gradient} rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 mb-8 sm:mb-10 overflow-hidden shadow-lg border border-white/15`}>
+              <div className={`absolute top-0 inset-x-0 h-[3px] bg-gradient-to-r ${bannerConfig.stripe}`} />
               <div className={`absolute -top-24 -right-24 w-96 h-96 ${bannerConfig.orb1} blur-3xl rounded-full pointer-events-none`}></div>
               <div className={`absolute -bottom-24 -left-24 w-80 h-80 ${bannerConfig.orb2} blur-3xl rounded-full pointer-events-none`}></div>
               
               <div className="relative z-10 flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-6 lg:gap-10">
                 <div className="text-white flex-1">
-                  <div className="inline-flex items-center gap-2 bg-amber-400/15 backdrop-blur-sm border border-amber-300/35 px-3.5 py-1 rounded-full text-[11px] sm:text-xs font-extrabold uppercase tracking-widest text-amber-200 mb-3.5">
-                    <span>🎓</span>
+                  <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-3.5 py-1 rounded-full text-[11px] sm:text-xs font-extrabold uppercase tracking-widest text-amber-200 mb-3.5">
+                    <GraduationCap className="w-3.5 h-3.5 text-[#2ab4e8] shrink-0" />
                     <span>{isEn ? 'TonyEnglish Student Portal • Learning Hub' : 'TonyEnglish Student Portal • Góc Học Viên'}</span>
                   </div>
                   <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black mb-2.5 tracking-tight leading-tight">
-                    {bannerConfig.greeting}, <span className="text-amber-300">{displayUserName}</span>! <span>{bannerConfig.icon}</span>
+                    {bannerConfig.greeting}, <span className="text-amber-300">{displayUserName}</span>!
                   </h2>
                   <p className="text-slate-100/90 text-sm sm:text-[15px] leading-relaxed max-w-2xl mb-6">
                     {bannerConfig.subtitle}
@@ -2529,7 +2555,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                       <span className="text-amber-200/70 group-hover:text-amber-200 transition-colors">↗</span>
                     </div>
                     <h3 className="font-extrabold text-base sm:text-lg mb-2 leading-snug flex items-center gap-2">
-                      <span>👨‍🏫</span>
+                      <Sparkles className="w-4 h-4 text-amber-300 shrink-0" />
                       <span>{isEn ? 'Teacher Tony AI Advisor' : 'Thầy Tony AI Chủ Nhiệm'}</span>
                     </h3>
                     <p className="text-xs text-slate-100/90 mb-4 leading-relaxed">
@@ -2697,7 +2723,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 <div className="flex items-center gap-3">
                     <span className="w-1.5 h-7 bg-[#0a5482] rounded-full"></span>
                     <div>
-                        <span className="text-[11px] font-extrabold uppercase tracking-widest text-[#2ab4e8] block">
+                        <span className="text-[11px] font-extrabold uppercase tracking-widest text-[#0284c7] block">
                             {isEn ? 'Curriculum & Exam Practice' : 'Chương trình đào tạo & Luyện đề'}
                         </span>
                         <h2 className="font-black text-xl sm:text-2xl md:text-3xl text-slate-900 tracking-tight m-0">{isEn ? 'My Courses' : 'Khóa học của tôi'}</h2>
@@ -2706,12 +2732,12 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 <div className="relative w-full sm:w-64 z-30">
                     <div 
                         onClick={() => setFilterCourseDropdownOpen(!filterCourseDropdownOpen)}
-                        className="w-full bg-white border border-slate-200/90 rounded-xl px-4 py-2.5 flex items-center justify-between cursor-pointer hover:border-[#2ab4e8] shadow-2xs transition-all"
+                        className="w-full bg-white border border-slate-200/90 rounded-xl px-4 py-2.5 flex items-center justify-between cursor-pointer hover:border-[#0284c7] shadow-2xs transition-all"
                     >
                         <span className="font-bold text-[13px] text-[#0a5482] truncate pr-2">
                         {filterCourse === 'all' ? (isEn ? 'All Courses' : 'Tất cả khóa học') : getLocalizedCourseTitle(courses.find(c => String(c.id) === String(filterCourse))?.title, lang) || (isEn ? 'All Courses' : 'Tất cả khóa học')}
                         </span>
-                        <span className={`text-[#2ab4e8] text-[10px] transition-transform duration-300 ${filterCourseDropdownOpen ? 'rotate-180' : ''}`}>▼</span>
+                        <ChevronDown className={`w-4 h-4 text-[#0284c7] shrink-0 transition-transform duration-300 ${filterCourseDropdownOpen ? 'rotate-180' : ''}`} />
                     </div>
                     
                     {filterCourseDropdownOpen && (
@@ -2720,17 +2746,19 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                         <div className="absolute top-full right-0 mt-2 w-full sm:w-64 max-h-72 overflow-y-auto bg-white border border-slate-200 rounded-xl shadow-xl z-50 animate-in fade-in slide-in-from-top-2 custom-scrollbar p-1">
                             <div 
                             onClick={() => { setFilterCourse('all'); setFilterCourseDropdownOpen(false); }}
-                            className={`px-4 py-2.5 text-[13px] rounded-lg font-medium cursor-pointer transition-colors ${filterCourse === 'all' ? 'bg-sky-50 text-[#0a5482] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
+                            className={`px-3.5 py-2.5 text-[13px] rounded-lg font-medium cursor-pointer transition-colors flex items-center gap-2 ${filterCourse === 'all' ? 'bg-sky-50 text-[#0a5482] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
                             >
-                            🌟 {isEn ? 'All Courses' : 'Tất cả khóa học'}
+                            <Sparkles className="w-3.5 h-3.5 text-amber-500 shrink-0" />
+                            <span>{isEn ? 'All Courses' : 'Tất cả khóa học'}</span>
                             </div>
                             {courses.map(course => (
                             <div 
                                 key={course.id}
                                 onClick={() => { setFilterCourse(course.id); setFilterCourseDropdownOpen(false); }}
-                                className={`px-4 py-2.5 text-[13px] rounded-lg font-medium cursor-pointer transition-colors border-t border-slate-100 ${String(filterCourse) === String(course.id) ? 'bg-sky-50 text-[#0a5482] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
+                                className={`px-3.5 py-2.5 text-[13px] rounded-lg font-medium cursor-pointer transition-colors border-t border-slate-100 flex items-center gap-2 ${String(filterCourse) === String(course.id) ? 'bg-sky-50 text-[#0a5482] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
                             >
-                                📖 {getLocalizedCourseTitle(course.title, lang)}
+                                <BookOpen className="w-3.5 h-3.5 text-[#0284c7] shrink-0" />
+                                <span className="truncate">{getLocalizedCourseTitle(course.title, lang)}</span>
                             </div>
                             ))}
                         </div>
@@ -2751,7 +2779,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               </div>
             ) : courses.length === 0 ? (
               <div className="bg-white border border-slate-200/90 rounded-2xl sm:rounded-3xl py-20 text-center shadow-xs flex flex-col items-center">
-                <div className="w-20 h-20 bg-slate-50 rounded-full flex items-center justify-center text-4xl mb-4 grayscale opacity-50">🔒</div>
+                <div className="w-16 h-16 bg-slate-50 border border-slate-200 rounded-2xl flex items-center justify-center text-slate-400 mb-4">
+                  <Lock className="w-7 h-7" />
+                </div>
                 <h3 className="font-bold text-slate-700 text-xl mb-2">{isEn ? 'No courses enrolled yet' : 'Bạn chưa tham gia khóa học nào'}</h3>
                 <p className="text-slate-500 font-medium max-w-sm">{isEn ? 'Please contact Teacher Tony to activate access to your courses and practice tests!' : 'Vui lòng liên hệ Thầy Tony để được cấp quyền truy cập vào các bài giảng nhé!'}</p>
               </div>
@@ -2763,7 +2793,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 if (filteredCourses.length === 0) {
                   return (
                     <div className="bg-white border border-slate-200/90 rounded-2xl sm:rounded-3xl py-20 text-center shadow-xs flex flex-col items-center">
-                      <div className="w-20 h-20 bg-slate-50 rounded-full flex items-center justify-center text-4xl mb-4 grayscale opacity-50">🔍</div>
+                      <div className="w-16 h-16 bg-slate-50 border border-slate-200 rounded-2xl flex items-center justify-center text-slate-400 mb-4">
+                        <Search className="w-7 h-7" />
+                      </div>
                       <h3 className="font-bold text-slate-700 text-xl mb-2">{isEn ? 'No courses found' : 'Không tìm thấy khóa học'}</h3>
                       <p className="text-slate-500 font-medium max-w-sm">{isEn ? 'No courses match your current selection.' : 'Không có khóa học nào khớp với lựa chọn của bạn.'}</p>
                     </div>
@@ -2810,10 +2842,10 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                                    setUnlockReqSuccess(false);
                                    setUnlockModalCourse(course);
                                  }}
-                                 className="absolute top-4 right-4 bg-gradient-to-r from-amber-400 to-yellow-400 hover:from-amber-500 hover:to-yellow-500 text-slate-950 px-3 py-1 rounded-full text-[10.5px] font-black uppercase tracking-wider border border-yellow-200 shadow-md flex items-center gap-1 cursor-pointer"
+                                 className="absolute top-4 right-4 bg-gradient-to-r from-amber-400 to-yellow-400 hover:from-amber-500 hover:to-yellow-500 text-slate-950 px-3 py-1 rounded-full text-[10.5px] font-black uppercase tracking-wider border border-yellow-200 shadow-md flex items-center gap-1.5 cursor-pointer"
                                  title={isEn ? 'Click to request full course unlock' : 'Bấm để đăng ký mở khóa trọn bộ khóa học này'}
                                >
-                                 <span>🎁</span>
+                                 <Gift className="w-3.5 h-3.5 shrink-0" />
                                  <span>{isEn ? 'Free Trial • Unlock' : 'Học thử • Mở khóa'}</span>
                                </button>
                              )}
@@ -2843,10 +2875,10 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                             <div className="flex items-center gap-4 sm:gap-6 mb-6 bg-slate-50/90 p-4 rounded-2xl border border-slate-200/70">
                               <div className="flex-1">
                                   <div className="flex items-center justify-between mb-1">
-                                      <span className="flex items-center gap-1.5 text-[11px] font-extrabold text-slate-500 uppercase tracking-wider"><span>📖</span> {isEn ? 'Lectures' : 'Bài giảng'}</span>
+                                      <span className="flex items-center gap-1.5 text-[11px] font-extrabold text-slate-500 uppercase tracking-wider"><BookOpen className="w-3.5 h-3.5 text-emerald-600" /> {isEn ? 'Lectures' : 'Bài giảng'}</span>
                                       <span className="font-black text-emerald-600 text-[12px]">{lecProgress}%</span>
                                   </div>
-                                  <div className="font-black text-slate-800 text-[14px] mb-2">{stats.completedLecIds.size} / {stats.lecCount} <span className="text-[11px] font-semibold text-slate-400">{isEn ? 'lessons' : 'bài học'}</span></div>
+                                  <div className="font-black text-slate-800 text-[14px] mb-2">{stats.completedLecIds.size} / {stats.lecCount} <span className="text-[11px] font-semibold text-slate-500">{isEn ? 'lessons' : 'bài học'}</span></div>
                                   <div className="w-full h-1.5 bg-slate-200 rounded-full overflow-hidden">
                                       <div className="h-full bg-emerald-500 rounded-full transition-all duration-1000" style={{ width: `${lecProgress}%` }}></div>
                                   </div>
@@ -2854,55 +2886,65 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                               <div className="w-px h-12 bg-slate-200"></div>
                               <div className="flex-1">
                                   <div className="flex items-center justify-between mb-1">
-                                      <span className="flex items-center gap-1.5 text-[11px] font-extrabold text-slate-500 uppercase tracking-wider"><span>📝</span> {isEn ? 'Test Bank' : 'Kho đề thi'}</span>
+                                      <span className="flex items-center gap-1.5 text-[11px] font-extrabold text-slate-500 uppercase tracking-wider"><FileText className="w-3.5 h-3.5 text-[#0a5482]" /> {isEn ? 'Test Bank' : 'Kho đề thi'}</span>
                                       <span className={`font-black ${cTheme.testPctText} text-[12px]`}>{testProgress}%</span>
                                   </div>
-                                  <div className="font-black text-slate-800 text-[14px] mb-2">{stats.completedTestIds.size} / {stats.testCount} <span className="text-[11px] font-semibold text-slate-400">{isEn ? 'tests' : 'đề luyện'}</span></div>
+                                  <div className="font-black text-slate-800 text-[14px] mb-2">{stats.completedTestIds.size} / {stats.testCount} <span className="text-[11px] font-semibold text-slate-500">{isEn ? 'tests' : 'đề luyện'}</span></div>
                                   <div className="w-full h-1.5 bg-slate-200 rounded-full overflow-hidden">
                                       <div className={`h-full ${cTheme.testBar} rounded-full transition-all duration-1000`} style={{ width: `${testProgress}%` }}></div>
                                   </div>
                               </div>
                             </div>
                             
-                            {/* Actions (Nút Học thử / Làm thử vàng đè lên nút Lý thuyết & Kho đề khi ở chế độ Học thử) */}
+                            {/* Actions (Clean conditional rendering — clear 1-Primary / 1-Secondary hierarchy) */}
                             <div className={`flex flex-col sm:flex-row gap-3 ${isSingle ? 'mt-2' : 'mt-auto'}`}>
-                               <div className="relative flex-1">
-                                 <button onClick={() => {
-                                     resetWorkspaceAndChat(); 
-                                     if(onOpenLecture) onOpenLecture(course.id);
-                                 }} className={`w-full ${cTheme.lecBtn} border font-extrabold text-[13px] py-3 px-4 rounded-xl transition-all flex items-center justify-center gap-2 uppercase tracking-wider cursor-pointer active:scale-95`}>
-                                     <span>📖</span> <span>{isEn ? 'Theory Lectures' : 'Bài giảng lý thuyết'}</span>
-                                 </button>
-                                 {isTrial && (
+                               {isTrial ? (
+                                 <>
                                    <button
                                      type="button"
                                      onClick={() => {
                                        resetWorkspaceAndChat();
                                        if (onOpenLecture) onOpenLecture(course.id);
                                      }}
-                                     className="absolute inset-0 bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 hover:from-amber-500 hover:to-yellow-500 text-slate-950 border-2 border-amber-300 font-black text-[12.5px] py-3 px-3 rounded-xl shadow-md shadow-amber-500/25 flex items-center justify-center gap-1.5 uppercase tracking-wider cursor-pointer active:scale-95 transition-all z-10"
+                                     className="flex-1 bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 hover:from-amber-500 hover:to-yellow-500 text-slate-950 font-black text-[12.5px] py-3 px-4 rounded-xl shadow-sm flex items-center justify-center gap-2 uppercase tracking-wider cursor-pointer active:scale-95 transition-all"
                                      title={isEn ? 'Preview free trial theory lectures' : 'Bấm để Học thử Bài giảng lý thuyết'}
                                    >
-                                     <span>🎁</span> <span>{isEn ? 'Try Free Lectures' : 'Học thử Lý thuyết'}</span>
+                                     <Gift className="w-4 h-4 shrink-0" />
+                                     <span>{isEn ? 'Try Free Lectures' : 'Học thử Lý thuyết'}</span>
                                    </button>
-                                 )}
-                               </div>
-
-                               <div className="relative flex-[1.3]">
-                                 <button onClick={() => handleOpenCourse(course)} className={`w-full ${cTheme.primaryBtn} text-white font-extrabold text-[13px] py-3 px-4 rounded-xl transition-all shadow-md flex items-center justify-center gap-2 uppercase tracking-wider cursor-pointer active:scale-95`}>
-                                     <span>🚀</span> <span>{isEn ? 'Open Test Bank' : 'Vào kho đề & Làm bài'}</span>
-                                 </button>
-                                 {isTrial && (
                                    <button
                                      type="button"
                                      onClick={() => handleOpenCourse(course)}
-                                     className="absolute inset-0 bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-500 hover:from-amber-600 hover:to-yellow-500 text-slate-950 border-2 border-yellow-300 font-black text-[12.5px] py-3 px-3 rounded-xl shadow-md shadow-amber-500/30 flex items-center justify-center gap-1.5 uppercase tracking-wider cursor-pointer active:scale-95 transition-all z-10"
+                                     className="flex-[1.15] bg-[#0a5482] hover:bg-[#084266] text-white font-extrabold text-[12.5px] py-3 px-4 rounded-xl shadow-sm flex items-center justify-center gap-2 uppercase tracking-wider cursor-pointer active:scale-95 transition-all"
                                      title={isEn ? 'Try sample tests in the Test Bank' : 'Bấm để Làm thử Kho đề thi'}
                                    >
-                                     <span>⚡</span> <span>{isEn ? 'Try Practice Tests' : 'Làm thử Kho đề'}</span>
+                                     <Zap className="w-4 h-4 text-amber-300 shrink-0" />
+                                     <span>{isEn ? 'Try Practice Tests' : 'Làm thử Kho đề'}</span>
                                    </button>
-                                 )}
-                               </div>
+                                 </>
+                               ) : (
+                                 <>
+                                   <button
+                                     type="button"
+                                     onClick={() => {
+                                       resetWorkspaceAndChat();
+                                       if (onOpenLecture) onOpenLecture(course.id);
+                                     }}
+                                     className={`flex-1 ${cTheme.lecBtn} border font-extrabold text-[13px] py-3 px-4 rounded-xl transition-all flex items-center justify-center gap-2 uppercase tracking-wider cursor-pointer active:scale-95`}
+                                   >
+                                     <BookOpen className="w-4 h-4 shrink-0" />
+                                     <span>{isEn ? 'Theory Lectures' : 'Bài giảng lý thuyết'}</span>
+                                   </button>
+                                   <button
+                                     type="button"
+                                     onClick={() => handleOpenCourse(course)}
+                                     className={`flex-[1.3] ${cTheme.primaryBtn} text-white font-extrabold text-[13px] py-3 px-4 rounded-xl transition-all shadow-sm flex items-center justify-center gap-2 uppercase tracking-wider cursor-pointer active:scale-95`}
+                                   >
+                                     <span>{isEn ? 'Open Test Bank' : 'Vào kho đề & Làm bài'}</span>
+                                     <ArrowRight className="w-4 h-4 shrink-0" />
+                                   </button>
+                                 </>
+                               )}
                             </div>
                           </div>
                         </div>
@@ -2927,9 +2969,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                   setSelectedCourseId(null);
                   sessionStorage.removeItem('portal_current_folder_id');
                 }}
-                className="hover:text-[#0a5482] flex items-center gap-1 cursor-pointer transition-colors"
+                className="hover:text-[#0a5482] flex items-center gap-1.5 cursor-pointer transition-colors"
               >
-                <span>🎓</span>
+                <GraduationCap className="w-4 h-4 text-[#0a5482]" />
                 <span>{isEn ? 'Student Portal' : 'Góc học viên'}</span>
               </button>
               <span className="text-slate-300">/</span>
@@ -3506,28 +3548,25 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             }`}
             style={analyticsTheme.id !== 'tony-classic' ? { backgroundColor: analyticsTheme.boardBg } : undefined}
           >
-            {/* TONYENGLISH.VN SYNCHRONIZED HEADER BANNER */}
+            {/* TONYENGLISH.VN SYNCHRONIZED HEADER BANNER (Matches ThemeModal Preview) */}
             <div 
               className="w-full rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-7 shadow-md text-white flex flex-col gap-4 transition-all relative z-30 border border-white/15" 
               style={{
-                background:
-                  analyticsTheme.id === 'tony-classic'
-                    ? 'linear-gradient(135deg, #4338ca 0%, #1d4ed8 48%, #0f766e 100%)'
-                    : (analyticsTheme.titleBg || 'linear-gradient(135deg, #4338ca 0%, #1d4ed8 48%, #0f766e 100%)'),
+                background: analyticsTheme.titleBg || DEFAULT_BOARD_THEME.titleBg,
               }}
             >
-              {/* Decorative Ribbon + Ambient Glow */}
+              {/* Subtle Academic Accent Line + Soft Glow */}
               <div className="absolute inset-0 overflow-hidden rounded-2xl sm:rounded-3xl pointer-events-none">
-                <div className="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-rose-400 via-amber-400 to-emerald-400" />
-                <div className="absolute -top-24 -right-24 w-80 h-80 bg-amber-300/20 blur-3xl rounded-full"></div>
-                <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-emerald-400/15 blur-3xl rounded-full"></div>
+                <div className="absolute top-0 inset-x-0 h-[3px] bg-gradient-to-r from-indigo-400 via-[#2ab4e8] to-amber-400" />
+                <div className="absolute -top-24 -right-24 w-80 h-80 bg-[#2ab4e8]/15 blur-3xl rounded-full"></div>
+                <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-indigo-400/15 blur-3xl rounded-full"></div>
               </div>
 
               <div className="relative z-20 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4">
                 {/* CỘT 1 (BÊN TRÁI): TIÊU ĐỀ */}
                 <div className="min-w-0 flex-1">
-                  <div className="inline-flex items-center gap-2 bg-amber-400/15 backdrop-blur-xs border border-amber-300/35 px-3 py-1 rounded-full text-[10px] sm:text-[11px] font-extrabold tracking-widest uppercase text-amber-200 mb-2.5 whitespace-nowrap">
-                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
+                  <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-xs border border-white/20 px-3 py-1 rounded-full text-[10px] sm:text-[11px] font-extrabold tracking-widest uppercase text-sky-200 mb-2.5 whitespace-nowrap">
+                    <span className="w-2 h-2 rounded-full bg-indigo-400 animate-pulse shrink-0"></span>
                     <span>{isEn ? 'TonyEnglish Performance Analytics' : 'TonyEnglish Performance Analytics • Báo Cáo Hiệu Suất'}</span>
                   </div>
                   <h1 className="text-xl sm:text-2xl md:text-[26px] font-black tracking-tight text-white leading-tight">
@@ -3547,21 +3586,21 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                         onClick={() => { setAnalyticsTestType('ielts'); setHistoryPage(1); }}
                         className={`flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg font-extrabold text-xs transition-all whitespace-nowrap cursor-pointer ${analyticsTestType === 'ielts' ? 'bg-white text-[#0a5482] shadow-xs' : 'text-white/85 hover:text-white hover:bg-white/10'}`}
                       >
-                        <span>🎯</span> <span>{isEn ? 'IELTS Mock Tests' : 'Luyện thi IELTS'}</span>
+                        <Target className="w-3.5 h-3.5 shrink-0" /> <span>{isEn ? 'IELTS Mock Tests' : 'Luyện thi IELTS'}</span>
                       </button>
                       <button
                         type="button"
                         onClick={() => { setAnalyticsTestType('ielts-standard'); setHistoryPage(1); }}
                         className={`flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg font-extrabold text-xs transition-all whitespace-nowrap cursor-pointer ${analyticsTestType === 'ielts-standard' ? 'bg-white text-[#0a5482] shadow-xs' : 'text-white/85 hover:text-white hover:bg-white/10'}`}
                       >
-                        <span>📝</span> <span>{isEn ? 'Supplementary Drills' : 'Bài Tập Bổ Trợ'}</span>
+                        <FileText className="w-3.5 h-3.5 shrink-0" /> <span>{isEn ? 'Supplementary Drills' : 'Bài Tập Bổ Trợ'}</span>
                       </button>
                       <button
                         type="button"
                         onClick={() => { setAnalyticsTestType('ielts-translation'); setAnalyticsView('activity'); setActivityPage(1); }}
                         className={`flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg font-extrabold text-xs transition-all whitespace-nowrap cursor-pointer ${analyticsTestType === 'ielts-translation' ? 'bg-white text-[#0a5482] shadow-xs' : 'text-white/85 hover:text-white hover:bg-white/10'}`}
                       >
-                        <span>📚</span> <span>{isEn ? 'Cambridge Translations' : 'Bài Đọc Dịch Cambridge'}</span>
+                        <Library className="w-3.5 h-3.5 shrink-0" /> <span>{isEn ? 'Cambridge Translations' : 'Bài Đọc Dịch Cambridge'}</span>
                       </button>
                       {analyticsCourse === 'all' && courses.some(c => !((c.title||'').toLowerCase().includes('ielts') || c.type === 'IELTS')) && (
                         <button
@@ -3569,7 +3608,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                           onClick={() => { setAnalyticsTestType('standard'); setHistoryPage(1); }}
                           className={`flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg font-extrabold text-xs transition-all whitespace-nowrap cursor-pointer ${analyticsTestType === 'standard' ? 'bg-white text-[#0a5482] shadow-xs' : 'text-white/85 hover:text-white hover:bg-white/10'}`}
                         >
-                          <span>📖</span> <span>{isEn ? 'Other Courses' : 'Bài tập khóa khác'}</span>
+                          <BookOpen className="w-3.5 h-3.5 shrink-0" /> <span>{isEn ? 'Other Courses' : 'Bài tập khóa khác'}</span>
                         </button>
                       )}
                     </div>
@@ -3582,7 +3621,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                     className="bg-white/12 hover:bg-white/20 active:scale-95 text-white text-xs sm:text-[13px] font-bold px-3.5 py-2 rounded-xl transition-all shadow-xs flex items-center gap-1.5 cursor-pointer shrink-0 border border-white/20 h-[38px]"
                     title={isEn ? 'Change background theme' : 'Đổi giao diện màu nền'}
                   >
-                    <span>🎨</span> <span className="hidden xl:inline">{isEn ? 'Theme' : 'Giao diện'}</span>
+                    <Palette className="w-4 h-4 text-sky-200 shrink-0" /> <span className="hidden xl:inline">{isEn ? 'Theme' : 'Giao diện'}</span>
                   </button>
                 </div>
               </div>
@@ -3803,7 +3842,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                           <div className="w-full min-w-0">
                             <div className="flex items-center gap-2.5 mb-3">
                               <span className="w-1.5 h-5 bg-[#0a5482] rounded-full"></span>
-                              <div className="w-8 h-8 rounded-xl bg-sky-50 border border-sky-200/80 text-[#0a5482] flex items-center justify-center text-base">📈</div>
+                              <div className="w-8 h-8 rounded-xl bg-sky-50 border border-sky-200/80 text-[#0a5482] flex items-center justify-center"><TrendingUp className="w-4 h-4" /></div>
                               <h3 className="font-black text-sm sm:text-base text-slate-900 tracking-tight">{isEn ? '4-Skill Progress Chart' : 'Biểu đồ 4 Kỹ Năng'}</h3>
                             </div>
                             <div className="w-full bg-slate-50/60 rounded-2xl p-2.5 sm:p-3.5 border border-slate-200/70 flex items-center justify-center" style={{ minHeight: 280 }}>
@@ -3816,9 +3855,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                                   <Legend iconType="circle" wrapperStyle={{ fontSize: '11px', fontWeight: 'bold', paddingTop: '10px' }} />
                                   
                                   <Line type="monotone" dataKey="Nghe" name="Listening" stroke="#10b981" strokeWidth={2.5} dot={{ r: 3, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 5 }} connectNulls={true} />
-                                  <Line type="monotone" dataKey="Nói" name="Speaking" stroke="#f97316" strokeWidth={2.5} dot={{ r: 3, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 5 }} connectNulls={true} />
+                                  <Line type="monotone" dataKey="Nói" name="Speaking" stroke="#f59e0b" strokeWidth={2.5} dot={{ r: 3, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 5 }} connectNulls={true} />
                                   <Line type="monotone" dataKey="Đọc" name="Reading" stroke="#0a5482" strokeWidth={2.5} dot={{ r: 3, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 5 }} connectNulls={true} />
-                                  <Line type="monotone" dataKey="Viết" name="Writing" stroke="#d946ef" strokeWidth={2.5} dot={{ r: 3, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 5 }} connectNulls={true} />
+                                  <Line type="monotone" dataKey="Viết" name="Writing" stroke="#6366f1" strokeWidth={2.5} dot={{ r: 3, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 5 }} connectNulls={true} />
                                 </LineChart>
                               </ResponsiveContainer>
                             </div>
@@ -3827,8 +3866,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                           {/* CHART 2: BIỂU ĐỒ TỶ LỆ THEO DẠNG BÀI */}
                           <div className="w-full min-w-0">
                             <div className="flex items-center gap-2.5 mb-3">
-                              <span className="w-1.5 h-5 bg-[#2ab4e8] rounded-full"></span>
-                              <div className="w-8 h-8 rounded-xl bg-sky-50 border border-sky-200/80 text-[#0a5482] flex items-center justify-center text-base">🎯</div>
+                              <span className="w-1.5 h-5 bg-[#0284c7] rounded-full"></span>
+                              <div className="w-8 h-8 rounded-xl bg-sky-50 border border-sky-200/80 text-[#0a5482] flex items-center justify-center"><Target className="w-4 h-4" /></div>
                               <h3 className="font-black text-sm sm:text-base text-slate-900 tracking-tight">{isEn ? 'Accuracy by Question Type (%)' : 'Tỷ Lệ Đúng Từng Dạng (%)'}</h3>
                             </div>
                             <div className="w-full bg-slate-50/60 rounded-2xl p-2.5 sm:p-3.5 border border-slate-200/70 flex items-center justify-center" style={{ minHeight: 280 }}>
@@ -3841,9 +3880,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                                   <Legend iconType="circle" wrapperStyle={{ fontSize: '11px', fontWeight: 'bold', paddingTop: '10px' }} />
                                   
                                   <Line type="monotone" dataKey="Điền từ" name={isEn ? 'Completion' : 'Điền từ'} stroke="#10b981" strokeWidth={2.5} dot={{ r: 3, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 5 }} connectNulls={true} />
-                                  <Line type="monotone" dataKey="Nhận định" name="T/F/NG" stroke="#f97316" strokeWidth={2.5} dot={{ r: 3, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 5 }} connectNulls={true} />
+                                  <Line type="monotone" dataKey="Nhận định" name="T/F/NG" stroke="#f59e0b" strokeWidth={2.5} dot={{ r: 3, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 5 }} connectNulls={true} />
                                   <Line type="monotone" dataKey="Trắc nghiệm" name="MCQ/Checkbox" stroke="#0a5482" strokeWidth={2.5} dot={{ r: 3, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 5 }} connectNulls={true} />
-                                  <Line type="monotone" dataKey="Matching" name="Matching" stroke="#d946ef" strokeWidth={2.5} dot={{ r: 3, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 5 }} connectNulls={true} />
+                                  <Line type="monotone" dataKey="Matching" name="Matching" stroke="#6366f1" strokeWidth={2.5} dot={{ r: 3, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 5 }} connectNulls={true} />
                                 </LineChart>
                               </ResponsiveContainer>
                             </div>
@@ -3853,7 +3892,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                         {/* THANH PROGRESS BAR NẰM NGANG - 4 CARD TRÊN 1 DÒNG */}
                         <div className="bg-slate-50/80 rounded-2xl p-4 sm:p-5 border border-slate-200/80">
                           <h3 className="font-black text-xs sm:text-[13px] text-slate-900 uppercase tracking-tight mb-3 flex items-center gap-2">
-                            <span className="text-emerald-500">🏆</span> {isEn ? 'Cumulative Accuracy by Question Type' : 'Tỷ lệ đúng tích lũy theo dạng câu hỏi'}
+                            <Trophy className="w-4 h-4 text-amber-500 shrink-0" /> {isEn ? 'Cumulative Accuracy by Question Type' : 'Tỷ lệ đúng tích lũy theo dạng câu hỏi'}
                           </h3>
                           <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-3">
                             {Object.entries(ieltsTypeStats).map(([key, data]) => {
@@ -4085,7 +4124,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                             : 'text-slate-600 hover:text-[#0a5482] hover:bg-white/50'
                         }`}
                       >
-                        <span>📋</span> {isEn ? 'Test History' : 'Lịch sử làm bài'}
+                        <ClipboardList className="w-3.5 h-3.5 shrink-0" /> <span>{isEn ? 'Test History' : 'Lịch sử làm bài'}</span>
                       </button>
                       <button
                         type="button"
@@ -4096,7 +4135,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                             : 'text-slate-600 hover:text-[#0a5482] hover:bg-white/50'
                         }`}
                       >
-                        <span>👀</span> {isEn ? 'Activity Log' : 'Lịch sử hoạt động'}
+                        <Clock className="w-3.5 h-3.5 shrink-0" /> <span>{isEn ? 'Activity Log' : 'Lịch sử hoạt động'}</span>
                       </button>
                     </div>
 
@@ -4191,8 +4230,10 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                     <>
                       <div className="p-4 sm:p-5">
                         {paginatedActivities.length === 0 ? (
-                          <div className="text-center py-16">
-                            <p className="text-5xl mb-3">📭</p>
+                          <div className="text-center py-16 flex flex-col items-center">
+                            <div className="w-12 h-12 rounded-2xl bg-slate-100 text-slate-400 flex items-center justify-center mb-3">
+                              <FolderOpen className="w-6 h-6" />
+                            </div>
                             <p className="text-slate-500 font-bold text-sm">{isEn ? 'No activity recorded yet' : 'Chưa có hoạt động nào được ghi nhận'}</p>
                           </div>
                         ) : (
@@ -4352,24 +4393,24 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             {/* Khối 1: Thông tin học viên */}
             <div className="bg-white p-6 md:p-8 rounded-2xl sm:rounded-3xl border border-slate-200/90 shadow-xs">
               <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-100">
-                <div className="w-10 h-10 rounded-xl bg-sky-50 text-[#0a5482] flex items-center justify-center text-xl font-bold border border-sky-100">
-                  👤
+                <div className="w-10 h-10 rounded-xl bg-sky-50 text-[#0a5482] flex items-center justify-center border border-sky-200/80">
+                  <User className="w-5 h-5" />
                 </div>
                 <div>
                   <h3 className="font-black text-lg text-slate-800 tracking-tight">{isEn ? 'Personal Information' : 'Thông Tin Cá Nhân'}</h3>
-                  <p className="text-slate-400 text-[13px]">{isEn ? 'Update your display name and study target' : 'Cập nhật họ tên hiển thị và mục tiêu học tập'}</p>
+                  <p className="text-slate-500 text-[13px]">{isEn ? 'Update your display name and study target' : 'Cập nhật họ tên hiển thị và mục tiêu học tập'}</p>
                 </div>
               </div>
 
               {profileSuccessMsg && (
                 <div className="mb-5 p-3.5 bg-emerald-50 border border-emerald-200 text-emerald-700 text-[14px] font-bold rounded-xl flex items-center gap-2 animate-in fade-in">
-                  <span>✓</span>
+                  <Check className="w-4 h-4 shrink-0" />
                   <span>{profileSuccessMsg}</span>
                 </div>
               )}
               {profileErrorMsg && (
                 <div className="mb-5 p-3.5 bg-rose-50 border border-rose-200 text-rose-700 text-[14px] font-bold rounded-xl flex items-center gap-2 animate-in shake">
-                  <span>⚠️</span>
+                  <AlertTriangle className="w-4 h-4 shrink-0" />
                   <span>{profileErrorMsg}</span>
                 </div>
               )}
@@ -4400,7 +4441,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 <div className="space-y-1.5">
                   <div className="flex justify-between items-center ml-1">
                     <label className="text-[12px] font-bold text-slate-500 uppercase tracking-widest">{isEn ? 'Login Email' : 'Email đăng nhập'}</label>
-                    <span className="text-[11px] text-slate-400 font-medium flex items-center gap-1">🔒 {isEn ? 'Fixed' : 'Cố định'}</span>
+                    <span className="text-[11px] text-slate-500 font-medium inline-flex items-center gap-1"><Lock className="w-3 h-3" /> {isEn ? 'Fixed' : 'Cố định'}</span>
                   </div>
                   <input 
                     type="email" 
@@ -4432,24 +4473,24 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             {/* Khối 2: Đổi mật khẩu tài khoản */}
             <div className="bg-white p-6 md:p-8 rounded-2xl sm:rounded-3xl border border-slate-200/90 shadow-xs">
               <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-100">
-                <div className="w-10 h-10 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-xl font-bold border border-amber-100">
-                  🔐
+                <div className="w-10 h-10 rounded-xl bg-amber-50 text-amber-700 flex items-center justify-center border border-amber-200/80">
+                  <KeyRound className="w-5 h-5" />
                 </div>
                 <div>
                   <h3 className="font-black text-lg text-slate-800 tracking-tight">{isEn ? 'Change Password' : 'Đổi Mật Khẩu Tài Khoản'}</h3>
-                  <p className="text-slate-400 text-[13px]">{isEn ? 'Protect your account with a new password of at least 6 characters' : 'Bảo vệ tài khoản với mật khẩu mới có ít nhất 6 ký tự'}</p>
+                  <p className="text-slate-500 text-[13px]">{isEn ? 'Protect your account with a new password of at least 6 characters' : 'Bảo vệ tài khoản với mật khẩu mới có ít nhất 6 ký tự'}</p>
                 </div>
               </div>
 
               {passwordSuccessMsg && (
                 <div className="mb-5 p-3.5 bg-emerald-50 border border-emerald-200 text-emerald-700 text-[14px] font-bold rounded-xl flex items-center gap-2 animate-in fade-in">
-                  <span>✓</span>
+                  <Check className="w-4 h-4 shrink-0" />
                   <span>{passwordSuccessMsg}</span>
                 </div>
               )}
               {passwordErrorMsg && (
                 <div className="mb-5 p-3.5 bg-rose-50 border border-rose-200 text-rose-700 text-[14px] font-bold rounded-xl flex items-center gap-2 animate-in shake">
-                  <span>⚠️</span>
+                  <AlertTriangle className="w-4 h-4 shrink-0" />
                   <span>{passwordErrorMsg}</span>
                 </div>
               )}
@@ -4529,7 +4570,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                   <button 
                     type="submit" 
                     disabled={isChangingPassword || !newPassword || newPassword.length < 6 || newPassword !== confirmPassword} 
-                    className="bg-amber-600 hover:bg-amber-700 disabled:bg-slate-300 text-white font-black px-6 py-3.5 rounded-xl transition-all w-full text-[14px] uppercase tracking-wider shadow-md hover:shadow-lg disabled:shadow-none active:scale-[0.99] flex items-center justify-center gap-2 cursor-pointer"
+                    className="bg-[#0a5482] hover:bg-[#084266] disabled:bg-slate-300 text-white font-black px-6 py-3.5 rounded-xl transition-all w-full text-[14px] uppercase tracking-wider shadow-md hover:shadow-lg disabled:shadow-none active:scale-[0.99] flex items-center justify-center gap-2 cursor-pointer"
                   >
                     {isChangingPassword ? (
                       <>

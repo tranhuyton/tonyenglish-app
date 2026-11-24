@@ -19,6 +19,9 @@ import {
   Award,
   Globe,
   Target,
+  MapPin,
+  Gift,
+  CreditCard,
 } from 'lucide-react';
 import { supabase } from '../lib/supabase';
 import { useApp } from '../context/AppContext';
@@ -576,7 +579,7 @@ export const CoursesPage: React.FC = () => {
     };
   };
 
-  // Vibrant, signature editorial palette per course family (Crimson Red, Emerald Green, Amber Gold, Sky Blue, Indigo)
+  // Academic Luxury 60-30-10 palette: cohesive Deep Ocean Navy base + disciplined 10% signature course accent
   const getCourseTheme = (course: any | null) => {
     const cid = course ? Number(course.cc_id) : 0;
     const pid = course ? Number(course.cc_parent) : 0;
@@ -584,107 +587,107 @@ export const CoursesPage: React.FC = () => {
     if (cid === 127 || pid === 127) {
       return {
         themeKey: 'ielts',
-        heroBg: 'from-[#dc2626] via-[#b91c1c] to-[#7f1d1d]',
-        topStripe: 'from-amber-400 via-yellow-300 to-rose-400',
-        orbPrimary: 'bg-amber-300/25',
-        orbSecondary: 'bg-rose-300/20',
-        eyebrowText: 'text-amber-200',
-        eyebrowBadge: 'bg-amber-400/20 border-amber-200/40 text-amber-100',
-        pillBg: 'bg-white/15 border-amber-200/35 text-white',
-        rowTitle: 'text-rose-700 hover:text-rose-600',
-        rowBadge: 'bg-rose-100 text-rose-800 border-rose-200',
-        rowBtn: 'bg-rose-600 hover:bg-rose-700 text-white',
-        rowHover: 'hover:bg-rose-50/45',
-        rowActive: 'bg-rose-50/60 border-l-4 border-l-rose-500',
+        heroBg: 'from-[#073b5c] via-[#0a5482] to-[#0f172a]',
+        topStripe: 'from-rose-600 via-rose-500 to-amber-400',
+        orbPrimary: 'bg-rose-400/20',
+        orbSecondary: 'bg-[#2ab4e8]/15',
+        eyebrowText: 'text-rose-200',
+        eyebrowBadge: 'bg-rose-500/20 border-rose-300/35 text-rose-100',
+        pillBg: 'bg-white/10 border-white/20 text-white',
+        rowTitle: 'text-slate-900 hover:text-rose-700',
+        rowBadge: 'bg-rose-50 text-rose-800 border-rose-200/80',
+        rowBtn: 'bg-[#0a5482] hover:bg-[#084266] text-white',
+        rowHover: 'hover:bg-slate-50/80',
+        rowActive: 'bg-rose-50/40 border-l-4 border-l-rose-600',
       };
     }
 
     if (cid === 132 || pid === 132) {
       return {
         themeKey: 'igcse',
-        heroBg: 'from-[#059669] via-[#047857] to-[#064e3b]',
-        topStripe: 'from-emerald-300 via-amber-300 to-teal-300',
-        orbPrimary: 'bg-amber-300/25',
-        orbSecondary: 'bg-emerald-300/25',
-        eyebrowText: 'text-amber-200',
-        eyebrowBadge: 'bg-amber-400/20 border-amber-200/40 text-amber-100',
-        pillBg: 'bg-white/15 border-emerald-200/35 text-white',
-        rowTitle: 'text-emerald-700 hover:text-emerald-600',
-        rowBadge: 'bg-emerald-100 text-emerald-800 border-emerald-200',
-        rowBtn: 'bg-emerald-600 hover:bg-emerald-700 text-white',
-        rowHover: 'hover:bg-emerald-50/45',
-        rowActive: 'bg-emerald-50/60 border-l-4 border-l-emerald-500',
+        heroBg: 'from-[#073b5c] via-[#0a5482] to-[#0f172a]',
+        topStripe: 'from-emerald-600 via-emerald-500 to-teal-400',
+        orbPrimary: 'bg-emerald-400/20',
+        orbSecondary: 'bg-[#2ab4e8]/15',
+        eyebrowText: 'text-emerald-200',
+        eyebrowBadge: 'bg-emerald-500/20 border-emerald-300/35 text-emerald-100',
+        pillBg: 'bg-white/10 border-white/20 text-white',
+        rowTitle: 'text-slate-900 hover:text-emerald-700',
+        rowBadge: 'bg-emerald-50 text-emerald-800 border-emerald-200/80',
+        rowBtn: 'bg-[#0a5482] hover:bg-[#084266] text-white',
+        rowHover: 'hover:bg-slate-50/80',
+        rowActive: 'bg-emerald-50/40 border-l-4 border-l-emerald-600',
       };
     }
 
     if (cid === 133 || pid === 133) {
       return {
         themeKey: 'sat',
-        heroBg: 'from-[#d97706] via-[#b45309] to-[#78350f]',
-        topStripe: 'from-yellow-300 via-amber-400 to-rose-500',
-        orbPrimary: 'bg-yellow-200/30',
-        orbSecondary: 'bg-orange-300/25',
-        eyebrowText: 'text-yellow-100',
-        eyebrowBadge: 'bg-yellow-300/20 border-yellow-200/45 text-yellow-50',
-        pillBg: 'bg-white/15 border-yellow-200/40 text-white',
-        rowTitle: 'text-amber-700 hover:text-amber-600',
-        rowBadge: 'bg-amber-100 text-amber-800 border-amber-200',
-        rowBtn: 'bg-amber-600 hover:bg-amber-700 text-white',
-        rowHover: 'hover:bg-amber-50/50',
-        rowActive: 'bg-amber-50/65 border-l-4 border-l-amber-500',
+        heroBg: 'from-[#073b5c] via-[#0a5482] to-[#0f172a]',
+        topStripe: 'from-amber-500 via-amber-400 to-yellow-300',
+        orbPrimary: 'bg-amber-400/20',
+        orbSecondary: 'bg-[#2ab4e8]/15',
+        eyebrowText: 'text-amber-200',
+        eyebrowBadge: 'bg-amber-400/20 border-amber-300/35 text-amber-100',
+        pillBg: 'bg-white/10 border-white/20 text-white',
+        rowTitle: 'text-slate-900 hover:text-amber-700',
+        rowBadge: 'bg-amber-50 text-amber-800 border-amber-200/80',
+        rowBtn: 'bg-[#0a5482] hover:bg-[#084266] text-white',
+        rowHover: 'hover:bg-slate-50/80',
+        rowActive: 'bg-amber-50/40 border-l-4 border-l-amber-600',
       };
     }
 
     if (cid === 111 || pid === 111) {
       return {
         themeKey: 'comm-basic',
-        heroBg: 'from-[#0284c7] via-[#0369a1] to-[#1d4ed8]',
-        topStripe: 'from-amber-400 via-sky-300 to-emerald-400',
-        orbPrimary: 'bg-amber-300/25',
-        orbSecondary: 'bg-cyan-300/25',
-        eyebrowText: 'text-amber-200',
-        eyebrowBadge: 'bg-amber-400/20 border-amber-200/40 text-amber-100',
-        pillBg: 'bg-white/15 border-sky-200/40 text-white',
-        rowTitle: 'text-sky-700 hover:text-sky-600',
-        rowBadge: 'bg-sky-100 text-sky-800 border-sky-200',
-        rowBtn: 'bg-sky-600 hover:bg-sky-700 text-white',
-        rowHover: 'hover:bg-sky-50/50',
-        rowActive: 'bg-sky-50/65 border-l-4 border-l-sky-500',
+        heroBg: 'from-[#073b5c] via-[#0a5482] to-[#0f172a]',
+        topStripe: 'from-[#0284c7] via-[#2ab4e8] to-sky-300',
+        orbPrimary: 'bg-[#2ab4e8]/20',
+        orbSecondary: 'bg-sky-300/15',
+        eyebrowText: 'text-sky-200',
+        eyebrowBadge: 'bg-sky-400/20 border-sky-300/35 text-sky-100',
+        pillBg: 'bg-white/10 border-white/20 text-white',
+        rowTitle: 'text-slate-900 hover:text-[#0a5482]',
+        rowBadge: 'bg-sky-50 text-[#0a5482] border-sky-200/80',
+        rowBtn: 'bg-[#0a5482] hover:bg-[#084266] text-white',
+        rowHover: 'hover:bg-slate-50/80',
+        rowActive: 'bg-sky-50/45 border-l-4 border-l-[#0284c7]',
       };
     }
 
     if (cid === 129 || pid === 129) {
       return {
         themeKey: 'comm-advanced',
-        heroBg: 'from-[#4f46e5] via-[#4338ca] to-[#312e81]',
-        topStripe: 'from-rose-400 via-amber-400 to-indigo-400',
-        orbPrimary: 'bg-amber-300/25',
-        orbSecondary: 'bg-fuchsia-300/20',
-        eyebrowText: 'text-amber-200',
-        eyebrowBadge: 'bg-amber-400/20 border-amber-200/40 text-amber-100',
-        pillBg: 'bg-white/15 border-indigo-200/40 text-white',
-        rowTitle: 'text-indigo-700 hover:text-indigo-600',
-        rowBadge: 'bg-indigo-100 text-indigo-800 border-indigo-200',
-        rowBtn: 'bg-indigo-600 hover:bg-indigo-700 text-white',
-        rowHover: 'hover:bg-indigo-50/45',
-        rowActive: 'bg-indigo-50/60 border-l-4 border-l-indigo-500',
+        heroBg: 'from-[#073b5c] via-[#0a5482] to-[#0f172a]',
+        topStripe: 'from-indigo-500 via-indigo-400 to-[#2ab4e8]',
+        orbPrimary: 'bg-indigo-400/20',
+        orbSecondary: 'bg-[#2ab4e8]/15',
+        eyebrowText: 'text-indigo-200',
+        eyebrowBadge: 'bg-indigo-400/20 border-indigo-300/35 text-indigo-100',
+        pillBg: 'bg-white/10 border-white/20 text-white',
+        rowTitle: 'text-slate-900 hover:text-indigo-700',
+        rowBadge: 'bg-indigo-50 text-indigo-800 border-indigo-200/80',
+        rowBtn: 'bg-[#0a5482] hover:bg-[#084266] text-white',
+        rowHover: 'hover:bg-slate-50/80',
+        rowActive: 'bg-indigo-50/40 border-l-4 border-l-indigo-600',
       };
     }
 
     return {
       themeKey: 'overview',
-      heroBg: 'from-[#0369a1] via-[#0a5482] to-[#0f766e]',
-      topStripe: 'from-rose-500 via-amber-400 to-emerald-500',
-      orbPrimary: 'bg-amber-300/30',
-      orbSecondary: 'bg-rose-400/20',
+      heroBg: 'from-[#073b5c] via-[#0a5482] to-[#0f172a]',
+      topStripe: 'from-[#2ab4e8] via-amber-400 to-[#0a5482]',
+      orbPrimary: 'bg-[#2ab4e8]/20',
+      orbSecondary: 'bg-amber-300/15',
       eyebrowText: 'text-amber-200',
-      eyebrowBadge: 'bg-amber-400/20 border-amber-200/40 text-amber-100',
-      pillBg: 'bg-white/15 border-amber-200/35 text-white',
-      rowTitle: 'text-[#0a5482] hover:text-[#2ab4e8]',
-      rowBadge: 'bg-sky-100 text-[#0a5482] border-sky-200',
+      eyebrowBadge: 'bg-amber-400/20 border-amber-300/35 text-amber-100',
+      pillBg: 'bg-white/10 border-white/20 text-white',
+      rowTitle: 'text-slate-900 hover:text-[#0a5482]',
+      rowBadge: 'bg-sky-50 text-[#0a5482] border-sky-200/80',
       rowBtn: 'bg-[#0a5482] hover:bg-[#084266] text-white',
-      rowHover: 'hover:bg-sky-50/50',
-      rowActive: 'bg-sky-50/50 border-l-4 border-l-sky-500',
+      rowHover: 'hover:bg-slate-50/80',
+      rowActive: 'bg-sky-50/45 border-l-4 border-l-[#0a5482]',
     };
   };
 
@@ -692,28 +695,10 @@ export const CoursesPage: React.FC = () => {
   const activeTheme = getCourseTheme(currentCourse);
   const subCardAccents = [
     {
-      badge: 'bg-rose-600 text-white',
-      card: 'hover:bg-rose-50/70 hover:border-rose-300',
-      title: 'group-hover:text-rose-700',
-      arrow: 'text-rose-500',
-    },
-    {
-      badge: 'bg-emerald-600 text-white',
-      card: 'hover:bg-emerald-50/70 hover:border-emerald-300',
-      title: 'group-hover:text-emerald-700',
-      arrow: 'text-emerald-500',
-    },
-    {
-      badge: 'bg-amber-500 text-white',
-      card: 'hover:bg-amber-50/70 hover:border-amber-300',
-      title: 'group-hover:text-amber-700',
-      arrow: 'text-amber-500',
-    },
-    {
-      badge: 'bg-sky-600 text-white',
-      card: 'hover:bg-sky-50/70 hover:border-sky-300',
-      title: 'group-hover:text-sky-700',
-      arrow: 'text-sky-500',
+      badge: 'bg-sky-50 text-[#0a5482] border border-sky-200/80',
+      card: 'hover:bg-sky-50/40 hover:border-[#0a5482]/40',
+      title: 'group-hover:text-[#0a5482]',
+      arrow: 'text-[#0284c7]',
     },
   ];
 
@@ -978,18 +963,18 @@ export const CoursesPage: React.FC = () => {
         {/* RIGHT MAIN CONTENT */}
         <div className="flex-1 min-w-0 w-full space-y-6">
           <div className="bg-white rounded-2xl sm:rounded-3xl border border-slate-200/90 shadow-sm overflow-hidden">
-            {/* Vibrant Tri-Color Top Ribbon */}
-            <div className={`h-1.5 w-full bg-gradient-to-r ${activeTheme.topStripe}`} />
+            {/* Refined Single-Accent Top Bar */}
+            <div className={`h-1 w-full bg-gradient-to-r ${activeTheme.topStripe}`} />
 
-            {/* Section Header (Signature Course Color Theme + Highlight Pills) */}
-            <div className={`relative overflow-hidden bg-gradient-to-r ${activeTheme.heroBg} px-4 sm:px-8 py-5 sm:py-7 text-white`}>
+            {/* Section Header (Academic Deep Ocean Navy + Subtle Course Accent) */}
+            <div className={`relative overflow-hidden bg-gradient-to-br ${activeTheme.heroBg} px-4 sm:px-8 py-5 sm:py-7 text-white`}>
               {/* Soft decorative color orbs */}
               <div className={`pointer-events-none absolute -top-12 -right-10 w-52 h-52 rounded-full blur-3xl ${activeTheme.orbPrimary}`} />
               <div className={`pointer-events-none absolute -bottom-14 left-1/3 w-44 h-44 rounded-full blur-3xl ${activeTheme.orbSecondary}`} />
 
               <div className="relative z-10 space-y-2.5">
                 <div className={`inline-flex items-center gap-1.5 text-[10.5px] sm:text-xs font-extrabold uppercase tracking-widest px-3 py-1 rounded-full border ${activeTheme.eyebrowBadge}`}>
-                  <span>★</span>
+                  <Sparkles className="w-3.5 h-3.5 shrink-0" />
                   <span>
                     {lang === 'vi' ? 'Lớp Gia Sư 1 Kèm 1 Cùng Thầy Tony' : '1-on-1 Private Tutoring with Mr. Tony'}
                   </span>
@@ -998,7 +983,7 @@ export const CoursesPage: React.FC = () => {
                   <div className="h-8 sm:h-9 w-64 sm:w-80 bg-white/15 rounded-xl animate-pulse mt-1" />
                 ) : (
                   <>
-                    <h1 className="text-xl sm:text-3xl font-black tracking-tight text-white drop-shadow-xs">
+                    <h1 className="text-xl sm:text-3xl font-black tracking-tight text-white">
                       {courseTitle}
                     </h1>
                     {activeVisual.highlights && activeVisual.highlights.length > 0 && (
@@ -1006,7 +991,7 @@ export const CoursesPage: React.FC = () => {
                         {activeVisual.highlights.map((hl, idx) => (
                           <span
                             key={idx}
-                            className={`inline-flex items-center text-[11px] sm:text-xs font-bold px-3 py-1 rounded-full border backdrop-blur-xs ${activeTheme.pillBg}`}
+                            className={`inline-flex items-center text-[11px] sm:text-xs font-bold px-3 py-1 rounded-xl border backdrop-blur-xs leading-snug ${activeTheme.pillBg}`}
                           >
                             {hl}
                           </span>
@@ -1020,7 +1005,7 @@ export const CoursesPage: React.FC = () => {
 
             {isResolvingSpecificCourse ? (
               <div className="p-4 sm:p-8 space-y-5 animate-pulse">
-                <div className="h-28 rounded-2xl bg-amber-50 border border-amber-100" />
+                <div className="h-28 rounded-2xl bg-slate-100 border border-slate-200" />
                 <div className="space-y-3 max-w-[74ch]">
                   <div className="h-6 bg-slate-100 rounded-lg w-2/3" />
                   <div className="h-4 bg-slate-100 rounded w-full" />
@@ -1032,37 +1017,37 @@ export const CoursesPage: React.FC = () => {
             ) : (
             <div className="p-4 sm:p-8 space-y-6">
 
-              {/* Quick Above-the-Fold Direct Call & Zalo Box (Warm Gold + Emerald + Crimson Accent) */}
+              {/* Quick Above-the-Fold Consultation Box (Academic Luxury — 2 Disciplined Hues: Navy & Gold) */}
               <div
                 id="khung-dang-ky-tu-van"
-                className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-amber-50/90 via-white to-emerald-50/75 border-2 border-amber-300/80 p-4 sm:p-5 space-y-3 shadow-xs"
+                className="relative overflow-hidden rounded-2xl bg-slate-50/90 border border-slate-200/90 border-l-4 border-l-amber-400 p-4 sm:p-5 space-y-3 shadow-2xs"
               >
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-rose-500 via-amber-400 to-emerald-500" />
-                <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-3.5 pt-0.5">
+                <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
                   <div className="space-y-1.5">
                     <div className="flex flex-wrap items-center gap-2">
-                      <div className="inline-flex items-start sm:items-center gap-1.5 text-[11px] sm:text-xs font-extrabold uppercase tracking-wide text-emerald-800 bg-emerald-100/90 border border-emerald-300/80 px-3 py-1 sm:py-0.5 rounded-2xl sm:rounded-full leading-snug">
-                        <span className="shrink-0">🏠</span>
+                      <div className="inline-flex items-center gap-1.5 text-[11px] sm:text-xs font-bold text-[#0a5482] bg-white border border-slate-200/90 px-2.5 py-1 rounded-xl leading-snug">
+                        <MapPin className="w-3.5 h-3.5 text-[#0284c7] shrink-0" />
                         <span>
                           {lang === 'vi'
-                            ? 'Học tại căn hộ nhà riêng Thầy Tony (R2B 2219 Royal City) & Online'
-                            : 'At Mr. Tony’s Residence (R2B 2219 Royal City) & Online'}
+                            ? 'R2B 2219 Royal City (Nhà riêng Thầy Tony) & Online'
+                            : 'Mr. Tony’s Residence (R2B 2219 Royal City) & Online'}
                         </span>
                       </div>
-                      <span className="inline-flex items-center gap-1 text-[10.5px] sm:text-[11px] font-black uppercase tracking-wide bg-rose-600 text-white px-2.5 py-0.5 rounded-full shadow-2xs">
-                        🎁 {lang === 'vi' ? 'Miễn phí 2–3 buổi' : '2–3 Free Trials'}
+                      <span className="inline-flex items-center gap-1 text-[10.5px] sm:text-[11px] font-extrabold uppercase tracking-wide bg-amber-100 text-amber-900 border border-amber-200/90 px-2.5 py-1 rounded-xl">
+                        <Gift className="w-3.5 h-3.5 text-amber-700 shrink-0" />
+                        <span>{lang === 'vi' ? 'Miễn phí 2–3 buổi' : '2–3 Free Trials'}</span>
                       </span>
                     </div>
                     <div className="text-sm sm:text-base font-black text-slate-900 leading-snug">
                       {lang === 'vi' ? (
                         <>
                           Kiểm tra đầu vào &amp;{' '}
-                          <span className="text-rose-600">Học thử miễn phí 2–3 buổi</span> — Con thấy thật sự hợp thầy, hợp phương pháp mới đăng ký!
+                          <span className="text-[#0a5482]">Học thử miễn phí 2–3 buổi</span> — Con thấy thật sự hợp thầy, hợp phương pháp mới đăng ký!
                         </>
                       ) : (
                         <>
                           Free Placement Test &amp;{' '}
-                          <span className="text-rose-600">2–3 Free Trial Lessons</span> — Only enroll if it truly fits your child!
+                          <span className="text-[#0a5482]">2–3 Free Trial Lessons</span> — Only enroll if it truly fits your child!
                         </>
                       )}
                     </div>
@@ -1077,7 +1062,7 @@ export const CoursesPage: React.FC = () => {
                     <a
                       href={`tel:${CONTACT_PHONE}`}
                       onClick={() => trackCourseConversion('Phone', courseTitle)}
-                      className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs sm:text-sm px-4 py-2.5 rounded-xl shadow-xs transition whitespace-nowrap"
+                      className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 bg-[#0a5482] hover:bg-[#084266] text-white font-extrabold text-xs sm:text-sm px-4 py-2.5 rounded-xl shadow-xs transition whitespace-nowrap"
                     >
                       <Phone className="w-4 h-4 shrink-0" />
                       <span>{lang === 'vi' ? `Gọi: ${CONTACT_PHONE_DISPLAY}` : `Call: ${CONTACT_PHONE_DISPLAY}`}</span>
@@ -1088,9 +1073,9 @@ export const CoursesPage: React.FC = () => {
                       target="_blank"
                       rel="noreferrer"
                       onClick={(e) => handleZaloClick(e, courseTitle)}
-                      className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 bg-[#0068ff] hover:bg-[#0057d6] text-white font-extrabold text-xs sm:text-sm px-4 py-2.5 rounded-xl shadow-xs transition whitespace-nowrap"
+                      className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 bg-white hover:bg-sky-50 text-[#0a5482] border border-slate-300 hover:border-[#0068ff] font-extrabold text-xs sm:text-sm px-4 py-2.5 rounded-xl shadow-2xs transition whitespace-nowrap"
                     >
-                      <MessageCircle className="w-4 h-4 shrink-0" />
+                      <MessageCircle className="w-4 h-4 text-[#0068ff] shrink-0" />
                       <span>{lang === 'vi' ? `Zalo: ${CONTACT_PHONE_DISPLAY}` : `Zalo: ${CONTACT_PHONE_DISPLAY}`}</span>
                     </a>
                   </div>
@@ -1141,9 +1126,9 @@ export const CoursesPage: React.FC = () => {
 
               {/* Subcategory Quick Cards if parent category has children (placed below screenshots showcase) */}
               {childCoursesOfCurrent.length > 0 && (
-                <div className="bg-gradient-to-br from-amber-50/55 via-slate-50 to-sky-50/50 rounded-2xl p-5 border border-amber-200/80">
-                  <h3 className="text-xs sm:text-sm font-black uppercase tracking-wider text-amber-800 mb-3 flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-rose-500" />
+                <div className="bg-slate-50/90 rounded-2xl p-5 border border-slate-200/90">
+                  <h3 className="text-xs sm:text-sm font-black uppercase tracking-wider text-[#0a5482] mb-3 flex items-center gap-2">
+                    <span className="w-1.5 h-4 rounded-full bg-[#0a5482]" />
                     <span>{lang === 'vi' ? 'Các cấp độ / chuyên đề trong khóa học này:' : 'Courses in this category:'}</span>
                   </h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -1175,27 +1160,32 @@ export const CoursesPage: React.FC = () => {
               )}
 
               {courseDescHtml && (
-                <div className="rounded-2xl bg-gradient-to-r from-amber-50 via-yellow-50/60 to-emerald-50/70 border-2 border-amber-300/80 px-4 sm:px-5 py-4 flex flex-wrap items-center justify-between gap-3 shadow-2xs">
+                <div className="rounded-2xl bg-slate-50/90 border border-slate-200/90 border-l-4 border-l-[#0a5482] px-4 sm:px-5 py-4 flex flex-wrap items-center justify-between gap-3 shadow-2xs">
                   <div className="space-y-1">
-                    <div className="text-sm sm:text-base font-extrabold text-slate-800 flex flex-wrap items-center gap-2">
-                      <span>💳 {lang === 'vi' ? 'Học phí:' : 'Tuition fee:'}</span>
-                      <span className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-rose-600 text-white text-xs sm:text-sm font-black shadow-2xs">
-                        {lang === 'vi' ? 'Liên hệ' : 'Contact Mr. Tony'}
+                    <div className="text-sm sm:text-base font-extrabold text-slate-900 flex flex-wrap items-center gap-2">
+                      <CreditCard className="w-4 h-4 text-[#0a5482] shrink-0" />
+                      <span>{lang === 'vi' ? 'Học phí:' : 'Tuition fee:'}</span>
+                      <span className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-sky-50 text-[#0a5482] border border-sky-200 text-xs sm:text-sm font-black">
+                        {lang === 'vi' ? 'Liên hệ tư vấn' : 'Contact Mr. Tony'}
                       </span>
                     </div>
-                    <div className="text-xs sm:text-[13px] font-bold text-emerald-700">
-                      {lang === 'vi'
-                        ? '✨ Học thử miễn phí 2–3 buổi tại R2B Royal City — Thấy thật sự hợp thầy mới đăng ký'
-                        : '✨ 2–3 Free Trial Lessons at R2B Royal City before enrollment'}
+                    <div className="text-xs sm:text-[13px] font-semibold text-slate-600 flex items-center gap-1.5">
+                      <Sparkles className="w-3.5 h-3.5 text-amber-500 shrink-0" />
+                      <span>
+                        {lang === 'vi'
+                          ? 'Học thử miễn phí 2–3 buổi tại R2B Royal City — Thấy thật sự hợp thầy mới đăng ký'
+                          : '2–3 Free Trial Lessons at R2B Royal City before enrollment'}
+                      </span>
                     </div>
                   </div>
                   <a
                     href={`tel:${CONTACT_PHONE}`}
                     onClick={() => trackCourseConversion('Phone', courseTitle)}
-                    className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-extrabold text-emerald-800 bg-white hover:bg-emerald-50 border border-emerald-300 px-3.5 py-2 rounded-xl shadow-2xs transition"
+                    className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-extrabold text-[#0a5482] bg-white hover:bg-sky-50 border border-slate-300 hover:border-[#0a5482] px-3.5 py-2 rounded-xl shadow-2xs transition"
                   >
-                    <span>📞 {lang === 'vi' ? 'Hotline / Zalo:' : 'Hotline / Zalo:'}</span>
-                    <strong className="text-rose-600">{CONTACT_PHONE_DISPLAY}</strong>
+                    <Phone className="w-3.5 h-3.5 text-[#0284c7]" />
+                    <span>{lang === 'vi' ? 'Hotline / Zalo:' : 'Hotline / Zalo:'}</span>
+                    <strong className="text-slate-900">{CONTACT_PHONE_DISPLAY}</strong>
                   </a>
                 </div>
               )}
@@ -1284,7 +1274,7 @@ export const CoursesPage: React.FC = () => {
                 <a
                   href={`tel:${CONTACT_PHONE}`}
                   onClick={() => trackCourseConversion('Phone', courseTitle)}
-                  className="bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-sm px-5 py-3 rounded-xl shadow-md transition inline-flex items-center gap-2"
+                  className="bg-[#0a5482] hover:bg-[#084266] text-white font-extrabold text-sm px-5 py-3 rounded-xl shadow-sm transition inline-flex items-center gap-2"
                 >
                   <Phone className="w-4 h-4 shrink-0" />
                   <span>
@@ -1299,9 +1289,9 @@ export const CoursesPage: React.FC = () => {
                   target="_blank"
                   rel="noreferrer"
                   onClick={(e) => handleZaloClick(e, courseTitle)}
-                  className="bg-[#0068ff] hover:bg-[#0057d6] text-white font-extrabold text-sm px-5 py-3 rounded-xl shadow-md transition inline-flex items-center gap-2"
+                  className="bg-white hover:bg-sky-50 text-[#0a5482] border border-slate-300 hover:border-[#0068ff] font-extrabold text-sm px-5 py-3 rounded-xl shadow-2xs transition inline-flex items-center gap-2"
                 >
-                  <MessageCircle className="w-4 h-4 shrink-0" />
+                  <MessageCircle className="w-4 h-4 text-[#0068ff] shrink-0" />
                   <span>
                     {lang === 'vi'
                       ? `Tư vấn qua Zalo: ${CONTACT_PHONE_DISPLAY}`
@@ -1310,13 +1300,13 @@ export const CoursesPage: React.FC = () => {
                 </a>
               </div>
 
-              {/* BẢNG DANH MỤC CÁC KHÓA HỌC TẠI TONYENGLISH (KHỐI BẢNG LINK PHỄU CÓ ẢNH CÂN ĐỐI BÊN DƯỚI) */}
+              {/* BẢNG DANH MỤC CÁC KHÓA HỌC TẠI TONYENGLISH */}
               {homeParents.length > 0 && (
                 <div className="pt-6 border-t border-slate-200">
                   <div className="bg-slate-50 rounded-2xl border border-slate-200/90 overflow-hidden shadow-xs">
-                    <div className="h-1 w-full bg-gradient-to-r from-rose-500 via-amber-400 to-emerald-500" />
-                    <div className="bg-gradient-to-r from-[#0369a1] via-[#0a5482] to-[#0f766e] px-5 py-4 text-white flex items-center gap-3">
-                      <span className="w-9 h-9 rounded-xl bg-amber-400/20 border border-amber-300/40 text-amber-200 flex items-center justify-center shrink-0">
+                    <div className="h-[3px] w-full bg-gradient-to-r from-[#2ab4e8] via-amber-400 to-[#0a5482]" />
+                    <div className="bg-gradient-to-br from-[#073b5c] via-[#0a5482] to-[#0f172a] px-5 py-4 text-white flex items-center gap-3">
+                      <span className="w-9 h-9 rounded-xl bg-white/10 border border-white/20 text-amber-300 flex items-center justify-center shrink-0">
                         <BookOpen className="w-4 h-4" />
                       </span>
                       <div>
@@ -1325,7 +1315,7 @@ export const CoursesPage: React.FC = () => {
                             ? 'Danh Mục Các Gói Gia Sư 1 Kèm 1 Cùng Thầy Tony'
                             : '1-on-1 Private Tutoring Packages with Mr. Tony'}
                         </h2>
-                        <p className="text-xs text-amber-100/95 font-medium">
+                        <p className="text-xs text-sky-200/90 font-medium">
                           {lang === 'vi'
                             ? 'Bấm vào từng gói học bên dưới để xem chi tiết nội dung và lộ trình ôn luyện'
                             : 'Click on any tutoring package below to view full details'}
@@ -1470,7 +1460,7 @@ export const CoursesPage: React.FC = () => {
         <a
           href={`tel:${CONTACT_PHONE}`}
           onClick={() => trackCourseConversion('Phone', courseTitle)}
-          className="inline-flex items-center justify-center gap-1.5 bg-emerald-600 active:bg-emerald-700 text-white font-extrabold text-xs py-2.5 px-3 rounded-xl shadow-xs whitespace-nowrap"
+          className="inline-flex items-center justify-center gap-1.5 bg-[#0a5482] active:bg-[#084266] text-white font-extrabold text-xs py-2.5 px-3 rounded-xl shadow-xs whitespace-nowrap"
         >
           <Phone className="w-3.5 h-3.5 shrink-0" />
           <span>{lang === 'vi' ? `Gọi: ${CONTACT_PHONE_DISPLAY}` : `Call: ${CONTACT_PHONE_DISPLAY}`}</span>
@@ -1480,9 +1470,9 @@ export const CoursesPage: React.FC = () => {
           target="_blank"
           rel="noreferrer"
           onClick={(e) => handleZaloClick(e, courseTitle)}
-          className="inline-flex items-center justify-center gap-1.5 bg-[#0068ff] active:bg-[#0057d6] text-white font-extrabold text-xs py-2.5 px-3 rounded-xl shadow-xs whitespace-nowrap"
+          className="inline-flex items-center justify-center gap-1.5 bg-white active:bg-sky-50 text-[#0a5482] border border-slate-300 font-extrabold text-xs py-2.5 px-3 rounded-xl shadow-2xs whitespace-nowrap"
         >
-          <MessageCircle className="w-3.5 h-3.5 shrink-0" />
+          <MessageCircle className="w-3.5 h-3.5 text-[#0068ff] shrink-0" />
           <span>Zalo: {CONTACT_PHONE_DISPLAY}</span>
         </a>
       </div>

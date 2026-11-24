@@ -833,10 +833,10 @@ export const Layout: React.FC<{
             />
             <div className="flex flex-col items-start leading-none">
               <div className="font-display font-black text-[16px] sm:text-[21px] xl:text-[24px] tracking-tight whitespace-nowrap">
-                <span className="text-[#2ab4e8]">TONY</span>
+                <span className="text-[#0284c7]">TONY</span>
                 <span className="text-[#0a5482]">ENGLISH</span>
               </div>
-              <span className="text-[9px] xl:text-[10.5px] font-bold uppercase tracking-wider xl:tracking-widest text-slate-400 mt-0.5 hidden sm:block">
+              <span className="text-[9px] xl:text-[10.5px] font-bold uppercase tracking-wider xl:tracking-widest text-slate-500 mt-0.5 hidden sm:block">
                 The future begins here
               </span>
             </div>
@@ -867,7 +867,7 @@ export const Layout: React.FC<{
                     : 'text-slate-600 hover:text-[#0a5482] hover:bg-slate-50 border border-transparent'
                 }`}
               >
-                <BookOpen className="w-4 h-4 text-[#2ab4e8]" />
+                <BookOpen className="w-4 h-4 text-[#0284c7]" />
                 <span>{t('Lectures')}</span>
               </Link>
             )}
@@ -1374,9 +1374,10 @@ export const Layout: React.FC<{
                     <button
                       type="button"
                       onClick={() => setLoginModalOpen(false)}
-                      className="text-slate-400 hover:text-red-500 text-2xl font-bold transition-colors leading-none cursor-pointer"
+                      aria-label={lang === 'vi' ? 'Đóng' : 'Close'}
+                      className="w-8 h-8 rounded-xl bg-white hover:bg-rose-50 text-slate-500 hover:text-rose-600 border border-slate-200 flex items-center justify-center transition-colors cursor-pointer shrink-0"
                     >
-                      &times;
+                      <X className="w-4 h-4" />
                     </button>
                   </div>
 
@@ -1444,7 +1445,7 @@ export const Layout: React.FC<{
                             setResetSentSuccess(false);
                             setResetError('');
                           }}
-                          className="text-xs font-bold text-[#2ab4e8] hover:text-[#0a5482] transition-colors cursor-pointer"
+                          className="text-xs font-bold text-[#0284c7] hover:text-[#0a5482] transition-colors cursor-pointer"
                         >
                           {lang === 'vi' ? 'Quên mật khẩu?' : 'Forgot password?'}
                         </button>
@@ -1704,7 +1705,7 @@ export const Layout: React.FC<{
                   className="h-6 w-auto object-contain shrink-0"
                 />
                 <div className="font-display font-black text-sm tracking-tight shrink-0">
-                  <span className="text-[#2ab4e8]">TONY</span>
+                  <span className="text-[#0284c7]">TONY</span>
                   <span className="text-[#0a5482]">DICT</span>
                 </div>
                 <span className="hidden sm:inline-block text-slate-300 mx-0.5">|</span>

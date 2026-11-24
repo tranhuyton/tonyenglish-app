@@ -1,4 +1,23 @@
 import { useState, useEffect, useMemo, useRef, useCallback } from 'react';
+import {
+  Palette,
+  RefreshCw,
+  RotateCcw,
+  BookOpen,
+  Library,
+  ClipboardList,
+  MoreHorizontal,
+  ChevronDown,
+  ChevronLeft,
+  ChevronRight,
+  AlertTriangle,
+  ArrowRight,
+  X,
+  CheckCircle2,
+  Clock,
+  FileText,
+  Target,
+} from 'lucide-react';
 import { supabase } from './supabase';
 import { parseModuleTheme, formatModuleTitleWithColor, ModuleColorModal } from './moduleTheme';
 import { parseLectureFromItem } from './lectureTaskUtils';
@@ -947,29 +966,26 @@ export default function TaskBoard({
         </div>
       )}
 
-      {/* TONYENGLISH.VN SYNCHRONIZED HEADER BANNER */}
+      {/* TONYENGLISH.VN SYNCHRONIZED HEADER BANNER (Matches ThemeModal Preview) */}
       <div className="mb-5 sm:mb-6 shrink-0 relative z-30">
         <div 
           className="rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-7 shadow-md text-white flex flex-col gap-4 transition-all duration-300 relative border border-white/15"
           style={{
-            background:
-              boardTheme.id === 'tony-classic'
-                ? 'linear-gradient(135deg, #0369a1 0%, #1d4ed8 52%, #4338ca 100%)'
-                : boardTheme.titleBg,
+            background: boardTheme.titleBg,
           }}
         >
-          {/* Decorative Ribbon + Ambient Glow */}
+          {/* Subtle Academic Accent Hairline + Ambient Glow */}
           <div className="absolute inset-0 overflow-hidden rounded-2xl sm:rounded-3xl pointer-events-none">
-            <div className="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-amber-400 via-rose-400 to-sky-400" />
-            <div className="absolute -top-24 -right-24 w-80 h-80 bg-amber-300/20 blur-3xl rounded-full"></div>
-            <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-indigo-400/20 blur-3xl rounded-full"></div>
+            <div className="absolute top-0 inset-x-0 h-[3px] bg-gradient-to-r from-amber-400 via-[#2ab4e8] to-[#0a5482]" />
+            <div className="absolute -top-24 -right-24 w-80 h-80 bg-[#2ab4e8]/15 blur-3xl rounded-full"></div>
+            <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-amber-300/15 blur-3xl rounded-full"></div>
           </div>
 
           <div className="relative z-20 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4">
             <div className="flex items-start justify-between w-full lg:w-auto gap-3 min-w-0 flex-1">
               <div className="min-w-0">
-                <div className="inline-flex items-center gap-2 bg-amber-400/15 backdrop-blur-xs border border-amber-300/35 px-3 py-1 rounded-full text-[10px] sm:text-[11px] font-extrabold tracking-widest uppercase text-amber-200 mb-2.5 whitespace-nowrap">
-                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
+                <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-xs border border-white/20 px-3 py-1 rounded-full text-[10px] sm:text-[11px] font-extrabold tracking-widest uppercase text-amber-200 mb-2.5 whitespace-nowrap">
+                  <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse shrink-0"></span>
                   <span>{isEn ? 'TonyEnglish Study Task Board' : 'TonyEnglish Task Board • Bảng Công Việc'}</span>
                 </div>
                 <h1 className="text-xl sm:text-2xl md:text-[26px] font-black tracking-tight text-white leading-tight">
@@ -985,10 +1001,10 @@ export default function TaskBoard({
                 <button
                   type="button"
                   onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                  className="w-8 h-8 rounded-xl bg-white/15 hover:bg-white/25 border border-white/20 active:scale-95 text-white flex items-center justify-center font-bold text-base transition-all shadow-xs cursor-pointer"
+                  className="w-8 h-8 rounded-xl bg-white/15 hover:bg-white/25 border border-white/20 active:scale-95 text-white flex items-center justify-center transition-all shadow-xs cursor-pointer"
                   title={isEn ? 'Task board options' : 'Tùy chọn bảng công việc'}
                 >
-                  ⋯
+                  <MoreHorizontal className="w-4 h-4" />
                 </button>
 
                 {isMobileMenuOpen && (
@@ -1000,7 +1016,7 @@ export default function TaskBoard({
                         onClick={() => { setIsThemeModalOpen(true); setIsMobileMenuOpen(false); }}
                         className="w-full px-4 py-2.5 text-left text-xs font-bold hover:bg-slate-50 flex items-center gap-2.5 transition-colors cursor-pointer"
                       >
-                        <span className="text-base">🎨</span> {isEn ? 'Change background theme' : 'Đổi giao diện màu nền'}
+                        <Palette className="w-4 h-4 text-[#0a5482] shrink-0" /> {isEn ? 'Change background theme' : 'Đổi giao diện màu nền'}
                       </button>
                       {isAdmin && activeBoardCourseId && (
                         <button
@@ -1009,7 +1025,7 @@ export default function TaskBoard({
                           onClick={() => { setIsMobileMenuOpen(false); handleAdminSyncLectures(); }}
                           className="w-full px-4 py-2.5 text-left text-xs font-bold hover:bg-amber-50 text-amber-700 flex items-center gap-2.5 transition-colors border-t border-slate-100 cursor-pointer disabled:opacity-50"
                         >
-                          <span className="text-base">🔄</span>
+                          <RefreshCw className={`w-4 h-4 shrink-0 ${isSyncingLectures ? 'animate-spin' : ''}`} />
                           <span>
                             {missingLectureTaskCount > 0
                               ? (isEn ? `Sync lectures (+${missingLectureTaskCount})` : `Đồng bộ bài giảng (+${missingLectureTaskCount})`)
@@ -1021,9 +1037,9 @@ export default function TaskBoard({
                         <button
                           type="button"
                           onClick={() => { handleResetColumnOrder(currentBoard.title); setIsMobileMenuOpen(false); }}
-                          className="w-full px-4 py-2.5 text-left text-xs font-bold hover:bg-slate-50 text-amber-600 flex items-center gap-2.5 transition-colors border-t border-slate-100 cursor-pointer"
+                          className="w-full px-4 py-2.5 text-left text-xs font-bold hover:bg-slate-50 text-amber-700 flex items-center gap-2.5 transition-colors border-t border-slate-100 cursor-pointer"
                         >
-                          <span className="text-base">↺</span> {isEn ? 'Reset column order' : 'Đặt lại thứ tự cột'}
+                          <RotateCcw className="w-4 h-4 shrink-0" /> {isEn ? 'Reset column order' : 'Đặt lại thứ tự cột'}
                         </button>
                       )}
                       {onOpenLecture && (
@@ -1032,7 +1048,7 @@ export default function TaskBoard({
                           onClick={() => { onOpenLecture(); setIsMobileMenuOpen(false); }}
                           className="w-full px-4 py-2.5 text-left text-xs font-bold hover:bg-emerald-50 text-emerald-700 flex items-center gap-2.5 transition-colors border-t border-slate-100 cursor-pointer"
                         >
-                          <span className="text-base">📖</span> {isEn ? 'Theory Lectures' : 'Bài giảng lý thuyết'}
+                          <BookOpen className="w-4 h-4 shrink-0" /> {isEn ? 'Theory Lectures' : 'Bài giảng lý thuyết'}
                         </button>
                       )}
                       {onStartTest && (
@@ -1041,7 +1057,7 @@ export default function TaskBoard({
                           onClick={() => { onStartTest(''); setIsMobileMenuOpen(false); }}
                           className="w-full px-4 py-2.5 text-left text-xs font-bold hover:bg-sky-50 text-[#0a5482] flex items-center gap-2.5 transition-colors border-t border-slate-100 cursor-pointer"
                         >
-                          <span className="text-base">📚</span> {isEn ? 'Open Test Bank' : 'Mở kho đề'}
+                          <Library className="w-4 h-4 shrink-0" /> {isEn ? 'Open Test Bank' : 'Mở kho đề'}
                         </button>
                       )}
                     </div>
@@ -1071,7 +1087,7 @@ export default function TaskBoard({
                   </div>
                 ) : (
                   <div className="relative flex items-center bg-white/12 hover:bg-white/20 backdrop-blur-xs border border-white/20 rounded-xl px-3 h-[38px] transition-all">
-                    <span className="text-xs mr-1.5 shrink-0">📋</span>
+                    <ClipboardList className="w-3.5 h-3.5 text-sky-200 mr-1.5 shrink-0" />
                     <select
                       value={activeBoardIndex}
                       onChange={(e) => setActiveBoardIndex(Number(e.target.value))}
@@ -1082,12 +1098,12 @@ export default function TaskBoard({
                         const shortName = getLocalizedCourseTitle(b.title.replace(/^bảng công việc\s*(—|-|:)?\s*/i, '').trim() || b.title, lang);
                         return (
                           <option key={b.title} value={idx} className="bg-slate-900 text-white font-bold">
-                            📋 {shortName} ({b.totalCompleted}/{b.totalItems})
+                            {shortName} ({b.totalCompleted}/{b.totalItems})
                           </option>
                         );
                       })}
                     </select>
-                    <span className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[10px] text-white/80 pointer-events-none">▼</span>
+                    <ChevronDown className="w-3.5 h-3.5 absolute right-2.5 top-1/2 -translate-y-1/2 text-white/80 pointer-events-none" />
                   </div>
                 )
               )}
@@ -1116,7 +1132,7 @@ export default function TaskBoard({
                   className="hidden sm:flex bg-white/12 hover:bg-white/20 border border-white/20 active:scale-95 text-white text-xs sm:text-[13px] font-bold px-3.5 py-2 rounded-xl transition-all shadow-xs items-center gap-1.5 cursor-pointer shrink-0 h-[38px]"
                   title={isEn ? 'Restore original column order' : 'Khôi phục thứ tự các cột ban đầu'}
                 >
-                  <span>↺</span> <span className="hidden xl:inline">{isEn ? 'Reset Columns' : 'Đặt lại cột'}</span>
+                  <RotateCcw className="w-3.5 h-3.5 shrink-0" /> <span className="hidden xl:inline">{isEn ? 'Reset Columns' : 'Đặt lại cột'}</span>
                 </button>
               )}
 
@@ -1133,7 +1149,7 @@ export default function TaskBoard({
                   }`}
                   title={isEn ? 'Sync lecture tasks & quizzes to the Task Board' : 'Đồng bộ đầy đủ công việc & bài tập quizzes từ bài giảng vào Bảng giao bài và cập nhật cho học sinh'}
                 >
-                  <span className={isSyncingLectures ? 'animate-spin' : ''}>🔄</span>
+                  <RefreshCw className={`w-3.5 h-3.5 shrink-0 ${isSyncingLectures ? 'animate-spin' : ''}`} />
                   <span>
                     {isSyncingLectures
                       ? (isEn ? 'Syncing...' : 'Đang đồng bộ...')
@@ -1151,7 +1167,7 @@ export default function TaskBoard({
                 className="hidden sm:flex bg-white/12 hover:bg-white/20 border border-white/20 active:scale-95 text-white text-xs sm:text-[13px] font-bold px-3.5 py-2 rounded-xl transition-all shadow-xs items-center gap-1.5 cursor-pointer shrink-0 h-[38px]"
                 title={isEn ? 'Change background theme' : 'Đổi giao diện màu nền'}
               >
-                <span>🎨</span> <span className="hidden xl:inline">{isEn ? 'Theme' : 'Giao diện'}</span>
+                <Palette className="w-4 h-4 text-sky-200 shrink-0" /> <span className="hidden xl:inline">{isEn ? 'Theme' : 'Giao diện'}</span>
               </button>
             </div>
           </div>
@@ -1171,13 +1187,16 @@ export default function TaskBoard({
 
       {(() => {
         const board = boardsData[activeBoardIndex] || boardsData[0];
+        const isMidnightDark = boardTheme.id === 'midnight-dark';
         if (!board) {
           return (
             <div className="flex-1 min-h-[340px] flex flex-col items-center justify-center py-8">
-              <div className="p-10 text-center bg-white rounded-3xl shadow-xs border border-slate-200 max-w-md">
-                <span className="text-5xl block mb-4 opacity-40 grayscale">📋</span>
-                <h3 className="text-xl font-black text-slate-800 mb-2 tracking-tight">{isEn ? 'No task board yet' : 'Chưa có bảng công việc nào'}</h3>
-                <p className="text-[14px] text-slate-500 font-medium">{isEn ? 'Select another course or contact your teacher to have a study board assigned.' : 'Hãy chọn một khóa học khác hoặc liên hệ giáo viên để được giao bảng công việc.'}</p>
+              <div className={`p-10 text-center rounded-3xl shadow-xs border max-w-md flex flex-col items-center ${isMidnightDark ? 'bg-slate-800 border-slate-700 text-slate-100' : 'bg-white border-slate-200 text-slate-800'}`}>
+                <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-4 ${isMidnightDark ? 'bg-slate-700 text-slate-300' : 'bg-slate-100 text-slate-400'}`}>
+                  <ClipboardList className="w-7 h-7" />
+                </div>
+                <h3 className={`text-xl font-black mb-2 tracking-tight ${isMidnightDark ? 'text-white' : 'text-slate-800'}`}>{isEn ? 'No task board yet' : 'Chưa có bảng công việc nào'}</h3>
+                <p className={`text-[14px] font-medium ${isMidnightDark ? 'text-slate-300' : 'text-slate-500'}`}>{isEn ? 'Select another course or contact your teacher to have a study board assigned.' : 'Hãy chọn một khóa học khác hoặc liên hệ giáo viên để được giao bảng công việc.'}</p>
               </div>
             </div>
           );
@@ -1185,17 +1204,17 @@ export default function TaskBoard({
 
         return (
           <div key={board.title} className="w-full flex flex-col relative">
-            {/* Mobile Dots Carousel & Column Navigation (top-accessible on mobile when columns expand naturally) */}
+            {/* Mobile Dots Carousel & Column Navigation (High-contrast on Midnight Dark too) */}
             {board.columns.length > 1 && (
-              <div className="sm:hidden flex items-center justify-between px-3 py-1.5 mb-2.5 rounded-2xl shrink-0 z-20 bg-slate-900/85 backdrop-blur-xs shadow-xs">
+              <div className={`sm:hidden flex items-center justify-between px-3 py-1.5 mb-2.5 rounded-2xl shrink-0 z-20 backdrop-blur-xs shadow-sm ${isMidnightDark ? 'bg-slate-800/95 border border-slate-600/80' : 'bg-slate-900/85 border border-white/10'}`}>
                 <button
                   type="button"
                   onClick={() => scrollToColumn(Math.max(0, activeMobileColIndex - 1))}
                   disabled={activeMobileColIndex === 0}
-                  className="w-10 h-10 rounded-full bg-white/20 hover:bg-white/30 active:scale-90 disabled:opacity-20 text-white flex items-center justify-center text-lg font-bold transition-all cursor-pointer"
+                  className="w-10 h-10 rounded-full bg-white/15 hover:bg-white/25 active:scale-90 disabled:opacity-25 text-white flex items-center justify-center transition-all cursor-pointer"
                   aria-label={isEn ? 'Previous column' : 'Cột trước'}
                 >
-                  ‹
+                  <ChevronLeft className="w-5 h-5" />
                 </button>
 
                 <div className="flex items-center gap-1.5 max-w-[220px] overflow-x-auto py-1 px-1 custom-scrollbar">
@@ -1218,10 +1237,10 @@ export default function TaskBoard({
                   type="button"
                   onClick={() => scrollToColumn(Math.min(board.columns.length - 1, activeMobileColIndex + 1))}
                   disabled={activeMobileColIndex === board.columns.length - 1}
-                  className="w-10 h-10 rounded-full bg-white/20 hover:bg-white/30 active:scale-90 disabled:opacity-20 text-white flex items-center justify-center text-lg font-bold transition-all cursor-pointer"
+                  className="w-10 h-10 rounded-full bg-white/15 hover:bg-white/25 active:scale-90 disabled:opacity-25 text-white flex items-center justify-center transition-all cursor-pointer"
                   aria-label={isEn ? 'Next column' : 'Cột tiếp theo'}
                 >
-                  ›
+                  <ChevronRight className="w-5 h-5" />
                 </button>
               </div>
             )}
@@ -1256,9 +1275,10 @@ export default function TaskBoard({
                   });
                 const dbTheme = parseModuleTheme(matchingCol?.title || col.name);
                 const userColColor = customColColors[col.name];
-                const effectiveBg = userColColor?.bg || (dbTheme.hasColor ? dbTheme.bg : '#f1f5f9');
-                const effectiveBorder = userColColor?.border || (dbTheme.hasColor ? dbTheme.border : '#cbd5e1');
-                const effectiveText = userColColor?.text || (dbTheme.hasColor ? dbTheme.text : '#0f172a');
+                const useDarkColSurface = isMidnightDark && !userColColor && !dbTheme.hasColor;
+                const effectiveBg = userColColor?.bg || (dbTheme.hasColor ? dbTheme.bg : (useDarkColSurface ? '#1e293b' : '#f1f5f9'));
+                const effectiveBorder = userColColor?.border || (dbTheme.hasColor ? dbTheme.border : (useDarkColSurface ? '#334155' : '#cbd5e1'));
+                const effectiveText = userColColor?.text || (dbTheme.hasColor ? dbTheme.text : (useDarkColSurface ? '#f1f5f9' : '#0f172a'));
                 const cleanColTitle = dbTheme.cleanTitle;
 
                 const isDragging = draggedColName === col.name;
@@ -1324,7 +1344,7 @@ export default function TaskBoard({
                     <div 
                       className="column-drag-handle flex justify-between items-center p-2.5 rounded-xl mb-2.5 shadow-2xs transition-colors shrink-0 cursor-grab active:cursor-grabbing select-none"
                       style={{
-                        backgroundColor: 'rgba(255, 255, 255, 0.85)',
+                        backgroundColor: useDarkColSurface ? 'rgba(15, 23, 42, 0.85)' : 'rgba(255, 255, 255, 0.88)',
                         borderColor: effectiveBorder,
                         borderWidth: '1px',
                         color: effectiveText
@@ -1332,7 +1352,7 @@ export default function TaskBoard({
                       title={isEn ? 'Drag to reorder column' : 'Nhấp và kéo để đổi vị trí cột'}
                     >
                       <div className="flex items-center gap-2 min-w-0 flex-1">
-                        <span className="w-1 h-4 rounded-full shrink-0" style={{ backgroundColor: effectiveText, opacity: 0.65 }}></span>
+                        <span className="w-1 h-4 rounded-full shrink-0" style={{ backgroundColor: useDarkColSurface ? '#38bdf8' : effectiveText, opacity: 0.75 }}></span>
                         <h2 className="font-extrabold text-[13.5px] truncate tracking-tight" title={cleanColTitle}>
                           {cleanColTitle}
                         </h2>
@@ -1341,7 +1361,7 @@ export default function TaskBoard({
                         <span 
                           className="text-[11px] font-extrabold px-2 py-0.5 rounded-lg border shadow-2xs"
                           style={{
-                            backgroundColor: 'white',
+                            backgroundColor: useDarkColSurface ? '#1e293b' : 'white',
                             borderColor: effectiveBorder,
                             color: effectiveText
                           }}
@@ -1354,11 +1374,11 @@ export default function TaskBoard({
                             e.stopPropagation();
                             setActiveColumnColorModal({ colName: col.name, colId: matchingCol?.id });
                           }}
-                          className="w-6 h-6 rounded-lg bg-white hover:bg-slate-50 border flex items-center justify-center text-xs transition-all cursor-pointer shadow-2xs hover:scale-105"
+                          className={`w-6 h-6 rounded-lg border flex items-center justify-center transition-all cursor-pointer shadow-2xs hover:scale-105 ${useDarkColSurface ? 'bg-slate-800 hover:bg-slate-700 text-sky-300' : 'bg-white hover:bg-slate-50 text-[#0a5482]'}`}
                           style={{ borderColor: effectiveBorder }}
                           title={isEn ? 'Change column color' : 'Đổi màu nền cột này'}
                         >
-                          🎨
+                          <Palette className="w-3.5 h-3.5" />
                         </button>
                       </div>
                     </div>
@@ -1389,31 +1409,33 @@ export default function TaskBoard({
                           <div 
                             key={card.title} 
                             onClick={() => setActiveModalCard({ card, colName: col.name, boardTitle: board.title })}
-                            className={`task-card-item bg-white rounded-xl border shadow-2xs hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 p-3.5 cursor-pointer select-none group ${
-                              isCardAllDone 
-                                ? 'border-emerald-300 bg-gradient-to-br from-white to-emerald-50/40' 
-                                : 'border-slate-200/90 hover:border-[#2ab4e8]'
+                            className={`task-card-item rounded-xl border shadow-2xs hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 p-3.5 cursor-pointer select-none group ${
+                              useDarkColSurface
+                                ? (isCardAllDone
+                                    ? 'bg-emerald-950/60 border-emerald-600/60 text-slate-100'
+                                    : 'bg-slate-900/90 border-slate-700/80 hover:border-sky-400/70 text-slate-100')
+                                : (isCardAllDone 
+                                    ? 'bg-gradient-to-br from-white to-emerald-50/40 border-emerald-300' 
+                                    : 'bg-white border-slate-200/90 hover:border-[#0284c7]')
                             }`}
                           >
                             <div className="flex justify-between items-start gap-2 mb-2">
-                              <h3 className="font-bold text-slate-800 text-[13.5px] leading-snug group-hover:text-[#0a5482] transition-colors tracking-tight">
+                              <h3 className={`font-bold text-[13.5px] leading-snug transition-colors tracking-tight ${useDarkColSurface ? 'text-slate-100 group-hover:text-sky-300' : 'text-slate-800 group-hover:text-[#0a5482]'}`}>
                                 {card.title}
                               </h3>
-                              <span className="text-slate-300 group-hover:text-[#2ab4e8] text-xs transition-colors shrink-0 mt-0.5">
-                                →
-                              </span>
+                              <ArrowRight className={`w-3.5 h-3.5 transition-colors shrink-0 mt-0.5 ${useDarkColSurface ? 'text-slate-500 group-hover:text-sky-300' : 'text-slate-300 group-hover:text-[#0284c7]'}`} />
                             </div>
                             
                             {/* Progress bar: only show sleek bar when there is progress (> 0%) */}
                             {progressPct > 0 && (
                               <div className="flex items-center gap-2 mb-2">
-                                <div className="flex-1 h-1.5 bg-slate-100 rounded-full overflow-hidden">
+                                <div className={`flex-1 h-1.5 rounded-full overflow-hidden ${useDarkColSurface ? 'bg-slate-800' : 'bg-slate-100'}`}>
                                   <div 
                                     className={`h-full rounded-full transition-all duration-500 ${isCardAllDone ? 'bg-emerald-500' : 'bg-gradient-to-r from-[#0a5482] to-[#2ab4e8]'}`}
                                     style={{ width: `${progressPct}%` }}
                                   />
                                 </div>
-                                <span className={`text-[11px] font-extrabold shrink-0 ${isCardAllDone ? 'text-emerald-600' : 'text-[#0a5482]'}`}>
+                                <span className={`text-[11px] font-extrabold shrink-0 ${isCardAllDone ? 'text-emerald-500' : (useDarkColSurface ? 'text-sky-300' : 'text-[#0a5482]')}`}>
                                   {progressPct}%
                                 </span>
                               </div>
@@ -1426,7 +1448,9 @@ export default function TaskBoard({
                                   className={`inline-flex items-center gap-1.5 text-[11px] transition-all select-none ${
                                     isManualDone 
                                       ? 'bg-emerald-600 text-white font-bold px-2 py-0.5 rounded-md shadow-xs' 
-                                      : 'text-slate-600 font-semibold hover:text-[#0a5482] bg-slate-50 border border-slate-200/80 px-2 py-0.5 rounded-md'
+                                      : useDarkColSurface
+                                        ? 'text-slate-200 font-semibold bg-slate-800 border border-slate-700 px-2 py-0.5 rounded-md'
+                                        : 'text-slate-600 font-semibold hover:text-[#0a5482] bg-slate-50 border border-slate-200/80 px-2 py-0.5 rounded-md'
                                   }`}
                                   title={isEn ? `Tasks: ${manualCompleted}/${manualTotal} completed` : `Công việc: ${manualCompleted}/${manualTotal} đã hoàn thành`}
                                 >
@@ -1443,7 +1467,9 @@ export default function TaskBoard({
                                   className={`inline-flex items-center gap-1.5 text-[11px] transition-all select-none ${
                                     isTestDone 
                                       ? 'bg-emerald-600 text-white font-bold px-2 py-0.5 rounded-md shadow-xs' 
-                                      : 'text-[#0a5482] font-semibold bg-sky-50/80 border border-sky-200/80 px-2 py-0.5 rounded-md'
+                                      : useDarkColSurface
+                                        ? 'text-sky-300 font-semibold bg-sky-950/60 border border-sky-800/80 px-2 py-0.5 rounded-md'
+                                        : 'text-[#0a5482] font-semibold bg-sky-50/80 border border-sky-200/80 px-2 py-0.5 rounded-md'
                                   }`}
                                   title={isEn ? `Tests: ${testCompleted}/${testTotal} completed` : `Bài tập: ${testCompleted}/${testTotal} đã làm`}
                                 >
@@ -1455,8 +1481,8 @@ export default function TaskBoard({
                               )}
 
                               {hasOverdue && (
-                                <span className="inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-md bg-rose-50 text-rose-600 border border-rose-200">
-                                  <span>⚠️</span> {isEn ? 'Overdue' : 'Quá hạn'}
+                                <span className={`inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-md border ${useDarkColSurface ? 'bg-rose-950/60 text-rose-300 border-rose-800/70' : 'bg-rose-50 text-rose-600 border-rose-200'}`}>
+                                  <AlertTriangle className="w-3 h-3 shrink-0" /> {isEn ? 'Overdue' : 'Quá hạn'}
                                 </span>
                               )}
                             </div>
@@ -1549,10 +1575,10 @@ export default function TaskBoard({
                               setActiveModalCard(null);
                               onOpenLecture?.(cardLecMeta.courseId || undefined, cardLecMeta.lectureId || undefined);
                             }}
-                            className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1 rounded-xl bg-sky-100 text-[#0284c7] hover:bg-[#0ea5e9] hover:text-white transition-all cursor-pointer shadow-2xs shrink-0 active:scale-95 border border-sky-200"
+                            className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1 rounded-xl bg-sky-50 text-[#0a5482] hover:bg-[#0a5482] hover:text-white transition-all cursor-pointer shadow-2xs shrink-0 active:scale-95 border border-sky-200/90"
                             title={isEn ? 'Open this lecture' : 'Mở bài giảng này'}
                           >
-                            <span>📖</span> {isEn ? 'Open Lecture ➜' : 'Mở bài giảng ➜'}
+                            <BookOpen className="w-3.5 h-3.5 shrink-0" /> <span>{isEn ? 'Open Lecture →' : 'Mở bài giảng →'}</span>
                           </button>
                         );
                       }
@@ -1564,7 +1590,7 @@ export default function TaskBoard({
                   <div className="mt-3 flex items-center gap-3">
                     <div className="flex-1 h-2.5 bg-black/10 rounded-full overflow-hidden">
                       <div 
-                        className={`h-full rounded-full transition-all duration-500 ${isCardAllDone ? 'bg-gradient-to-r from-emerald-400 to-emerald-500' : 'bg-gradient-to-r from-sky-400 to-[#0ea5e9]'}`}
+                        className={`h-full rounded-full transition-all duration-500 ${isCardAllDone ? 'bg-gradient-to-r from-emerald-500 to-emerald-600' : 'bg-gradient-to-r from-[#0a5482] to-[#2ab4e8]'}`}
                         style={{ width: `${progressPct}%` }}
                       />
                     </div>
@@ -1577,20 +1603,21 @@ export default function TaskBoard({
                 <button
                   type="button"
                   onClick={() => setActiveModalCard(null)}
-                  className="w-9 h-9 rounded-full bg-white/90 hover:bg-white text-slate-500 hover:text-slate-800 flex items-center justify-center transition-all shadow-sm shrink-0 border border-slate-200/80 cursor-pointer hover:scale-105"
+                  className="w-9 h-9 rounded-xl bg-white/90 hover:bg-rose-50 text-slate-500 hover:text-rose-600 flex items-center justify-center transition-all shadow-2xs shrink-0 border border-slate-200/80 cursor-pointer"
                   title={isEn ? 'Close (ESC)' : 'Đóng (ESC)'}
+                  aria-label={isEn ? 'Close' : 'Đóng'}
                 >
-                  ✕
+                  <X className="w-4 h-4" />
                 </button>
               </div>
 
               {/* Modal Body - Scrollable Items */}
               <div className="flex-1 overflow-y-auto custom-scrollbar p-5 sm:p-6 space-y-3 bg-slate-50/50">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-[11px] font-black text-slate-400 uppercase tracking-widest">
+                  <span className="text-[11px] font-black text-slate-500 uppercase tracking-widest">
                     {isEn ? `Checklist (${currentCard.items.length} items)` : `Danh sách bài tập (${currentCard.items.length} mục)`}
                   </span>
-                  <span className="text-[11px] font-semibold text-slate-400">
+                  <span className="text-[11px] font-semibold text-slate-500">
                     {currentCard.completedCount}/{currentCard.totalCount} {isEn ? 'done' : 'đã xong'}
                   </span>
                 </div>
@@ -1612,17 +1639,17 @@ export default function TaskBoard({
                             ? 'bg-emerald-50/50 border-emerald-200' 
                             : isItemInProgress 
                               ? 'bg-amber-50/50 border-amber-200 shadow-xs' 
-                              : 'bg-white border-slate-200 hover:border-sky-300 shadow-xs'
+                              : 'bg-white border-slate-200 hover:border-[#0284c7] shadow-xs'
                         }`}
                       >
                         <div className="flex items-start gap-3">
-                          <div className="mt-0.5 shrink-0 text-lg">
+                          <div className="mt-0.5 shrink-0">
                             {isItemDone ? (
-                              <span className="text-emerald-500 font-bold">✅</span>
+                              <CheckCircle2 className="w-5 h-5 text-emerald-600" />
                             ) : isItemInProgress ? (
-                              <span className="text-amber-500">⏳</span>
+                              <Clock className="w-5 h-5 text-amber-600" />
                             ) : (
-                              <span className="text-sky-500">📝</span>
+                              <FileText className="w-5 h-5 text-[#0a5482]" />
                             )}
                           </div>
                           <div className="flex-1 min-w-0">
@@ -1633,7 +1660,7 @@ export default function TaskBoard({
                                 {item.title}
                               </p>
                               {item.due_date && (
-                                <span className="text-[11px] text-slate-400 shrink-0 ml-2">
+                                <span className="text-[11px] text-slate-500 shrink-0 ml-2">
                                   {isEn ? 'Due:' : 'Hạn:'} {new Date(item.due_date + 'T00:00:00').toLocaleDateString(isEn ? 'en-US' : 'vi-VN', {day:'numeric', month:'short'})}
                                 </span>
                               )}
@@ -1648,24 +1675,24 @@ export default function TaskBoard({
                                     </span>
                                     {testScore && (
                                       <span 
-                                        className="inline-flex items-center gap-1 text-[11px] px-2.5 py-0.5 rounded-full bg-sky-100 text-[#0284c7] font-black border border-sky-200 shadow-xs"
+                                        className="inline-flex items-center gap-1 text-[11px] px-2.5 py-0.5 rounded-full bg-sky-50 text-[#0a5482] font-black border border-sky-200 shadow-2xs"
                                         title={isEn ? `Latest score: ${testScore.score}/${testScore.total_score} (${testScore.percent}%)` : `Điểm làm gần đây nhất: ${testScore.score}/${testScore.total_score} (${testScore.percent}%)`}
                                       >
-                                        🎯 {testScore.total_score > 0 ? `${testScore.score}/${testScore.total_score}` : testScore.score}
-                                        <span className="text-[10px] font-bold text-sky-600">({testScore.percent}%)</span>
+                                        <Target className="w-3 h-3 text-[#0284c7] shrink-0" /> {testScore.total_score > 0 ? `${testScore.score}/${testScore.total_score}` : testScore.score}
+                                        <span className="text-[10px] font-bold text-[#0284c7]">({testScore.percent}%)</span>
                                       </span>
                                     )}
                                   </div>
                                 ) : isItemInProgress ? (
-                                  <span className="inline-flex items-center text-[10px] px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-700 font-bold">
-                                    ⏳ {isEn ? 'In Progress' : 'Đang làm dở'}
+                                  <span className="inline-flex items-center gap-1 text-[10px] px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-800 font-bold">
+                                    <Clock className="w-3 h-3 shrink-0" /> {isEn ? 'In Progress' : 'Đang làm dở'}
                                   </span>
                                 ) : testScore ? (
                                   <span className="inline-flex items-center gap-1 text-[10px] px-2.5 py-0.5 rounded-full bg-rose-100 text-rose-700 font-bold border border-rose-200">
-                                    ⚠️ {isEn ? 'Not passed' : 'Chưa đạt'}: {testScore.total_score > 0 ? `${testScore.score}/${testScore.total_score}` : testScore.score} ({testScore.percent}%) • {isEn ? 'Need ≥ 50%' : 'Cần ≥ 50%'}
+                                    <AlertTriangle className="w-3 h-3 shrink-0" /> {isEn ? 'Not passed' : 'Chưa đạt'}: {testScore.total_score > 0 ? `${testScore.score}/${testScore.total_score}` : testScore.score} ({testScore.percent}%) • {isEn ? 'Need ≥ 50%' : 'Cần ≥ 50%'}
                                   </span>
                                 ) : (
-                                  <span className="inline-flex items-center text-[10px] px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-500 font-medium">
+                                  <span className="inline-flex items-center text-[10px] px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-600 font-medium">
                                     {isEn ? 'Not started (Need ≥ 50%)' : 'Chưa làm (Cần đạt ≥ 50%)'}
                                   </span>
                                 )}
@@ -1682,7 +1709,7 @@ export default function TaskBoard({
                                   className="text-xs font-bold px-3.5 py-1.5 rounded-xl bg-emerald-100 hover:bg-emerald-200 text-emerald-800 transition-colors flex items-center gap-1.5 shrink-0 shadow-xs cursor-pointer"
                                   title={isEn ? 'Retake this test' : 'Làm lại bài thi này'}
                                 >
-                                  <span>🔄</span> {isEn ? 'Retake' : 'Làm lại'}
+                                  <RefreshCw className="w-3.5 h-3.5 shrink-0" /> <span>{isEn ? 'Retake' : 'Làm lại'}</span>
                                 </button>
                               ) : isItemInProgress ? (
                                 <button 
@@ -1695,7 +1722,7 @@ export default function TaskBoard({
                                   className="text-xs font-bold px-3.5 py-1.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white shadow-xs transition-all flex items-center gap-1.5 shrink-0 cursor-pointer"
                                   title={isEn ? 'Continue test in progress' : 'Làm tiếp bài đang làm dở'}
                                 >
-                                  {isEn ? 'Continue ➜' : 'Làm tiếp ➜'}
+                                  {isEn ? 'Continue →' : 'Làm tiếp →'}
                                 </button>
                               ) : testScore ? (
                                 <button 
@@ -1708,7 +1735,7 @@ export default function TaskBoard({
                                   className="text-xs font-bold px-3.5 py-1.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white shadow-xs transition-all flex items-center gap-1.5 shrink-0 cursor-pointer"
                                   title={isEn ? 'Retake to reach ≥ 50%' : 'Làm lại để đạt điểm yêu cầu (≥ 50%)'}
                                 >
-                                  {isEn ? 'Retake to Pass ➜' : 'Làm lại để đạt điểm ➜'}
+                                  {isEn ? 'Retake to Pass →' : 'Làm lại để đạt điểm →'}
                                 </button>
                               ) : (
                                 <button 
@@ -1718,10 +1745,10 @@ export default function TaskBoard({
                                       setActiveModalCard(null);
                                     }
                                   }}
-                                  className="text-xs font-bold px-3.5 py-1.5 rounded-xl bg-[#0ea5e9] hover:bg-[#0284c7] text-white shadow-xs transition-all flex items-center gap-1.5 shrink-0 cursor-pointer"
+                                  className="text-xs font-bold px-3.5 py-1.5 rounded-xl bg-[#0a5482] hover:bg-[#084266] text-white shadow-xs transition-all flex items-center gap-1.5 shrink-0 cursor-pointer"
                                   title={isEn ? 'Start practice test' : 'Bắt đầu làm bài'}
                                 >
-                                  {isEn ? 'Start Test ➜' : 'Bắt đầu làm bài ➜'}
+                                  {isEn ? 'Start Test →' : 'Bắt đầu làm bài →'}
                                 </button>
                               )}
                             </div>

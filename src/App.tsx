@@ -34,7 +34,7 @@ const LoadingFallback = () => {
   const isEn = getLmsLang() === 'en';
   return (
     <div className="h-screen bg-[#f8fafc] flex flex-col items-center justify-center gap-4">
-      <div className="w-12 h-12 border-4 border-slate-200 border-t-[#2bd6eb] rounded-full animate-spin" />
+      <div className="w-12 h-12 border-4 border-slate-200 border-t-[#0a5482] rounded-full animate-spin" />
       <p className="text-slate-500 font-bold text-sm animate-pulse">{isEn ? 'Loading...' : 'Đang tải...'}</p>
     </div>
   );

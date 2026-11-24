@@ -492,29 +492,26 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
                 vKey.includes('kinh'));
             const vHeader = isDiscovery
               ? {
-                  stripe: 'from-amber-400 via-emerald-400 to-indigo-400',
-                  bg: 'from-[#4f46e5] via-[#4338ca] to-[#0f766e]',
-                  orb1: 'bg-amber-300/25',
-                  orb2: 'bg-teal-300/25',
+                  stripe: 'from-indigo-500 via-[#2ab4e8] to-emerald-400',
+                  bg: 'from-[#073b5c] via-[#0a5482] to-[#0f172a]',
+                  orb1: 'bg-indigo-400/20',
+                  orb2: 'bg-[#2ab4e8]/15',
                 }
               : {
-                  stripe: 'from-amber-400 via-rose-500 to-fuchsia-500',
-                  bg: 'from-[#be123c] via-[#9f1239] to-[#312e81]',
-                  orb1: 'bg-amber-300/30',
-                  orb2: 'bg-rose-400/25',
+                  stripe: 'from-[#2ab4e8] via-amber-400 to-[#0a5482]',
+                  bg: 'from-[#073b5c] via-[#0a5482] to-[#0f172a]',
+                  orb1: 'bg-[#2ab4e8]/20',
+                  orb2: 'bg-amber-300/15',
                 };
             const cardAccents = [
-              { pill: 'bg-rose-50 text-rose-700 border-rose-200/80', hoverText: 'group-hover:text-rose-700', arrow: 'text-rose-500' },
-              { pill: 'bg-emerald-50 text-emerald-700 border-emerald-200/80', hoverText: 'group-hover:text-emerald-700', arrow: 'text-emerald-500' },
-              { pill: 'bg-amber-50 text-amber-800 border-amber-200/80', hoverText: 'group-hover:text-amber-700', arrow: 'text-amber-500' },
-              { pill: 'bg-indigo-50 text-indigo-700 border-indigo-200/80', hoverText: 'group-hover:text-indigo-700', arrow: 'text-indigo-500' },
+              { pill: 'bg-sky-50 text-[#0a5482] border-sky-200/80', hoverText: 'group-hover:text-[#0a5482]', arrow: 'text-[#0284c7]' },
             ];
             return (
           <div className="bg-white rounded-2xl sm:rounded-3xl border border-slate-200/90 shadow-sm overflow-hidden">
-            {/* Vibrant Cinema Top Ribbon */}
-            <div className={`h-1.5 w-full bg-gradient-to-r ${vHeader.stripe}`} />
-            {/* Cinema Header */}
-            <div className={`relative overflow-hidden bg-gradient-to-r ${vHeader.bg} px-4 sm:px-8 py-4 sm:py-6 text-white`}>
+            {/* Academic Luxury Top Accent Bar */}
+            <div className={`h-1 w-full bg-gradient-to-r ${vHeader.stripe}`} />
+            {/* Video Hub Header */}
+            <div className={`relative overflow-hidden bg-gradient-to-br ${vHeader.bg} px-4 sm:px-8 py-4 sm:py-6 text-white`}>
               <div className={`pointer-events-none absolute -top-12 -right-10 w-48 h-48 rounded-full blur-3xl ${vHeader.orb1}`} />
               <div className={`pointer-events-none absolute -bottom-12 left-1/3 w-40 h-40 rounded-full blur-3xl ${vHeader.orb2}`} />
               <div className="relative z-10">
@@ -545,8 +542,13 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                   {subCatesToDisplay.map((sub, sIdx) => {
                     const childVideos = allVideoCates.filter((c) => Number(c.vc_parent) === Number(sub.vc_id));
+                    const fallbackImg =
+                      Number(sub.vc_id) === 61
+                        ? '/images/courses/course-comm-basic.jpg'
+                        : '/images/courses/course-overview.jpg';
                     const imgPath =
-                      childVideos.find((c) => c.vc_image)?.vc_image || sub.vc_image || 'No_Image_Wide.svg_1.png';
+                      sub.vc_image || childVideos.find((c) => c.vc_image)?.vc_image || '';
+                    const resolvedThumb = imgPath ? resolveUploadUrl(imgPath, fallbackImg) : fallbackImg;
                     const subTitle = lang === 'vi' ? sub.vc_name_vi || sub.vc_name : sub.vc_name;
                     const targetRoute = activeCate
                       ? `/video/${(sub.vc_name_url || '').trim()}`
@@ -558,24 +560,24 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
                       <Link
                         key={sub.vc_id}
                         to={targetRoute}
-                        className={`group bg-white rounded-2xl border border-slate-200/80 hover:border-rose-200 overflow-hidden shadow-2xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col ${
+                        className={`group bg-white rounded-2xl border border-slate-200/80 hover:border-[#0a5482]/40 overflow-hidden shadow-2xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col ${
                           isBentoLead ? 'sm:col-span-2' : ''
                         }`}
                       >
-                        <div className={`relative ${isBentoLead ? 'h-48 sm:h-52' : 'h-44'} bg-slate-800 overflow-hidden`}>
+                        <div className={`relative ${isBentoLead ? 'h-48 sm:h-52' : 'h-44'} bg-[#073b5c] overflow-hidden`}>
                           <img
-                            src={resolveUploadUrl(imgPath)}
+                            src={resolvedThumb}
                             alt={subTitle}
                             loading={sIdx < 3 ? 'eager' : 'lazy'}
                             onError={(e) => {
                               const img = e.currentTarget as HTMLImageElement;
                               img.onerror = null;
-                              img.src = '/uploads/No_Image_Wide.svg_1.png';
+                              img.src = fallbackImg;
                             }}
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 brightness-105"
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 via-transparent to-transparent pointer-events-none" />
-                          <span className="absolute bottom-3 right-3 w-10 h-10 rounded-full bg-white/95 text-rose-600 flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:bg-rose-600 group-hover:text-white transition-all">
+                          <span className="absolute bottom-3 right-3 w-10 h-10 rounded-full bg-white/95 text-[#0a5482] flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:bg-[#0a5482] group-hover:text-white transition-all">
                             <Play className="w-4 h-4 fill-current ml-0.5" />
                           </span>
                         </div>

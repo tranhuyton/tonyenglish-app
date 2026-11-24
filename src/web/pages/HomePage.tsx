@@ -18,6 +18,7 @@ import {
   ChevronLeft,
   ChevronRight,
   Phone,
+  X,
 } from 'lucide-react';
 import { supabase } from '../lib/supabase';
 import { useApp } from '../context/AppContext';
@@ -753,11 +754,11 @@ export const HomePage: React.FC = () => {
             <div className="lg:col-span-5 flex">
               {curAd ? (
                 <div className="w-full rounded-3xl overflow-hidden bg-slate-900/90 backdrop-blur-md border border-white/20 shadow-2xl flex flex-col">
-                  <div className="relative aspect-[16/9] bg-slate-950 overflow-hidden shrink-0">
+                  <div className="relative aspect-[16/9] bg-[#073b5c] overflow-hidden shrink-0">
                     {ads.map((adItem, idx) => {
                       const isActive = idx === bannerIdx;
                       const targetLink = normalizeInternalLink(adItem.link, '/courses');
-                      const adImgSrc = resolveUploadUrl(adItem.image);
+                      const adImgSrc = resolveUploadUrl(adItem.image, '/images/courses/course-overview.jpg') || '/images/courses/course-overview.jpg';
                       return (
                         <Link
                           key={adItem.id || adItem.ad_id || idx}
@@ -766,19 +767,17 @@ export const HomePage: React.FC = () => {
                             isActive ? 'opacity-100 z-[1]' : 'opacity-0 pointer-events-none z-0'
                           }`}
                         >
-                          {adImgSrc && (
-                            <img
-                              src={adImgSrc}
-                              alt={adItem.title || 'TonyEnglish'}
-                              loading={isActive ? 'eager' : 'lazy'}
-                              onError={(e) => {
-                                const img = e.currentTarget as HTMLImageElement;
-                                img.onerror = null;
-                                img.src = '/uploads/No_Image_Wide.svg_1.png';
-                              }}
-                              className="w-full h-full object-cover object-center"
-                            />
-                          )}
+                          <img
+                            src={adImgSrc}
+                            alt={adItem.title || 'TonyEnglish'}
+                            loading={isActive ? 'eager' : 'lazy'}
+                            onError={(e) => {
+                              const img = e.currentTarget as HTMLImageElement;
+                              img.onerror = null;
+                              img.src = '/images/courses/course-overview.jpg';
+                            }}
+                            className="w-full h-full object-cover object-center"
+                          />
                         </Link>
                       );
                     })}
@@ -1001,21 +1000,21 @@ export const HomePage: React.FC = () => {
             </div>
           </Link>
 
-          {/* Card 3: Communication & Executive — Vibrant Amber Gold / Sky */}
+          {/* Card 3: Communication & Executive — Corporate Indigo (Synced with CoursesPage & Portal) */}
           <Link
             to="/courses/english-communication%201"
-            className="bg-white hover:bg-amber-50/40 border border-slate-200/90 border-t-[3px] border-t-amber-500 hover:border-amber-300 rounded-2xl p-5 shadow-md hover:shadow-soft hover:-translate-y-0.5 transition-all group flex flex-col justify-between"
+            className="bg-white hover:bg-indigo-50/35 border border-slate-200/90 border-t-[3px] border-t-indigo-600 hover:border-indigo-300 rounded-2xl p-5 shadow-md hover:shadow-soft hover:-translate-y-0.5 transition-all group flex flex-col justify-between"
           >
             <div>
               <div className="flex items-center justify-between mb-3">
-                <div className="w-10 h-10 rounded-xl bg-amber-50 border border-amber-200/80 text-amber-700 flex items-center justify-center group-hover:scale-105 transition-transform">
+                <div className="w-10 h-10 rounded-xl bg-indigo-50 border border-indigo-200/80 text-indigo-700 flex items-center justify-center group-hover:scale-105 transition-transform">
                   <MessageCircle className="w-5 h-5" />
                 </div>
-                <span className="text-[11px] font-extrabold uppercase tracking-wider text-amber-800 bg-amber-100/80 px-2.5 py-0.5 rounded-full border border-amber-200/80">
+                <span className="text-[11px] font-extrabold uppercase tracking-wider text-indigo-800 bg-indigo-50 px-2.5 py-0.5 rounded-full border border-indigo-200/80">
                   1-on-1 VIP
                 </span>
               </div>
-              <h3 className="font-display font-extrabold text-[16px] text-slate-900 group-hover:text-amber-700 mb-1.5">
+              <h3 className="font-display font-extrabold text-[16px] text-slate-900 group-hover:text-indigo-700 mb-1.5">
                 {lang === 'vi' ? 'Giao tiếp & Phản xạ Công sở' : 'Executive Communication'}
               </h3>
               <p className="text-xs sm:text-[13px] text-slate-500 leading-relaxed">
@@ -1024,32 +1023,32 @@ export const HomePage: React.FC = () => {
                   : 'IPA pronunciation mastery, bilingual shadowing podcasts & AI reflex speaking.'}
               </p>
             </div>
-            <div className="mt-4 pt-3 border-t border-amber-100 flex items-center justify-between text-xs font-extrabold text-amber-700">
+            <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-extrabold text-indigo-700">
               <span>{lang === 'vi' ? 'Khám phá khóa học' : 'View Courses'}</span>
               <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
             </div>
           </Link>
 
-          {/* Card 4: Student Portal & AI Lab — Vibrant Royal Blue -> Teal + Tri-Color Top Ribbon */}
+          {/* Card 4: Student Portal & AI Lab — Academic Deep Ocean Navy */}
           <button
             type="button"
             onClick={() => window.dispatchEvent(new CustomEvent('tony-open-lms'))}
-            className="relative overflow-hidden bg-gradient-to-br from-[#0369a1] via-[#0a5482] to-[#0f766e] text-white rounded-2xl p-5 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all group text-left flex flex-col justify-between cursor-pointer border border-sky-300/30"
+            className="relative overflow-hidden bg-gradient-to-br from-[#073b5c] via-[#0a5482] to-[#0f172a] text-white rounded-2xl p-5 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all group text-left flex flex-col justify-between cursor-pointer border border-white/15"
           >
-            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-rose-500 via-amber-400 to-emerald-400" />
+            <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-amber-400 via-amber-300/80 to-[#2ab4e8]" />
             <div>
               <div className="flex items-center justify-between mb-3 pt-0.5">
                 <div className="w-10 h-10 rounded-xl bg-amber-400 text-slate-950 flex items-center justify-center group-hover:scale-105 transition-transform shadow-sm">
                   <Bot className="w-5 h-5" />
                 </div>
-                <span className="text-[11px] font-extrabold uppercase tracking-wider text-amber-200 bg-white/15 px-2.5 py-0.5 rounded-full border border-amber-200/35">
+                <span className="text-[11px] font-extrabold uppercase tracking-wider text-amber-200 bg-white/10 px-2.5 py-0.5 rounded-full border border-amber-300/30">
                   Smart LMS
                 </span>
               </div>
               <h3 className="font-display font-extrabold text-[16px] text-white mb-1.5">
                 {lang === 'vi' ? 'Góc Học Viên & Phòng Thi AI' : 'Student Portal & AI Lab'}
               </h3>
-              <p className="text-xs sm:text-[13px] text-sky-50/90 leading-relaxed">
+              <p className="text-xs sm:text-[13px] text-sky-100/85 leading-relaxed">
                 {lang === 'vi'
                   ? 'Lịch báo bài cá nhân, Bảng công việc hàng ngày, Kho đề Past Papers & Trợ lý Thầy Tony AI 24/7.'
                   : 'Personal study calendar, daily taskboard, past papers & 24/7 AI Study Coach.'}
@@ -1069,9 +1068,9 @@ export const HomePage: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-7 lg:gap-8 items-stretch">
           {/* LEFT COLUMN (8 cols): FOCUS ON */}
           <section className="lg:col-span-8 flex flex-col space-y-5">
-            <div className="flex items-center justify-between gap-3 border-b border-rose-200/80 pb-3">
+            <div className="flex items-center justify-between gap-3 border-b border-slate-200 pb-3">
               <div className="flex items-center gap-2.5 min-w-0">
-                <span className="w-9 h-9 rounded-xl bg-rose-100 text-rose-700 flex items-center justify-center shadow-2xs shrink-0">
+                <span className="w-9 h-9 rounded-xl bg-sky-50 border border-sky-200/80 text-[#0a5482] flex items-center justify-center shadow-2xs shrink-0">
                   <Sparkles className="w-4 h-4" />
                 </span>
                 <h2 className="text-lg sm:text-2xl font-black text-slate-800 tracking-tight leading-snug">
@@ -1080,7 +1079,7 @@ export const HomePage: React.FC = () => {
               </div>
               <Link
                 to="/news"
-                className="text-xs sm:text-sm font-bold text-rose-700 hover:text-rose-600 transition-colors whitespace-nowrap shrink-0"
+                className="text-xs sm:text-sm font-bold text-[#0a5482] hover:text-[#0284c7] transition-colors whitespace-nowrap shrink-0"
               >
                 {lang === 'vi' ? 'Khám phá Thư viện →' : 'Explore Library →'}
               </Link>
@@ -1102,13 +1101,13 @@ export const HomePage: React.FC = () => {
                           onError={(e) => {
                             const img = e.currentTarget as HTMLImageElement;
                             img.onerror = null;
-                            img.src = '/uploads/No_Image_Wide.svg_1.png';
+                            img.src = '/images/courses/course-overview.jpg';
                           }}
                           className="w-full h-full object-cover object-[50%_20%] group-hover:scale-105 transition-transform duration-500"
                         />
                       )}
                     </Link>
-                    <span className="absolute top-3 left-3 bg-[#0a5482]/95 backdrop-blur-xs text-white text-xs font-extrabold px-3 py-1 rounded-full shadow-md border border-white/15 inline-flex items-center gap-1">
+                    <span className="absolute top-3 left-3 bg-[#0f172a]/90 backdrop-blur-xs text-white text-xs font-extrabold px-3 py-1 rounded-full shadow-md border border-white/15 inline-flex items-center gap-1">
                       <Sparkles className="w-3 h-3 text-amber-300 shrink-0" />
                       <span>{t('Lastest News')}</span>
                     </span>
@@ -1130,14 +1129,14 @@ export const HomePage: React.FC = () => {
                     <div className="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between gap-2">
                       <Link
                         to="/news"
-                        className="text-sm font-extrabold text-[#0a5482] hover:text-[#2ab4e8] inline-flex items-center gap-1"
+                        className="text-sm font-extrabold text-[#0a5482] hover:text-[#0284c7] inline-flex items-center gap-1"
                       >
                         <span>{t('Related Post')}</span>
                         <span>→</span>
                       </Link>
                       {stickyNews.length > 1 && (
                         <div className="flex items-center gap-1.5">
-                          <span className="text-[11px] font-bold text-slate-400 tabular-nums">
+                          <span className="text-[11px] font-bold text-slate-500 tabular-nums">
                             {stickyIdx + 1}/{stickyNews.length}
                           </span>
                           <button
@@ -1179,19 +1178,20 @@ export const HomePage: React.FC = () => {
                           onError={(e) => {
                             const img = e.currentTarget as HTMLImageElement;
                             img.onerror = null;
-                            img.src = '/uploads/No_Image_Wide.svg_1.png';
+                            img.src = '/images/courses/course-overview.jpg';
                           }}
                           className="w-full h-full object-cover object-[50%_20%] group-hover:scale-105 transition-transform duration-500"
                         />
                       )}
                       <div className="absolute inset-0 bg-slate-900/25 flex items-center justify-center">
-                        <span className="w-12 h-12 rounded-full bg-white/90 text-[#0a5482] flex items-center justify-center text-lg shadow-lg">
+                        <span className="w-12 h-12 rounded-full bg-white/95 text-[#0a5482] flex items-center justify-center text-lg shadow-lg group-hover:bg-[#0a5482] group-hover:text-white transition-colors">
                           ▶
                         </span>
                       </div>
                     </button>
-                    <span className="absolute top-3 left-3 bg-rose-600 text-white text-xs font-extrabold px-3 py-1 rounded-full shadow-md">
-                      🎬 {t('Video')}
+                    <span className="absolute top-3 left-3 bg-[#0f172a]/90 backdrop-blur-xs text-white text-xs font-extrabold px-3 py-1 rounded-full shadow-md border border-white/15 inline-flex items-center gap-1.5">
+                      <Video className="w-3.5 h-3.5 text-[#2ab4e8]" />
+                      <span>{t('Video')}</span>
                     </span>
                   </div>
 
@@ -1223,7 +1223,7 @@ export const HomePage: React.FC = () => {
                               ).trim()}`
                             : '/videos'
                         }
-                        className="text-sm font-extrabold text-[#0a5482] hover:text-[#2ab4e8] inline-flex items-center gap-1"
+                        className="text-sm font-extrabold text-[#0a5482] hover:text-[#0284c7] inline-flex items-center gap-1"
                       >
                         <span>{t('Related Post')}</span>
                         <span>→</span>
@@ -1238,11 +1238,11 @@ export const HomePage: React.FC = () => {
             </div>
           </section>
 
-          {/* RIGHT COLUMN (4 cols): 1-ON-1 ENROLMENT ROADMAP (Matched Section Header + Exact Height Alignment) */}
+          {/* RIGHT COLUMN (4 cols): 1-ON-1 ENROLMENT ROADMAP (Academic Deep Navy + Unified Gold Primary CTA) */}
           <aside className="lg:col-span-4 flex flex-col space-y-5">
             <div className="flex items-center justify-between gap-3 border-b border-slate-200 pb-3">
               <div className="flex items-center gap-2.5 min-w-0">
-                <span className="w-9 h-9 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center shadow-2xs shrink-0">
+                <span className="w-9 h-9 rounded-xl bg-sky-50 border border-sky-200/80 text-[#0a5482] flex items-center justify-center shadow-2xs shrink-0">
                   <Calendar className="w-4 h-4" />
                 </span>
                 <h2 className="text-lg sm:text-2xl font-black text-slate-800 tracking-tight leading-snug">
@@ -1251,17 +1251,17 @@ export const HomePage: React.FC = () => {
               </div>
               <Link
                 to="/opening"
-                className="text-xs sm:text-sm font-bold text-[#0a5482] hover:text-[#2ab4e8] transition-colors whitespace-nowrap shrink-0"
+                className="text-xs sm:text-sm font-bold text-[#0a5482] hover:text-[#0284c7] transition-colors whitespace-nowrap shrink-0"
               >
                 {lang === 'vi' ? 'Chi tiết →' : 'More →'}
               </Link>
             </div>
 
-            <div className="bg-white rounded-2xl border border-emerald-200/90 shadow-xs overflow-hidden flex flex-col flex-1">
-              <div className="h-1 w-full bg-gradient-to-r from-rose-500 via-amber-400 to-emerald-500" />
-              <div className="bg-gradient-to-r from-[#059669] via-[#047857] to-[#065f46] px-5 py-3.5 text-white">
-                <div className="flex items-center gap-2 text-[11px] font-extrabold uppercase tracking-wider text-amber-200 mb-1">
-                  <span className="w-2 h-2 rounded-full bg-amber-300 animate-ping" />
+            <div className="bg-white rounded-2xl border border-slate-200/90 shadow-xs overflow-hidden flex flex-col flex-1">
+              <div className="h-[3px] w-full bg-gradient-to-r from-[#0a5482] via-[#2ab4e8] to-amber-400" />
+              <div className="bg-gradient-to-br from-[#073b5c] via-[#0a5482] to-[#0f172a] px-5 py-4 text-white">
+                <div className="flex items-center gap-2 text-[11px] font-extrabold uppercase tracking-wider text-sky-200 mb-1">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                   <span>{lang === 'vi' ? 'Đang nhận học viên 1 kèm 1' : 'Open for 1-on-1 Enrollment'}</span>
                 </div>
                 <p className="text-[13.5px] font-bold text-white/95 leading-snug">
@@ -1274,7 +1274,7 @@ export const HomePage: React.FC = () => {
               <div className="p-5 flex-1 flex flex-col justify-between gap-4">
                 <ol className="space-y-3.5">
                   <li className="flex items-start gap-3">
-                    <span className="w-7 h-7 rounded-xl bg-rose-50 border border-rose-200 text-rose-700 font-black text-xs flex items-center justify-center shrink-0 mt-0.5">
+                    <span className="w-7 h-7 rounded-xl bg-sky-50 border border-sky-200/90 text-[#0a5482] font-black text-xs flex items-center justify-center shrink-0 mt-0.5">
                       01
                     </span>
                     <div className="min-w-0">
@@ -1290,7 +1290,7 @@ export const HomePage: React.FC = () => {
                   </li>
 
                   <li className="flex items-start gap-3">
-                    <span className="w-7 h-7 rounded-xl bg-amber-50 border border-amber-200 text-amber-700 font-black text-xs flex items-center justify-center shrink-0 mt-0.5">
+                    <span className="w-7 h-7 rounded-xl bg-sky-50 border border-sky-200/90 text-[#0a5482] font-black text-xs flex items-center justify-center shrink-0 mt-0.5">
                       02
                     </span>
                     <div className="min-w-0">
@@ -1306,7 +1306,7 @@ export const HomePage: React.FC = () => {
                   </li>
 
                   <li className="flex items-start gap-3">
-                    <span className="w-7 h-7 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-700 font-black text-xs flex items-center justify-center shrink-0 mt-0.5">
+                    <span className="w-7 h-7 rounded-xl bg-sky-50 border border-sky-200/90 text-[#0a5482] font-black text-xs flex items-center justify-center shrink-0 mt-0.5">
                       03
                     </span>
                     <div className="min-w-0">
@@ -1323,24 +1323,24 @@ export const HomePage: React.FC = () => {
                 </ol>
 
                 <div className="pt-3.5 border-t border-slate-100 grid grid-cols-2 gap-2.5">
+                  <button
+                    type="button"
+                    onClick={() => window.dispatchEvent(new CustomEvent('tony-open-lms', { detail: 'register' }))}
+                    className="bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 hover:from-amber-500 hover:to-yellow-500 text-slate-950 font-extrabold text-xs px-3 py-2.5 rounded-xl transition inline-flex items-center justify-center gap-1.5 cursor-pointer shadow-xs whitespace-nowrap"
+                  >
+                    <Sparkles className="w-3.5 h-3.5 shrink-0" />
+                    <span>{lang === 'vi' ? 'Học thử miễn phí' : 'Free Trial'}</span>
+                  </button>
                   <a
                     href="https://zalo.me/0935058688"
                     target="_blank"
                     rel="noreferrer"
                     onClick={() => trackUnifiedContact('Zalo', 'HomePage_Sidebar_Consult')}
-                    className="bg-[#0068ff] hover:bg-[#0057d6] text-white font-extrabold text-xs px-3 py-2.5 rounded-xl transition inline-flex items-center justify-center gap-1.5 shadow-xs whitespace-nowrap"
+                    className="bg-white hover:bg-sky-50 text-[#0a5482] border border-slate-300 hover:border-[#0068ff] font-extrabold text-xs px-3 py-2.5 rounded-xl transition inline-flex items-center justify-center gap-1.5 shadow-2xs whitespace-nowrap"
                   >
-                    <MessageCircle className="w-3.5 h-3.5 shrink-0" />
+                    <MessageCircle className="w-3.5 h-3.5 text-[#0068ff] shrink-0" />
                     <span>{lang === 'vi' ? 'Nhắn Zalo tư vấn' : 'Zalo Consult'}</span>
                   </a>
-                  <button
-                    type="button"
-                    onClick={() => window.dispatchEvent(new CustomEvent('tony-open-lms', { detail: 'register' }))}
-                    className="bg-rose-600 hover:bg-rose-700 text-white font-extrabold text-xs px-3 py-2.5 rounded-xl transition inline-flex items-center justify-center gap-1.5 cursor-pointer shadow-xs whitespace-nowrap"
-                  >
-                    <Sparkles className="w-3.5 h-3.5 text-amber-300 shrink-0" />
-                    <span>{lang === 'vi' ? 'Học thử miễn phí' : 'Free Trial'}</span>
-                  </button>
                 </div>
               </div>
             </div>
@@ -1451,41 +1451,41 @@ export const HomePage: React.FC = () => {
           </section>
         )}
 
-        {/* 4. FULL-WIDTH MAGAZINE SECTIONS (Color-Coded Per Topic — Zero Monotone Walls) */}
+        {/* 4. FULL-WIDTH MAGAZINE SECTIONS (Academic Luxury 60-30-10 — Disciplined Navy & Subtle Icon Tints) */}
         <div className="space-y-12 sm:space-y-14">
-          {/* SECTION 2: READING PRACTICE (focus = 5) — Emerald Green */}
+          {/* SECTION 2: READING PRACTICE (focus = 5) */}
           {renderCategorySection(5, 'Reading Practice', <BookOpen className="w-4 h-4" />, {
-            iconBox: 'bg-emerald-100 text-emerald-700',
-            badgeBg: 'bg-emerald-600/95 hover:bg-emerald-500',
-            linkText: 'text-emerald-700 hover:text-emerald-600',
-            titleHover: 'group-hover:text-emerald-700',
-            borderAccent: 'border-emerald-200/80',
+            iconBox: 'bg-emerald-50 border border-emerald-200/70 text-emerald-700',
+            badgeBg: 'bg-[#0f172a]/85 hover:bg-[#0a5482]',
+            linkText: 'text-[#0a5482] hover:text-[#0284c7]',
+            titleHover: 'group-hover:text-[#0a5482]',
+            borderAccent: 'border-slate-200',
           })}
 
-          {/* SECTION 3: LEARNING THROUGH CONVERSATION (focus = 4) — Warm Amber Gold */}
+          {/* SECTION 3: LEARNING THROUGH CONVERSATION (focus = 4) */}
           {renderCategorySection(4, 'Learning Through Conversation', <MessageCircle className="w-4 h-4" />, {
-            iconBox: 'bg-amber-100 text-amber-700',
-            badgeBg: 'bg-amber-600/95 hover:bg-amber-500',
-            linkText: 'text-amber-700 hover:text-amber-600',
-            titleHover: 'group-hover:text-amber-700',
-            borderAccent: 'border-amber-200/80',
+            iconBox: 'bg-sky-50 border border-sky-200/70 text-[#0a5482]',
+            badgeBg: 'bg-[#0f172a]/85 hover:bg-[#0a5482]',
+            linkText: 'text-[#0a5482] hover:text-[#0284c7]',
+            titleHover: 'group-hover:text-[#0a5482]',
+            borderAccent: 'border-slate-200',
           })}
 
-          {/* SECTION 4: WORDS IN THE NEWS (focus = 1) — Crimson Red */}
+          {/* SECTION 4: WORDS IN THE NEWS (focus = 1) */}
           {renderCategorySection(1, 'Words In The news', <Globe className="w-4 h-4" />, {
-            iconBox: 'bg-rose-100 text-rose-700',
-            badgeBg: 'bg-rose-600/95 hover:bg-rose-500',
-            linkText: 'text-rose-700 hover:text-rose-600',
-            titleHover: 'group-hover:text-rose-700',
-            borderAccent: 'border-rose-200/80',
+            iconBox: 'bg-amber-50 border border-amber-200/70 text-amber-700',
+            badgeBg: 'bg-[#0f172a]/85 hover:bg-[#0a5482]',
+            linkText: 'text-[#0a5482] hover:text-[#0284c7]',
+            titleHover: 'group-hover:text-[#0a5482]',
+            borderAccent: 'border-slate-200',
           })}
 
-          {/* SECTION 5: VIDEOS STORE — Cinema Ruby Red */}
+          {/* SECTION 5: VIDEOS STORE */}
           {featuredVideoParents.length > 0 && (
             <section className="space-y-5">
-              <div className="flex items-center justify-between gap-3 border-b border-rose-200/80 pb-3">
+              <div className="flex items-center justify-between gap-3 border-b border-slate-200 pb-3">
                 <div className="flex items-center gap-2.5 min-w-0">
-                  <span className="w-9 h-9 rounded-xl bg-rose-100 text-rose-700 flex items-center justify-center shadow-2xs shrink-0">
+                  <span className="w-9 h-9 rounded-xl bg-sky-50 border border-sky-200/70 text-[#0a5482] flex items-center justify-center shadow-2xs shrink-0">
                     <Video className="w-4 h-4" />
                   </span>
                   <h2 className="text-lg sm:text-2xl font-black text-slate-800 tracking-tight leading-snug">
@@ -1494,7 +1494,7 @@ export const HomePage: React.FC = () => {
                 </div>
                 <Link
                   to="/videos"
-                  className="text-xs sm:text-sm font-bold text-rose-700 hover:text-rose-600 transition-colors whitespace-nowrap shrink-0"
+                  className="text-xs sm:text-sm font-bold text-[#0a5482] hover:text-[#0284c7] transition-colors whitespace-nowrap shrink-0"
                 >
                   {lang === 'vi' ? 'Xem Kho Video →' : 'All Videos →'}
                 </Link>
@@ -1529,7 +1529,7 @@ export const HomePage: React.FC = () => {
                       } h-full`}
                     >
                       <div
-                        className={`relative overflow-hidden bg-slate-900 ${
+                        className={`relative overflow-hidden bg-[#073b5c] ${
                           isHorizontal
                             ? 'h-48 sm:h-auto sm:w-52 md:w-56 sm:min-h-[216px] shrink-0'
                             : isCompact
@@ -1538,25 +1538,23 @@ export const HomePage: React.FC = () => {
                         }`}
                       >
                         <Link to={targetUrl} className="block w-full h-full relative">
-                          {resolveUploadUrl(activeSub.vc_image || vc.vc_image) && (
-                            <img
-                              src={resolveUploadUrl(activeSub.vc_image || vc.vc_image)}
-                              alt={subTitle}
-                              onError={(e) => {
-                                const img = e.currentTarget as HTMLImageElement;
-                                img.onerror = null;
-                                img.src = '/uploads/No_Image_Wide.svg_1.png';
-                              }}
-                              className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 opacity-95"
-                            />
-                          )}
+                          <img
+                            src={resolveUploadUrl(activeSub.vc_image || vc.vc_image, '/images/courses/course-overview.jpg')}
+                            alt={subTitle}
+                            onError={(e) => {
+                              const img = e.currentTarget as HTMLImageElement;
+                              img.onerror = null;
+                              img.src = '/images/courses/course-overview.jpg';
+                            }}
+                            className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 opacity-95"
+                          />
                           <div className="absolute inset-0 bg-gradient-to-t from-slate-900/55 via-transparent to-transparent flex items-center justify-center">
-                            <span className="w-11 h-11 rounded-full bg-white/95 text-rose-600 group-hover:bg-rose-600 group-hover:text-white flex items-center justify-center text-base shadow-lg group-hover:scale-110 transition-all">
+                            <span className="w-11 h-11 rounded-full bg-white/95 text-[#0a5482] group-hover:bg-[#0a5482] group-hover:text-white flex items-center justify-center text-base shadow-lg group-hover:scale-110 transition-all">
                               ▶
                             </span>
                           </div>
                         </Link>
-                        <span className="absolute top-3 left-3 max-w-[calc(100%-24px)] truncate bg-rose-600/95 backdrop-blur-xs text-white text-[11px] font-extrabold px-2.5 py-1 rounded-full shadow-md">
+                        <span className="absolute top-3 left-3 max-w-[calc(100%-24px)] truncate bg-[#0f172a]/85 backdrop-blur-xs text-white text-[11px] font-extrabold px-2.5 py-1 rounded-full shadow-md border border-white/15">
                           {parentTitle}
                         </span>
                       </div>
@@ -1567,7 +1565,7 @@ export const HomePage: React.FC = () => {
                             to={targetUrl}
                             className={`font-extrabold ${
                               isCompact ? 'text-[15.5px] min-h-[2.6rem]' : 'text-[17px] sm:text-[18px] min-h-[3rem]'
-                            } text-slate-800 group-hover:text-rose-700 transition-colors line-clamp-2 leading-snug mb-2 block`}
+                            } text-slate-800 group-hover:text-[#0a5482] transition-colors line-clamp-2 leading-snug mb-2 block`}
                           >
                             {subTitle}
                           </Link>
@@ -1583,7 +1581,7 @@ export const HomePage: React.FC = () => {
                         <div className={`${isCompact ? 'pt-3 mt-3.5' : 'pt-4 mt-4'} border-t border-slate-100`}>
                           <Link
                             to={targetUrl}
-                            className={`${isCompact ? 'text-xs' : 'text-sm'} font-extrabold text-rose-700 hover:text-rose-600 inline-flex items-center gap-1`}
+                            className={`${isCompact ? 'text-xs' : 'text-sm'} font-extrabold text-[#0a5482] hover:text-[#0284c7] inline-flex items-center gap-1`}
                           >
                             <span>{t('Related Post')}</span>
                             <span>→</span>
@@ -1597,24 +1595,24 @@ export const HomePage: React.FC = () => {
             </section>
           )}
 
-          {/* SECTION 6: OTHER LEARNING MATERIALS (focus = 3) — Royal Indigo */}
+          {/* SECTION 6: OTHER LEARNING MATERIALS (focus = 3) */}
           {renderCategorySection(3, 'Other learning materials', <Layers className="w-4 h-4" />, {
-            iconBox: 'bg-indigo-100 text-indigo-700',
-            badgeBg: 'bg-indigo-600/95 hover:bg-indigo-500',
-            linkText: 'text-indigo-700 hover:text-indigo-600',
-            titleHover: 'group-hover:text-indigo-700',
-            borderAccent: 'border-indigo-200/80',
+            iconBox: 'bg-indigo-50 border border-indigo-200/70 text-indigo-700',
+            badgeBg: 'bg-[#0f172a]/85 hover:bg-[#0a5482]',
+            linkText: 'text-[#0a5482] hover:text-[#0284c7]',
+            titleHover: 'group-hover:text-[#0a5482]',
+            borderAccent: 'border-slate-200',
           })}
         </div>
 
-        {/* 5. FINAL CONVERSION CTA BANNER BEFORE FOOTER */}
-        <section className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-[#0369a1] via-[#0a5482] to-[#0f766e] text-white p-6 sm:p-8 lg:p-10 shadow-xl border border-sky-300/25">
-          <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-rose-500 via-amber-400 to-emerald-400" />
-          <div className="absolute -top-24 -right-24 w-72 h-72 bg-amber-300/20 blur-3xl rounded-full pointer-events-none" />
-          <div className="absolute -bottom-24 left-1/4 w-64 h-64 bg-rose-400/15 blur-3xl rounded-full pointer-events-none" />
+        {/* 5. FINAL CONVERSION CTA BANNER BEFORE FOOTER (Academic Deep Ocean Navy) */}
+        <section className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#073b5c] via-[#0a5482] to-[#0f172a] text-white p-6 sm:p-8 lg:p-10 shadow-xl border border-white/15">
+          <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#2ab4e8] via-amber-400 to-[#2ab4e8]" />
+          <div className="absolute -top-24 -right-24 w-72 h-72 bg-[#2ab4e8]/15 blur-3xl rounded-full pointer-events-none" />
+          <div className="absolute -bottom-24 left-1/4 w-64 h-64 bg-amber-300/10 blur-3xl rounded-full pointer-events-none" />
           <div className="relative z-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
             <div className="space-y-2 max-w-2xl">
-              <div className="inline-flex items-center gap-1.5 text-[11px] font-extrabold uppercase tracking-wider text-amber-300 bg-white/10 border border-white/15 px-3 py-1 rounded-full">
+              <div className="inline-flex items-center gap-1.5 text-[11px] font-extrabold uppercase tracking-wider text-amber-300 bg-white/10 border border-white/20 px-3 py-1 rounded-full">
                 <Sparkles className="w-3.5 h-3.5" />
                 <span>{lang === 'vi' ? 'Đồng hành 1 kèm 1 cùng Thầy Tony' : '1-on-1 Mentoring with Teacher Tony'}</span>
               </div>
@@ -1646,9 +1644,9 @@ export const HomePage: React.FC = () => {
                 target="_blank"
                 rel="noreferrer"
                 onClick={() => trackUnifiedContact('Zalo', 'HomePage_Bottom_CTA')}
-                className="bg-white/12 hover:bg-white/22 text-white border border-white/25 font-bold text-sm px-5 py-3 rounded-2xl backdrop-blur-xs transition-all active:scale-95 inline-flex items-center gap-2 whitespace-nowrap"
+                className="bg-white/15 hover:bg-white/25 text-white border border-white/30 font-bold text-sm px-5 py-3 rounded-2xl backdrop-blur-xs transition-all active:scale-95 inline-flex items-center gap-2 whitespace-nowrap"
               >
-                <Phone className="w-4 h-4 text-[#2ab4e8] shrink-0" />
+                <Phone className="w-4 h-4 text-sky-300 shrink-0" />
                 <span>{lang === 'vi' ? 'Zalo: 0935 058 688' : 'Zalo: 0935 058 688'}</span>
               </a>
             </div>
@@ -1671,9 +1669,10 @@ export const HomePage: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setPopupVideo(null)}
-                className="w-8 h-8 rounded-full bg-slate-100 hover:bg-rose-500 hover:text-white text-slate-600 font-bold flex items-center justify-center transition-colors shrink-0 cursor-pointer"
+                aria-label={lang === 'vi' ? 'Đóng' : 'Close'}
+                className="w-8 h-8 rounded-xl bg-slate-100 hover:bg-rose-50 hover:text-rose-600 text-slate-600 flex items-center justify-center transition-colors shrink-0 cursor-pointer"
               >
-                ✕
+                <X className="w-4 h-4" />
               </button>
             </div>
             {popupVideo.video_link && (

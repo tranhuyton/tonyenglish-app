@@ -14,7 +14,11 @@ import {
   Clapperboard,
   Library,
   ChevronRight,
+  ChevronDown,
+  ChevronUp,
   PanelLeftClose,
+  PanelLeftOpen,
+  Home,
 } from 'lucide-react';
 import { supabase } from '../lib/supabase';
 import { useApp } from '../context/AppContext';
@@ -1208,12 +1212,12 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
               className="hidden lg:inline-flex items-center gap-1.5 px-3 py-1.5 mr-1 rounded-xl bg-white hover:bg-sky-50 text-[#0a5482] font-bold text-xs border border-slate-200/90 shadow-2xs transition cursor-pointer"
               title={lang === 'vi' ? 'Hiện lại thanh danh mục bên trái' : 'Show left categories sidebar'}
             >
-              <span>📚</span>
-              <span>{lang === 'vi' ? 'Hiện danh mục ▸' : 'Show menu ▸'}</span>
+              <PanelLeftOpen className="w-3.5 h-3.5" />
+              <span>{lang === 'vi' ? 'Hiện danh mục' : 'Show menu'}</span>
             </button>
           )}
-          <Link to="/" className="hover:text-[#0a5482] flex items-center gap-1">
-            <span>🏠</span>
+          <Link to="/" className="hover:text-[#0a5482] inline-flex items-center gap-1.5">
+            <Home className="w-3.5 h-3.5 text-[#0a5482]" />
             <span>{t('Home')}</span>
           </Link>
           <span>/</span>
@@ -1254,7 +1258,7 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                   {currentCategory ? cateDisplayName : t('Library')}
                 </span>
               </h2>
-              <span className="lg:hidden text-[11px] font-bold text-[#0a5482] bg-white px-2.5 py-1 rounded-lg border border-slate-200/80 shadow-2xs flex items-center gap-1 shrink-0 ml-2">
+              <span className="lg:hidden text-[11px] font-bold text-[#0a5482] bg-white px-2.5 py-1 rounded-lg border border-slate-200/80 shadow-2xs inline-flex items-center gap-1 shrink-0 ml-2">
                 <span>
                   {mobileCateOpen
                     ? lang === 'vi'
@@ -1264,7 +1268,7 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                     ? 'Danh mục'
                     : 'Categories'}
                 </span>
-                <span>{mobileCateOpen ? '▲' : '▼'}</span>
+                {mobileCateOpen ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
               </span>
             </button>
 
@@ -1564,70 +1568,70 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
             const tid = Number(themeTarget?.news_cc_id || 0);
             const tKey = `${themeTarget?.news_cc_name_url || ''} ${themeTarget?.news_cc_name || ''} ${themeTarget?.news_cc_name_vi || ''}`.toLowerCase();
             let libHeader = {
-              stripe: 'from-rose-500 via-amber-400 to-emerald-500',
-              bg: 'from-[#0369a1] via-[#0a5482] to-[#0f766e]',
-              orb1: 'bg-amber-300/25',
-              orb2: 'bg-rose-400/20',
-              eyebrow: 'bg-amber-400/20 border-amber-200/40 text-amber-100',
+              stripe: 'from-[#2ab4e8] via-amber-400 to-[#0a5482]',
+              bg: 'from-[#073b5c] via-[#0a5482] to-[#0f172a]',
+              orb1: 'bg-[#2ab4e8]/20',
+              orb2: 'bg-amber-300/15',
+              eyebrow: 'bg-white/10 border-white/20 text-sky-200',
               activePill: 'bg-[#0a5482] text-white border-[#0a5482] shadow-2xs',
             };
             if ([38, 87, 51, 56, 67].includes(tid) || tKey.includes('ielts') || tKey.includes('cambridge') || tKey.includes('speaking') || tKey.includes('writting') || tKey.includes('writing')) {
               libHeader = {
-                stripe: 'from-amber-400 via-yellow-300 to-rose-400',
-                bg: 'from-[#dc2626] via-[#b91c1c] to-[#7f1d1d]',
-                orb1: 'bg-amber-300/25',
-                orb2: 'bg-rose-300/20',
-                eyebrow: 'bg-amber-400/20 border-amber-200/40 text-amber-100',
-                activePill: 'bg-rose-600 text-white border-rose-600 shadow-2xs',
+                stripe: 'from-rose-600 via-rose-500 to-amber-400',
+                bg: 'from-[#073b5c] via-[#0a5482] to-[#0f172a]',
+                orb1: 'bg-rose-400/20',
+                orb2: 'bg-[#2ab4e8]/15',
+                eyebrow: 'bg-rose-500/20 border-rose-300/35 text-rose-100',
+                activePill: 'bg-[#0a5482] text-white border-[#0a5482] shadow-2xs',
               };
             } else if (tid === 79 || tKey.includes('igcse')) {
               libHeader = {
-                stripe: 'from-emerald-300 via-amber-300 to-teal-300',
-                bg: 'from-[#059669] via-[#047857] to-[#064e3b]',
-                orb1: 'bg-amber-300/25',
-                orb2: 'bg-emerald-300/25',
-                eyebrow: 'bg-amber-400/20 border-amber-200/40 text-amber-100',
-                activePill: 'bg-emerald-600 text-white border-emerald-600 shadow-2xs',
+                stripe: 'from-emerald-600 via-emerald-500 to-teal-400',
+                bg: 'from-[#073b5c] via-[#0a5482] to-[#0f172a]',
+                orb1: 'bg-emerald-400/20',
+                orb2: 'bg-[#2ab4e8]/15',
+                eyebrow: 'bg-emerald-500/20 border-emerald-300/35 text-emerald-100',
+                activePill: 'bg-[#0a5482] text-white border-[#0a5482] shadow-2xs',
               };
             } else if (tid === 26 || tKey.includes('ebook') || tKey.includes('sách') || tKey.includes('book') || tKey.includes('truyện') || tKey.includes('story') || tKey.includes('tips') || tKey.includes('bí kíp')) {
               libHeader = {
-                stripe: 'from-yellow-300 via-amber-400 to-rose-500',
-                bg: 'from-[#d97706] via-[#b45309] to-[#78350f]',
-                orb1: 'bg-yellow-200/30',
-                orb2: 'bg-orange-300/20',
-                eyebrow: 'bg-yellow-300/20 border-yellow-200/45 text-yellow-50',
-                activePill: 'bg-amber-600 text-white border-amber-600 shadow-2xs',
+                stripe: 'from-amber-500 via-amber-400 to-yellow-300',
+                bg: 'from-[#073b5c] via-[#0a5482] to-[#0f172a]',
+                orb1: 'bg-amber-400/20',
+                orb2: 'bg-[#2ab4e8]/15',
+                eyebrow: 'bg-amber-400/20 border-amber-300/35 text-amber-100',
+                activePill: 'bg-[#0a5482] text-white border-[#0a5482] shadow-2xs',
               };
             } else if (tid === 36 || tid === 19 || tKey.includes('reading-practice') || tKey.includes('words-in-the-news') || tKey.includes('bản tin') || tKey.includes('luyện đọc')) {
               libHeader = {
-                stripe: 'from-emerald-400 via-amber-300 to-sky-400',
-                bg: 'from-[#059669] via-[#0f766e] to-[#065f46]',
-                orb1: 'bg-amber-300/25',
-                orb2: 'bg-teal-300/25',
-                eyebrow: 'bg-amber-400/20 border-amber-200/40 text-amber-100',
-                activePill: 'bg-emerald-600 text-white border-emerald-600 shadow-2xs',
+                stripe: 'from-teal-500 via-[#2ab4e8] to-sky-400',
+                bg: 'from-[#073b5c] via-[#0a5482] to-[#0f172a]',
+                orb1: 'bg-teal-400/20',
+                orb2: 'bg-[#2ab4e8]/15',
+                eyebrow: 'bg-teal-400/20 border-teal-300/35 text-teal-100',
+                activePill: 'bg-[#0a5482] text-white border-[#0a5482] shadow-2xs',
               };
             } else if (tid === 37 || tKey.includes('conversation') || tKey.includes('hội thoại')) {
               libHeader = {
-                stripe: 'from-rose-400 via-amber-400 to-indigo-400',
-                bg: 'from-[#4f46e5] via-[#4338ca] to-[#312e81]',
-                orb1: 'bg-amber-300/25',
-                orb2: 'bg-fuchsia-300/20',
-                eyebrow: 'bg-amber-400/20 border-amber-200/40 text-amber-100',
-                activePill: 'bg-indigo-600 text-white border-indigo-600 shadow-2xs',
+                stripe: 'from-indigo-500 via-indigo-400 to-[#2ab4e8]',
+                bg: 'from-[#073b5c] via-[#0a5482] to-[#0f172a]',
+                orb1: 'bg-indigo-400/20',
+                orb2: 'bg-[#2ab4e8]/15',
+                eyebrow: 'bg-indigo-400/20 border-indigo-300/35 text-indigo-100',
+                activePill: 'bg-[#0a5482] text-white border-[#0a5482] shadow-2xs',
               };
             }
             return (
           <div className="bg-white rounded-2xl sm:rounded-3xl border border-slate-200/90 shadow-sm">
-            {/* Vibrant Tri-Color Top Ribbon + Category-Synced Header */}
+            {/* Academic Luxury Header */}
             <div className="rounded-t-2xl sm:rounded-t-3xl overflow-hidden">
-              <div className={`h-1.5 w-full bg-gradient-to-r ${libHeader.stripe}`} />
-              <div className={`relative overflow-hidden bg-gradient-to-r ${libHeader.bg} px-4 sm:px-8 py-4 sm:py-6 text-white flex items-center justify-between flex-wrap gap-3 sm:gap-4`}>
+              <div className={`h-1 w-full bg-gradient-to-r ${libHeader.stripe}`} />
+              <div className={`relative overflow-hidden bg-gradient-to-br ${libHeader.bg} px-4 sm:px-8 py-4 sm:py-6 text-white flex items-center justify-between flex-wrap gap-3 sm:gap-4`}>
                 <div className={`pointer-events-none absolute -top-12 -right-10 w-48 h-48 rounded-full blur-3xl ${libHeader.orb1}`} />
                 <div className={`pointer-events-none absolute -bottom-12 left-1/3 w-40 h-40 rounded-full blur-3xl ${libHeader.orb2}`} />
                 <div className="relative z-10">
                   <div className={`inline-flex items-center gap-1.5 text-[10.5px] sm:text-xs font-extrabold uppercase tracking-widest px-2.5 py-0.5 rounded-full border mb-1.5 ${libHeader.eyebrow}`}>
-                    <span>📚</span>
+                    <Library className="w-3.5 h-3.5 shrink-0" />
                     <span>TonyEnglish Learning Library</span>
                   </div>
                   <h1 className="text-xl sm:text-3xl font-black tracking-tight">{cateDisplayName}</h1>
@@ -1897,7 +1901,7 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                                 </div>
                                 <Link
                                   to={itemUrl}
-                                  className="font-extrabold text-[#0a5482] group-hover:text-[#2ab4e8] transition-colors shrink-0 whitespace-nowrap self-end sm:self-center"
+                                  className="font-extrabold text-[#0a5482] group-hover:text-[#0284c7] transition-colors shrink-0 whitespace-nowrap self-end sm:self-center"
                                 >
                                   {isEbookItem
                                     ? lang === 'vi'
