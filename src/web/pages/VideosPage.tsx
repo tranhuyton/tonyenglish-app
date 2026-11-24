@@ -9,9 +9,15 @@ import {
   HelpCircle,
   ChevronDown,
   ChevronUp,
+  ChevronRight,
   ArrowRight,
   Film,
   CheckCircle2,
+  Headphones,
+  MessageSquare,
+  Globe,
+  Atom,
+  Landmark,
 } from 'lucide-react';
 import { supabase } from '../lib/supabase';
 import { useApp } from '../context/AppContext';
@@ -256,14 +262,14 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
 
       <div className="flex flex-col lg:flex-row gap-4 sm:gap-8 xl:gap-12 items-start">
         {/* LEFT SIDEBAR: SUBTLE, NON-COMPETING VIDEO MENU */}
-        <aside className="w-full lg:w-[260px] xl:w-[270px] shrink-0 bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden lg:sticky lg:top-24">
+        <aside className="w-full lg:w-[272px] xl:w-[288px] shrink-0 bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden lg:sticky lg:top-24">
           <button
             type="button"
             onClick={() => setMobileCateOpen((prev) => !prev)}
             className="w-full bg-slate-100/80 px-4 py-3 border-b border-slate-200/70 flex items-center justify-between lg:pointer-events-none cursor-pointer text-left"
           >
             <h2 className="text-slate-600 lg:text-slate-500 font-bold text-xs uppercase tracking-widest flex items-center gap-2 min-w-0">
-              <Video className="w-4 h-4 opacity-80 shrink-0 text-[#0a5482]" />
+              <Video className="w-4 h-4 opacity-85 shrink-0 text-[#0a5482]" />
               <span className="hidden lg:inline shrink-0">{t('Video Menu')}</span>
               <span className="lg:hidden font-bold text-[#0a5482] text-[13px] normal-case tracking-normal truncate">
                 {activeCate ? mainHeading : t('Video Category')}
@@ -283,49 +289,190 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
             </span>
           </button>
 
-          <ul className={`divide-y divide-slate-100 text-[14.5px] p-1.5 ${mobileCateOpen ? 'block' : 'hidden'} lg:block`}>
-            <li>
+          <div
+            className={`text-[14px] p-2 space-y-2.5 ${
+              mobileCateOpen ? 'block' : 'hidden'
+            } lg:block lg:max-h-[calc(100vh-8.5rem)] lg:overflow-y-auto overscroll-contain`}
+          >
+            {/* All Video Categories */}
+            <div>
               <Link
                 to="/videos"
                 onClick={() => setMobileCateOpen(false)}
-                className={`flex items-center gap-2 px-3.5 py-2.5 rounded-xl transition-colors relative ${
+                className={`flex items-center gap-2.5 px-2.5 py-2.5 rounded-xl transition-all relative ${
                   !cateSlug
-                    ? "bg-sky-50/90 text-[#0a5482] font-semibold pl-4 before:content-[''] before:absolute before:left-1.5 before:top-2 before:bottom-2 before:w-1 before:rounded-full before:bg-[#2ab4e8]"
-                    : 'text-slate-600 font-medium hover:bg-slate-50 hover:text-[#0a5482]'
+                    ? "bg-sky-50/95 text-[#0a5482] font-bold pl-3.5 before:content-[''] before:absolute before:left-1 before:top-2 before:bottom-2 before:w-1 before:rounded-full before:bg-[#2ab4e8]"
+                    : 'text-slate-700 font-semibold hover:bg-slate-50 hover:text-[#0a5482]'
                 }`}
               >
-                <Tv className="w-4 h-4 shrink-0" />
-                <span>{t('Video Category')}</span>
+                <span
+                  className={`w-7 h-7 rounded-lg flex items-center justify-center shrink-0 transition-colors ${
+                    !cateSlug ? 'bg-[#0a5482] text-white shadow-xs' : 'bg-sky-50 text-[#0a5482]'
+                  }`}
+                >
+                  <Tv className="w-3.5 h-3.5" />
+                </span>
+                <span className="leading-snug">{t('Video Category')}</span>
               </Link>
-            </li>
-            {topCategories.length === 0 && (
-              <li className="py-2 px-2 space-y-2 animate-pulse">
-                {[1, 2, 3, 4].map((n) => (
+            </div>
+
+            {topCategories.length === 0 ? (
+              <div className="pt-2 border-t border-slate-100 px-1 space-y-2 animate-pulse">
+                {[1, 2, 3, 4, 5].map((n) => (
                   <div key={n} className="h-9 rounded-xl bg-slate-100" />
                 ))}
-              </li>
+              </div>
+            ) : (
+              (() => {
+                const isLangPractice = (vc: any) => {
+                  const id = Number(vc.vc_id);
+                  const key = `${vc.vc_name_url || ''} ${vc.vc_name || ''} ${vc.vc_name_vi || ''}`.toLowerCase();
+                  return (
+                    id === 12 ||
+                    id === 61 ||
+                    key.includes('audio-book') ||
+                    key.includes('sách nói') ||
+                    key.includes('learning-english') ||
+                    key.includes('giao tiếp')
+                  );
+                };
+
+                const getVideoCateIcon = (vc: any) => {
+                  const id = Number(vc.vc_id);
+                  const key = `${vc.vc_name_url || ''} ${vc.vc_name || ''} ${vc.vc_name_vi || ''}`.toLowerCase();
+                  if (id === 12 || key.includes('audio-book') || key.includes('sách nói')) {
+                    return { Icon: Headphones, idleBg: 'bg-indigo-50 text-indigo-600' };
+                  }
+                  if (id === 61 || key.includes('learning-english') || key.includes('giao tiếp')) {
+                    return { Icon: MessageSquare, idleBg: 'bg-sky-50 text-[#0a5482]' };
+                  }
+                  if (id === 25 || key.includes('society') || key.includes('culture') || key.includes('văn hóa')) {
+                    return { Icon: Globe, idleBg: 'bg-rose-50 text-rose-600' };
+                  }
+                  if (id === 22 || key.includes('science') || key.includes('khoa học')) {
+                    return { Icon: Atom, idleBg: 'bg-emerald-50 text-emerald-700' };
+                  }
+                  if (id === 21 || key.includes('history') || key.includes('lịch sử')) {
+                    return { Icon: Landmark, idleBg: 'bg-amber-50 text-amber-700' };
+                  }
+                  return { Icon: Film, idleBg: 'bg-slate-100 text-slate-600' };
+                };
+
+                const practiceCates = topCategories.filter(isLangPractice);
+                const discoveryCates = topCategories.filter((vc) => !isLangPractice(vc));
+
+                const renderVideoCateItem = (vc: any) => {
+                  const subs = allVideoCates.filter((c) => Number(c.vc_parent) === Number(vc.vc_id));
+                  const isDirectSelected = (vc.vc_name_url || '').trim() === cleanCateParam;
+                  const hasActiveChild = Boolean(parentCate && Number(parentCate.vc_id) === Number(vc.vc_id));
+                  const isSelected = isDirectSelected || hasActiveChild;
+                  const { Icon, idleBg } = getVideoCateIcon(vc);
+                  const title = lang === 'vi' ? vc.vc_name_vi || vc.vc_name : vc.vc_name;
+
+                  return (
+                    <li key={vc.vc_id}>
+                      <Link
+                        to={`/videos/${(vc.vc_name_url || '').trim()}`}
+                        onClick={() => setMobileCateOpen(false)}
+                        className={`px-2.5 py-2 rounded-xl transition-all flex items-center justify-between gap-2 relative ${
+                          isDirectSelected
+                            ? "bg-sky-50/95 text-[#0a5482] font-bold pl-3.5 before:content-[''] before:absolute before:left-1 before:top-2 before:bottom-2 before:w-1 before:rounded-full before:bg-[#2ab4e8]"
+                            : hasActiveChild
+                            ? 'text-[#0a5482] font-semibold bg-slate-50/80'
+                            : 'text-slate-700 font-medium hover:bg-slate-50 hover:text-[#0a5482]'
+                        }`}
+                      >
+                        <span className="flex items-center gap-2.5 min-w-0">
+                          <span
+                            className={`w-7 h-7 rounded-lg flex items-center justify-center shrink-0 transition-colors ${
+                              isSelected ? 'bg-[#0a5482] text-white shadow-xs' : idleBg
+                            }`}
+                          >
+                            <Icon className="w-3.5 h-3.5" />
+                          </span>
+                          <span className="leading-snug">{title}</span>
+                        </span>
+                        {subs.length > 0 && (
+                          <span className="flex items-center gap-1 shrink-0">
+                            <span
+                              className={`text-[10.5px] font-extrabold px-1.5 py-0.5 rounded-md tabular-nums ${
+                                isSelected
+                                  ? 'bg-sky-100 text-[#0a5482]'
+                                  : 'bg-slate-100 text-slate-500'
+                              }`}
+                            >
+                              {subs.length}
+                            </span>
+                            <ChevronRight
+                              className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                                isSelected ? 'rotate-90 text-[#0a5482]' : 'text-slate-400'
+                              }`}
+                            />
+                          </span>
+                        )}
+                      </Link>
+
+                      {subs.length > 0 && isSelected && (
+                        <ul className="mt-1 mb-1.5 ml-5 pl-2.5 border-l-2 border-sky-100 space-y-0.5">
+                          {subs.map((sub, subIdx) => {
+                            const subTitle = lang === 'vi' ? sub.vc_name_vi || sub.vc_name : sub.vc_name;
+                            const isActiveSub = (sub.vc_name_url || '').trim() === cleanCateParam;
+                            const stepLabel = String(subIdx + 1).padStart(2, '0');
+                            return (
+                              <li key={sub.vc_id}>
+                                <Link
+                                  to={`/video/${(sub.vc_name_url || '').trim()}`}
+                                  onClick={() => setMobileCateOpen(false)}
+                                  className={`flex items-center gap-2 px-2.5 py-1.5 rounded-lg text-[13px] transition-all ${
+                                    isActiveSub
+                                      ? 'bg-sky-50 text-[#0a5482] font-bold'
+                                      : 'text-slate-600 font-medium hover:bg-slate-50 hover:text-[#0a5482]'
+                                  }`}
+                                >
+                                  <span
+                                    className={`text-[10px] font-black px-1.5 py-0.5 rounded-md tabular-nums shrink-0 ${
+                                      isActiveSub
+                                        ? 'bg-[#0a5482] text-white'
+                                        : 'bg-slate-100 text-slate-500'
+                                    }`}
+                                  >
+                                    {stepLabel}
+                                  </span>
+                                  <span className="leading-snug line-clamp-2">{subTitle}</span>
+                                </Link>
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      )}
+                    </li>
+                  );
+                };
+
+                return (
+                  <>
+                    {practiceCates.length > 0 && (
+                      <div className="pt-2.5 border-t border-slate-100">
+                        <div className="px-2.5 pb-1.5 text-[10.5px] font-extrabold uppercase tracking-widest text-slate-400">
+                          {lang === 'vi' ? 'Luyện nghe & Giao tiếp' : 'Listening & Communication'}
+                        </div>
+                        <ul className="space-y-1">{practiceCates.map(renderVideoCateItem)}</ul>
+                      </div>
+                    )}
+
+                    {discoveryCates.length > 0 && (
+                      <div className="pt-2.5 border-t border-slate-100">
+                        <div className="px-2.5 pb-1.5 text-[10.5px] font-extrabold uppercase tracking-widest text-slate-400">
+                          {lang === 'vi' ? 'Khám phá Kiến thức' : 'Knowledge & Documentaries'}
+                        </div>
+                        <ul className="space-y-1">{discoveryCates.map(renderVideoCateItem)}</ul>
+                      </div>
+                    )}
+                  </>
+                );
+              })()
             )}
-            {topCategories.map((vc) => {
-              const isSelected =
-                (vc.vc_name_url || '').trim() === cleanCateParam ||
-                (parentCate && Number(parentCate.vc_id) === Number(vc.vc_id));
-              return (
-                <li key={vc.vc_id}>
-                  <Link
-                    to={`/videos/${(vc.vc_name_url || '').trim()}`}
-                    onClick={() => setMobileCateOpen(false)}
-                    className={`block px-3.5 py-2.5 rounded-xl transition-colors relative leading-snug ${
-                      isSelected
-                        ? "bg-sky-50/90 text-[#0a5482] font-semibold pl-4 before:content-[''] before:absolute before:left-1.5 before:top-2 before:bottom-2 before:w-1 before:rounded-full before:bg-[#2ab4e8]"
-                        : 'text-slate-600 font-medium hover:bg-slate-50 hover:text-[#0a5482]'
-                    }`}
-                  >
-                    {lang === 'vi' ? vc.vc_name_vi || vc.vc_name : vc.vc_name}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
+          </div>
         </aside>
 
         {/* RIGHT MAIN CONTENT */}
