@@ -1,0 +1,38 @@
+[
+  {
+    "page": 40,
+    "boxed": true,
+    "left": "Simulated Change in Annual Aquifer Input and Irrigation Output if Precipitation\nConcentration Increases as Climate Models Predict\n% change in Y% change in Y% change in\n\nBaseline concentration | water entering | surface water used | groundwater used for\n\nof annual precipitation aquifers for irrigation irrigation\n\nPrecipitation is\n\ncurrently somewhat 4.9 0.4\n\nconcentrated\n\nPrecipitation is\n\ncurrently evenly 11.0 7.9\n\ndistributed\nSome climate models for the western United States predict that while total annual\nprecipitation may remain unchanged from the present level, precipitation will become\nconcentrated into fewer but more intense rain and snow events. University of Texas\nclimate scientist Geeta Persad and her colleagues simulated how the amount of water\nentering aquifers and the amount being used for irrigation purposes would change if this\nwere to occur. Persad and her colleagues concluded that concentration of precipitation into\nfewer events would result in a higher number of dry days, triggering more irrigation, but\nthat this change in irrigation output is highly sensitive to the baseline concentration of\nprecipitation that currently exists in an area.\n\nTee",
+    "prompt": "Which choice best describes data from the table that support Persad and her colleagues’\nconclusion?",
+    "options": [
+      "1f baseline precipitation is somewhat concentrated, the amount of water being\nused for irrigation will increase 0.4% for surface water and 0.9% for\ngroundwater, whereas the amount of water entering aquifers will increase\n11.0% if baseline precipitation is evenly distributed.",
+      "If baseline precipitation is somewhat concentrated, water use for irrigation will\nincrease only slightly, whereas it will increase 9.0% for surface water and 7.9%\nfor groundwater if baseline precipitation is evenly distributed.",
+      "If baseline precipitation is somewhat concentrated, the amount of water\nentering aquifers will increase 4.9%, while the amount being used for irrigation\nwill increase 0.4% for surface water and 0.9% for groundwater.",
+      "If baseline precipitation is somewhat concentrated, water use for irrigation will\ndecline by a small amount, whereas it will increase 11.0% for surface water and\n9.0% for groundwater if baseline precipitation is evenly distributed."
+    ]
+  },
+  {
+    "page": 41,
+    "boxed": true,
+    "left": "Ships in the British Royal Navy during the Napoleonic Wars (1803-1815) were ranked\nbased on military strength. The system considered the number of a ship's cannons and\ndecks. “First-rate” was the highest ranking, and “sixth-rate” was the lowest ranking,\nfollowed by unranked ships. The size of a ship's crew was based on this ranking: first-rate\nships had between 850 and 875 crewmen, while lower-ranked ships had fewer. Two of the\nships in the British Royal Navy from this period were the Boyne (98 cannons and three\ndecks) and the Britannia (120 cannons and three decks). Of these two, only the Britannia\nwas ranked a first-rate ship. It can therefore be concluded that\nlS",
+    "prompt": "Which choice most logically completes the text?",
+    "options": [
+      "some ships with three decks had a crew of fewer than 850 people.",
+      "the Britannia needed a crew larger than 875 people in order to operate\nefficiently.",
+      "the Boyne had a larger crew than the Britannia.",
+      "all ships with at least 98 cannons had a crew of at least 850 people."
+    ]
+  },
+  {
+    "page": 42,
+    "boxed": true,
+    "left": "In a 2018 study, Deepak Jaiswal and Rishi Kant found that consumers’ knowledge of\nenvironmental issues had no effect on the likelihood that the consumers would purchase\nenvironmentally friendly products. Since this study was based on fewer than 400 young\nadults in India, however, doubts have been raised about how reliable and representative\nthe findings are. To better understand the issue, Wencan Zhuang and colleagues analyzed\nthe results of 54 studies of eco-friendly consumer behavior, such as a 2018 study from\nIndonesia that included 916 participants and a 2018 study from India with 202\nparticipants. Taking all 54 studies together. Zhuang and colleagues found a significant\npositive effect of environmental knowledge on eco-friendly purchasing decisions,\nsuggesting that ~~\n\nTee",
+    "prompt": "Which choice most logically completes the text?",
+    "options": [
+      "a sample size of 202 may be sufficient to make reliable conclusions about the\nrelationship between knowledge of environmental issues and purchasing\ndecisions.",
+      "concerns about the broad applicability of Jaiswal and Kant’s conclusion were\njustified.",
+      "the number of participants in Jaiswal and Kant’s study was far below the\nnumber of participants in most studies of purchasing decisions.",
+      "Jaiswal and Kant's methodology was more precise than the methodology used\nin the 2018 study from Indonesia."
+    ]
+  }
+]

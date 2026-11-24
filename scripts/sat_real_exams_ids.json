@@ -1,0 +1,24 @@
+{
+  "course_id": "871fdd8e-96a4-4e4b-92a2-2cd41021ee82",
+  "folders": {
+    "real_root": "937a34e6-dc75-47c8-8769-8940bd17c897",
+    "real_rw": "bc1f5183-0abb-4df6-9c52-27e19a84bdb4",
+    "real_math": "c74ee81d-e71f-4411-a09a-e5d42be0a732"
+  },
+  "tests": {
+    "real_oct2025_math": "ea5a84ff-6d56-45b0-997b-b2293c97c8db",
+    "real_june2025_v1_math": "8b52c9f5-da2c-4f0a-a45c-f32f239dee4e",
+    "real_may2025_rw": "7f7262bd-6587-4ee1-981c-42c9a23ad961",
+    "real_june2025_v1_rw": "d61ad4d1-0a2d-4a9a-98d4-6ff25bc706a6",
+    "real_may2025_math": "051f5176-66df-45d3-9741-f0380a4848e7",
+    "real_june2025_us_v1_math": "cb318099-22a5-46c4-8e54-c1b9a112f0f2",
+    "real_march2025_v5_math": "fa00f947-bdfe-428c-818e-552f33993be5",
+    "real_march2025_v3_math": "0eb57659-0c0e-44df-8d02-118d15a74de3",
+    "real_june2025_v2_math": "b20b4095-f0cf-42d3-8bf2-6b1aa07be860",
+    "real_june2025_us_v1_rw": "c27be838-d4af-4df2-9815-80d8f6a38818",
+    "real_may2025_v2_rw": "0e6c0285-80f4-49e4-b725-c7e12c2b430c",
+    "real_march2025_v5_rw": "a62db59d-efcb-41af-8118-4021148f8d83",
+    "real_may2025_v4_us_rw": "514eae92-9f91-48f2-9c1a-b31d0bf87305",
+    "real_march2025_v3_rw": "6fe76b1f-7e6f-451b-bf00-76586991d6fd"
+  }
+}

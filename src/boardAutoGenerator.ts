@@ -161,12 +161,17 @@ function buildSatBoardSpec(
   const mathGames: any[] = [];
   const rwMocks: any[] = [];
   const mathMocks: any[] = [];
+  const realRwExams: any[] = [];
+  const realMathExams: any[] = [];
 
   for (const t of tests) {
     if (usedTestIds.has(String(t.id))) continue;
     const ftitle = String(folderById.get(String(t.folder_id || ''))?.title || '').toLowerCase();
     const ttitle = String(t.title || '').toLowerCase();
-    if (ftitle.includes('vocab') || ttitle.includes('vocab')) rwVocabGames.push(t);
+    if (ftitle.includes('real exam') || ttitle.includes('real exam')) {
+      if (ftitle.includes('math') || ttitle.includes('math')) realMathExams.push(t);
+      else realRwExams.push(t);
+    } else if (ftitle.includes('vocab') || ttitle.includes('vocab')) rwVocabGames.push(t);
     else if (ftitle.includes('formula') || ftitle.includes('desmos') || ftitle.includes('game')) mathGames.push(t);
     else if (ftitle.includes('math') || ttitle.includes('math')) mathMocks.push(t);
     else rwMocks.push(t);
@@ -176,6 +181,8 @@ function buildSatBoardSpec(
   mathGames.sort((a, b) => naturalCompare(a.title, b.title));
   rwMocks.sort((a, b) => naturalCompare(a.title, b.title));
   mathMocks.sort((a, b) => naturalCompare(a.title, b.title));
+  realRwExams.sort((a, b) => ((a.order_index || 999) - (b.order_index || 999)) || naturalCompare(a.title, b.title));
+  realMathExams.sort((a, b) => ((a.order_index || 999) - (b.order_index || 999)) || naturalCompare(a.title, b.title));
 
   const gameCards: BoardCardSpec[] = [];
   if (rwVocabGames.length > 0) {
@@ -232,6 +239,26 @@ function buildSatBoardSpec(
     columns.push({
       title: '🎯 Full-Length Adaptive Mock Tests (Bluebook) [color:#e0f2fe,#0369a1]',
       cards: mockCards,
+    });
+  }
+
+  const realCards: BoardCardSpec[] = [];
+  if (realRwExams.length > 0) {
+    realCards.push({
+      title: `1. Real Exams — Reading & Writing 2025 (${realRwExams.length} Đề)`,
+      items: realRwExams.map(t => ({ task_type: 'test', title: t.title, description: '', test_id: String(t.id) })),
+    });
+  }
+  if (realMathExams.length > 0) {
+    realCards.push({
+      title: `2. Real Exams — Math 2024–2025 (${realMathExams.length} Đề)`,
+      items: realMathExams.map(t => ({ task_type: 'test', title: t.title, description: '', test_id: String(t.id) })),
+    });
+  }
+  if (realCards.length > 0) {
+    columns.push({
+      title: '🏛️ Real Past Exams (2024–2025 — Đề Thi Thật) [color:#fef3c7,#b45309]',
+      cards: realCards,
     });
   }
 
