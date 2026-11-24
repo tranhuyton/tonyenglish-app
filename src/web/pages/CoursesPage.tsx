@@ -117,17 +117,33 @@ export const CoursesPage: React.FC = () => {
     });
   };
 
+  const hasRequestedCourseSlug = (() => {
+    if (slug && slug.toLowerCase() !== 'online') return true;
+    try {
+      const params = new URLSearchParams(location.search);
+      return Boolean(params.get('course'));
+    } catch {
+      return false;
+    }
+  })();
+
   const [allCategories, setAllCategories] = useState<any[]>([]);
   const [categoriesLoaded, setCategoriesLoaded] = useState(false);
   const [currentCourse, setCurrentCourse] = useState<any | null>(null);
-  const [openParentId, setOpenParentId] = useState<number | null>(null);
-  const [mobileCateOpen, setMobileCateOpen] = useState(false);
+  const [openParentIds, setOpenParentIds] = useState<number[]>([]);
+  const [mobileCateOpen, setMobileCateOpen] = useState<boolean>(() => !hasRequestedCourseSlug);
   const [showMobileStickyBar, setShowMobileStickyBar] = useState(false);
   const [showLegacyGallery, setShowLegacyGallery] = useState(false);
   const [imageLightbox, setImageLightbox] = useState<{
     items: { src: string; caption: string }[];
     index: number;
   } | null>(null);
+
+  // On "Học cùng Thầy Tony" (/courses), expand mobile course catalog by default so parents see all courses immediately;
+  // collapse automatically when navigating into a specific course page.
+  useEffect(() => {
+    setMobileCateOpen(!hasRequestedCourseSlug);
+  }, [hasRequestedCourseSlug]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -165,16 +181,6 @@ export const CoursesPage: React.FC = () => {
     scrollToCourseTop();
   }, [slug, location.pathname, location.search]);
 
-  const hasRequestedCourseSlug = (() => {
-    if (slug && slug.toLowerCase() !== 'online') return true;
-    try {
-      const params = new URLSearchParams(location.search);
-      return Boolean(params.get('course'));
-    } catch {
-      return false;
-    }
-  })();
-
   // Resolve currentCourse synchronously from loaded categories whenever slug changes
   useEffect(() => {
     if (allCategories.length === 0) return;
@@ -204,7 +210,8 @@ export const CoursesPage: React.FC = () => {
         );
         if (officeCourse) {
           setCurrentCourse(officeCourse);
-          setOpenParentId(officeCourse.cc_parent === 0 ? officeCourse.cc_id : officeCourse.cc_parent);
+          const pid = Number(officeCourse.cc_parent) === 0 ? Number(officeCourse.cc_id) : Number(officeCourse.cc_parent);
+          setOpenParentIds([pid]);
           const canonical = (officeCourse.cc_name_url || '').trim();
           if (canonical && canonical !== 'toeic') {
             navigate(`/courses/${encodeURIComponent(canonical)}`, { replace: true });
@@ -215,14 +222,22 @@ export const CoursesPage: React.FC = () => {
       const found = allCategories.find((c: any) => (c.cc_name_url || '').trim() === cleanSlug);
       if (found) {
         setCurrentCourse(found);
-        setOpenParentId(found.cc_parent === 0 ? found.cc_id : found.cc_parent);
+        const pid = Number(found.cc_parent) === 0 ? Number(found.cc_id) : Number(found.cc_parent);
+        setOpenParentIds([pid]);
       } else {
         setCurrentCourse(null);
+        const allParentIds = allCategories
+          .filter((c: any) => Number(c.cc_parent) === 0 && Number(c.cc_homedisplay) === 1)
+          .map((c: any) => Number(c.cc_id));
+        setOpenParentIds(allParentIds);
       }
     } else {
       setCurrentCourse(null);
-      const firstParent = allCategories.find((c: any) => c.cc_parent === 0 && c.cc_homedisplay === 1);
-      if (firstParent) setOpenParentId(firstParent.cc_id);
+      // On "Học cùng Thầy Tony", expand ALL parent groups so parents immediately see every course & sub-course
+      const allParentIds = allCategories
+        .filter((c: any) => Number(c.cc_parent) === 0 && Number(c.cc_homedisplay) === 1)
+        .map((c: any) => Number(c.cc_id));
+      setOpenParentIds(allParentIds);
     }
   }, [slug, location.search, allCategories]);
 
@@ -591,15 +606,23 @@ export const CoursesPage: React.FC = () => {
               <GraduationCap className="w-4 h-4 text-[#0a5482] shrink-0" />
               <span className="hidden lg:inline shrink-0">{t('Courses')}</span>
               <span className="lg:hidden font-bold text-[#0a5482] text-[13px] normal-case tracking-normal truncate">
-                {isResolvingSpecificCourse ? (lang === 'vi' ? 'Đang tải...' : 'Loading...') : courseTitle}
+                {mobileCateOpen
+                  ? lang === 'vi'
+                    ? 'Danh mục Khóa học'
+                    : 'Course Catalog'
+                  : isResolvingSpecificCourse
+                  ? lang === 'vi'
+                    ? 'Đang tải...'
+                    : 'Loading...'
+                  : courseTitle}
               </span>
             </h2>
-            <span className="lg:hidden text-[11px] font-bold text-[#0a5482] bg-white px-2.5 py-1 rounded-lg border border-slate-200/80 shadow-2xs inline-flex items-center gap-1 shrink-0 ml-2">
+            <span className="lg:hidden text-[11px] font-bold text-[#0a5482] bg-white px-2.5 py-1 rounded-lg border border-sky-200/90 shadow-2xs inline-flex items-center gap-1 shrink-0 ml-2">
               <span>
                 {mobileCateOpen
                   ? lang === 'vi'
                     ? 'Thu gọn'
-                    : 'Hide'
+                    : 'Collapse'
                   : lang === 'vi'
                   ? 'Danh mục'
                   : 'Categories'}
@@ -676,7 +699,7 @@ export const CoursesPage: React.FC = () => {
                 const renderParentItem = (parent: any) => {
                   const subs = subCategories(parent.cc_id);
                   const isOpen =
-                    openParentId === parent.cc_id ||
+                    openParentIds.includes(Number(parent.cc_id)) ||
                     (currentCourse &&
                       (currentCourse.cc_id === parent.cc_id || currentCourse.cc_parent === parent.cc_id));
                   const parentName = normalizeCourseDisplayName(
@@ -691,8 +714,8 @@ export const CoursesPage: React.FC = () => {
                       <Link
                         to={`/courses/${(parent.cc_name_url || '').trim()}`}
                         onClick={() => {
-                          setOpenParentId(parent.cc_id);
-                          if (subs.length === 0) setMobileCateOpen(false);
+                          setOpenParentIds([Number(parent.cc_id)]);
+                          if (subs.length === 0 || isOpen) setMobileCateOpen(false);
                           scrollToCourseTop();
                         }}
                         className={`px-2.5 py-2.5 rounded-xl transition-all flex items-center justify-between gap-2 relative ${
@@ -796,6 +819,18 @@ export const CoursesPage: React.FC = () => {
                 );
               })()
             )}
+
+            {/* Mobile-only bottom collapse button for easy dismissal after browsing all courses */}
+            <div className="lg:hidden pt-2 border-t border-slate-100">
+              <button
+                type="button"
+                onClick={() => setMobileCateOpen(false)}
+                className="w-full py-2 px-3 rounded-xl bg-slate-50 hover:bg-slate-100 active:scale-[0.99] text-[12.5px] font-bold text-slate-600 inline-flex items-center justify-center gap-1.5 transition-all cursor-pointer"
+              >
+                <ChevronUp className="w-4 h-4 text-[#0a5482]" />
+                <span>{lang === 'vi' ? 'Thu gọn danh mục' : 'Collapse catalog'}</span>
+              </button>
+            </div>
           </div>
         </aside>
 
