@@ -716,6 +716,7 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
   const [revealedParas, setRevealedParas] = useState<Record<number, boolean>>({});
   const [zoomImageUrl, setZoomImageUrl] = useState<string | null>(null);
   const [ebookTheaterTrigger, setEbookTheaterTrigger] = useState<number>(0);
+  const [showEbookSynopsis, setShowEbookSynopsis] = useState<boolean>(false);
 
   // 🚀 TRACK LOG HỌC VIÊN ĐỌC TÀI LIỆU & LÀM BÀI TẬP THƯ VIỆN
   const [authUserId, setAuthUserId] = useState<string | null>(null);
@@ -1069,6 +1070,7 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
         setCamMode('paragraph');
         setRevealedParas({});
         setZoomImageUrl(null);
+        setShowEbookSynopsis(false);
 
         const { data: rows } = await supabase
           .from('te_news')
@@ -1602,6 +1604,17 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                       {newsList.map((item, idx) => {
                         const itemUrl = `/news/view/${(item.news_title_url || '').trim()}`;
                         const isChartThumb = [59, 60, 61, 62, 73].includes(Number(item.news_cc_id));
+                        const isEbookItem = Number(item.news_cc_id) === 30;
+                        let savedEbookPage = 0;
+                        if (isEbookItem && typeof window !== 'undefined') {
+                          try {
+                            const raw = parseInt(
+                              localStorage.getItem(`tony_ebook_page_${item.news_id || item.news_title_url}`) || '0',
+                              10
+                            );
+                            if (raw > 1) savedEbookPage = raw;
+                          } catch {}
+                        }
                         const itemThumbSrc = resolveUploadUrl(item.news_thumb);
                         const itemDescText = truncateWords(item.news_desc, 260);
                         return (
@@ -1611,8 +1624,12 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                           >
                             <Link
                               to={itemUrl}
-                              className={`w-full sm:w-56 h-44 sm:h-36 rounded-xl overflow-hidden shrink-0 block ${
-                                isChartThumb ? 'bg-white border border-slate-200/70 p-1.5' : 'bg-slate-100'
+                              className={`w-full sm:w-56 h-48 sm:h-36 rounded-xl overflow-hidden shrink-0 block ${
+                                isEbookItem
+                                  ? 'bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border border-slate-200/80 p-2.5 flex items-center justify-center'
+                                  : isChartThumb
+                                  ? 'bg-white border border-slate-200/70 p-1.5'
+                                  : 'bg-slate-100'
                               }`}
                             >
                               {itemThumbSrc && (
@@ -1626,8 +1643,8 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                                     img.src = '/uploads/No_Image_Wide.svg_1.png';
                                   }}
                                   className={`w-full h-full ${
-                                    isChartThumb ? 'object-contain' : 'object-cover'
-                                  } group-hover:scale-105 transition-transform duration-500`}
+                                    isEbookItem || isChartThumb ? 'object-contain' : 'object-cover'
+                                  } ${isEbookItem ? 'drop-shadow-md' : ''} group-hover:scale-105 transition-transform duration-500`}
                                 />
                               )}
                             </Link>
@@ -1684,12 +1701,23 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                                       📖 {lang === 'vi' ? 'Đọc E-book trực tiếp' : 'Read E-book Online'}
                                     </span>
                                   )}
+                                  {savedEbookPage > 1 && (
+                                    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-sky-50 text-[#0a5482] border border-sky-200/80 text-[11px] font-extrabold">
+                                      🔖 {lang === 'vi' ? `Trang ${savedEbookPage}` : `Page ${savedEbookPage}`}
+                                    </span>
+                                  )}
                                 </div>
                                 <Link
                                   to={itemUrl}
                                   className="font-extrabold text-[#0a5482] group-hover:text-[#2ab4e8] transition-colors shrink-0 whitespace-nowrap self-end sm:self-center"
                                 >
-                                  {lang === 'vi' ? 'Xem bài học →' : 'Read →'}
+                                  {isEbookItem
+                                    ? lang === 'vi'
+                                      ? 'Đọc sách →'
+                                      : 'Read Book →'
+                                    : lang === 'vi'
+                                    ? 'Xem bài học →'
+                                    : 'Read →'}
                                 </Link>
                               </div>
                             </div>
@@ -1818,9 +1846,10 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                     />
                   )}
 
-                  {/* Lead / Intro (only show if not already duplicated in article body) */}
+                  {/* Lead / Intro (only show if not already duplicated in article body; for E-books shown inside collapsible synopsis so PDF reader opens immediately) */}
                   {article.news_desc &&
                     (() => {
+                      if (Boolean(extractArticleEbookPdfUrl(article.news_content || '').pdfUrl)) return false;
                       const descPlain = stripTags(article.news_desc).toLowerCase();
                       const bodyPlain = stripTags(article.news_content).toLowerCase();
                       const titlePlain = stripTags(article.news_title).toLowerCase();
@@ -1835,8 +1864,10 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                       />
                     )}
 
-                  {/* Featured Image if enabled - Display full uploaded image without cropping */}
+                  {/* Featured Image if enabled - Display full uploaded image without cropping (skip giant standalone cover for E-books; shown compactly beside PDF reader) */}
                   {(() => {
+                    const hasEbookPdf = Boolean(extractArticleEbookPdfUrl(article.news_content || '').pdfUrl);
+                    if (hasEbookPdf) return null;
                     const featuredImgUrl = resolveUploadUrl(article.news_thumb, '');
                     if (!featuredImgUrl || Number(article.news_status_avatar) !== 1) return null;
                     return (
@@ -2070,77 +2101,134 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                             </div>
                           </div>
                         ) : (
-                          <div className="space-y-5">
-                            {/* E-book Quick Action Bar (replaces legacy broken Download link) */}
-                            {ebookPdfUrl && (
-                              <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-sky-50/90 via-white to-amber-50/50 border-2 border-sky-200/90 flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-2xs">
-                                <div className="flex items-center gap-3">
-                                  <span className="w-10 h-10 rounded-xl bg-[#0a5482] text-white flex items-center justify-center text-lg shrink-0 shadow-xs">
-                                    📚
-                                  </span>
-                                  <div>
-                                    <div className="text-sm sm:text-[15.5px] font-black text-[#0a5482]">
-                                      {lang === 'vi'
-                                        ? 'Sách E-book PDF — Đọc trực tiếp trên Web'
-                                        : 'PDF E-book — Read Directly Online'}
+                          <div className="space-y-4 sm:space-y-5">
+                            {/* E-book Compact Action Header + Immediate Reader Above the Fold */}
+                            {ebookPdfUrl ? (
+                              <>
+                                {(() => {
+                                  const coverImgUrl = resolveUploadUrl(article.news_thumb, '');
+                                  let savedBookPage = 0;
+                                  if (typeof window !== 'undefined') {
+                                    try {
+                                      const raw = parseInt(
+                                        localStorage.getItem(
+                                          `tony_ebook_page_${article.news_id || article.news_title_url}`
+                                        ) || '0',
+                                        10
+                                      );
+                                      if (raw > 1) savedBookPage = raw;
+                                    } catch {}
+                                  }
+                                  const hasLeadDesc =
+                                    Boolean(article.news_desc) &&
+                                    stripTags(article.news_desc).trim().toLowerCase() !==
+                                      stripTags(article.news_title).trim().toLowerCase();
+                                  const hasSynopsis =
+                                    hasLeadDesc || stripTags(displayBodyHtml).trim().length > 0;
+                                  return (
+                                    <div className="p-3 sm:p-4 rounded-2xl bg-gradient-to-r from-sky-50/90 via-white to-amber-50/40 border border-sky-200/90 shadow-2xs space-y-3">
+                                      <div className="flex items-center gap-3">
+                                        {coverImgUrl && (
+                                          <img
+                                            src={coverImgUrl}
+                                            alt={article.news_title}
+                                            onClick={() => setZoomImageUrl(coverImgUrl)}
+                                            className="w-14 h-20 sm:w-16 sm:h-24 rounded-lg object-contain bg-slate-900 p-1 shrink-0 shadow-xs cursor-zoom-in"
+                                          />
+                                        )}
+                                        <div className="min-w-0 flex-1 space-y-1">
+                                          <div className="flex items-center flex-wrap gap-1.5">
+                                            <span className="text-[13px] sm:text-[15px] font-black text-[#0a5482] leading-snug">
+                                              {lang === 'vi'
+                                                ? 'Sách E-book PDF — Đọc trực tiếp'
+                                                : 'PDF E-book — Online Reader'}
+                                            </span>
+                                            {savedBookPage > 1 && (
+                                              <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-sky-100 text-[#0a5482] text-[11px] font-extrabold">
+                                                🔖 {lang === 'vi' ? `Trang ${savedBookPage}` : `Page ${savedBookPage}`}
+                                              </span>
+                                            )}
+                                          </div>
+                                          <p className="text-[11.5px] sm:text-xs text-slate-600 leading-relaxed">
+                                            {lang === 'vi'
+                                              ? 'Hỗ trợ lật trang/cuộn liên tục, phóng to chữ, chế độ giấy sách & ban đêm, tự lưu trang và tra từ điển.'
+                                              : 'Supports page & scroll modes, zoom, Sepia/Night themes, auto-bookmark & dictionary lookup.'}
+                                          </p>
+                                          <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 pt-1">
+                                            <button
+                                              type="button"
+                                              onClick={() => setEbookTheaterTrigger((n) => n + 1)}
+                                              className="px-3 sm:px-3.5 py-1.5 sm:py-2 rounded-xl bg-[#0a5482] hover:bg-[#084266] text-white text-xs font-extrabold transition shadow-2xs cursor-pointer inline-flex items-center gap-1.5"
+                                            >
+                                              <span>⛶</span>
+                                              <span>{lang === 'vi' ? 'Toàn màn hình' : 'Fullscreen'}</span>
+                                            </button>
+
+                                            <a
+                                              href={ebookPdfUrl}
+                                              target="_blank"
+                                              rel="noopener noreferrer"
+                                              className="px-3 py-1.5 sm:py-2 rounded-xl bg-white hover:bg-slate-50 text-slate-700 border border-slate-300 text-xs font-extrabold transition inline-flex items-center gap-1"
+                                            >
+                                              <span>⬇</span>
+                                              <span>{lang === 'vi' ? 'Tải PDF' : 'Download'}</span>
+                                            </a>
+
+                                            {hasSynopsis && (
+                                              <button
+                                                type="button"
+                                                onClick={() => setShowEbookSynopsis((v) => !v)}
+                                                className={`px-3 py-1.5 sm:py-2 rounded-xl border text-xs font-extrabold transition cursor-pointer inline-flex items-center gap-1 ${
+                                                  showEbookSynopsis
+                                                    ? 'bg-amber-50 border-amber-300 text-amber-900'
+                                                    : 'bg-white hover:bg-slate-50 border-slate-300 text-slate-600'
+                                                }`}
+                                              >
+                                                <span>ℹ️</span>
+                                                <span>
+                                                  {lang === 'vi'
+                                                    ? showEbookSynopsis
+                                                      ? 'Ẩn giới thiệu'
+                                                      : 'Giới thiệu sách'
+                                                    : showEbookSynopsis
+                                                    ? 'Hide Synopsis'
+                                                    : 'About Book'}
+                                                </span>
+                                              </button>
+                                            )}
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                      {hasSynopsis && showEbookSynopsis && (
+                                        <div className="pt-3 border-t border-sky-100 space-y-3">
+                                          {hasLeadDesc && (
+                                            <div
+                                              className="p-3.5 bg-slate-50 rounded-xl border-l-4 border-[#2ab4e8] italic font-medium text-slate-700 text-[14.5px] leading-relaxed legacy-prose"
+                                              dangerouslySetInnerHTML={{
+                                                __html: fixLegacyHtmlContent(article.news_desc),
+                                              }}
+                                            />
+                                          )}
+                                          {stripTags(displayBodyHtml).trim().length > 0 && (
+                                            <div
+                                              className="legacy-prose text-left sm:text-justify text-[15px] leading-relaxed"
+                                              dangerouslySetInnerHTML={{
+                                                __html: fixLegacyHtmlContent(displayBodyHtml),
+                                              }}
+                                            />
+                                          )}
+                                        </div>
+                                      )}
                                     </div>
-                                    <div className="text-xs text-slate-600">
-                                      {lang === 'vi'
-                                        ? 'Hỗ trợ lật trang, tự lưu trang đang đọc và click đúp tra từ điển ngay trên trang sách.'
-                                        : 'Supports page turning, auto-bookmarking, and double-click dictionary lookup.'}
-                                    </div>
-                                  </div>
-                                </div>
+                                  );
+                                })()}
 
-                                <div className="flex flex-wrap items-center gap-2 shrink-0">
-                                  <button
-                                    type="button"
-                                    onClick={() => {
-                                      const el = document.getElementById('library-ebook-viewer');
-                                      el?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                                    }}
-                                    className="px-4 py-2 rounded-xl bg-[#0a5482] hover:bg-[#084266] text-white text-xs sm:text-sm font-extrabold transition shadow-xs cursor-pointer inline-flex items-center gap-1.5"
-                                  >
-                                    <span>📖</span>
-                                    <span>{lang === 'vi' ? 'Đọc sách ngay ↓' : 'Read Below ↓'}</span>
-                                  </button>
-
-                                  <button
-                                    type="button"
-                                    onClick={() => setEbookTheaterTrigger((n) => n + 1)}
-                                    className="px-3.5 py-2 rounded-xl bg-[#2ab4e8] hover:bg-sky-500 text-white text-xs sm:text-sm font-extrabold transition shadow-xs cursor-pointer inline-flex items-center gap-1.5"
-                                  >
-                                    <span>⛶</span>
-                                    <span>{lang === 'vi' ? 'Toàn màn hình' : 'Fullscreen'}</span>
-                                  </button>
-
-                                  <a
-                                    href={ebookPdfUrl}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="px-3.5 py-2 rounded-xl bg-white hover:bg-slate-50 text-slate-700 border border-slate-300 text-xs sm:text-sm font-extrabold transition inline-flex items-center gap-1.5"
-                                  >
-                                    <span>⬇</span>
-                                    <span>{lang === 'vi' ? 'Tải PDF' : 'Download PDF'}</span>
-                                  </a>
-                                </div>
-                              </div>
-                            )}
-
-                            <div
-                              className="legacy-prose text-left sm:text-justify pt-2"
-                              dangerouslySetInnerHTML={{
-                                __html: fixLegacyHtmlContent(displayBodyHtml),
-                              }}
-                            />
-
-                            {/* Embedded Interactive PDF E-Book Reader */}
-                            {ebookPdfUrl && (
-                              <div className="pt-4">
+                                {/* Embedded Interactive PDF E-Book Reader (Immediately Visible Above the Fold!) */}
                                 <Suspense
                                   fallback={
-                                    <div className="rounded-2xl border-2 border-sky-200/80 bg-slate-900 text-sky-200 p-10 text-center text-sm font-bold">
-                                      📖 Đang khởi tạo trình đọc sách E-book trực tuyến...
+                                    <div className="rounded-2xl border border-sky-200/80 bg-slate-900 text-sky-200 p-10 text-center text-sm font-bold">
+                                      📖 {lang === 'vi' ? 'Đang khởi tạo trình đọc sách E-book...' : 'Loading E-book reader...'}
                                     </div>
                                   }
                                 >
@@ -2197,7 +2285,14 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                                     }}
                                   />
                                 </Suspense>
-                              </div>
+                              </>
+                            ) : (
+                              <div
+                                className="legacy-prose text-left sm:text-justify pt-2"
+                                dangerouslySetInnerHTML={{
+                                  __html: fixLegacyHtmlContent(displayBodyHtml),
+                                }}
+                              />
                             )}
 
                             {/* Bottom Bilingual Toggle Button (for easy language switching at the end of the article) */}
