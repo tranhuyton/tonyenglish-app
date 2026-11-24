@@ -95,7 +95,7 @@ const ArticleInteractiveQuiz: React.FC<{
         return {
           qNum: idx + 1,
           question: q.question,
-          picked: picked || 'Bỏ trống',
+          picked: picked || (lang === 'vi' ? 'Bỏ trống' : 'Unanswered'),
           correct,
           isRight: picked !== '' && picked === correct,
         };
@@ -339,12 +339,12 @@ const ArticleInteractiveQuiz: React.FC<{
 
                         {submitted && isOptCorrect && (
                           <span className="text-xs font-extrabold text-emerald-700 bg-emerald-100 px-2.5 py-0.5 rounded-md border border-emerald-200 shrink-0">
-                            ✓ Đáp án đúng
+                            {lang === 'vi' ? '✓ Đáp án đúng' : '✓ Correct answer'}
                           </span>
                         )}
                         {submitted && isSelected && !isOptCorrect && (
                           <span className="text-xs font-extrabold text-rose-700 bg-rose-100 px-2.5 py-0.5 rounded-md border border-rose-200 shrink-0">
-                            ✗ Bạn chọn
+                            {lang === 'vi' ? '✗ Bạn chọn' : '✗ Your choice'}
                           </span>
                         )}
                       </button>
@@ -685,7 +685,7 @@ const ArticleAudioPlayer: React.FC<{ src: string }> = ({ src }) => {
             step={0.1}
             value={currentTime}
             onChange={handleSeek}
-            aria-label="Thanh tua thời gian audio"
+            aria-label={lang === 'vi' ? 'Thanh tua thời gian audio' : 'Audio progress scrubber'}
             className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
           />
         </div>
@@ -1414,7 +1414,15 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                           {subs.length > 0 && (
                             <button
                               type="button"
-                              title={isOpen ? 'Thu gọn danh mục' : 'Mở rộng danh mục'}
+                              title={
+                                isOpen
+                                  ? lang === 'vi'
+                                    ? 'Thu gọn danh mục'
+                                    : 'Collapse category'
+                                  : lang === 'vi'
+                                  ? 'Mở rộng danh mục'
+                                  : 'Expand category'
+                              }
                               onClick={(e) => {
                                 e.preventDefault();
                                 e.stopPropagation();
@@ -2192,10 +2200,10 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                                       <div className="p-5 sm:p-6 bg-sky-50/35">
                                         <div className="flex items-center gap-2.5 mb-3">
                                           <span className="inline-flex items-center justify-center px-2.5 py-0.5 rounded-lg bg-sky-100 text-[#0a5482] font-extrabold text-xs tracking-wide">
-                                            Khổ {badgeLabel}
+                                            {lang === 'vi' ? `Khổ ${badgeLabel}` : `Paragraph ${badgeLabel}`}
                                           </span>
                                           <span className="text-xs font-semibold text-[#0a5482]/70 uppercase tracking-wider">
-                                            Bản dịch Tiếng Việt
+                                            {lang === 'vi' ? 'Bản dịch Tiếng Việt' : 'Vietnamese Translation'}
                                           </span>
                                         </div>
                                         <p className="text-[16px] leading-[1.85] text-slate-700 text-justify whitespace-pre-line">
@@ -2214,10 +2222,12 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                                     >
                                       <div className="flex items-center gap-2.5 mb-4 pb-3 border-b border-slate-100">
                                         <span className="inline-flex items-center justify-center px-2.5 py-0.5 rounded-lg bg-[#0a5482] text-white font-extrabold text-xs">
-                                          Khổ {badgeLabel}
+                                          {lang === 'vi' ? `Khổ ${badgeLabel}` : `Paragraph ${badgeLabel}`}
                                         </span>
                                         <span className="text-xs font-semibold text-slate-400">
-                                          {para.pairs.length} câu — Dịch chi tiết từng câu
+                                          {lang === 'vi'
+                                            ? `${para.pairs.length} câu — Dịch chi tiết từng câu`
+                                            : `${para.pairs.length} sentences — Sentence-by-sentence translation`}
                                         </span>
                                       </div>
                                       <div className="space-y-4">
@@ -2264,7 +2274,13 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                                         }
                                         className="text-xs font-bold text-[#0a5482] hover:text-white bg-sky-50 hover:bg-[#0a5482] border border-sky-200 px-3 py-1 rounded-lg transition"
                                       >
-                                        {isRevealed ? `Ẩn dịch khổ ${badgeLabel} ▲` : `💡 Xem dịch khổ ${badgeLabel} ▼`}
+                                        {isRevealed
+                                          ? lang === 'vi'
+                                            ? `Ẩn dịch khổ ${badgeLabel} ▲`
+                                            : `Hide translation (${badgeLabel}) ▲`
+                                          : lang === 'vi'
+                                          ? `💡 Xem dịch khổ ${badgeLabel} ▼`
+                                          : `💡 Show Vietnamese translation (${badgeLabel}) ▼`}
                                       </button>
                                     </div>
                                     <p className="text-[16.5px] leading-[1.85] text-slate-800 text-justify whitespace-pre-line">
@@ -2481,14 +2497,23 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                               !(article.news_content || '').includes('cambridge-bilingual') && (
                                 <div className="pt-4 border-t border-slate-100 flex flex-wrap items-center justify-between gap-3">
                                   <span className="text-xs sm:text-sm text-slate-500 font-medium">
-                                    💡 Chuyển đổi nhanh giữa bản Tiếng Anh và nghĩa Tiếng Việt của các cụm từ màu da cam:
+                                    {lang === 'vi'
+                                      ? '💡 Chuyển đổi nhanh giữa bản Tiếng Anh và nghĩa Tiếng Việt của các cụm từ màu da cam:'
+                                      : '💡 Quickly switch between the English text and Vietnamese meanings of the orange expressions:'}
                                   </span>
                                   <button
                                     type="button"
                                     onClick={() => setShowViTranslation(!showViTranslation)}
                                     className="bg-sky-50 hover:bg-[#0a5482] text-[#0a5482] hover:text-white border border-sky-200 font-black text-sm px-5 py-2.5 rounded-full transition shadow-2xs cursor-pointer"
                                   >
-                                    🌐 {showViTranslation ? 'Xem bản Tiếng Anh (ENG)' : 'Xem bản dịch Tiếng Việt (VIE)'}
+                                    🌐{' '}
+                                    {showViTranslation
+                                      ? lang === 'vi'
+                                        ? 'Xem bản Tiếng Anh (ENG)'
+                                        : 'View English Version (ENG)'
+                                      : lang === 'vi'
+                                      ? 'Xem bản dịch Tiếng Việt (VIE)'
+                                      : 'View Vietnamese Translation (VIE)'}
                                   </button>
                                 </div>
                               )}
@@ -2777,16 +2802,26 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                               <div>
                                 <div className="text-xs sm:text-sm font-black text-emerald-950">
                                   {completedQuizNewsIds.has(Number(article.news_id))
-                                    ? 'Đã ghi nhận bài đọc & kết quả nộp bài tập Thư viện vào Nhật ký học tập!'
+                                    ? lang === 'vi'
+                                      ? 'Đã ghi nhận bài đọc & kết quả nộp bài tập Thư viện vào Nhật ký học tập!'
+                                      : 'Reading & Library quiz submission recorded in your Study Log!'
                                     : isCurrentArticleLogged
-                                    ? 'Đã ghi nhận mở đọc bài học này vào Nhật ký học tập!'
-                                    : 'Đang ghi nhận bài đọc vào Tiến độ học tập của bạn...'}
+                                    ? lang === 'vi'
+                                      ? 'Đã ghi nhận mở đọc bài học này vào Nhật ký học tập!'
+                                      : 'This article has been logged to your Study History!'
+                                    : lang === 'vi'
+                                    ? 'Đang ghi nhận bài đọc vào Tiến độ học tập của bạn...'
+                                    : 'Logging this article to your learning progress...'}
                                 </div>
                                 <div className="text-[11.5px] text-slate-600">
                                   {interactiveQuiz.length > 0 &&
                                   !completedQuizNewsIds.has(Number(article.news_id))
-                                    ? '💡 Bài này có bài tập trắc nghiệm bên trên — nhớ làm và bấm "Nộp bài & Chấm điểm" để Thầy ghi nhận điểm nhé!'
-                                    : 'Giáo viên và hệ thống AI Tutor đã cập nhật hoạt động học Thư viện của bạn.'}
+                                    ? lang === 'vi'
+                                      ? '💡 Bài này có bài tập trắc nghiệm bên trên — nhớ làm và bấm "Nộp bài & Chấm điểm" để Thầy ghi nhận điểm nhé!'
+                                      : '💡 This article includes a quiz above — complete it and click "Submit & Grade" so your teacher can record your score!'
+                                    : lang === 'vi'
+                                    ? 'Giáo viên và hệ thống AI Tutor đã cập nhật hoạt động học Thư viện của bạn.'
+                                    : 'Your teacher and AI Tutor have synced your Library reading activity.'}
                                 </div>
                               </div>
                             </div>
@@ -2797,7 +2832,7 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                                   onClick={() => recordLibraryReadLog(article, true)}
                                   className="px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-extrabold transition cursor-pointer"
                                 >
-                                  ✓ Đánh dấu Đã đọc ngay
+                                  {lang === 'vi' ? '✓ Đánh dấu Đã đọc ngay' : '✓ Mark as Read'}
                                 </button>
                               )}
                               <button
@@ -2810,7 +2845,7 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                                 }}
                                 className="px-3.5 py-2 rounded-xl bg-[#0a5482] hover:bg-[#084266] text-white text-xs font-extrabold transition cursor-pointer"
                               >
-                                🎓 Về Góc Học Viên →
+                                {lang === 'vi' ? '🎓 Về Góc Học Viên →' : '🎓 Back to Student Portal →'}
                               </button>
                             </div>
                             </div>

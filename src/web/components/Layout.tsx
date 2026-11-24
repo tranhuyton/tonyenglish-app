@@ -563,7 +563,11 @@ export const Layout: React.FC<{
         .maybeSingle();
 
       if (!profile) {
-        setResetError('Email này không tồn tại trong danh sách học viên của hệ thống TonyEnglish.');
+        setResetError(
+          lang === 'vi'
+            ? 'Email này không tồn tại trong danh sách học viên của hệ thống TonyEnglish.'
+            : 'This email is not registered in the TonyEnglish student system.'
+        );
         return;
       }
 
@@ -573,7 +577,12 @@ export const Layout: React.FC<{
       if (error) throw error;
       setResetSentSuccess(true);
     } catch (err: any) {
-      setResetError(err.message || 'Không thể gửi email đặt lại mật khẩu. Vui lòng kiểm tra lại địa chỉ email.');
+      setResetError(
+        err.message ||
+          (lang === 'vi'
+            ? 'Không thể gửi email đặt lại mật khẩu. Vui lòng kiểm tra lại địa chỉ email.'
+            : 'Unable to send password reset email. Please check your email address.')
+      );
     } finally {
       setIsResetting(false);
     }
@@ -663,7 +672,7 @@ export const Layout: React.FC<{
                 type="button"
                 onClick={() => setSearchDropdownOpen(!searchDropdownOpen)}
                 className="px-2.5 py-1 text-[11.5px] font-bold text-[#2ab4e8] border-r border-slate-700 hover:bg-slate-700/60 rounded-l-lg flex items-center gap-1 whitespace-nowrap shrink-0 cursor-pointer"
-                title="Chọn chế độ tra cứu"
+                title={lang === 'vi' ? 'Chọn chế độ tra cứu' : 'Choose search mode'}
               >
                 {searchMode === 'dic' ? <BookOpen className="w-3.5 h-3.5" /> : searchMode === 'web' ? <Search className="w-3.5 h-3.5" /> : <Globe className="w-3.5 h-3.5" />}
                 <span>
@@ -704,7 +713,7 @@ export const Layout: React.FC<{
                 type="button"
                 onClick={() => handleSearchSubmit()}
                 className="px-2.5 py-1 text-slate-300 hover:text-white hover:bg-[#0a5482] rounded-r-lg transition-colors shrink-0 cursor-pointer"
-                title="Tra cứu"
+                title={lang === 'vi' ? 'Tra cứu' : 'Search'}
               >
                 <Search className="w-3.5 h-3.5" />
               </button>
@@ -1733,7 +1742,7 @@ export const Layout: React.FC<{
                     type="submit"
                     className="px-3 py-1.5 bg-[#0a5482] hover:bg-[#084266] text-white text-xs font-bold cursor-pointer transition-colors"
                   >
-                    Tra
+                    {lang === 'vi' ? 'Tra' : 'Look up'}
                   </button>
                 </form>
 
@@ -1746,18 +1755,18 @@ export const Layout: React.FC<{
                     })
                   }
                   className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-sky-50 hover:bg-sky-100 text-[#0a5482] border border-sky-200 text-xs font-bold cursor-pointer transition-colors"
-                  title="Mở giao diện từ điển đầy đủ"
+                  title={lang === 'vi' ? 'Mở giao diện từ điển đầy đủ' : 'Open full dictionary view'}
                 >
                   <BookOpen className="w-3.5 h-3.5" />
-                  <span>Khung đầy đủ</span>
+                  <span>{lang === 'vi' ? 'Khung đầy đủ' : 'Full View'}</span>
                 </button>
 
                 <button
                   type="button"
                   onClick={() => setPopupModal(null)}
                   className="w-8 h-8 rounded-xl bg-white hover:bg-rose-50 text-slate-500 hover:text-rose-600 border border-slate-200 flex items-center justify-center transition-colors cursor-pointer shrink-0"
-                  title="Đóng (Esc)"
-                  aria-label="Đóng"
+                  title={lang === 'vi' ? 'Đóng (Esc)' : 'Close (Esc)'}
+                  aria-label={lang === 'vi' ? 'Đóng' : 'Close'}
                 >
                   <X className="w-4 h-4" />
                 </button>
@@ -1799,19 +1808,19 @@ export const Layout: React.FC<{
                 setQuickDict(null);
               }}
               className="flex items-center gap-2 min-w-0 cursor-pointer hover:opacity-90 transition-opacity"
-              title="Bấm để mở Từ điển lớn"
+              title={lang === 'vi' ? 'Bấm để mở Từ điển lớn' : 'Click to open full dictionary'}
             >
               <BookOpen className="w-3.5 h-3.5 text-[#2ab4e8] shrink-0" />
               <span className="text-xs font-extrabold tracking-tight truncate">
-                Tra nhanh: <span className="text-sky-200">{quickDict.word}</span>
+                {lang === 'vi' ? 'Tra nhanh:' : 'Quick lookup:'} <span className="text-sky-200">{quickDict.word}</span>
               </span>
             </button>
             <button
               type="button"
               onClick={() => setQuickDict(null)}
               className="w-6 h-6 rounded-lg bg-white/15 hover:bg-white/25 text-white flex items-center justify-center transition-colors cursor-pointer shrink-0 ml-2"
-              title="Đóng (Esc)"
-              aria-label="Đóng"
+              title={lang === 'vi' ? 'Đóng (Esc)' : 'Close (Esc)'}
+              aria-label={lang === 'vi' ? 'Đóng' : 'Close'}
             >
               <X className="w-3.5 h-3.5" />
             </button>
