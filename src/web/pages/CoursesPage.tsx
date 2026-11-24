@@ -13,12 +13,19 @@ import {
   ChevronRight,
   X,
   ZoomIn,
+  Sparkles,
+  Mic,
+  Briefcase,
+  Award,
+  Globe,
+  Target,
 } from 'lucide-react';
 import { supabase } from '../lib/supabase';
 import { useApp } from '../context/AppContext';
 import { fixLegacyHtmlContent, updatePageSeo } from '../lib/utils';
 import { trackTonyContact, trackUnifiedViewCourse } from '../../lib/googleAnalytics';
 import { CourseShowcaseGallery } from '../components/CourseShowcaseGallery';
+import { CourseGuideVideoCard } from '../components/CourseGuideVideoCard';
 
 const CONTACT_ZALO_URL = 'https://zalo.me/0935058688';
 const CONTACT_PHONE = '0935058688';
@@ -573,8 +580,8 @@ export const CoursesPage: React.FC = () => {
       </nav>
 
       <div className="flex flex-col lg:flex-row gap-4 sm:gap-8 xl:gap-12 items-start">
-        {/* LEFT SIDEBAR: UNIFIED COURSES MENU */}
-        <aside className="w-full lg:w-[260px] xl:w-[270px] shrink-0 bg-white rounded-2xl border border-slate-200/80 shadow-2xs overflow-hidden lg:sticky lg:top-24">
+        {/* LEFT SIDEBAR: STRUCTURED & GROUPED COURSES MENU */}
+        <aside className="w-full lg:w-[272px] xl:w-[288px] shrink-0 bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden lg:sticky lg:top-24">
           <button
             type="button"
             onClick={() => setMobileCateOpen((prev) => !prev)}
@@ -601,47 +608,86 @@ export const CoursesPage: React.FC = () => {
             </span>
           </button>
 
-          <div className={`${mobileCateOpen ? 'block' : 'hidden'} lg:block`}>
-            <ul className="divide-y divide-slate-100 text-[14.5px] p-2 space-y-1">
-              <li className="py-0.5">
-                <Link
-                  to="/courses"
-                  onClick={() => {
-                    setMobileCateOpen(false);
-                    scrollToCourseTop();
-                  }}
-                  className={`block px-3.5 py-3 rounded-xl transition-colors relative ${
-                    !currentCourse
-                      ? "bg-sky-50/90 text-[#0a5482] font-semibold pl-4 before:content-[''] before:absolute before:left-1.5 before:top-2 before:bottom-2 before:w-1 before:rounded-full before:bg-[#2ab4e8]"
-                      : 'text-slate-600 font-medium hover:bg-slate-50 hover:text-[#0a5482]'
+          <div className={`${mobileCateOpen ? 'block' : 'hidden'} lg:block p-2.5 space-y-3 text-[14px]`}>
+            {/* GROUP 1: OVERVIEW */}
+            <div>
+              <div className="px-2.5 pb-1.5 text-[10.5px] font-extrabold uppercase tracking-widest text-slate-400">
+                {lang === 'vi' ? 'Tổng quan' : 'Overview'}
+              </div>
+              <Link
+                to="/courses"
+                onClick={() => {
+                  setMobileCateOpen(false);
+                  scrollToCourseTop();
+                }}
+                className={`flex items-center gap-2.5 px-2.5 py-2.5 rounded-xl transition-all relative ${
+                  !currentCourse
+                    ? "bg-sky-50/95 text-[#0a5482] font-bold pl-3.5 before:content-[''] before:absolute before:left-1 before:top-2 before:bottom-2 before:w-1 before:rounded-full before:bg-[#2ab4e8]"
+                    : 'text-slate-600 font-semibold hover:bg-slate-50 hover:text-[#0a5482]'
+                }`}
+              >
+                <span
+                  className={`w-7 h-7 rounded-lg flex items-center justify-center shrink-0 transition-colors ${
+                    !currentCourse ? 'bg-[#0a5482] text-white shadow-xs' : 'bg-sky-50 text-[#0a5482]'
                   }`}
                 >
-                  {t('Study at TonyEnglish')}
-                </Link>
-              </li>
+                  <Sparkles className="w-3.5 h-3.5" />
+                </span>
+                <span className="leading-snug">{t('Study at TonyEnglish')}</span>
+              </Link>
+            </div>
 
-              {homeParents.length === 0 && (
-                <li className="py-2 px-2 space-y-2 animate-pulse">
-                  {[1, 2, 3, 4].map((n) => (
-                    <div key={n} className="h-9 rounded-xl bg-slate-100" />
-                  ))}
-                </li>
-              )}
+            {homeParents.length === 0 ? (
+              <div className="pt-2 border-t border-slate-100 px-1 space-y-2 animate-pulse">
+                {[1, 2, 3, 4].map((n) => (
+                  <div key={n} className="h-9 rounded-xl bg-slate-100" />
+                ))}
+              </div>
+            ) : (
+              (() => {
+                const isCommParent = (p: any) => {
+                  const key = `${p.cc_name_url || ''} ${p.cc_name || ''} ${p.cc_name_vi || ''}`.toLowerCase();
+                  return Number(p.cc_id) === 111 || Number(p.cc_id) === 129 || key.includes('communication') || key.includes('giao tiếp') || key.includes('giao tiep');
+                };
 
-              {homeParents.map((parent) => {
-                const subs = subCategories(parent.cc_id);
-                const isOpen =
-                  openParentId === parent.cc_id ||
-                  (currentCourse &&
-                    (currentCourse.cc_id === parent.cc_id || currentCourse.cc_parent === parent.cc_id));
-                const parentName = normalizeCourseDisplayName(
-                  lang === 'vi' ? parent.cc_name_vi || parent.cc_name : parent.cc_name
-                );
-                const isCurrentParent = currentCourse && currentCourse.cc_id === parent.cc_id;
+                const commParents = homeParents.filter(isCommParent);
+                const examParents = homeParents.filter((p) => !isCommParent(p));
 
-                return (
-                  <li key={parent.cc_id} className="py-0.5">
-                    <div className="flex items-center justify-between">
+                const getParentIcon = (p: any) => {
+                  const key = `${p.cc_name_url || ''} ${p.cc_name || ''} ${p.cc_name_vi || ''}`.toLowerCase();
+                  if (key.includes('advanced') || key.includes('nâng cao') || key.includes('nang cao')) {
+                    return { Icon: Briefcase, idleBg: 'bg-indigo-50 text-indigo-600' };
+                  }
+                  if (key.includes('communication') || key.includes('giao tiếp') || key.includes('giao tiep')) {
+                    return { Icon: Mic, idleBg: 'bg-sky-50 text-[#0a5482]' };
+                  }
+                  if (key.includes('ielts')) {
+                    return { Icon: Award, idleBg: 'bg-rose-50 text-rose-600' };
+                  }
+                  if (key.includes('igcse') || key.includes('alevel') || key.includes('a-level')) {
+                    return { Icon: Globe, idleBg: 'bg-emerald-50 text-emerald-700' };
+                  }
+                  if (key.includes('sat')) {
+                    return { Icon: Target, idleBg: 'bg-amber-50 text-amber-700' };
+                  }
+                  return { Icon: BookOpen, idleBg: 'bg-slate-100 text-slate-600' };
+                };
+
+                const renderParentItem = (parent: any) => {
+                  const subs = subCategories(parent.cc_id);
+                  const isOpen =
+                    openParentId === parent.cc_id ||
+                    (currentCourse &&
+                      (currentCourse.cc_id === parent.cc_id || currentCourse.cc_parent === parent.cc_id));
+                  const parentName = normalizeCourseDisplayName(
+                    lang === 'vi' ? parent.cc_name_vi || parent.cc_name : parent.cc_name
+                  );
+                  const isCurrentParent = currentCourse && currentCourse.cc_id === parent.cc_id;
+                  const hasActiveChild = currentCourse && currentCourse.cc_parent === parent.cc_id;
+                  const { Icon, idleBg } = getParentIcon(parent);
+
+                  return (
+                    <li key={parent.cc_id}>
                       <Link
                         to={`/courses/${(parent.cc_name_url || '').trim()}`}
                         onClick={() => {
@@ -649,57 +695,107 @@ export const CoursesPage: React.FC = () => {
                           if (subs.length === 0) setMobileCateOpen(false);
                           scrollToCourseTop();
                         }}
-                        className={`flex-1 px-3.5 py-3 rounded-xl transition-colors flex items-center justify-between relative ${
+                        className={`px-2.5 py-2.5 rounded-xl transition-all flex items-center justify-between gap-2 relative ${
                           isCurrentParent
-                            ? "bg-sky-50/90 text-[#0a5482] font-semibold pl-4 before:content-[''] before:absolute before:left-1.5 before:top-2 before:bottom-2 before:w-1 before:rounded-full before:bg-[#2ab4e8]"
-                            : isOpen
-                            ? 'text-[#0a5482] font-semibold bg-slate-50/70'
-                            : 'text-slate-600 font-medium hover:bg-slate-50 hover:text-[#0a5482]'
+                            ? "bg-sky-50/95 text-[#0a5482] font-bold pl-3.5 before:content-[''] before:absolute before:left-1 before:top-2 before:bottom-2 before:w-1 before:rounded-full before:bg-[#2ab4e8]"
+                            : hasActiveChild || isOpen
+                            ? 'text-[#0a5482] font-semibold bg-slate-50/80'
+                            : 'text-slate-700 font-medium hover:bg-slate-50 hover:text-[#0a5482]'
                         }`}
                       >
-                        <span className="leading-snug pr-1">{parentName}</span>
-                        {subs.length > 0 && (
+                        <span className="flex items-center gap-2.5 min-w-0">
                           <span
-                            className={`text-xs transition-transform shrink-0 ${
-                              isOpen ? 'rotate-90 text-[#2ab4e8]' : 'text-slate-400'
+                            className={`w-7 h-7 rounded-lg flex items-center justify-center shrink-0 transition-colors ${
+                              isCurrentParent ? 'bg-[#0a5482] text-white shadow-xs' : idleBg
                             }`}
                           >
-                            ▸
+                            <Icon className="w-3.5 h-3.5" />
+                          </span>
+                          <span className="leading-snug">{parentName}</span>
+                        </span>
+                        {subs.length > 0 && (
+                          <span className="flex items-center gap-1 shrink-0">
+                            <span
+                              className={`text-[10.5px] font-extrabold px-1.5 py-0.5 rounded-md tabular-nums ${
+                                isOpen || isCurrentParent
+                                  ? 'bg-sky-100 text-[#0a5482]'
+                                  : 'bg-slate-100 text-slate-500'
+                              }`}
+                            >
+                              {subs.length}
+                            </span>
+                            <ChevronRight
+                              className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                                isOpen ? 'rotate-90 text-[#0a5482]' : 'text-slate-400'
+                              }`}
+                            />
                           </span>
                         )}
                       </Link>
-                    </div>
 
-                    {subs.length > 0 && isOpen && (
-                      <ul className="mt-1 mb-1.5 ml-3 pl-2.5 border-l border-slate-200/80 space-y-1">
-                        {subs.map((sub) => {
-                          const subName = lang === 'vi' ? sub.cc_name_vi || sub.cc_name : sub.cc_name;
-                          const isActiveSub = currentCourse && currentCourse.cc_id === sub.cc_id;
-                          return (
-                            <li key={sub.cc_id}>
-                              <Link
-                                to={`/courses/${(sub.cc_name_url || '').trim()}`}
-                                onClick={() => {
-                                  setMobileCateOpen(false);
-                                  scrollToCourseTop();
-                                }}
-                                className={`block px-3 py-2.5 rounded-lg text-[13.5px] transition-all relative ${
-                                  isActiveSub
-                                    ? "bg-sky-50 text-[#0a5482] font-semibold pl-3.5 before:content-[''] before:absolute before:left-1 before:top-1.5 before:bottom-1.5 before:w-0.5 before:rounded-full before:bg-[#2ab4e8]"
-                                    : 'text-slate-500 font-normal hover:bg-slate-50 hover:text-slate-800'
-                                }`}
-                              >
-                                {subName}
-                              </Link>
-                            </li>
-                          );
-                        })}
-                      </ul>
+                      {subs.length > 0 && isOpen && (
+                        <ul className="mt-1 mb-1.5 ml-5 pl-2.5 border-l-2 border-sky-100 space-y-1">
+                          {subs.map((sub, subIdx) => {
+                            const subName = lang === 'vi' ? sub.cc_name_vi || sub.cc_name : sub.cc_name;
+                            const isActiveSub = currentCourse && currentCourse.cc_id === sub.cc_id;
+                            const stepLabel = String(subIdx + 1).padStart(2, '0');
+                            return (
+                              <li key={sub.cc_id}>
+                                <Link
+                                  to={`/courses/${(sub.cc_name_url || '').trim()}`}
+                                  onClick={() => {
+                                    setMobileCateOpen(false);
+                                    scrollToCourseTop();
+                                  }}
+                                  className={`flex items-center gap-2 px-2.5 py-2 rounded-lg text-[13px] transition-all ${
+                                    isActiveSub
+                                      ? 'bg-sky-50 text-[#0a5482] font-bold'
+                                      : 'text-slate-600 font-medium hover:bg-slate-50 hover:text-[#0a5482]'
+                                  }`}
+                                >
+                                  <span
+                                    className={`text-[10px] font-black px-1.5 py-0.5 rounded-md tabular-nums shrink-0 ${
+                                      isActiveSub
+                                        ? 'bg-[#0a5482] text-white'
+                                        : 'bg-slate-100 text-slate-500'
+                                    }`}
+                                  >
+                                    {stepLabel}
+                                  </span>
+                                  <span className="leading-snug">{subName}</span>
+                                </Link>
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      )}
+                    </li>
+                  );
+                };
+
+                return (
+                  <>
+                    {commParents.length > 0 && (
+                      <div className="pt-2.5 border-t border-slate-100">
+                        <div className="px-2.5 pb-1.5 text-[10.5px] font-extrabold uppercase tracking-widest text-slate-400">
+                          {lang === 'vi' ? 'Tiếng Anh Giao tiếp' : 'English Communication'}
+                        </div>
+                        <ul className="space-y-1">{commParents.map(renderParentItem)}</ul>
+                      </div>
                     )}
-                  </li>
+
+                    {examParents.length > 0 && (
+                      <div className="pt-2.5 border-t border-slate-100">
+                        <div className="px-2.5 pb-1.5 text-[10.5px] font-extrabold uppercase tracking-widest text-slate-400">
+                          {lang === 'vi' ? 'Luyện thi Quốc tế' : 'International Exams'}
+                        </div>
+                        <ul className="space-y-1">{examParents.map(renderParentItem)}</ul>
+                      </div>
+                    )}
+                  </>
                 );
-              })}
-            </ul>
+              })()
+            )}
           </div>
         </aside>
 
@@ -733,38 +829,6 @@ export const CoursesPage: React.FC = () => {
               </div>
             ) : (
             <div className="p-4 sm:p-8 space-y-6">
-
-              {/* Subcategory Quick Cards if parent category has children */}
-              {childCoursesOfCurrent.length > 0 && (
-                <div className="bg-slate-50 rounded-2xl p-5 border border-slate-200/80">
-                  <h3 className="text-xs sm:text-sm font-black uppercase tracking-wider text-slate-500 mb-3">
-                    {lang === 'vi' ? 'Các cấp độ / chuyên đề trong khóa học này:' : 'Courses in this category:'}
-                  </h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    {childCoursesOfCurrent.map((sub) => (
-                      <Link
-                        key={sub.cc_id}
-                        to={`/courses/${(sub.cc_name_url || '').trim()}`}
-                        onClick={scrollToCourseTop}
-                        className="bg-white hover:bg-sky-50 border border-slate-200 rounded-xl p-4 flex items-center justify-between group transition shadow-2xs"
-                      >
-                        <div>
-                          <div className="font-extrabold text-[15px] sm:text-base text-slate-800 group-hover:text-[#0a5482]">
-                            {lang === 'vi' ? sub.cc_name_vi || sub.cc_name : sub.cc_name}
-                          </div>
-                          <div className="text-xs sm:text-sm text-slate-500 mt-0.5">
-                            {t('Tuition fee')}:{' '}
-                            <strong className="text-[#0a5482]">{lang === 'vi' ? 'Liên hệ' : 'Contact Mr. Tony'}</strong>
-                          </div>
-                        </div>
-                        <span className="text-[#2ab4e8] font-black group-hover:translate-x-1 transition-transform">
-                          →
-                        </span>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              )}
 
               {/* Quick Above-the-Fold Direct Call & Zalo Box */}
               <div
@@ -839,38 +903,71 @@ export const CoursesPage: React.FC = () => {
                 )}
               </div>
 
+              {/* Featured Walkthrough Video (IGCSE & IELTS — High-Conversion Above-the-Fold for Ads) */}
+              {currentCourse && (
+                <CourseGuideVideoCard courseId={Number(currentCourse.cc_id)} lang={lang} />
+              )}
+
               {/* Course Description HTML */}
               {courseDescHtml && (
-                <div className="pt-2 sm:pt-3 space-y-6">
+                <div className="pt-2 sm:pt-3">
                   <div
                     className="legacy-prose course-tab-prose text-left sm:text-justify max-w-[74ch] [&_img]:cursor-zoom-in [&_img]:rounded-xl [&_img]:border [&_img]:border-slate-200/90 [&_img]:shadow-2xs [&_img]:transition-all [&_img:hover]:ring-2 [&_img:hover]:ring-[#2ab4e8]/70 [&_img:hover]:shadow-lg"
                     onClick={handleProseClick}
                     dangerouslySetInnerHTML={{ __html: fixLegacyHtmlContent(courseDescHtml) }}
                   />
+                </div>
+              )}
 
-                  {/* Curated Live LMS Screenshots: Theory Lectures & Practice Test Bank */}
-                  {currentCourse && (
-                    <CourseShowcaseGallery courseId={Number(currentCourse.cc_id)} lang={lang} />
-                  )}
+              {/* Curated Live LMS Screenshots: Theory Lectures & Practice Test Bank */}
+              {currentCourse && (
+                <CourseShowcaseGallery courseId={Number(currentCourse.cc_id)} lang={lang} />
+              )}
 
-                  <div className="rounded-xl bg-sky-50/90 border border-sky-200 px-4 py-3.5 flex flex-wrap items-center justify-between gap-2">
-                    <div className="space-y-0.5">
-                      <div className="text-sm sm:text-base font-extrabold text-slate-800">
-                        💳 {lang === 'vi' ? 'Học phí:' : 'Tuition fee:'}{' '}
-                        <span className="text-[#0a5482] font-black">
-                          {lang === 'vi' ? 'Liên hệ' : 'Contact Mr. Tony'}
+              {/* Subcategory Quick Cards if parent category has children (placed below screenshots showcase) */}
+              {childCoursesOfCurrent.length > 0 && (
+                <div className="bg-slate-50 rounded-2xl p-5 border border-slate-200/80">
+                  <h3 className="text-xs sm:text-sm font-black uppercase tracking-wider text-slate-500 mb-3">
+                    {lang === 'vi' ? 'Các cấp độ / chuyên đề trong khóa học này:' : 'Courses in this category:'}
+                  </h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {childCoursesOfCurrent.map((sub) => (
+                      <Link
+                        key={sub.cc_id}
+                        to={`/courses/${(sub.cc_name_url || '').trim()}`}
+                        onClick={scrollToCourseTop}
+                        className="bg-white hover:bg-sky-50 border border-slate-200 hover:border-sky-300 rounded-xl px-4 py-3.5 flex items-center justify-between gap-3 group transition shadow-2xs"
+                      >
+                        <div className="font-extrabold text-[15px] sm:text-base text-slate-800 group-hover:text-[#0a5482]">
+                          {lang === 'vi' ? sub.cc_name_vi || sub.cc_name : sub.cc_name}
+                        </div>
+                        <span className="text-[#2ab4e8] font-black group-hover:translate-x-1 transition-transform shrink-0">
+                          →
                         </span>
-                      </div>
-                      <div className="text-xs sm:text-[13px] font-bold text-emerald-700">
-                        {lang === 'vi'
-                          ? '✨ Học thử miễn phí 2–3 buổi tại R2B Royal City — Thấy thật sự hợp thầy mới đăng ký'
-                          : '✨ 2–3 Free Trial Lessons at R2B Royal City before enrollment'}
-                      </div>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {courseDescHtml && (
+                <div className="rounded-xl bg-sky-50/90 border border-sky-200 px-4 py-3.5 flex flex-wrap items-center justify-between gap-2">
+                  <div className="space-y-0.5">
+                    <div className="text-sm sm:text-base font-extrabold text-slate-800">
+                      💳 {lang === 'vi' ? 'Học phí:' : 'Tuition fee:'}{' '}
+                      <span className="text-[#0a5482] font-black">
+                        {lang === 'vi' ? 'Liên hệ' : 'Contact Mr. Tony'}
+                      </span>
                     </div>
-                    <div className="text-xs sm:text-sm font-bold text-slate-600">
-                      {lang === 'vi' ? 'Hotline / Zalo Thầy Tony:' : 'Hotline / Zalo Mr. Tony:'}{' '}
-                      <strong className="text-[#0a5482]">{CONTACT_PHONE_DISPLAY}</strong>
+                    <div className="text-xs sm:text-[13px] font-bold text-emerald-700">
+                      {lang === 'vi'
+                        ? '✨ Học thử miễn phí 2–3 buổi tại R2B Royal City — Thấy thật sự hợp thầy mới đăng ký'
+                        : '✨ 2–3 Free Trial Lessons at R2B Royal City before enrollment'}
                     </div>
+                  </div>
+                  <div className="text-xs sm:text-sm font-bold text-slate-600">
+                    {lang === 'vi' ? 'Hotline / Zalo Thầy Tony:' : 'Hotline / Zalo Mr. Tony:'}{' '}
+                    <strong className="text-[#0a5482]">{CONTACT_PHONE_DISPLAY}</strong>
                   </div>
                 </div>
               )}
