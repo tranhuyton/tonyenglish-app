@@ -1,5 +1,21 @@
 import React, { Suspense, useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useParams, useSearchParams } from 'react-router-dom';
+import {
+  Zap,
+  Lightbulb,
+  PenTool,
+  Globe,
+  BookOpen,
+  Headphones,
+  Mic,
+  BookMarked,
+  MessageSquare,
+  Newspaper,
+  Clapperboard,
+  Library,
+  ChevronRight,
+  PanelLeftClose,
+} from 'lucide-react';
 import { supabase } from '../lib/supabase';
 import { useApp } from '../context/AppContext';
 import { getLocalizedArticle } from '../data/studyTipsEn';
@@ -1220,7 +1236,7 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
       <div className="flex flex-col lg:flex-row gap-4 sm:gap-8 xl:gap-10 items-start">
         {/* LEFT SIDEBAR: SUBTLE, NON-COMPETING LIBRARY MENU */}
         <aside
-          className={`w-full lg:w-[260px] xl:w-[270px] shrink-0 bg-white rounded-2xl border border-slate-200/80 shadow-2xs overflow-hidden lg:sticky lg:top-24 transition-all ${
+          className={`w-full lg:w-[272px] xl:w-[288px] shrink-0 bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden lg:sticky lg:top-24 transition-all ${
             sidebarCollapsed ? 'lg:hidden' : ''
           }`}
         >
@@ -1231,7 +1247,7 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
               className="flex-1 flex items-center justify-between lg:pointer-events-none cursor-pointer text-left min-w-0"
             >
               <h2 className="text-slate-600 lg:text-slate-500 font-bold text-xs uppercase tracking-widest flex items-center gap-2 min-w-0">
-                <span className="opacity-80 shrink-0">📚</span>
+                <Library className="w-3.5 h-3.5 text-[#0a5482] shrink-0" />
                 <span className="hidden lg:inline shrink-0">{t('Library')}</span>
                 <span className="lg:hidden font-bold text-[#0a5482] text-[13px] normal-case tracking-normal truncate">
                   {currentCategory ? cateDisplayName : t('Library')}
@@ -1257,181 +1273,279 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
               title={lang === 'vi' ? 'Ẩn thanh danh mục để mở rộng khung đọc' : 'Hide sidebar'}
               className="hidden lg:inline-flex items-center gap-1 text-[11px] font-bold text-slate-500 hover:text-[#0a5482] bg-white hover:bg-sky-50 px-2 py-1 rounded-lg border border-slate-200/80 shadow-2xs transition cursor-pointer shrink-0 ml-2"
             >
-              <span>◀</span>
+              <PanelLeftClose className="w-3.5 h-3.5" />
               <span>{lang === 'vi' ? 'Ẩn' : 'Hide'}</span>
             </button>
           </div>
 
-          <ul
-            className={`divide-y divide-slate-100 text-[14.5px] p-1.5 ${
+          <div
+            className={`text-[14px] p-2 space-y-2.5 ${
               mobileCateOpen ? 'block' : 'hidden'
             } lg:block lg:max-h-[calc(100vh-8.5rem)] lg:overflow-y-auto overscroll-contain`}
           >
-            <li>
+            {/* Latest Articles */}
+            <div>
               <Link
                 to="/news"
                 onClick={() => {
                   setOpenParentId(null);
                   setMobileCateOpen(false);
                 }}
-                className={`block px-3.5 py-2.5 rounded-xl transition-colors relative ${
+                className={`flex items-center gap-2.5 px-2.5 py-2.5 rounded-xl transition-all relative ${
                   mode === 'list' && !slug
-                    ? "bg-sky-50/90 text-[#0a5482] font-semibold pl-4 before:content-[''] before:absolute before:left-1.5 before:top-2 before:bottom-2 before:w-1 before:rounded-full before:bg-[#2ab4e8]"
-                    : 'text-slate-600 font-medium hover:bg-slate-50 hover:text-[#0a5482]'
+                    ? "bg-sky-50/95 text-[#0a5482] font-bold pl-3.5 before:content-[''] before:absolute before:left-1 before:top-2 before:bottom-2 before:w-1 before:rounded-full before:bg-[#2ab4e8]"
+                    : 'text-slate-700 font-semibold hover:bg-slate-50 hover:text-[#0a5482]'
                 }`}
               >
-                ⚡ {t('Lastest news')}
+                <span
+                  className={`w-7 h-7 rounded-lg flex items-center justify-center shrink-0 transition-colors ${
+                    mode === 'list' && !slug
+                      ? 'bg-[#0a5482] text-white shadow-xs'
+                      : 'bg-amber-50 text-amber-600'
+                  }`}
+                >
+                  <Zap className="w-3.5 h-3.5" />
+                </span>
+                <span className="leading-snug">{t('Lastest news')}</span>
               </Link>
-            </li>
+            </div>
 
-            {parentCategories.length === 0 && (
-              <li className="py-2 px-2 space-y-2 animate-pulse">
+            {parentCategories.length === 0 ? (
+              <div className="pt-2 border-t border-slate-100 px-1 space-y-2 animate-pulse">
                 {[1, 2, 3, 4, 5].map((n) => (
                   <div key={n} className="h-9 rounded-xl bg-slate-100" />
                 ))}
-              </li>
-            )}
+              </div>
+            ) : (
+              (() => {
+                const isExamCategory = (p: any) => {
+                  const id = Number(p.news_cc_id);
+                  const key = `${p.news_cc_name_url || ''} ${p.news_cc_name || ''} ${p.news_cc_name_vi || ''}`.toLowerCase();
+                  return (
+                    [56, 67, 38, 87, 79, 51].includes(id) ||
+                    key.includes('ielts') ||
+                    key.includes('igcse') ||
+                    key.includes('cambridge') ||
+                    key.includes('sat')
+                  );
+                };
 
-            {parentCategories.map((parent) => {
-              const parentIdNum = Number(parent.news_cc_id);
-              const subs = getSubCategories(parentIdNum);
-              const isOpen = openParentId === parentIdNum;
-              const pName = lang === 'vi' ? parent.news_cc_name_vi || parent.news_cc_name : parent.news_cc_name;
-              const isCurrentParent =
-                currentCategory &&
-                (Number(currentCategory.news_cc_id) === parentIdNum ||
-                  Number(currentCategory.news_cc_parent) === parentIdNum);
-              const isCambridgeParent = parentIdNum === 38 || parentIdNum === 87;
+                const getLibraryIcon = (p: any) => {
+                  const id = Number(p.news_cc_id);
+                  const key = `${p.news_cc_name_url || ''} ${p.news_cc_name || ''} ${p.news_cc_name_vi || ''}`.toLowerCase();
+                  if (id === 56 || key.includes('writting') || key.includes('writing') || key.includes('bài viết')) {
+                    return { Icon: PenTool, idleBg: 'bg-sky-50 text-[#0a5482]' };
+                  }
+                  if (id === 79 || key.includes('igcse')) {
+                    return { Icon: Globe, idleBg: 'bg-emerald-50 text-emerald-700' };
+                  }
+                  if (id === 87 || key.includes('listening') || key.includes('dịch nghe')) {
+                    return { Icon: Headphones, idleBg: 'bg-cyan-50 text-cyan-700' };
+                  }
+                  if (id === 38 || id === 51 || key.includes('cambridge') || key.includes('dịch đọc')) {
+                    return { Icon: BookOpen, idleBg: 'bg-indigo-50 text-indigo-600' };
+                  }
+                  if (id === 67 || key.includes('speaking') || key.includes('bài nói')) {
+                    return { Icon: Mic, idleBg: 'bg-rose-50 text-rose-600' };
+                  }
+                  if (id === 26 || key.includes('tips') || key.includes('bí kíp')) {
+                    return { Icon: Lightbulb, idleBg: 'bg-amber-50 text-amber-600' };
+                  }
+                  if (id === 36 || key.includes('reading-practice') || key.includes('luyện đọc')) {
+                    return { Icon: BookMarked, idleBg: 'bg-teal-50 text-teal-700' };
+                  }
+                  if (id === 37 || key.includes('conversation') || key.includes('hội thoại')) {
+                    return { Icon: MessageSquare, idleBg: 'bg-violet-50 text-violet-600' };
+                  }
+                  if (id === 19 || key.includes('words-in-the-news') || key.includes('bản tin')) {
+                    return { Icon: Newspaper, idleBg: 'bg-orange-50 text-orange-600' };
+                  }
+                  return { Icon: BookOpen, idleBg: 'bg-slate-100 text-slate-600' };
+                };
 
-              return (
-                <li key={parent.news_cc_id}>
-                  <div className="flex items-center">
-                    <Link
-                      to={`/news/category/${(parent.news_cc_name_url || '').trim()}`}
-                      onClick={(e) => {
-                        if (subs.length > 0 && isOpen && isCurrentParent) {
-                          e.preventDefault();
-                          setOpenParentId(null);
-                          return;
-                        }
-                        setOpenParentId(subs.length > 0 ? parentIdNum : null);
-                        if (subs.length === 0) setMobileCateOpen(false);
-                      }}
-                      className={`flex-1 min-w-0 px-3.5 py-2.5 rounded-xl transition-colors flex items-center justify-between gap-2 relative ${
-                        isCurrentParent
-                          ? "bg-sky-50/90 text-[#0a5482] font-semibold pl-4 before:content-[''] before:absolute before:left-1.5 before:top-2 before:bottom-2 before:w-1 before:rounded-full before:bg-[#2ab4e8]"
-                          : isOpen
-                          ? 'text-[#0a5482] font-semibold bg-slate-50/70'
-                          : 'text-slate-600 font-medium hover:bg-slate-50 hover:text-[#0a5482]'
-                      }`}
-                    >
-                      <span className="line-clamp-2 leading-snug">{pName}</span>
-                      {subs.length > 0 && (
-                        <button
-                          type="button"
-                          title={isOpen ? 'Thu gọn danh mục' : 'Mở rộng danh mục'}
+                const examParents = parentCategories.filter(isExamCategory);
+                const skillParents = parentCategories.filter((p) => !isExamCategory(p));
+
+                const renderParentItem = (parent: any) => {
+                  const parentIdNum = Number(parent.news_cc_id);
+                  const subs = getSubCategories(parentIdNum);
+                  const isOpen = openParentId === parentIdNum;
+                  const pName = lang === 'vi' ? parent.news_cc_name_vi || parent.news_cc_name : parent.news_cc_name;
+                  const isCurrentParent =
+                    currentCategory &&
+                    (Number(currentCategory.news_cc_id) === parentIdNum ||
+                      Number(currentCategory.news_cc_parent) === parentIdNum);
+                  const isCambridgeParent = parentIdNum === 38 || parentIdNum === 87;
+                  const { Icon, idleBg } = getLibraryIcon(parent);
+
+                  return (
+                    <li key={parent.news_cc_id}>
+                      <div className="flex items-center">
+                        <Link
+                          to={`/news/category/${(parent.news_cc_name_url || '').trim()}`}
                           onClick={(e) => {
-                            e.preventDefault();
-                            e.stopPropagation();
-                            setOpenParentId(isOpen ? null : parentIdNum);
+                            if (subs.length > 0 && isOpen && isCurrentParent) {
+                              e.preventDefault();
+                              setOpenParentId(null);
+                              return;
+                            }
+                            setOpenParentId(subs.length > 0 ? parentIdNum : null);
+                            if (subs.length === 0) setMobileCateOpen(false);
                           }}
-                          className={`w-6 h-6 rounded-lg flex items-center justify-center text-xs transition-all shrink-0 hover:bg-sky-100/80 cursor-pointer ${
-                            isOpen ? 'rotate-90 text-[#0a5482] bg-sky-100/50 font-bold' : 'text-slate-400'
+                          className={`flex-1 min-w-0 px-2.5 py-2 rounded-xl transition-all flex items-center justify-between gap-2 relative ${
+                            isCurrentParent
+                              ? "bg-sky-50/95 text-[#0a5482] font-bold pl-3.5 before:content-[''] before:absolute before:left-1 before:top-2 before:bottom-2 before:w-1 before:rounded-full before:bg-[#2ab4e8]"
+                              : isOpen
+                              ? 'text-[#0a5482] font-semibold bg-slate-50/80'
+                              : 'text-slate-700 font-medium hover:bg-slate-50 hover:text-[#0a5482]'
                           }`}
                         >
-                          ▸
-                        </button>
-                      )}
-                    </Link>
-                  </div>
-
-                  {subs.length > 0 && isOpen && (
-                    isCambridgeParent ? (
-                      <div className="mt-1 mb-2 mx-1.5 p-2 bg-slate-50/90 rounded-xl border border-slate-200/70">
-                        <div className="flex items-center justify-between mb-1.5 px-1">
-                          <Link
-                            to={`/news/category/${(parent.news_cc_name_url || '').trim()}`}
-                            onClick={() => setMobileCateOpen(false)}
-                            className={`text-[11.5px] font-bold transition-colors ${
-                              currentCategory && Number(currentCategory.news_cc_id) === parentIdNum
-                                ? 'text-[#0a5482] underline'
-                                : 'text-slate-500 hover:text-[#0a5482]'
-                            }`}
-                          >
-                            📚 {lang === 'vi' ? `Tất cả (${subs.length} quyển)` : `All (${subs.length} books)`}
-                          </Link>
-                          <button
-                            type="button"
-                            onClick={() => setOpenParentId(null)}
-                            className="text-[11px] font-semibold text-slate-400 hover:text-slate-600 cursor-pointer"
-                          >
-                            {lang === 'vi' ? 'Thu gọn ▲' : 'Collapse ▲'}
-                          </button>
-                        </div>
-                        <div className="grid grid-cols-3 gap-1.5">
-                          {subs.map((sub) => {
-                            const sName = lang === 'vi' ? sub.news_cc_name_vi || sub.news_cc_name : sub.news_cc_name;
-                            const numMatch = String(sName).match(/(\d+)\s*$/);
-                            const shortLabel = numMatch ? `Cam ${numMatch[1].padStart(2, '0')}` : sName;
-                            const isActiveSub =
-                              currentCategory && Number(currentCategory.news_cc_id) === Number(sub.news_cc_id);
-                            return (
-                              <Link
-                                key={sub.news_cc_id}
-                                to={`/news/category/${(sub.news_cc_name_url || '').trim()}`}
-                                onClick={() => setMobileCateOpen(false)}
-                                title={sName}
-                                className={`px-2 py-1.5 rounded-lg text-[12.5px] text-center font-bold transition-all border ${
-                                  isActiveSub
-                                    ? 'bg-[#0a5482] text-white border-[#0a5482] shadow-2xs'
-                                    : 'bg-white text-slate-600 border-slate-200/80 hover:border-[#2ab4e8] hover:text-[#0a5482] hover:bg-sky-50/50'
+                          <span className="flex items-center gap-2.5 min-w-0">
+                            <span
+                              className={`w-7 h-7 rounded-lg flex items-center justify-center shrink-0 transition-colors ${
+                                isCurrentParent ? 'bg-[#0a5482] text-white shadow-xs' : idleBg
+                              }`}
+                            >
+                              <Icon className="w-3.5 h-3.5" />
+                            </span>
+                            <span className="line-clamp-2 leading-snug">{pName}</span>
+                          </span>
+                          {subs.length > 0 && (
+                            <button
+                              type="button"
+                              title={isOpen ? 'Thu gọn danh mục' : 'Mở rộng danh mục'}
+                              onClick={(e) => {
+                                e.preventDefault();
+                                e.stopPropagation();
+                                setOpenParentId(isOpen ? null : parentIdNum);
+                              }}
+                              className={`w-6 h-6 rounded-lg flex items-center justify-center transition-all shrink-0 hover:bg-sky-100/80 cursor-pointer ${
+                                isOpen ? 'text-[#0a5482] bg-sky-100/50' : 'text-slate-400'
+                              }`}
+                            >
+                              <ChevronRight
+                                className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                                  isOpen ? 'rotate-90' : ''
                                 }`}
-                              >
-                                {shortLabel}
-                              </Link>
-                            );
-                          })}
-                        </div>
+                              />
+                            </button>
+                          )}
+                        </Link>
                       </div>
-                    ) : (
-                      <ul className="mt-0.5 mb-1.5 ml-2 pl-2 border-l border-slate-200/80 space-y-0.5">
-                        {subs.map((sub) => {
-                          const sName = lang === 'vi' ? sub.news_cc_name_vi || sub.news_cc_name : sub.news_cc_name;
-                          const isActiveSub =
-                            currentCategory && Number(currentCategory.news_cc_id) === Number(sub.news_cc_id);
-                          return (
-                            <li key={sub.news_cc_id}>
+
+                      {subs.length > 0 && isOpen && (
+                        isCambridgeParent ? (
+                          <div className="mt-1 mb-2 mx-1.5 p-2 bg-slate-50/90 rounded-xl border border-slate-200/70">
+                            <div className="flex items-center justify-between mb-1.5 px-1">
                               <Link
-                                to={`/news/category/${(sub.news_cc_name_url || '').trim()}`}
+                                to={`/news/category/${(parent.news_cc_name_url || '').trim()}`}
                                 onClick={() => setMobileCateOpen(false)}
-                                className={`block px-3 py-2 rounded-lg text-[13.5px] transition-all relative ${
-                                  isActiveSub
-                                    ? "bg-sky-50 text-[#0a5482] font-semibold pl-3.5 before:content-[''] before:absolute before:left-1 before:top-1.5 before:bottom-1.5 before:w-0.5 before:rounded-full before:bg-[#2ab4e8]"
-                                    : 'text-slate-500 font-normal hover:bg-slate-50 hover:text-slate-800'
+                                className={`text-[11.5px] font-bold transition-colors ${
+                                  currentCategory && Number(currentCategory.news_cc_id) === parentIdNum
+                                    ? 'text-[#0a5482] underline'
+                                    : 'text-slate-500 hover:text-[#0a5482]'
                                 }`}
                               >
-                                {sName}
+                                📚 {lang === 'vi' ? `Tất cả (${subs.length} quyển)` : `All (${subs.length} books)`}
                               </Link>
-                            </li>
-                          );
-                        })}
-                      </ul>
-                    )
-                  )}
-                </li>
-              );
-            })}
+                              <button
+                                type="button"
+                                onClick={() => setOpenParentId(null)}
+                                className="text-[11px] font-semibold text-slate-400 hover:text-slate-600 cursor-pointer"
+                              >
+                                {lang === 'vi' ? 'Thu gọn ▲' : 'Collapse ▲'}
+                              </button>
+                            </div>
+                            <div className="grid grid-cols-3 gap-1.5">
+                              {subs.map((sub) => {
+                                const sName = lang === 'vi' ? sub.news_cc_name_vi || sub.news_cc_name : sub.news_cc_name;
+                                const numMatch = String(sName).match(/(\d+)\s*$/);
+                                const shortLabel = numMatch ? `Cam ${numMatch[1].padStart(2, '0')}` : sName;
+                                const isActiveSub =
+                                  currentCategory && Number(currentCategory.news_cc_id) === Number(sub.news_cc_id);
+                                return (
+                                  <Link
+                                    key={sub.news_cc_id}
+                                    to={`/news/category/${(sub.news_cc_name_url || '').trim()}`}
+                                    onClick={() => setMobileCateOpen(false)}
+                                    title={sName}
+                                    className={`px-2 py-1.5 rounded-lg text-[12.5px] text-center font-bold transition-all border ${
+                                      isActiveSub
+                                        ? 'bg-[#0a5482] text-white border-[#0a5482] shadow-2xs'
+                                        : 'bg-white text-slate-600 border-slate-200/80 hover:border-[#2ab4e8] hover:text-[#0a5482] hover:bg-sky-50/50'
+                                    }`}
+                                  >
+                                    {shortLabel}
+                                  </Link>
+                                );
+                              })}
+                            </div>
+                          </div>
+                        ) : (
+                          <ul className="mt-1 mb-1.5 ml-5 pl-2.5 border-l-2 border-sky-100 space-y-0.5">
+                            {subs.map((sub) => {
+                              const sName = lang === 'vi' ? sub.news_cc_name_vi || sub.news_cc_name : sub.news_cc_name;
+                              const isActiveSub =
+                                currentCategory && Number(currentCategory.news_cc_id) === Number(sub.news_cc_id);
+                              return (
+                                <li key={sub.news_cc_id}>
+                                  <Link
+                                    to={`/news/category/${(sub.news_cc_name_url || '').trim()}`}
+                                    onClick={() => setMobileCateOpen(false)}
+                                    className={`block px-2.5 py-2 rounded-lg text-[13px] transition-all relative ${
+                                      isActiveSub
+                                        ? 'bg-sky-50 text-[#0a5482] font-bold'
+                                        : 'text-slate-600 font-medium hover:bg-slate-50 hover:text-[#0a5482]'
+                                    }`}
+                                  >
+                                    {sName}
+                                  </Link>
+                                </li>
+                              );
+                            })}
+                          </ul>
+                        )
+                      )}
+                    </li>
+                  );
+                };
 
-            <li>
-              <Link
-                to="/videos"
-                onClick={() => setMobileCateOpen(false)}
-                className="block px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:text-[#0a5482] hover:bg-slate-50 transition-colors"
-              >
-                🎬 {t('Videos store')} →
-              </Link>
-            </li>
-          </ul>
+                return (
+                  <>
+                    {examParents.length > 0 && (
+                      <div className="pt-2.5 border-t border-slate-100">
+                        <div className="px-2.5 pb-1.5 text-[10.5px] font-extrabold uppercase tracking-widest text-slate-400">
+                          {lang === 'vi' ? 'Tài liệu Luyện thi (IELTS & IGCSE)' : 'Exam Prep (IELTS & IGCSE)'}
+                        </div>
+                        <ul className="space-y-1">{examParents.map(renderParentItem)}</ul>
+                      </div>
+                    )}
+
+                    <div className="pt-2.5 border-t border-slate-100">
+                      <div className="px-2.5 pb-1.5 text-[10.5px] font-extrabold uppercase tracking-widest text-slate-400">
+                        {lang === 'vi' ? 'Tự học & Kỹ năng hàng ngày' : 'Daily Skills & Self-Study'}
+                      </div>
+                      <ul className="space-y-1">
+                        {skillParents.map(renderParentItem)}
+                        <li>
+                          <Link
+                            to="/videos"
+                            onClick={() => setMobileCateOpen(false)}
+                            className="flex items-center gap-2.5 px-2.5 py-2 rounded-xl font-medium text-slate-700 hover:text-[#0a5482] hover:bg-slate-50 transition-all"
+                          >
+                            <span className="w-7 h-7 rounded-lg bg-fuchsia-50 text-fuchsia-600 flex items-center justify-center shrink-0">
+                              <Clapperboard className="w-3.5 h-3.5" />
+                            </span>
+                            <span className="leading-snug">{t('Videos store')} →</span>
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
+                  </>
+                );
+              })()
+            )}
+          </div>
         </aside>
 
         {/* RIGHT MAIN CONTENT */}
