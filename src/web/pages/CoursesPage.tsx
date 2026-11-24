@@ -1119,10 +1119,8 @@ export const CoursesPage: React.FC = () => {
                 )}
               </div>
 
-              {/* Featured Walkthrough Video (IGCSE & IELTS — High-Conversion Above-the-Fold for Ads) */}
-              {currentCourse && (
-                <CourseGuideVideoCard courseId={Number(currentCourse.cc_id)} lang={lang} />
-              )}
+              {/* Featured Walkthrough Video (Study with Mr. Tony + 5 Flagship Courses — Above-the-Fold for Ads) */}
+              <CourseGuideVideoCard courseId={currentCourse ? Number(currentCourse.cc_id) : 0} lang={lang} />
 
               {/* Course Description HTML */}
               {courseDescHtml && (

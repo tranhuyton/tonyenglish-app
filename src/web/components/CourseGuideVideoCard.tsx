@@ -19,6 +19,30 @@ const SUPABASE_GUIDE_BASE =
   'https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/videos/guides';
 
 export const COURSE_GUIDE_VIDEOS: Record<number, CourseGuideVideoConfig> = {
+  // 0: Học cùng Thầy Tony (Trang tổng quan /courses)
+  0: {
+    videoUrl: `${SUPABASE_GUIDE_BASE}/study-with-tony-guide-tonyenglish.mp4`,
+    posterUrl: '/images/course-showcases/study_tony_guide_poster.webp',
+    duration: '01:59',
+    badgeVi: 'VIDEO GIỚI THIỆU HỆ SINH THÁI TONYENGLISH',
+    badgeEn: 'COMPLETE PLATFORM WALKTHROUGH',
+    titleVi: 'Khám phá trọn bộ tính năng Học cùng Thầy Tony: Gia sư 1-1, AI 24/7 & Đọc E-book tra từ',
+    titleEn: 'Explore Study with Mr. Tony: 1-on-1 Tutoring, 24/7 AI & Click-to-Lookup E-books',
+    subtitleVi:
+      'Xem tổng quan mô hình gia sư 1 kèm 1, 5 lộ trình trọng tâm, 450+ bài giảng song ngữ, kho 1.800+ đề thi chuẩn Quốc tế, trình đọc E-book PDF click đúp tra từ điển tức thì, Thư viện Cambridge, Kho Video và Góc Học Viên – Lịch báo bài.',
+    subtitleEn:
+      'Tour our 1-on-1 tutoring model, 5 core programs, 450+ bilingual lectures, 1,800+ exam simulators, built-in PDF E-book reader with instant double-click dictionary, Cambridge Library, Video Store, and Student Portal.',
+    highlightsVi: [
+      'Gia sư 1-1 tại Royal City & Online • Học thử 2–3 buổi',
+      'Đọc sách E-book PDF & Click đúp tra từ điển tức thì',
+      '450+ bài giảng, 1.800+ đề & Thầy Tony AI Chủ nhiệm',
+    ],
+    highlightsEn: [
+      '1-on-1 Tutoring (Royal City & Online) • 2–3 Free Trials',
+      'PDF E-book Reader with instant double-click dictionary',
+      '450+ lectures, 1,800+ tests & Teacher Tony AI Coach',
+    ],
+  },
   // 111: Giao tiếp Căn bản
   111: {
     videoUrl: `${SUPABASE_GUIDE_BASE}/comm-basic-guide-tonyenglish.mp4`,
@@ -150,7 +174,8 @@ export const CourseGuideVideoCard: React.FC<CourseGuideVideoCardProps> = ({ cour
   const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
-  const config = courseId ? COURSE_GUIDE_VIDEOS[Number(courseId)] : undefined;
+  const config =
+    courseId !== null && courseId !== undefined ? COURSE_GUIDE_VIDEOS[Number(courseId)] : undefined;
 
   useEffect(() => {
     setIsPlaying(false);
