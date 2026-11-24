@@ -1,0 +1,55 @@
+{
+  "lectureId": "fb709e70-5e87-4170-a402-3df6f8cd8ab2",
+  "courseTitle": "Cambridge IGCSE Additional Mathematics (0606)",
+  "lectureTitle": "Chapter 1: Functions",
+  "totalDuration": 104.46,
+  "majorSections": {
+    "s1": {
+      "start": 0,
+      "end": 0
+    },
+    "s2": {
+      "start": 1,
+      "end": 1
+    },
+    "s3": {
+      "start": 2,
+      "end": 2
+    }
+  },
+  "segments": [
+    {
+      "id": "s1",
+      "title": "1. Core Concepts: Domain, Range & One-to-One Functions",
+      "selector": "[data-lecture-section=\"s1\"]",
+      "en": "Welcome to Chapter 1 of Cambridge Additional Mathematics 0606: Functions. A function maps every input in the domain to exactly one output in the range. For a function to have an inverse, it must be strictly one-to-one, passing the horizontal line test.",
+      "vi": "Chào mừng các em đến với Chương 1 Toán Nâng Cao 0606: Hàm số. Một hàm số ánh xạ mỗi giá trị đầu vào thuộc tập xác định Domain tới duy nhất một đầu ra thuộc tập giá trị Range. Để hàm số tồn tại hàm ngược, nó bắt buộc phải là đơn ánh một-một, tức mọi đường nằm ngang chỉ cắt đồ thị tối đa một điểm.",
+      "duration": 36.76,
+      "startTime": 0.0,
+      "endTime": 36.76,
+      "audioUrl": "/audio/lectures/igcse_0606/c1/s1.mp3"
+    },
+    {
+      "id": "s2",
+      "title": "2. Golden Rules: Composite fg(x) & Inverse Mirror y = x",
+      "selector": "[data-lecture-section=\"s2\"]",
+      "en": "Remember the golden swap rule for inverse functions: the domain of f inverse equals the range of f, and the range of f inverse equals the domain of f. To solve f of x equals f inverse of x without messy algebra, simply solve f of x equals x along the mirror line y equals x.",
+      "vi": "Hãy thuộc lòng quy tắc hoán đổi vàng cho hàm ngược: Tập xác định của f mũ trừ 1 chính là tập giá trị của f, và ngược lại. Khi đề bắt giải phương trình f x bằng f ngược x, đừng tìm hàm ngược cồng kềnh mà hãy giải thẳng f x bằng x ngay trên đường đối xứng y bằng x!",
+      "duration": 34.21,
+      "startTime": 36.76,
+      "endTime": 70.97,
+      "audioUrl": "/audio/lectures/igcse_0606/c1/s2.mp3"
+    },
+    {
+      "id": "s3",
+      "title": "3. Paper 1 Exam Traps: Domain Restriction & Modulus Graphs",
+      "selector": "[data-lecture-section=\"s3\"]",
+      "en": "Watch out on Paper 1 Non-Calculator for quadratic domain restrictions: always cut the parabola at its vertex x equals h! And when sketching modulus graphs like y equals modulus of a x plus b, reflect the negative branch sharply above the x-axis to form a crisp V-shape.",
+      "vi": "Bẫy kinh điển trên Paper 1 Không Máy Tính là tìm miền thu hẹp để hàm bậc hai có hàm ngược: luôn cắt ngay tại hoành độ đỉnh x bằng h! Còn khi vẽ đồ thị trị tuyệt đối, hãy lật đối xứng toàn bộ nhánh âm lên phía trên trục Ox tạo thành góc chữ V sắc nét.",
+      "duration": 33.49,
+      "startTime": 70.97,
+      "endTime": 104.46,
+      "audioUrl": "/audio/lectures/igcse_0606/c1/s3.mp3"
+    }
+  ]
+}

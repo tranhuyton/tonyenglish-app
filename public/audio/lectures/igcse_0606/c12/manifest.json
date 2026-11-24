@@ -1,0 +1,55 @@
+{
+  "lectureId": "6954f6f9-de52-42cd-93a7-43329dd28c0d",
+  "courseTitle": "Cambridge IGCSE Additional Mathematics (0606)",
+  "lectureTitle": "Chapter 12: Differentiation 1",
+  "totalDuration": 100.87,
+  "majorSections": {
+    "s1": {
+      "start": 0,
+      "end": 0
+    },
+    "s2": {
+      "start": 1,
+      "end": 1
+    },
+    "s3": {
+      "start": 2,
+      "end": 2
+    }
+  },
+  "segments": [
+    {
+      "id": "s1",
+      "title": "1. Chain, Product & Quotient Rules",
+      "selector": "[data-lecture-section=\"s1\"]",
+      "en": "Welcome to Calculus in Chapter 12! Beyond basic power differentiation, Additional Maths demands instant fluency in three core rules: Chain Rule for composite powers, Product Rule u v prime plus v u prime, and Quotient Rule v u prime minus u v prime all over v squared.",
+      "vi": "Chào mừng các em bước vào Giải tích ở Chương 12! Ngoài đạo hàm lũy thừa cơ bản, 0606 đòi hỏi phản xạ tức thì với ba quy tắc vàng: Đạo hàm hàm hợp Chain Rule, Quy tắc Tích u v phẩy cộng v u phẩy, và Quy tắc Thương v u phẩy trừ u v phẩy tất cả chia v bình.",
+      "duration": 33.64,
+      "startTime": 0.0,
+      "endTime": 33.64,
+      "audioUrl": "/audio/lectures/igcse_0606/c12/s1.mp3"
+    },
+    {
+      "id": "s2",
+      "title": "2. Tangents, Normals & Stationary Points",
+      "selector": "[data-lecture-section=\"s2\"]",
+      "en": "Evaluating d y by d x at x equals x 1 gives the gradient of the tangent; taking its negative reciprocal gives the gradient of the normal. Stationary points occur strictly where d y by d x equals zero—never confuse stationary points with x-intercepts where y equals zero!",
+      "vi": "Thay hoành độ x1 vào đạo hàm dy chia dx ta thu được hệ số góc tiếp tuyến, còn nghịch đảo đối của nó là hệ số góc pháp tuyến. Điểm dừng stationary point luôn xảy ra tại nơi dy chia dx bằng 0 — tuyệt đối đừng nhầm với giao điểm trục hoành nơi y bằng 0!",
+      "duration": 33.21,
+      "startTime": 33.64,
+      "endTime": 66.85,
+      "audioUrl": "/audio/lectures/igcse_0606/c12/s2.mp3"
+    },
+    {
+      "id": "s3",
+      "title": "3. Classifying Maxima & Minima with Second Derivative",
+      "selector": "[data-lecture-section=\"s3\"]",
+      "en": "Use the second derivative test to classify stationary points fast: if d squared y by d x squared is negative, the curve bends downward giving a local Maximum; if positive, it bends upward giving a local Minimum. Always write your conclusion clearly to secure the final A1 mark!",
+      "vi": "Dùng đạo hàm cấp hai để phân loại cực đại cực tiểu cực nhanh: nếu đạo hàm cấp hai âm, đồ thị úp xuống cho điểm Cực đại Maximum; nếu dương, đồ thị ngửa lên cho điểm Cực tiểu Minimum. Luôn viết câu kết luận rõ ràng để ăn trọn điểm A1 cuối cùng!",
+      "duration": 34.02,
+      "startTime": 66.85,
+      "endTime": 100.87,
+      "audioUrl": "/audio/lectures/igcse_0606/c12/s3.mp3"
+    }
+  ]
+}

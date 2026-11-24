@@ -1,0 +1,55 @@
+{
+  "lectureId": "43e0d3a5-23cd-498a-b2eb-17a60b2b80d8",
+  "courseTitle": "Cambridge IGCSE Additional Mathematics (0606)",
+  "lectureTitle": "Chapter 16: Kinematics",
+  "totalDuration": 106.46,
+  "majorSections": {
+    "s1": {
+      "start": 0,
+      "end": 0
+    },
+    "s2": {
+      "start": 1,
+      "end": 1
+    },
+    "s3": {
+      "start": 2,
+      "end": 2
+    }
+  },
+  "segments": [
+    {
+      "id": "s1",
+      "title": "1. The Calculus Triangle: Displacement s ↔ Velocity v ↔ Acceleration a",
+      "selector": "[data-lecture-section=\"s1\"]",
+      "en": "Chapter 16 brings Calculus to life in motion along a straight line. Moving down the chain uses differentiation: velocity v equals d s by d t, and acceleration a equals d v by d t. Moving back up uses integration—and you MUST use the given initial conditions at t equals 0 to find every constant c!",
+      "vi": "Chương 16 ứng dụng Giải tích vào chuyển động thẳng. Đi xuôi xuống dưới dùng đạo hàm: vận tốc v bằng ds chia dt, gia tốc a bằng dv chia dt. Đi ngược lên trên dùng tích phân — và BẮT BUỘC thay điều kiện ban đầu tại t bằng 0 để tìm chính xác từng hằng số cộng c!",
+      "duration": 37.72,
+      "startTime": 0.0,
+      "endTime": 37.72,
+      "audioUrl": "/audio/lectures/igcse_0606/c16/s1.mp3"
+    },
+    {
+      "id": "s2",
+      "title": "2. Decoding Key Exam Phrases Instantly",
+      "selector": "[data-lecture-section=\"s2\"]",
+      "en": "Translate Cambridge kinematics vocabulary automatically: \"instantaneously at rest\" means v equals 0; \"returns to fixed point O\" means displacement s equals 0; \"maximum or minimum velocity\" means acceleration a equals 0; and \"constant velocity\" means a equals 0.",
+      "vi": "Hãy dịch tự động các từ khóa động học Cambridge: đứng yên tức thời nghĩa là v bằng 0; quay về gốc O nghĩa là độ dời s bằng 0; vận tốc cực đại hay cực tiểu nghĩa là gia tốc a bằng 0; và chuyển động đều nghĩa là a bằng 0.",
+      "duration": 32.08,
+      "startTime": 37.72,
+      "endTime": 69.8,
+      "audioUrl": "/audio/lectures/igcse_0606/c16/s2.mp3"
+    },
+    {
+      "id": "s3",
+      "title": "3. Displacement vs Total Distance Travelled Trap",
+      "selector": "[data-lecture-section=\"s3\"]",
+      "en": "Never confuse displacement with total distance travelled! Before computing total distance between t 1 and t 2, ALWAYS check whether the particle reverses direction by solving v equals 0 inside that interval. If it turns around at t star, split the journey into two parts and add their absolute displacements.",
+      "vi": "Tuyệt đối không nhầm giữa độ dời và tổng quãng đường đi được! Trước khi tính tổng quãng đường từ t1 đến t2, LUÔN giải v bằng 0 xem hạt có đổi chiều bên trong khoảng thời gian đó hay không. Nếu có điểm quay đầu, hãy tách thành hai chặng rồi cộng trị tuyệt đối độ dời của từng chặng.",
+      "duration": 36.66,
+      "startTime": 69.8,
+      "endTime": 106.46,
+      "audioUrl": "/audio/lectures/igcse_0606/c16/s3.mp3"
+    }
+  ]
+}

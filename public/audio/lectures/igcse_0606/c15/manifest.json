@@ -1,0 +1,55 @@
+{
+  "lectureId": "54a14d81-be80-4fd6-98b6-1213cde55629",
+  "courseTitle": "Cambridge IGCSE Additional Mathematics (0606)",
+  "lectureTitle": "Chapter 15: Integration",
+  "totalDuration": 100.17,
+  "majorSections": {
+    "s1": {
+      "start": 0,
+      "end": 0
+    },
+    "s2": {
+      "start": 1,
+      "end": 1
+    },
+    "s3": {
+      "start": 2,
+      "end": 2
+    }
+  },
+  "segments": [
+    {
+      "id": "s1",
+      "title": "1. Reverse Differentiation & Core Integration Rules",
+      "selector": "[data-lecture-section=\"s1\"]",
+      "en": "Chapter 15 reverses differentiation. Whenever you integrate a linear bracket a x plus b to the n, exponential e to the a x plus b, or trig functions sine, cosine, and sec squared, ALWAYS divide by the inner coefficient a—and never forget plus c for indefinite integrals!",
+      "vi": "Chương 15 là phép toán ngược của đạo hàm. Mỗi khi lấy tích phân của biểu thức bậc nhất ax cộng b mũ n, hàm mũ e mũ ax cộng b, hay các hàm lượng giác sin, cos, sec bình, LUÔN PHẢI chia cho hệ số a bên trong — và không bao giờ quên hằng số cộng c ở tích phân bất định!",
+      "duration": 34.5,
+      "startTime": 0.0,
+      "endTime": 34.5,
+      "audioUrl": "/audio/lectures/igcse_0606/c15/s1.mp3"
+    },
+    {
+      "id": "s2",
+      "title": "2. The Signature 0606 Trick: \"Hence Integrate...\"",
+      "selector": "[data-lecture-section=\"s2\"]",
+      "en": "The most iconic Cambridge 0606 calculus question has part a: differentiate a product like x e to the 2 x, followed by part b: hence find the integral of x e to the 2 x! Simply integrate both sides of your part a identity, rearrange algebraically, and isolate the target integral cleanly.",
+      "vi": "Dạng câu hỏi đặc trưng nhất của 0606 gồm câu a lấy đạo hàm một tích như x nhân e mũ 2x, rồi câu b yêu cầu từ đó tính tích phân của x e mũ 2x! Chỉ cần lấy tích phân hai vế của đẳng thức câu a, chuyển vế rút gọn là ra ngay đáp án mà không cần phương pháp tích phân từng phần.",
+      "duration": 35.49,
+      "startTime": 34.5,
+      "endTime": 69.99,
+      "audioUrl": "/audio/lectures/igcse_0606/c15/s2.mp3"
+    },
+    {
+      "id": "s3",
+      "title": "3. Definite Integrals & Area Under / Between Curves",
+      "selector": "[data-lecture-section=\"s3\"]",
+      "en": "For area between two curves, integrate top curve minus bottom curve between their intersection x-limits. Remember that any region lying below the x-axis produces a negative definite integral, so always take its positive magnitude when summing total geometric area!",
+      "vi": "Để tính diện tích giữa hai đường cong, lấy tích phân của đường nằm trên trừ đường nằm dưới giữa hai cận giao điểm. Nhớ rằng phần hình nằm dưới trục hoành sẽ cho giá trị tích phân âm, nên luôn lấy trị tuyệt đối dương khi cộng tổng diện tích hình học!",
+      "duration": 30.18,
+      "startTime": 69.99,
+      "endTime": 100.17,
+      "audioUrl": "/audio/lectures/igcse_0606/c15/s3.mp3"
+    }
+  ]
+}

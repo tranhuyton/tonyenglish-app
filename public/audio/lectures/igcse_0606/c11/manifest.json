@@ -1,0 +1,55 @@
+{
+  "lectureId": "c9006f7d-0a9f-4ec3-9206-b8679cfc69ba",
+  "courseTitle": "Cambridge IGCSE Additional Mathematics (0606)",
+  "lectureTitle": "Chapter 11: Series (Binomial, AP & GP)",
+  "totalDuration": 111.93,
+  "majorSections": {
+    "s1": {
+      "start": 0,
+      "end": 0
+    },
+    "s2": {
+      "start": 1,
+      "end": 1
+    },
+    "s3": {
+      "start": 2,
+      "end": 2
+    }
+  },
+  "segments": [
+    {
+      "id": "s1",
+      "title": "1. Binomial Expansion & Specific Terms",
+      "selector": "[data-lecture-section=\"s1\"]",
+      "en": "Chapter 11 covers Binomial Expansions, Arithmetic Progressions, and Geometric Progressions. In the expansion of a plus b x to the n, the general term is n C r times a to the n minus r times b x to the r. Always keep brackets around negative terms like minus 2 x so signs alternate accurately!",
+      "vi": "Chương 11 gồm Khai triển Nhị thức Newton, Cấp số cộng AP và Cấp số nhân GP. Trong khai triển a cộng b x mũ n, số hạng tổng quát là nCr nhân a mũ n trừ r nhân b x mũ r. Luôn bọc ngoặc quanh số hạng âm như trừ 2 x để không bao giờ bị sai dấu cộng trừ!",
+      "duration": 37.98,
+      "startTime": 0.0,
+      "endTime": 37.98,
+      "audioUrl": "/audio/lectures/igcse_0606/c11/s1.mp3"
+    },
+    {
+      "id": "s2",
+      "title": "2. Arithmetic & Geometric Progressions (AP & GP)",
+      "selector": "[data-lecture-section=\"s2\"]",
+      "en": "Both AP and GP formulas are printed on your 0606 formula sheet—your job is setting up clean equations for first term a, common difference d, or common ratio r. A Geometric Progression converges to a finite sum to infinity a over 1 minus r if and only if modulus of r is strictly less than 1.",
+      "vi": "Toàn bộ công thức AP và GP đều được in sẵn trên tờ công thức 0606 — nhiệm vụ của các em là lập hệ phương trình chuẩn xác để tìm số hạng đầu a, công sai d hoặc công bội r. Cấp số nhân chỉ hội tụ về tổng vô hạn a chia 1 trừ r khi và chỉ khi trị tuyệt đối của r nhỏ hơn hẳn 1.",
+      "duration": 36.83,
+      "startTime": 37.98,
+      "endTime": 74.81,
+      "audioUrl": "/audio/lectures/igcse_0606/c11/s2.mp3"
+    },
+    {
+      "id": "s3",
+      "title": "3. Classic Traps: Product Expansions & Inequalities for n",
+      "selector": "[data-lecture-section=\"s3\"]",
+      "en": "For product expansions like 1 plus k x times 2 minus x to the 5, expand up to the exact power needed and cross-multiply matching pairs only. When solving GP sum inequalities for n, remember that dividing by ln r flips the inequality sign whenever r is between 0 and 1!",
+      "vi": "Với khai triển tích như 1 cộng k x nhân 2 trừ x mũ 5, chỉ khai triển tới đúng số mũ cần tìm rồi nhân chéo các cặp khớp bậc. Khi giải bất phương trình tìm n bằng logarit, cực kỳ lưu ý: nếu 0 nhỏ hơn r nhỏ hơn 1 thì ln r mang dấu âm, chia hai vế cho ln r BẮT BUỘC phải đảo chiều bất đẳng thức!",
+      "duration": 37.12,
+      "startTime": 74.81,
+      "endTime": 111.93,
+      "audioUrl": "/audio/lectures/igcse_0606/c11/s3.mp3"
+    }
+  ]
+}

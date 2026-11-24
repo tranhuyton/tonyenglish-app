@@ -5,6 +5,9 @@ import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
 import { useLmsLang, LmsLangToggle } from './utils/lmsI18n';
 import { ImageLightboxModal, LightboxState, extractLightboxFromClick } from './mcqImageUtils';
+import 'katex/dist/katex.min.css';
+import { renderIgcseLatex, detectCalculatorPolicy, detectIgcseMathSyllabus } from './katexUtils';
+import IgcseFormulaSheetModal from './IgcseFormulaSheetModal';
 
 pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
@@ -48,38 +51,7 @@ const latexToText = (text: string): string => {
   return r;
 };
 
-const renderLatex = (text: string): string => {
-  if (!text) return '';
-  let r = escapeHtml(text);
-  const hasLatex = text.includes('\\') || /[\^_]\{/.test(text) || /[\^_]\(/.test(text);
-  if (!hasLatex) return r;
-  const m: [RegExp, string][] = [
-    [/\\alpha/g,'α'],[/\\beta/g,'β'],[/\\gamma/g,'γ'],[/\\delta/g,'δ'],[/\\theta/g,'θ'],
-    [/\\lambda/g,'λ'],[/\\mu/g,'μ'],[/\\pi/g,'π'],[/\\sigma/g,'σ'],[/\\omega/g,'ω'],
-    [/\\Omega/g,'Ω'],[/\\Delta/g,'Δ'],[/\\Sigma/g,'Σ'],[/\\Gamma/g,'Γ'],[/\\phi/g,'φ'],
-    [/\\rho/g,'ρ'],[/\\tau/g,'τ'],[/\\epsilon/g,'ε'],[/\\varepsilon/g,'ε'],
-    [/\\int/g,'∫'],[/\\sum/g,'Σ'],[/\\prod/g,'∏'],[/\\partial/g,'∂'],
-    [/\\sqrt\{([^}]+)\}/g,'√($1)'],[/\\sqrt/g,'√'],
-    [/\\frac\{([^}]+)\}\{([^}]+)\}/g,'<span style="display:inline-flex;flex-direction:column;align-items:center;vertical-align:middle;font-size:0.85em;line-height:1.1"><span style="border-bottom:1px solid currentColor;padding:0 2px">$1</span><span style="padding:0 2px">$2</span></span>'],
-    [/\\pm/g,'±'],[/\\mp/g,'∓'],[/\\times/g,'×'],[/\\div/g,'÷'],[/\\cdot/g,'·'],[/\\infty/g,'∞'],
-    [/\\neq/g,'≠'],[/\\leq/g,'≤'],[/\\geq/g,'≥'],[/\\approx/g,'≈'],[/\\equiv/g,'≡'],
-    [/\\sim/g,'∼'],[/\\propto/g,'∝'],
-    [/\\angle/g,'∠'],[/\\triangle/g,'△'],[/\\perp/g,'⊥'],[/\\parallel/g,'∥'],
-    [/\\cap/g,'∩'],[/\\cup/g,'∪'],[/\\in/g,'∈'],[/\\notin/g,'∉'],
-    [/\\subset/g,'⊂'],[/\\subseteq/g,'⊆'],[/\\supset/g,'⊃'],[/\\emptyset/g,'∅'],
-    [/\\rightarrow/g,'→'],[/\\leftarrow/g,'←'],[/\\Rightarrow/g,'⇒'],[/\\Leftrightarrow/g,'⇔'],
-    [/\\vec\{([^}]+)\}/g,'$1⃗'],
-    [/\\sin/g,'sin'],[/\\cos/g,'cos'],[/\\tan/g,'tan'],[/\\sec/g,'sec'],[/\\cot/g,'cot'],[/\\csc/g,'csc'],
-    [/\\log/g,'log'],[/\\ln/g,'ln'],[/\\lim/g,'lim'],
-    [/\^\{([^}]+)\}/g,'<sup>$1</sup>'],[/_\{([^}]+)\}/g,'<sub>$1</sub>'],
-    [/\^\(([^)]+)\)/g,'<sup>$1</sup>'],[/_\(([^)]+)\)/g,'<sub>$1</sub>'],
-    [/\^([0-9a-zA-Zα-ωΑ-Ω])/g,'<sup>$1</sup>'],[/_([0-9a-zA-Zα-ωΑ-Ω])/g,'<sub>$1</sub>'],
-    [/\\,/g,' '],[/\\;/g,' '],[/\\!/g,''],
-  ];
-  for (const [p, s] of m) r = r.replace(p, s);
-  r = r.replace(/\\([a-zA-Z]+)/g, '$1');
-  return r;
-};
+const renderLatex = (text: string): string => renderIgcseLatex(text);
 
 const DrawingPage = ({ pageNum, drawMode, penColor, scale, onStrokeDrawn, isEn }: any) => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -299,6 +271,7 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
   const isEn = lang === 'en';
   const isEnRef = useRef(isEn);
   isEnRef.current = isEn;
+  const [showFormulaSheet, setShowFormulaSheet] = useState(false);
   const [testData, setTestData] = useState<any>(() => {
       let raw = propTestData;
       if (!raw) {
@@ -642,6 +615,8 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
 
   const questions = testData.json_config.questions || [];
   const pdfUrl = testData.insert_pdf_url || testData.pdf_url;
+  const calcPolicy = detectCalculatorPolicy(testData?.title, testData?.content_json?.basicInfo);
+  const mathSyllabus = detectIgcseMathSyllabus(testData?.title, testData?.course_id || testData?.content_json?.basicInfo?.courseId);
 
   const handleContainerScroll = (e: React.UIEvent<HTMLDivElement>) => {
       const el = e.currentTarget;
@@ -659,12 +634,27 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
         <div className="flex items-center gap-2.5 sm:gap-4 overflow-hidden min-w-0">
           <button type="button" onClick={handleSafeExit} className="text-slate-600 hover:text-[#0a5482] font-bold text-sm transition-colors whitespace-nowrap cursor-pointer">← {isEn ? 'Back' : 'Quay lại'}</button>
           <div className="h-5 w-px bg-slate-300 hidden sm:block"></div>
-          <div className="truncate flex items-baseline gap-2 min-w-0">
+          <div className="truncate flex items-center gap-2 min-w-0">
             <h1 className="font-bold text-slate-900 text-[14px] sm:text-[15px] leading-tight truncate">{isReviewMode ? `[REVIEW] ${testData.title}` : testData.title}</h1>
-            <span className="hidden md:inline-block text-xs text-[#0a5482] font-semibold px-2 py-0.5 bg-sky-50 border border-sky-200/70 rounded-md shrink-0">{isEn ? 'Direct Draw Mode' : 'Chế độ vẽ trực tiếp'}</span>
+            {calcPolicy && (
+              <span className={`hidden lg:inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[11px] font-black uppercase tracking-wide shrink-0 border ${calcPolicy === 'non-calculator' ? 'bg-rose-50 text-rose-700 border-rose-200' : 'bg-emerald-50 text-emerald-700 border-emerald-200'}`}>
+                {calcPolicy === 'non-calculator' ? '🚫 Non-Calculator' : '🧮 Calculator'}
+              </span>
+            )}
+            <span className="hidden xl:inline-block text-xs text-[#0a5482] font-semibold px-2 py-0.5 bg-sky-50 border border-sky-200/70 rounded-md shrink-0">{isEn ? 'Direct Draw Mode' : 'Chế độ vẽ trực tiếp'}</span>
           </div>
         </div>
         <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+          {mathSyllabus && (
+            <button
+              type="button"
+              onClick={() => setShowFormulaSheet(true)}
+              className="px-2.5 py-1 rounded-lg bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border border-indigo-200 text-xs font-extrabold whitespace-nowrap cursor-pointer transition-colors"
+              title={isEn ? 'Open Official 2025–2027 Formula Sheet' : 'Mở bảng công thức Cambridge 2025–2027'}
+            >
+              📐 <span className="hidden sm:inline">Formulas</span>
+            </button>
+          )}
           <LmsLangToggle lang={lang} setLang={setLang} variant="light" />
           {!gradeResult && !isReviewMode && (
             <>
@@ -889,6 +879,13 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
         </div>
 
       </div>
+      <IgcseFormulaSheetModal
+        isOpen={showFormulaSheet}
+        onClose={() => setShowFormulaSheet(false)}
+        syllabus={mathSyllabus}
+        calculatorPolicy={calcPolicy}
+        isEn={isEn}
+      />
       <ImageLightboxModal
         items={imageLightbox?.items || null}
         initialIndex={imageLightbox?.index ?? 0}

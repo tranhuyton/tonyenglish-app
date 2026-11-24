@@ -1,0 +1,55 @@
+{
+  "lectureId": "62e0cae0-9060-4d03-bd41-18c5b802750b",
+  "courseTitle": "Cambridge IGCSE Additional Mathematics (0606)",
+  "lectureTitle": "Chapter 2: Quadratic Functions",
+  "totalDuration": 104.03,
+  "majorSections": {
+    "s1": {
+      "start": 0,
+      "end": 0
+    },
+    "s2": {
+      "start": 1,
+      "end": 1
+    },
+    "s3": {
+      "start": 2,
+      "end": 2
+    }
+  },
+  "segments": [
+    {
+      "id": "s1",
+      "title": "1. Completing the Square & Turning Points",
+      "selector": "[data-lecture-section=\"s1\"]",
+      "en": "Chapter 2 focuses on Quadratic Functions. Completing the square transforms a x squared plus b x plus c into a times x plus p all squared plus q. This immediately reveals the turning point at minus p, q and gives you the exact range of the quadratic without calculus.",
+      "vi": "Chương 2 tập trung vào Hàm bậc hai. Kỹ thuật hoàn chỉnh bình phương biến đổi biểu thức bậc hai về dạng a nhân x cộng p tất cả bình cộng q. Từ đó ta đọc ngay tọa độ đỉnh trừ p phẩy q và tìm ra tập giá trị chính xác mà không cần dùng đạo hàm.",
+      "duration": 31.84,
+      "startTime": 0.0,
+      "endTime": 31.84,
+      "audioUrl": "/audio/lectures/igcse_0606/c2/s1.mp3"
+    },
+    {
+      "id": "s2",
+      "title": "2. Discriminant Conditions for Intersections & Tangency",
+      "selector": "[data-lecture-section=\"s2\"]",
+      "en": "The discriminant delta equals b squared minus 4 a c controls every intersection problem in Additional Maths. Greater than zero means two distinct roots or intersections; equal to zero means tangency or equal roots; strictly less than zero means no real roots and the line misses the curve completely.",
+      "vi": "Biệt thức delta bằng b bình trừ 4 a c là chìa khóa cho mọi bài toán tương giao trong 0606. Delta lớn hơn 0 là hai nghiệm hay hai giao điểm phân biệt; bằng 0 là nghiệm kép hay tiếp xúc tiếp tuyến; nhỏ hơn 0 là vô nghiệm, đường thẳng và đường cong không cắt nhau.",
+      "duration": 36.78,
+      "startTime": 31.84,
+      "endTime": 68.62,
+      "audioUrl": "/audio/lectures/igcse_0606/c2/s2.mp3"
+    },
+    {
+      "id": "s3",
+      "title": "3. Quadratic Inequalities & Hidden Quadratics",
+      "selector": "[data-lecture-section=\"s3\"]",
+      "en": "Never divide a quadratic inequality by an unknown x! Always factorise to find critical values, sketch a quick U-shape parabola, and shade above or below the x-axis. Also train your eyes to spot hidden quadratics like e to the 2 x or x to the two-thirds using substitution u.",
+      "vi": "Tuyệt đối không chia hai vế bất phương trình bậc hai cho ẩn x! Hãy phân tích nhân tử tìm nghiệm biên, phác nhanh chữ U của parabol rồi đọc khoảng dương hoặc âm. Đồng thời luyện nhận diện phương trình bậc hai ẩn phụ như e mũ 2x hay x mũ hai phần ba bằng cách đặt ẩn u.",
+      "duration": 35.41,
+      "startTime": 68.62,
+      "endTime": 104.03,
+      "audioUrl": "/audio/lectures/igcse_0606/c2/s3.mp3"
+    }
+  ]
+}

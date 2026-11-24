@@ -1,0 +1,55 @@
+{
+  "lectureId": "af96781b-036b-412e-97ff-075ab08e8297",
+  "courseTitle": "Cambridge IGCSE Additional Mathematics (0606)",
+  "lectureTitle": "Chapter 10: Permutations and Combinations",
+  "totalDuration": 101.68,
+  "majorSections": {
+    "s1": {
+      "start": 0,
+      "end": 0
+    },
+    "s2": {
+      "start": 1,
+      "end": 1
+    },
+    "s3": {
+      "start": 2,
+      "end": 2
+    }
+  },
+  "segments": [
+    {
+      "id": "s1",
+      "title": "1. Permutations (Order Matters) vs Combinations (Order Does Not)",
+      "selector": "[data-lecture-section=\"s1\"]",
+      "en": "Chapter 10 tests logical counting—almost always on Paper 2 Calculator. Ask one crucial question first: does order matter? Arranging people in a row, letters in a code, or digits in a number uses Permutations n P r; choosing a committee or team uses Combinations n C r.",
+      "vi": "Chương 10 kiểm tra tư duy tổ hợp chỉnh hợp — gần như luôn nằm trên Paper 2 Có Máy Tính. Luôn tự hỏi câu đầu tiên: thứ tự có quan trọng không? Xếp hàng, lập mật mã hay ghép chữ số thì dùng Hoán vị Chỉnh hợp nPr; còn chọn đội hay ban đại diện không phân biệt vị trí thì dùng Tổ hợp nCr.",
+      "duration": 37.91,
+      "startTime": 0.0,
+      "endTime": 37.91,
+      "audioUrl": "/audio/lectures/igcse_0606/c10/s1.mp3"
+    },
+    {
+      "id": "s2",
+      "title": "2. Golden Strategies: Glue Method & Gap Method",
+      "selector": "[data-lecture-section=\"s2\"]",
+      "en": "When items must stay together, glue them into one super-block, arrange the blocks, and multiply by the internal arrangements inside the block. When items must NOT be adjacent, arrange all other items first and slot the separated items into the gaps between them!",
+      "vi": "Khi các phần tử phải đứng cạnh nhau, hãy dán chúng thành một khối duy nhất, xếp các khối rồi nhân với số cách hoán vị nội bộ bên trong khối. Khi các phần tử KHÔNG được đứng cạnh nhau, hãy xếp toàn bộ nhóm còn lại trước rồi chèn nhóm tách rời vào các khoảng trống xen giữa!",
+      "duration": 30.85,
+      "startTime": 37.91,
+      "endTime": 68.76,
+      "audioUrl": "/audio/lectures/igcse_0606/c10/s2.mp3"
+    },
+    {
+      "id": "s3",
+      "title": "3. At-Least Problems & Complementary Counting",
+      "selector": "[data-lecture-section=\"s3\"]",
+      "en": "For \"at least one\" or \"at least two\" selection problems, either list mutually exclusive cases carefully or use the fast complement rule: Total unrestricted selections minus the forbidden cases. Always double-check that you never accidentally double-count identical items.",
+      "vi": "Với bài toán chọn có điều kiện \"ít nhất một\" hoặc \"ít nhất hai\", các em có thể chia trường hợp rời nhau hoặc dùng quy tắc phần bù siêu nhanh: Tổng số cách chọn tự do trừ đi các trường hợp vi phạm. Luôn kiểm tra kỹ để tránh đếm trùng các trường hợp giống hệt nhau.",
+      "duration": 32.92,
+      "startTime": 68.76,
+      "endTime": 101.68,
+      "audioUrl": "/audio/lectures/igcse_0606/c10/s3.mp3"
+    }
+  ]
+}

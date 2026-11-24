@@ -1,0 +1,55 @@
+{
+  "lectureId": "e59e63bd-7f93-41b2-8c56-0234feabb0a7",
+  "courseTitle": "Cambridge IGCSE Additional Mathematics (0606)",
+  "lectureTitle": "Chapter 7: Straight Line Graphs & Linear Law",
+  "totalDuration": 106.42,
+  "majorSections": {
+    "s1": {
+      "start": 0,
+      "end": 0
+    },
+    "s2": {
+      "start": 1,
+      "end": 1
+    },
+    "s3": {
+      "start": 2,
+      "end": 2
+    }
+  },
+  "segments": [
+    {
+      "id": "s1",
+      "title": "1. Perpendicular Bisectors & Shoelace Polygon Area",
+      "selector": "[data-lecture-section=\"s1\"]",
+      "en": "Chapter 7 combines precision coordinate geometry with Linear Law transformations. A perpendicular bisector always uses the midpoint of AB and the negative reciprocal gradient minus 1 over m. For areas of triangles and quadrilaterals on axes, the anticlockwise shoelace formula gives rapid accuracy.",
+      "vi": "Chương 7 kết hợp hình học tọa độ đường thẳng và phép tuyến tính hóa Linear Law. Đường trung trực luôn đi qua trung điểm AB và có hệ số góc nghịch đảo đối trừ 1 phần m. Để tính nhanh diện tích tam giác hay tứ giác tọa độ, công thức dây giày ngược chiều kim đồng hồ cho độ chính xác tuyệt đối.",
+      "duration": 35.97,
+      "startTime": 0.0,
+      "endTime": 35.97,
+      "audioUrl": "/audio/lectures/igcse_0606/c7/s1.mp3"
+    },
+    {
+      "id": "s2",
+      "title": "2. Transforming Non-Linear Curves into Y = mX + c",
+      "selector": "[data-lecture-section=\"s2\"]",
+      "en": "Linear Law is almost guaranteed on Paper 2! To linearise y equals A x to the n, take logarithms of both sides to get ln y equals n ln x plus ln A, so gradient m equals n and vertical intercept c equals ln A. For y equals A b to the x, plot ln y against x so gradient equals ln b.",
+      "vi": "Linear Law gần như chắc chắn có mặt trong Paper 2! Để tuyến tính hóa y bằng A x mũ n, lấy ln hai vế ta được ln y bằng n ln x cộng ln A, suy ra hệ số góc là n và tung độ gốc là ln A. Còn với y bằng A b mũ x, vẽ ln y theo x để hệ số góc bằng ln b.",
+      "duration": 41.73,
+      "startTime": 35.97,
+      "endTime": 77.7,
+      "audioUrl": "/audio/lectures/igcse_0606/c7/s2.mp3"
+    },
+    {
+      "id": "s3",
+      "title": "3. Exam Warning: Intercept is ln A, Not A!",
+      "selector": "[data-lecture-section=\"s3\"]",
+      "en": "Watch the classic Linear Law trap: when reading the y-intercept c from a log graph, c equals ln A, so you must compute A equals e to the c—or 10 to the c for base-10 logs—and always check whether the horizontal axis starts at zero before reading the intercept!",
+      "vi": "Cẩn thận bẫy kinh điển của Linear Law: tung độ gốc c đọc từ đồ thị log là ln A chứ không phải A, nên bắt buộc phải tính A bằng e mũ c hoặc 10 mũ c. Đặc biệt kiểm tra xem trục hoành có bắt đầu từ số 0 hay không trước khi đọc tung độ gốc!",
+      "duration": 28.72,
+      "startTime": 77.7,
+      "endTime": 106.42,
+      "audioUrl": "/audio/lectures/igcse_0606/c7/s3.mp3"
+    }
+  ]
+}

@@ -10,6 +10,7 @@ import { Spk2LegoStudioModal, Spk2LegoStudioOpenPayload } from './Spk2LegoStudio
 import { Wt1StudioModal, Wt1VocabBankModal, Wt1StudioOpenPayload } from './Wt1StudioModal';
 import { useLmsLang, LmsLangToggle, getLocalizedCourseTitle } from './utils/lmsI18n';
 import { ImageLightboxModal, LightboxState } from './mcqImageUtils';
+import { LECTURE_MCQ_GRADER_CSS, buildLectureMcqGraderScript } from './utils/lectureMcqGrader';
 
 const LECTURE_MANIFEST_MAP: Record<string, string> = {
   '6286cb6f-b4ac-495b-b2ea-5a2bab09f764': '/audio/lectures/geography/1_1/manifest.json', // 1.1
@@ -284,6 +285,28 @@ const LECTURE_MANIFEST_MAP: Record<string, string> = {
   '4656dcfa-15a3-451b-980a-fd30777fcadd': '/audio/lectures/sat_boss/b6/manifest.json', // Math Boss 2: Parametric Quadratics, Integer Bounds & Hidden Substitutions
   '1fbd532b-d17d-4215-bb09-6ae0459fc31c': '/audio/lectures/sat_boss/b7/manifest.json', // Math Boss 3: Hard M2 Geometry, Coordinate Circles & 3D Composite Solids
   'c96990cd-a6b9-400f-a4dd-cf95ce008b61': '/audio/lectures/sat_boss/b8/manifest.json', // Math Boss 4: SPR Grid-In Trap-Proofing — 10 Deadly 800-Point Pitfalls
+
+  // =========================================================================
+  // CAMBRIDGE IGCSE ADDITIONAL MATHEMATICS (0606) 2025–2027 BILINGUAL AUDIO
+  // =========================================================================
+  'fb709e70-5e87-4170-a402-3df6f8cd8ab2': '/audio/lectures/igcse_0606/c1/manifest.json', // Ch. 1: Functions
+  '62e0cae0-9060-4d03-bd41-18c5b802750b': '/audio/lectures/igcse_0606/c2/manifest.json', // Ch. 2: Quadratic Functions
+  'c9c6fcb7-eca7-440e-bc23-cf7b073aaf11': '/audio/lectures/igcse_0606/c3/manifest.json', // Ch. 3: Indices & Surds
+  '17ae5c54-c9f3-49b1-9445-182fb99f9f83': '/audio/lectures/igcse_0606/c4/manifest.json', // Ch. 4: Factors of Polynomials
+  '325cf10f-5f1c-415f-80ef-0deeed81b19b': '/audio/lectures/igcse_0606/c5/manifest.json', // Ch. 5: Equations, Inequalities & Graphs
+  '634a0bca-84ef-4488-94c1-341365b348c3': '/audio/lectures/igcse_0606/c6/manifest.json', // Ch. 6: Logarithmic & Exponential Functions
+  'e59e63bd-7f93-41b2-8c56-0234feabb0a7': '/audio/lectures/igcse_0606/c7/manifest.json', // Ch. 7: Straight Line Graphs
+  '06504fb8-f812-4ac0-8561-8fb41c893a16': '/audio/lectures/igcse_0606/c7b/manifest.json', // Ch. 7B: Coordinate Geometry of the Circle (NEW 2025-2027)
+  '22e303ce-cd22-426c-89ac-706897703fa6': '/audio/lectures/igcse_0606/c8/manifest.json', // Ch. 8: Circular Measure
+  'b7057bbf-6016-49ce-b66b-82c55bb46cb7': '/audio/lectures/igcse_0606/c9/manifest.json', // Ch. 9: Trigonometry
+  'af96781b-036b-412e-97ff-075ab08e8297': '/audio/lectures/igcse_0606/c10/manifest.json', // Ch. 10: Permutations & Combinations
+  'c9006f7d-0a9f-4ec3-9206-b8679cfc69ba': '/audio/lectures/igcse_0606/c11/manifest.json', // Ch. 11: Series
+  '6954f6f9-de52-42cd-93a7-43329dd28c0d': '/audio/lectures/igcse_0606/c12/manifest.json', // Ch. 12: Differentiation 1
+  '8c56b240-1273-4d62-968c-603c2ccb651c': '/audio/lectures/igcse_0606/c13/manifest.json', // Ch. 13: Vectors
+  'ee577f38-f621-4539-9e94-c374ab08c8df': '/audio/lectures/igcse_0606/c14/manifest.json', // Ch. 14: Differentiation 2
+  '54a14d81-be80-4fd6-98b6-1213cde55629': '/audio/lectures/igcse_0606/c15/manifest.json', // Ch. 15: Integration
+  '43e0d3a5-23cd-498a-b2eb-17a60b2b80d8': '/audio/lectures/igcse_0606/c16/manifest.json', // Ch. 16: Kinematics
+  '8dcfd0b0-80e1-4a3b-810d-656e7621a8cd': '/audio/lectures/igcse_0606/rev/manifest.json', // Year End Revision: Paper 1 Non-Calc Playbook
 };
 
 type LectureVideoItem = { title: string; videoId: string };
@@ -1042,7 +1065,7 @@ const PdfVisionViewer = ({ url, onClose, onCallTutor }: { url: string, onClose: 
     </div>
   );
 };
-const StaticLectureContent = React.memo(({ html, isIframeOnly, fontScale = 100, onOpenPopup, onOpenDict, onCloseDict, onSwitchPage, onOpenTutorAI, onOpenCourseLibrary, onOpenImageLightbox }: any) => {
+const StaticLectureContent = React.memo(({ html, isIframeOnly, fontScale = 100, isEn = false, onOpenPopup, onOpenDict, onCloseDict, onSwitchPage, onOpenTutorAI, onOpenCourseLibrary, onOpenImageLightbox }: any) => {
    const iframeRef = useRef<HTMLIFrameElement>(null);
    const [iframeHeight, setIframeHeight] = useState(600);
    const initialFontScaleRef = useRef<number>(fontScale || 100);
@@ -2364,6 +2387,7 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
                border-color: #3b82f6 !important;
                transform: scale(1.08) !important;
            }
+           ${LECTURE_MCQ_GRADER_CSS}
        </style>
      </head>
      <body class="${isIframeOnly ? 'iframe-only-mode' : ''}">
@@ -3511,6 +3535,7 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
                 window.parent.postMessage({ type: 'LECTURE_PLAY_SECTION', sectionId: sid }, '*');
              }
           });
+          ${buildLectureMcqGraderScript(Boolean(isEn))}
         </script>
      </body>
      </html>
@@ -3518,7 +3543,7 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
    return (
      <div className={`w-full animate-in fade-in duration-700 relative ${isIframeOnly ? 'h-[85vh]' : ''}`}>
        <iframe
-         key={cleanedHtml ? `${cleanedHtml.length}_${cleanedHtml.substring(0, 32)}` : 'empty'}
+         key={cleanedHtml ? `${cleanedHtml.length}_${cleanedHtml.substring(0, 32)}_${isEn ? 'en' : 'vi'}` : 'empty'}
          ref={iframeRef}
          srcDoc={iframeContent}
          style={{ width: '100%', height: isIframeOnly ? '100%' : `${iframeHeight}px`, border: 'none', overflow: 'hidden' }}
@@ -3532,7 +3557,8 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
 }, (prevProps, nextProps) => (
   prevProps.html === nextProps.html &&
   prevProps.fontScale === nextProps.fontScale &&
-  prevProps.isIframeOnly === nextProps.isIframeOnly
+  prevProps.isIframeOnly === nextProps.isIframeOnly &&
+  prevProps.isEn === nextProps.isEn
 ));
 
 
@@ -6479,6 +6505,7 @@ export default function LectureViewer({
                            html={currentHtmlContent} 
                            isIframeOnly={isIframeOnly}
                            fontScale={lectureFontScale}
+                           isEn={isEn}
                            onOpenPopup={setPopupUrl} 
                            onOpenDict={triggerDictionary} 
                            onCloseDict={() => { window.dispatchEvent(new CustomEvent('tony-close-quick-dictionary')); }} 

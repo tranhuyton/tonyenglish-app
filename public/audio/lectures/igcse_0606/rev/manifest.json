@@ -1,0 +1,55 @@
+{
+  "lectureId": "8dcfd0b0-80e1-4a3b-810d-656e7621a8cd",
+  "courseTitle": "Cambridge IGCSE Additional Mathematics (0606)",
+  "lectureTitle": "Year End Revision: Paper 1 (Non-Calculator) Playbook & Master Formula Sheet",
+  "totalDuration": 117.47,
+  "majorSections": {
+    "s1": {
+      "start": 0,
+      "end": 0
+    },
+    "s2": {
+      "start": 1,
+      "end": 1
+    },
+    "s3": {
+      "start": 2,
+      "end": 2
+    }
+  },
+  "segments": [
+    {
+      "id": "s1",
+      "title": "1. 2025–2027 Exam Blueprint: Paper 1 Non-Calc vs Paper 2 Calc",
+      "selector": "[data-lecture-section=\"s1\"]",
+      "en": "Congratulations on reaching the 0606 Year End Revision! In the 2025 to 2027 exam structure, Paper 1 is strictly Non-Calculator and Paper 2 is Calculator—both 2 hours, 80 marks each, counting 50 percent each. Budget 1.5 minutes per mark so you always finish with 10 minutes to check!",
+      "vi": "Chúc mừng các em đã tới bài Tổng ôn cuối khóa 0606! Trong cấu trúc thi 2025 đến 2027, Paper 1 hoàn toàn Không Máy Tính và Paper 2 Có Máy Tính — mỗi đề dài 2 tiếng, 80 điểm, chiếm đúng 50 phần trăm. Hãy phân bổ 1 phẩy 5 phút cho mỗi điểm để luôn dư 10 phút soát lại bài!",
+      "duration": 41.85,
+      "startTime": 0.0,
+      "endTime": 41.85,
+      "audioUrl": "/audio/lectures/igcse_0606/rev/s1.mp3"
+    },
+    {
+      "id": "s2",
+      "title": "2. Master Formula Strategy: Printed vs Must-Memorise",
+      "selector": "[data-lecture-section=\"s2\"]",
+      "en": "Know what Cambridge prints on page 2: Quadratic Formula, Binomial, AP, GP, and Pythagorean Trig identities. That means you MUST memorise Circle equations, Circular Measure radian formulas, Logarithmic laws, Exact Trig table, and every Differentiation and Integration rule by heart.",
+      "vi": "Hãy nắm rõ những gì Cambridge in sẵn trang 2: Công thức nghiệm bậc hai, Nhị thức Newton, AP, GP và hằng đẳng thức lượng giác. Điều đó có nghĩa các em BẮT BUỘC thuộc lòng phương trình Đường tròn, công thức Radian, quy tắc Logarit, bảng Lượng giác chính xác và toàn bộ bảng Đạo hàm — Tích phân.",
+      "duration": 36.13,
+      "startTime": 41.85,
+      "endTime": 77.98,
+      "audioUrl": "/audio/lectures/igcse_0606/rev/s2.mp3"
+    },
+    {
+      "id": "s3",
+      "title": "3. Final A* Checklist Before Entering the Exam Hall",
+      "selector": "[data-lecture-section=\"s3\"]",
+      "en": "Before handing in your script, run the A-star checklist: rationalise all surds on Paper 1, reject negative roots in logarithms, include plus c on indefinite integrals, check RAD versus DEG mode on Paper 2, and round non-exact Paper 2 answers to 3 significant figures. You are ready to ace 0606!",
+      "vi": "Trước khi nộp bài, hãy rà soát danh sách săn điểm A sao: trục căn mọi mẫu số trên Paper 1, loại nghiệm ngoại lai của logarit, kiểm tra cộng c ở tích phân bất định, soát đúng chế độ RAD hay DEG trên Paper 2, và làm tròn chuẩn 3 chữ số có nghĩa. Chúc các em chinh phục trọn vẹn điểm A sao 0606!",
+      "duration": 39.49,
+      "startTime": 77.98,
+      "endTime": 117.47,
+      "audioUrl": "/audio/lectures/igcse_0606/rev/s3.mp3"
+    }
+  ]
+}

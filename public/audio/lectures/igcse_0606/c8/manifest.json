@@ -1,0 +1,55 @@
+{
+  "lectureId": "22e303ce-cd22-426c-89ac-706897703fa6",
+  "courseTitle": "Cambridge IGCSE Additional Mathematics (0606)",
+  "lectureTitle": "Chapter 8: Circular Measure",
+  "totalDuration": 109.89,
+  "majorSections": {
+    "s1": {
+      "start": 0,
+      "end": 0
+    },
+    "s2": {
+      "start": 1,
+      "end": 1
+    },
+    "s3": {
+      "start": 2,
+      "end": 2
+    }
+  },
+  "segments": [
+    {
+      "id": "s1",
+      "title": "1. Radians, Arc Length s = rθ & Sector Area ½r²θ",
+      "selector": "[data-lecture-section=\"s1\"]",
+      "en": "Chapter 8 introduces Radian Measure, where pi radians equals exactly 180 degrees. In radians, arc length simplifies beautifully to s equals r theta, and sector area becomes one-half r squared theta. These compact formulas are mandatory for both Circular Measure and Trigonometry calculus!",
+      "vi": "Chương 8 giới thiệu đơn vị đo góc Radian, với pi radian bằng đúng 180 độ. Khi dùng radian, độ dài cung tròn rút gọn cực đẹp thành s bằng r nhân theta, và diện tích hình quạt là một phần hai r bình nhân theta. Đây là nền tảng bắt buộc cho cả Hình học lẫn Giải tích lượng giác!",
+      "duration": 38.65,
+      "startTime": 0.0,
+      "endTime": 38.65,
+      "audioUrl": "/audio/lectures/igcse_0606/c8/s1.mp3"
+    },
+    {
+      "id": "s2",
+      "title": "2. Shaded Segments & Composite Perimeters",
+      "selector": "[data-lecture-section=\"s2\"]",
+      "en": "To find the area of a minor segment, subtract the triangle area one-half r squared sine theta from the sector area, giving one-half r squared times theta minus sine theta. For shaded perimeters, carefully trace every boundary piece—curved arcs plus straight chords or tangents!",
+      "vi": "Để tính diện tích hình viên phân, lấy diện tích hình quạt trừ đi diện tích tam giác một phần hai r bình sin theta, ra công thức một phần hai r bình nhân hiệu theta trừ sin theta. Khi tính chu vi miền tô đậm, hãy rà soát kỹ từng đoạn biên cong và thẳng để không bỏ sót cạnh nào!",
+      "duration": 34.36,
+      "startTime": 38.65,
+      "endTime": 73.01,
+      "audioUrl": "/audio/lectures/igcse_0606/c8/s2.mp3"
+    },
+    {
+      "id": "s3",
+      "title": "3. Paper 1 Exact Angles vs Paper 2 Radian Mode Check",
+      "selector": "[data-lecture-section=\"s3\"]",
+      "en": "On Paper 1 Non-Calculator, angles will be exact fractions of pi like pi over 3 or pi over 6, so leave your answers in exact terms of pi and root 3. On Paper 2 Calculator, switch your Casio to RAD mode immediately and keep full calculator precision until rounding to 3 significant figures at the very end.",
+      "vi": "Trên Paper 1 Không Máy Tính, góc sẽ là các phân số đẹp của pi như pi phần 3 hay pi phần 6, hãy giữ đáp án chính xác theo pi và căn 3. Trên Paper 2 Có Máy Tính, chuyển ngay máy Casio sang chế độ RAD và giữ nguyên độ chính xác máy tính đến bước làm tròn 3 chữ số có nghĩa cuối cùng.",
+      "duration": 36.88,
+      "startTime": 73.01,
+      "endTime": 109.89,
+      "audioUrl": "/audio/lectures/igcse_0606/c8/s3.mp3"
+    }
+  ]
+}

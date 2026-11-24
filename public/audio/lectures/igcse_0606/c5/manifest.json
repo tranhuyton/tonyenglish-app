@@ -1,0 +1,55 @@
+{
+  "lectureId": "325cf10f-5f1c-415f-80ef-0deeed81b19b",
+  "courseTitle": "Cambridge IGCSE Additional Mathematics (0606)",
+  "lectureTitle": "Chapter 5: Equations, Inequalities and Graphs",
+  "totalDuration": 87.41,
+  "majorSections": {
+    "s1": {
+      "start": 0,
+      "end": 0
+    },
+    "s2": {
+      "start": 1,
+      "end": 1
+    },
+    "s3": {
+      "start": 2,
+      "end": 2
+    }
+  },
+  "segments": [
+    {
+      "id": "s1",
+      "title": "1. Solving Modulus Equations & Inequalities",
+      "selector": "[data-lecture-section=\"s1\"]",
+      "en": "Chapter 5 tackles modulus equations, cubic graphs, and non-linear simultaneous equations. To solve modulus of a x plus b equals modulus of c x plus d, either square both sides or split cleanly into two linear cases: equal or negative.",
+      "vi": "Chương 5 chinh phục phương trình trị tuyệt đối, đồ thị bậc ba và hệ phương trình phi tuyến. Để giải trị tuyệt đối a x cộng b bằng trị tuyệt đối c x cộng d, các em có thể bình phương hai vế hoặc tách gọn thành hai trường hợp bằng nhau và đối nhau.",
+      "duration": 30.93,
+      "startTime": 0.0,
+      "endTime": 30.93,
+      "audioUrl": "/audio/lectures/igcse_0606/c5/s1.mp3"
+    },
+    {
+      "id": "s2",
+      "title": "2. Non-Linear Simultaneous Equations & Substitution",
+      "selector": "[data-lecture-section=\"s2\"]",
+      "en": "When solving one linear and one quadratic equation simultaneously, isolate the simpler variable from the linear equation first, substitute into the curve, and solve for both coordinate pairs x comma y. Always pair each x with its exact corresponding y!",
+      "vi": "Khi giải hệ gồm một phương trình bậc nhất và một phương trình bậc hai, hãy rút ẩn đơn giản từ phương trình bậc nhất thế vào đường cong, giải tìm đủ các cặp nghiệm x phẩy y. Đừng bao giờ quên ghép đúng từng giá trị x với giá trị y tương ứng!",
+      "duration": 28.96,
+      "startTime": 30.93,
+      "endTime": 59.89,
+      "audioUrl": "/audio/lectures/igcse_0606/c5/s2.mp3"
+    },
+    {
+      "id": "s3",
+      "title": "3. Sketching Cubic & Modulus Curves for Inequalities",
+      "selector": "[data-lecture-section=\"s3\"]",
+      "en": "When solving cubic inequalities like x minus 1 times x plus 2 times x minus 4 is greater than zero, plot the three x-intercepts on a number line, follow the leading-coefficient end behaviour, and read off the intervals cleanly without losing boundary signs.",
+      "vi": "Khi giải bất phương trình bậc ba dạng tích ba nhân tử, hãy đánh dấu cả ba nghiệm trên trục số, xét dấu hệ số bậc cao nhất để vẽ dáng điệu đồ thị, sau đó đọc chính xác các khoảng nghiệm theo dấu lớn hơn hay nhỏ hơn của đề bài.",
+      "duration": 27.52,
+      "startTime": 59.89,
+      "endTime": 87.41,
+      "audioUrl": "/audio/lectures/igcse_0606/c5/s3.mp3"
+    }
+  ]
+}

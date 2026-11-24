@@ -1,0 +1,55 @@
+{
+  "lectureId": "17ae5c54-c9f3-49b1-9445-182fb99f9f83",
+  "courseTitle": "Cambridge IGCSE Additional Mathematics (0606)",
+  "lectureTitle": "Chapter 4: Factors of Polynomials",
+  "totalDuration": 100.45,
+  "majorSections": {
+    "s1": {
+      "start": 0,
+      "end": 0
+    },
+    "s2": {
+      "start": 1,
+      "end": 1
+    },
+    "s3": {
+      "start": 2,
+      "end": 2
+    }
+  },
+  "segments": [
+    {
+      "id": "s1",
+      "title": "1. Remainder Theorem & Factor Theorem",
+      "selector": "[data-lecture-section=\"s1\"]",
+      "en": "Chapter 4 unlocks cubic and higher-degree polynomials. By the Remainder Theorem, dividing polynomial f of x by a x minus b leaves remainder f of b over a. When that remainder equals zero, a x minus b is an exact linear factor—this is the Factor Theorem.",
+      "vi": "Chương 4 mở khóa các đa thức bậc ba và bậc cao. Theo Định lý Số dư, khi chia đa thức f x cho a x trừ b, số dư chính là f của b phần a. Khi số dư bằng 0 thì a x trừ b là một nhân tử đúng, đó chính là Định lý Nhân tử.",
+      "duration": 33.13,
+      "startTime": 0.0,
+      "endTime": 33.13,
+      "audioUrl": "/audio/lectures/igcse_0606/c4/s1.mp3"
+    },
+    {
+      "id": "s2",
+      "title": "2. Fast Cubic Factorisation by Comparing Coefficients",
+      "selector": "[data-lecture-section=\"s2\"]",
+      "en": "Once you spot one linear factor x minus r by testing small divisors of the constant term like plus or minus 1, 2, or 3, factorise the cubic into x minus r times a x squared plus b x plus c. Comparing coefficients is much faster and less error-prone than long division on Paper 1.",
+      "vi": "Sau khi thử nhanh các ước nhỏ của hệ số tự do như cộng trừ 1, 2, 3 để tìm một nhân tử x trừ r, hãy tách đa thức bậc ba thành x trừ r nhân một tam thức bậc hai. Đồng nhất hệ số nhanh hơn và ít sai dấu hơn hẳn so với chia đa thức truyền thống trên Paper 1.",
+      "duration": 36.49,
+      "startTime": 33.13,
+      "endTime": 69.62,
+      "audioUrl": "/audio/lectures/igcse_0606/c4/s2.mp3"
+    },
+    {
+      "id": "s3",
+      "title": "3. Solving Cubic Equations & Double-Unknown Remainder Traps",
+      "selector": "[data-lecture-section=\"s3\"]",
+      "en": "Always check whether the remaining quadratic factor can be factorised further or has a negative discriminant meaning only one real root exists. For two-unknown problems giving two remainders, set up simultaneous equations carefully and verify your constants by substitution.",
+      "vi": "Luôn kiểm tra xem tam thức bậc hai còn lại có phân tích tiếp được không hay có delta âm dẫn tới phương trình chỉ có một nghiệm thực duy nhất. Với bài tìm hai ẩn a, b từ hai số dư, hãy lập hệ hai phương trình và thay ngược lại để kiểm chứng.",
+      "duration": 30.83,
+      "startTime": 69.62,
+      "endTime": 100.45,
+      "audioUrl": "/audio/lectures/igcse_0606/c4/s3.mp3"
+    }
+  ]
+}

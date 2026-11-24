@@ -1,0 +1,55 @@
+{
+  "lectureId": "c9c6fcb7-eca7-440e-bc23-cf7b073aaf11",
+  "courseTitle": "Cambridge IGCSE Additional Mathematics (0606)",
+  "lectureTitle": "Chapter 3: Indices and Surds (Paper 1 Foundation Bridge)",
+  "totalDuration": 96.24,
+  "majorSections": {
+    "s1": {
+      "start": 0,
+      "end": 0
+    },
+    "s2": {
+      "start": 1,
+      "end": 1
+    },
+    "s3": {
+      "start": 2,
+      "end": 2
+    }
+  },
+  "segments": [
+    {
+      "id": "s1",
+      "title": "1. Paper 1 Non-Calculator Foundation Bridge (2025–2027)",
+      "selector": "[data-lecture-section=\"s1\"]",
+      "en": "In the 2025 to 2027 syllabus, Chapter 3 Indices and Surds is your essential Foundation Bridge for Paper 1 Non-Calculator. Every law of indices—negative powers as reciprocals and fractional powers as roots—must be executed cleanly by hand with zero calculator assistance.",
+      "vi": "Trong chương trình 2025 đến 2027, Chương 3 Lũy thừa và Căn thức là cầu nối nền tảng sống còn cho Paper 1 Không Máy Tính. Mọi quy tắc số mũ âm là nghịch đảo và số mũ phân số là căn bậc phải được biến đổi thành thạo hoàn toàn bằng tay.",
+      "duration": 35.13,
+      "startTime": 0.0,
+      "endTime": 35.13,
+      "audioUrl": "/audio/lectures/igcse_0606/c3/s1.mp3"
+    },
+    {
+      "id": "s2",
+      "title": "2. Rationalising Denominators with Conjugates",
+      "selector": "[data-lecture-section=\"s2\"]",
+      "en": "Cambridge never awards full final marks for an unrationalised denominator! Multiply top and bottom by the conjugate pair: a plus root b pairs with a minus root b, collapsing the denominator cleanly into a squared minus b using the difference of two squares.",
+      "vi": "Cambridge không bao giờ cho trọn điểm kết quả nếu mẫu số còn chứa căn thức! Hãy nhân cả tử và mẫu với biểu thức liên hợp a cộng căn b và a trừ căn b để khử sạch căn ở mẫu bằng hằng đẳng thức hiệu hai bình phương.",
+      "duration": 29.68,
+      "startTime": 35.13,
+      "endTime": 64.81,
+      "audioUrl": "/audio/lectures/igcse_0606/c3/s2.mp3"
+    },
+    {
+      "id": "s3",
+      "title": "3. Surds in Geometry & Exponential Index Equations",
+      "selector": "[data-lecture-section=\"s3\"]",
+      "en": "Expect Paper 1 questions combining surds with triangle areas, trapezium heights, or quadratic roots, as well as index equations like 9 to the x minus 4 times 3 to the x plus 3 equals zero. Always reduce every base to its smallest prime power first!",
+      "vi": "Hãy chuẩn bị cho các câu Paper 1 ghép căn thức vào tính diện tích tam giác, chiều cao hình thang, hoặc phương trình mũ như 9 mũ x trừ 4 nhân 3 mũ x cộng 3 bằng 0. Luôn đưa tất cả về cùng cơ số nguyên tố nhỏ nhất trước khi giải!",
+      "duration": 31.43,
+      "startTime": 64.81,
+      "endTime": 96.24,
+      "audioUrl": "/audio/lectures/igcse_0606/c3/s3.mp3"
+    }
+  ]
+}

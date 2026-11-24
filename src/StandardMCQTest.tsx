@@ -4,6 +4,9 @@ import { CustomAudioPlayer } from './CustomAudioPlayer';
 import { useTestGuideVideo, TestGuideVideoButton, TestGuideVideoPlayer, TestGuideVideoEditModal } from './TestGuideVideo';
 import { normalizeHtmlImages, applySmartMcqImageSizing, scanContainerMcqImages, McqImageZoomModal, LightboxState, extractLightboxFromClick } from './mcqImageUtils';
 import { useLmsLang, LmsLangToggle } from './utils/lmsI18n';
+import 'katex/dist/katex.min.css';
+import { renderMathInHtml, detectCalculatorPolicy, detectIgcseMathSyllabus } from './katexUtils';
+import IgcseFormulaSheetModal from './IgcseFormulaSheetModal';
 import './tailwind.css';
 
 // =========================================================================================
@@ -74,6 +77,8 @@ const cleanHtmlContent = (html: any) => {
   
   // Xóa khoảng trắng/xuống dòng thừa giữa các thẻ block để tránh tạo khoảng trống khổng lồ do whitespace-pre-wrap
   cleaned = cleaned.replace(/<\/(p|div|h[1-6])>\s+<(p|div|h[1-6])\b/gi, '</$1><$2');
+  // Render KaTeX cho các biểu thức \(...\) và \[...\] (tuyệt đối không chạm ký hiệu tiền tệ $)
+  cleaned = renderMathInHtml(cleaned);
   return cleaned;
 };
 
@@ -221,6 +226,7 @@ export default function StandardMCQTest({
 }) {
   const [lang, setLang] = useLmsLang();
   const isEn = lang === 'en';
+  const [showFormulaSheet, setShowFormulaSheet] = useState(false);
   
   // Xử lý an toàn dữ liệu đầu vào
   let safeData = testData || {};
@@ -1312,6 +1318,29 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
           )}
 
           <div className="flex items-center gap-2 md:gap-4 shrink-0">
+            {(() => {
+              const calcPol = detectCalculatorPolicy(safeData?.title, basicInfo);
+              const mSyl = detectIgcseMathSyllabus(safeData?.title || basicInfo?.title, safeData?.course_id || basicInfo?.courseId);
+              return (
+                <>
+                  {calcPol && (
+                    <span className={`hidden md:inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-[11px] font-black uppercase tracking-wide whitespace-nowrap border ${calcPol === 'non-calculator' ? 'bg-rose-50 text-rose-700 border-rose-200' : 'bg-emerald-50 text-emerald-700 border-emerald-200'}`}>
+                      {calcPol === 'non-calculator' ? '🚫 Non-Calculator' : '🧮 Calculator'}
+                    </span>
+                  )}
+                  {mSyl && (
+                    <button
+                      type="button"
+                      onClick={() => setShowFormulaSheet(true)}
+                      className="px-2.5 py-1 rounded-lg bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border border-indigo-200 text-xs font-extrabold whitespace-nowrap cursor-pointer transition-colors"
+                      title={isEn ? 'Open Official 2025–2027 Formula Sheet' : 'Mở bảng công thức Cambridge 2025–2027'}
+                    >
+                      📐 <span className="hidden sm:inline">Formulas</span>
+                    </button>
+                  )}
+                </>
+              );
+            })()}
             <LmsLangToggle lang={lang} setLang={setLang} variant={isReviewMode ? 'dark' : 'light'} />
             {/* LABEL AND TIMER (TOP RIGHT) */}
             {!isReviewMode && testStarted && (
@@ -3180,6 +3209,14 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
           </div>
         </div>
       )}
+
+      <IgcseFormulaSheetModal
+        isOpen={showFormulaSheet}
+        onClose={() => setShowFormulaSheet(false)}
+        syllabus={detectIgcseMathSyllabus(safeData?.title || basicInfo?.title, safeData?.course_id || basicInfo?.courseId)}
+        calculatorPolicy={detectCalculatorPolicy(safeData?.title, basicInfo)}
+        isEn={isEn}
+      />
 
       <McqImageZoomModal
         items={zoomLightbox?.items || null}

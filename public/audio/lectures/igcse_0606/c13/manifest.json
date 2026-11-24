@@ -1,0 +1,55 @@
+{
+  "lectureId": "8c56b240-1273-4d62-968c-603c2ccb651c",
+  "courseTitle": "Cambridge IGCSE Additional Mathematics (0606)",
+  "lectureTitle": "Chapter 13: Vectors (2025–2027 Scope)",
+  "totalDuration": 104.5,
+  "majorSections": {
+    "s1": {
+      "start": 0,
+      "end": 0
+    },
+    "s2": {
+      "start": 1,
+      "end": 1
+    },
+    "s3": {
+      "start": 2,
+      "end": 2
+    }
+  },
+  "segments": [
+    {
+      "id": "s1",
+      "title": "1. 2025–2027 Syllabus Update: Core Vectors Only (No Relative Velocity)",
+      "selector": "[data-lecture-section=\"s1\"]",
+      "en": "Important 2025 to 2027 syllabus update for Chapter 13: Relative Velocity has been officially removed from 0606 exams! Focus 100 percent of your effort on position vectors, vector magnitude, unit vectors, geometric ratio division, and proving collinearity.",
+      "vi": "Cập nhật chương trình 2025 đến 2027 cực kỳ quan trọng cho Chương 13: Phần Vận tốc tương đối Relative Velocity đã chính thức được BỎ khỏi đề thi 0606! Hãy dồn 100 phần trăm sức lực vào vectơ vị trí, độ dài, vectơ đơn vị, tỉ số chia đoạn thẳng và chứng minh thẳng hàng.",
+      "duration": 37.96,
+      "startTime": 0.0,
+      "endTime": 37.96,
+      "audioUrl": "/audio/lectures/igcse_0606/c13/s1.mp3"
+    },
+    {
+      "id": "s2",
+      "title": "2. Unit Vectors & Position Vector Bridge AB = b − a",
+      "selector": "[data-lecture-section=\"s2\"]",
+      "en": "Every vector from A to B equals position vector O B minus position vector O A. To find a vector of magnitude k parallel to vector v, first divide v by its magnitude square root of x squared plus y squared to get the unit vector, then scale by k.",
+      "vi": "Mọi vectơ AB đều bằng hiệu vectơ vị trí OB trừ OA. Để tìm một vectơ có độ dài k cùng phương với vectơ v, bước một chia v cho độ dài căn bậc hai x bình cộng y bình để tạo vectơ đơn vị, sau đó nhân với hệ số k.",
+      "duration": 29.73,
+      "startTime": 37.96,
+      "endTime": 67.69,
+      "audioUrl": "/audio/lectures/igcse_0606/c13/s2.mp3"
+    },
+    {
+      "id": "s3",
+      "title": "3. Proving Collinearity & Equating Non-Parallel Coefficients",
+      "selector": "[data-lecture-section=\"s3\"]",
+      "en": "To prove three points A, B, and C are collinear, show that vector A C equals a scalar multiple of A B AND explicitly state they share the common point A! When an equation equates two combinations of non-parallel vectors a and b, equate the coefficients of a and b separately to solve for lambda and mu.",
+      "vi": "Để chứng minh ba điểm A, B, C thẳng hàng, hãy chỉ ra vectơ AC bằng k lần vectơ AB VÀ bắt buộc viết thêm câu hai vectơ có chung điểm A! Khi so sánh hai tổ hợp của hai vectơ không cùng phương a và b, hãy đồng nhất riêng hệ số của a và hệ số của b để giải ra lambda và mu.",
+      "duration": 36.81,
+      "startTime": 67.69,
+      "endTime": 104.5,
+      "audioUrl": "/audio/lectures/igcse_0606/c13/s3.mp3"
+    }
+  ]
+}

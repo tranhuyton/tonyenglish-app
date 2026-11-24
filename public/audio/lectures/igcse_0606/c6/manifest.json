@@ -1,0 +1,55 @@
+{
+  "lectureId": "634a0bca-84ef-4488-94c1-341365b348c3",
+  "courseTitle": "Cambridge IGCSE Additional Mathematics (0606)",
+  "lectureTitle": "Chapter 6: Logarithmic and Exponential Functions",
+  "totalDuration": 103.46,
+  "majorSections": {
+    "s1": {
+      "start": 0,
+      "end": 0
+    },
+    "s2": {
+      "start": 1,
+      "end": 1
+    },
+    "s3": {
+      "start": 2,
+      "end": 2
+    }
+  },
+  "segments": [
+    {
+      "id": "s1",
+      "title": "1. Core Laws of Logarithms & Change of Base",
+      "selector": "[data-lecture-section=\"s1\"]",
+      "en": "Chapter 6 is a guaranteed exam favourite on both papers. Master the three laws: log of a product is the sum of logs, log of a quotient is the difference, and powers drop straight in front. Whenever bases differ—such as log base 4 and log base 2—apply the change-of-base formula immediately.",
+      "vi": "Chương 6 là phần chắc chắn xuất hiện ở cả hai đề thi. Hãy thuộc nằm lòng ba quy tắc: log tích bằng tổng log, log thương bằng hiệu log, và số mũ được đưa ra phía trước. Hễ gặp khác cơ số như cơ số 4 và cơ số 2, áp dụng ngay công thức đổi cơ số.",
+      "duration": 36.09,
+      "startTime": 0.0,
+      "endTime": 36.09,
+      "audioUrl": "/audio/lectures/igcse_0606/c6/s1.mp3"
+    },
+    {
+      "id": "s2",
+      "title": "2. Exponential Equations, Natural Log ln & Asymptotes",
+      "selector": "[data-lecture-section=\"s2\"]",
+      "en": "Remember that y equals e to the x and y equals ln x are exact inverse reflections across y equals x. The curve y equals a e to the b x plus c has horizontal asymptote y equals c, while y equals ln of a x plus b has vertical asymptote where a x plus b equals zero.",
+      "vi": "Hãy nhớ hàm y bằng e mũ x và y bằng ln x là hai hàm ngược đối xứng qua đường y bằng x. Đồ thị y bằng a e mũ b x cộng c có tiệm cận ngang y bằng c, còn đồ thị y bằng ln của a x cộng b có tiệm cận đứng tại nơi biểu thức bên trong bằng 0.",
+      "duration": 34.84,
+      "startTime": 36.09,
+      "endTime": 70.93,
+      "audioUrl": "/audio/lectures/igcse_0606/c6/s2.mp3"
+    },
+    {
+      "id": "s3",
+      "title": "3. Critical Trap: Rejecting Extraneous Negative Roots",
+      "selector": "[data-lecture-section=\"s3\"]",
+      "en": "The number one mark-losing trap in Chapter 6 is forgetting domain checks! You can only take the logarithm of a strictly positive number. After solving a quadratic from a log equation, always check every root against the original equation and explicitly cross out invalid solutions.",
+      "vi": "Cái bẫy mất điểm số một của Chương 6 là quên điều kiện xác định của logarit! Biểu thức trong log bắt buộc phải dương ngặt. Sau khi giải phương trình bậc hai sinh ra từ phương trình log, luôn thay thử vào đề gốc và gạch bỏ rõ ràng nghiệm ngoại lai.",
+      "duration": 32.53,
+      "startTime": 70.93,
+      "endTime": 103.46,
+      "audioUrl": "/audio/lectures/igcse_0606/c6/s3.mp3"
+    }
+  ]
+}

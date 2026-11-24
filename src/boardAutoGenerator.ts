@@ -267,72 +267,123 @@ function buildModuleLectureBoardSpec(
   return { title: boardTitle, columns };
 }
 
-function buildMaths0580BoardSpec(course: any, lecs: any[], tests: any[]): { title: string; columns: BoardColumnSpec[] } {
+function buildMaths0580BoardSpec(
+  course: any,
+  mods: any[],
+  lecs: any[],
+  folders: any[],
+  tests: any[]
+): { title: string; columns: BoardColumnSpec[] } {
   const cid = String(course.id);
   const testsById = new Map<string, any>(tests.map(t => [String(t.id), t]));
-  const sortedLecs = [...lecs].sort((a, b) => (a.order_index || 999) - (b.order_index || 999));
-  const part1: BoardCardSpec[] = [];
-  const part2: BoardCardSpec[] = [];
-  const rev: BoardCardSpec[] = [];
+  const folderById = new Map<string, any>(folders.map(f => [String(f.id), f]));
+  const columns: BoardColumnSpec[] = [];
+  const usedTestIds = new Set<string>();
 
-  for (const l of sortedLecs) {
-    const { items } = extractLectureItems(l, cid, testsById);
-    const card: BoardCardSpec = { title: l.title, items };
-    const m = String(l.title || '').match(/topic\s*(\d+)/i);
-    if (m) {
-      if (parseInt(m[1], 10) <= 5) part1.push(card);
-      else part2.push(card);
-    } else {
-      rev.push(card);
-    }
+  for (const m of [...mods].sort((a, b) => (a.order_index || 999) - (b.order_index || 999))) {
+    const mLecs = lecs
+      .filter(l => l.module_id === m.id)
+      .sort((a, b) => (a.order_index || 999) - (b.order_index || 999));
+    if (mLecs.length === 0) continue;
+    const cards: BoardCardSpec[] = mLecs.map(l => {
+      const { items, usedTestIds: tids } = extractLectureItems(l, cid, testsById, [
+        'Học kỹ bài giảng & ghi chú phần Paper 2 Non-Calc vs Paper 4 Calc',
+      ]);
+      tids.forEach(id => usedTestIds.add(id));
+      return { title: l.title, items };
+    });
+    columns.push({ title: m.title, cards });
   }
 
-  return {
-    title: 'Bảng công việc IGCSE Maths 0580',
-    columns: [
-      { title: 'Part 1: Number, Algebra & Geometry (Topic 1–5) [color:#dcfce7,#15803d]', cards: part1 },
-      { title: 'Part 2: Trig, Vectors, Probability & Stats (Topic 6–9) [color:#fef9c3,#713f12]', cards: part2 },
-      { title: 'Past Papers & Year End Revision [color:#e0f2fe,#0369a1]', cards: rev },
-    ].filter(c => c.cards.length > 0),
-  };
-}
-
-function buildMaths0606BoardSpec(course: any, lecs: any[], tests: any[]): { title: string; columns: BoardColumnSpec[] } {
-  const cid = String(course.id);
-  const testsById = new Map<string, any>(tests.map(t => [String(t.id), t]));
-  const sortedLecs = [...lecs].sort((a, b) => (a.order_index || 999) - (b.order_index || 999));
-  const defaultTasks = [
-    'Học kỹ lý thuyết & ghi chép công thức trọng tâm',
-    'Luyện giải ví dụ mẫu & tự tổng kết dạng bài',
-  ];
-  const buckets: BoardCardSpec[][] = [[], [], [], []];
-
-  sortedLecs.forEach((l, idx) => {
-    const { items } = extractLectureItems(l, cid, testsById, defaultTasks);
-    const card: BoardCardSpec = { title: l.title, items };
-    if (idx < 5) buckets[0].push(card);
-    else if (idx < 9) buckets[1].push(card);
-    else if (idx < 13) buckets[2].push(card);
-    else buckets[3].push(card);
-  });
-
-  if (tests.length > 0) {
-    buckets[3].push({
-      title: 'Past Papers (Đề thi thật Cambridge 0606)',
-      items: [...tests]
-        .sort((a, b) => naturalCompare(a.title, b.title))
-        .map(t => ({ task_type: 'test', title: t.title, description: '', test_id: String(t.id) })),
+  // Dedicated 2025-2027 Paper 2 Non-Calculator vs Paper 4 Calculator Exam Column
+  const nonCalcTests: any[] = [];
+  const calcTests: any[] = [];
+  for (const t of tests) {
+    if (usedTestIds.has(String(t.id))) continue;
+    const fname = String(folderById.get(String(t.folder_id || ''))?.name || folderById.get(String(t.folder_id || ''))?.title || '').toLowerCase();
+    const ttitle = String(t.title || '').toLowerCase();
+    if (fname.includes('non-calculator') || ttitle.includes('non-calc') || ttitle.includes('paper 2') || /0580\/2\d/.test(ttitle)) {
+      nonCalcTests.push(t);
+    } else if (fname.includes('calculator') || fname.includes('past paper') || ttitle.includes('paper 4') || /0580\/4\d/.test(ttitle)) {
+      calcTests.push(t);
+    }
+  }
+  const examCards: BoardCardSpec[] = [];
+  if (nonCalcTests.length > 0) {
+    examCards.push({
+      title: '🚫 Paper 2: Non-Calculator Specialist Drills & Full Mocks',
+      items: nonCalcTests.sort((a, b) => naturalCompare(a.title, b.title)).map(t => ({
+        task_type: 'test',
+        title: t.title,
+        description: '',
+        test_id: String(t.id),
+      })),
+    });
+  }
+  if (calcTests.length > 0) {
+    examCards.push({
+      title: '🧮 Paper 4: Calculator Specialist Drills & Full Mocks',
+      items: calcTests.sort((a, b) => naturalCompare(a.title, b.title)).map(t => ({
+        task_type: 'test',
+        title: t.title,
+        description: '',
+        test_id: String(t.id),
+      })),
+    });
+  }
+  if (examCards.length > 0) {
+    columns.push({
+      title: '🏆 Đề Thi Thử Paper 2 (Non-Calc) & Paper 4 (Calc) [color:#ffe4e6,#9f1239]',
+      cards: examCards,
     });
   }
 
   return {
-    title: 'Bảng công việc IGCSE Maths 0606',
-    columns: [
-      { title: 'Part 1: Functions, Quadratics & Polynomials (Ch. 1–5) [color:#e0e7ff,#3730a3]', cards: buckets[0] },
-      { title: 'Part 2: Logs, Coordinate & Circular Measure (Ch. 6–9) [color:#ccfbf1,#0f766e]', cards: buckets[1] },
-      { title: 'Part 3: Combinatorics, Series & Vectors (Ch. 10–13) [color:#fef3c7,#b45309]', cards: buckets[2] },
-      { title: 'Part 4: Calculus, Kinematics & Past Papers (Ch. 14–16) [color:#ffe4e6,#be123c]', cards: buckets[3] },
-    ].filter(c => c.cards.length > 0),
+    title: 'Bảng công việc IGCSE Maths 0580 (2025–2027)',
+    columns: columns.filter(c => c.cards.length > 0),
+  };
+}
+
+function buildMaths0606BoardSpec(
+  course: any,
+  mods: any[],
+  lecs: any[],
+  tests: any[]
+): { title: string; columns: BoardColumnSpec[] } {
+  const cid = String(course.id);
+  const testsById = new Map<string, any>(tests.map(t => [String(t.id), t]));
+  const columns: BoardColumnSpec[] = [];
+  const usedTestIds = new Set<string>();
+  const defaultTasks = [
+    'Nghe trọn bài giảng Audio Song ngữ & tóm tắt công thức trọng tâm',
+  ];
+
+  for (const m of [...mods].sort((a, b) => (a.order_index || 999) - (b.order_index || 999))) {
+    const mLecs = lecs
+      .filter(l => l.module_id === m.id)
+      .sort((a, b) => (a.order_index || 999) - (b.order_index || 999));
+    if (mLecs.length === 0) continue;
+    const cards: BoardCardSpec[] = mLecs.map(l => {
+      const { items, usedTestIds: tids } = extractLectureItems(l, cid, testsById, defaultTasks);
+      tids.forEach(id => usedTestIds.add(id));
+      return { title: l.title, items };
+    });
+    columns.push({ title: m.title, cards });
+  }
+
+  const remaining = tests
+    .filter(t => !usedTestIds.has(String(t.id)))
+    .sort((a, b) => naturalCompare(a.title, b.title));
+  if (remaining.length > 0 && columns.length > 0) {
+    columns[columns.length - 1].cards.push({
+      title: '📜 Past Papers & Full Mock Exams (Paper 1 Non-Calc & Paper 2 Calc)',
+      items: remaining.map(t => ({ task_type: 'test', title: t.title, description: '', test_id: String(t.id) })),
+    });
+  }
+
+  return {
+    title: 'Bảng công việc IGCSE Maths 0606 (2025–2027)',
+    columns: columns.filter(c => c.cards.length > 0),
   };
 }
 
@@ -598,10 +649,10 @@ function buildSpecForCourse(course: any, mods: any[], lecs: any[], folders: any[
     );
   }
   if (titleLow.includes('maths-0580')) {
-    return buildMaths0580BoardSpec(course, lecs, tests);
+    return buildMaths0580BoardSpec(course, mods, lecs, folders, tests);
   }
   if (titleLow.includes('maths-0606')) {
-    return buildMaths0606BoardSpec(course, lecs, tests);
+    return buildMaths0606BoardSpec(course, mods, lecs, tests);
   }
   if (titleLow.includes('esl-0510')) {
     return buildEsl0510BoardSpec(course, mods, lecs, folders, tests);

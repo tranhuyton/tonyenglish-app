@@ -1,0 +1,55 @@
+{
+  "lectureId": "06504fb8-f812-4ac0-8561-8fb41c893a16",
+  "courseTitle": "Cambridge IGCSE Additional Mathematics (0606)",
+  "lectureTitle": "Chapter 7B: Coordinate Geometry of the Circle (NEW 2025–2027)",
+  "totalDuration": 133.51,
+  "majorSections": {
+    "s1": {
+      "start": 0,
+      "end": 0
+    },
+    "s2": {
+      "start": 1,
+      "end": 1
+    },
+    "s3": {
+      "start": 2,
+      "end": 2
+    }
+  },
+  "segments": [
+    {
+      "id": "s1",
+      "title": "1. NEW 2025–2027 Compulsory Topic: Standard & Expanded Circle Equations",
+      "selector": "[data-lecture-section=\"s1\"]",
+      "en": "Welcome to Chapter 7B: Coordinate Geometry of the Circle—the brand-new compulsory addition to the Cambridge 0606 2025 to 2027 syllabus! Memorise both forms: standard form x minus a squared plus y minus b squared equals r squared, and expanded form x squared plus y squared plus 2 g x plus 2 f y plus c equals zero with centre minus g, minus f and radius square root of g squared plus f squared minus c.",
+      "vi": "Chào mừng các em đến với Chương 7B: Hình học tọa độ Đường tròn — chuyên đề MỚI BẮT BUỘC trong đề thi Cambridge 0606 từ năm 2025 đến 2027! Hãy thuộc cả hai dạng: dạng chính tắc x trừ a bình cộng y trừ b bình bằng r bình, và dạng khai triển tìm tâm trừ g phẩy trừ f cùng bán kính căn bậc hai g bình cộng f bình trừ c.",
+      "duration": 53.61,
+      "startTime": 0.0,
+      "endTime": 53.61,
+      "audioUrl": "/audio/lectures/igcse_0606/c7b/s1.mp3"
+    },
+    {
+      "id": "s2",
+      "title": "2. Tangents, Normals & Chord Bisector Geometry",
+      "selector": "[data-lecture-section=\"s2\"]",
+      "en": "Three circle theorems power every coordinate proof: first, the normal passes through the centre and is perpendicular to the tangent, so gradient of tangent equals minus 1 over gradient of radius; second, the perpendicular bisector of any chord passes right through the centre; third, chord length equals 2 times square root of r squared minus d squared.",
+      "vi": "Ba tính chất hình học cốt lõi giải quyết mọi bài chứng minh: thứ nhất, pháp tuyến đi qua tâm và vuông góc với tiếp tuyến nên tích hai hệ số góc bằng trừ 1; thứ hai, trung trực của mọi dây cung đều đi qua tâm; thứ ba, độ dài dây cung bằng hai lần căn bậc hai r bình trừ d bình.",
+      "duration": 34.93,
+      "startTime": 53.61,
+      "endTime": 88.54,
+      "audioUrl": "/audio/lectures/igcse_0606/c7b/s2.mp3"
+    },
+    {
+      "id": "s3",
+      "title": "3. Line–Circle Discriminant & Two-Circle Touching Conditions",
+      "selector": "[data-lecture-section=\"s3\"]",
+      "en": "To test if a line is a tangent to a circle, substitute y equals m x plus c into the circle and set discriminant delta equal to zero. For two circles with centre distance d, they touch externally when d equals r 1 plus r 2, and touch internally when d equals absolute value of r 1 minus r 2. Always divide by k first if the equation starts with k x squared plus k y squared!",
+      "vi": "Để chứng minh đường thẳng tiếp xúc đường tròn, thế phương trình đường thẳng vào đường tròn và giải biệt thức delta bằng 0. Với hai đường tròn cách tâm đoạn d, chúng tiếp xúc ngoài khi d bằng r1 cộng r2 và tiếp xúc trong khi d bằng trị tuyệt đối r1 trừ r2. Luôn nhớ chia hai vế cho k nếu đầu phương trình là k x bình cộng k y bình!",
+      "duration": 44.97,
+      "startTime": 88.54,
+      "endTime": 133.51,
+      "audioUrl": "/audio/lectures/igcse_0606/c7b/s3.mp3"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "lectureId": "ee577f38-f621-4539-9e94-c374ab08c8df",
+  "courseTitle": "Cambridge IGCSE Additional Mathematics (0606)",
+  "lectureTitle": "Chapter 14: Differentiation 2 (Trig, Exp, Ln & Rates)",
+  "totalDuration": 108.48,
+  "majorSections": {
+    "s1": {
+      "start": 0,
+      "end": 0
+    },
+    "s2": {
+      "start": 1,
+      "end": 1
+    },
+    "s3": {
+      "start": 2,
+      "end": 2
+    }
+  },
+  "segments": [
+    {
+      "id": "s1",
+      "title": "1. Derivatives of Trig, Exponential & Logarithmic Functions",
+      "selector": "[data-lecture-section=\"s1\"]",
+      "en": "Chapter 14 expands your differentiation toolkit to transcendental functions—all using radians for trig! Memorise: sine a x differentiates to a cosine a x; cosine a x to minus a sine a x; tangent a x to a sec squared a x; e to the a x to a e to the a x; and ln of a x plus b to a over a x plus b.",
+      "vi": "Chương 14 mở rộng kho vũ khí đạo hàm sang hàm lượng giác, mũ và logarit — lưu ý lượng giác luôn tính bằng radian! Thuộc lòng: đạo hàm sin ax là a cos ax, cos ax là trừ a sin ax, tan ax là a sec bình ax, e mũ ax là a e mũ ax, và ln của ax cộng b là a chia ax cộng b.",
+      "duration": 39.04,
+      "startTime": 0.0,
+      "endTime": 39.04,
+      "audioUrl": "/audio/lectures/igcse_0606/c14/s1.mp3"
+    },
+    {
+      "id": "s2",
+      "title": "2. Connected Rates of Change & Small Changes",
+      "selector": "[data-lecture-section=\"s2\"]",
+      "en": "Connected rates use the Chain Rule like cancelling fractions: d V by d t equals d V by d r multiplied by d r by d t. For small changes, use the linear approximation delta y is approximately equal to d y by d x times delta x—always note whether the variable increases positive or decreases negative!",
+      "vi": "Bài toán tốc độ biến thiên liên kết dùng Quy tắc dây chuyền cực mượt: dV chia dt bằng dV chia dr nhân dr chia dt. Với bài toán số gia nhỏ Small Changes, dùng xấp xỉ delta y gần bằng dy chia dx nhân delta x — luôn kiểm tra kỹ dấu cộng khi tăng và dấu trừ khi giảm!",
+      "duration": 37.89,
+      "startTime": 39.04,
+      "endTime": 76.93,
+      "audioUrl": "/audio/lectures/igcse_0606/c14/s2.mp3"
+    },
+    {
+      "id": "s3",
+      "title": "3. Applied Optimisation Problems (Show-That + Second Derivative)",
+      "selector": "[data-lecture-section=\"s3\"]",
+      "en": "Optimisation questions always follow a two-part blueprint: first use a constraint like fixed surface area or perimeter to prove a given volume formula; second differentiate, set to zero, solve for the optimal dimension, and check the second derivative to confirm maximum or minimum.",
+      "vi": "Bài toán tối ưu luôn đi theo cấu trúc hai phần kinh điển: phần một dùng điều kiện ràng buộc về diện tích hay chu vi để chứng minh công thức đề bài cho; phần hai lấy đạo hàm cho bằng 0, giải kích thước tối ưu rồi kiểm tra đạo hàm cấp hai để khẳng định cực đại hay cực tiểu.",
+      "duration": 31.55,
+      "startTime": 76.93,
+      "endTime": 108.48,
+      "audioUrl": "/audio/lectures/igcse_0606/c14/s3.mp3"
+    }
+  ]
+}

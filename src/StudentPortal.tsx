@@ -1808,7 +1808,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
       return { label: isEn ? 'IELTS Target' : 'Mục tiêu IELTS', value: courseTargets.ielts || '6.5+' };
     }
     const primaryCourse = activeCourses[0] || courses[0];
-    const hasIgcse = activeCourses.some(c => /igcse|0654|0620|0625|0610|0450|0455|0460|0580|0510/i.test(c.title || ''));
+    const hasIgcse = activeCourses.some(c => /igcse|0654|0620|0625|0610|0450|0455|0460|0580|0606|0510/i.test(c.title || ''));
     const savedGrade = primaryCourse ? courseTargets[String(primaryCourse.id)] : '';
     if (savedGrade) {
       return {

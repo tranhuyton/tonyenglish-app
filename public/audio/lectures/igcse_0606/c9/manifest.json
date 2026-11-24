@@ -1,0 +1,55 @@
+{
+  "lectureId": "b7057bbf-6016-49ce-b66b-82c55bb46cb7",
+  "courseTitle": "Cambridge IGCSE Additional Mathematics (0606)",
+  "lectureTitle": "Chapter 9: Trigonometry",
+  "totalDuration": 111.43,
+  "majorSections": {
+    "s1": {
+      "start": 0,
+      "end": 0
+    },
+    "s2": {
+      "start": 1,
+      "end": 1
+    },
+    "s3": {
+      "start": 2,
+      "end": 2
+    }
+  },
+  "segments": [
+    {
+      "id": "s1",
+      "title": "1. Graphs a sin(bx) + c & Exact Radian Values",
+      "selector": "[data-lecture-section=\"s1\"]",
+      "en": "Chapter 9 elevates trigonometry to A-level readiness. For y equals a sine of b x plus c, amplitude is modulus of a, period is 360 degrees or 2 pi divided by b, and the midline shifts vertically by c. Memorise exact values for pi over 6, pi over 4, and pi over 3 cold for Paper 1!",
+      "vi": "Chương 9 nâng tầm lượng giác lên chuẩn tiền A-Level. Với hàm y bằng a sin b x cộng c, biên độ là trị tuyệt đối a, chu kỳ bằng 360 độ hoặc 2 pi chia b, và trục giữa dịch lên xuống theo c. Hãy thuộc như cháo giá trị chính xác tại pi phần 6, pi phần 4 và pi phần 3 cho Paper 1!",
+      "duration": 38.68,
+      "startTime": 0.0,
+      "endTime": 38.68,
+      "audioUrl": "/audio/lectures/igcse_0606/c9/s1.mp3"
+    },
+    {
+      "id": "s2",
+      "title": "2. Reciprocal Functions & Pythagorean Identities",
+      "selector": "[data-lecture-section=\"s2\"]",
+      "en": "Know the third-letter trick for reciprocal functions: secant is 1 over cosine, cosecant is 1 over sine, and cotangent is 1 over tangent. Use the printed Pythagorean identities sec squared equals 1 plus tan squared and cosec squared equals 1 plus cot squared to convert quadratic trig equations into a single trig ratio.",
+      "vi": "Dùng mẹo chữ cái thứ ba cho hàm nghịch đảo: sec là 1 phần cos, cosec là 1 phần sin, và cot là 1 phần tan. Tận dụng hai hằng đẳng thức in sẵn trên đề là sec bình bằng 1 cộng tan bình và cosec bình bằng 1 cộng cot bình để đưa phương trình lượng giác bậc hai về cùng một ẩn.",
+      "duration": 38.63,
+      "startTime": 38.68,
+      "endTime": 77.31,
+      "audioUrl": "/audio/lectures/igcse_0606/c9/s2.mp3"
+    },
+    {
+      "id": "s3",
+      "title": "3. Adjusting the Domain for Multiple-Angle Equations",
+      "selector": "[data-lecture-section=\"s3\"]",
+      "en": "Never lose roots on equations like sine of 2 x minus 30 degrees equals 0.5! Always adjust the domain to match the inside angle 2 x minus 30 FIRST, find every CAST quadrant angle inside that expanded domain, and only then add 30 and divide by 2 at the very last line.",
+      "vi": "Đừng bao giờ để sót nghiệm trong phương trình dạng sin của 2 x trừ 30 độ bằng 0.5! Bắt buộc biến đổi miền nghiệm theo góc bên trong 2 x trừ 30 độ trước tiên, tìm đủ tất cả các góc theo vòng tròn CAST trong miền mới đó, rồi mới cộng 30 và chia 2 ở dòng cuối cùng.",
+      "duration": 34.12,
+      "startTime": 77.31,
+      "endTime": 111.43,
+      "audioUrl": "/audio/lectures/igcse_0606/c9/s3.mp3"
+    }
+  ]
+}
