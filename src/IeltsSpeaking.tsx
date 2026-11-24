@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { supabase } from './supabase';
 import './tailwind.css';
 import { useLmsLang, LmsLangToggle } from './utils/lmsI18n';
+import { ImageLightboxModal, LightboxState, extractLightboxFromClick } from './mcqImageUtils';
 
 // =========================================================================================
 // BỘ ICON CHUẨN IDP
@@ -77,6 +78,7 @@ export default function IeltsSpeaking({
 }) {
   const [lang, setLang] = useLmsLang();
   const isEn = lang === 'en';
+  const [imageLightbox, setImageLightbox] = useState<LightboxState | null>(null);
   
   // 1. Tải dữ liệu bài test
   const [testData, setTestData] = useState<any>(() => {
@@ -801,7 +803,13 @@ export default function IeltsSpeaking({
           <main className="flex-1 flex flex-col md:flex-row overflow-y-auto md:overflow-hidden relative">
             
             {/* Cột trái: Đề bài */}
-            <section className="w-full md:w-1/2 p-5 sm:p-8 md:p-10 md:overflow-y-auto custom-scrollbar border-b md:border-b-0 md:border-r border-slate-300 flex flex-col bg-white shrink-0">
+            <section
+              className="w-full md:w-1/2 p-5 sm:p-8 md:p-10 md:overflow-y-auto custom-scrollbar border-b md:border-b-0 md:border-r border-slate-300 flex flex-col bg-white shrink-0 html-content-renderer"
+              onClick={(e) => {
+                const lb = extractLightboxFromClick(e, e.currentTarget);
+                if (lb) setImageLightbox(lb);
+              }}
+            >
               <div className="max-w-2xl text-[16px] leading-[1.8] text-slate-900 font-sans break-words">
                 {currentQ.partContent && (
                   <div className="mb-6 text-[15px] font-medium" dangerouslySetInnerHTML={{__html: currentQ.partContent}} />
@@ -1110,6 +1118,11 @@ export default function IeltsSpeaking({
           </div>
         </main>
       )}
+      <ImageLightboxModal
+        items={imageLightbox?.items || null}
+        initialIndex={imageLightbox?.index ?? 0}
+        onClose={() => setImageLightbox(null)}
+      />
     </div>
   );
 }

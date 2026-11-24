@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { supabase } from './supabase';
 import { useTestGuideVideo, TestGuideVideoButton, TestGuideVideoPlayer, TestGuideVideoEditModal } from './TestGuideVideo';
 import { useLmsLang, LmsLangToggle } from './utils/lmsI18n';
+import { ImageLightboxModal, LightboxState, extractLightboxFromClick } from './mcqImageUtils';
 
 export default function IgcsePaperTest({ onBack, onStartTest, testData: propTestData }: { onBack?: () => void, onStartTest?: any, testData?: any }) {
   const [lang, setLang] = useLmsLang();
@@ -24,6 +25,7 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
   });
   
   const [isLoading, setIsLoading] = useState(!testData);
+  const [imageLightbox, setImageLightbox] = useState<LightboxState | null>(null);
   const initIsReview = !!testData?.isReview;
   const [isReviewMode, setIsReviewMode] = useState(initIsReview);
   useEffect(() => { window.dispatchEvent(new CustomEvent('tony-review-mode-change', { detail: Boolean(isReviewMode) })); return () => { window.dispatchEvent(new CustomEvent('tony-review-mode-change', { detail: false })); }; }, [isReviewMode]);
@@ -923,7 +925,14 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
             testTitle={testData?.title}
           />
 
-          <div onScroll={handleContainerScroll} className={`flex-1 overflow-y-auto p-4 sm:p-8 ${isDragging ? 'pointer-events-none' : ''} custom-scrollbar`}>
+          <div
+            onScroll={handleContainerScroll}
+            onClick={(e) => {
+              const lb = extractLightboxFromClick(e, e.currentTarget);
+              if (lb) setImageLightbox(lb);
+            }}
+            className={`flex-1 overflow-y-auto p-4 sm:p-8 ${isDragging ? 'pointer-events-none' : ''} custom-scrollbar`}
+          >
             {/* Score Summary */}
             {gradeResult && (
                 <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 mb-8 text-center">
@@ -1051,7 +1060,7 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
                                             }}>
                                                 {answers[sub.id] ? (
                                                     <div className="relative inline-block border-2 border-slate-300 rounded-lg p-2 bg-white shadow-sm">
-                                                        <img src={answers[sub.id]} alt={isEn ? 'Student work' : 'Bài làm'} className="max-h-[250px] object-contain rounded" />
+                                                        <img src={answers[sub.id]} alt={isEn ? 'Student work' : 'Bài làm'} title={isEn ? 'Click to enlarge' : 'Bấm để phóng to'} className="max-h-[250px] object-contain rounded cursor-zoom-in" />
                                                         {!isReviewMode && (
                                                             <button onClick={() => handleAnswerChange(sub.id, '')} className="absolute -top-3 -right-3 bg-red-500 text-white w-7 h-7 rounded-full shadow-md font-bold hover:scale-110 transition-transform">✕</button>
                                                         )}
@@ -1120,6 +1129,11 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
           </div>
         </div>
       </div>
+      <ImageLightboxModal
+        items={imageLightbox?.items || null}
+        initialIndex={imageLightbox?.index ?? 0}
+        onClose={() => setImageLightbox(null)}
+      />
     </div>
   );
 }

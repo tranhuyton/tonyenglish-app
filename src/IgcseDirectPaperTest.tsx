@@ -4,6 +4,7 @@ import { Document, Page, pdfjs } from 'react-pdf';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
 import { useLmsLang, LmsLangToggle } from './utils/lmsI18n';
+import { ImageLightboxModal, LightboxState, extractLightboxFromClick } from './mcqImageUtils';
 
 pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
@@ -312,6 +313,7 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
   });
   
   const [isLoading, setIsLoading] = useState(!testData);
+  const [imageLightbox, setImageLightbox] = useState<LightboxState | null>(null);
   const initIsReview = !!testData?.isReview;
   const [isReviewMode, setIsReviewMode] = useState(initIsReview);
   useEffect(() => { window.dispatchEvent(new CustomEvent('tony-review-mode-change', { detail: Boolean(isReviewMode) })); return () => { window.dispatchEvent(new CustomEvent('tony-review-mode-change', { detail: false })); }; }, [isReviewMode]);
@@ -802,7 +804,13 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
             <button onClick={() => setIsRightPanelOpen(false)} className="text-slate-400 hover:text-white text-xl">✕</button>
           </div>
 
-          <div className="flex-1 overflow-y-auto p-4 sm:p-6 custom-scrollbar">
+          <div
+            className="flex-1 overflow-y-auto p-4 sm:p-6 custom-scrollbar"
+            onClick={(e) => {
+              const lb = extractLightboxFromClick(e, e.currentTarget);
+              if (lb) setImageLightbox(lb);
+            }}
+          >
             {gradeResult ? (
                 <>
                     <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 mb-6 text-center">
@@ -881,6 +889,11 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
         </div>
 
       </div>
+      <ImageLightboxModal
+        items={imageLightbox?.items || null}
+        initialIndex={imageLightbox?.index ?? 0}
+        onClose={() => setImageLightbox(null)}
+      />
     </div>
   );
 }

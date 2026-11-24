@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { supabase } from './supabase';
 import './tailwind.css';
 import { useLmsLang, LmsLangToggle } from './utils/lmsI18n';
+import { ImageLightboxModal, LightboxState, extractLightboxFromClick } from './mcqImageUtils';
 
 // --- BỘ ICON CHUẨN IDP ---
 const UserIcon = () => <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5"><path fillRule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clipRule="evenodd" /></svg>;
@@ -15,6 +16,7 @@ const UnderlineIcon = () => <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0
 export default function IeltsWriting({ onBack, testData: propTestData, onFinish }: { onBack?: () => void, testData?: any, onFinish?: (res: any) => void }) {
   const [lang, setLang] = useLmsLang();
   const isEn = lang === 'en';
+  const [imageLightbox, setImageLightbox] = useState<LightboxState | null>(null);
   
   const [testData, setTestData] = useState<any>(() => {
      if (propTestData) return propTestData;
@@ -389,6 +391,10 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
             <section
               className="p-5 sm:p-8 md:p-10 md:overflow-y-auto custom-scrollbar border-b md:border-b-0 md:border-r border-slate-300 flex flex-col bg-white shrink-0"
               style={{ width: isDesktop ? `${leftWidth}%` : '100%' }}
+              onClick={(e) => {
+                const lb = extractLightboxFromClick(e, e.currentTarget);
+                if (lb) setImageLightbox(lb);
+              }}
             >
               <div className={`format-passage max-w-none leading-[1.7] text-slate-900 font-serif break-words ${fontSizeClass}`}>
                 
@@ -406,7 +412,17 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
                 )}
 
                 {currentTask.imageUrl && (
-                  <img src={currentTask.imageUrl} alt="Diagram" className="w-full max-w-[700px] h-auto mt-6 block rounded-xl border border-slate-200" />
+                  <div className="mt-6 relative group inline-block max-w-[700px] w-full">
+                    <img
+                      src={currentTask.imageUrl}
+                      alt="Diagram"
+                      title={isEn ? 'Click to enlarge diagram' : 'Bấm để phóng to biểu đồ'}
+                      className="w-full max-w-[700px] h-auto block rounded-xl border border-slate-200 cursor-zoom-in transition hover:shadow-md"
+                    />
+                    <span className="pointer-events-none absolute bottom-3 right-3 px-2.5 py-1 rounded-lg bg-slate-900/75 text-white text-[11px] font-sans font-bold opacity-0 group-hover:opacity-100 transition-opacity shadow">
+                      🔍 {isEn ? 'Click to zoom' : 'Bấm để phóng to'}
+                    </span>
+                  </div>
                 )}
 
               </div>
@@ -537,7 +553,13 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
       })()}
 
       {isSubmitted && aiResult && (
-        <main className="flex-1 overflow-y-auto p-4 md:p-8 custom-scrollbar bg-slate-50">
+        <main
+          className="flex-1 overflow-y-auto p-4 md:p-8 custom-scrollbar bg-slate-50"
+          onClick={(e) => {
+            const lb = extractLightboxFromClick(e, e.currentTarget);
+            if (lb) setImageLightbox(lb);
+          }}
+        >
           <div className="max-w-5xl mx-auto space-y-6">
             
             <div className="bg-gradient-to-br from-[#073b5c] via-[#0a5482] to-[#0f172a] p-7 sm:p-9 rounded-3xl shadow-xl border border-sky-400/20 text-white relative overflow-hidden">
@@ -592,6 +614,11 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
           </div>
         </main>
       )}
+      <ImageLightboxModal
+        items={imageLightbox?.items || null}
+        initialIndex={imageLightbox?.index ?? 0}
+        onClose={() => setImageLightbox(null)}
+      />
     </div>
   );
 }

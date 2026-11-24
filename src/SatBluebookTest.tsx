@@ -37,6 +37,7 @@ import katex from 'katex';
 import 'katex/dist/katex.min.css';
 import { supabase } from './supabase';
 import { useLmsLang, LmsLangToggle } from './utils/lmsI18n';
+import { ImageLightboxModal, LightboxState, extractLightboxFromClick } from './mcqImageUtils';
 
 // ============================================================================
 // TYPES — DIGITAL SAT BLUEBOOK SCHEMA (R&W + MATH)
@@ -588,6 +589,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
   const [leftPanePct, setLeftPanePct] = useState<number>(50);
   const [isDraggingDivider, setIsDraggingDivider] = useState<boolean>(false);
   const [showExitConfirm, setShowExitConfirm] = useState<boolean>(false);
+  const [imageLightbox, setImageLightbox] = useState<LightboxState | null>(null);
 
   // ---- REVIEW MODE FILTERS ----
   const [reviewFilter, setReviewFilter] = useState<'all' | 'incorrect' | 'flagged'>('all');
@@ -1204,6 +1206,22 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
     }
     onBack();
   };
+
+  const handleSatMediaClick = useCallback((e: React.MouseEvent<HTMLElement>) => {
+    const lb = extractLightboxFromClick(e, e.currentTarget, {
+      includeSvg: true,
+      svgContainerSelector: '.sat-zoomable-content',
+    });
+    if (lb) setImageLightbox(lb);
+  }, []);
+
+  const lightboxOverlay = (
+    <ImageLightboxModal
+      items={imageLightbox?.items || null}
+      initialIndex={imageLightbox?.index ?? 0}
+      onClose={() => setImageLightbox(null)}
+    />
+  );
 
   // Persistent Desmos Graphing Calculator + Official Reference Sheet Overlays
   const mathOverlays = isMathSection ? (
@@ -2026,7 +2044,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
             </button>
           </div>
         ) : (
-          <div className="flex-1 flex flex-col lg:flex-row overflow-hidden">
+          <div className="flex-1 flex flex-col lg:flex-row overflow-hidden" onClick={handleSatMediaClick}>
             {/* Left Stimulus Pane */}
             <div className="lg:w-1/2 h-1/2 lg:h-full overflow-y-auto p-5 sm:p-8 bg-white border-b lg:border-b-0 lg:border-r border-slate-200">
               <div className="max-w-2xl mx-auto">
@@ -2053,7 +2071,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
                 </div>
 
                 <div
-                  className={`sat-stimulus-prose ${isMathSection ? 'font-sans' : 'font-serif'} text-[16px] leading-[1.8] text-slate-900 space-y-4`}
+                  className={`sat-stimulus-prose sat-zoomable-content ${isMathSection ? 'font-sans' : 'font-serif'} text-[16px] leading-[1.8] text-slate-900 space-y-4`}
                   dangerouslySetInnerHTML={{ __html: renderHighlightedStimulusHtml(q.stimulusHtml, q.id) }}
                 />
               </div>
@@ -2119,7 +2137,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
 
                 {/* Question Stem */}
                 <div
-                  className="text-[15.5px] font-semibold text-slate-900 leading-relaxed"
+                  className="sat-zoomable-content text-[15.5px] font-semibold text-slate-900 leading-relaxed"
                   dangerouslySetInnerHTML={{ __html: renderMathHtml(q.questionHtml) }}
                 />
 
@@ -2250,6 +2268,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
           </div>
         )}
         {mathOverlays}
+        {lightboxOverlay}
       </div>
     );
   }
@@ -2635,7 +2654,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
 
       {/* === MAIN SPLIT-SCREEN WORKSPACE === */}
       {q && (
-        <div ref={workspaceRef} className="flex-1 flex flex-col lg:flex-row overflow-hidden relative">
+        <div ref={workspaceRef} onClick={handleSatMediaClick} className="flex-1 flex flex-col lg:flex-row overflow-hidden relative">
           {/* LEFT PANE: PASSAGE / DATA / DUAL-TEXT */}
           <div
             ref={stimulusRef}
@@ -2657,7 +2676,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
               .sat-stimulus-prose li { margin-bottom: 6px; }
             `}</style>
             <div
-              className={`sat-stimulus-prose max-w-2xl mx-auto ${isMathSection ? 'font-sans' : 'font-serif'} ${stimulusFontClass} leading-[1.85] text-slate-900 space-y-4`}
+              className={`sat-stimulus-prose sat-zoomable-content max-w-2xl mx-auto ${isMathSection ? 'font-sans' : 'font-serif'} ${stimulusFontClass} leading-[1.85] text-slate-900 space-y-4`}
               dangerouslySetInnerHTML={{ __html: renderHighlightedStimulusHtml(q.stimulusHtml, q.id) }}
             />
             {q.questionFormat === 'spr' && (
@@ -2750,7 +2769,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
 
               {/* Question Prompt */}
               <div
-                className={`${stimulusFontClass} font-medium text-slate-900 leading-relaxed select-text`}
+                className={`sat-zoomable-content ${stimulusFontClass} font-medium text-slate-900 leading-relaxed select-text`}
                 dangerouslySetInnerHTML={{ __html: renderMathHtml(q.questionHtml) }}
               />
 
@@ -3020,6 +3039,7 @@ export default function SatBluebookTest({ onBack, testData, onFinish }: SatBlueb
         </div>
       )}
       {mathOverlays}
+      {lightboxOverlay}
     </div>
   );
 }

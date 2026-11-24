@@ -3,6 +3,7 @@ import { Link, useParams, useNavigate } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import { useApp } from '../context/AppContext';
 import { unserializePhpIds, fixLegacyHtmlContent, encryptLegacyPass, resolveUploadUrl } from '../lib/utils';
+import { ImageLightboxModal, LightboxState, extractLightboxFromClick } from '../../mcqImageUtils';
 
 /* 1. LOGIN PAGE (/user/login) */
 export const LoginPage: React.FC = () => {
@@ -109,6 +110,7 @@ export const LecturePage: React.FC<{ isTrial?: boolean }> = ({ isTrial = false }
   const [showVocab, setShowVocab] = useState(false);
   const [showQuiz, setShowQuiz] = useState(false);
   const [mobileCateOpen, setMobileCateOpen] = useState(false);
+  const [lectureLightbox, setLectureLightbox] = useState<LightboxState | null>(null);
 
   useEffect(() => {
     if (!user) return;
@@ -363,7 +365,13 @@ export const LecturePage: React.FC<{ isTrial?: boolean }> = ({ isTrial = false }
               )}
             </div>
 
-            <div className="p-6 sm:p-8 space-y-6">
+            <div
+              className="p-6 sm:p-8 space-y-6 legacy-lecture-content"
+              onClick={(e) => {
+                const lb = extractLightboxFromClick(e, e.currentTarget);
+                if (lb) setLectureLightbox(lb);
+              }}
+            >
               {currentLecture ? (
                 <>
                   {currentPageContent ? (
@@ -551,6 +559,12 @@ export const LecturePage: React.FC<{ isTrial?: boolean }> = ({ isTrial = false }
           </div>
         </div>
       </div>
+
+      <ImageLightboxModal
+        items={lectureLightbox?.items || null}
+        initialIndex={lectureLightbox?.index ?? 0}
+        onClose={() => setLectureLightbox(null)}
+      />
     </div>
   );
 };

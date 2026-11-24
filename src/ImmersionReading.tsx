@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { ImageLightboxModal, LightboxState, extractLightboxFromClick } from './mcqImageUtils';
 
 export default function ImmersionReading({ onBack }: { onBack?: () => void }) {
   // States cho Từ điển (Nhấp đúp)
@@ -6,6 +7,7 @@ export default function ImmersionReading({ onBack }: { onBack?: () => void }) {
   
   // States cho Ghi chú/Highlight (Bôi đen)
   const [notePopup, setNotePopup] = useState<{ show: boolean, x: number, y: number, text: string }>({ show: false, x: 0, y: 0, text: '' });
+  const [imageLightbox, setImageLightbox] = useState<LightboxState | null>(null);
   
   // Mock dữ liệu 1 bài báo mẫu
   const article = {
@@ -136,7 +138,11 @@ export default function ImmersionReading({ onBack }: { onBack?: () => void }) {
             ref={containerRef}
             onDoubleClick={handleDoubleClick}
             onMouseUp={handleMouseUp}
-            className="text-[20px] leading-[1.9] text-[#2c3e50] tracking-wide [&>p]:mb-8 [&>p>strong]:font-black [&>p>strong]:text-black [&>p>em]:text-[#1e88e5] [&>p>em]:font-medium"
+            onClick={(e) => {
+              const lb = extractLightboxFromClick(e, e.currentTarget);
+              if (lb) setImageLightbox(lb);
+            }}
+            className="html-content-renderer text-[20px] leading-[1.9] text-[#2c3e50] tracking-wide [&>p]:mb-8 [&>p>strong]:font-black [&>p>strong]:text-black [&>p>em]:text-[#1e88e5] [&>p>em]:font-medium"
             dangerouslySetInnerHTML={{ __html: article.content }} 
           />
         </article>
@@ -207,6 +213,11 @@ export default function ImmersionReading({ onBack }: { onBack?: () => void }) {
         </div>
       )}
 
+      <ImageLightboxModal
+        items={imageLightbox?.items || null}
+        initialIndex={imageLightbox?.index ?? 0}
+        onClose={() => setImageLightbox(null)}
+      />
     </div>
   );
 }

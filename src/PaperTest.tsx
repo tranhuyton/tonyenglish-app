@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { supabase } from './supabase';
 import { useLmsLang, LmsLangToggle } from './utils/lmsI18n';
+import { ImageLightboxModal, LightboxState, extractLightboxFromClick } from './mcqImageUtils';
 import './tailwind.css';
 
 // --- CÁC HÀM LOGIC DÙNG CHUNG TỪ COMPUTER TEST ---
@@ -591,7 +592,14 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
     }
   };
 
+  const [imageLightbox, setImageLightbox] = useState<LightboxState | null>(null);
+
   const handleContentClick = (e: React.MouseEvent) => {
+    const lb = extractLightboxFromClick(e, containerRef.current || (e.currentTarget as HTMLElement));
+    if (lb) {
+      setImageLightbox(lb);
+      return;
+    }
     const target = e.target as HTMLElement;
     if (target.tagName === 'SPAN' && target.dataset.noteId) { 
         const rect = target.getBoundingClientRect();
@@ -2176,6 +2184,11 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
           </button>
         </div>
       </footer>
+      <ImageLightboxModal
+        items={imageLightbox?.items || null}
+        initialIndex={imageLightbox?.index ?? 0}
+        onClose={() => setImageLightbox(null)}
+      />
     </div>
   );
 }

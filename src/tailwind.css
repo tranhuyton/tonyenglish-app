@@ -281,12 +281,36 @@ b, strong { font-weight: bold !important; }
 }
 
 /* Images inside test content: clear, readable sizing without unwanted borders */
-.html-content-renderer img {
+.html-content-renderer img,
+.format-passage img,
+.sat-zoomable-content img,
+.legacy-lecture-content img {
   max-width: 100%;
   height: auto !important;
+  cursor: zoom-in;
+  transition: opacity 0.15s ease, outline-color 0.15s ease;
+}
+
+.html-content-renderer img {
   border: none !important;
   border-radius: 0 !important;
   box-shadow: none !important;
+}
+
+.html-content-renderer img:hover,
+.format-passage img:hover,
+.sat-zoomable-content img:hover,
+.legacy-lecture-content img:hover {
+  opacity: 0.94;
+}
+
+.sat-zoomable-content svg:not(.lucide):not(button svg) {
+  cursor: zoom-in;
+  transition: filter 0.15s ease;
+}
+
+.sat-zoomable-content svg:not(.lucide):not(button svg):hover {
+  filter: drop-shadow(0 4px 12px rgba(15, 23, 42, 0.12));
 }
 
 .mcq-cropped-img {

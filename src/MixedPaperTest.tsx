@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { supabase } from './supabase';
-import { normalizeHtmlImages, applySmartMcqImageSizing, scanContainerMcqImages, McqImageZoomModal } from './mcqImageUtils';
+import { normalizeHtmlImages, applySmartMcqImageSizing, scanContainerMcqImages, McqImageZoomModal, LightboxState, extractLightboxFromClick } from './mcqImageUtils';
 import { gradeAIQuestions, AIGradeResult } from './utils/aiGrader';
 import { useLmsLang, LmsLangToggle } from './utils/lmsI18n';
 import './tailwind.css';
@@ -197,7 +197,7 @@ export default function MixedPaperTest({ onBack, testData, onFinish }: { onBack:
   const [listeningWidth, setListeningWidth] = useState(850); 
   const containerRef = useRef<HTMLDivElement>(null);
   const leftPaneRef = useRef<HTMLDivElement>(null);
-  const [zoomImgSrc, setZoomImgSrc] = useState<string | null>(null);
+  const [zoomLightbox, setZoomLightbox] = useState<LightboxState | null>(null);
 
   useEffect(() => {
     const timer = window.setTimeout(() => {
@@ -712,13 +712,12 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
   };
 
   const handleContentClick = (e: React.MouseEvent) => {
-    const target = e.target as HTMLElement;
-    if (target?.tagName === 'IMG' && !target.closest('label')) {
-        const imgEl = target as HTMLImageElement;
-        const src = imgEl.currentSrc || imgEl.src;
-        if (src) setZoomImgSrc(src);
+    const lb = extractLightboxFromClick(e, containerRef.current || (e.currentTarget as HTMLElement));
+    if (lb) {
+        setZoomLightbox(lb);
         return;
     }
+    const target = e.target as HTMLElement;
     if (target.tagName === 'SPAN' && target.dataset.noteId) { 
         const rect = target.getBoundingClientRect();
         setStickyNote({ show: true, id: target.dataset.noteId, text: target.dataset.noteText || '', x: rect.left, y: rect.bottom + 10 }); 
@@ -2568,7 +2567,11 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
           </button>
         </div>
       </footer>
-      <McqImageZoomModal src={zoomImgSrc} onClose={() => setZoomImgSrc(null)} />
+      <McqImageZoomModal
+        items={zoomLightbox?.items || null}
+        initialIndex={zoomLightbox?.index ?? 0}
+        onClose={() => setZoomLightbox(null)}
+      />
     </div>
   );
 }

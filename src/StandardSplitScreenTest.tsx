@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef, useMemo, useCallback } from 'react'
 import { supabase } from './supabase';
 import { CustomAudioPlayer } from './CustomAudioPlayer';
 import { useTestGuideVideo, TestGuideVideoButton, TestGuideVideoPlayer, TestGuideVideoEditModal } from './TestGuideVideo';
-import { normalizeHtmlImages, applySmartMcqImageSizing, scanContainerMcqImages, McqImageZoomModal } from './mcqImageUtils';
+import { normalizeHtmlImages, applySmartMcqImageSizing, scanContainerMcqImages, McqImageZoomModal, LightboxState, extractLightboxFromClick } from './mcqImageUtils';
 import { useLmsLang, LmsLangToggle } from './utils/lmsI18n';
 import './tailwind.css';
 // =========================================================================================
@@ -377,7 +377,7 @@ export default function StandardSplitScreenTest({
   const containerRef = useRef<HTMLDivElement>(null);
   const leftPaneRef = useRef<HTMLDivElement>(null);
   const rightPaneRef = useRef<HTMLDivElement>(null);
-  const [zoomImgSrc, setZoomImgSrc] = useState<string | null>(null);
+  const [zoomLightbox, setZoomLightbox] = useState<LightboxState | null>(null);
 
   useEffect(() => {
     const timer = window.setTimeout(() => {
@@ -1480,12 +1480,8 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
           }}
           onClick={(e) => {
             if (showSettings) setShowSettings(false);
-            const target = e.target as HTMLElement;
-            if (target?.tagName === 'IMG' && !target.closest('label')) {
-              const imgEl = target as HTMLImageElement;
-              const src = imgEl.currentSrc || imgEl.src;
-              if (src) setZoomImgSrc(src);
-            }
+            const lb = extractLightboxFromClick(e, containerRef.current || (e.currentTarget as HTMLElement));
+            if (lb) setZoomLightbox(lb);
           }}
         >
           
@@ -3038,7 +3034,11 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
         </div>
       )}
 
-      <McqImageZoomModal src={zoomImgSrc} onClose={() => setZoomImgSrc(null)} />
+      <McqImageZoomModal
+        items={zoomLightbox?.items || null}
+        initialIndex={zoomLightbox?.index ?? 0}
+        onClose={() => setZoomLightbox(null)}
+      />
 
     </React.Fragment>
   );

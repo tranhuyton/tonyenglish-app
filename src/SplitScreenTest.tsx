@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { supabase } from './supabase';
 import { useTestGuideVideo, TestGuideVideoButton, TestGuideVideoPlayer, TestGuideVideoEditModal } from './TestGuideVideo';
 import { useLmsLang, LmsLangToggle } from './utils/lmsI18n';
+import { ImageLightboxModal, LightboxState, extractLightboxFromClick } from './mcqImageUtils';
 
 export default function SplitScreenTest({ onBack, onStartTest, testData: propTestData }: { onBack?: () => void, onStartTest?: any, testData?: any }) {
   const [lang, setLang] = useLmsLang();
@@ -13,6 +14,7 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
      return saved ? JSON.parse(saved) : null;
   });
   const [isLoading, setIsLoading] = useState(!testData);
+  const [imageLightbox, setImageLightbox] = useState<LightboxState | null>(null);
 
   // 🚀 NHẬN TÍN HIỆU TỪ STUDENT PORTAL XEM CÓ PHẢI LÀ CHẾ ĐỘ XEM LẠI LỊCH SỬ KHÔNG
   const initIsReview = !!testData?.isReview;
@@ -501,7 +503,13 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
                // Ưu tiên hiển thị text nếu đang xem Question Paper và có cấu hình text
                if (leftPdfView === 'question' && testData?.content_json?.basicInfo?.leftPaneType === 'text') {
                  return (
-                   <div className="w-full h-full bg-white overflow-y-auto p-6 sm:p-8 custom-scrollbar">
+                   <div
+                     className="w-full h-full bg-white overflow-y-auto p-6 sm:p-8 custom-scrollbar html-content-renderer"
+                     onClick={(e) => {
+                       const lb = extractLightboxFromClick(e, e.currentTarget);
+                       if (lb) setImageLightbox(lb);
+                     }}
+                   >
                      <div 
                        className="prose max-w-none prose-slate"
                        dangerouslySetInnerHTML={{ __html: testData.content_json.basicInfo.left_text_content || '' }}
@@ -575,7 +583,13 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
             testTitle={testData?.title}
           />
 
-          <div className={`flex-1 overflow-y-auto p-4 sm:p-5 ${isDragging ? 'pointer-events-none' : ''}`}>
+          <div
+            className={`flex-1 overflow-y-auto p-4 sm:p-5 ${isDragging ? 'pointer-events-none' : ''}`}
+            onClick={(e) => {
+              const lb = extractLightboxFromClick(e, e.currentTarget);
+              if (lb) setImageLightbox(lb);
+            }}
+          >
             
             {/* 1. NẾU ĐÃ CHẤM XONG HOẶC LÀ REVIEW MODE -> HIỂN THỊ KẾT QUẢ */}
             {gradeResult ? (
@@ -723,6 +737,11 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
         </div>
 
       </div>
+      <ImageLightboxModal
+        items={imageLightbox?.items || null}
+        initialIndex={imageLightbox?.index ?? 0}
+        onClose={() => setImageLightbox(null)}
+      />
     </div>
   );
 }

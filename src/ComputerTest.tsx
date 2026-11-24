@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { supabase } from './supabase';
 import { useLmsLang, LmsLangToggle } from './utils/lmsI18n';
+import { ImageLightboxModal, LightboxState, extractLightboxFromClick } from './mcqImageUtils';
 import './tailwind.css';
 
 const UserIcon = () => (
@@ -493,6 +494,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
 
   const [currentPartIndex, setCurrentPartIndex] = useState(0);
   const [showTranslation, setShowTranslation] = useState(false);
+  const [imageLightbox, setImageLightbox] = useState<LightboxState | null>(null);
 
   useEffect(() => {
     if (!isReviewMode) {
@@ -632,6 +634,11 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
   };
 
   const handleContentClick = (e: React.MouseEvent) => {
+    const lb = extractLightboxFromClick(e, containerRef.current || (e.currentTarget as HTMLElement));
+    if (lb) {
+      setImageLightbox(lb);
+      return;
+    }
     const target = e.target as HTMLElement;
     if (target.tagName === 'SPAN' && target.dataset.noteId) { 
         const rect = target.getBoundingClientRect();
@@ -2404,6 +2411,11 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
           </footer>
         </div>
       )}
+      <ImageLightboxModal
+        items={imageLightbox?.items || null}
+        initialIndex={imageLightbox?.index ?? 0}
+        onClose={() => setImageLightbox(null)}
+      />
     </React.Fragment>
   );
 }

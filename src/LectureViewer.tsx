@@ -9,6 +9,7 @@ import { Wt2PillarStudioModal, Wt2PillarReflexModal, Wt2StudioOpenPayload, norma
 import { Spk2LegoStudioModal, Spk2LegoStudioOpenPayload } from './Spk2LegoStudioModal';
 import { Wt1StudioModal, Wt1VocabBankModal, Wt1StudioOpenPayload } from './Wt1StudioModal';
 import { useLmsLang, LmsLangToggle, getLocalizedCourseTitle } from './utils/lmsI18n';
+import { ImageLightboxModal, LightboxState } from './mcqImageUtils';
 
 const LECTURE_MANIFEST_MAP: Record<string, string> = {
   '6286cb6f-b4ac-495b-b2ea-5a2bab09f764': '/audio/lectures/geography/1_1/manifest.json', // 1.1
@@ -1041,7 +1042,7 @@ const PdfVisionViewer = ({ url, onClose, onCallTutor }: { url: string, onClose: 
     </div>
   );
 };
-const StaticLectureContent = React.memo(({ html, isIframeOnly, fontScale = 100, onOpenPopup, onOpenDict, onCloseDict, onSwitchPage, onOpenTutorAI, onOpenCourseLibrary }: any) => {
+const StaticLectureContent = React.memo(({ html, isIframeOnly, fontScale = 100, onOpenPopup, onOpenDict, onCloseDict, onSwitchPage, onOpenTutorAI, onOpenCourseLibrary, onOpenImageLightbox }: any) => {
    const iframeRef = useRef<HTMLIFrameElement>(null);
    const [iframeHeight, setIframeHeight] = useState(600);
    const initialFontScaleRef = useRef<number>(fontScale || 100);
@@ -1720,11 +1721,22 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
         else if (e.data?.type === 'OPEN_COURSE_LIBRARY') {
           onOpenCourseLibrary?.();
         }
+        else if (e.data?.type === 'LECTURE_OPEN_IMAGE_LIGHTBOX') {
+          if (e.source && iframeRef.current?.contentWindow && e.source !== iframeRef.current.contentWindow) {
+            return;
+          }
+          if (Array.isArray(e.data.items) && e.data.items.length > 0) {
+            onOpenImageLightbox?.({
+              items: e.data.items,
+              index: typeof e.data.index === 'number' ? e.data.index : 0,
+            });
+          }
+        }
       };
       
       window.addEventListener('message', handleMessage);
       return () => window.removeEventListener('message', handleMessage);
-    }, [onOpenPopup, onOpenDict, onCloseDict, onSwitchPage, onOpenTutorAI, onOpenCourseLibrary, playBritishPronunciation, playBritishSentence, startRecordingSentence, stopRecordingAndEvaluate, stopAllCurrentAudio]);
+    }, [onOpenPopup, onOpenDict, onCloseDict, onSwitchPage, onOpenTutorAI, onOpenCourseLibrary, onOpenImageLightbox, playBritishPronunciation, playBritishSentence, startRecordingSentence, stopRecordingAndEvaluate, stopAllCurrentAudio]);
 
    const iframeContent = `
      <!DOCTYPE html>
@@ -1793,6 +1805,18 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
               height: auto; 
               display: block; 
               margin: 1.5rem auto; 
+          }
+          #content-wrapper img:not([data-no-lightbox]):not(.no-lightbox) {
+              cursor: zoom-in;
+              transition: opacity 0.18s ease, box-shadow 0.18s ease;
+          }
+          #content-wrapper img:not([data-no-lightbox]):not(.no-lightbox):hover {
+              opacity: 0.96;
+              box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+          }
+          button img, .btn-ai-trigger img, .btn-ielts-trigger img, .btn-live-trigger img, .audiolink img, .sentence-audio-card img {
+              cursor: pointer !important;
+              box-shadow: none !important;
           }
           iframe {
                width: 100% !important;
@@ -3171,6 +3195,66 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
                return false;
            }
 
+           // 2.5 Intercept lecture content images for zoomable Lightbox
+           var clickedImg = target && typeof target.closest === 'function' ? target.closest('img') : null;
+           if (clickedImg && !clickedImg.hasAttribute('data-no-lightbox') && !clickedImg.classList.contains('no-lightbox')) {
+               var isImgUrl = function(u) {
+                   var clean = String(u || '').split('?')[0].split('#')[0].toLowerCase();
+                   return clean.endsWith('.png') || clean.endsWith('.jpg') || clean.endsWith('.jpeg') || clean.endsWith('.gif') || clean.endsWith('.webp') || clean.endsWith('.svg') || clean.endsWith('.bmp') || clean.endsWith('.avif');
+               };
+               var insideInteractive = clickedImg.closest('button, .btn-ai-trigger, .btn-ielts-trigger, .btn-live-trigger, .btn-wt2-pillar-trigger, .btn-wt2-reflex-trigger, .btn-spk2-lego-trigger, .btn-wt1-studio-trigger, .btn-wt1-vocab-trigger, .btn-dialogue-play, .sentence-mic-btn');
+               var imgAnchor = clickedImg.closest('a[href]');
+               var anchorHref = imgAnchor ? (imgAnchor.getAttribute('href') || '').trim() : '';
+               var isNonImageLink = !!(imgAnchor && anchorHref && anchorHref !== '#' && !anchorHref.startsWith('javascript:') && !isImgUrl(anchorHref));
+               var imgRect = clickedImg.getBoundingClientRect();
+               var isTinyIcon = (imgRect.width > 0 && imgRect.width < 48 && imgRect.height > 0 && imgRect.height < 48) || (clickedImg.naturalWidth > 0 && clickedImg.naturalWidth < 60 && clickedImg.naturalHeight > 0 && clickedImg.naturalHeight < 60);
+               if (!insideInteractive && !isNonImageLink && !isTinyIcon) {
+                   var genericAlts = ['image', 'img', 'diagram', 'photo', 'picture', 'illustration', 'figure'];
+                   var getCap = function(el) {
+                       var fig = el.closest('figure');
+                       var fc = fig && fig.querySelector('figcaption') ? (fig.querySelector('figcaption').textContent || '').trim() : '';
+                       if (fc) return fc;
+                       var a = (el.getAttribute('alt') || '').trim();
+                       if (a && genericAlts.indexOf(a.toLowerCase()) === -1) return a;
+                       var ti = (el.getAttribute('title') || '').trim();
+                       if (ti && genericAlts.indexOf(ti.toLowerCase()) === -1) return ti;
+                       return '';
+                   };
+                   var wrap = document.getElementById('content-wrapper') || document.body;
+                   var allImgs = Array.prototype.slice.call(wrap.querySelectorAll('img'));
+                   var lbItems = [];
+                   var lbIndex = -1;
+                   for (var ii = 0; ii < allImgs.length; ii++) {
+                       var im = allImgs[ii];
+                       if (im.hasAttribute('data-no-lightbox') || im.classList.contains('no-lightbox')) continue;
+                       if (im.closest('button, .btn-ai-trigger, .btn-ielts-trigger, .btn-live-trigger, .btn-wt2-pillar-trigger, .btn-wt2-reflex-trigger, .btn-spk2-lego-trigger, .btn-wt1-studio-trigger, .btn-wt1-vocab-trigger, .btn-dialogue-play, .sentence-mic-btn')) continue;
+                       var ia = im.closest('a[href]');
+                       var iah = ia ? (ia.getAttribute('href') || '').trim() : '';
+                       if (ia && iah && iah !== '#' && !iah.startsWith('javascript:') && !isImgUrl(iah)) continue;
+                       var ir = im.getBoundingClientRect();
+                       if ((ir.width > 0 && ir.width < 48 && ir.height > 0 && ir.height < 48) || (im.naturalWidth > 0 && im.naturalWidth < 60 && im.naturalHeight > 0 && im.naturalHeight < 60)) continue;
+                       var isrc = im.currentSrc || im.src;
+                       if (!isrc) continue;
+                       if (im === clickedImg) lbIndex = lbItems.length;
+                       lbItems.push({ src: isrc, caption: getCap(im) });
+                   }
+                   if (lbIndex === -1) {
+                       var fallbackSrc = clickedImg.currentSrc || clickedImg.src;
+                       if (fallbackSrc) {
+                           lbItems = [{ src: fallbackSrc, caption: getCap(clickedImg) }];
+                           lbIndex = 0;
+                       }
+                   }
+                   if (lbItems.length > 0) {
+                       e.preventDefault();
+                       e.stopPropagation();
+                       e.stopImmediatePropagation();
+                       window.parent.postMessage({ type: 'LECTURE_OPEN_IMAGE_LIGHTBOX', items: lbItems, index: lbIndex }, '*');
+                       return false;
+                   }
+               }
+           }
+
            var anchor = target.closest('a');
            if (anchor && 
                anchor.hasAttribute('href') && 
@@ -3506,6 +3590,7 @@ export default function LectureViewer({
   const [isLoading, setIsLoading] = useState(true);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [popupUrl, setPopupUrl] = useState<string | null>(null);
+  const [lectureLightbox, setLectureLightbox] = useState<LightboxState | null>(null);
   
   // 🚀 MỚI: HỨNG ẢNH ĐƯỢC UP TỪ SIDEBAR ĐỂ HIỂN THỊ NỬA TRÁI MÀN HÌNH
   const [uploadedBoardImage, setUploadedBoardImage] = useState<string | null>(null);
@@ -3574,6 +3659,7 @@ export default function LectureViewer({
   useEffect(() => {
     lastReadPctRef.current = 0;
     setReadProgress(0);
+    setLectureLightbox(null);
   }, [activeLectureId, currentPage, currentCourseId]);
 
   useEffect(() => {
@@ -6403,6 +6489,7 @@ export default function LectureViewer({
                            }}
                            onOpenTutorAI={handleOpenTutorAI}
                            onOpenCourseLibrary={handleOpenCourseLibrary}
+                           onOpenImageLightbox={setLectureLightbox}
                        />
                     </div>
                   )}
@@ -6522,7 +6609,12 @@ export default function LectureViewer({
                                  ✕
                              </button>
                          </div>
-                         <img src={uploadedBoardImage} className="max-w-full max-h-full object-contain rounded-xl bg-white/5 min-h-0" />
+                         <img
+                           src={uploadedBoardImage}
+                           onClick={() => setLectureLightbox({ items: [{ src: uploadedBoardImage }], index: 0 })}
+                           title={isEn ? 'Click to zoom' : 'Bấm để phóng to'}
+                           className="max-w-full max-h-full object-contain rounded-xl bg-white/5 min-h-0 cursor-zoom-in"
+                         />
                      </div>
                  </div>
              )}
@@ -6902,6 +6994,12 @@ export default function LectureViewer({
           </div>
         </div>
       )}
+      {/* 🔍 IMAGE LIGHTBOX CHO HÌNH ẢNH TRONG BÀI GIẢNG */}
+      <ImageLightboxModal
+        items={lectureLightbox?.items || null}
+        initialIndex={lectureLightbox?.index ?? 0}
+        onClose={() => setLectureLightbox(null)}
+      />
     </div>
   );
 }
