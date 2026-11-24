@@ -19,6 +19,54 @@ const SUPABASE_GUIDE_BASE =
   'https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/videos/guides';
 
 export const COURSE_GUIDE_VIDEOS: Record<number, CourseGuideVideoConfig> = {
+  // 111: Giao tiếp Căn bản
+  111: {
+    videoUrl: `${SUPABASE_GUIDE_BASE}/comm-basic-guide-tonyenglish.mp4`,
+    posterUrl: '/images/course-showcases/comm_basic_guide_poster.webp',
+    duration: '01:44',
+    badgeVi: 'VIDEO HƯỚNG DẪN CHI TIẾT',
+    badgeEn: 'PLATFORM WALKTHROUGH VIDEO',
+    titleVi: 'Xem cách học Giao tiếp Căn bản: 44 âm IPA & Phản xạ AI trên TonyEnglish.vn',
+    titleEn: 'See How to Master Basic Communication (44 IPA & AI Reflex) on TonyEnglish.vn',
+    subtitleVi:
+      'Khám phá lộ trình chuẩn hóa 44 âm IPA kèm sơ đồ khẩu hình, 90 mẫu câu phản xạ có micro chấm phát âm AI, hội thoại nhập vai Podcast Shadowing, 102 đề nghe và Thầy Tony AI Chủ nhiệm.',
+    subtitleEn:
+      'Explore our 44-sound IPA chart with articulation guides, 90 reflex sentence patterns with AI pronunciation scoring, role-play dialogues, 102 listening tests, and Teacher Tony AI Coach.',
+    highlightsVi: [
+      '32 bài Phát âm 44 âm IPA & sơ đồ khẩu hình',
+      '90 mẫu câu Micro chấm AI & Nhập vai hội thoại',
+      '102 đề luyện nghe & Thầy Tony AI Chủ nhiệm',
+    ],
+    highlightsEn: [
+      '32 IPA pronunciation & articulation lessons',
+      '90 reflex patterns with AI mic scoring & role-play',
+      '102 listening drills & Teacher Tony AI Coach',
+    ],
+  },
+  // 129: Giao tiếp Nâng cao
+  129: {
+    videoUrl: `${SUPABASE_GUIDE_BASE}/comm-adv-guide-tonyenglish.mp4`,
+    posterUrl: '/images/course-showcases/comm_adv_guide_poster.webp',
+    duration: '01:46',
+    badgeVi: 'VIDEO HƯỚNG DẪN CHI TIẾT',
+    badgeEn: 'PLATFORM WALKTHROUGH VIDEO',
+    titleVi: 'Xem cách học Giao tiếp Nâng cao & Công sở (4 Học phần) trên TonyEnglish.vn',
+    titleEn: 'See How to Master Advanced & Business English (4 Modules) on TonyEnglish.vn',
+    subtitleVi:
+      'Trải nghiệm trọn bộ 52 bài Tiếng Anh Văn phòng (Learn by Heart), 150 Thành ngữ bản xứ, 60 mẫu Email chuẩn quốc tế chấm AI, 24 tình huống Phỏng vấn STAR (Mock Interview AI) và Thầy Tony AI Chủ nhiệm.',
+    subtitleEn:
+      'Experience 52 Office English lessons with Active Recall, 150 native idioms, 60 Business Email models with AI coaching, 24 STAR Job Interview scenarios with AI Mock Interviews, and Teacher Tony AI Coach.',
+    highlightsVi: [
+      '52 bài Văn phòng & 150 Thành ngữ Active Recall',
+      '60 mẫu Email & 24 Phỏng vấn STAR chấm AI 24/7',
+      'Thầy Tony AI Chủ nhiệm đồng bộ 4 học phần',
+    ],
+    highlightsEn: [
+      '52 Office lessons & 150 idioms with Active Recall',
+      '60 Email models & 24 STAR AI Mock Interviews',
+      'Teacher Tony AI Coach across all 4 modules',
+    ],
+  },
   // 132: Luyện thi IGCSE / A-Level cấp tốc
   132: {
     videoUrl: `${SUPABASE_GUIDE_BASE}/igcse-guide-tonyenglish.mp4`,
@@ -65,6 +113,30 @@ export const COURSE_GUIDE_VIDEOS: Record<number, CourseGuideVideoConfig> = {
       '79 strategy lectures & 621 IDP/BC tests',
       '4-criteria AI Writing & Speaking feedback',
       'Cambridge 1–21 Library & AI Study Coach',
+    ],
+  },
+  // 133: Luyện thi SAT cấp tốc
+  133: {
+    videoUrl: `${SUPABASE_GUIDE_BASE}/sat-guide-tonyenglish.mp4`,
+    posterUrl: '/images/course-showcases/sat_guide_poster.webp',
+    duration: '01:46',
+    badgeVi: 'VIDEO HƯỚNG DẪN CHI TIẾT',
+    badgeEn: 'PLATFORM WALKTHROUGH VIDEO',
+    titleVi: 'Xem cách luyện thi Digital SAT 1500+ trên Phòng thi Bluebook & Desmos',
+    titleEn: 'See How to Score 1500+ on Digital SAT with Our Bluebook & Desmos Simulator',
+    subtitleVi:
+      'Khám phá 36 bài giảng chiến thuật R&W 1500+ & Math Desmos 800, kho 64+ đề trên phòng thi giả lập chuẩn Bluebook College Board tích hợp máy tính đồ thị Desmos và Thầy Tony AI Chủ nhiệm.',
+    subtitleEn:
+      'Discover 36 targeted 1500+ R&W & Desmos 800 lectures, 64+ drills & mocks on an authentic Bluebook simulator with built-in Desmos Graphing Calculator, and Teacher Tony AI Coach.',
+    highlightsVi: [
+      '36 bài chiến thuật R&W & Math Desmos 800',
+      '64+ đề Phòng thi Bluebook tích hợp Desmos thật',
+      'Thầy Tony AI Chủ nhiệm soi lỗi Hard Module 2',
+    ],
+    highlightsEn: [
+      '36 R&W & Desmos 800 strategy lectures',
+      '64+ tests on Bluebook simulator with live Desmos',
+      'Teacher Tony AI Coach for Hard Module 2',
     ],
   },
 };
