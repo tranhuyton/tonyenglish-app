@@ -346,7 +346,11 @@ export const HomePage: React.FC = () => {
   });
 
   // Render a single modern news category card (supports default, horizontal 2-up, and compact 4-up layouts)
-  const renderNewsCateCard = (cate: any, variant: CardVariant = 'default') => {
+  const renderNewsCateCard = (
+    cate: any,
+    variant: CardVariant = 'default',
+    accent?: { badgeBg: string; linkText: string; titleHover: string }
+  ) => {
     const rawNewsItem = latestNewsByCate[cate.news_cc_id];
     if (!rawNewsItem) return null;
     const newsItem = getLocalizedArticle(rawNewsItem, lang);
@@ -356,6 +360,9 @@ export const HomePage: React.FC = () => {
     const articleUrl = `/news/view/${(newsItem.news_title_url || '').trim()}`;
     const rawTitle = (newsItem.news_title || '').trim();
     const thumbSrc = resolveUploadUrl(newsItem.news_thumb);
+    const badgeCls = accent?.badgeBg || 'bg-[#0a5482]/90 hover:bg-[#2ab4e8]';
+    const linkCls = accent?.linkText || 'text-[#0a5482] hover:text-[#2ab4e8]';
+    const titleHoverCls = accent?.titleHover || 'group-hover:text-[#0a5482]';
 
     if (variant === 'horizontal') {
       return (
@@ -380,7 +387,7 @@ export const HomePage: React.FC = () => {
             </Link>
             <Link
               to={cateUrl}
-              className="absolute top-3 left-3 bg-[#0a5482]/90 backdrop-blur-xs text-white text-[11px] font-extrabold px-3 py-1 rounded-full shadow-md hover:bg-[#2ab4e8] transition-colors"
+              className={`absolute top-3 left-3 ${badgeCls} backdrop-blur-xs text-white text-[11px] font-extrabold px-3 py-1 rounded-full shadow-md transition-colors`}
             >
               {cateTitle}
             </Link>
@@ -390,7 +397,7 @@ export const HomePage: React.FC = () => {
             <div>
               <Link
                 to={articleUrl}
-                className="font-extrabold text-[17px] text-slate-800 group-hover:text-[#0a5482] transition-colors line-clamp-2 leading-snug mb-2 block"
+                className={`font-extrabold text-[17px] text-slate-800 ${titleHoverCls} transition-colors line-clamp-2 leading-snug mb-2 block`}
               >
                 {rawTitle}
               </Link>
@@ -402,7 +409,7 @@ export const HomePage: React.FC = () => {
             <div className="pt-3.5 mt-4 border-t border-slate-100 flex items-center justify-between gap-2">
               <Link
                 to={cateUrl}
-                className="text-xs sm:text-sm font-extrabold text-[#0a5482] hover:text-[#2ab4e8] inline-flex items-center gap-1 transition-colors"
+                className={`text-xs sm:text-sm font-extrabold ${linkCls} inline-flex items-center gap-1 transition-colors`}
               >
                 <span>{t('Related Post')}</span>
                 <span>→</span>
@@ -443,7 +450,7 @@ export const HomePage: React.FC = () => {
           </Link>
           <Link
             to={cateUrl}
-            className="absolute top-3 left-3 max-w-[calc(100%-24px)] truncate bg-[#0a5482]/90 backdrop-blur-xs text-white text-[11px] font-extrabold px-2.5 py-1 rounded-full shadow-md hover:bg-[#2ab4e8] transition-colors"
+            className={`absolute top-3 left-3 max-w-[calc(100%-24px)] truncate ${badgeCls} backdrop-blur-xs text-white text-[11px] font-extrabold px-2.5 py-1 rounded-full shadow-md transition-colors`}
           >
             {cateTitle}
           </Link>
@@ -455,7 +462,7 @@ export const HomePage: React.FC = () => {
               to={articleUrl}
               className={`font-extrabold ${
                 isCompact ? 'text-[15.5px]' : 'text-[17px] sm:text-[18px]'
-              } text-slate-800 group-hover:text-[#0a5482] transition-colors line-clamp-2 leading-snug mb-2 block`}
+              } text-slate-800 ${titleHoverCls} transition-colors line-clamp-2 leading-snug mb-2 block`}
             >
               {rawTitle}
             </Link>
@@ -467,7 +474,7 @@ export const HomePage: React.FC = () => {
           <div className={`${isCompact ? 'pt-3 mt-3.5' : 'pt-4 mt-4'} border-t border-slate-100 flex items-center justify-between gap-2`}>
             <Link
               to={cateUrl}
-              className={`${isCompact ? 'text-xs' : 'text-sm'} font-extrabold text-[#0a5482] hover:text-[#2ab4e8] inline-flex items-center gap-1 transition-colors`}
+              className={`${isCompact ? 'text-xs' : 'text-sm'} font-extrabold ${linkCls} inline-flex items-center gap-1 transition-colors`}
             >
               <span>{t('Related Post')}</span>
               <span>→</span>
@@ -484,8 +491,19 @@ export const HomePage: React.FC = () => {
     );
   };
 
-  // Render a focus section with adaptive column count so there are never orphan cards or empty right columns
-  const renderCategorySection = (focusType: number, sectionTitleKey: string, icon: React.ReactNode) => {
+  // Render a focus section with adaptive column count & distinct category color identity
+  const renderCategorySection = (
+    focusType: number,
+    sectionTitleKey: string,
+    icon: React.ReactNode,
+    sectionAccent?: {
+      iconBox: string;
+      badgeBg: string;
+      linkText: string;
+      titleHover: string;
+      borderAccent: string;
+    }
+  ) => {
     const matchedCates = newsCategories.filter(
       (nc) => Number(nc.news_cc_focus) === focusType && !!latestNewsByCate[nc.news_cc_id]
     );
@@ -496,6 +514,13 @@ export const HomePage: React.FC = () => {
     const variant = getCardVariantForCount(totalCount);
     const gridClass = getBalancedGridClass(totalCount);
     const cards: React.ReactNode[] = [];
+    const accent = sectionAccent || {
+      iconBox: 'bg-sky-100 text-[#0a5482]',
+      badgeBg: 'bg-[#0a5482]/90 hover:bg-[#2ab4e8]',
+      linkText: 'text-[#0a5482] hover:text-[#2ab4e8]',
+      titleHover: 'group-hover:text-[#0a5482]',
+      borderAccent: 'border-slate-200',
+    };
 
     if (includeVideoEvent && videoEvent) {
       const vCateUrl = videoCateMap[videoEvent.vc_id]
@@ -541,7 +566,7 @@ export const HomePage: React.FC = () => {
                 to={vCateUrl}
                 className={`font-extrabold ${
                   isCompact ? 'text-[15.5px]' : 'text-[17px]'
-                } text-slate-800 group-hover:text-[#0a5482] transition-colors line-clamp-2 leading-snug mb-2 block`}
+                } text-slate-800 ${accent.titleHover} transition-colors line-clamp-2 leading-snug mb-2 block`}
               >
                 {truncateWords(videoEvent.video_desc, 120)}
               </Link>
@@ -552,7 +577,7 @@ export const HomePage: React.FC = () => {
             <div className={`${isCompact ? 'pt-3 mt-3.5' : 'pt-4 mt-4'} border-t border-slate-100`}>
               <Link
                 to={vCateUrl}
-                className={`${isCompact ? 'text-xs' : 'text-sm'} font-extrabold text-[#0a5482] hover:text-[#2ab4e8] inline-flex items-center gap-1`}
+                className={`${isCompact ? 'text-xs' : 'text-sm'} font-extrabold ${accent.linkText} inline-flex items-center gap-1`}
               >
                 <span>{t('Related Post')}</span>
                 <span>→</span>
@@ -564,7 +589,7 @@ export const HomePage: React.FC = () => {
     }
 
     matchedCates.forEach((nc) => {
-      const card = renderNewsCateCard(nc, variant);
+      const card = renderNewsCateCard(nc, variant, accent);
       if (card) cards.push(card);
     });
 
@@ -572,9 +597,9 @@ export const HomePage: React.FC = () => {
 
     return (
       <section className="space-y-5">
-        <div className="flex items-center justify-between gap-3 border-b border-slate-200 pb-3">
+        <div className={`flex items-center justify-between gap-3 border-b pb-3 ${accent.borderAccent}`}>
           <div className="flex items-center gap-2.5 min-w-0">
-            <span className="w-9 h-9 rounded-xl bg-sky-100 text-[#0a5482] flex items-center justify-center text-lg shadow-2xs shrink-0">
+            <span className={`w-9 h-9 rounded-xl flex items-center justify-center text-lg shadow-2xs shrink-0 ${accent.iconBox}`}>
               {icon}
             </span>
             <h2 className="text-lg sm:text-2xl font-black text-slate-800 tracking-tight leading-snug">
@@ -583,7 +608,7 @@ export const HomePage: React.FC = () => {
           </div>
           <Link
             to="/news"
-            className="text-xs sm:text-sm font-bold text-[#0a5482] hover:text-[#2ab4e8] transition-colors whitespace-nowrap shrink-0"
+            className={`text-xs sm:text-sm font-bold transition-colors whitespace-nowrap shrink-0 ${accent.linkText}`}
           >
             {lang === 'vi' ? 'Xem tất cả →' : 'View all →'}
           </Link>
@@ -915,23 +940,24 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* 1B. BENTO GRID: 4 TRỤ CỘT ĐÀO TẠO & HỆ SINH THÁI TONYENGLISH (True Seamless Overlap onto Hero) */}
+      {/* 1B. BENTO GRID: 4 TRỤ CỘT ĐÀO TẠO & HỆ SINH THÁI TONYENGLISH (Color-Synced with CoursesPage!) */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 -mt-8 sm:-mt-10 relative z-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {/* Card 1: Cambridge IGCSE — Emerald Green */}
           <Link
             to="/courses/luyen-thi-igcse-alevel-cap-toc"
-            className="bg-white hover:bg-sky-50/40 border border-slate-200/90 hover:border-[#2ab4e8] rounded-2xl p-5 shadow-md hover:shadow-soft hover:-translate-y-0.5 transition-all group flex flex-col justify-between"
+            className="bg-white hover:bg-emerald-50/40 border border-slate-200/90 border-t-[3px] border-t-emerald-500 hover:border-emerald-300 rounded-2xl p-5 shadow-md hover:shadow-soft hover:-translate-y-0.5 transition-all group flex flex-col justify-between"
           >
             <div>
               <div className="flex items-center justify-between mb-3">
-                <div className="w-10 h-10 rounded-xl bg-amber-50 border border-amber-200/80 text-amber-700 flex items-center justify-center group-hover:scale-105 transition-transform">
+                <div className="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-200/80 text-emerald-700 flex items-center justify-center group-hover:scale-105 transition-transform">
                   <Award className="w-5 h-5" />
                 </div>
-                <span className="text-[11px] font-extrabold uppercase tracking-wider text-amber-700 bg-amber-50 px-2.5 py-0.5 rounded-full border border-amber-200/70">
+                <span className="text-[11px] font-extrabold uppercase tracking-wider text-emerald-800 bg-emerald-100/80 px-2.5 py-0.5 rounded-full border border-emerald-200/80">
                   Cambridge IGCSE
                 </span>
               </div>
-              <h3 className="font-display font-extrabold text-[16px] text-slate-900 group-hover:text-[#0a5482] mb-1.5">
+              <h3 className="font-display font-extrabold text-[16px] text-slate-900 group-hover:text-emerald-700 mb-1.5">
                 {lang === 'vi' ? 'Hệ Quốc tế IGCSE (A/A*)' : 'Cambridge IGCSE Prep'}
               </h3>
               <p className="text-xs sm:text-[13px] text-slate-500 leading-relaxed">
@@ -940,26 +966,27 @@ export const HomePage: React.FC = () => {
                   : 'Bilingual syllabus notes, topical quizzes & Full HD past paper walkthroughs.'}
               </p>
             </div>
-            <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-extrabold text-[#0a5482]">
+            <div className="mt-4 pt-3 border-t border-emerald-100 flex items-center justify-between text-xs font-extrabold text-emerald-700">
               <span>{lang === 'vi' ? 'Xem các môn IGCSE' : 'Explore IGCSE'}</span>
               <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
             </div>
           </Link>
 
+          {/* Card 2: IELTS 1-on-1 — British Crimson Red */}
           <Link
             to="/courses/ielts"
-            className="bg-white hover:bg-sky-50/40 border border-slate-200/90 hover:border-[#2ab4e8] rounded-2xl p-5 shadow-md hover:shadow-soft hover:-translate-y-0.5 transition-all group flex flex-col justify-between"
+            className="bg-white hover:bg-rose-50/40 border border-slate-200/90 border-t-[3px] border-t-rose-500 hover:border-rose-300 rounded-2xl p-5 shadow-md hover:shadow-soft hover:-translate-y-0.5 transition-all group flex flex-col justify-between"
           >
             <div>
               <div className="flex items-center justify-between mb-3">
-                <div className="w-10 h-10 rounded-xl bg-sky-50 border border-sky-200/80 text-[#0a5482] flex items-center justify-center group-hover:scale-105 transition-transform">
+                <div className="w-10 h-10 rounded-xl bg-rose-50 border border-rose-200/80 text-rose-600 flex items-center justify-center group-hover:scale-105 transition-transform">
                   <Target className="w-5 h-5" />
                 </div>
-                <span className="text-[11px] font-extrabold uppercase tracking-wider text-[#0a5482] bg-sky-50 px-2.5 py-0.5 rounded-full border border-sky-200/70">
+                <span className="text-[11px] font-extrabold uppercase tracking-wider text-rose-700 bg-rose-100/80 px-2.5 py-0.5 rounded-full border border-rose-200/80">
                   Band 6.5 – 8.0+
                 </span>
               </div>
-              <h3 className="font-display font-extrabold text-[16px] text-slate-900 group-hover:text-[#0a5482] mb-1.5">
+              <h3 className="font-display font-extrabold text-[16px] text-slate-900 group-hover:text-rose-700 mb-1.5">
                 {lang === 'vi' ? 'Luyện thi IELTS 1 kèm 1' : '1-on-1 IELTS Coaching'}
               </h3>
               <p className="text-xs sm:text-[13px] text-slate-500 leading-relaxed">
@@ -968,26 +995,27 @@ export const HomePage: React.FC = () => {
                   : 'Personalized 4-skill roadmap with computer-delivered mock tests & AI grading.'}
               </p>
             </div>
-            <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-extrabold text-[#0a5482]">
+            <div className="mt-4 pt-3 border-t border-rose-100 flex items-center justify-between text-xs font-extrabold text-rose-700">
               <span>{lang === 'vi' ? 'Lộ trình IELTS' : 'IELTS Roadmap'}</span>
               <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
             </div>
           </Link>
 
+          {/* Card 3: Communication & Executive — Vibrant Amber Gold / Sky */}
           <Link
             to="/courses/english-communication%201"
-            className="bg-white hover:bg-sky-50/40 border border-slate-200/90 hover:border-[#2ab4e8] rounded-2xl p-5 shadow-md hover:shadow-soft hover:-translate-y-0.5 transition-all group flex flex-col justify-between"
+            className="bg-white hover:bg-amber-50/40 border border-slate-200/90 border-t-[3px] border-t-amber-500 hover:border-amber-300 rounded-2xl p-5 shadow-md hover:shadow-soft hover:-translate-y-0.5 transition-all group flex flex-col justify-between"
           >
             <div>
               <div className="flex items-center justify-between mb-3">
-                <div className="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-200/80 text-emerald-700 flex items-center justify-center group-hover:scale-105 transition-transform">
+                <div className="w-10 h-10 rounded-xl bg-amber-50 border border-amber-200/80 text-amber-700 flex items-center justify-center group-hover:scale-105 transition-transform">
                   <MessageCircle className="w-5 h-5" />
                 </div>
-                <span className="text-[11px] font-extrabold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200/70">
+                <span className="text-[11px] font-extrabold uppercase tracking-wider text-amber-800 bg-amber-100/80 px-2.5 py-0.5 rounded-full border border-amber-200/80">
                   1-on-1 VIP
                 </span>
               </div>
-              <h3 className="font-display font-extrabold text-[16px] text-slate-900 group-hover:text-[#0a5482] mb-1.5">
+              <h3 className="font-display font-extrabold text-[16px] text-slate-900 group-hover:text-amber-700 mb-1.5">
                 {lang === 'vi' ? 'Giao tiếp & Phản xạ Công sở' : 'Executive Communication'}
               </h3>
               <p className="text-xs sm:text-[13px] text-slate-500 leading-relaxed">
@@ -996,36 +1024,38 @@ export const HomePage: React.FC = () => {
                   : 'IPA pronunciation mastery, bilingual shadowing podcasts & AI reflex speaking.'}
               </p>
             </div>
-            <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-extrabold text-[#0a5482]">
+            <div className="mt-4 pt-3 border-t border-amber-100 flex items-center justify-between text-xs font-extrabold text-amber-700">
               <span>{lang === 'vi' ? 'Khám phá khóa học' : 'View Courses'}</span>
               <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
             </div>
           </Link>
 
+          {/* Card 4: Student Portal & AI Lab — Vibrant Royal Blue -> Teal + Tri-Color Top Ribbon */}
           <button
             type="button"
             onClick={() => window.dispatchEvent(new CustomEvent('tony-open-lms'))}
-            className="bg-gradient-to-br from-[#0a5482] to-[#0f172a] text-white rounded-2xl p-5 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all group text-left flex flex-col justify-between cursor-pointer border border-sky-400/25"
+            className="relative overflow-hidden bg-gradient-to-br from-[#0369a1] via-[#0a5482] to-[#0f766e] text-white rounded-2xl p-5 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all group text-left flex flex-col justify-between cursor-pointer border border-sky-300/30"
           >
+            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-rose-500 via-amber-400 to-emerald-400" />
             <div>
-              <div className="flex items-center justify-between mb-3">
-                <div className="w-10 h-10 rounded-xl bg-[#2ab4e8] text-white flex items-center justify-center group-hover:scale-105 transition-transform shadow-sm">
+              <div className="flex items-center justify-between mb-3 pt-0.5">
+                <div className="w-10 h-10 rounded-xl bg-amber-400 text-slate-950 flex items-center justify-center group-hover:scale-105 transition-transform shadow-sm">
                   <Bot className="w-5 h-5" />
                 </div>
-                <span className="text-[11px] font-extrabold uppercase tracking-wider text-amber-300 bg-white/10 px-2.5 py-0.5 rounded-full border border-white/15">
+                <span className="text-[11px] font-extrabold uppercase tracking-wider text-amber-200 bg-white/15 px-2.5 py-0.5 rounded-full border border-amber-200/35">
                   Smart LMS
                 </span>
               </div>
               <h3 className="font-display font-extrabold text-[16px] text-white mb-1.5">
                 {lang === 'vi' ? 'Góc Học Viên & Phòng Thi AI' : 'Student Portal & AI Lab'}
               </h3>
-              <p className="text-xs sm:text-[13px] text-sky-100/85 leading-relaxed">
+              <p className="text-xs sm:text-[13px] text-sky-50/90 leading-relaxed">
                 {lang === 'vi'
                   ? 'Lịch báo bài cá nhân, Bảng công việc hàng ngày, Kho đề Past Papers & Trợ lý Thầy Tony AI 24/7.'
                   : 'Personal study calendar, daily taskboard, past papers & 24/7 AI Study Coach.'}
               </p>
             </div>
-            <div className="mt-4 pt-3 border-t border-white/15 flex items-center justify-between text-xs font-extrabold text-[#2ab4e8]">
+            <div className="mt-4 pt-3 border-t border-white/15 flex items-center justify-between text-xs font-extrabold text-amber-300">
               <span>{lang === 'vi' ? 'Truy cập Góc Học Viên' : 'Open Student Portal'}</span>
               <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
             </div>
@@ -1039,9 +1069,9 @@ export const HomePage: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-7 lg:gap-8 items-stretch">
           {/* LEFT COLUMN (8 cols): FOCUS ON */}
           <section className="lg:col-span-8 flex flex-col space-y-5">
-            <div className="flex items-center justify-between gap-3 border-b border-slate-200 pb-3">
+            <div className="flex items-center justify-between gap-3 border-b border-rose-200/80 pb-3">
               <div className="flex items-center gap-2.5 min-w-0">
-                <span className="w-9 h-9 rounded-xl bg-sky-100 text-[#0a5482] flex items-center justify-center shadow-2xs shrink-0">
+                <span className="w-9 h-9 rounded-xl bg-rose-100 text-rose-700 flex items-center justify-center shadow-2xs shrink-0">
                   <Sparkles className="w-4 h-4" />
                 </span>
                 <h2 className="text-lg sm:text-2xl font-black text-slate-800 tracking-tight leading-snug">
@@ -1050,7 +1080,7 @@ export const HomePage: React.FC = () => {
               </div>
               <Link
                 to="/news"
-                className="text-xs sm:text-sm font-bold text-[#0a5482] hover:text-[#2ab4e8] transition-colors whitespace-nowrap shrink-0"
+                className="text-xs sm:text-sm font-bold text-rose-700 hover:text-rose-600 transition-colors whitespace-nowrap shrink-0"
               >
                 {lang === 'vi' ? 'Khám phá Thư viện →' : 'Explore Library →'}
               </Link>
@@ -1227,10 +1257,11 @@ export const HomePage: React.FC = () => {
               </Link>
             </div>
 
-            <div className="bg-white rounded-2xl border border-slate-200/80 shadow-xs overflow-hidden flex flex-col flex-1">
-              <div className="bg-gradient-to-r from-[#0a5482] to-[#0f172a] px-5 py-3.5 text-white">
-                <div className="flex items-center gap-2 text-[11px] font-extrabold uppercase tracking-wider text-emerald-300 mb-1">
-                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+            <div className="bg-white rounded-2xl border border-emerald-200/90 shadow-xs overflow-hidden flex flex-col flex-1">
+              <div className="h-1 w-full bg-gradient-to-r from-rose-500 via-amber-400 to-emerald-500" />
+              <div className="bg-gradient-to-r from-[#059669] via-[#047857] to-[#065f46] px-5 py-3.5 text-white">
+                <div className="flex items-center gap-2 text-[11px] font-extrabold uppercase tracking-wider text-amber-200 mb-1">
+                  <span className="w-2 h-2 rounded-full bg-amber-300 animate-ping" />
                   <span>{lang === 'vi' ? 'Đang nhận học viên 1 kèm 1' : 'Open for 1-on-1 Enrollment'}</span>
                 </div>
                 <p className="text-[13.5px] font-bold text-white/95 leading-snug">
@@ -1243,7 +1274,7 @@ export const HomePage: React.FC = () => {
               <div className="p-5 flex-1 flex flex-col justify-between gap-4">
                 <ol className="space-y-3.5">
                   <li className="flex items-start gap-3">
-                    <span className="w-7 h-7 rounded-xl bg-sky-50 border border-sky-200 text-[#0a5482] font-black text-xs flex items-center justify-center shrink-0 mt-0.5">
+                    <span className="w-7 h-7 rounded-xl bg-rose-50 border border-rose-200 text-rose-700 font-black text-xs flex items-center justify-center shrink-0 mt-0.5">
                       01
                     </span>
                     <div className="min-w-0">
@@ -1297,17 +1328,17 @@ export const HomePage: React.FC = () => {
                     target="_blank"
                     rel="noreferrer"
                     onClick={() => trackUnifiedContact('Zalo', 'HomePage_Sidebar_Consult')}
-                    className="bg-[#0a5482] hover:bg-[#084266] text-white font-extrabold text-xs px-3 py-2.5 rounded-xl transition inline-flex items-center justify-center gap-1.5 shadow-xs whitespace-nowrap"
+                    className="bg-[#0068ff] hover:bg-[#0057d6] text-white font-extrabold text-xs px-3 py-2.5 rounded-xl transition inline-flex items-center justify-center gap-1.5 shadow-xs whitespace-nowrap"
                   >
-                    <MessageCircle className="w-3.5 h-3.5 text-[#2ab4e8] shrink-0" />
+                    <MessageCircle className="w-3.5 h-3.5 shrink-0" />
                     <span>{lang === 'vi' ? 'Nhắn Zalo tư vấn' : 'Zalo Consult'}</span>
                   </a>
                   <button
                     type="button"
                     onClick={() => window.dispatchEvent(new CustomEvent('tony-open-lms', { detail: 'register' }))}
-                    className="bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200/90 font-extrabold text-xs px-3 py-2.5 rounded-xl transition inline-flex items-center justify-center gap-1.5 cursor-pointer whitespace-nowrap"
+                    className="bg-rose-600 hover:bg-rose-700 text-white font-extrabold text-xs px-3 py-2.5 rounded-xl transition inline-flex items-center justify-center gap-1.5 cursor-pointer shadow-xs whitespace-nowrap"
                   >
-                    <Sparkles className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+                    <Sparkles className="w-3.5 h-3.5 text-amber-300 shrink-0" />
                     <span>{lang === 'vi' ? 'Học thử miễn phí' : 'Free Trial'}</span>
                   </button>
                 </div>
@@ -1420,23 +1451,41 @@ export const HomePage: React.FC = () => {
           </section>
         )}
 
-        {/* 4. FULL-WIDTH MAGAZINE SECTIONS (Adaptive 2-up Horizontal / 4-up Compact / 3-up — Zero Orphan Slots) */}
+        {/* 4. FULL-WIDTH MAGAZINE SECTIONS (Color-Coded Per Topic — Zero Monotone Walls) */}
         <div className="space-y-12 sm:space-y-14">
-          {/* SECTION 2: READING PRACTICE (focus = 5) */}
-          {renderCategorySection(5, 'Reading Practice', <BookOpen className="w-4 h-4" />)}
+          {/* SECTION 2: READING PRACTICE (focus = 5) — Emerald Green */}
+          {renderCategorySection(5, 'Reading Practice', <BookOpen className="w-4 h-4" />, {
+            iconBox: 'bg-emerald-100 text-emerald-700',
+            badgeBg: 'bg-emerald-600/95 hover:bg-emerald-500',
+            linkText: 'text-emerald-700 hover:text-emerald-600',
+            titleHover: 'group-hover:text-emerald-700',
+            borderAccent: 'border-emerald-200/80',
+          })}
 
-          {/* SECTION 3: LEARNING THROUGH CONVERSATION (focus = 4) */}
-          {renderCategorySection(4, 'Learning Through Conversation', <MessageCircle className="w-4 h-4" />)}
+          {/* SECTION 3: LEARNING THROUGH CONVERSATION (focus = 4) — Warm Amber Gold */}
+          {renderCategorySection(4, 'Learning Through Conversation', <MessageCircle className="w-4 h-4" />, {
+            iconBox: 'bg-amber-100 text-amber-700',
+            badgeBg: 'bg-amber-600/95 hover:bg-amber-500',
+            linkText: 'text-amber-700 hover:text-amber-600',
+            titleHover: 'group-hover:text-amber-700',
+            borderAccent: 'border-amber-200/80',
+          })}
 
-          {/* SECTION 4: WORDS IN THE NEWS (focus = 1) */}
-          {renderCategorySection(1, 'Words In The news', <Globe className="w-4 h-4" />)}
+          {/* SECTION 4: WORDS IN THE NEWS (focus = 1) — Crimson Red */}
+          {renderCategorySection(1, 'Words In The news', <Globe className="w-4 h-4" />, {
+            iconBox: 'bg-rose-100 text-rose-700',
+            badgeBg: 'bg-rose-600/95 hover:bg-rose-500',
+            linkText: 'text-rose-700 hover:text-rose-600',
+            titleHover: 'group-hover:text-rose-700',
+            borderAccent: 'border-rose-200/80',
+          })}
 
-          {/* SECTION 5: VIDEOS STORE */}
+          {/* SECTION 5: VIDEOS STORE — Cinema Ruby Red */}
           {featuredVideoParents.length > 0 && (
             <section className="space-y-5">
-              <div className="flex items-center justify-between gap-3 border-b border-slate-200 pb-3">
+              <div className="flex items-center justify-between gap-3 border-b border-rose-200/80 pb-3">
                 <div className="flex items-center gap-2.5 min-w-0">
-                  <span className="w-9 h-9 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center shadow-2xs shrink-0">
+                  <span className="w-9 h-9 rounded-xl bg-rose-100 text-rose-700 flex items-center justify-center shadow-2xs shrink-0">
                     <Video className="w-4 h-4" />
                   </span>
                   <h2 className="text-lg sm:text-2xl font-black text-slate-800 tracking-tight leading-snug">
@@ -1445,7 +1494,7 @@ export const HomePage: React.FC = () => {
                 </div>
                 <Link
                   to="/videos"
-                  className="text-xs sm:text-sm font-bold text-[#0a5482] hover:text-[#2ab4e8] transition-colors whitespace-nowrap shrink-0"
+                  className="text-xs sm:text-sm font-bold text-rose-700 hover:text-rose-600 transition-colors whitespace-nowrap shrink-0"
                 >
                   {lang === 'vi' ? 'Xem Kho Video →' : 'All Videos →'}
                 </Link>
@@ -1502,12 +1551,12 @@ export const HomePage: React.FC = () => {
                             />
                           )}
                           <div className="absolute inset-0 bg-gradient-to-t from-slate-900/55 via-transparent to-transparent flex items-center justify-center">
-                            <span className="w-11 h-11 rounded-full bg-white/95 text-[#0a5482] flex items-center justify-center text-base shadow-lg group-hover:scale-110 transition-transform">
+                            <span className="w-11 h-11 rounded-full bg-white/95 text-rose-600 group-hover:bg-rose-600 group-hover:text-white flex items-center justify-center text-base shadow-lg group-hover:scale-110 transition-all">
                               ▶
                             </span>
                           </div>
                         </Link>
-                        <span className="absolute top-3 left-3 max-w-[calc(100%-24px)] truncate bg-[#0a5482]/90 backdrop-blur-xs text-white text-[11px] font-extrabold px-2.5 py-1 rounded-full shadow-md">
+                        <span className="absolute top-3 left-3 max-w-[calc(100%-24px)] truncate bg-rose-600/95 backdrop-blur-xs text-white text-[11px] font-extrabold px-2.5 py-1 rounded-full shadow-md">
                           {parentTitle}
                         </span>
                       </div>
@@ -1518,7 +1567,7 @@ export const HomePage: React.FC = () => {
                             to={targetUrl}
                             className={`font-extrabold ${
                               isCompact ? 'text-[15.5px] min-h-[2.6rem]' : 'text-[17px] sm:text-[18px] min-h-[3rem]'
-                            } text-slate-800 group-hover:text-[#0a5482] transition-colors line-clamp-2 leading-snug mb-2 block`}
+                            } text-slate-800 group-hover:text-rose-700 transition-colors line-clamp-2 leading-snug mb-2 block`}
                           >
                             {subTitle}
                           </Link>
@@ -1534,7 +1583,7 @@ export const HomePage: React.FC = () => {
                         <div className={`${isCompact ? 'pt-3 mt-3.5' : 'pt-4 mt-4'} border-t border-slate-100`}>
                           <Link
                             to={targetUrl}
-                            className={`${isCompact ? 'text-xs' : 'text-sm'} font-extrabold text-[#0a5482] hover:text-[#2ab4e8] inline-flex items-center gap-1`}
+                            className={`${isCompact ? 'text-xs' : 'text-sm'} font-extrabold text-rose-700 hover:text-rose-600 inline-flex items-center gap-1`}
                           >
                             <span>{t('Related Post')}</span>
                             <span>→</span>
@@ -1548,13 +1597,21 @@ export const HomePage: React.FC = () => {
             </section>
           )}
 
-          {/* SECTION 6: OTHER LEARNING MATERIALS (focus = 3) */}
-          {renderCategorySection(3, 'Other learning materials', <Layers className="w-4 h-4" />)}
+          {/* SECTION 6: OTHER LEARNING MATERIALS (focus = 3) — Royal Indigo */}
+          {renderCategorySection(3, 'Other learning materials', <Layers className="w-4 h-4" />, {
+            iconBox: 'bg-indigo-100 text-indigo-700',
+            badgeBg: 'bg-indigo-600/95 hover:bg-indigo-500',
+            linkText: 'text-indigo-700 hover:text-indigo-600',
+            titleHover: 'group-hover:text-indigo-700',
+            borderAccent: 'border-indigo-200/80',
+          })}
         </div>
 
         {/* 5. FINAL CONVERSION CTA BANNER BEFORE FOOTER */}
-        <section className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-[#06283d] via-[#0a5482] to-[#0f172a] text-white p-6 sm:p-8 lg:p-10 shadow-xl border border-sky-400/20">
-          <div className="absolute -top-24 -right-24 w-72 h-72 bg-[#2ab4e8]/20 blur-3xl rounded-full pointer-events-none" />
+        <section className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-[#0369a1] via-[#0a5482] to-[#0f766e] text-white p-6 sm:p-8 lg:p-10 shadow-xl border border-sky-300/25">
+          <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-rose-500 via-amber-400 to-emerald-400" />
+          <div className="absolute -top-24 -right-24 w-72 h-72 bg-amber-300/20 blur-3xl rounded-full pointer-events-none" />
+          <div className="absolute -bottom-24 left-1/4 w-64 h-64 bg-rose-400/15 blur-3xl rounded-full pointer-events-none" />
           <div className="relative z-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
             <div className="space-y-2 max-w-2xl">
               <div className="inline-flex items-center gap-1.5 text-[11px] font-extrabold uppercase tracking-wider text-amber-300 bg-white/10 border border-white/15 px-3 py-1 rounded-full">

@@ -477,13 +477,53 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
 
         {/* RIGHT MAIN CONTENT */}
         <div className="flex-1 min-w-0 w-full space-y-6">
+          {(() => {
+            const vKey = `${activeCate?.vc_name_url || ''} ${activeCate?.vc_name || ''} ${activeCate?.vc_name_vi || ''}`.toLowerCase();
+            const isDiscovery =
+              Boolean(activeCate) &&
+              (vKey.includes('ted') ||
+                vKey.includes('science') ||
+                vKey.includes('khoa học') ||
+                vKey.includes('discovery') ||
+                vKey.includes('khám phá') ||
+                vKey.includes('documentary') ||
+                vKey.includes('finance') ||
+                vKey.includes('business') ||
+                vKey.includes('kinh'));
+            const vHeader = isDiscovery
+              ? {
+                  stripe: 'from-amber-400 via-emerald-400 to-indigo-400',
+                  bg: 'from-[#4f46e5] via-[#4338ca] to-[#0f766e]',
+                  orb1: 'bg-amber-300/25',
+                  orb2: 'bg-teal-300/25',
+                }
+              : {
+                  stripe: 'from-amber-400 via-rose-500 to-fuchsia-500',
+                  bg: 'from-[#be123c] via-[#9f1239] to-[#312e81]',
+                  orb1: 'bg-amber-300/30',
+                  orb2: 'bg-rose-400/25',
+                };
+            const cardAccents = [
+              { pill: 'bg-rose-50 text-rose-700 border-rose-200/80', hoverText: 'group-hover:text-rose-700', arrow: 'text-rose-500' },
+              { pill: 'bg-emerald-50 text-emerald-700 border-emerald-200/80', hoverText: 'group-hover:text-emerald-700', arrow: 'text-emerald-500' },
+              { pill: 'bg-amber-50 text-amber-800 border-amber-200/80', hoverText: 'group-hover:text-amber-700', arrow: 'text-amber-500' },
+              { pill: 'bg-indigo-50 text-indigo-700 border-indigo-200/80', hoverText: 'group-hover:text-indigo-700', arrow: 'text-indigo-500' },
+            ];
+            return (
           <div className="bg-white rounded-2xl sm:rounded-3xl border border-slate-200/90 shadow-sm overflow-hidden">
-            {/* Header */}
-            <div className="bg-gradient-to-r from-[#0a5482] to-[#0f172a] px-4 sm:px-8 py-4 sm:py-6 text-white">
-              <div className="text-[11px] sm:text-sm font-extrabold uppercase tracking-widest text-[#2ab4e8] mb-0.5 sm:mb-1">
-                TonyEnglish Video Channel
+            {/* Vibrant Cinema Top Ribbon */}
+            <div className={`h-1.5 w-full bg-gradient-to-r ${vHeader.stripe}`} />
+            {/* Cinema Header */}
+            <div className={`relative overflow-hidden bg-gradient-to-r ${vHeader.bg} px-4 sm:px-8 py-4 sm:py-6 text-white`}>
+              <div className={`pointer-events-none absolute -top-12 -right-10 w-48 h-48 rounded-full blur-3xl ${vHeader.orb1}`} />
+              <div className={`pointer-events-none absolute -bottom-12 left-1/3 w-40 h-40 rounded-full blur-3xl ${vHeader.orb2}`} />
+              <div className="relative z-10">
+                <div className="inline-flex items-center gap-1.5 text-[10.5px] sm:text-xs font-extrabold uppercase tracking-widest text-amber-100 bg-amber-400/20 border border-amber-200/40 px-2.5 py-0.5 rounded-full mb-1.5">
+                  <span>🎬</span>
+                  <span>TonyEnglish Video Channel</span>
+                </div>
+                <h1 className="text-xl sm:text-3xl font-black tracking-tight">{mainHeading}</h1>
               </div>
-              <h1 className="text-xl sm:text-3xl font-black tracking-tight">{mainHeading}</h1>
             </div>
 
             <div className="p-4 sm:p-8">
@@ -512,12 +552,13 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
                       ? `/video/${(sub.vc_name_url || '').trim()}`
                       : `/videos/${(sub.vc_name_url || '').trim()}`;
                     const isBentoLead = subCatesToDisplay.length === 5 && sIdx === 0;
+                    const cAccent = cardAccents[sIdx % cardAccents.length];
 
                     return (
                       <Link
                         key={sub.vc_id}
                         to={targetRoute}
-                        className={`group bg-white rounded-2xl border border-slate-200/80 overflow-hidden shadow-2xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col ${
+                        className={`group bg-white rounded-2xl border border-slate-200/80 hover:border-rose-200 overflow-hidden shadow-2xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col ${
                           isBentoLead ? 'sm:col-span-2' : ''
                         }`}
                       >
@@ -534,20 +575,20 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 brightness-105"
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 via-transparent to-transparent pointer-events-none" />
-                          <span className="absolute bottom-3 right-3 w-10 h-10 rounded-full bg-white/95 text-[#0a5482] flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:bg-[#2ab4e8] group-hover:text-white transition-all">
+                          <span className="absolute bottom-3 right-3 w-10 h-10 rounded-full bg-white/95 text-rose-600 flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:bg-rose-600 group-hover:text-white transition-all">
                             <Play className="w-4 h-4 fill-current ml-0.5" />
                           </span>
                         </div>
                         <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between gap-2.5">
                           <div className="flex items-start justify-between gap-2">
-                            <h3 className="font-extrabold text-[15px] sm:text-base text-slate-800 group-hover:text-[#0a5482] line-clamp-2 leading-snug">
+                            <h3 className={`font-extrabold text-[15px] sm:text-base text-slate-800 ${cAccent.hoverText} line-clamp-2 leading-snug transition-colors`}>
                               {subTitle}
                             </h3>
-                            <ArrowRight className="w-4 h-4 text-[#2ab4e8] shrink-0 mt-0.5 group-hover:translate-x-0.5 transition-transform" />
+                            <ArrowRight className={`w-4 h-4 ${cAccent.arrow} shrink-0 mt-0.5 group-hover:translate-x-0.5 transition-transform`} />
                           </div>
                           {childVideos.length > 0 && (
                             <div className="flex items-center gap-1.5">
-                              <span className="inline-flex items-center gap-1 bg-sky-50 text-[#0a5482] border border-sky-200/80 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">
+                              <span className={`inline-flex items-center gap-1 border text-[11px] font-extrabold px-2.5 py-0.5 rounded-full ${cAccent.pill}`}>
                                 <Film className="w-3 h-3" />
                                 <span>{childVideos.length} {lang === 'vi' ? 'chủ đề' : 'topics'}</span>
                               </span>
@@ -797,12 +838,14 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
               )}
             </div>
           </div>
+            );
+          })()}
 
           {/* SEPARATE AIRY BLOCK FOR VIDEO LIST IN THIS CATEGORY */}
           {mode !== 'cate' && videosInCate.length > 1 && (
-            <div className="bg-white/70 rounded-2xl border border-slate-200/60 px-6 py-5 sm:px-8 sm:py-6">
-              <h3 className="text-xs sm:text-[13px] font-bold uppercase tracking-widest text-slate-400 mb-4 flex items-center gap-2">
-                <Film className="w-4 h-4 opacity-70 text-[#0a5482]" />
+            <div className="bg-white/90 rounded-2xl border border-rose-200/60 px-6 py-5 sm:px-8 sm:py-6">
+              <h3 className="text-xs sm:text-[13px] font-extrabold uppercase tracking-widest text-rose-700 mb-4 flex items-center gap-2">
+                <Film className="w-4 h-4 text-rose-600" />
                 <span>{t('Video List')}</span>
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -814,7 +857,7 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
                       <Link
                         key={vd.video_id}
                         to={`/video/${cleanCateParam}/${(vd.video_url || '').trim()}`}
-                        className="group bg-white/80 hover:bg-white rounded-2xl border border-slate-200/60 overflow-hidden hover:shadow-md transition-all flex flex-col"
+                        className="group bg-white hover:bg-rose-50/30 rounded-2xl border border-slate-200/70 hover:border-rose-200 overflow-hidden hover:shadow-md transition-all flex flex-col"
                       >
                         <div className="relative h-36 bg-slate-900 overflow-hidden">
                           <img
@@ -828,18 +871,18 @@ export const VideosPage: React.FC<{ mode: 'cate' | 'watch' }> = ({ mode }) => {
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                           />
                           <div className="absolute inset-0 bg-slate-900/20 flex items-center justify-center">
-                            <span className="w-9 h-9 rounded-full bg-white/90 text-[#0a5482] flex items-center justify-center text-xs shadow-md">
+                            <span className="w-9 h-9 rounded-full bg-white/95 text-rose-600 group-hover:bg-rose-600 group-hover:text-white flex items-center justify-center text-xs shadow-md transition-colors">
                               ▶
                             </span>
                           </div>
                           {vdQuiz && (
-                            <span className="absolute bottom-2 right-2 bg-[#0a5482]/90 text-white text-[10.5px] font-extrabold px-2 py-0.5 rounded-md shadow-sm">
+                            <span className="absolute bottom-2 right-2 bg-amber-400 text-slate-950 text-[10.5px] font-extrabold px-2 py-0.5 rounded-md shadow-sm">
                               📝 {vdQuiz.length} {lang === 'vi' ? 'câu Quiz' : 'Qs'}
                             </span>
                           )}
                         </div>
                         <div className="p-3.5">
-                          <h4 className="font-medium text-sm sm:text-[14.5px] text-slate-500 group-hover:text-[#0a5482] line-clamp-2 transition-colors">
+                          <h4 className="font-semibold text-sm sm:text-[14.5px] text-slate-600 group-hover:text-rose-700 line-clamp-2 transition-colors">
                             {vd.video_desc}
                           </h4>
                         </div>

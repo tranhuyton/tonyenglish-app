@@ -126,12 +126,13 @@ const ArticleInteractiveQuiz: React.FC<{
   return (
     <div
       ref={quizTopRef}
-      className="rounded-2xl sm:rounded-3xl border-2 border-sky-200/90 bg-gradient-to-b from-sky-50/40 via-white to-white overflow-hidden shadow-sm scroll-mt-24"
+      className="rounded-2xl sm:rounded-3xl border-2 border-emerald-200/90 bg-gradient-to-b from-emerald-50/40 via-white to-white overflow-hidden shadow-sm scroll-mt-24"
     >
+      <div className="h-1 w-full bg-gradient-to-r from-rose-500 via-amber-400 to-emerald-500" />
       {/* Quiz Header */}
-      <div className="bg-gradient-to-r from-[#0a5482] to-[#0f2942] px-5 sm:px-7 py-4 sm:py-5 text-white flex flex-wrap items-center justify-between gap-3">
+      <div className="bg-gradient-to-r from-[#059669] via-[#047857] to-[#0f766e] px-5 sm:px-7 py-4 sm:py-5 text-white flex flex-wrap items-center justify-between gap-3">
         <div className="flex items-center gap-3">
-          <span className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-white/15 border border-white/20 flex items-center justify-center text-xl shrink-0">
+          <span className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-amber-400/20 border border-amber-200/40 flex items-center justify-center text-xl shrink-0">
             📝
           </span>
           <div>
@@ -144,7 +145,7 @@ const ArticleInteractiveQuiz: React.FC<{
                 ? 'Bài tập Đọc hiểu (Reading Comprehension)'
                 : 'Reading Comprehension Quiz'}
             </h3>
-            <p className="text-xs sm:text-[13px] text-sky-200/90 mt-0.5">
+            <p className="text-xs sm:text-[13px] text-emerald-100/95 mt-0.5">
               {lang === 'vi'
                 ? `Chọn đáp án đúng nhất cho ${questions.length} câu hỏi dưới đây rồi bấm Nộp bài để xem điểm và giải thích.`
                 : `Select the best answer for each of the ${questions.length} questions below and click Submit.`}
@@ -153,7 +154,7 @@ const ArticleInteractiveQuiz: React.FC<{
         </div>
 
         <div className="flex items-center gap-2 ml-auto sm:ml-0">
-          <span className="px-3 py-1.5 rounded-full bg-white/15 border border-white/20 text-xs sm:text-sm font-extrabold">
+          <span className="px-3 py-1.5 rounded-full bg-amber-400/20 border border-amber-200/45 text-amber-100 text-xs sm:text-sm font-extrabold">
             {lang === 'vi'
               ? `Đã chọn: ${answeredCount}/${questions.length} câu`
               : `Answered: ${answeredCount}/${questions.length}`}
@@ -1326,7 +1327,7 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                     key.includes('ielts') ||
                     key.includes('igcse') ||
                     key.includes('cambridge') ||
-                    key.includes('sat')
+                    /\bsat\b/.test(key)
                   );
                 };
 
@@ -1550,20 +1551,85 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
 
         {/* RIGHT MAIN CONTENT */}
         <div className="flex-1 min-w-0 w-full space-y-6">
+          {(() => {
+            const themeTarget = activeParentCate || currentCategory;
+            const tid = Number(themeTarget?.news_cc_id || 0);
+            const tKey = `${themeTarget?.news_cc_name_url || ''} ${themeTarget?.news_cc_name || ''} ${themeTarget?.news_cc_name_vi || ''}`.toLowerCase();
+            let libHeader = {
+              stripe: 'from-rose-500 via-amber-400 to-emerald-500',
+              bg: 'from-[#0369a1] via-[#0a5482] to-[#0f766e]',
+              orb1: 'bg-amber-300/25',
+              orb2: 'bg-rose-400/20',
+              eyebrow: 'bg-amber-400/20 border-amber-200/40 text-amber-100',
+              activePill: 'bg-[#0a5482] text-white border-[#0a5482] shadow-2xs',
+            };
+            if ([38, 87, 51, 56, 67].includes(tid) || tKey.includes('ielts') || tKey.includes('cambridge') || tKey.includes('speaking') || tKey.includes('writting') || tKey.includes('writing')) {
+              libHeader = {
+                stripe: 'from-amber-400 via-yellow-300 to-rose-400',
+                bg: 'from-[#dc2626] via-[#b91c1c] to-[#7f1d1d]',
+                orb1: 'bg-amber-300/25',
+                orb2: 'bg-rose-300/20',
+                eyebrow: 'bg-amber-400/20 border-amber-200/40 text-amber-100',
+                activePill: 'bg-rose-600 text-white border-rose-600 shadow-2xs',
+              };
+            } else if (tid === 79 || tKey.includes('igcse')) {
+              libHeader = {
+                stripe: 'from-emerald-300 via-amber-300 to-teal-300',
+                bg: 'from-[#059669] via-[#047857] to-[#064e3b]',
+                orb1: 'bg-amber-300/25',
+                orb2: 'bg-emerald-300/25',
+                eyebrow: 'bg-amber-400/20 border-amber-200/40 text-amber-100',
+                activePill: 'bg-emerald-600 text-white border-emerald-600 shadow-2xs',
+              };
+            } else if (tid === 26 || tKey.includes('ebook') || tKey.includes('sách') || tKey.includes('book') || tKey.includes('truyện') || tKey.includes('story') || tKey.includes('tips') || tKey.includes('bí kíp')) {
+              libHeader = {
+                stripe: 'from-yellow-300 via-amber-400 to-rose-500',
+                bg: 'from-[#d97706] via-[#b45309] to-[#78350f]',
+                orb1: 'bg-yellow-200/30',
+                orb2: 'bg-orange-300/20',
+                eyebrow: 'bg-yellow-300/20 border-yellow-200/45 text-yellow-50',
+                activePill: 'bg-amber-600 text-white border-amber-600 shadow-2xs',
+              };
+            } else if (tid === 36 || tid === 19 || tKey.includes('reading-practice') || tKey.includes('words-in-the-news') || tKey.includes('bản tin') || tKey.includes('luyện đọc')) {
+              libHeader = {
+                stripe: 'from-emerald-400 via-amber-300 to-sky-400',
+                bg: 'from-[#059669] via-[#0f766e] to-[#065f46]',
+                orb1: 'bg-amber-300/25',
+                orb2: 'bg-teal-300/25',
+                eyebrow: 'bg-amber-400/20 border-amber-200/40 text-amber-100',
+                activePill: 'bg-emerald-600 text-white border-emerald-600 shadow-2xs',
+              };
+            } else if (tid === 37 || tKey.includes('conversation') || tKey.includes('hội thoại')) {
+              libHeader = {
+                stripe: 'from-rose-400 via-amber-400 to-indigo-400',
+                bg: 'from-[#4f46e5] via-[#4338ca] to-[#312e81]',
+                orb1: 'bg-amber-300/25',
+                orb2: 'bg-fuchsia-300/20',
+                eyebrow: 'bg-amber-400/20 border-amber-200/40 text-amber-100',
+                activePill: 'bg-indigo-600 text-white border-indigo-600 shadow-2xs',
+              };
+            }
+            return (
           <div className="bg-white rounded-2xl sm:rounded-3xl border border-slate-200/90 shadow-sm">
-            {/* Section Header */}
-            <div className="bg-gradient-to-r from-[#0a5482] to-[#0f172a] rounded-t-2xl sm:rounded-t-3xl px-4 sm:px-8 py-4 sm:py-6 text-white flex items-center justify-between flex-wrap gap-3 sm:gap-4">
-              <div>
-                <div className="text-[11px] sm:text-sm font-extrabold uppercase tracking-widest text-[#2ab4e8] mb-0.5 sm:mb-1">
-                  TonyEnglish Learning Library
+            {/* Vibrant Tri-Color Top Ribbon + Category-Synced Header */}
+            <div className="rounded-t-2xl sm:rounded-t-3xl overflow-hidden">
+              <div className={`h-1.5 w-full bg-gradient-to-r ${libHeader.stripe}`} />
+              <div className={`relative overflow-hidden bg-gradient-to-r ${libHeader.bg} px-4 sm:px-8 py-4 sm:py-6 text-white flex items-center justify-between flex-wrap gap-3 sm:gap-4`}>
+                <div className={`pointer-events-none absolute -top-12 -right-10 w-48 h-48 rounded-full blur-3xl ${libHeader.orb1}`} />
+                <div className={`pointer-events-none absolute -bottom-12 left-1/3 w-40 h-40 rounded-full blur-3xl ${libHeader.orb2}`} />
+                <div className="relative z-10">
+                  <div className={`inline-flex items-center gap-1.5 text-[10.5px] sm:text-xs font-extrabold uppercase tracking-widest px-2.5 py-0.5 rounded-full border mb-1.5 ${libHeader.eyebrow}`}>
+                    <span>📚</span>
+                    <span>TonyEnglish Learning Library</span>
+                  </div>
+                  <h1 className="text-xl sm:text-3xl font-black tracking-tight">{cateDisplayName}</h1>
                 </div>
-                <h1 className="text-xl sm:text-3xl font-black tracking-tight">{cateDisplayName}</h1>
+                {mode === 'list' && totalCount > 0 && (
+                  <span className="relative z-10 bg-white/15 backdrop-blur-xs text-white text-xs sm:text-sm font-bold px-3 sm:px-4 py-1 sm:py-1.5 rounded-full border border-white/25">
+                    {totalCount} {lang === 'vi' ? 'bài học' : 'articles'}
+                  </span>
+                )}
               </div>
-              {mode === 'list' && totalCount > 0 && (
-                <span className="bg-white/15 text-white text-xs sm:text-sm font-bold px-3 sm:px-4 py-1 sm:py-1.5 rounded-full border border-white/20">
-                  {totalCount} {lang === 'vi' ? 'bài học' : 'articles'}
-                </span>
-              )}
             </div>
 
             <div className="p-4 sm:p-8">
@@ -1610,9 +1676,9 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                 <>
                   {/* Quick Subcategory Switcher Bar */}
                   {authUserId && isActiveParentCambridge && activeParentCate && (
-                    <div className="mb-4 p-3.5 sm:p-4 bg-gradient-to-r from-emerald-50/90 via-sky-50/80 to-white border border-emerald-200/90 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                    <div className="mb-4 p-3.5 sm:p-4 bg-gradient-to-r from-amber-50/90 via-rose-50/40 to-emerald-50/70 border border-amber-200/90 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                       <div className="flex items-center gap-3">
-                        <span className="w-9 h-9 rounded-xl bg-emerald-600 text-white flex items-center justify-center text-base font-bold shrink-0 shadow-2xs">
+                        <span className="w-9 h-9 rounded-xl bg-rose-600 text-white flex items-center justify-center text-base font-bold shrink-0 shadow-2xs">
                           📊
                         </span>
                         <div>
@@ -1641,7 +1707,7 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                           } catch {}
                           window.dispatchEvent(new CustomEvent('tony-navigate', { detail: 'portal' }));
                         }}
-                        className="px-3.5 py-2 rounded-xl bg-[#0a5482] hover:bg-[#084266] text-white text-xs font-extrabold shrink-0 transition cursor-pointer self-start sm:self-center"
+                        className="px-3.5 py-2 rounded-xl bg-rose-600 hover:bg-rose-700 text-white text-xs font-extrabold shrink-0 transition cursor-pointer self-start sm:self-center shadow-2xs"
                       >
                         {lang === 'vi' ? '📈 Xem Tiến Độ Học IELTS →' : '📈 View IELTS Progress →'}
                       </button>
@@ -1666,8 +1732,8 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                           className={`px-3 py-1.5 rounded-xl text-xs sm:text-[13px] font-bold transition-all border ${
                             currentCategory &&
                             Number(currentCategory.news_cc_id) === Number(activeParentCate.news_cc_id)
-                              ? 'bg-[#0a5482] text-white border-[#0a5482] shadow-2xs'
-                              : 'bg-white text-slate-600 border-slate-200/90 hover:border-[#2ab4e8] hover:text-[#0a5482]'
+                              ? libHeader.activePill
+                              : 'bg-white text-slate-600 border-slate-200/90 hover:border-amber-400 hover:text-slate-900'
                           }`}
                         >
                           {lang === 'vi' ? 'Tất cả' : 'All'}
@@ -1686,8 +1752,8 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
                               title={sName}
                               className={`px-2.5 sm:px-3 py-1.5 rounded-xl text-xs sm:text-[13px] font-bold transition-all border ${
                                 isActiveSub
-                                  ? 'bg-[#0a5482] text-white border-[#0a5482] shadow-2xs'
-                                  : 'bg-white text-slate-600 border-slate-200/90 hover:border-[#2ab4e8] hover:text-[#0a5482] hover:bg-sky-50/50'
+                                  ? libHeader.activePill
+                                  : 'bg-white text-slate-600 border-slate-200/90 hover:border-amber-400 hover:text-slate-900 hover:bg-amber-50/40'
                               }`}
                             >
                               {pillLabel}
@@ -2759,6 +2825,8 @@ export const NewsPage: React.FC<{ mode: 'list' | 'detail' }> = ({ mode }) => {
               )}
             </div>
           </div>
+            );
+          })()}
 
           {/* SEPARATE CARD FOR RELATED POSTS */}
           {!loading && mode === 'detail' && article && relatedNews.length > 0 && (

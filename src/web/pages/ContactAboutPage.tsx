@@ -291,20 +291,62 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
 
         {/* RIGHT MAIN CONTENT */}
         <div className="flex-1 min-w-0 w-full">
+          {(() => {
+            const pageHeaderTheme =
+              mode === 'contact'
+                ? {
+                    stripe: 'from-amber-400 via-emerald-400 to-teal-400',
+                    bg: 'from-[#059669] via-[#047857] to-[#0f766e]',
+                    orb1: 'bg-amber-300/25',
+                    orb2: 'bg-emerald-300/25',
+                    icon: '📞',
+                  }
+                : mode === 'opening'
+                ? {
+                    stripe: 'from-yellow-300 via-amber-400 to-rose-500',
+                    bg: 'from-[#d97706] via-[#b45309] to-[#7c2d12]',
+                    orb1: 'bg-yellow-200/30',
+                    orb2: 'bg-rose-400/20',
+                    icon: '📅',
+                  }
+                : mode === 'sitemap'
+                ? {
+                    stripe: 'from-rose-400 via-amber-400 to-indigo-400',
+                    bg: 'from-[#4338ca] via-[#0a5482] to-[#0f766e]',
+                    orb1: 'bg-amber-300/25',
+                    orb2: 'bg-indigo-300/25',
+                    icon: '🗺️',
+                  }
+                : {
+                    stripe: 'from-rose-500 via-amber-400 to-emerald-500',
+                    bg: 'from-[#0369a1] via-[#0a5482] to-[#0f766e]',
+                    orb1: 'bg-amber-300/30',
+                    orb2: 'bg-rose-400/20',
+                    icon: '★',
+                  };
+            return (
           <div className="bg-white rounded-2xl sm:rounded-3xl border border-slate-200/90 shadow-sm overflow-hidden">
-            {/* Header (Unified with Library / NewsPage Header) */}
-            <div className="bg-gradient-to-r from-[#0a5482] to-[#0f172a] px-4 sm:px-8 py-4 sm:py-6 text-white">
-              <div className="text-[11px] sm:text-sm font-extrabold uppercase tracking-widest text-[#2ab4e8] mb-0.5 sm:mb-1">
-                {lang === 'vi' ? 'Lớp Gia Sư Cá Nhân Thầy Tony' : 'Private Tutoring with Mr. Tony'}
+            {/* Vibrant Tri-Color Top Ribbon */}
+            <div className={`h-1.5 w-full bg-gradient-to-r ${pageHeaderTheme.stripe}`} />
+            {/* Header (Mode-Specific Color Theme) */}
+            <div className={`relative overflow-hidden bg-gradient-to-r ${pageHeaderTheme.bg} px-4 sm:px-8 py-4 sm:py-6 text-white`}>
+              <div className={`pointer-events-none absolute -top-12 -right-10 w-48 h-48 rounded-full blur-3xl ${pageHeaderTheme.orb1}`} />
+              <div className={`pointer-events-none absolute -bottom-12 left-1/3 w-40 h-40 rounded-full blur-3xl ${pageHeaderTheme.orb2}`} />
+              <div className="relative z-10">
+                <div className="inline-flex items-center gap-1.5 text-[10.5px] sm:text-xs font-extrabold uppercase tracking-widest text-amber-100 bg-amber-400/20 border border-amber-200/40 px-2.5 py-0.5 rounded-full mb-1.5">
+                  <span>{pageHeaderTheme.icon}</span>
+                  <span>{lang === 'vi' ? 'Lớp Gia Sư Cá Nhân Thầy Tony' : 'Private Tutoring with Mr. Tony'}</span>
+                </div>
+                <h1 className="text-xl sm:text-3xl font-black tracking-tight">{pageHeading}</h1>
               </div>
-              <h1 className="text-xl sm:text-3xl font-black tracking-tight">{pageHeading}</h1>
             </div>
 
             <div className="p-4 sm:p-8">
               {mode === 'about' ? (
                 currentAbout ? (
                   <div
-                    className="legacy-prose text-left sm:text-justify max-w-[72ch]"
+                    data-course-theme="overview"
+                    className="legacy-prose course-tab-prose text-left sm:text-justify max-w-[72ch]"
                     dangerouslySetInnerHTML={{
                       __html: fixLegacyHtmlContent(
                         lang === 'vi' ? currentAbout.about_content_vi : currentAbout.about_content_en
@@ -322,12 +364,18 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
                 )
               ) : mode === 'opening' ? (
                 <div className="space-y-6">
-                  <div className="bg-sky-50 border border-sky-200 rounded-2xl p-5 sm:p-6">
-                    <div className="inline-flex items-center gap-2 bg-[#0a5482] text-white text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full mb-3">
-                      <Calendar className="w-3.5 h-3.5" />
-                      <span>{lang === 'vi' ? 'Nhận học viên Gia sư 1 kèm 1' : '1-on-1 Private Tutoring'}</span>
+                  <div className="relative overflow-hidden bg-gradient-to-br from-amber-50/90 via-white to-emerald-50/75 border-2 border-amber-300/80 rounded-2xl p-5 sm:p-6">
+                    <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-rose-500 via-amber-400 to-emerald-500" />
+                    <div className="flex flex-wrap items-center gap-2 mb-3 pt-0.5">
+                      <div className="inline-flex items-center gap-1.5 bg-emerald-600 text-white text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full shadow-2xs">
+                        <Calendar className="w-3.5 h-3.5" />
+                        <span>{lang === 'vi' ? 'Nhận học viên Gia sư 1 kèm 1' : '1-on-1 Private Tutoring'}</span>
+                      </div>
+                      <span className="inline-flex items-center gap-1 bg-rose-600 text-white text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full shadow-2xs">
+                        🎁 {lang === 'vi' ? 'Học thử miễn phí 2–3 buổi' : '2–3 Free Trial Lessons'}
+                      </span>
                     </div>
-                    <h2 className="text-xl sm:text-2xl font-black text-slate-800 mb-2">
+                    <h2 className="text-xl sm:text-2xl font-black text-slate-900 mb-2">
                       {lang === 'vi'
                         ? 'Liên tục tuyển sinh gia sư các gói học 1 kèm 1 cho Giao tiếp tiếng Anh, IELTS, IGCSE'
                         : 'Continuous 1-on-1 Private Tutoring Enrollment: English Communication, IELTS & IGCSE'}
@@ -340,9 +388,9 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-                    <div className="bg-white rounded-2xl border border-slate-200 p-5 flex flex-col justify-between shadow-sm hover:shadow-md transition">
+                    <div className="bg-white rounded-2xl border border-slate-200 border-t-[3px] border-t-indigo-500 hover:border-indigo-300 hover:bg-indigo-50/30 p-5 flex flex-col justify-between shadow-sm hover:shadow-md transition">
                       <div>
-                        <span className="inline-flex items-center gap-1.5 bg-indigo-50 text-indigo-700 border border-indigo-200 text-xs font-black px-3 py-1 rounded-full mb-3">
+                        <span className="inline-flex items-center gap-1.5 bg-indigo-100/80 text-indigo-800 border border-indigo-200 text-xs font-black px-3 py-1 rounded-full mb-3">
                           <Mic className="w-3.5 h-3.5" />
                           <span>{lang === 'vi' ? 'GIA SƯ GÓI HỌC 1 KÈM 1' : '1-ON-1 PRIVATE PACKAGE'}</span>
                         </span>
@@ -357,16 +405,16 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
                       </div>
                       <Link
                         to="/courses/english-communication%201"
-                        className="text-sm font-black text-[#0a5482] hover:text-[#2ab4e8] inline-flex items-center gap-1.5"
+                        className="text-sm font-black text-indigo-700 hover:text-indigo-600 inline-flex items-center gap-1.5"
                       >
                         <span>{lang === 'vi' ? 'Xem đề cương khóa học' : 'View course syllabus'}</span>
                         <ArrowRight className="w-4 h-4" />
                       </Link>
                     </div>
 
-                    <div className="bg-white rounded-2xl border border-slate-200 p-5 flex flex-col justify-between shadow-sm hover:shadow-md transition">
+                    <div className="bg-white rounded-2xl border border-slate-200 border-t-[3px] border-t-rose-500 hover:border-rose-300 hover:bg-rose-50/30 p-5 flex flex-col justify-between shadow-sm hover:shadow-md transition">
                       <div>
-                        <span className="inline-flex items-center gap-1.5 bg-sky-50 text-[#0a5482] border border-sky-200 text-xs font-black px-3 py-1 rounded-full mb-3">
+                        <span className="inline-flex items-center gap-1.5 bg-rose-100/80 text-rose-800 border border-rose-200 text-xs font-black px-3 py-1 rounded-full mb-3">
                           <Trophy className="w-3.5 h-3.5" />
                           <span>{lang === 'vi' ? 'GIA SƯ GÓI HỌC 1 KÈM 1' : '1-ON-1 PRIVATE PACKAGE'}</span>
                         </span>
@@ -381,16 +429,16 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
                       </div>
                       <Link
                         to="/courses/ielts"
-                        className="text-sm font-black text-[#0a5482] hover:text-[#2ab4e8] inline-flex items-center gap-1.5"
+                        className="text-sm font-black text-rose-700 hover:text-rose-600 inline-flex items-center gap-1.5"
                       >
                         <span>{lang === 'vi' ? 'Xem đề cương khóa học' : 'View course syllabus'}</span>
                         <ArrowRight className="w-4 h-4" />
                       </Link>
                     </div>
 
-                    <div className="bg-white rounded-2xl border border-slate-200 p-5 flex flex-col justify-between shadow-sm hover:shadow-md transition">
+                    <div className="bg-white rounded-2xl border border-slate-200 border-t-[3px] border-t-emerald-500 hover:border-emerald-300 hover:bg-emerald-50/30 p-5 flex flex-col justify-between shadow-sm hover:shadow-md transition">
                       <div>
-                        <span className="inline-flex items-center gap-1.5 bg-amber-50 text-amber-800 border border-amber-200 text-xs font-black px-3 py-1 rounded-full mb-3">
+                        <span className="inline-flex items-center gap-1.5 bg-emerald-100/80 text-emerald-800 border border-emerald-200 text-xs font-black px-3 py-1 rounded-full mb-3">
                           <Globe className="w-3.5 h-3.5" />
                           <span>{lang === 'vi' ? 'GIA SƯ GÓI HỌC 1 KÈM 1' : '1-ON-1 PRIVATE PACKAGE'}</span>
                         </span>
@@ -405,7 +453,7 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
                       </div>
                       <Link
                         to="/courses/luyen-thi-igcse-alevel-cap-toc"
-                        className="text-sm font-black text-[#0a5482] hover:text-[#2ab4e8] inline-flex items-center gap-1.5"
+                        className="text-sm font-black text-emerald-700 hover:text-emerald-600 inline-flex items-center gap-1.5"
                       >
                         <span>{lang === 'vi' ? 'Xem đề cương khóa học' : 'View course syllabus'}</span>
                         <ArrowRight className="w-4 h-4" />
@@ -415,9 +463,9 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
                 </div>
               ) : mode === 'sitemap' ? (
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  <div className="bg-slate-50 rounded-2xl p-5 border border-slate-200/80">
-                    <h3 className="font-black text-base text-[#0a5482] mb-3 pb-2 border-b border-slate-200 flex items-center gap-2">
-                      <BookOpen className="w-4 h-4" />
+                  <div className="bg-emerald-50/50 rounded-2xl p-5 border border-emerald-200/80">
+                    <h3 className="font-black text-base text-emerald-800 mb-3 pb-2 border-b border-emerald-200 flex items-center gap-2">
+                      <BookOpen className="w-4 h-4 text-emerald-600" />
                       <span>{t('Library')}</span>
                     </h3>
                     <ul className="space-y-2 text-sm">
@@ -425,7 +473,7 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
                         <li key={nc.news_cc_id}>
                           <Link
                             to={`/news/category/${(nc.news_cc_name_url || '').trim()}`}
-                            className="text-slate-700 hover:text-[#0a5482] font-medium"
+                            className="text-slate-700 hover:text-emerald-700 font-medium"
                           >
                             • {lang === 'vi' ? nc.news_cc_name_vi || nc.news_cc_name : nc.news_cc_name}
                           </Link>
@@ -434,9 +482,9 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
                     </ul>
                   </div>
 
-                  <div className="bg-slate-50 rounded-2xl p-5 border border-slate-200/80">
-                    <h3 className="font-black text-base text-[#0a5482] mb-3 pb-2 border-b border-slate-200 flex items-center gap-2">
-                      <GraduationCap className="w-4 h-4" />
+                  <div className="bg-rose-50/50 rounded-2xl p-5 border border-rose-200/80">
+                    <h3 className="font-black text-base text-rose-800 mb-3 pb-2 border-b border-rose-200 flex items-center gap-2">
+                      <GraduationCap className="w-4 h-4 text-rose-600" />
                       <span>{t('Courses')}</span>
                     </h3>
                     <ul className="space-y-2 text-sm">
@@ -444,7 +492,7 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
                         <li key={c.cc_id}>
                           <Link
                             to={`/courses/${(c.cc_name_url || '').trim()}`}
-                            className="text-slate-700 hover:text-[#0a5482] font-medium"
+                            className="text-slate-700 hover:text-rose-700 font-medium"
                           >
                             • {lang === 'vi' ? c.cc_name_vi || c.cc_name : c.cc_name}
                           </Link>
@@ -453,9 +501,9 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
                     </ul>
                   </div>
 
-                  <div className="bg-slate-50 rounded-2xl p-5 border border-slate-200/80">
-                    <h3 className="font-black text-base text-[#0a5482] mb-3 pb-2 border-b border-slate-200 flex items-center gap-2">
-                      <Info className="w-4 h-4" />
+                  <div className="bg-amber-50/55 rounded-2xl p-5 border border-amber-200/80">
+                    <h3 className="font-black text-base text-amber-900 mb-3 pb-2 border-b border-amber-200 flex items-center gap-2">
+                      <Info className="w-4 h-4 text-amber-600" />
                       <span>{t('About us')}</span>
                     </h3>
                     <ul className="space-y-2 text-sm">
@@ -466,7 +514,7 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
                           <li key={ab.about_id}>
                             <Link
                               to={`/about/${(urlSlug || '').trim()}`}
-                              className="text-slate-700 hover:text-[#0a5482] font-medium"
+                              className="text-slate-700 hover:text-amber-800 font-medium"
                             >
                               • {title}
                             </Link>
@@ -477,11 +525,12 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
                   </div>
                 </div>
               ) : (
-                /* CLEAN CONTACT FORM + INFO & MAP */
+                /* CLEAN CONTACT FORM + WARM INFO & MAP */
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
                   <div>
-                    <h2 className="text-lg font-extrabold text-[#0a5482] mb-1.5">
-                      {lang === 'vi' ? 'Gửi lời nhắn cho Thầy Tony' : 'Send a message to Mr. Tony'}
+                    <h2 className="text-lg font-black text-emerald-800 mb-1.5 flex items-center gap-2">
+                      <span className="w-1.5 h-5 rounded-full bg-emerald-500" />
+                      <span>{lang === 'vi' ? 'Gửi lời nhắn cho Thầy Tony' : 'Send a message to Mr. Tony'}</span>
                     </h2>
                     <p className="text-sm text-slate-500 mb-5 leading-relaxed">
                       {lang === 'vi'
@@ -528,7 +577,7 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
                               value={contactName}
                               onChange={(e) => setContactName(e.target.value)}
                               placeholder={lang === 'vi' ? 'Nhập họ và tên' : 'Your full name'}
-                              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm text-slate-800 focus:outline-none focus:border-[#0a5482] transition"
+                              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm text-slate-800 focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100 transition"
                             />
                           </div>
                           <div>
@@ -540,7 +589,7 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
                               value={contactPhone}
                               onChange={(e) => setContactPhone(e.target.value)}
                               placeholder="09xx xxx xxx"
-                              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm text-slate-800 focus:outline-none focus:border-[#0a5482] transition"
+                              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm text-slate-800 focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100 transition"
                             />
                           </div>
                         </div>
@@ -554,7 +603,7 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
                             value={contactEmail}
                             onChange={(e) => setContactEmail(e.target.value)}
                             placeholder="email@example.com"
-                            className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm text-slate-800 focus:outline-none focus:border-[#0a5482] transition"
+                            className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm text-slate-800 focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100 transition"
                           />
                         </div>
 
@@ -571,34 +620,36 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
                                 ? 'Nhập câu hỏi hoặc khóa học bạn quan tâm...'
                                 : 'Enter your question or course of interest...'
                             }
-                            className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm text-slate-800 focus:outline-none focus:border-[#0a5482] transition resize-none"
+                            className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm text-slate-800 focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100 transition resize-none"
                           />
                         </div>
 
                         <button
                           type="submit"
                           disabled={contactLoading}
-                          className="bg-[#0a5482] hover:bg-[#084266] text-white font-bold text-sm px-6 py-2.5 rounded-xl transition cursor-pointer disabled:opacity-60"
+                          className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-extrabold text-sm px-6 py-2.5 rounded-xl shadow-sm transition cursor-pointer disabled:opacity-60"
                         >
                           {contactLoading
                             ? lang === 'vi'
                               ? 'Đang gửi...'
                               : 'Sending...'
                             : lang === 'vi'
-                            ? 'Gửi tin nhắn'
-                            : 'Send Message'}
+                            ? '✉️ Gửi tin nhắn'
+                            : '✉️ Send Message'}
                         </button>
                       </form>
                     )}
                   </div>
 
                   <div className="space-y-4">
-                    <h2 className="text-lg font-extrabold text-[#0a5482] mb-1">
-                      {lang === 'vi' ? 'Thông tin liên hệ & Bản đồ' : 'Contact Info & Map'}
+                    <h2 className="text-lg font-black text-amber-800 mb-1 flex items-center gap-2">
+                      <span className="w-1.5 h-5 rounded-full bg-amber-500" />
+                      <span>{lang === 'vi' ? 'Thông tin liên hệ & Bản đồ' : 'Contact Info & Map'}</span>
                     </h2>
-                    <div className="bg-slate-50 rounded-2xl p-4 border border-slate-200/80 text-sm space-y-2 text-slate-700">
-                      <p>
-                        <strong className="text-slate-800">
+                    <div className="relative overflow-hidden bg-gradient-to-br from-amber-50/90 via-white to-emerald-50/75 rounded-2xl p-4 sm:p-5 border-2 border-amber-300/80 text-sm space-y-2.5 text-slate-700 shadow-2xs">
+                      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-rose-500 via-amber-400 to-emerald-500" />
+                      <p className="pt-0.5">
+                        <strong className="text-slate-900">
                           📍 {lang === 'vi' ? 'Địa chỉ nhà riêng Thầy Tony' : "Mr. Tony's Home Address"}:
                         </strong>{' '}
                         {options['company_address']
@@ -606,33 +657,42 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
                           : 'R2B 2219, Royal City, 72 Nguyễn Trãi, Thanh Xuân, Hà Nội'}
                       </p>
                       <p>
-                        <strong className="text-slate-800">
+                        <strong className="text-slate-900">
                           📞 {lang === 'vi' ? 'Điện thoại / Zalo' : 'Phone / Zalo'}:
                         </strong>{' '}
                         <a
                           href="tel:0935058688"
                           onClick={() => trackUnifiedContact('Phone', 'ContactPage')}
-                          className="text-[#0a5482] font-bold hover:underline"
+                          className="text-rose-600 font-black hover:underline"
                         >
-                          +84 93 505 8688
+                          0935 058 688
                         </a>
-                        {' • '}
+                      </p>
+                      <p>
+                        <strong className="text-slate-900">✉️ Email:</strong>{' '}
+                        <a href="mailto:tranhuyton@gmail.com" className="text-emerald-700 font-bold hover:underline">
+                          tranhuyton@gmail.com
+                        </a>
+                      </p>
+                      <div className="flex flex-wrap items-center gap-2 pt-2">
+                        <a
+                          href="tel:0935058688"
+                          onClick={() => trackUnifiedContact('Phone', 'ContactPage_Btn')}
+                          className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs px-4 py-2 rounded-xl shadow-2xs transition whitespace-nowrap"
+                        >
+                          <Phone className="w-3.5 h-3.5 shrink-0" />
+                          <span>{lang === 'vi' ? 'Gọi ngay: 0935 058 688' : 'Call: 0935 058 688'}</span>
+                        </a>
                         <a
                           href="https://zalo.me/0935058688"
                           target="_blank"
                           rel="noreferrer"
-                          onClick={() => trackUnifiedContact('Zalo', 'ContactPage')}
-                          className="text-[#0068ff] font-bold hover:underline"
+                          onClick={() => trackUnifiedContact('Zalo', 'ContactPage_Btn')}
+                          className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 bg-[#0068ff] hover:bg-[#0057d6] text-white font-extrabold text-xs px-4 py-2 rounded-xl shadow-2xs transition whitespace-nowrap"
                         >
-                          Chat Zalo
+                          <span>💬 {lang === 'vi' ? 'Nhắn Zalo ngay' : 'Chat on Zalo'}</span>
                         </a>
-                      </p>
-                      <p>
-                        <strong className="text-slate-800">✉️ Email:</strong>{' '}
-                        <a href="mailto:tranhuyton@gmail.com" className="text-[#0a5482] hover:underline">
-                          tranhuyton@gmail.com
-                        </a>
-                      </p>
+                      </div>
                     </div>
 
                     <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-xs h-72">
@@ -653,6 +713,8 @@ export const ContactAboutPage: React.FC<{ mode: 'about' | 'contact' | 'opening' 
               )}
             </div>
           </div>
+            );
+          })()}
         </div>
       </div>
     </div>
