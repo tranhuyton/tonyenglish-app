@@ -468,20 +468,26 @@ export default function AssignmentCalendar({
       <div className="w-full space-y-5">
         {/* TONYENGLISH.VN SYNCHRONIZED HERO BANNER */}
         <div 
-          className="rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-7 shadow-md text-white flex flex-col gap-4 relative z-30 border border-slate-800/20"
-          style={{ background: calendarTheme.titleBg }}
+          className="rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-7 shadow-md text-white flex flex-col gap-4 relative z-30 border border-white/15"
+          style={{
+            background:
+              calendarTheme.id === 'tony-classic'
+                ? 'linear-gradient(135deg, #059669 0%, #047857 52%, #0f766e 100%)'
+                : calendarTheme.titleBg,
+          }}
         >
-          {/* Decorative Ambient Glow */}
+          {/* Decorative Ribbon + Ambient Glow */}
           <div className="absolute inset-0 overflow-hidden rounded-2xl sm:rounded-3xl pointer-events-none">
-            <div className="absolute -top-24 -right-24 w-80 h-80 bg-[#2ab4e8]/15 blur-3xl rounded-full"></div>
-            <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-sky-400/10 blur-3xl rounded-full"></div>
+            <div className="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-emerald-300 via-amber-300 to-sky-300" />
+            <div className="absolute -top-24 -right-24 w-80 h-80 bg-amber-300/20 blur-3xl rounded-full"></div>
+            <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-emerald-300/15 blur-3xl rounded-full"></div>
           </div>
 
           <div className="relative z-20 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4">
             <div className="flex items-start justify-between w-full lg:w-auto gap-3">
               <div>
-                <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-xs border border-white/15 px-3 py-1 rounded-full text-[10px] sm:text-[11px] font-extrabold tracking-widest uppercase text-[#2ab4e8] mb-2.5">
-                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <div className="inline-flex items-center gap-2 bg-amber-400/15 backdrop-blur-xs border border-amber-300/35 px-3 py-1 rounded-full text-[10px] sm:text-[11px] font-extrabold tracking-widest uppercase text-amber-100 mb-2.5">
+                  <span className="w-2 h-2 rounded-full bg-amber-300 animate-pulse"></span>
                   {isEn ? 'TonyEnglish Study Schedule' : 'TonyEnglish Study Schedule • Lịch Báo Bài'}
                 </div>
                 <h1 className="text-xl sm:text-2xl md:text-[26px] font-black tracking-tight text-white leading-tight">
@@ -543,11 +549,11 @@ export default function AssignmentCalendar({
                 <div className="bg-white/10 backdrop-blur-xs border border-white/15 rounded-xl px-3.5 py-2 flex flex-col justify-center min-w-[200px]">
                   <div className="flex items-center justify-between text-xs text-white/95 font-bold mb-1.5 gap-3">
                     <span className="truncate">{rangeLabel}</span>
-                    <span className="text-[#2ab4e8] font-black shrink-0">{completedTotalCount}/{selectedTasks.length} ({progressPercent}%)</span>
+                    <span className="text-amber-200 font-black shrink-0">{completedTotalCount}/{selectedTasks.length} ({progressPercent}%)</span>
                   </div>
                   <div className="w-full h-1.5 bg-white/20 rounded-full overflow-hidden">
                     <div 
-                      className="h-full bg-gradient-to-r from-[#2ab4e8] to-emerald-400 rounded-full transition-all duration-500"
+                      className="h-full bg-gradient-to-r from-amber-300 to-yellow-200 rounded-full transition-all duration-500"
                       style={{ width: `${progressPercent}%` }}
                     />
                   </div>
@@ -586,7 +592,7 @@ export default function AssignmentCalendar({
                 {/* NÚT HÔM NAY */}
                 <button 
                   onClick={goToday} 
-                  className="bg-[#2ab4e8] hover:bg-[#1fa0d4] active:scale-95 text-white text-xs sm:text-[13px] font-extrabold px-3.5 sm:px-4 py-2 rounded-xl transition-all shadow-sm flex items-center gap-1.5 cursor-pointer shrink-0"
+                  className="bg-gradient-to-r from-amber-400 to-yellow-400 hover:from-amber-300 hover:to-yellow-300 active:scale-95 text-slate-950 text-xs sm:text-[13px] font-black px-3.5 sm:px-4 py-2 rounded-xl transition-all shadow-sm flex items-center gap-1.5 cursor-pointer shrink-0"
                   title={isEn ? "Jump to today's tasks" : 'Xem công việc hôm nay'}
                 >
                   <span>🎯</span> <span>{isEn ? 'Today' : 'Hôm nay'}</span>

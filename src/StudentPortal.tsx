@@ -119,6 +119,156 @@ const getCourseCover = (course: any) => {
   return { image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800', badge: course.type || 'Khóa học', color: 'text-slate-600' };
 };
 
+const getCourseIdentityTheme = (course: any) => {
+  const t = `${course?.title || ''} ${course?.type || ''}`.toLowerCase();
+
+  // 1. IELTS — Crimson Red (đồng bộ tab Khóa Học)
+  if (t.includes('ielts')) {
+    return {
+      stripe: 'from-amber-400 via-yellow-300 to-rose-400',
+      headerBg: 'from-[#dc2626] via-[#b91c1c] to-[#7f1d1d]',
+      orb1: 'bg-amber-300/25',
+      orb2: 'bg-rose-300/20',
+      eyebrow: 'text-amber-200',
+      badgeBg: 'bg-rose-600/95 border-rose-200/35',
+      cardHover: 'hover:border-rose-300',
+      pctText: 'text-rose-600',
+      progressBar: 'from-rose-600 via-rose-500 to-amber-400',
+      testPctText: 'text-rose-600',
+      testBar: 'bg-rose-500',
+      lecBtn: 'bg-rose-50/85 hover:bg-rose-100 text-rose-700 border-rose-200/90',
+      primaryBtn: 'bg-rose-600 hover:bg-rose-700 shadow-rose-900/15',
+      accentBar: 'bg-rose-600',
+      headerLectureBtn: 'bg-amber-400 hover:bg-amber-300 text-slate-950',
+    };
+  }
+
+  // 2. Digital SAT 1500+ — Amber Gold
+  if (t.includes('sat')) {
+    return {
+      stripe: 'from-yellow-300 via-amber-400 to-rose-500',
+      headerBg: 'from-[#d97706] via-[#b45309] to-[#78350f]',
+      orb1: 'bg-yellow-200/30',
+      orb2: 'bg-orange-300/20',
+      eyebrow: 'text-yellow-100',
+      badgeBg: 'bg-amber-600/95 border-yellow-200/40',
+      cardHover: 'hover:border-amber-300',
+      pctText: 'text-amber-700',
+      progressBar: 'from-amber-600 via-amber-500 to-yellow-400',
+      testPctText: 'text-amber-700',
+      testBar: 'bg-amber-500',
+      lecBtn: 'bg-amber-50/85 hover:bg-amber-100 text-amber-800 border-amber-200/90',
+      primaryBtn: 'bg-amber-600 hover:bg-amber-700 shadow-amber-900/15',
+      accentBar: 'bg-amber-500',
+      headerLectureBtn: 'bg-white hover:bg-amber-50 text-amber-900',
+    };
+  }
+
+  // 3. IGCSE / A-Level & Academic Sciences/Maths/Commerce — Emerald Green
+  if (
+    t.includes('igcse') ||
+    t.includes('a-level') ||
+    t.includes('biology') ||
+    t.includes('chemistry') ||
+    t.includes('physics') ||
+    t.includes('geography') ||
+    t.includes('science') ||
+    t.includes('0580') ||
+    t.includes('0606') ||
+    t.includes('math') ||
+    t.includes('econ') ||
+    t.includes('business')
+  ) {
+    return {
+      stripe: 'from-emerald-300 via-amber-300 to-teal-300',
+      headerBg: 'from-[#059669] via-[#047857] to-[#064e3b]',
+      orb1: 'bg-amber-300/25',
+      orb2: 'bg-emerald-300/25',
+      eyebrow: 'text-amber-200',
+      badgeBg: 'bg-emerald-600/95 border-emerald-200/35',
+      cardHover: 'hover:border-emerald-300',
+      pctText: 'text-emerald-700',
+      progressBar: 'from-emerald-600 via-emerald-500 to-teal-400',
+      testPctText: 'text-emerald-700',
+      testBar: 'bg-teal-500',
+      lecBtn: 'bg-emerald-50/85 hover:bg-emerald-100 text-emerald-800 border-emerald-200/90',
+      primaryBtn: 'bg-emerald-600 hover:bg-emerald-700 shadow-emerald-900/15',
+      accentBar: 'bg-emerald-600',
+      headerLectureBtn: 'bg-amber-400 hover:bg-amber-300 text-slate-950',
+    };
+  }
+
+  // 4. ESL Program (non-IGCSE) — Crimson Red
+  if (t.includes('esl')) {
+    return {
+      stripe: 'from-amber-400 via-yellow-300 to-rose-400',
+      headerBg: 'from-[#dc2626] via-[#b91c1c] to-[#7f1d1d]',
+      orb1: 'bg-amber-300/25',
+      orb2: 'bg-rose-300/20',
+      eyebrow: 'text-amber-200',
+      badgeBg: 'bg-rose-600/95 border-rose-200/35',
+      cardHover: 'hover:border-rose-300',
+      pctText: 'text-rose-600',
+      progressBar: 'from-rose-600 via-rose-500 to-amber-400',
+      testPctText: 'text-rose-600',
+      testBar: 'bg-rose-500',
+      lecBtn: 'bg-rose-50/85 hover:bg-rose-100 text-rose-700 border-rose-200/90',
+      primaryBtn: 'bg-rose-600 hover:bg-rose-700 shadow-rose-900/15',
+      accentBar: 'bg-rose-600',
+      headerLectureBtn: 'bg-amber-400 hover:bg-amber-300 text-slate-950',
+    };
+  }
+
+  // 5. Giao tiếp Căn bản (Phát âm, Phản xạ, Tình huống) — Ocean Sky
+  if (
+    t.includes('pronunciation') ||
+    t.includes('phát âm') ||
+    t.includes('reflex') ||
+    t.includes('phản ứng') ||
+    t.includes('phản xạ') ||
+    t.includes('tình huống') ||
+    t.includes('communication') ||
+    t.includes('giao tiếp')
+  ) {
+    return {
+      stripe: 'from-sky-300 via-amber-300 to-emerald-400',
+      headerBg: 'from-[#0284c7] via-[#0369a1] to-[#0c4a6e]',
+      orb1: 'bg-amber-300/25',
+      orb2: 'bg-sky-300/25',
+      eyebrow: 'text-amber-200',
+      badgeBg: 'bg-sky-600/95 border-sky-200/35',
+      cardHover: 'hover:border-sky-300',
+      pctText: 'text-sky-700',
+      progressBar: 'from-sky-600 via-sky-500 to-cyan-400',
+      testPctText: 'text-sky-700',
+      testBar: 'bg-sky-500',
+      lecBtn: 'bg-sky-50/85 hover:bg-sky-100 text-sky-800 border-sky-200/90',
+      primaryBtn: 'bg-sky-600 hover:bg-sky-700 shadow-sky-900/15',
+      accentBar: 'bg-sky-600',
+      headerLectureBtn: 'bg-amber-400 hover:bg-amber-300 text-slate-950',
+    };
+  }
+
+  // 6. Giao tiếp Nâng cao, Tiếng Anh công sở & Ngữ pháp/Từ vựng — Indigo
+  return {
+    stripe: 'from-rose-400 via-amber-400 to-indigo-400',
+    headerBg: 'from-[#4f46e5] via-[#4338ca] to-[#312e81]',
+    orb1: 'bg-amber-300/25',
+    orb2: 'bg-fuchsia-300/20',
+    eyebrow: 'text-amber-200',
+    badgeBg: 'bg-indigo-600/95 border-indigo-200/35',
+    cardHover: 'hover:border-indigo-300',
+    pctText: 'text-indigo-700',
+    progressBar: 'from-indigo-600 via-indigo-500 to-sky-400',
+    testPctText: 'text-indigo-700',
+    testBar: 'bg-indigo-500',
+    lecBtn: 'bg-indigo-50/85 hover:bg-indigo-100 text-indigo-800 border-indigo-200/90',
+    primaryBtn: 'bg-indigo-600 hover:bg-indigo-700 shadow-indigo-900/15',
+    accentBar: 'bg-indigo-600',
+    headerLectureBtn: 'bg-amber-400 hover:bg-amber-300 text-slate-950',
+  };
+};
+
 export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }: any) {
   const [lang, setLang] = useLmsLang();
   const isEn = lang === 'en';
@@ -1907,12 +2057,15 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   }, [inProgressTest, courses, filterCourse, allTests, allFolders, completedTestIdsSet]);
 
   const hour = new Date().getHours();
-  let bannerConfig = { greeting: '', gradient: '', icon: '', subtitle: '' };
+  let bannerConfig = { greeting: '', gradient: '', stripe: '', orb1: '', orb2: '', icon: '', subtitle: '' };
   
   if (hour >= 5 && hour < 12) {
       bannerConfig = {
         greeting: isEn ? 'Good morning' : 'Chào buổi sáng',
-        gradient: 'from-[#073b5c] via-[#0a5482] to-[#0f172a]',
+        gradient: 'from-[#0284c7] via-[#0a5482] to-[#0f766e]',
+        stripe: 'from-amber-400 via-emerald-400 to-sky-400',
+        orb1: 'bg-amber-300/25',
+        orb2: 'bg-emerald-300/20',
         icon: '🌅',
         subtitle: isEn
           ? 'Start your day with focus and energy! Consistent daily effort builds extraordinary results.'
@@ -1921,7 +2074,10 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   } else if (hour >= 12 && hour < 18) {
       bannerConfig = {
         greeting: isEn ? 'Good afternoon' : 'Chào buổi chiều',
-        gradient: 'from-[#073b5c] via-[#0a5482] to-[#0f172a]',
+        gradient: 'from-[#0369a1] via-[#1d4ed8] to-[#4338ca]',
+        stripe: 'from-rose-500 via-amber-400 to-sky-400',
+        orb1: 'bg-amber-300/25',
+        orb2: 'bg-rose-400/20',
         icon: '🌤️',
         subtitle: isEn
           ? 'Keep pushing toward your goals! Stay focused and sharpen your skills step by step.'
@@ -1930,7 +2086,10 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   } else {
       bannerConfig = {
         greeting: isEn ? 'Good evening' : 'Chào buổi tối',
-        gradient: 'from-[#073b5c] via-[#0a5482] to-[#0f172a]',
+        gradient: 'from-[#1e3a8a] via-[#312e81] to-[#0f172a]',
+        stripe: 'from-amber-400 via-rose-400 to-indigo-400',
+        orb1: 'bg-amber-300/25',
+        orb2: 'bg-indigo-400/25',
         icon: '🌙',
         subtitle: isEn
           ? 'A quiet evening is the best time to review lessons and consolidate what you learned today.'
@@ -2186,11 +2345,11 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               }} 
               className={`px-3.5 lg:px-4 py-2 rounded-xl text-[14px] lg:text-[15px] font-bold transition-all whitespace-nowrap inline-flex items-center gap-2 cursor-pointer ${
                 activeTab === 'library'
-                  ? 'bg-sky-50 text-[#0a5482] shadow-2xs border border-sky-200/80'
-                  : 'text-slate-700 hover:text-[#0a5482] hover:bg-slate-50 border border-transparent'
+                  ? 'bg-sky-50 text-[#0a5482] shadow-2xs border border-sky-200/90'
+                  : 'text-slate-700 hover:text-[#0a5482] hover:bg-sky-50/50 border border-transparent'
               }`}
             >
-              <svg className={`w-4 h-4 ${activeTab === 'library' ? 'text-[#2ab4e8]' : 'text-slate-400'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+              <svg className={`w-4 h-4 ${activeTab === 'library' ? 'text-sky-600' : 'text-slate-400'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
               <span>{isEn ? 'Study & Tests' : 'Học tập & Kho đề'}</span>
             </button>
             <button 
@@ -2200,22 +2359,22 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               }} 
               className={`px-3.5 lg:px-4 py-2 rounded-xl text-[14px] lg:text-[15px] font-bold transition-all whitespace-nowrap inline-flex items-center gap-2 cursor-pointer ${
                 activeTab === 'calendar'
-                  ? 'bg-sky-50 text-[#0a5482] shadow-2xs border border-sky-200/80'
-                  : 'text-slate-700 hover:text-[#0a5482] hover:bg-slate-50 border border-transparent'
+                  ? 'bg-emerald-50 text-emerald-700 shadow-2xs border border-emerald-200/90'
+                  : 'text-slate-700 hover:text-emerald-700 hover:bg-emerald-50/50 border border-transparent'
               }`}
             >
-              <svg className={`w-4 h-4 ${activeTab === 'calendar' ? 'text-[#2ab4e8]' : 'text-slate-400'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>
+              <svg className={`w-4 h-4 ${activeTab === 'calendar' ? 'text-emerald-600' : 'text-slate-400'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>
               <span>{isEn ? 'Calendar' : 'Lịch báo bài'}</span>
             </button>
             <button 
               onClick={() => { resetWorkspaceAndChat(); setActiveTab('board'); }}
               className={`px-3.5 lg:px-4 py-2 rounded-xl text-[14px] lg:text-[15px] font-bold transition-all whitespace-nowrap inline-flex items-center gap-2 cursor-pointer ${
                 activeTab === 'board'
-                  ? 'bg-sky-50 text-[#0a5482] shadow-2xs border border-sky-200/80'
-                  : 'text-slate-700 hover:text-[#0a5482] hover:bg-slate-50 border border-transparent'
+                  ? 'bg-amber-50 text-amber-800 shadow-2xs border border-amber-200/90'
+                  : 'text-slate-700 hover:text-amber-700 hover:bg-amber-50/50 border border-transparent'
               }`}
             >
-              <svg className={`w-4 h-4 ${activeTab === 'board' ? 'text-[#2ab4e8]' : 'text-slate-400'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className={`w-4 h-4 ${activeTab === 'board' ? 'text-amber-600' : 'text-slate-400'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
               </svg>
               <span>{isEn ? 'Task Board' : 'Bảng công việc'}</span>
@@ -2227,11 +2386,11 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               }} 
               className={`px-3.5 lg:px-4 py-2 rounded-xl text-[14px] lg:text-[15px] font-bold transition-all whitespace-nowrap inline-flex items-center gap-2 cursor-pointer ${
                 activeTab === 'analytics'
-                  ? 'bg-sky-50 text-[#0a5482] shadow-2xs border border-sky-200/80'
-                  : 'text-slate-700 hover:text-[#0a5482] hover:bg-slate-50 border border-transparent'
+                  ? 'bg-indigo-50 text-indigo-700 shadow-2xs border border-indigo-200/90'
+                  : 'text-slate-700 hover:text-indigo-700 hover:bg-indigo-50/50 border border-transparent'
               }`}
             >
-              <svg className={`w-4 h-4 ${activeTab === 'analytics' ? 'text-[#2ab4e8]' : 'text-slate-400'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+              <svg className={`w-4 h-4 ${activeTab === 'analytics' ? 'text-indigo-600' : 'text-slate-400'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
               <span>{isEn ? 'Analytics' : 'Báo cáo'}</span>
             </button>
           </div>
@@ -2314,65 +2473,66 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         {activeTab === 'library' && activeView === 'dashboard' && (
           <div className="animate-in fade-in duration-500">
             {/* 🚀 HERO BANNER ĐỒNG BỘ TONYENGLISH.VN */}
-            <div className={`relative bg-gradient-to-r ${bannerConfig.gradient} rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 mb-8 sm:mb-10 overflow-hidden shadow-lg border border-slate-800/30`}>
-              <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#2ab4e8]/15 blur-3xl rounded-full pointer-events-none"></div>
-              <div className="absolute -bottom-24 -left-24 w-80 h-80 bg-sky-400/10 blur-3xl rounded-full pointer-events-none"></div>
+            <div className={`relative bg-gradient-to-r ${bannerConfig.gradient} rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 mb-8 sm:mb-10 overflow-hidden shadow-lg border border-white/15`}>
+              <div className={`absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r ${bannerConfig.stripe}`} />
+              <div className={`absolute -top-24 -right-24 w-96 h-96 ${bannerConfig.orb1} blur-3xl rounded-full pointer-events-none`}></div>
+              <div className={`absolute -bottom-24 -left-24 w-80 h-80 ${bannerConfig.orb2} blur-3xl rounded-full pointer-events-none`}></div>
               
               <div className="relative z-10 flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-6 lg:gap-10">
                 <div className="text-white flex-1">
-                  <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/15 px-3.5 py-1 rounded-full text-[11px] sm:text-xs font-extrabold uppercase tracking-widest text-[#2ab4e8] mb-3.5">
+                  <div className="inline-flex items-center gap-2 bg-amber-400/15 backdrop-blur-sm border border-amber-300/35 px-3.5 py-1 rounded-full text-[11px] sm:text-xs font-extrabold uppercase tracking-widest text-amber-200 mb-3.5">
                     <span>🎓</span>
                     <span>{isEn ? 'TonyEnglish Student Portal • Learning Hub' : 'TonyEnglish Student Portal • Góc Học Viên'}</span>
                   </div>
                   <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black mb-2.5 tracking-tight leading-tight">
-                    {bannerConfig.greeting}, <span className="text-[#2ab4e8]">{displayUserName}</span>! <span>{bannerConfig.icon}</span>
+                    {bannerConfig.greeting}, <span className="text-amber-300">{displayUserName}</span>! <span>{bannerConfig.icon}</span>
                   </h2>
-                  <p className="text-slate-200/90 text-sm sm:text-[15px] leading-relaxed max-w-2xl mb-6">
+                  <p className="text-slate-100/90 text-sm sm:text-[15px] leading-relaxed max-w-2xl mb-6">
                     {bannerConfig.subtitle}
                   </p>
 
                   {/* Quick Stats Strip (Đồng bộ với HomePage.tsx) */}
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 max-w-2xl">
                     <div className="bg-white/10 backdrop-blur-xs border border-white/15 rounded-xl px-3.5 py-2.5">
-                      <div className="text-[11px] font-bold uppercase tracking-wider text-sky-200/80">{isEn ? 'Active Courses' : 'Khóa đang học'}</div>
-                      <div className="text-lg sm:text-xl font-black text-white mt-0.5">{courses.length} <span className="text-xs font-semibold text-slate-300">{isEn ? 'courses' : 'khóa'}</span></div>
+                      <div className="text-[11px] font-bold uppercase tracking-wider text-sky-200/90">{isEn ? 'Active Courses' : 'Khóa đang học'}</div>
+                      <div className="text-lg sm:text-xl font-black text-white mt-0.5">{courses.length} <span className="text-xs font-semibold text-sky-200/80">{isEn ? 'courses' : 'khóa'}</span></div>
                     </div>
-                    <div className="bg-white/10 backdrop-blur-xs border border-white/15 rounded-xl px-3.5 py-2.5">
-                      <div className="text-[11px] font-bold uppercase tracking-wider text-sky-200/80">{isEn ? 'Completed' : 'Bài hoàn thành'}</div>
-                      <div className="text-lg sm:text-xl font-black text-emerald-300 mt-0.5">{historyData.length} <span className="text-xs font-semibold text-slate-300">{isEn ? 'tests' : 'đề'}</span></div>
+                    <div className="bg-white/10 backdrop-blur-xs border border-emerald-300/25 rounded-xl px-3.5 py-2.5">
+                      <div className="text-[11px] font-bold uppercase tracking-wider text-emerald-200/90">{isEn ? 'Completed' : 'Bài hoàn thành'}</div>
+                      <div className="text-lg sm:text-xl font-black text-emerald-300 mt-0.5">{historyData.length} <span className="text-xs font-semibold text-emerald-200/75">{isEn ? 'tests' : 'đề'}</span></div>
                     </div>
-                    <div className="bg-white/10 backdrop-blur-xs border border-white/15 rounded-xl px-3.5 py-2.5">
-                      <div className="text-[11px] font-bold uppercase tracking-wider text-sky-200/80">{isEn ? 'Practice Time' : 'Giờ luyện tập'}</div>
-                      <div className="text-lg sm:text-xl font-black text-[#2ab4e8] mt-0.5">{analyticsTotalTimeHours}h</div>
+                    <div className="bg-white/10 backdrop-blur-xs border border-rose-300/25 rounded-xl px-3.5 py-2.5">
+                      <div className="text-[11px] font-bold uppercase tracking-wider text-rose-200/90">{isEn ? 'Practice Time' : 'Giờ luyện tập'}</div>
+                      <div className="text-lg sm:text-xl font-black text-rose-300 mt-0.5">{analyticsTotalTimeHours}h</div>
                     </div>
                     <div
                       onClick={() => setActiveTab('analytics')}
-                      className="bg-white/10 hover:bg-white/15 backdrop-blur-xs border border-white/15 rounded-xl px-3.5 py-2.5 cursor-pointer transition-colors"
+                      className="bg-white/10 hover:bg-white/15 backdrop-blur-xs border border-amber-300/30 rounded-xl px-3.5 py-2.5 cursor-pointer transition-colors"
                       title={isEn ? 'View detailed analytics' : 'Xem báo cáo chi tiết'}
                     >
-                      <div className="text-[11px] font-bold uppercase tracking-wider text-amber-300/90 truncate">{heroTargetInfo.label}</div>
-                      <div className="text-lg sm:text-xl font-black text-amber-300 mt-0.5">{heroTargetInfo.value} <span className="text-xs font-normal text-white/70">↗</span></div>
+                      <div className="text-[11px] font-bold uppercase tracking-wider text-amber-200 truncate">{heroTargetInfo.label}</div>
+                      <div className="text-lg sm:text-xl font-black text-amber-300 mt-0.5">{heroTargetInfo.value} <span className="text-xs font-normal text-white/75">↗</span></div>
                     </div>
                   </div>
                 </div>
 
                 <div
-                  className="bg-white/10 backdrop-blur-md border border-white/20 p-5 sm:p-6 rounded-2xl w-full lg:w-80 shadow-xl text-white hover:bg-white/15 transition-all cursor-pointer group hover:-translate-y-0.5 shrink-0 flex flex-col justify-between"
+                  className="bg-white/12 backdrop-blur-md border border-amber-200/30 p-5 sm:p-6 rounded-2xl w-full lg:w-80 shadow-xl text-white hover:bg-white/15 transition-all cursor-pointer group hover:-translate-y-0.5 shrink-0 flex flex-col justify-between"
                   onClick={() => handleOpenStudyCoachModal()}
                 >
                   <div>
                     <div className="flex items-center justify-between mb-3">
-                      <span className="text-[11px] font-extrabold uppercase tracking-wider text-amber-300 bg-amber-400/15 border border-amber-300/30 px-3 py-1 rounded-full inline-flex items-center gap-1.5">
+                      <span className="text-[11px] font-extrabold uppercase tracking-wider text-amber-200 bg-amber-400/20 border border-amber-300/35 px-3 py-1 rounded-full inline-flex items-center gap-1.5">
                         <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
                         <span>{isEn ? 'Priority Roadmap' : 'Lộ trình trọng tâm'}</span>
                       </span>
-                      <span className="text-white/50 group-hover:text-white transition-colors">↗</span>
+                      <span className="text-amber-200/70 group-hover:text-amber-200 transition-colors">↗</span>
                     </div>
                     <h3 className="font-extrabold text-base sm:text-lg mb-2 leading-snug flex items-center gap-2">
                       <span>👨‍🏫</span>
                       <span>{isEn ? 'Teacher Tony AI Advisor' : 'Thầy Tony AI Chủ Nhiệm'}</span>
                     </h3>
-                    <p className="text-xs text-slate-200/90 mb-4 leading-relaxed">
+                    <p className="text-xs text-slate-100/90 mb-4 leading-relaxed">
                       {isEn
                         ? 'Automatically analyzes your progress, exam scores & assigns your highest-impact tasks for today.'
                         : 'Tự động phân tích tiến độ tổng thể, điểm số & chỉ định công việc cần làm ngay hôm nay.'}
@@ -2384,7 +2544,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                       e.stopPropagation();
                       handleOpenStudyCoachModal();
                     }}
-                    className="w-full bg-[#2ab4e8] hover:bg-[#1fa0d4] text-white font-black py-2.5 px-4 rounded-xl text-[13px] transition-colors uppercase tracking-wider shadow-md cursor-pointer"
+                    className="w-full bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-black py-2.5 px-4 rounded-xl text-[13px] transition-all uppercase tracking-wider shadow-md shadow-amber-950/20 cursor-pointer"
                   >
                     {isEn ? 'Get Advice & Daily Plan →' : 'Tư vấn & Giao việc ngay →'}
                   </button>
@@ -2396,8 +2556,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             {(resumeLectureInfo || resumeTestInfo) && (
               <div className="mb-8 sm:mb-10">
                 <div className="flex items-center gap-2 mb-3">
-                  <Sparkles className="w-4 h-4 text-[#0a5482]" />
-                  <span className="text-xs font-extrabold uppercase tracking-wider text-slate-500">
+                  <Sparkles className="w-4 h-4 text-amber-500" />
+                  <span className="text-xs font-extrabold uppercase tracking-wider text-slate-600">
                     {isEn ? '1-Click Resume • Jump Straight Back In' : 'Học tiếp 1 chạm • Vào thẳng bài gần nhất'}
                   </span>
                 </div>
@@ -2406,7 +2566,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                     <button
                       type="button"
                       onClick={() => handleGoToLecture(String(resumeLectureInfo.course.id), String(resumeLectureInfo.lecture.id))}
-                      className="bg-white hover:bg-sky-50/40 border border-slate-200/90 hover:border-[#2ab4e8] rounded-2xl p-4 sm:p-5 shadow-2xs hover:shadow-soft transition-all flex items-center justify-between gap-4 text-left group cursor-pointer"
+                      className="bg-white hover:bg-emerald-50/40 border border-slate-200/90 border-l-4 border-l-emerald-500 hover:border-emerald-300 rounded-2xl p-4 sm:p-5 shadow-2xs hover:shadow-soft transition-all flex items-center justify-between gap-4 text-left group cursor-pointer"
                     >
                       <div className="flex items-center gap-3.5 min-w-0">
                         <div className="w-12 h-12 rounded-2xl bg-emerald-50 border border-emerald-200/80 text-emerald-600 flex items-center justify-center shrink-0 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
@@ -2423,12 +2583,12 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                               {getLocalizedCourseTitle(resumeLectureInfo.course.title, lang)}
                             </span>
                           </div>
-                          <h4 className="font-display font-extrabold text-[15px] sm:text-base text-slate-800 group-hover:text-[#0a5482] truncate">
+                          <h4 className="font-display font-extrabold text-[15px] sm:text-base text-slate-800 group-hover:text-emerald-700 truncate">
                             {resumeLectureInfo.lecture.title}
                           </h4>
                         </div>
                       </div>
-                      <span className="w-9 h-9 rounded-xl bg-slate-100 group-hover:bg-[#0a5482] text-slate-600 group-hover:text-white flex items-center justify-center shrink-0 transition-colors">
+                      <span className="w-9 h-9 rounded-xl bg-emerald-50 group-hover:bg-emerald-600 text-emerald-700 group-hover:text-white flex items-center justify-center shrink-0 transition-colors">
                         <ArrowRight className="w-4 h-4" />
                       </span>
                     </button>
@@ -2438,13 +2598,17 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                     <button
                       type="button"
                       onClick={() => handleStartTestClick(resumeTestInfo.test)}
-                      className="bg-white hover:bg-sky-50/40 border border-slate-200/90 hover:border-[#2ab4e8] rounded-2xl p-4 sm:p-5 shadow-2xs hover:shadow-soft transition-all flex items-center justify-between gap-4 text-left group cursor-pointer"
+                      className={`bg-white border border-slate-200/90 border-l-4 rounded-2xl p-4 sm:p-5 shadow-2xs hover:shadow-soft transition-all flex items-center justify-between gap-4 text-left group cursor-pointer ${
+                        resumeTestInfo.isDraft
+                          ? 'border-l-amber-500 hover:bg-amber-50/40 hover:border-amber-300'
+                          : 'border-l-rose-500 hover:bg-rose-50/40 hover:border-rose-300'
+                      }`}
                     >
                       <div className="flex items-center gap-3.5 min-w-0">
                         <div className={`w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 transition-colors border ${
                           resumeTestInfo.isDraft
                             ? 'bg-amber-50 border-amber-200 text-amber-600 group-hover:bg-amber-500 group-hover:text-white'
-                            : 'bg-sky-50 border-sky-200 text-[#0a5482] group-hover:bg-[#0a5482] group-hover:text-white'
+                            : 'bg-rose-50 border-rose-200 text-rose-600 group-hover:bg-rose-600 group-hover:text-white'
                         }`}>
                           <Play className="w-5 h-5 fill-current" />
                         </div>
@@ -2453,7 +2617,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                             <span className={`text-[10.5px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded-md border ${
                               resumeTestInfo.isDraft
                                 ? 'text-amber-800 bg-amber-50 border-amber-200'
-                                : 'text-[#0a5482] bg-sky-50 border-sky-200/80'
+                                : 'text-rose-700 bg-rose-50 border-rose-200/80'
                             }`}>
                               {resumeTestInfo.isDraft
                                 ? isEn ? 'In Progress' : 'Đề đang làm dở'
@@ -2465,12 +2629,18 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                               </span>
                             )}
                           </div>
-                          <h4 className="font-display font-extrabold text-[15px] sm:text-base text-slate-800 group-hover:text-[#0a5482] truncate">
+                          <h4 className={`font-display font-extrabold text-[15px] sm:text-base text-slate-800 truncate ${
+                            resumeTestInfo.isDraft ? 'group-hover:text-amber-700' : 'group-hover:text-rose-700'
+                          }`}>
                             {resumeTestInfo.test.title}
                           </h4>
                         </div>
                       </div>
-                      <span className="w-9 h-9 rounded-xl bg-slate-100 group-hover:bg-[#0a5482] text-slate-600 group-hover:text-white flex items-center justify-center shrink-0 transition-colors">
+                      <span className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 transition-colors ${
+                        resumeTestInfo.isDraft
+                          ? 'bg-amber-50 group-hover:bg-amber-500 text-amber-700 group-hover:text-white'
+                          : 'bg-rose-50 group-hover:bg-rose-600 text-rose-600 group-hover:text-white'
+                      }`}>
                         <ArrowRight className="w-4 h-4" />
                       </span>
                     </button>
@@ -2604,6 +2774,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                   <div className={`grid ${isSingle ? 'grid-cols-1' : 'grid-cols-1 lg:grid-cols-2'} gap-6 xl:gap-8`}>
                     {filteredCourses.map(course => {
                       const cover = getCourseCover(course);
+                      const cTheme = getCourseIdentityTheme(course);
                       const localizedTitle = getLocalizedCourseTitle(course.title, lang);
                       const stats = courseStats[course.id] || { testCount: 0, lecCount: 0, completedTestIds: new Set(), completedLecIds: new Set() };
                       const isTrial = isCourseTrial(course.id);
@@ -2620,14 +2791,15 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                           : 0;
 
                       return (
-                        <div key={course.id} className={`bg-white rounded-2xl sm:rounded-3xl border overflow-hidden shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group flex ${isTrial ? 'border-amber-300/90 hover:border-amber-400' : 'border-slate-200/90 hover:border-[#2ab4e8]/60'} ${isSingle ? 'flex-col md:flex-row' : 'flex-col'}`}>
+                        <div key={course.id} className={`bg-white rounded-2xl sm:rounded-3xl border overflow-hidden shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group flex relative ${isTrial ? 'border-amber-300/90 hover:border-amber-400' : `border-slate-200/90 ${cTheme.cardHover}`} ${isSingle ? 'flex-col md:flex-row' : 'flex-col'}`}>
                           
                           {/* Image Top/Left Half */}
                           <div className={`relative overflow-hidden bg-slate-900 cursor-pointer ${isSingle ? 'w-full md:w-[44%] h-[230px] md:h-auto min-h-[290px]' : 'w-full h-[190px] sm:h-[215px]'}`} onClick={() => handleOpenCourse(course)}>
                              <img src={cover.image} loading="lazy" alt={localizedTitle} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
                              <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/90 via-[#0f172a]/30 to-transparent"></div>
+                             <div className={`absolute top-0 inset-x-0 h-1 bg-gradient-to-r ${cTheme.stripe}`} />
                              
-                             <div className="absolute top-4 left-4 bg-[#0a5482]/90 backdrop-blur-md text-white px-3 py-1 rounded-full text-[11px] font-extrabold uppercase tracking-wider border border-white/15 shadow-sm">
+                             <div className={`absolute top-4 left-4 ${cTheme.badgeBg} backdrop-blur-md text-white px-3 py-1 rounded-full text-[11px] font-extrabold uppercase tracking-wider border shadow-sm`}>
                                  {cover.badge}
                              </div>
                              {isTrial && (
@@ -2646,7 +2818,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                                </button>
                              )}
                              <div className="absolute bottom-4 left-5 right-5">
-                               <span className="text-[11px] font-bold uppercase tracking-widest text-[#2ab4e8] block mb-0.5">TonyEnglish Official Course</span>
+                               <span className={`text-[11px] font-bold uppercase tracking-widest ${cTheme.eyebrow} block mb-0.5`}>TonyEnglish Official Course</span>
                                <h4 className={`font-black ${isSingle ? 'text-2xl md:text-3xl' : 'text-xl md:text-2xl'} text-white leading-snug drop-shadow-sm`}>
                                    {localizedTitle}
                                </h4>
@@ -2660,10 +2832,10 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                             <div className="mb-5">
                                 <div className="flex justify-between items-end mb-2">
                                     <span className="text-[12px] font-extrabold text-slate-500 uppercase tracking-wider">{isEn ? 'Overall Course Progress' : 'Tiến độ hoàn thành khóa học'}</span>
-                                    <span className="text-[18px] font-black text-[#0a5482]">{overallProgress}%</span>
+                                    <span className={`text-[18px] font-black ${cTheme.pctText}`}>{overallProgress}%</span>
                                 </div>
                                 <div className="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden border border-slate-200/60">
-                                    <div className="h-full bg-gradient-to-r from-[#0a5482] to-[#2ab4e8] rounded-full transition-all duration-1000" style={{ width: `${overallProgress}%` }}></div>
+                                    <div className={`h-full bg-gradient-to-r ${cTheme.progressBar} rounded-full transition-all duration-1000`} style={{ width: `${overallProgress}%` }}></div>
                                 </div>
                             </div>
 
@@ -2683,11 +2855,11 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                               <div className="flex-1">
                                   <div className="flex items-center justify-between mb-1">
                                       <span className="flex items-center gap-1.5 text-[11px] font-extrabold text-slate-500 uppercase tracking-wider"><span>📝</span> {isEn ? 'Test Bank' : 'Kho đề thi'}</span>
-                                      <span className="font-black text-[#0a5482] text-[12px]">{testProgress}%</span>
+                                      <span className={`font-black ${cTheme.testPctText} text-[12px]`}>{testProgress}%</span>
                                   </div>
                                   <div className="font-black text-slate-800 text-[14px] mb-2">{stats.completedTestIds.size} / {stats.testCount} <span className="text-[11px] font-semibold text-slate-400">{isEn ? 'tests' : 'đề luyện'}</span></div>
                                   <div className="w-full h-1.5 bg-slate-200 rounded-full overflow-hidden">
-                                      <div className="h-full bg-[#2ab4e8] rounded-full transition-all duration-1000" style={{ width: `${testProgress}%` }}></div>
+                                      <div className={`h-full ${cTheme.testBar} rounded-full transition-all duration-1000`} style={{ width: `${testProgress}%` }}></div>
                                   </div>
                               </div>
                             </div>
@@ -2698,7 +2870,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                                  <button onClick={() => {
                                      resetWorkspaceAndChat(); 
                                      if(onOpenLecture) onOpenLecture(course.id);
-                                 }} className="w-full bg-sky-50/80 hover:bg-sky-100 text-[#0a5482] border border-sky-200/90 font-extrabold text-[13px] py-3 px-4 rounded-xl transition-all flex items-center justify-center gap-2 uppercase tracking-wider cursor-pointer active:scale-95">
+                                 }} className={`w-full ${cTheme.lecBtn} border font-extrabold text-[13px] py-3 px-4 rounded-xl transition-all flex items-center justify-center gap-2 uppercase tracking-wider cursor-pointer active:scale-95`}>
                                      <span>📖</span> <span>{isEn ? 'Theory Lectures' : 'Bài giảng lý thuyết'}</span>
                                  </button>
                                  {isTrial && (
@@ -2717,7 +2889,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                                </div>
 
                                <div className="relative flex-[1.3]">
-                                 <button onClick={() => handleOpenCourse(course)} className="w-full bg-[#0a5482] hover:bg-[#084266] text-white font-extrabold text-[13px] py-3 px-4 rounded-xl transition-all shadow-md shadow-blue-900/15 flex items-center justify-center gap-2 uppercase tracking-wider cursor-pointer active:scale-95">
+                                 <button onClick={() => handleOpenCourse(course)} className={`w-full ${cTheme.primaryBtn} text-white font-extrabold text-[13px] py-3 px-4 rounded-xl transition-all shadow-md flex items-center justify-center gap-2 uppercase tracking-wider cursor-pointer active:scale-95`}>
                                      <span>🚀</span> <span>{isEn ? 'Open Test Bank' : 'Vào kho đề & Làm bài'}</span>
                                  </button>
                                  {isTrial && (
@@ -2791,13 +2963,22 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               ))}
             </nav>
 
-            {/* TONYENGLISH LIBRARY SECTION HEADER BANNER (Giống NewsPage.tsx) */}
-            <div className="bg-gradient-to-r from-[#0a5482] to-[#0f172a] rounded-2xl sm:rounded-3xl px-5 sm:px-8 py-5 sm:py-6 text-white mb-6 sm:mb-8 shadow-sm flex flex-col lg:flex-row lg:items-center justify-between gap-4 relative z-30">
-              <div className="min-w-0">
-                <div className="text-[11px] sm:text-xs font-extrabold uppercase tracking-widest text-[#2ab4e8] mb-1 flex items-center gap-2">
+            {/* TONYENGLISH LIBRARY SECTION HEADER BANNER (Đổi màu theo đúng hệ khóa học) */}
+            {(() => {
+              const selTheme = getCourseIdentityTheme(selectedCourse);
+              return (
+            <div className={`bg-gradient-to-r ${selTheme.headerBg} rounded-2xl sm:rounded-3xl px-5 sm:px-8 py-5 sm:py-6 text-white mb-6 sm:mb-8 shadow-md flex flex-col lg:flex-row lg:items-center justify-between gap-4 relative z-30 border border-white/15`}>
+              {/* Decorative Ribbon + Glow inside clipped layer so course dropdown never clips */}
+              <div className="absolute inset-0 overflow-hidden rounded-2xl sm:rounded-3xl pointer-events-none">
+                <div className={`absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r ${selTheme.stripe}`} />
+                <div className={`absolute -top-20 -right-16 w-64 h-64 rounded-full blur-3xl ${selTheme.orb1}`} />
+                <div className={`absolute -bottom-20 left-1/3 w-52 h-52 rounded-full blur-3xl ${selTheme.orb2}`} />
+              </div>
+              <div className="min-w-0 relative z-10">
+                <div className={`text-[11px] sm:text-xs font-extrabold uppercase tracking-widest ${selTheme.eyebrow} mb-1 flex items-center gap-2 flex-wrap`}>
                   <span>📚 TonyEnglish Course &amp; Test Library</span>
                   {(currentSubFolders.length > 0 || currentTests.length > 0) && (
-                    <span className="bg-white/15 text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full border border-white/20 normal-case tracking-normal">
+                    <span className="bg-white/15 text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full border border-white/25 normal-case tracking-normal">
                       {currentSubFolders.length > 0 ? `${currentSubFolders.length} ${isEn ? 'folders' : 'danh mục'}` : ''}
                       {currentSubFolders.length > 0 && currentTests.length > 0 ? ' • ' : ''}
                       {currentTests.length > 0 ? `${currentTests.length} ${isEn ? 'tests' : 'bài tập'}` : ''}
@@ -2810,7 +2991,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               </div>
 
               {/* ACTION CONTROLS: QUAY LẠI, THẦY TONY AI, CHUYỂN KHÓA HỌC & MỞ BÀI GIẢNG */}
-              <div className="flex flex-wrap items-center gap-2.5 shrink-0">
+              <div className="flex flex-wrap items-center gap-2.5 shrink-0 relative z-20">
                 <button
                   type="button"
                   onClick={() => {
@@ -2827,7 +3008,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                       sessionStorage.removeItem('portal_current_folder_id');
                     }
                   }}
-                  className="bg-white/10 hover:bg-white/20 text-white border border-white/20 font-bold text-xs sm:text-[13px] px-3.5 py-2 rounded-xl transition-all flex items-center gap-1.5 cursor-pointer"
+                  className="bg-white/12 hover:bg-white/22 text-white border border-white/25 font-bold text-xs sm:text-[13px] px-3.5 py-2 rounded-xl transition-all flex items-center gap-1.5 cursor-pointer"
                 >
                   <span>←</span>
                   <span>{isEn ? 'Back' : 'Quay lại'}</span>
@@ -2900,12 +3081,14 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                     resetWorkspaceAndChat(); 
                     if(onOpenLecture && selectedCourse) onOpenLecture(selectedCourse.id);
                   }} 
-                  className="w-full sm:w-auto bg-[#2ab4e8] hover:bg-[#1fa0d4] text-white font-extrabold text-xs sm:text-[13px] px-4 py-2 rounded-xl transition-all flex items-center justify-center gap-2 shadow-sm uppercase tracking-wider shrink-0 cursor-pointer active:scale-95"
+                  className={`w-full sm:w-auto ${selTheme.headerLectureBtn} font-black text-xs sm:text-[13px] px-4 py-2 rounded-xl transition-all flex items-center justify-center gap-2 shadow-sm uppercase tracking-wider shrink-0 cursor-pointer active:scale-95`}
                 >
                   <span>📖</span> <span>{isEn ? 'Theory Lectures' : 'Bài Giảng Lý Thuyết'}</span>
                 </button>
               </div>
             </div>
+              );
+            })()}
 
             {isCourseTrial(selectedCourse.id) && (
               <div className="mb-6 bg-gradient-to-r from-amber-50 via-yellow-50/90 to-amber-50 border border-amber-300/90 rounded-2xl px-4 sm:px-6 py-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3.5 shadow-2xs">
@@ -2949,7 +3132,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               {currentSubFolders.length > 0 && (
                 <div>
                   <div className="flex items-center gap-2.5 mb-5">
-                    <span className="w-1.5 h-6 bg-[#0a5482] rounded-full"></span>
+                    <span className={`w-1.5 h-6 ${getCourseIdentityTheme(selectedCourse).accentBar} rounded-full`}></span>
                     <h3 className="font-black text-lg sm:text-xl text-slate-900 tracking-tight m-0">
                       {isEn ? 'Topics & Practice Sets' : 'Danh mục chuyên đề & Bộ đề'}
                     </h3>
@@ -3325,19 +3508,25 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
           >
             {/* TONYENGLISH.VN SYNCHRONIZED HEADER BANNER */}
             <div 
-              className="w-full rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-7 shadow-md text-white flex flex-col gap-4 transition-all relative z-30 border border-slate-800/20" 
-              style={{ background: analyticsTheme.titleBg || 'linear-gradient(135deg, #073b5c 0%, #0a5482 55%, #0f172a 100%)' }}
+              className="w-full rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-7 shadow-md text-white flex flex-col gap-4 transition-all relative z-30 border border-white/15" 
+              style={{
+                background:
+                  analyticsTheme.id === 'tony-classic'
+                    ? 'linear-gradient(135deg, #4338ca 0%, #1d4ed8 48%, #0f766e 100%)'
+                    : (analyticsTheme.titleBg || 'linear-gradient(135deg, #4338ca 0%, #1d4ed8 48%, #0f766e 100%)'),
+              }}
             >
-              {/* Decorative Ambient Glow */}
+              {/* Decorative Ribbon + Ambient Glow */}
               <div className="absolute inset-0 overflow-hidden rounded-2xl sm:rounded-3xl pointer-events-none">
-                <div className="absolute -top-24 -right-24 w-80 h-80 bg-[#2ab4e8]/15 blur-3xl rounded-full"></div>
-                <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-sky-400/10 blur-3xl rounded-full"></div>
+                <div className="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-rose-400 via-amber-400 to-emerald-400" />
+                <div className="absolute -top-24 -right-24 w-80 h-80 bg-amber-300/20 blur-3xl rounded-full"></div>
+                <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-emerald-400/15 blur-3xl rounded-full"></div>
               </div>
 
               <div className="relative z-20 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4">
                 {/* CỘT 1 (BÊN TRÁI): TIÊU ĐỀ */}
                 <div className="min-w-0 flex-1">
-                  <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-xs border border-white/15 px-3 py-1 rounded-full text-[10px] sm:text-[11px] font-extrabold tracking-widest uppercase text-[#2ab4e8] mb-2.5 whitespace-nowrap">
+                  <div className="inline-flex items-center gap-2 bg-amber-400/15 backdrop-blur-xs border border-amber-300/35 px-3 py-1 rounded-full text-[10px] sm:text-[11px] font-extrabold tracking-widest uppercase text-amber-200 mb-2.5 whitespace-nowrap">
                     <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
                     <span>{isEn ? 'TonyEnglish Performance Analytics' : 'TonyEnglish Performance Analytics • Báo Cáo Hiệu Suất'}</span>
                   </div>
@@ -4687,11 +4876,11 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
           }}
           className={`flex flex-col items-center justify-center py-1 px-3 rounded-2xl transition-all duration-200 min-w-[64px] ${
             activeTab === 'calendar'
-              ? 'text-[#0a5482] font-bold scale-105'
+              ? 'text-emerald-700 font-bold scale-105'
               : 'text-slate-400 hover:text-slate-600 font-medium'
           }`}
         >
-          <div className={`p-1 rounded-xl transition-colors ${activeTab === 'calendar' ? 'bg-sky-50 text-[#0a5482]' : ''}`}>
+          <div className={`p-1 rounded-xl transition-colors ${activeTab === 'calendar' ? 'bg-emerald-50 text-emerald-600' : ''}`}>
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={activeTab === 'calendar' ? 2.5 : 2} d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
             </svg>
@@ -4707,11 +4896,11 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
           }}
           className={`flex flex-col items-center justify-center py-1 px-3 rounded-2xl transition-all duration-200 min-w-[64px] ${
             activeTab === 'board'
-              ? 'text-[#0a5482] font-bold scale-105'
+              ? 'text-amber-700 font-bold scale-105'
               : 'text-slate-400 hover:text-slate-600 font-medium'
           }`}
         >
-          <div className={`p-1 rounded-xl transition-colors ${activeTab === 'board' ? 'bg-sky-50 text-[#0a5482]' : ''}`}>
+          <div className={`p-1 rounded-xl transition-colors ${activeTab === 'board' ? 'bg-amber-50 text-amber-600' : ''}`}>
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={activeTab === 'board' ? 2.5 : 2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
             </svg>
@@ -4727,11 +4916,11 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
           }}
           className={`flex flex-col items-center justify-center py-1 px-3 rounded-2xl transition-all duration-200 min-w-[64px] ${
             activeTab === 'analytics'
-              ? 'text-[#0a5482] font-bold scale-105'
+              ? 'text-indigo-700 font-bold scale-105'
               : 'text-slate-400 hover:text-slate-600 font-medium'
           }`}
         >
-          <div className={`p-1 rounded-xl transition-colors ${activeTab === 'analytics' ? 'bg-sky-50 text-[#0a5482]' : ''}`}>
+          <div className={`p-1 rounded-xl transition-colors ${activeTab === 'analytics' ? 'bg-indigo-50 text-indigo-600' : ''}`}>
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={activeTab === 'analytics' ? 2.5 : 2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
             </svg>

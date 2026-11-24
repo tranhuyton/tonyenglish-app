@@ -950,19 +950,25 @@ export default function TaskBoard({
       {/* TONYENGLISH.VN SYNCHRONIZED HEADER BANNER */}
       <div className="mb-5 sm:mb-6 shrink-0 relative z-30">
         <div 
-          className="rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-7 shadow-md text-white flex flex-col gap-4 transition-all duration-300 relative border border-slate-800/20"
-          style={{ background: boardTheme.titleBg }}
+          className="rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-7 shadow-md text-white flex flex-col gap-4 transition-all duration-300 relative border border-white/15"
+          style={{
+            background:
+              boardTheme.id === 'tony-classic'
+                ? 'linear-gradient(135deg, #0369a1 0%, #1d4ed8 52%, #4338ca 100%)'
+                : boardTheme.titleBg,
+          }}
         >
-          {/* Decorative Ambient Glow */}
+          {/* Decorative Ribbon + Ambient Glow */}
           <div className="absolute inset-0 overflow-hidden rounded-2xl sm:rounded-3xl pointer-events-none">
-            <div className="absolute -top-24 -right-24 w-80 h-80 bg-[#2ab4e8]/15 blur-3xl rounded-full"></div>
-            <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-sky-400/10 blur-3xl rounded-full"></div>
+            <div className="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-amber-400 via-rose-400 to-sky-400" />
+            <div className="absolute -top-24 -right-24 w-80 h-80 bg-amber-300/20 blur-3xl rounded-full"></div>
+            <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-indigo-400/20 blur-3xl rounded-full"></div>
           </div>
 
           <div className="relative z-20 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4">
             <div className="flex items-start justify-between w-full lg:w-auto gap-3 min-w-0 flex-1">
               <div className="min-w-0">
-                <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-xs border border-white/15 px-3 py-1 rounded-full text-[10px] sm:text-[11px] font-extrabold tracking-widest uppercase text-[#2ab4e8] mb-2.5 whitespace-nowrap">
+                <div className="inline-flex items-center gap-2 bg-amber-400/15 backdrop-blur-xs border border-amber-300/35 px-3 py-1 rounded-full text-[10px] sm:text-[11px] font-extrabold tracking-widest uppercase text-amber-200 mb-2.5 whitespace-nowrap">
                   <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
                   <span>{isEn ? 'TonyEnglish Study Task Board' : 'TonyEnglish Task Board • Bảng Công Việc'}</span>
                 </div>
@@ -1091,11 +1097,11 @@ export default function TaskBoard({
                 <div className="bg-white/10 backdrop-blur-xs border border-white/15 rounded-xl px-3.5 py-1.5 flex flex-col justify-center min-w-[175px]">
                   <div className="flex items-center justify-between text-[11.5px] text-white/95 font-bold mb-1 gap-2 whitespace-nowrap">
                     <span>{isEn ? 'Overall Progress' : 'Tiến độ chung'}</span>
-                    <span className="text-[#2ab4e8] font-black">{currentBoard.totalCompleted}/{currentBoard.totalItems} ({currentBoard.overallProgress}%)</span>
+                    <span className="text-amber-200 font-black">{currentBoard.totalCompleted}/{currentBoard.totalItems} ({currentBoard.overallProgress}%)</span>
                   </div>
                   <div className="w-full h-1.5 bg-white/20 rounded-full overflow-hidden">
                     <div 
-                      className="h-full bg-gradient-to-r from-[#2ab4e8] to-emerald-400 rounded-full transition-all duration-500"
+                      className="h-full bg-gradient-to-r from-amber-300 to-emerald-300 rounded-full transition-all duration-500"
                       style={{ width: `${currentBoard.overallProgress}%` }}
                     />
                   </div>
