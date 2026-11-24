@@ -136,9 +136,42 @@ export const Layout: React.FC<{
   const [searchDropdownOpen, setSearchDropdownOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isFullscreen, setIsFullscreen] = useState(false);
   const searchBarRef = useRef<HTMLDivElement | null>(null);
   const searchDropdownOpenRef = useRef(searchDropdownOpen);
   searchDropdownOpenRef.current = searchDropdownOpen;
+
+  useEffect(() => {
+    const handleFullscreenChange = () => {
+      const doc = document as any;
+      setIsFullscreen(Boolean(document.fullscreenElement || doc.webkitFullscreenElement));
+    };
+    handleFullscreenChange();
+    document.addEventListener('fullscreenchange', handleFullscreenChange);
+    document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
+    return () => {
+      document.removeEventListener('fullscreenchange', handleFullscreenChange);
+      document.removeEventListener('webkitfullscreenchange', handleFullscreenChange);
+    };
+  }, []);
+
+  const toggleFullScreen = () => {
+    const doc = document as any;
+    const root = document.documentElement as any;
+    if (!document.fullscreenElement && !doc.webkitFullscreenElement) {
+      if (root.requestFullscreen) {
+        root.requestFullscreen().catch(() => {});
+      } else if (root.webkitRequestFullscreen) {
+        root.webkitRequestFullscreen();
+      }
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen().catch(() => {});
+      } else if (doc.webkitExitFullscreen) {
+        doc.webkitExitFullscreen();
+      }
+    }
+  };
 
   // Dictionary / Translate modal popup
   const [popupModal, setPopupModal] = useState<{ title: string; url?: string; content?: string } | null>(null);
@@ -910,6 +943,41 @@ export const Layout: React.FC<{
                 </button>
               </div>
             )}
+
+            {/* Fullscreen Toggle Button (matches Student Portal header) */}
+            <button
+              type="button"
+              onClick={toggleFullScreen}
+              className="hidden md:inline-flex w-9 h-9 rounded-xl items-center justify-center text-slate-500 hover:bg-slate-100 border border-transparent hover:border-slate-200 hover:text-[#0a5482] transition-colors cursor-pointer shrink-0"
+              title={
+                isFullscreen
+                  ? lang === 'vi'
+                    ? 'Thoát toàn màn hình'
+                    : 'Exit fullscreen'
+                  : lang === 'vi'
+                  ? 'Toàn màn hình'
+                  : 'Fullscreen'
+              }
+              aria-label={
+                isFullscreen
+                  ? lang === 'vi'
+                    ? 'Thoát toàn màn hình'
+                    : 'Exit fullscreen'
+                  : lang === 'vi'
+                  ? 'Toàn màn hình'
+                  : 'Fullscreen'
+              }
+            >
+              {isFullscreen ? (
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5l5.25 5.25" />
+                </svg>
+              ) : (
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0-4.5L15 15" />
+                </svg>
+              )}
+            </button>
 
             {/* Mobile Hamburger Button */}
             <button

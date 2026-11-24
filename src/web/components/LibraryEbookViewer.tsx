@@ -525,8 +525,13 @@ export const LibraryEbookViewer: React.FC<LibraryEbookViewerProps> = ({
       id="library-ebook-viewer"
       className={
         isTheater
-          ? `fixed inset-0 z-50 h-[100dvh] w-screen ${backdropClass} flex flex-col overflow-hidden`
+          ? `fixed inset-0 !m-0 z-[100] h-[100dvh] w-screen ${backdropClass} flex flex-col overflow-hidden`
           : `rounded-2xl sm:rounded-3xl border border-slate-200/90 ${backdropClass} overflow-hidden shadow-md scroll-mt-20 flex flex-col`
+      }
+      style={
+        isTheater
+          ? { margin: 0, top: 0, right: 0, bottom: 0, left: 0, height: '100dvh', width: '100vw' }
+          : undefined
       }
     >
       {/* Reader Styles (book spread shadow + comfort reading filters + crisp text layer selection) */}
@@ -752,7 +757,7 @@ export const LibraryEbookViewer: React.FC<LibraryEbookViewerProps> = ({
           onTouchEnd={handleTouchEnd}
           className={`relative flex flex-col items-center ${
             isTheater
-              ? 'flex-1 overflow-auto py-3 sm:py-5 px-1.5 sm:px-6'
+              ? 'flex-1 min-h-0 overflow-auto py-3 sm:py-5 px-1.5 sm:px-6'
               : viewMode === 'scroll'
               ? 'h-[76vh] min-h-[480px] overflow-auto py-3 sm:py-5 px-1.5 sm:px-6'
               : zoomScale > 1.01
