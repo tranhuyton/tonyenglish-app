@@ -352,43 +352,114 @@ img[alt*="Fill Image"] {
   box-shadow: none !important;
 }
 
-/* Airy, easy-to-read line & section spacing for Course Tab content (/courses & /khoa-hoc) */
+/* Airy, vibrant, multi-color editorial styling for Course Tab content (/courses & /khoa-hoc) */
 .course-tab-prose {
-  line-height: 1.95 !important;
+  --cp-accent: #dc2626;
+  --cp-accent-deep: #991b1b;
+  --cp-h2-bg: linear-gradient(90deg, #fff1f2 0%, #fffbeb 55%, rgba(255, 255, 255, 0) 100%);
+  --cp-strong: #0f172a;
+  line-height: 1.9 !important;
   letter-spacing: 0.005em;
+  color: #334155;
+}
+.course-tab-prose[data-course-theme="ielts"] {
+  --cp-accent: #dc2626;
+  --cp-accent-deep: #991b1b;
+  --cp-h2-bg: linear-gradient(90deg, #fef2f2 0%, #fffbeb 60%, rgba(255, 255, 255, 0) 100%);
+}
+.course-tab-prose[data-course-theme="igcse"] {
+  --cp-accent: #059669;
+  --cp-accent-deep: #065f46;
+  --cp-h2-bg: linear-gradient(90deg, #ecfdf5 0%, #fffbeb 60%, rgba(255, 255, 255, 0) 100%);
+}
+.course-tab-prose[data-course-theme="sat"] {
+  --cp-accent: #d97706;
+  --cp-accent-deep: #92400e;
+  --cp-h2-bg: linear-gradient(90deg, #fffbeb 0%, #fef3c7 50%, rgba(255, 255, 255, 0) 100%);
+}
+.course-tab-prose[data-course-theme="comm-basic"] {
+  --cp-accent: #0284c7;
+  --cp-accent-deep: #075985;
+  --cp-h2-bg: linear-gradient(90deg, #f0f9ff 0%, #fffbeb 60%, rgba(255, 255, 255, 0) 100%);
+}
+.course-tab-prose[data-course-theme="comm-advanced"] {
+  --cp-accent: #4f46e5;
+  --cp-accent-deep: #3730a3;
+  --cp-h2-bg: linear-gradient(90deg, #eef2ff 0%, #fffbeb 60%, rgba(255, 255, 255, 0) 100%);
 }
 .course-tab-prose p,
 .course-tab-prose li,
 .course-tab-prose span,
 .course-tab-prose div {
-  line-height: 1.95 !important;
+  line-height: 1.9 !important;
 }
 .course-tab-prose p {
-  margin-bottom: 1.85rem !important;
+  margin-bottom: 1.45rem !important;
 }
 .course-tab-prose p:last-child {
   margin-bottom: 0.5rem !important;
 }
+.course-tab-prose p strong,
+.course-tab-prose p b {
+  color: #0f172a;
+  font-weight: 800 !important;
+}
+.course-tab-prose p a {
+  color: #0369a1;
+  text-decoration: underline;
+  text-decoration-color: #fbbf24;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+.course-tab-prose p a:hover {
+  color: #dc2626;
+  text-decoration-color: #dc2626;
+}
 .course-tab-prose h2,
 .course-tab-prose .legacy-section-heading {
-  margin-top: 3.25rem !important;
-  padding-top: 1.5rem !important;
-  border-top: 1px solid #e2e8f0 !important;
-  margin-bottom: 1.45rem !important;
+  margin-top: 2.5rem !important;
+  margin-bottom: 1.35rem !important;
+  padding: 0.7rem 1.05rem !important;
+  border-top: none !important;
+  border-left: 5px solid var(--cp-accent) !important;
+  border-radius: 0.75rem !important;
+  background: var(--cp-h2-bg) !important;
+  color: var(--cp-accent-deep) !important;
+  font-size: 1.32rem !important;
+  font-weight: 900 !important;
   line-height: 1.4 !important;
 }
 .course-tab-prose h3 {
-  margin-top: 2.85rem !important;
-  padding-top: 1.15rem !important;
-  border-top: 1px dashed #e2e8f0 !important;
-  margin-bottom: 1.35rem !important;
+  margin-top: 2.35rem !important;
+  margin-bottom: 1.2rem !important;
+  padding: 0.6rem 0.95rem !important;
+  border-top: none !important;
+  border-left: 4px solid #059669 !important;
+  border-radius: 0.65rem !important;
+  background: linear-gradient(90deg, #ecfdf5 0%, rgba(236, 253, 245, 0.25) 75%, transparent 100%) !important;
+  color: #065f46 !important;
+  font-size: 1.12rem !important;
+  font-weight: 800 !important;
   line-height: 1.42 !important;
+}
+.course-tab-prose h3:nth-of-type(3n + 2) {
+  border-left-color: #d97706 !important;
+  background: linear-gradient(90deg, #fffbeb 0%, rgba(255, 251, 235, 0.3) 75%, transparent 100%) !important;
+  color: #92400e !important;
+}
+.course-tab-prose h3:nth-of-type(3n + 3) {
+  border-left-color: #e11d48 !important;
+  background: linear-gradient(90deg, #fff1f2 0%, rgba(255, 241, 242, 0.3) 75%, transparent 100%) !important;
+  color: #9f1239 !important;
 }
 .course-tab-prose h4,
 .course-tab-prose h5,
 .course-tab-prose h6 {
-  margin-top: 2.25rem !important;
-  margin-bottom: 1.1rem !important;
+  margin-top: 1.85rem !important;
+  margin-bottom: 0.95rem !important;
+  color: #b45309 !important;
+  font-weight: 800 !important;
   line-height: 1.45 !important;
 }
 .course-tab-prose > h1:first-child,
@@ -396,31 +467,116 @@ img[alt*="Fill Image"] {
 .course-tab-prose > .legacy-section-heading:first-child,
 .course-tab-prose > h3:first-child,
 .course-tab-prose > h4:first-child {
-  margin-top: 0.35rem !important;
-  padding-top: 0 !important;
-  border-top: none !important;
+  margin-top: 0.15rem !important;
 }
-.course-tab-prose ul,
-.course-tab-prose ol {
-  margin-top: 1.25rem !important;
-  margin-bottom: 2.35rem !important;
-  padding-left: 1.65rem !important;
+/* Vibrant rotating color-coded feature cards for <ol> and <ul> lists */
+.course-tab-prose ol,
+.course-tab-prose ul {
+  list-style: none !important;
+  margin-top: 1.1rem !important;
+  margin-bottom: 1.85rem !important;
+  padding-left: 0 !important;
+  counter-reset: course-step;
 }
-.course-tab-prose li {
-  margin-bottom: 1.45rem !important;
+.course-tab-prose ol > li,
+.course-tab-prose ul > li {
+  position: relative;
+  counter-increment: course-step;
+  padding: 0.95rem 1.15rem 0.95rem 3.35rem !important;
+  margin-bottom: 0.9rem !important;
+  border-radius: 0.9rem !important;
+  border: 1px solid #fecdd3 !important;
+  border-left-width: 4px !important;
+  border-left-color: #e11d48 !important;
+  background: linear-gradient(135deg, #fff1f2 0%, #ffffff 70%) !important;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+.course-tab-prose ol > li::before,
+.course-tab-prose ul > li::before {
+  content: counter(course-step);
+  position: absolute;
+  left: 0.9rem;
+  top: 1rem;
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 0.55rem;
+  background: #e11d48;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(225, 29, 72, 0.25);
+}
+.course-tab-prose ul > li::before {
+  content: "✓";
+  font-size: 0.85rem;
+}
+.course-tab-prose ol > li > strong:first-child,
+.course-tab-prose ul > li > strong:first-child {
+  color: #be123c !important;
+}
+/* Cycle 2: Emerald Green */
+.course-tab-prose ol > li:nth-child(4n + 2),
+.course-tab-prose ul > li:nth-child(4n + 2) {
+  border-color: #a7f3d0 !important;
+  border-left-color: #059669 !important;
+  background: linear-gradient(135deg, #ecfdf5 0%, #ffffff 70%) !important;
+}
+.course-tab-prose ol > li:nth-child(4n + 2)::before,
+.course-tab-prose ul > li:nth-child(4n + 2)::before {
+  background: #059669;
+  box-shadow: 0 2px 6px rgba(5, 150, 105, 0.25);
+}
+.course-tab-prose ol > li:nth-child(4n + 2) > strong:first-child,
+.course-tab-prose ul > li:nth-child(4n + 2) > strong:first-child {
+  color: #047857 !important;
+}
+/* Cycle 3: Warm Amber Gold */
+.course-tab-prose ol > li:nth-child(4n + 3),
+.course-tab-prose ul > li:nth-child(4n + 3) {
+  border-color: #fde68a !important;
+  border-left-color: #d97706 !important;
+  background: linear-gradient(135deg, #fffbeb 0%, #ffffff 70%) !important;
+}
+.course-tab-prose ol > li:nth-child(4n + 3)::before,
+.course-tab-prose ul > li:nth-child(4n + 3)::before {
+  background: #d97706;
+  box-shadow: 0 2px 6px rgba(217, 119, 6, 0.25);
+}
+.course-tab-prose ol > li:nth-child(4n + 3) > strong:first-child,
+.course-tab-prose ul > li:nth-child(4n + 3) > strong:first-child {
+  color: #b45309 !important;
+}
+/* Cycle 4: Vibrant Sky Blue */
+.course-tab-prose ol > li:nth-child(4n + 4),
+.course-tab-prose ul > li:nth-child(4n + 4) {
+  border-color: #bae6fd !important;
+  border-left-color: #0284c7 !important;
+  background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 70%) !important;
+}
+.course-tab-prose ol > li:nth-child(4n + 4)::before,
+.course-tab-prose ul > li:nth-child(4n + 4)::before {
+  background: #0284c7;
+  box-shadow: 0 2px 6px rgba(2, 132, 199, 0.25);
+}
+.course-tab-prose ol > li:nth-child(4n + 4) > strong:first-child,
+.course-tab-prose ul > li:nth-child(4n + 4) > strong:first-child {
+  color: #0369a1 !important;
 }
 .course-tab-prose li:last-child {
   margin-bottom: 0 !important;
 }
 .course-tab-prose p:has(img) {
-  margin-top: 2.25rem !important;
+  margin-top: 2rem !important;
   margin-bottom: 0.55rem !important;
 }
 .course-tab-prose .legacy-img-caption,
 .course-tab-prose p.legacy-img-caption,
 .course-tab-prose p:has(img) + p[style*="text-align: center"] {
   margin-top: 0.35rem !important;
-  margin-bottom: 2.85rem !important;
+  margin-bottom: 2.35rem !important;
   line-height: 1.55 !important;
 }
 
