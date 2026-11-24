@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { supabase } from './supabase';
 import { useTestGuideVideo, TestGuideVideoButton, TestGuideVideoPlayer, TestGuideVideoEditModal } from './TestGuideVideo';
 import { useLmsLang, LmsLangToggle } from './utils/lmsI18n';
@@ -48,6 +48,7 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
   });
 
   const [leftWidth, setLeftWidth] = useState(50); 
+  const [paperViewMode, setPaperViewMode] = useState<'split' | 'text-only'>('split');
   const [isDragging, setIsDragging] = useState(false);
   const [isDesktop, setIsDesktop] = useState(() => typeof window !== 'undefined' ? window.innerWidth >= 768 : true);
   const [mobileTab, setMobileTab] = useState<'pdf' | 'answers'>(initIsReview ? 'answers' : 'pdf');
@@ -348,6 +349,25 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
     };
   }, [isDragging]);
 
+  const allQuestions = useMemo(() => {
+    return testData?.json_config?.questions || testData?.content_json?.questions || [];
+  }, [testData]);
+
+  const hasRichPaper = useMemo(() => {
+    return allQuestions.some(
+      (q: any) =>
+        Boolean(q?.stem_html) ||
+        Boolean(q?.section_banner) ||
+        (Array.isArray(q?.images) && q.images.length > 0)
+    );
+  }, [allQuestions]);
+
+  const answeredQuestionCount = useMemo(() => {
+    return allQuestions.filter((q: any) =>
+      (q.inputs || []).some((_: any, i: number) => Boolean(answers[`${q.question_number}_input_${i}`]?.trim()))
+    ).length;
+  }, [allQuestions, answers]);
+
   if (isLoading) {
     return (
       <div className="h-[100dvh] w-screen flex flex-col items-center justify-center bg-[#525659] text-white font-bold">
@@ -397,8 +417,56 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
       window.dispatchEvent(new CustomEvent('tony-navigate', { detail: 'live-test' }));
   };
 
+  const showPdfPane = !hasRichPaper || paperViewMode === 'split';
+
+  const renderRichImages = (images?: Array<{ url: string; caption?: string; max_width?: number }>) => {
+    if (!Array.isArray(images) || images.length === 0) return null;
+    return (
+      <div className="grid gap-3 my-3.5 grid-cols-1">
+        {images.map((img, idx) => (
+          <figure
+            key={`${img.url}-${idx}`}
+            className="group bg-white border border-slate-200 rounded-xl p-3 sm:p-4 shadow-xs hover:border-sky-300 hover:shadow-md transition-all text-center"
+          >
+            <img
+              src={img.url}
+              alt={img.caption || 'Cambridge Geography figure'}
+              title={isEn ? 'Click to enlarge figure' : 'Bấm để phóng to hình'}
+              loading="lazy"
+              style={img.max_width ? { maxWidth: `${img.max_width}px` } : undefined}
+              className="w-full h-auto mx-auto object-contain cursor-zoom-in rounded"
+            />
+            {img.caption && (
+              <figcaption className="mt-2 text-[12.5px] font-semibold text-slate-600 flex items-center justify-center gap-1.5 flex-wrap">
+                <span>{img.caption}</span>
+                <span className="text-[11px] font-medium text-sky-600 opacity-75 group-hover:opacity-100">
+                  🔍 {isEn ? 'Zoom' : 'Phóng to'}
+                </span>
+              </figcaption>
+            )}
+          </figure>
+        ))}
+      </div>
+    );
+  };
+
   return (
     <div className="h-[100dvh] w-screen flex flex-col bg-white font-sans text-slate-900 overflow-hidden">
+      <style>{`
+        .geo-rich-stem { font-size: 14.5px; line-height: 1.65; color: #1e293b; }
+        .geo-rich-stem p { margin: 0 0 0.55rem 0; }
+        .geo-rich-stem p:last-child { margin-bottom: 0; }
+        .geo-rich-stem .igcse-table-wrap { overflow-x: auto; margin: 0.75rem 0; }
+        .geo-rich-stem .igcse-table-title { text-align: center; font-weight: 800; font-size: 13px; color: #0f172a; margin-bottom: 0.35rem; }
+        .geo-rich-stem .igcse-table { width: auto; min-width: min(100%, 360px); margin: 0 auto; border-collapse: collapse; background: #ffffff; font-size: 13.5px; }
+        .geo-rich-stem .igcse-table th, .geo-rich-stem .igcse-table td { border: 1px solid #94a3b8; padding: 0.45rem 0.85rem; text-align: center; vertical-align: middle; }
+        .geo-rich-stem .igcse-table.igcse-table-left td:last-child { text-align: left; }
+        .geo-rich-stem .igcse-table th { background: #f1f5f9; font-weight: 700; color: #0f172a; }
+        .geo-rich-stem .igcse-hypothesis-box { background: #f0f9ff; border: 1px solid #bae6fd; border-left: 4px solid #0a5482; border-radius: 8px; padding: 0.7rem 1rem; margin: 0.6rem 0; }
+        .geo-rich-stem .igcse-note-box { background: #fffbeb; border: 1px solid #fde68a; border-radius: 10px; padding: 0.85rem 1rem; margin: 0.65rem 0; }
+        .geo-rich-stem .igcse-choice-pills { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.4rem 0; }
+        .geo-rich-stem .igcse-choice-pills span { padding: 0.3rem 0.85rem; border-radius: 999px; background: #ffffff; border: 1px solid #94a3b8; font-weight: 700; font-size: 13.5px; color: #0f172a; }
+      `}</style>
       
       {/* HEADER TỔNG */}
       <header className="h-14 w-full bg-white border-b border-slate-300 flex items-center justify-between px-3 sm:px-6 shrink-0 z-20 box-border gap-2">
@@ -409,10 +477,34 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
             <h1 className="font-bold text-black text-[14px] sm:text-[15px] leading-tight truncate">
               {isReviewMode ? `[REVIEW] ${testData.title || (isEn ? 'Case Study Exam' : 'Bài thi Case Study')}` : testData.title || (isEn ? 'Case Study Exam' : 'Bài thi Case Study')}
             </h1>
-            <p className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider hidden md:block">{isEn ? 'Type:' : 'Phân loại:'} {testData.test_type || 'Case-Study'}</p>
+            {!isReviewMode && allQuestions.length > 0 && (
+              <span className="text-xs text-slate-400 whitespace-nowrap hidden sm:inline">
+                ({answeredQuestionCount}/{allQuestions.length} {isEn ? 'questions' : 'câu'})
+              </span>
+            )}
           </div>
         </div>
         <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+          {hasRichPaper && (
+            <div className="inline-flex items-center bg-slate-100 p-0.5 rounded-lg border border-slate-200 shrink-0" role="group" aria-label={isEn ? 'Paper view mode' : 'Chế độ xem đề'}>
+              <button
+                type="button"
+                onClick={() => setPaperViewMode('split')}
+                className={`px-2 sm:px-2.5 py-1 rounded-md text-[11px] sm:text-xs font-bold transition-all whitespace-nowrap cursor-pointer ${paperViewMode === 'split' ? 'bg-white text-[#0a5482] shadow-xs' : 'text-slate-600 hover:text-slate-900'}`}
+                title={isEn ? 'Show original PDF/Insert on the left alongside Text & Figures' : 'Xem song song PDF/Insert bên trái và Đề Text + Hình bên phải'}
+              >
+                📄|📝 <span className="hidden md:inline">{isEn ? 'Split PDF' : 'Song song'}</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => setPaperViewMode('text-only')}
+                className={`px-2 sm:px-2.5 py-1 rounded-md text-[11px] sm:text-xs font-bold transition-all whitespace-nowrap cursor-pointer ${paperViewMode === 'text-only' ? 'bg-[#0a5482] text-white shadow-xs' : 'text-slate-600 hover:text-slate-900'}`}
+                title={isEn ? 'Hide left PDF/Insert and work directly on Text + Figures paper' : 'Ẩn PDF/Insert bên trái — Chỉ làm trực tiếp trên bản Text + Hình'}
+              >
+                📝 <span className="hidden md:inline">{isEn ? 'Text + Figures' : 'Chỉ Text + Hình'}</span>
+              </button>
+            </div>
+          )}
           <LmsLangToggle lang={lang} setLang={setLang} variant="light" />
           {!gradeResult && !isReviewMode && (
             <>
@@ -422,7 +514,7 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
                <button 
                  onClick={() => handleSubmit(false)} 
                  disabled={isSubmitting}
-                 className="bg-[#1e88e5] hover:bg-blue-700 text-white font-bold text-xs sm:text-sm px-4 sm:px-6 py-1.5 rounded-none transition-colors active:scale-95 disabled:opacity-50 whitespace-nowrap"
+                 className="bg-[#1e88e5] hover:bg-blue-700 text-white font-bold text-xs sm:text-sm px-4 sm:px-6 py-1.5 rounded-lg transition-colors active:scale-95 disabled:opacity-50 whitespace-nowrap"
                >
                  {isSubmitting ? (isEn ? 'Submitting...' : 'Đang nộp...') : (isEn ? 'Submit' : 'Nộp Bài')}
                </button>
@@ -431,28 +523,31 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
         </div>
       </header>
 
-      {/* MOBILE VIEW SWITCHER (< md) */}
+      {/* MOBILE VIEW SWITCHER (< md) — hidden when PDF pane is hidden */}
+      {showPdfPane && (
       <div className="md:hidden flex border-b border-slate-300 bg-slate-100 shrink-0 z-10">
         <button
           type="button"
           onClick={() => setMobileTab('pdf')}
           className={`flex-1 py-2.5 text-xs font-bold uppercase tracking-wider transition-colors border-b-2 ${mobileTab === 'pdf' ? 'bg-white text-[#1e88e5] border-[#1e88e5]' : 'text-slate-600 border-transparent'}`}
         >
-          {isEn ? '📄 Question Paper' : '📄 Đề bài'}
+          {isEn ? '📄 Question Paper' : '📄 Đề bài PDF'}
         </button>
         <button
           type="button"
           onClick={() => setMobileTab('answers')}
           className={`flex-1 py-2.5 text-xs font-bold uppercase tracking-wider transition-colors border-b-2 ${mobileTab === 'answers' ? 'bg-white text-[#1e88e5] border-[#1e88e5]' : 'text-slate-600 border-transparent'}`}
         >
-          {gradeResult ? (isEn ? '✅ Results' : '✅ Kết quả') : (isEn ? '✏️ Answers' : '✏️ Bài làm')}
+          {gradeResult ? (isEn ? '✅ Results' : '✅ Kết quả') : hasRichPaper ? (isEn ? '📝 Text + Answers' : '📝 Đề Text & Bài làm') : (isEn ? '✏️ Answers' : '✏️ Bài làm')}
         </button>
       </div>
+      )}
 
       {/* WORKSPACE - SPLIT SCREEN */}
       <div ref={containerRef} className={`flex-1 flex overflow-hidden w-full bg-[#525659] ${isDragging ? 'select-none' : ''}`}>
         
         {/* NỬA TRÁI: PDF HOẶC TEXT */}
+        {showPdfPane && (
         <div
           style={{ width: isDesktop ? `${leftWidth}%` : '100%' }}
           className={`${!isDesktop && mobileTab !== 'pdf' ? 'hidden' : 'flex'} h-full flex-col shrink-0 bg-[#525659]`}
@@ -525,28 +620,68 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
              })()}
           </div>
         </div>
+        )}
 
         {/* THANH KÉO (RESIZER - Desktop only) */}
+        {showPdfPane && (
         <div onMouseDown={() => setIsDragging(true)} className={`hidden md:flex w-[6px] h-full bg-[#202224] hover:bg-[#1e88e5] cursor-col-resize items-center justify-center shrink-0 z-10 transition-colors ${isDragging ? 'bg-[#1e88e5]' : ''}`}>
           <div className="flex flex-col gap-1">
             <div className="w-[2px] h-[2px] bg-slate-500"></div><div className="w-[2px] h-[2px] bg-slate-500"></div><div className="w-[2px] h-[2px] bg-slate-500"></div>
           </div>
         </div>
+        )}
 
         {/* NỬA PHẢI: KHU VỰC LÀM BÀI / KẾT QUẢ CHẤM */}
         <div
-          style={{ width: isDesktop ? `calc(${100 - leftWidth}% - 6px)` : '100%' }}
-          className={`${!isDesktop && mobileTab !== 'answers' ? 'hidden' : 'flex'} h-full flex-col shrink-0 bg-[#525659]`}
+          style={{ width: isDesktop ? (showPdfPane ? `calc(${100 - leftWidth}% - 6px)` : '100%') : '100%' }}
+          className={`${!isDesktop && showPdfPane && mobileTab !== 'answers' ? 'hidden' : 'flex'} h-full flex-col shrink-0 ${hasRichPaper ? 'bg-[#f1f5f9]' : 'bg-[#525659]'}`}
         >
           
-          <div className="bg-[#323639] border-b border-[#202224] px-6 flex justify-between items-center h-10 shrink-0 shadow-sm">
-            <span className="font-bold text-slate-300 text-[11px] uppercase tracking-widest flex items-center gap-2">
-              {gradeResult ? (
-                <><span>✅</span> {isEn ? 'AI Grading Results' : 'Kết quả chấm điểm AI'}</>
-              ) : (
-                <><span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> {isEn ? 'Answer Workspace' : 'Khu vực làm bài'}</>
+          <div className="bg-[#323639] border-b border-[#202224] px-4 sm:px-6 flex justify-between items-center h-10 shrink-0 shadow-sm gap-2">
+            <div className="flex items-center gap-2 min-w-0">
+              <span className="font-bold text-slate-300 text-[11px] uppercase tracking-widest flex items-center gap-2 truncate">
+                {gradeResult ? (
+                  <><span>✅</span> {isEn ? 'AI Grading Results' : 'Kết quả chấm điểm AI'}</>
+                ) : hasRichPaper ? (
+                  <><span className="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse shrink-0"></span> {isEn ? 'Structured Paper (Text + Figures)' : 'Đề Text + Hình & Phiếu trả lời'}</>
+                ) : (
+                  <><span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse shrink-0"></span> {isEn ? 'Answer Workspace' : 'Khu vực làm bài'}</>
+                )}
+              </span>
+              {hasRichPaper && !showPdfPane && questionPdfUrl && (
+                <a
+                  href={questionPdfUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-2 py-0.5 rounded bg-white/10 hover:bg-white/20 text-slate-200 hover:text-white text-[11px] font-bold transition whitespace-nowrap shrink-0"
+                  title={isEn ? 'Open Question Paper PDF in a new tab' : 'Mở PDF đề gốc trong tab mới'}
+                >
+                  ↗ {isEn ? 'QP PDF' : 'PDF đề'}
+                </a>
               )}
-            </span>
+              {hasRichPaper && !showPdfPane && insertPdfUrl && (
+                <a
+                  href={insertPdfUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-2 py-0.5 rounded bg-amber-500/20 hover:bg-amber-500/35 text-amber-200 hover:text-white text-[11px] font-bold transition whitespace-nowrap shrink-0"
+                  title={isEn ? 'Open Insert PDF in a new tab' : 'Mở Insert PDF trong tab mới'}
+                >
+                  📎 Insert{hasInsert2Pdf ? ' 1' : ''}
+                </a>
+              )}
+              {hasRichPaper && !showPdfPane && insert2PdfUrl && (
+                <a
+                  href={insert2PdfUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-2 py-0.5 rounded bg-violet-500/20 hover:bg-violet-500/35 text-violet-200 hover:text-white text-[11px] font-bold transition whitespace-nowrap shrink-0"
+                  title={isEn ? 'Open Insert 2 (Survey Map) PDF in a new tab' : 'Mở Insert 2 (Bản đồ) trong tab mới'}
+                >
+                  📎 Insert 2
+                </a>
+              )}
+            </div>
 
             {/* 🎬 NÚT BẬT / THÊM VIDEO HƯỚNG DẪN */}
             <TestGuideVideoButton
@@ -559,6 +694,41 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
               buttonTheme="dark"
             />
           </div>
+
+          {/* Sticky Question Jump Bar for Rich Geography Papers */}
+          {hasRichPaper && !gradeResult && allQuestions.length > 1 && (
+            <div className="bg-white border-b border-slate-200 px-4 sm:px-6 py-2 flex items-center justify-between gap-3 shrink-0 overflow-x-auto no-scrollbar">
+              <div className="flex items-center gap-1.5 shrink-0">
+                <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mr-1 hidden sm:inline">
+                  {isEn ? 'Jump:' : 'Câu:'}
+                </span>
+                {allQuestions.map((q: any, qIdx: number) => {
+                  const isDone = (q.inputs || []).some((_: any, i: number) => Boolean(answers[`${q.question_number}_input_${i}`]?.trim()));
+                  return (
+                    <button
+                      key={`geo-jump-${qIdx}`}
+                      type="button"
+                      onClick={() => {
+                        document.getElementById(`geo-question-${qIdx}`)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                      }}
+                      className={`px-2 py-0.5 rounded-md text-[11.5px] font-extrabold border transition-all cursor-pointer whitespace-nowrap ${
+                        isDone
+                          ? 'bg-emerald-50 text-emerald-700 border-emerald-300 hover:bg-emerald-100'
+                          : 'bg-slate-50 text-slate-600 border-slate-200 hover:border-slate-400 hover:text-slate-900'
+                      }`}
+                      title={`Question ${q.question_number} [${q.total_marks}m]`}
+                    >
+                      {q.question_number}
+                      {isDone && <span className="ml-0.5 text-[10px]">✓</span>}
+                    </button>
+                  );
+                })}
+              </div>
+              <span className="hidden lg:inline-flex items-center gap-1 text-[11px] font-semibold text-sky-700 bg-sky-50 border border-sky-200 px-2.5 py-0.5 rounded-full whitespace-nowrap shrink-0">
+                ✨ {isEn ? 'Interactive Text + Figures' : 'Đề Text + Hình (Thử nghiệm)'}
+              </span>
+            </div>
+          )}
 
           {/* 🎬 INLINE VIDEO PLAYER (Right below header, stays visible while scrolling) */}
           <TestGuideVideoPlayer
@@ -593,7 +763,7 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
             
             {/* 1. NẾU ĐÃ CHẤM XONG HOẶC LÀ REVIEW MODE -> HIỂN THỊ KẾT QUẢ */}
             {gradeResult ? (
-              <div className="w-full bg-white shadow-xl mb-5 px-6 py-12 sm:px-16 sm:py-16 min-h-[85vh]">
+              <div className={`w-full bg-white shadow-xl mb-5 px-6 py-12 sm:px-16 sm:py-16 min-h-[85vh] ${!showPdfPane ? 'max-w-4xl mx-auto rounded-xl' : ''}`}>
                 <div className="border-b-4 border-black pb-8 mb-10 text-center">
                   <h2 className="text-3xl font-black text-black mb-3">{isEn ? 'AI Grading Results' : 'Kết Quả Chấm Điểm (AI)'}</h2>
                   <div className="text-6xl font-black text-[#1e88e5] mb-6">
@@ -690,47 +860,116 @@ export default function SplitScreenTest({ onBack, onStartTest, testData: propTes
               </div>
             ) : (
               /* 2. NẾU CHƯA CHẤM -> HIỂN THỊ KHUNG LÀM BÀI */
-              <>
-                {testData.json_config?.questions?.map((q: any, index: number) => (
-                  <div key={index} className="w-full bg-white shadow-xl mb-5 px-6 py-12 sm:px-16 sm:py-20 min-h-[85vh]">
-                    <div className="flex gap-3 mb-8 items-baseline">
-                      <div className="font-bold text-black text-[16px] sm:text-[18px] min-w-[30px]">{q.question_number}</div>
-                      <div className="flex-1">
-                        <h3 className="font-medium text-black text-[15px] sm:text-[16px] leading-relaxed inline whitespace-pre-wrap">{q.question_text}</h3>
-                        <span className="inline-block text-slate-500 text-[12px] font-bold ml-2 uppercase tracking-wider">[{q.total_marks} marks]</span>
+              <div className={!showPdfPane ? 'max-w-4xl mx-auto' : ''}>
+                {allQuestions.map((q: any, index: number) => {
+                  const hasQRich = Boolean(q?.stem_html) || Boolean(q?.section_banner) || (Array.isArray(q?.images) && q.images.length > 0);
+                  if (hasRichPaper) {
+                    return (
+                      <div key={index} id={`geo-question-${index}`} className="scroll-mt-4 mb-6">
+                        {q.section_banner && (
+                          <div className="bg-gradient-to-r from-[#0a5482] to-[#0f6ea8] text-white px-5 py-3 rounded-t-xl font-extrabold text-[14px] sm:text-[15px] tracking-wide shadow-xs flex items-center gap-2">
+                            <span>🌍</span>
+                            <span>{q.section_banner}</span>
+                          </div>
+                        )}
+                        <div className={`w-full bg-white shadow-sm border border-slate-200 p-5 sm:p-7 ${q.section_banner ? 'rounded-b-xl border-t-0' : 'rounded-xl'}`}>
+                          <div className="flex flex-wrap items-center justify-between gap-2 pb-3 mb-4 border-b border-slate-100">
+                            <div className="flex items-center gap-2 flex-wrap">
+                              <span className="inline-flex items-center justify-center px-2.5 py-0.5 rounded-md bg-slate-900 text-white font-black text-[13px]">
+                                {q.question_number}
+                              </span>
+                              {q.page_ref && (
+                                <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-slate-100 text-slate-500 border border-slate-200 text-[11px] font-bold">
+                                  📄 {q.page_ref}
+                                </span>
+                              )}
+                            </div>
+                            <span className="text-[12px] font-bold text-[#0a5482] bg-sky-50 border border-sky-200 px-2.5 py-0.5 rounded-full whitespace-nowrap">
+                              [{q.total_marks} {Number(q.total_marks) === 1 ? 'mark' : 'marks'}]
+                            </span>
+                          </div>
+
+                          {hasQRich && (q.stem_html || (Array.isArray(q.images) && q.images.length > 0)) && (
+                            <div className="mb-5 bg-slate-50/80 border border-slate-200/80 rounded-xl p-4 sm:p-5">
+                              {q.stem_html && (
+                                <div className="geo-rich-stem" dangerouslySetInnerHTML={{ __html: q.stem_html }} />
+                              )}
+                              {renderRichImages(q.images)}
+                            </div>
+                          )}
+
+                          <div className="mb-4">
+                            <h3 className="font-semibold text-slate-900 text-[15px] sm:text-[15.5px] leading-relaxed whitespace-pre-wrap">
+                              {q.question_text}
+                            </h3>
+                          </div>
+
+                          <div className="space-y-4">
+                            {(q.inputs || []).map((input: any, i: number) => {
+                              const inputId = `${q.question_number}_input_${i}`;
+                              const minH = Number(q.total_marks) <= 2 ? 'min-h-[84px]' : 'min-h-[124px]';
+                              return (
+                                <div key={inputId} className="space-y-1.5">
+                                  {input.label && (
+                                    <label className="block text-[13px] font-bold text-slate-600">{input.label}</label>
+                                  )}
+                                  <textarea
+                                    value={answers[inputId] || ''}
+                                    onChange={(e) => handleAnswerChange(inputId, e.target.value)}
+                                    disabled={isReviewMode}
+                                    placeholder={isEn ? 'Write your answer here...' : 'Nhập câu trả lời của bạn...'}
+                                    className={`w-full border border-slate-300 rounded-lg p-3.5 ${minH} text-[14.5px] text-slate-900 leading-relaxed outline-none focus:border-[#0a5482] focus:ring-2 focus:ring-[#0a5482]/15 transition-all resize-y bg-white disabled:bg-slate-50`}
+                                  />
+                                </div>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  }
+
+                  return (
+                    <div key={index} className="w-full bg-white shadow-xl mb-5 px-6 py-12 sm:px-16 sm:py-20 min-h-[85vh]">
+                      <div className="flex gap-3 mb-8 items-baseline">
+                        <div className="font-bold text-black text-[16px] sm:text-[18px] min-w-[30px]">{q.question_number}</div>
+                        <div className="flex-1">
+                          <h3 className="font-medium text-black text-[15px] sm:text-[16px] leading-relaxed inline whitespace-pre-wrap">{q.question_text}</h3>
+                          <span className="inline-block text-slate-500 text-[12px] font-bold ml-2 uppercase tracking-wider">[{q.total_marks} marks]</span>
+                        </div>
+                      </div>
+                      <div className="space-y-8 pl-0 sm:pl-[42px]">
+                        {(q.inputs || []).map((input: any, i: number) => {
+                          const inputId = `${q.question_number}_input_${i}`;
+                          return (
+                            <div key={inputId} className="space-y-2">
+                              <label className="block text-[14px] font-semibold text-black">{input.label}</label>
+                              <textarea
+                                value={answers[inputId] || ''}
+                                onChange={(e) => handleAnswerChange(inputId, e.target.value)}
+                                disabled={isReviewMode}
+                                className="w-full border border-slate-400 rounded-none p-4 min-h-[120px] text-[15px] text-black leading-relaxed outline-none focus:border-[#1e88e5] focus:ring-1 focus:ring-[#1e88e5] transition-all resize-y bg-transparent disabled:bg-slate-50"
+                              />
+                            </div>
+                          );
+                        })}
                       </div>
                     </div>
-                    <div className="space-y-8 pl-0 sm:pl-[42px]">
-                      {q.inputs.map((input: any, i: number) => {
-                        const inputId = `${q.question_number}_input_${i}`;
-                        return (
-                          <div key={inputId} className="space-y-2">
-                            <label className="block text-[14px] font-semibold text-black">{input.label}</label>
-                            <textarea
-                              value={answers[inputId] || ''}
-                              onChange={(e) => handleAnswerChange(inputId, e.target.value)}
-                              disabled={isReviewMode}
-                              className="w-full border border-slate-400 rounded-none p-4 min-h-[120px] text-[15px] text-black leading-relaxed outline-none focus:border-[#1e88e5] focus:ring-1 focus:ring-[#1e88e5] transition-all resize-y bg-transparent disabled:bg-slate-50"
-                            />
-                          </div>
-                        )
-                      })}
-                    </div>
-                  </div>
-                ))}
+                  );
+                })}
                 
                 {!isReviewMode && (
-                  <div className="w-full bg-white shadow-xl px-8 py-8 sm:px-16 flex justify-end mb-12 border-t border-slate-100">
+                  <div className={`w-full bg-white ${hasRichPaper ? 'rounded-xl shadow-sm border border-slate-200 px-6 py-5' : 'shadow-xl px-8 py-8 sm:px-16 border-t border-slate-100'} flex justify-end mb-12`}>
                      <button 
                        onClick={() => handleSubmit(false)} 
                        disabled={isSubmitting}
-                       className="bg-[#1e88e5] hover:bg-blue-700 text-white font-bold px-10 py-3 rounded-none transition-transform active:scale-95 flex items-center gap-2 shadow-md disabled:opacity-50"
+                       className={`bg-[#0a5482] hover:bg-[#084266] text-white font-bold px-10 py-3 ${hasRichPaper ? 'rounded-lg' : 'rounded-none'} transition-transform active:scale-95 flex items-center gap-2 shadow-md disabled:opacity-50 cursor-pointer`}
                      >
                        {isSubmitting ? (isEn ? 'AI is grading...' : 'AI đang chấm bài...') : (isExercise ? (isEn ? 'Finish & Submit Practice' : 'Hoàn tất & Nộp bài tập') : (isEn ? 'Finish & Submit Exam' : 'Hoàn tất & Nộp bài thi'))}
                      </button>
                   </div>
                 )}
-              </>
+              </div>
             )}
 
           </div>
