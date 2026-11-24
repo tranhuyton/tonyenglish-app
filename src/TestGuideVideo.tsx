@@ -600,40 +600,76 @@ export function TestGuideVideoPlayer({
 
   const renderVideoTabs = () => {
     if (effectiveVideos.length <= 1) return null;
+    const hasPrev = safeIdx > 0;
+    const hasNext = safeIdx + 1 < effectiveVideos.length;
     return (
-      <div className="px-3 py-2 bg-[#1f1f23] border-b border-[#3f3f46] flex flex-wrap items-center gap-1.5">
-        <span className="text-[11px] font-bold text-slate-400 mr-1 shrink-0">
-          {isEn ? `📚 Select video (${effectiveVideos.length}):` : `📚 Chọn video (${effectiveVideos.length}):`}
-        </span>
-        {effectiveVideos.map((v, idx) => {
-          const isSelected = idx === safeIdx;
-          const vSrc = parseVideoSource(v.url);
-          const badge = vSrc?.type === 'youtube' ? 'YT' : vSrc?.type === 'direct' ? 'HD' : 'LINK';
-          return (
+      <div className="px-3 py-2 bg-[#1f1f23] border-b border-[#3f3f46] flex flex-col gap-1.5 shrink-0">
+        <div className="flex items-center justify-between gap-2">
+          <span className="text-[11px] font-bold text-slate-300 shrink-0">
+            {isEn
+              ? `📚 Solution Playlist (${safeIdx + 1}/${effectiveVideos.length}):`
+              : `📚 Danh sách phần giải (${safeIdx + 1}/${effectiveVideos.length} video):`}
+          </span>
+          <div className="flex items-center gap-1.5 shrink-0">
             <button
-              key={v.id || idx}
               type="button"
-              onClick={() => onSelectVideo?.(idx)}
-              className={`px-2.5 py-1 rounded-lg text-[11.5px] font-bold transition flex items-center gap-1.5 border ${
-                isSelected
-                  ? 'bg-blue-600 text-white border-blue-400 shadow-sm'
-                  : 'bg-[#27272a] hover:bg-[#323238] text-slate-300 border-[#3f3f46]'
+              disabled={!hasPrev}
+              onClick={() => hasPrev && onSelectVideo?.(safeIdx - 1)}
+              className={`px-2 py-0.5 rounded-md text-[11px] font-bold border transition ${
+                hasPrev
+                  ? 'bg-[#27272a] hover:bg-[#3f3f46] text-slate-200 border-[#52525b] cursor-pointer'
+                  : 'bg-[#1c1c20] text-slate-600 border-[#2e2e34] cursor-not-allowed'
               }`}
+              title={isEn ? 'Previous part' : 'Phần trước'}
             >
-              <span className={`w-4 h-4 rounded-full text-[10px] flex items-center justify-center font-black ${
-                isSelected ? 'bg-white text-blue-700' : 'bg-slate-700 text-slate-300'
-              }`}>
-                {idx + 1}
-              </span>
-              <span className="max-w-[240px] truncate">{v.title || `Video #${idx + 1}`}</span>
-              <span className={`text-[9px] px-1.5 py-0.5 rounded font-extrabold uppercase ${
-                isSelected ? 'bg-blue-800/80 text-blue-100' : 'bg-slate-800 text-slate-400'
-              }`}>
-                {badge}
-              </span>
+              ◀ {isEn ? 'Prev' : 'Trước'}
             </button>
-          );
-        })}
+            <button
+              type="button"
+              disabled={!hasNext}
+              onClick={() => hasNext && onSelectVideo?.(safeIdx + 1)}
+              className={`px-2 py-0.5 rounded-md text-[11px] font-bold border transition ${
+                hasNext
+                  ? 'bg-blue-600/80 hover:bg-blue-600 text-white border-blue-400/60 cursor-pointer'
+                  : 'bg-[#1c1c20] text-slate-600 border-[#2e2e34] cursor-not-allowed'
+              }`}
+              title={isEn ? 'Next part' : 'Phần tiếp theo'}
+            >
+              {isEn ? 'Next' : 'Tiếp'} ▶
+            </button>
+          </div>
+        </div>
+        <div className="flex flex-wrap items-center gap-1.5 max-h-[84px] sm:max-h-[112px] overflow-y-auto pr-1">
+          {effectiveVideos.map((v, idx) => {
+            const isSelected = idx === safeIdx;
+            const vSrc = parseVideoSource(v.url);
+            const badge = vSrc?.type === 'youtube' ? 'YT' : vSrc?.type === 'direct' ? 'HD' : 'LINK';
+            return (
+              <button
+                key={v.id || idx}
+                type="button"
+                onClick={() => onSelectVideo?.(idx)}
+                className={`px-2.5 py-1 rounded-lg text-[11.5px] font-bold transition flex items-center gap-1.5 border cursor-pointer ${
+                  isSelected
+                    ? 'bg-blue-600 text-white border-blue-400 shadow-sm'
+                    : 'bg-[#27272a] hover:bg-[#323238] text-slate-300 border-[#3f3f46]'
+                }`}
+              >
+                <span className={`w-4 h-4 rounded-full text-[10px] flex items-center justify-center font-black ${
+                  isSelected ? 'bg-white text-blue-700' : 'bg-slate-700 text-slate-300'
+                }`}>
+                  {idx + 1}
+                </span>
+                <span className="max-w-[220px] truncate">{v.title || `Video #${idx + 1}`}</span>
+                <span className={`text-[9px] px-1.5 py-0.5 rounded font-extrabold uppercase ${
+                  isSelected ? 'bg-blue-800/80 text-blue-100' : 'bg-slate-800 text-slate-400'
+                }`}>
+                  {badge}
+                </span>
+              </button>
+            );
+          })}
+        </div>
       </div>
     );
   };
@@ -648,6 +684,11 @@ export function TestGuideVideoPlayer({
           controls
           autoPlay
           playsInline
+          onEnded={() => {
+            if (safeIdx + 1 < effectiveVideos.length) {
+              onSelectVideo?.(safeIdx + 1);
+            }
+          }}
           className={`w-full h-full object-contain ${isFullTheater ? 'max-h-[82vh]' : ''}`}
         >
           Trình duyệt của bạn không hỗ trợ phát video này.
