@@ -2146,13 +2146,15 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         <div className="max-w-7xl w-full mx-auto px-3.5 sm:px-6 h-16 sm:h-[72px] flex items-center justify-between gap-2 sm:gap-4 transition-all">
           
           {/* Brand Logo */}
-          <div className="flex items-center gap-2 sm:gap-2.5 cursor-pointer hover:opacity-90 transition-opacity shrink-0" onClick={() => {
-              resetWorkspaceAndChat(); 
-              setActiveTab('library');
-              setActiveView('dashboard');
-              setSelectedCourseId(null);
-              setCurrentFolderId(null);
-          }}>
+          <div
+            className="flex items-center gap-2 sm:gap-2.5 cursor-pointer hover:opacity-90 transition-opacity shrink-0"
+            title={isEn ? 'Back to TonyEnglish.vn Homepage' : 'Quay về trang chủ TonyEnglish.vn'}
+            onClick={() => {
+              resetWorkspaceAndChat();
+              window.history.pushState({}, '', '/');
+              onNavigate?.('home');
+            }}
+          >
             <img
               src="/logo-shield.png"
               onError={(e) => {
@@ -4362,7 +4364,15 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
       {activeTab !== 'board' && (
       <footer className="bg-[#0f172a] text-slate-400 py-8 border-t border-slate-800 mt-12 shrink-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
+          <div
+            className="flex items-center gap-3 cursor-pointer hover:opacity-90 transition-opacity"
+            title={isEn ? 'Back to TonyEnglish.vn Homepage' : 'Quay về trang chủ TonyEnglish.vn'}
+            onClick={() => {
+              resetWorkspaceAndChat();
+              window.history.pushState({}, '', '/');
+              onNavigate?.('home');
+            }}
+          >
             <img
               src="/logo-shield.png"
               onError={(e) => {
