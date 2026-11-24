@@ -3,6 +3,9 @@ import { supabase } from './supabase';
 import { useTestGuideVideo, TestGuideVideoButton, TestGuideVideoPlayer, TestGuideVideoEditModal } from './TestGuideVideo';
 import { useLmsLang, LmsLangToggle } from './utils/lmsI18n';
 import { ImageLightboxModal, LightboxState, extractLightboxFromClick } from './mcqImageUtils';
+import 'katex/dist/katex.min.css';
+import { renderIgcseLatex, detectCalculatorPolicy, detectIgcseMathSyllabus } from './katexUtils';
+import IgcseFormulaSheetModal from './IgcseFormulaSheetModal';
 
 export default function IgcsePaperTest({ onBack, onStartTest, testData: propTestData }: { onBack?: () => void, onStartTest?: any, testData?: any }) {
   const [lang, setLang] = useLmsLang();
@@ -26,6 +29,7 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
   
   const [isLoading, setIsLoading] = useState(!testData);
   const [imageLightbox, setImageLightbox] = useState<LightboxState | null>(null);
+  const [showFormulaSheet, setShowFormulaSheet] = useState(false);
   const initIsReview = !!testData?.isReview;
   const [isReviewMode, setIsReviewMode] = useState(initIsReview);
   useEffect(() => { window.dispatchEvent(new CustomEvent('tony-review-mode-change', { detail: Boolean(isReviewMode) })); return () => { window.dispatchEvent(new CustomEvent('tony-review-mode-change', { detail: false })); }; }, [isReviewMode]);
@@ -49,6 +53,7 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
   });
 
   const [leftWidth, setLeftWidth] = useState(50); 
+  const [paperViewMode, setPaperViewMode] = useState<'split' | 'text-only'>('split');
   const [isDragging, setIsDragging] = useState(false);
   const [isDesktop, setIsDesktop] = useState(() => typeof window !== 'undefined' ? window.innerWidth >= 768 : true);
   const [isFullscreen, setIsFullscreen] = useState(() => typeof document !== 'undefined' ? !!document.fullscreenElement : false);
@@ -192,7 +197,7 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
     const ro = new ResizeObserver(resize);
     ro.observe(parent);
     return () => ro.disconnect();
-  }, [leftWidth]);
+  }, [leftWidth, paperViewMode]);
 
   const handleAnswerChange = (inputId: string, value: string) => {
     if (isReviewMode) return;
@@ -276,39 +281,8 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
       .replace(/</g, '&lt;')
       .replace(/>/g, '&gt;');
 
-  // LaTeX → Unicode/HTML converter for question labels
-  const renderLatex = (text: string): string => {
-    if (!text) return '';
-    let r = escapeHtml(text);
-    const hasLatex = text.includes('\\') || /[\^_]\{/.test(text) || /[\^_]\(/.test(text);
-    if (!hasLatex) return r;
-    const m: [RegExp, string][] = [
-      [/\\alpha/g,'α'],[/\\beta/g,'β'],[/\\gamma/g,'γ'],[/\\delta/g,'δ'],[/\\theta/g,'θ'],
-      [/\\lambda/g,'λ'],[/\\mu/g,'μ'],[/\\pi/g,'π'],[/\\sigma/g,'σ'],[/\\omega/g,'ω'],
-      [/\\Omega/g,'Ω'],[/\\Delta/g,'Δ'],[/\\Sigma/g,'Σ'],[/\\Gamma/g,'Γ'],[/\\phi/g,'φ'],
-      [/\\rho/g,'ρ'],[/\\tau/g,'τ'],[/\\epsilon/g,'ε'],[/\\varepsilon/g,'ε'],
-      [/\\int/g,'∫'],[/\\sum/g,'Σ'],[/\\prod/g,'∏'],[/\\partial/g,'∂'],
-      [/\\sqrt\{([^}]+)\}/g,'√($1)'],[/\\sqrt/g,'√'],
-      [/\\frac\{([^}]+)\}\{([^}]+)\}/g,'<span style="display:inline-flex;flex-direction:column;align-items:center;vertical-align:middle;font-size:0.85em;line-height:1.1"><span style="border-bottom:1px solid currentColor;padding:0 2px">$1</span><span style="padding:0 2px">$2</span></span>'],
-      [/\\pm/g,'±'],[/\\mp/g,'∓'],[/\\times/g,'×'],[/\\div/g,'÷'],[/\\cdot/g,'·'],[/\\infty/g,'∞'],
-      [/\\neq/g,'≠'],[/\\leq/g,'≤'],[/\\geq/g,'≥'],[/\\approx/g,'≈'],[/\\equiv/g,'≡'],
-      [/\\sim/g,'∼'],[/\\propto/g,'∝'],
-      [/\\angle/g,'∠'],[/\\triangle/g,'△'],[/\\perp/g,'⊥'],[/\\parallel/g,'∥'],
-      [/\\cap/g,'∩'],[/\\cup/g,'∪'],[/\\in/g,'∈'],[/\\notin/g,'∉'],
-      [/\\subset/g,'⊂'],[/\\subseteq/g,'⊆'],[/\\supset/g,'⊃'],[/\\emptyset/g,'∅'],
-      [/\\rightarrow/g,'→'],[/\\leftarrow/g,'←'],[/\\Rightarrow/g,'⇒'],[/\\Leftrightarrow/g,'⇔'],
-      [/\\vec\{([^}]+)\}/g,'$1⃗'],
-      [/\\sin/g,'sin'],[/\\cos/g,'cos'],[/\\tan/g,'tan'],[/\\sec/g,'sec'],[/\\cot/g,'cot'],[/\\csc/g,'csc'],
-      [/\\log/g,'log'],[/\\ln/g,'ln'],[/\\lim/g,'lim'],
-      [/\^\{([^}]+)\}/g,'<sup>$1</sup>'],[/_\{([^}]+)\}/g,'<sub>$1</sub>'],
-      [/\^\(([^)]+)\)/g,'<sup>$1</sup>'],[/_\(([^)]+)\)/g,'<sub>$1</sub>'],
-      [/\^([0-9a-zA-Zα-ωΑ-Ω])/g,'<sup>$1</sup>'],[/_([0-9a-zA-Zα-ωΑ-Ω])/g,'<sub>$1</sub>'],
-      [/\\,/g,' '],[/\\;/g,' '],[/\\!/g,''],
-    ];
-    for (const [p, s] of m) r = r.replace(p, s);
-    r = r.replace(/\\([a-zA-Z]+)/g, '$1');
-    return r;
-  };
+  // LaTeX → KaTeX / HTML renderer for question labels & marking schemes
+  const renderLatex = (text: string): string => renderIgcseLatex(text);
 
   // LaTeX → Unicode/Plain Text converter for AI prompt and chat display
   const latexToText = (text: string): string => {
@@ -681,6 +655,18 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
     return allSubQuestions.filter((sq: any) => answers[sq.id]?.trim()).length;
   }, [allSubQuestions, answers]);
 
+  const hasRichPaper = useMemo(() => {
+    const qs = testData?.json_config?.questions || [];
+    return qs.some(
+      (q: any) =>
+        Boolean(q?.stem_html) ||
+        (Array.isArray(q?.images) && q.images.length > 0) ||
+        (q?.sub_questions || []).some(
+          (s: any) => Boolean(s?.stem_html) || (Array.isArray(s?.images) && s.images.length > 0)
+        )
+    );
+  }, [testData]);
+
   // Loading state
   if (isLoading) return (
     <div className="h-[100dvh] w-screen flex flex-col items-center justify-center bg-[#525659] text-white font-bold">
@@ -698,6 +684,41 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
   );
 
   const questions = testData.json_config.questions || [];
+  const showPdfPane = !hasRichPaper || paperViewMode === 'split';
+  const cleanRichLabel = (label: string) =>
+    hasRichPaper ? String(label || '').replace(/\s*\[(Hình Ảnh|Table)\]/gi, '').trim() : String(label || '');
+  const renderRichImages = (images?: Array<{ url: string; caption?: string; max_width?: number }>) => {
+    if (!Array.isArray(images) || images.length === 0) return null;
+    return (
+      <div className={`grid gap-3 my-3 ${images.length > 1 ? 'grid-cols-1' : 'grid-cols-1'}`}>
+        {images.map((img, idx) => (
+          <figure
+            key={`${img.url}-${idx}`}
+            className="group bg-white border border-slate-200 rounded-xl p-3 sm:p-4 shadow-xs hover:border-sky-300 hover:shadow-md transition-all text-center"
+          >
+            <img
+              src={img.url}
+              alt={img.caption || 'Cambridge exam figure'}
+              title={isEn ? 'Click to enlarge figure' : 'Bấm để phóng to hình'}
+              loading="lazy"
+              style={img.max_width ? { maxWidth: `${img.max_width}px` } : undefined}
+              className="w-full h-auto mx-auto object-contain cursor-zoom-in rounded"
+            />
+            {img.caption && (
+              <figcaption className="mt-2 text-[12.5px] font-semibold text-slate-600 flex items-center justify-center gap-1.5 flex-wrap">
+                <span>{img.caption}</span>
+                <span className="text-[11px] font-medium text-sky-600 opacity-75 group-hover:opacity-100">
+                  🔍 {isEn ? 'Zoom' : 'Phóng to'}
+                </span>
+              </figcaption>
+            )}
+          </figure>
+        ))}
+      </div>
+    );
+  };
+  const calcPolicy = detectCalculatorPolicy(testData?.title, testData?.content_json?.basicInfo);
+  const mathSyllabus = detectIgcseMathSyllabus(testData?.title, testData?.course_id || testData?.content_json?.basicInfo?.courseId);
 
   const handleContainerScroll = (e: React.UIEvent<HTMLDivElement>) => {
       const el = e.currentTarget;
@@ -707,19 +728,75 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
 
   return (
     <div className="h-[100dvh] w-screen flex flex-col bg-white font-sans text-slate-900 overflow-hidden">
+      <style>{`
+        .igcse-rich-stem { font-size: 14.5px; line-height: 1.65; color: #1e293b; }
+        .igcse-rich-stem p { margin: 0 0 0.55rem 0; }
+        .igcse-rich-stem p:last-child { margin-bottom: 0; }
+        .igcse-rich-stem ul { list-style: disc; padding-left: 1.35rem; margin: 0.4rem 0 0.6rem 0; }
+        .igcse-rich-stem li { margin-bottom: 0.25rem; }
+        .igcse-table-wrap { overflow-x: auto; margin: 0.75rem 0; }
+        .igcse-table-title { text-align: center; font-weight: 800; font-size: 13px; color: #0f172a; margin-bottom: 0.35rem; letter-spacing: 0.01em; }
+        .igcse-table { width: auto; min-width: min(100%, 360px); margin: 0 auto; border-collapse: collapse; background: #ffffff; font-size: 13.5px; }
+        .igcse-table th, .igcse-table td { border: 1px solid #94a3b8; padding: 0.45rem 0.85rem; text-align: center; vertical-align: middle; }
+        .igcse-table th { background: #f1f5f9; font-weight: 700; color: #0f172a; }
+        .igcse-table td.igcse-shaded { background: #cbd5e1; }
+        .igcse-eq-box { margin: 0.75rem auto; max-width: 440px; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 10px; padding: 0.75rem 1rem; text-align: center; }
+        .igcse-eq-main { font-size: 16px; font-weight: 700; color: #0f172a; letter-spacing: 0.01em; }
+        .igcse-eq-sub { display: flex; justify-content: space-between; gap: 1rem; max-width: 300px; margin: 0.45rem auto 0; font-size: 12px; color: #475569; line-height: 1.3; }
+        .igcse-nuclide-box { display: flex; justify-content: center; margin: 0.6rem 0; }
+        .igcse-nuclide { display: inline-flex; align-items: center; gap: 3px; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 10px; padding: 0.4rem 1rem; font-family: Georgia, 'Times New Roman', serif; }
+        .igcse-nuclide-nums { display: inline-flex; flex-direction: column; align-items: flex-end; font-size: 13px; font-weight: 700; line-height: 1.1; color: #0f172a; }
+        .igcse-nuclide-sym { font-size: 24px; font-weight: 700; color: #0f172a; line-height: 1; }
+        .igcse-quote-box { background: #ffffff; border: 1px solid #cbd5e1; border-left: 4px solid #0a5482; border-radius: 8px; padding: 0.75rem 1rem; margin: 0.5rem 0; font-size: 14px; line-height: 1.75; color: #0f172a; }
+      `}</style>
       {/* Header */}
       <header className="h-14 w-full bg-white border-b border-slate-300 flex items-center justify-between px-3 sm:px-6 shrink-0 z-20 box-border gap-2">
         <div className="flex items-center gap-2.5 sm:gap-4 overflow-hidden min-w-0">
           <button type="button" onClick={handleSafeExit} className="text-slate-600 hover:text-[#0a5482] font-bold text-sm transition-colors whitespace-nowrap cursor-pointer">← {isEn ? 'Back' : 'Quay lại'}</button>
           <div className="h-5 w-px bg-slate-300 hidden sm:block"></div>
-          <div className="truncate flex items-baseline gap-2 min-w-0">
+          <div className="truncate flex items-center gap-2 min-w-0">
             <h1 className="font-bold text-slate-900 text-[14px] sm:text-[15px] leading-tight truncate">{isReviewMode ? `[REVIEW] ${testData.title}` : testData.title}</h1>
+            {calcPolicy && (
+              <span className={`hidden lg:inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[11px] font-black uppercase tracking-wide shrink-0 border ${calcPolicy === 'non-calculator' ? 'bg-rose-50 text-rose-700 border-rose-200' : 'bg-emerald-50 text-emerald-700 border-emerald-200'}`}>
+                {calcPolicy === 'non-calculator' ? '🚫 Non-Calculator' : '🧮 Calculator'}
+              </span>
+            )}
             {!isReviewMode && (
               <span className="text-xs text-slate-400 whitespace-nowrap hidden xs:inline">({answeredCount}/{allSubQuestions.length} {isEn ? 'questions' : 'câu'})</span>
             )}
           </div>
         </div>
         <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+          {hasRichPaper && (
+            <div className="inline-flex items-center bg-slate-100 p-0.5 rounded-lg border border-slate-200 shrink-0" role="group" aria-label={isEn ? 'Paper view mode' : 'Chế độ xem đề'}>
+              <button
+                type="button"
+                onClick={() => setPaperViewMode('split')}
+                className={`px-2 sm:px-2.5 py-1 rounded-md text-[11px] sm:text-xs font-bold transition-all whitespace-nowrap cursor-pointer ${paperViewMode === 'split' ? 'bg-white text-[#0a5482] shadow-xs' : 'text-slate-600 hover:text-slate-900'}`}
+                title={isEn ? 'Show original PDF on the left alongside Text & Figures' : 'Xem song song PDF bên trái và Đề Text + Hình bên phải'}
+              >
+                📄|📝 <span className="hidden md:inline">{isEn ? 'Split PDF' : 'Song song'}</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => setPaperViewMode('text-only')}
+                className={`px-2 sm:px-2.5 py-1 rounded-md text-[11px] sm:text-xs font-bold transition-all whitespace-nowrap cursor-pointer ${paperViewMode === 'text-only' ? 'bg-[#0a5482] text-white shadow-xs' : 'text-slate-600 hover:text-slate-900'}`}
+                title={isEn ? 'Hide left PDF and work directly on Text + Figures paper' : 'Ẩn PDF bên trái — Chỉ làm trực tiếp trên bản Text + Hình'}
+              >
+                📝 <span className="hidden md:inline">{isEn ? 'Text + Figures' : 'Chỉ Text + Hình'}</span>
+              </button>
+            </div>
+          )}
+          {mathSyllabus && (
+            <button
+              type="button"
+              onClick={() => setShowFormulaSheet(true)}
+              className="px-2.5 py-1 rounded-lg bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border border-indigo-200 text-xs font-extrabold whitespace-nowrap cursor-pointer transition-colors"
+              title={isEn ? 'Open Official 2025–2027 Formula Sheet' : 'Mở bảng công thức Cambridge 2025–2027'}
+            >
+              📐 <span className="hidden sm:inline">Formulas</span>
+            </button>
+          )}
           <LmsLangToggle lang={lang} setLang={setLang} variant="light" />
           {!gradeResult && !isReviewMode && (
             <>
@@ -749,6 +826,7 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
       {/* Split Screen */}
       <div ref={containerRef} className={`flex-1 flex flex-col md:flex-row overflow-hidden w-full bg-[#525659] ${isDragging ? 'select-none' : ''}`}>
         {/* Left: PDF Viewer with Drawing Canvas */}
+        {showPdfPane && (
         <div style={{ width: isDesktop ? `${leftWidth}%` : '100%' }} className="h-[46vh] md:h-full flex flex-col shrink-0 bg-[#525659] border-b md:border-b-0 border-slate-700">
           <div className="bg-[#323639] border-b border-[#202224] px-3 sm:px-4 flex justify-between items-center gap-2 h-10 shrink-0 shadow-sm overflow-x-auto no-scrollbar">
             <div className="flex items-center gap-2 shrink-0">
@@ -877,18 +955,38 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
              )}
           </div>
         </div>
+        )}
 
         {/* Drag Handle (Desktop only) */}
+        {showPdfPane && (
         <div onMouseDown={() => setIsDragging(true)} onTouchStart={() => setIsDragging(true)} className={`hidden md:flex w-[6px] h-full bg-[#202224] hover:bg-[#2ab4e8] cursor-col-resize items-center justify-center shrink-0 z-10 transition-colors ${isDragging ? 'bg-[#2ab4e8]' : ''}`}>
           <div className="flex flex-col gap-1"><div className="w-[2px] h-[2px] bg-slate-500"></div><div className="w-[2px] h-[2px] bg-slate-500"></div><div className="w-[2px] h-[2px] bg-slate-500"></div></div>
         </div>
+        )}
 
-        {/* Right: Answer Sheet */}
-        <div style={{ width: isDesktop ? `calc(${100 - leftWidth}% - 6px)` : '100%' }} className="flex-1 md:flex-none md:h-full min-h-0 flex flex-col shrink-0 bg-[#f8fafc]">
-          <div className="bg-[#323639] border-b border-[#202224] px-6 flex justify-between items-center h-10 shrink-0 shadow-sm">
-            <span className="font-bold text-slate-300 text-[11px] uppercase tracking-widest flex items-center gap-2">
-              {gradeResult ? <><span>✅</span> {isEn ? 'IGCSE Grading Results' : 'Kết quả chấm điểm IGCSE'}</> : <><span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> {isEn ? 'Answer Sheet' : 'Answer Sheet (Phiếu trả lời)'}</>}
-            </span>
+        {/* Right: Answer Sheet (+ Rich Exam Text & Figures when enabled) */}
+        <div style={{ width: isDesktop ? (showPdfPane ? `calc(${100 - leftWidth}% - 6px)` : '100%') : '100%' }} className="flex-1 md:flex-none md:h-full min-h-0 flex flex-col shrink-0 bg-[#f8fafc]">
+          <div className="bg-[#323639] border-b border-[#202224] px-4 sm:px-6 flex justify-between items-center h-10 shrink-0 shadow-sm gap-2">
+            <div className="flex items-center gap-2 min-w-0">
+              <span className="font-bold text-slate-300 text-[11px] uppercase tracking-widest flex items-center gap-2 truncate">
+                {gradeResult
+                  ? <><span>✅</span> {isEn ? 'IGCSE Grading Results' : 'Kết quả chấm điểm IGCSE'}</>
+                  : hasRichPaper
+                    ? <><span className="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse shrink-0"></span> {isEn ? 'Structured Paper (Text + Figures)' : 'Đề Text + Hình & Phiếu trả lời'}</>
+                    : <><span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse shrink-0"></span> {isEn ? 'Answer Sheet' : 'Answer Sheet (Phiếu trả lời)'}</>}
+              </span>
+              {hasRichPaper && !showPdfPane && testData.insert_pdf_url && (
+                <a
+                  href={testData.insert_pdf_url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-2 py-0.5 rounded bg-white/10 hover:bg-white/20 text-slate-200 hover:text-white text-[11px] font-bold transition whitespace-nowrap shrink-0"
+                  title={isEn ? 'Open original PDF in a new tab' : 'Mở file PDF gốc trong tab mới'}
+                >
+                  ↗ {isEn ? 'Original PDF' : 'PDF gốc'}
+                </a>
+              )}
+            </div>
 
             {/* 🎬 NÚT BẬT / THÊM VIDEO HƯỚNG DẪN */}
             <TestGuideVideoButton
@@ -901,6 +999,47 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
               buttonTheme="dark"
             />
           </div>
+
+          {/* Compact Question Jump Navigator for Rich Structured Papers */}
+          {hasRichPaper && questions.length > 1 && (
+            <div className="bg-white border-b border-slate-200 px-4 sm:px-6 py-2 flex items-center justify-between gap-3 shrink-0 overflow-x-auto no-scrollbar">
+              <div className="flex items-center gap-1.5 shrink-0">
+                <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mr-1 hidden sm:inline">
+                  {isEn ? 'Jump:' : 'Câu:'}
+                </span>
+                {questions.map((q: any, qIdx: number) => {
+                  const subs = q.sub_questions || [];
+                  const done = subs.filter((s: any) => answers[s.id]?.trim()).length;
+                  const allDone = subs.length > 0 && done === subs.length;
+                  const partial = done > 0 && done < subs.length;
+                  return (
+                    <button
+                      key={`jump-${qIdx}`}
+                      type="button"
+                      onClick={() => {
+                        const target = document.getElementById(`igcse-question-${qIdx}`);
+                        target?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                      }}
+                      className={`px-2.5 py-1 rounded-md text-[12px] font-extrabold border transition-all cursor-pointer whitespace-nowrap ${
+                        allDone
+                          ? 'bg-emerald-50 text-emerald-700 border-emerald-300 hover:bg-emerald-100'
+                          : partial
+                            ? 'bg-sky-50 text-[#0a5482] border-sky-300 hover:bg-sky-100'
+                            : 'bg-slate-50 text-slate-600 border-slate-200 hover:border-slate-400 hover:text-slate-900'
+                      }`}
+                      title={`Question ${q.question_number}${q.page_ref ? ` (PDF ${q.page_ref})` : ''} — ${done}/${subs.length}`}
+                    >
+                      Q{q.question_number}
+                      {allDone && <span className="ml-1 text-[10px]">✓</span>}
+                    </button>
+                  );
+                })}
+              </div>
+              <span className="hidden lg:inline-flex items-center gap-1 text-[11px] font-semibold text-sky-700 bg-sky-50 border border-sky-200 px-2.5 py-0.5 rounded-full whitespace-nowrap shrink-0">
+                ✨ {isEn ? 'Interactive Text + Figures' : 'Đề Text + Hình (Thử nghiệm)'}
+              </span>
+            </div>
+          )}
 
           {/* 🎬 INLINE VIDEO PLAYER (Right below header, stays visible while scrolling) */}
           <TestGuideVideoPlayer
@@ -933,6 +1072,7 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
             }}
             className={`flex-1 overflow-y-auto p-4 sm:p-8 ${isDragging ? 'pointer-events-none' : ''} custom-scrollbar`}
           >
+            <div className={!showPdfPane ? 'max-w-4xl mx-auto' : ''}>
             {/* Score Summary */}
             {gradeResult && (
                 <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 mb-8 text-center">
@@ -949,11 +1089,34 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
 
             {/* Questions */}
             <div className="space-y-8">
-                {questions.map((q: any, qIdx: number) => (
-                    <div key={qIdx} className="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
-                        <div className="flex gap-3 mb-6 items-baseline border-b border-slate-100 pb-4">
-                            <h3 className="font-black text-slate-800 text-[18px]">Question {q.question_number}</h3>
+                {questions.map((q: any, qIdx: number) => {
+                    const qTotalMarks = Math.round(((q.sub_questions || []).reduce((acc: number, s: any) => acc + (Number(s.max_marks) || 0), 0)) * 10) / 10;
+                    return (
+                    <div id={`igcse-question-${qIdx}`} key={qIdx} className="bg-white rounded-xl shadow-sm border border-slate-200 p-5 sm:p-6 scroll-mt-4">
+                        <div className="flex flex-wrap justify-between items-center gap-2 mb-5 border-b border-slate-100 pb-3.5">
+                            <div className="flex items-center gap-2.5 flex-wrap">
+                                <h3 className="font-black text-slate-800 text-[18px]">Question {q.question_number}</h3>
+                                {q.page_ref && (
+                                    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-slate-100 text-slate-500 border border-slate-200 text-[11px] font-bold">
+                                        📄 PDF {q.page_ref}
+                                    </span>
+                                )}
+                            </div>
+                            {qTotalMarks > 0 && (
+                                <span className="text-[12px] font-bold text-[#0a5482] bg-sky-50 border border-sky-200 px-2.5 py-0.5 rounded-full whitespace-nowrap">
+                                    [Total: {qTotalMarks} {qTotalMarks === 1 ? 'mark' : 'marks'}]
+                                </span>
+                            )}
                         </div>
+
+                        {(q.stem_html || (Array.isArray(q.images) && q.images.length > 0)) && (
+                            <div className="mb-6 bg-slate-50/80 border border-slate-200/80 rounded-xl p-4 sm:p-5">
+                                {q.stem_html && (
+                                    <div className="igcse-rich-stem" dangerouslySetInnerHTML={{ __html: q.stem_html }} />
+                                )}
+                                {renderRichImages(q.images)}
+                            </div>
+                        )}
                         
                         <div className="space-y-6">
                             {(q.sub_questions || []).map((sub: any) => {
@@ -963,16 +1126,36 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
 
                                 return (
                                     <div key={sub.id} className={`p-4 rounded-lg border ${isReviewMode ? (isCorrect ? 'bg-emerald-50 border-emerald-200' : isWrong ? 'bg-red-50 border-red-200' : 'bg-orange-50 border-orange-200') : 'bg-slate-50 border-slate-200'}`}>
-                                        <div className="flex justify-between items-start mb-3">
-                                            <label className="font-semibold text-slate-800 text-[14px] leading-relaxed pr-4 whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: renderLatex(sub.label) }} />
-                                            <span className="font-bold text-slate-400 text-[12px] whitespace-nowrap">[{sub.max_marks} marks]</span>
+                                        {(sub.stem_html || (Array.isArray(sub.images) && sub.images.length > 0)) && (
+                                            <div className="mb-3.5 pb-3 border-b border-slate-200/70">
+                                                {sub.stem_html && (
+                                                    <div className="igcse-rich-stem" dangerouslySetInnerHTML={{ __html: sub.stem_html }} />
+                                                )}
+                                                {renderRichImages(sub.images)}
+                                            </div>
+                                        )}
+                                        <div className="flex justify-between items-start gap-3 mb-3">
+                                            <label className="font-semibold text-slate-800 text-[14px] leading-relaxed whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: renderLatex(cleanRichLabel(sub.label)) }} />
+                                            <div className="flex items-center gap-1.5 shrink-0">
+                                                {sub.unit && sub.type === 'long_answer' && (
+                                                    <span className="px-2 py-0.5 rounded bg-sky-50 text-[#0a5482] border border-sky-200 text-[11px] font-bold whitespace-nowrap">
+                                                        {isEn ? 'Unit:' : 'Đơn vị:'} {sub.unit}
+                                                    </span>
+                                                )}
+                                                <span className="font-bold text-slate-400 text-[12px] whitespace-nowrap">[{sub.max_marks} {Number(sub.max_marks) === 1 ? 'mark' : 'marks'}]</span>
+                                            </div>
                                         </div>
 
                                         {/* Render input by question type */}
                                         {sub.type === 'short_answer' ? (
                                             <div className="relative">
                                                 <div className="flex items-center gap-2">
-                                                    <input ref={(el) => { inputRefs.current[sub.id] = el; }} type="text" value={answers[sub.id] || ''} onChange={(e) => handleAnswerChange(sub.id, e.target.value)} disabled={isReviewMode} placeholder={isEn ? 'Enter short answer...' : 'Điền đáp án ngắn...'} className={`w-full max-w-sm px-4 py-2 border rounded-md text-[14px] outline-none transition-all ${isReviewMode ? 'bg-white border-slate-300' : 'focus:border-[#1e88e5] focus:ring-1 focus:ring-[#1e88e5]'}`}/>
+                                                    <input ref={(el) => { inputRefs.current[sub.id] = el; }} type="text" value={answers[sub.id] || ''} onChange={(e) => handleAnswerChange(sub.id, e.target.value)} disabled={isReviewMode} placeholder={isEn ? 'Enter short answer...' : 'Điền đáp án ngắn...'} className={`w-full max-w-sm px-4 py-2 border rounded-md text-[14px] outline-none transition-all ${isReviewMode ? 'bg-white border-slate-300' : 'bg-white focus:border-[#1e88e5] focus:ring-1 focus:ring-[#1e88e5]'}`}/>
+                                                    {sub.unit && (
+                                                        <span className="shrink-0 px-2.5 py-2 rounded-md bg-slate-100 border border-slate-200 text-slate-700 text-[13px] font-extrabold whitespace-nowrap">
+                                                            {sub.unit}
+                                                        </span>
+                                                    )}
                                                     {!isReviewMode && (
                                                         <button type="button" onClick={() => setShowPalette(prev => ({...prev, [sub.id]: !prev[sub.id]}))} className={`shrink-0 px-2.5 py-1.5 rounded-md text-[12px] font-bold border transition-all ${showPalette[sub.id] ? 'bg-[#1e88e5] text-white border-[#1e88e5]' : 'bg-white text-slate-500 border-slate-300 hover:border-[#1e88e5] hover:text-[#1e88e5]'}`} title={isEn ? 'Formula symbol palette' : 'Bảng ký tự công thức'}>
                                                             f<sub>x</sub>
@@ -1009,7 +1192,7 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
                                         ) : sub.type === 'long_answer' ? (
                                             <div className="relative">
                                                 <div className="flex items-start gap-2">
-                                                    <textarea ref={(el) => { inputRefs.current[sub.id] = el; }} value={answers[sub.id] || ''} onChange={(e) => handleAnswerChange(sub.id, e.target.value)} disabled={isReviewMode} placeholder={isEn ? 'Write your detailed answer...' : 'Viết câu trả lời tự luận...'} className={`w-full px-4 py-3 border rounded-md min-h-[80px] text-[14px] outline-none transition-all resize-y ${isReviewMode ? 'bg-white border-slate-300' : 'focus:border-[#1e88e5] focus:ring-1 focus:ring-[#1e88e5]'}`}/>
+                                                    <textarea ref={(el) => { inputRefs.current[sub.id] = el; }} value={answers[sub.id] || ''} onChange={(e) => handleAnswerChange(sub.id, e.target.value)} disabled={isReviewMode} placeholder={isEn ? 'Write your detailed answer...' : 'Viết câu trả lời tự luận...'} className={`w-full px-4 py-3 border rounded-md min-h-[80px] text-[14px] outline-none transition-all resize-y ${isReviewMode ? 'bg-white border-slate-300' : 'bg-white focus:border-[#1e88e5] focus:ring-1 focus:ring-[#1e88e5]'}`}/>
                                                     {!isReviewMode && (
                                                         <button type="button" onClick={() => setShowPalette(prev => ({...prev, [sub.id]: !prev[sub.id]}))} className={`shrink-0 mt-1 px-2.5 py-1.5 rounded-md text-[12px] font-bold border transition-all ${showPalette[sub.id] ? 'bg-[#1e88e5] text-white border-[#1e88e5]' : 'bg-white text-slate-500 border-slate-300 hover:border-[#1e88e5] hover:text-[#1e88e5]'}`} title={isEn ? 'Formula symbol palette' : 'Bảng ký tự công thức'}>
                                                             f<sub>x</sub>
@@ -1124,11 +1307,20 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
                             })}
                         </div>
                     </div>
-                ))}
+                    );
+                })}
+            </div>
             </div>
           </div>
         </div>
       </div>
+      <IgcseFormulaSheetModal
+        isOpen={showFormulaSheet}
+        onClose={() => setShowFormulaSheet(false)}
+        syllabus={mathSyllabus}
+        calculatorPolicy={calcPolicy}
+        isEn={isEn}
+      />
       <ImageLightboxModal
         items={imageLightbox?.items || null}
         initialIndex={imageLightbox?.index ?? 0}
