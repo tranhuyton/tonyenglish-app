@@ -414,49 +414,68 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
       };
 
       const pageContainers = document.querySelectorAll('.page-container');
-      
-      for (let i = 0; i < pageContainers.length; i++) {
-          const container = pageContainers[i];
-          const pageNum = container.getAttribute('data-page');
-          const pdfCanvas = container.querySelector('.react-pdf__Page__canvas') as HTMLCanvasElement;
-          const studentCanvas = container.querySelector('.student-canvas') as HTMLCanvasElement;
-          
-          if (pdfCanvas) {
-              const compositeCanvas = document.createElement('canvas');
-              compositeCanvas.width = pdfCanvas.width;
-              compositeCanvas.height = pdfCanvas.height;
-              const ctx = compositeCanvas.getContext('2d');
-              
-              if (ctx) {
-                  // Giới hạn kích thước ảnh để tránh lỗi quá tải Payload của Supabase
-                  const MAX_WIDTH = 800;
-                  let scaleFactor = 1;
-                  if (pdfCanvas.width > MAX_WIDTH) {
-                      scaleFactor = MAX_WIDTH / pdfCanvas.width;
-                  }
 
-                  const targetWidth = pdfCanvas.width * scaleFactor;
-                  const targetHeight = pdfCanvas.height * scaleFactor;
-
-                  compositeCanvas.width = targetWidth;
-                  compositeCanvas.height = targetHeight;
-                  
-                  ctx.fillStyle = '#ffffff';
-                  ctx.fillRect(0, 0, targetWidth, targetHeight);
-                  
-                  // Vẽ PDF với kích thước đã thu nhỏ
-                  ctx.drawImage(pdfCanvas, 0, 0, targetWidth, targetHeight);
-                  
-                  // Vẽ nét vẽ của học sinh với kích thước đã thu nhỏ
-                  if (studentCanvas && studentCanvas.width > 0) {
-                      ctx.drawImage(studentCanvas, 0, 0, studentCanvas.width, studentCanvas.height, 0, 0, targetWidth, targetHeight);
-                  }
-                  
-                  // Optimize size: JPEG 40% (Giảm tối đa dung lượng, Gemini Vision vẫn đọc được)
-                  const base64 = compositeCanvas.toDataURL('image/jpeg', 0.4);
-                  imageAnswers.push({ questionId: `PAGE_${pageNum}`, base64 });
-              }
+      const hasCanvasInk = (cv: HTMLCanvasElement | null): boolean => {
+        if (!cv || cv.width === 0 || cv.height === 0) return false;
+        const c = cv.getContext('2d');
+        if (!c) return false;
+        try {
+          const data = c.getImageData(0, 0, cv.width, cv.height).data;
+          // Step by 16 bytes (every 4th pixel) on alpha channel for instant scan even on 20-page Science/0654 PDFs
+          for (let p = 3; p < data.length; p += 16) {
+            if (data[p] > 0) return true;
           }
+        } catch {
+          return true;
+        }
+        return false;
+      };
+
+      const pagesToRender: { pageNum: string; pdfCanvas: HTMLCanvasElement; studentCanvas: HTMLCanvasElement | null }[] = [];
+      let firstValidPage: { pageNum: string; pdfCanvas: HTMLCanvasElement; studentCanvas: HTMLCanvasElement | null } | null = null;
+
+      for (let i = 0; i < pageContainers.length; i++) {
+        const container = pageContainers[i];
+        const pageNum = container.getAttribute('data-page') || String(i + 1);
+        const pdfCanvas = container.querySelector('.react-pdf__Page__canvas') as HTMLCanvasElement | null;
+        const studentCanvas = container.querySelector('.student-canvas') as HTMLCanvasElement | null;
+        if (!pdfCanvas) continue;
+        if (!firstValidPage) firstValidPage = { pageNum, pdfCanvas, studentCanvas };
+        // On long exams (> 8 pages such as 0654/0610/0620/0625), only attach pages with student handwriting/drawings
+        if (pageContainers.length <= 8 || hasCanvasInk(studentCanvas)) {
+          pagesToRender.push({ pageNum, pdfCanvas, studentCanvas });
+        }
+      }
+      if (pagesToRender.length === 0 && firstValidPage) {
+        pagesToRender.push(firstValidPage);
+      }
+
+      // Adaptive resolution & JPEG quality so even 20-page 0654/Science submissions stay safely under Edge Function limits
+      const MAX_WIDTH = pagesToRender.length > 16 ? 640 : pagesToRender.length > 10 ? 720 : 800;
+      const JPEG_QUALITY = pagesToRender.length > 16 ? 0.34 : pagesToRender.length > 10 ? 0.38 : 0.45;
+
+      for (const item of pagesToRender) {
+        const { pageNum, pdfCanvas, studentCanvas } = item;
+        const compositeCanvas = document.createElement('canvas');
+        let scaleFactor = 1;
+        if (pdfCanvas.width > MAX_WIDTH) {
+          scaleFactor = MAX_WIDTH / pdfCanvas.width;
+        }
+        const targetWidth = Math.round(pdfCanvas.width * scaleFactor);
+        const targetHeight = Math.round(pdfCanvas.height * scaleFactor);
+        compositeCanvas.width = targetWidth;
+        compositeCanvas.height = targetHeight;
+        const ctx = compositeCanvas.getContext('2d');
+        if (ctx) {
+          ctx.fillStyle = '#ffffff';
+          ctx.fillRect(0, 0, targetWidth, targetHeight);
+          ctx.drawImage(pdfCanvas, 0, 0, targetWidth, targetHeight);
+          if (studentCanvas && studentCanvas.width > 0) {
+            ctx.drawImage(studentCanvas, 0, 0, studentCanvas.width, studentCanvas.height, 0, 0, targetWidth, targetHeight);
+          }
+          const base64 = compositeCanvas.toDataURL('image/jpeg', JPEG_QUALITY);
+          imageAnswers.push({ questionId: `PAGE_${pageNum}`, base64 });
+        }
       }
 
       const { data, error } = await supabase.functions.invoke('igcse-grader', {
@@ -525,7 +544,7 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
             user_id: user.id, course_id: testData.course_id, test_title: testData.title || "IGCSE Direct Paper",
             test_type: 'IGCSE-Science', score: gradedData.total_student_score, total_score: gradedData.total_max_score,
             time_spent: computedTimeSpent,
-            details: { test_id: testData.id, userAnswers: {}, aiFeedback: gradedData }
+            details: { test_id: testData.id, examMode: 'igcse-direct', userAnswers: {}, aiFeedback: gradedData }
           }]);
 
           // Auto-complete test-type assignments (Chỉ hoàn thành nếu đạt từ 50% điểm trở lên)

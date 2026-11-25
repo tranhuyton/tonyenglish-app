@@ -4032,11 +4032,9 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                                    <input type="number" defaultValue={t.order_index || 0} onBlur={e => handleUpdateTestOrder(t.id, parseInt(e.target.value) || 0)} className="w-8 md:w-10 h-6 text-center text-[10px] md:text-[11px] font-bold border border-slate-200 rounded outline-none focus:border-[#2ab4e8] shrink-0" title="Thứ tự hiển thị" />
                                    <div className="flex flex-col min-w-0">
                                         <span className="font-bold text-[13px] md:text-[14px] text-slate-700 truncate">{t.title}</span>
-                                        {String(t.test_type || '').toLowerCase() === 'igcse-direct' ? (
-                                          <span className="inline-flex items-center gap-1 w-fit mt-1 px-1.5 py-0.5 rounded text-[10px] font-bold bg-violet-50 text-violet-700 border border-violet-200">✏️ Vẽ trực tiếp PDF</span>
-                                        ) : String(t.test_type || '').toLowerCase().includes('igcse') ? (
-                                          <span className="inline-flex items-center gap-1 w-fit mt-1 px-1.5 py-0.5 rounded text-[10px] font-bold bg-sky-50 text-[#0a5482] border border-sky-200">📄 PDF + Phiếu trả lời</span>
-                                        ) : null}
+                                        {String(t.test_type || '').toLowerCase().includes('igcse') && (
+                                          <span className="inline-flex items-center gap-1 w-fit mt-1 px-1.5 py-0.5 rounded text-[10px] font-bold bg-gradient-to-r from-sky-50 to-violet-50 text-[#0a5482] border border-indigo-200/90">✏️📄 2 chế độ: Điền ô • Vẽ PDF</span>
+                                        )}
                                    </div>
                                  </div>
                                  <div className="flex gap-2 md:gap-3 shrink-0">

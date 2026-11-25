@@ -10,6 +10,7 @@ import { Spk2LegoStudioModal, Spk2LegoStudioOpenPayload } from './Spk2LegoStudio
 import { Wt1StudioModal, Wt1VocabBankModal, Wt1StudioOpenPayload } from './Wt1StudioModal';
 import { useLmsLang, LmsLangToggle, getLocalizedCourseTitle } from './utils/lmsI18n';
 import { ImageLightboxModal, LightboxState } from './mcqImageUtils';
+import IgcseModeSelectionModal, { hasIgcsePaperPdf } from './IgcseModeSelectionModal';
 import { LECTURE_MCQ_GRADER_CSS, buildLectureMcqGraderScript } from './utils/lectureMcqGrader';
 import {
   ChevronLeft,
@@ -4117,6 +4118,7 @@ export default function LectureViewer({
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDisplayMenuOpen, setIsDisplayMenuOpen] = useState(false);
   const [lockedTrialLecture, setLockedTrialLecture] = useState<{ id: string; title: string } | null>(null);
+  const [igcseTestToStart, setIgcseTestToStart] = useState<any>(null);
   const [isVideoCollapsed, setIsVideoCollapsed] = useState(false);
   const [selectedVideoSubIndex, setSelectedVideoSubIndex] = useState<number>(0);
 
@@ -5380,12 +5382,18 @@ export default function LectureViewer({
          
          const type = String(testData.test_type || '').toLowerCase();
 
+          if (typeof testData.content_json === 'string') {
+              try { testData.content_json = JSON.parse(testData.content_json); } catch(e) { testData.content_json = {}; }
+          }
+
           if (type.includes('sat-bluebook') || type === 'sat') {
               onStartTest('sat-bluebook', testData);
-          } else if (type === 'igcse-direct') {
-              onStartTest('igcse-direct', testData);
-          } else if (type.includes('igcse')) {
-              onStartTest('igcse', testData);
+          } else if (type === 'igcse-direct' || type.includes('igcse')) {
+              if (hasIgcsePaperPdf(testData)) {
+                  setIgcseTestToStart(testData);
+              } else {
+                  onStartTest('igcse', testData);
+              }
           } else if (type.includes('split-standard')) {
               onStartTest('split-standard', testData);
           } else if (type.includes('standard-reading')) {
@@ -7461,6 +7469,18 @@ export default function LectureViewer({
           </div>
         </div>
       )}
+      {/* ✏️📄 POPUP CHỌN CHẾ ĐỘ LÀM ĐỀ IGCSE (Điền ô vs Vẽ trực tiếp PDF) */}
+      <IgcseModeSelectionModal
+        test={igcseTestToStart}
+        isEn={isEn}
+        onSelect={(mode) => {
+          const target = igcseTestToStart;
+          setIgcseTestToStart(null);
+          if (target && onStartTest) onStartTest(mode, target);
+        }}
+        onClose={() => setIgcseTestToStart(null)}
+      />
+
       {/* 🔍 IMAGE LIGHTBOX CHO HÌNH ẢNH TRONG BÀI GIẢNG */}
       <ImageLightboxModal
         items={lectureLightbox?.items || null}

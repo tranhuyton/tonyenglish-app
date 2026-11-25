@@ -32,7 +32,6 @@ import {
   Maximize2,
   Minimize2,
   PenTool,
-  Columns2,
 } from 'lucide-react';
 import { supabase, isTonyEnglishAuthUser, isTonyEnglishAdmin } from './supabase';
 import AssignmentCalendar from './AssignmentCalendar';
@@ -43,6 +42,7 @@ import CourseStudyCoach, { isCoachSupportedCourse } from './CourseStudyCoach';
 import { parseClassConfig } from './classConfigUtils';
 import { ensureCourseBoardAssignedToUser, ensureCourseBoardsAssignedForUser } from './boardLectureSync';
 import { useLmsLang, LmsLangToggle, getLocalizedCourseTitle } from './utils/lmsI18n';
+import IgcseModeSelectionModal, { hasIgcsePaperPdf } from './IgcseModeSelectionModal';
 
 const SUBFOLDER_PALETTES = [
   { gradient: 'from-[#073b5c] via-[#0a5482] to-[#136f9f]', accent: 'text-sky-200', pill: 'bg-sky-50 text-[#0a5482] border-sky-200/80' },
@@ -95,7 +95,6 @@ const getTestSkillConfig = (test: any, isEn = false): {
   bg: string;
   text: string;
   border: string;
-  isDirectDraw?: boolean;
   modeBadge?: {
     icon: React.ReactNode;
     label: string;
@@ -106,38 +105,19 @@ const getTestSkillConfig = (test: any, isEn = false): {
   const type = String(test.test_type || '').toLowerCase();
   const title = String(test.title || '').toLowerCase();
 
-  if (type === 'igcse-direct') {
+  if (type === 'igcse-direct' || type.includes('igcse')) {
       return {
-        icon: <PenTool className="w-5 h-5 text-violet-600" />,
-        bg: 'bg-violet-50',
-        text: 'text-violet-700',
-        border: 'border-violet-200',
-        isDirectDraw: true,
-        modeBadge: {
-          icon: <PenTool className="w-3 h-3 shrink-0" />,
-          label: isEn ? 'Draw on PDF • Stylus' : 'Vẽ trực tiếp PDF • iPad',
-          tooltip: isEn
-            ? 'Write or draw directly on the PDF exam paper using iPad / Apple Pencil or mouse, graded by AI'
-            : 'Chế độ viết/vẽ trực tiếp bằng bút cảm ứng (iPad/Apple Pencil) hoặc chuột ngay trên tờ đề PDF, AI tự chấm bài',
-          badgeClass: 'bg-violet-50 text-violet-700 border border-violet-200/90',
-        },
-      };
-  }
-
-  if (type.includes('igcse')) {
-      return {
-        icon: <Columns2 className="w-5 h-5 text-[#0a5482]" />,
-        bg: 'bg-sky-50',
+        icon: <PenTool className="w-5 h-5 text-[#0a5482]" />,
+        bg: 'bg-gradient-to-br from-sky-50 to-violet-50',
         text: 'text-[#0a5482]',
-        border: 'border-sky-200',
-        isDirectDraw: false,
+        border: 'border-indigo-200/90',
         modeBadge: {
-          icon: <Columns2 className="w-3 h-3 shrink-0" />,
-          label: isEn ? 'PDF + Answer Sheet' : 'PDF + Phiếu trả lời',
+          icon: <PenTool className="w-3 h-3 shrink-0 text-violet-600" />,
+          label: isEn ? '2 Modes: Type • Draw PDF' : '2 chế độ: Điền ô • Vẽ PDF',
           tooltip: isEn
-            ? 'Split screen: Cambridge PDF paper on the left, typed/photo Answer Sheet on the right'
-            : 'Chia đôi màn hình: Đề PDF bên trái và Phiếu nhập đáp án / chụp ảnh bài làm bên phải',
-          badgeClass: 'bg-sky-50 text-[#0a5482] border border-sky-200/90',
+            ? 'Click to choose: Fill-in Answer Sheet (Laptop/PC) or Write/Draw Directly on PDF (iPad / Apple Pencil)'
+            : 'Bấm vào đề để chọn: Điền vào ô (Laptop/PC) hoặc Viết/Vẽ trực tiếp trên PDF (iPad / Bút cảm ứng)',
+          badgeClass: 'bg-gradient-to-r from-sky-50 to-violet-50 text-[#0a5482] border border-indigo-200/90',
         },
       };
   }
@@ -379,10 +359,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   const [searchTest, setSearchTest] = useState('');
   const [sortTest, setSortTest] = useState('name-asc');
   const [filterType, setFilterType] = useState('all');
-  const [paperModeFilter, setPaperModeFilter] = useState<'all' | 'direct' | 'split'>('all');
-  useEffect(() => {
-    setPaperModeFilter('all');
-  }, [currentFolderId, selectedCourseId]);
+  const [igcseTestToStart, setIgcseTestToStart] = useState<any>(null);
   const [folderPage, setFolderPage] = useState(() => parseInt(sessionStorage.getItem('portal_folder_page') || '1', 10) || 1);
   const [testPage, setTestPage] = useState(() => parseInt(sessionStorage.getItem('portal_test_page') || '1', 10) || 1);
 
@@ -1310,10 +1287,12 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
     const type = String(testData.test_type || '').toLowerCase();
     if (type.includes('sat-bluebook') || type === 'sat') {
         onStartTest('sat-bluebook', testData);
-    } else if (type === 'igcse-direct') {
-        onStartTest('igcse-direct', testData);
-    } else if (type.includes('igcse')) {
-        onStartTest('igcse', testData);
+    } else if (type === 'igcse-direct' || type.includes('igcse')) {
+        if (hasIgcsePaperPdf(testData)) {
+            setIgcseTestToStart(testData);
+        } else {
+            onStartTest('igcse', testData);
+        }
     } else if (type.includes('split-standard')) {
         onStartTest('split-standard', testData);
     } else if (type.includes('standard-reading')) {
@@ -1468,31 +1447,16 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
       return courseTests.filter(t => t.folder_id === validFolderId);
   }, [courseTests, currentFolderId, courseFolders]);
 
-  const { directPaperCount, nonDirectPaperCount, hasMixedPaperModes } = useMemo(() => {
-      let direct = 0;
-      let nonDirect = 0;
-      currentTests.forEach((t: any) => {
-          if (String(t.test_type || '').toLowerCase() === 'igcse-direct') direct++;
-          else nonDirect++;
-      });
-      return { directPaperCount: direct, nonDirectPaperCount: nonDirect, hasMixedPaperModes: direct > 0 && nonDirect > 0 };
-  }, [currentTests]);
-
   const processedTests = useMemo(() => {
       return currentTests.filter(t => (t.title || '').toLowerCase().includes(searchTest.toLowerCase()))
                          .filter(t => filterType === 'all' || t.content_json?.basicInfo?.category === filterType)
-                         .filter(t => {
-                             if (paperModeFilter === 'all') return true;
-                             const isDirect = String(t.test_type || '').toLowerCase() === 'igcse-direct';
-                             return paperModeFilter === 'direct' ? isDirect : !isDirect;
-                         })
                          .sort((a, b) => {
                              if (sortTest === 'name-asc') return (a.title || '').localeCompare(b.title || '', undefined, { numeric: true, sensitivity: 'base' });
                              if (sortTest === 'name-desc') return (b.title || '').localeCompare(a.title || '', undefined, { numeric: true, sensitivity: 'base' });
                              if (sortTest === 'date-desc') return new Date(b.created_at || 0).getTime() - new Date(a.created_at || 0).getTime();
                              return new Date(a.created_at || 0).getTime() - new Date(b.created_at || 0).getTime();
                          });
-  }, [currentTests, searchTest, filterType, paperModeFilter, sortTest]);
+  }, [currentTests, searchTest, filterType, sortTest]);
 
   const upcomingDeadlines = useMemo(() => {
     const enrolledCourseIds = new Set(courses.map(c => c.id));
@@ -3364,52 +3328,6 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                     </div>
                   </div>
 
-                  {/* Smart Paper Mode Filter Bar (shown when folder mixes Draw-on-PDF and Split-Screen papers) */}
-                  {hasMixedPaperModes && (
-                    <div className="px-5 sm:px-7 py-3 bg-slate-50/80 border-b border-slate-200/80 flex flex-wrap items-center gap-2">
-                      <span className="text-[11px] font-extrabold text-slate-500 uppercase tracking-wider mr-1">
-                        {isEn ? 'Exam Mode:' : 'Chế độ làm bài:'}
-                      </span>
-                      <button
-                        type="button"
-                        onClick={() => { setPaperModeFilter('all'); setTestPage(1); }}
-                        className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold transition-all cursor-pointer border ${
-                          paperModeFilter === 'all'
-                            ? 'bg-[#0a5482] text-white border-[#0a5482] shadow-xs'
-                            : 'bg-white text-slate-600 border-slate-200 hover:border-slate-300'
-                        }`}
-                      >
-                        {isEn ? 'All' : 'Tất cả'} ({currentTests.length})
-                      </button>
-                      <button
-                        type="button"
-                        onClick={() => { setPaperModeFilter('direct'); setTestPage(1); }}
-                        className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold transition-all cursor-pointer border ${
-                          paperModeFilter === 'direct'
-                            ? 'bg-violet-600 text-white border-violet-600 shadow-xs'
-                            : 'bg-violet-50/80 text-violet-700 border-violet-200 hover:bg-violet-100'
-                        }`}
-                      >
-                        <PenTool className="w-3.5 h-3.5 shrink-0" />
-                        <span>{isEn ? 'Draw on PDF (iPad / Stylus)' : 'Vẽ trực tiếp trên PDF (iPad / Bút)'}</span>
-                        <span className="opacity-80">({directPaperCount})</span>
-                      </button>
-                      <button
-                        type="button"
-                        onClick={() => { setPaperModeFilter('split'); setTestPage(1); }}
-                        className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold transition-all cursor-pointer border ${
-                          paperModeFilter === 'split'
-                            ? 'bg-[#0284c7] text-white border-[#0284c7] shadow-xs'
-                            : 'bg-sky-50/80 text-[#0a5482] border-sky-200 hover:bg-sky-100'
-                        }`}
-                      >
-                        <Columns2 className="w-3.5 h-3.5 shrink-0" />
-                        <span>{isEn ? 'PDF + Answer Sheet' : 'PDF + Phiếu trả lời'}</span>
-                        <span className="opacity-80">({nonDirectPaperCount})</span>
-                      </button>
-                    </div>
-                  )}
-
                   {/* Tests List */}
                   <div className="p-5 sm:p-7 bg-slate-50/60">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
@@ -3492,14 +3410,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                                     ? 'bg-white shadow-2xs hover:shadow-xl hover:-translate-y-0.5 border-amber-300'
                                     : isTrialCourseView
                                       ? 'bg-white shadow-2xs hover:shadow-xl hover:-translate-y-0.5 border-amber-300/90 hover:border-amber-400'
-                                      : skillConfig.isDirectDraw
-                                        ? 'bg-white shadow-2xs hover:shadow-xl hover:-translate-y-0.5 border-violet-200/90 hover:border-violet-400'
-                                        : 'bg-white shadow-2xs hover:shadow-xl hover:-translate-y-0.5 border-slate-200/90 hover:border-[#2ab4e8]'
+                                      : 'bg-white shadow-2xs hover:shadow-xl hover:-translate-y-0.5 border-slate-200/90 hover:border-[#2ab4e8]'
                             }`}
                           >
-                            {skillConfig.isDirectDraw && !isTestLocked && (
-                              <div className="absolute top-0 inset-x-0 h-[3px] bg-gradient-to-r from-violet-500 via-purple-500 to-indigo-500" />
-                            )}
                             
                             <div>
                               <div className="flex justify-between items-start mb-3.5">
@@ -3511,7 +3424,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                                 </span>
                               </div>
                               
-                              <h3 className={`font-extrabold text-[15.5px] transition-colors mb-2.5 line-clamp-2 leading-snug min-h-[42px] ${isTestLocked ? 'text-slate-500' : skillConfig.isDirectDraw ? 'text-slate-800 group-hover:text-violet-700' : 'text-slate-800 group-hover:text-[#0a5482]'}`}>
+                              <h3 className={`font-extrabold text-[15.5px] transition-colors mb-2.5 line-clamp-2 leading-snug min-h-[42px] ${isTestLocked ? 'text-slate-500' : 'text-slate-800 group-hover:text-[#0a5482]'}`}>
                                   {test.title}
                               </h3>
                               
@@ -4806,8 +4719,10 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                             }
 
                             const type = String(testDataToUse.test_type || '').toLowerCase();
+                            const savedExamMode = String(viewingHistoryDetail.details?.examMode || '').toLowerCase();
                             let targetMode = 'standard';
-                            if (type.includes('sat-bluebook') || type === 'sat') targetMode = 'sat-bluebook';
+                            if (savedExamMode === 'igcse-direct' || savedExamMode === 'igcse') targetMode = savedExamMode;
+                            else if (type.includes('sat-bluebook') || type === 'sat') targetMode = 'sat-bluebook';
                             else if (type.includes('igcse-direct')) targetMode = 'igcse-direct';
                             else if (type.includes('igcse')) targetMode = 'igcse';
                             else if (type.includes('split-standard')) targetMode = 'split-standard';
@@ -4847,6 +4762,18 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
           </div>
         </div>
       )}
+
+      {/* POPUP CHỌN CHẾ ĐỘ THI IGCSE (Điền vào ô vs Viết/Vẽ trực tiếp PDF) */}
+      <IgcseModeSelectionModal
+        test={igcseTestToStart}
+        isEn={isEn}
+        onSelect={(mode) => {
+          const target = igcseTestToStart;
+          setIgcseTestToStart(null);
+          if (target && onStartTest) onStartTest(mode, target);
+        }}
+        onClose={() => setIgcseTestToStart(null)}
+      />
 
       {/* POPUP CHỌN CHẾ ĐỘ THI IELTS */}
       {showModeSelection && testToStart && (

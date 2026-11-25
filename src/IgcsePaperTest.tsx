@@ -540,7 +540,7 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
             user_id: user.id, course_id: testData.course_id, test_title: testData.title || "IGCSE Paper",
             test_type: 'IGCSE-Science', score: gradedData.total_student_score, total_score: gradedData.total_max_score,
             time_spent: computedTimeSpent,
-            details: { test_id: testData.id, userAnswers: currentAnswers, aiFeedback: gradedData }
+            details: { test_id: testData.id, examMode: 'igcse', userAnswers: currentAnswers, aiFeedback: gradedData }
           }]);
 
           // Auto-complete test-type assignments (Chỉ hoàn thành nếu đạt từ 50% điểm trở lên)
