@@ -271,7 +271,7 @@ export default function InteractiveLecturePlayer({
     const audio = audioRef.current;
 
     // A. Kiểm tra xem có đang click lại vào đúng mục/tiểu mục đang được chọn không (chỉ khi đã bắt đầu phiên nghe)
-    const isSameSegment = !isMajor && idx === curIdx && playModeRef.current === 'single';
+    const isSameSegment = !isMajor && idx === curIdx;
     const isInsideActiveSection =
       isMajor &&
       playModeRef.current === 'section' &&

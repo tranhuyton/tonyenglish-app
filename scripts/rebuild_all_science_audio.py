@@ -353,8 +353,9 @@ def decorate_clickable_box(soup: BeautifulSoup, div_el: Tag, sec_id: str, badge_
         st += ';'
     if 'position:' not in st.lower():
         st += ' position: relative;'
-    if 'cursor:' not in st.lower():
-        st += ' cursor: pointer;'
+    # Remove whole-card cursor: pointer so students can double-click words for dictionary freely;
+    # LectureViewer promotes [data-audio-badge="1"] into the clickable top-edge audio button.
+    st = re.sub(r'cursor\s*:\s*pointer\s*;?', '', st, flags=re.I)
     div_el['style'] = st.strip()
 
     st_low = st.lower().replace(' ', '')
@@ -363,23 +364,23 @@ def decorate_clickable_box(soup: BeautifulSoup, div_el: Tag, sec_id: str, badge_
     badge = soup.new_tag('div')
     badge['data-audio-badge'] = '1'
     if clips:
-        pos_css = 'position: absolute; top: 10px; right: 12px;'
+        pos_css = 'position: absolute; top: 8px; right: 10px;'
     else:
-        pos_css = 'position: absolute; top: -10px; right: 12px;'
+        pos_css = 'position: absolute; top: -12px; right: 12px;'
 
     if is_major_hdr:
         badge['style'] = (
-            f"{pos_css} z-index: 15; background: #ecfeff; color: #0e7490; "
-            "border: 1px solid #67e8f9; border-radius: 999px; padding: 2px 10px; "
-            "font-size: 11px; font-weight: 700; line-height: 1.4; pointer-events: none; "
-            "box-shadow: 0 1px 3px rgba(0,0,0,0.06); white-space: nowrap;"
+            f"{pos_css} z-index: 25; background: #ecfeff; color: #0e7490; "
+            "border: 1.5px solid #22d3ee; border-radius: 999px; padding: 2px 10px; "
+            "font-size: 11px; font-weight: 700; line-height: 1.4; cursor: pointer; "
+            "box-shadow: 0 2px 6px rgba(2,132,199,0.14); white-space: nowrap;"
         )
     else:
         badge['style'] = (
-            f"{pos_css} z-index: 15; background: #f0f9ff; color: #0369a1; "
-            "border: 1px solid #bae6fd; border-radius: 999px; padding: 1px 8px; "
-            "font-size: 10.5px; font-weight: 700; line-height: 1.4; pointer-events: none; "
-            "box-shadow: 0 1px 2px rgba(0,0,0,0.05); white-space: nowrap;"
+            f"{pos_css} z-index: 25; background: #f0f9ff; color: #0369a1; "
+            "border: 1.5px solid #7dd3fc; border-radius: 999px; padding: 1.5px 9px; "
+            "font-size: 10.5px; font-weight: 700; line-height: 1.4; cursor: pointer; "
+            "box-shadow: 0 2px 6px rgba(2,132,199,0.14); white-space: nowrap;"
         )
     badge.string = badge_label
     div_el.insert(0, badge)

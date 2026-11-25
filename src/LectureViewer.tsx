@@ -1089,7 +1089,7 @@ const PdfVisionViewer = ({ url, onClose, onCallTutor }: { url: string, onClose: 
     </div>
   );
 };
-const StaticLectureContent = React.memo(({ html, isIframeOnly, fontScale = 100, isEn = false, onOpenPopup, onOpenDict, onCloseDict, onSwitchPage, onOpenTutorAI, onOpenCourseLibrary, onOpenImageLightbox }: any) => {
+const StaticLectureContent = React.memo(({ html, isIframeOnly, fontScale = 100, isEn = false, hasInteractiveAudio = false, onOpenPopup, onOpenDict, onCloseDict, onSwitchPage, onOpenTutorAI, onOpenCourseLibrary, onOpenImageLightbox }: any) => {
    const iframeRef = useRef<HTMLIFrameElement>(null);
    const [iframeHeight, setIframeHeight] = useState(600);
    const initialFontScaleRef = useRef<number>(fontScale || 100);
@@ -2031,18 +2031,23 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
               text-decoration: underline !important;
           }
 
+          /* Top headroom so top-edge audio buttons on the first block are never clipped */
+          #content-wrapper {
+              padding-top: 16px !important;
+          }
+
           /* Interactive Lecture Highlight */
           .active-lecture-highlight {
               outline: 3px solid #0284c7 !important;
               outline-offset: -2px !important;
-              box-shadow: 0 0 25px rgba(2, 132, 199, 0.45) !important;
+              box-shadow: 0 0 25px rgba(2, 132, 199, 0.35) !important;
               border-radius: 12px !important;
               background-color: #f0f9ff !important;
-              transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+              transition: outline-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease !important;
               position: relative !important;
               box-sizing: border-box !important;
           }
-          .active-lecture-highlight::before {
+          .active-lecture-highlight:not([data-has-edge-audio-btn="1"])::before {
               content: "🎙️ Đang giảng...";
               position: absolute;
               top: -12px;
@@ -2058,15 +2063,9 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
               letter-spacing: 0.5px;
               pointer-events: none;
           }
-          .active-lecture-highlight.lecture-interactive-card > div[style*="pointer-events: none"] {
-              opacity: 0 !important;
-          }
-          .active-lecture-highlight.lecture-interactive-card[style*="overflow: hidden"]::before,
-          .active-lecture-highlight.lecture-interactive-card[style*="overflow:hidden"]::before {
-              top: 12px;
-              right: 14px;
-              font-size: 12px;
-              padding: 4px 12px;
+          .tony-audio-card-preview:not(.active-lecture-highlight) {
+              outline: 2px dashed rgba(2, 132, 199, 0.55) !important;
+              outline-offset: 2px !important;
           }
           /* SVG Element Active Highlight */
           g.active-lecture-highlight circle,
@@ -2086,12 +2085,113 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
               outline-offset: 4px !important;
               border-radius: 12px !important;
           }
-          [data-lecture-section] {
+
+          /* Content boxes & sections are NOT whole-area click-to-play so double-click dictionary works freely */
+          [data-lecture-section]:not(button):not(g):not([data-audio-direct-click="1"]),
+          .lecture-interactive-card:not(button):not(g):not([data-audio-direct-click="1"]) {
+              cursor: auto !important;
+              user-select: text !important;
+              -webkit-user-select: text !important;
+          }
+          [data-lecture-section]:not(button):not(g):not([data-audio-direct-click="1"]):hover,
+          .lecture-interactive-card:not(button):not(g):not([data-audio-direct-click="1"]):hover {
+              filter: none !important;
+              transform: none !important;
+          }
+          g[data-lecture-section],
+          button[data-lecture-section],
+          [data-audio-direct-click="1"] {
               cursor: pointer !important;
               transition: all 0.2s ease !important;
           }
-          [data-lecture-section]:hover {
-              filter: brightness(0.97);
+
+          /* Unified Top-Edge Audio Trigger Button across ALL Courses */
+          .tony-audio-edge-btn {
+              position: absolute !important;
+              top: -12px !important;
+              right: 12px !important;
+              z-index: 25 !important;
+              display: inline-flex !important;
+              align-items: center !important;
+              gap: 4px !important;
+              background: #f0f9ff !important;
+              color: #0369a1 !important;
+              border: 1.5px solid #7dd3fc !important;
+              border-radius: 999px !important;
+              padding: 2px 10px !important;
+              font-family: inherit !important;
+              font-size: 11px !important;
+              font-weight: 700 !important;
+              line-height: 1.45 !important;
+              letter-spacing: 0.1px !important;
+              white-space: nowrap !important;
+              cursor: pointer !important;
+              pointer-events: auto !important;
+              user-select: none !important;
+              -webkit-user-select: none !important;
+              box-shadow: 0 2px 6px rgba(2, 132, 199, 0.14) !important;
+              transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease !important;
+              margin: 0 !important;
+              text-decoration: none !important;
+          }
+          .tony-audio-edge-btn:hover {
+              background: #0284c7 !important;
+              color: #ffffff !important;
+              border-color: #0284c7 !important;
+              transform: translateY(-1px) scale(1.03) !important;
+              box-shadow: 0 4px 12px rgba(2, 132, 199, 0.35) !important;
+              z-index: 35 !important;
+          }
+          .tony-audio-edge-btn:active {
+              transform: translateY(0) scale(0.98) !important;
+          }
+          .tony-audio-edge-btn--major {
+              background: #ecfeff !important;
+              color: #0e7490 !important;
+              border-color: #22d3ee !important;
+              font-size: 11.5px !important;
+              padding: 2.5px 11px !important;
+          }
+          .tony-audio-edge-btn--major:hover {
+              background: #0891b2 !important;
+              color: #ffffff !important;
+              border-color: #0891b2 !important;
+          }
+          .tony-audio-edge-btn--inside {
+              top: 8px !important;
+              right: 10px !important;
+          }
+          .tony-audio-edge-btn--heading {
+              top: -14px !important;
+              right: 2px !important;
+          }
+          .tony-audio-edge-btn--tr {
+              top: 4px !important;
+              right: 6px !important;
+              font-size: 10.5px !important;
+              padding: 1.5px 8px !important;
+          }
+          .tony-audio-edge-btn.is-playing-edge {
+              background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+              color: #ffffff !important;
+              border-color: #0369a1 !important;
+              box-shadow: 0 3px 12px rgba(2, 132, 199, 0.45) !important;
+              z-index: 40 !important;
+          }
+          .tony-audio-edge-btn.is-playing-edge:hover {
+              background: linear-gradient(135deg, #0369a1 0%, #075985 100%) !important;
+          }
+          @media (max-width: 768px) {
+              .tony-audio-edge-btn {
+                  font-size: 10px !important;
+                  padding: 1.5px 8px !important;
+                  top: -10px !important;
+                  right: 8px !important;
+              }
+              .tony-audio-edge-btn--inside {
+                  top: 6px !important;
+                  right: 8px !important;
+              }
           }
 
           .sentence-audio-card {
@@ -3431,6 +3531,9 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
          
          var selectionTimer = null;
          document.addEventListener('dblclick', function(e) {
+           if (e.target && typeof e.target.closest === 'function' && e.target.closest('.tony-audio-edge-btn, button, input, select, textarea')) {
+             return;
+           }
            clearTimeout(selectionTimer);
            
            selectionTimer = setTimeout(function() {
@@ -3492,6 +3595,11 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
                 document.querySelectorAll('.active-lecture-highlight').forEach(function(el) {
                    el.classList.remove('active-lecture-highlight');
                 });
+                document.querySelectorAll('.tony-audio-edge-btn.is-playing-edge').forEach(function(btn) {
+                   btn.classList.remove('is-playing-edge');
+                   var defLbl = btn.getAttribute('data-default-label');
+                   if (defLbl) btn.textContent = defLbl;
+                });
                 document.querySelectorAll('.active-svg-parent-highlight').forEach(function(el) {
                    el.classList.remove('active-svg-parent-highlight');
                 });
@@ -3499,6 +3607,24 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
                    var targets = document.querySelectorAll(sel);
                    targets.forEach(function(target) {
                       target.classList.add('active-lecture-highlight');
+                      var edgeBtn = null;
+                      if (target.tagName === 'TR') {
+                         edgeBtn = target.querySelector('.tony-audio-edge-btn');
+                      } else {
+                         var directBtns = target.querySelectorAll('.tony-audio-edge-btn');
+                         for (var bi = 0; bi < directBtns.length; bi++) {
+                            if (directBtns[bi].closest('[data-lecture-section]') === target) {
+                               edgeBtn = directBtns[bi];
+                               break;
+                            }
+                         }
+                      }
+                      if (edgeBtn) {
+                         edgeBtn.classList.add('is-playing-edge');
+                         var defLbl = edgeBtn.getAttribute('data-default-label') || '';
+                         var isBtnVi = /[àáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ]/i.test(defLbl);
+                         edgeBtn.textContent = isBtnVi ? '🎙️ Đang giảng...' : '🎙️ Playing...';
+                      }
                    });
                    var target = targets[0];
                    if (target) {
@@ -3545,18 +3671,263 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
               }
            });
 
-          // Click vào thẻ trên bài giảng để nghe giảng riêng thẻ đó (bỏ qua nút bấm/tương tác nội bộ trong thẻ)
+          // Chuẩn hóa toàn bộ nút nghe giảng lên mép trên mỗi ô / khu vực (áp dụng cho TẤT CẢ khóa học)
+          // để người học click đúp tra từ điển thoải mái bên trong văn bản mà không bị bật audio nhầm
+          (function initLectureAudioEdgeButtons() {
+             var wrapper = document.getElementById('content-wrapper');
+             if (!wrapper) return;
+             var hasAudioPlayer = ${hasInteractiveAudio ? 'true' : 'false'};
+             if (!hasAudioPlayer) return;
+
+             var visibleText = (wrapper.innerText || wrapper.textContent || '').replace(/🎧[^\n]{0,50}/g, '');
+             var viMatches = visibleText.match(/[àáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ]/gi);
+             var isPageVi = !!(viMatches && viMatches.length >= 25);
+
+             var isHiddenEl = function(el) {
+                var cur = el;
+                while (cur && cur !== document.body && cur !== document.documentElement) {
+                   if (cur.nodeType === 1) {
+                      var st = window.getComputedStyle(cur);
+                      if (st.display === 'none' || st.visibility === 'hidden') return true;
+                   }
+                   cur = cur.parentNode;
+                }
+                return false;
+             };
+
+             var isMajorSectionId = function(sid, el) {
+                if (!sid) return false;
+                var low = sid.toLowerCase();
+                if (low === 'intro' || /_hdr$/.test(low) || /_(int|wex)$/.test(low) || /_sub\\d+$/.test(low)) return true;
+                if (/^sec_/.test(low) || /^s\\d+$/.test(low)) return true;
+                if (el.id === 'sec-header') return true;
+                var tag = (el.tagName || '').toLowerCase();
+                if (tag === 'h1' || tag === 'h2') return true;
+                return false;
+             };
+
+             var defaultLabelFor = function(sid, el, isMajor) {
+                var low = (sid || '').toLowerCase();
+                if (low === 'intro' || el.id === 'sec-header') {
+                   return isPageVi ? '🎧 Nghe mở đầu' : '🎧 Listen to Intro';
+                }
+                if (/_int$/.test(low)) return isPageVi ? '🎧 Nghe bản chất' : '🎧 Listen to Mental Model';
+                if (/_wex$/.test(low)) return isPageVi ? '🎧 Nghe bài mẫu' : '🎧 Listen to Examples';
+                if (/_sub\\d+$/.test(low)) return isPageVi ? '🎧 Nghe mục nhỏ' : '🎧 Listen';
+                if (isMajor) return isPageVi ? '🎧 Nghe phần này' : '🎧 Listen to Section';
+                return isPageVi ? '🎧 Nghe giảng' : '🎧 Audio';
+             };
+
+             var DEDICATED_AUDIO_PILL_RE = /^🎧(?:\\s*(?:listen(?:\\s+to\\s+[a-z\\s]{1,24})?|audio|play|nghe(?:\\s+[^\\d.,;:!?()]{1,28})?|phát(?:\\s+[^\\d.,;:!?()]{1,22})?))?$/i;
+
+             var harvestLegacyPills = function(el) {
+                var harvestedLabel = '';
+                var harvestedMajor = false;
+                var toRemove = [];
+
+                var explicitPills = el.querySelectorAll('[data-audio-badge], .sat-listen-pill, .listen-badge');
+                for (var i = 0; i < explicitPills.length; i++) {
+                   var pill = explicitPills[i];
+                   if (pill.closest('[data-lecture-section]') !== el) continue;
+                   if (pill.classList.contains('tony-audio-edge-btn')) continue;
+                   var txt = (pill.textContent || '').replace(/\\s+/g, ' ').trim();
+                   if (txt && txt !== '🎧' && !harvestedLabel) {
+                      harvestedLabel = txt;
+                   }
+                   var pst = (pill.getAttribute('style') || '').toLowerCase();
+                   if (pst.indexOf('#ecfeff') !== -1 || pill.classList.contains('sat-listen-pill')) {
+                      harvestedMajor = true;
+                   }
+                   toRemove.push(pill);
+                }
+
+                var candidates = el.querySelectorAll('span, div, p');
+                for (var j = 0; j < candidates.length; j++) {
+                   var cand = candidates[j];
+                   if (toRemove.indexOf(cand) !== -1) continue;
+                   if (cand.classList.contains('tony-audio-edge-btn')) continue;
+                   if (!cand.isConnected || cand.closest('[data-lecture-section]') !== el) continue;
+                   var ctxt = (cand.textContent || '').replace(/\\s+/g, ' ').trim();
+                   if (!ctxt || ctxt.indexOf('🎧') === -1 || ctxt.length > 72) continue;
+                   if (cand.querySelector('h1, h2, h3, h4, table, ul, ol, svg, iframe, button, input, [data-lecture-section]')) continue;
+
+                   var parentEl = cand.parentElement;
+                   if (
+                      parentEl &&
+                      parentEl !== el &&
+                      parentEl.closest('[data-lecture-section]') === el &&
+                      !parentEl.querySelector('h1, h2, h3, h4, table, ul, ol, svg, iframe, button, input, [data-lecture-section]')
+                   ) {
+                      var ptxt = (parentEl.textContent || '').replace(/\\s+/g, ' ').trim();
+                      if (ptxt.indexOf('🎧') !== -1 && ptxt.length <= 72) {
+                         continue;
+                      }
+                   }
+
+                   var lowTxt = ctxt.toLowerCase();
+                   if (
+                      lowTxt.indexOf('click any card') !== -1 ||
+                      lowTxt.indexOf('bấm vào bất kỳ thẻ') !== -1 ||
+                      lowTxt.indexOf('bấm vào từng mục') !== -1 ||
+                      lowTxt.indexOf('nhấn vào bất kỳ') !== -1
+                   ) {
+                      cand.textContent = isPageVi
+                         ? '🎧 Bấm nút góc trên mỗi mục để nghe • Click đúp từ để tra từ điển'
+                         : '🎧 Click top-edge button to listen • Double-click any word for dictionary';
+                      continue;
+                   }
+
+                   if (DEDICATED_AUDIO_PILL_RE.test(ctxt) && ctxt.length <= 42) {
+                      if (ctxt !== '🎧' && !harvestedLabel) {
+                         harvestedLabel = ctxt;
+                      }
+                      toRemove.push(cand);
+                   }
+                }
+
+                for (var r = 0; r < toRemove.length; r++) {
+                   if (toRemove[r].parentNode) {
+                      toRemove[r].parentNode.removeChild(toRemove[r]);
+                   }
+                }
+
+                return { label: harvestedLabel, isMajor: harvestedMajor };
+             };
+
+             var createdButtons = [];
+             var allSections = wrapper.querySelectorAll('[data-lecture-section]');
+
+             for (var idx = 0; idx < allSections.length; idx++) {
+                var el = allSections[idx];
+                var sid = (el.getAttribute('data-lecture-section') || '').trim();
+                if (!sid) continue;
+                if (isHiddenEl(el)) continue;
+
+                var tag = (el.tagName || '').toLowerCase();
+
+                if (el instanceof SVGElement || tag === 'button') {
+                   el.setAttribute('data-audio-direct-click', '1');
+                   continue;
+                }
+
+                if (el.style && el.style.cursor === 'pointer' && !el.hasAttribute('onclick')) {
+                   el.style.cursor = 'auto';
+                }
+
+                var harvested = harvestLegacyPills(el);
+                var isMajor = harvested.isMajor || isMajorSectionId(sid, el);
+                var rawHarvested = harvested.label || '';
+                var hasViInHarvested = /[àáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ]/i.test(rawHarvested);
+                // Keep pure English labels on pure-English Page 1 even if legacy HTML had a Vietnamese pill
+                var btnLabel = (rawHarvested && (!hasViInHarvested || isPageVi))
+                   ? rawHarvested
+                   : defaultLabelFor(sid, el, isMajor);
+                if (btnLabel.indexOf('🎧') === -1) btnLabel = '🎧 ' + btnLabel;
+
+                var btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = 'tony-audio-edge-btn' + (isMajor ? ' tony-audio-edge-btn--major' : '');
+                btn.setAttribute('data-audio-trigger', sid);
+                btn.setAttribute('data-default-label', btnLabel);
+                btn.title = isPageVi ? 'Bấm để nghe / tạm dừng đoạn giảng này' : 'Click to listen / pause this audio';
+                btn.textContent = btnLabel;
+
+                (function(ownerEl, buttonEl) {
+                   buttonEl.addEventListener('mouseenter', function() {
+                      ownerEl.classList.add('tony-audio-card-preview');
+                   });
+                   buttonEl.addEventListener('mouseleave', function() {
+                      ownerEl.classList.remove('tony-audio-card-preview');
+                   });
+                })(el, btn);
+
+                if (tag === 'tr') {
+                   var cell = el.querySelector('td, th');
+                   if (cell) {
+                      if (window.getComputedStyle(cell).position === 'static') {
+                         cell.style.position = 'relative';
+                      }
+                      var curPt = parseFloat(window.getComputedStyle(cell).paddingTop) || 0;
+                      if (curPt < 24) cell.style.paddingTop = '26px';
+                      btn.classList.add('tony-audio-edge-btn--tr');
+                      cell.insertBefore(btn, cell.firstChild);
+                      el.setAttribute('data-has-edge-audio-btn', '1');
+                      createdButtons.push({ btn: btn, owner: el });
+                   }
+                   continue;
+                }
+
+                if (window.getComputedStyle(el).position === 'static') {
+                   el.style.position = 'relative';
+                }
+
+                if (tag === 'h1' || tag === 'h2' || tag === 'h3' || tag === 'h4') {
+                   btn.classList.add('tony-audio-edge-btn--heading');
+                   el.insertBefore(btn, el.firstChild);
+                   el.setAttribute('data-has-edge-audio-btn', '1');
+                   createdButtons.push({ btn: btn, owner: el });
+                   continue;
+                }
+
+                var cs = window.getComputedStyle(el);
+                var clipsTop = (cs.overflowY && cs.overflowY !== 'visible') || (cs.overflowX && cs.overflowX !== 'visible');
+                if (clipsTop) {
+                   btn.classList.add('tony-audio-edge-btn--inside');
+                   var firstChild = el.firstElementChild;
+                   if (firstChild && (firstChild.tagName === 'TABLE' || (parseFloat(cs.paddingTop) || 0) < 26)) {
+                      el.style.paddingTop = '32px';
+                   }
+                }
+
+                el.insertBefore(btn, el.firstChild);
+                el.setAttribute('data-has-edge-audio-btn', '1');
+                createdButtons.push({ btn: btn, owner: el });
+             }
+
+             // Chống đè nhau giữa nút của khối cha và nút của ô con nằm sát mép trên
+             if (createdButtons.length > 1) {
+                var rects = createdButtons.map(function(item) { return item.btn.getBoundingClientRect(); });
+                for (var a = 0; a < createdButtons.length; a++) {
+                   for (var b = a + 1; b < createdButtons.length; b++) {
+                      var ra = rects[a], rb = rects[b];
+                      if (!ra.width || !rb.width) continue;
+                      var horizOverlap = ra.left < rb.right + 6 && ra.right + 6 > rb.left;
+                      var vertOverlap = ra.top < rb.bottom + 4 && ra.bottom + 4 > rb.top;
+                      if (horizOverlap && vertOverlap) {
+                         var shiftItem = createdButtons[a].owner.contains(createdButtons[b].owner) ? createdButtons[a] : createdButtons[b];
+                         var keepRect = shiftItem === createdButtons[a] ? rb : ra;
+                         var curRight = parseFloat(window.getComputedStyle(shiftItem.btn).right) || 12;
+                         shiftItem.btn.style.setProperty('right', Math.ceil(curRight + keepRect.width + 10) + 'px', 'important');
+                         rects[a] = createdButtons[a].btn.getBoundingClientRect();
+                         rects[b] = createdButtons[b].btn.getBoundingClientRect();
+                      }
+                   }
+                }
+             }
+
+             setTimeout(reportHeight, 60);
+          })();
+
+          // CHỈ phát audio khi bấm trực tiếp vào nút nghe giảng ở mép trên ô/khu vực (hoặc điểm SVG/tab nút đồ họa)
+          // KHÔNG bắt click vào phần văn bản bên trong ô để giữ trọn vẹn tính năng click đúp tra từ điển!
           document.addEventListener('click', function(e) {
              if (!e.target || typeof e.target.closest !== 'function') return;
-             var sec = e.target.closest('[data-lecture-section]');
-             if (!sec) return;
-             var interactiveCtrl = e.target.closest('a, button, input, select, textarea, summary, label, [onclick]');
-             if (interactiveCtrl && interactiveCtrl !== sec && sec.contains(interactiveCtrl) && !interactiveCtrl.hasAttribute('data-lecture-section')) {
+             var edgeBtn = e.target.closest('.tony-audio-edge-btn[data-audio-trigger]');
+             if (edgeBtn) {
+                e.preventDefault();
+                e.stopPropagation();
+                var sid = edgeBtn.getAttribute('data-audio-trigger');
+                if (sid) {
+                   window.parent.postMessage({ type: 'LECTURE_PLAY_SECTION', sectionId: sid }, '*');
+                }
                 return;
              }
-             var sid = sec.getAttribute('data-lecture-section');
-             if (sid) {
-                window.parent.postMessage({ type: 'LECTURE_PLAY_SECTION', sectionId: sid }, '*');
+             var directTarget = e.target.closest('[data-audio-direct-click="1"][data-lecture-section]');
+             if (directTarget) {
+                var dsid = directTarget.getAttribute('data-lecture-section');
+                if (dsid) {
+                   window.parent.postMessage({ type: 'LECTURE_PLAY_SECTION', sectionId: dsid }, '*');
+                }
              }
           });
           ${buildLectureMcqGraderScript(Boolean(isEn))}
@@ -3567,7 +3938,7 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
    return (
      <div className={`w-full animate-in fade-in duration-700 relative ${isIframeOnly ? 'h-[85vh]' : ''}`}>
        <iframe
-         key={cleanedHtml ? `${cleanedHtml.length}_${cleanedHtml.substring(0, 32)}_${isEn ? 'en' : 'vi'}` : 'empty'}
+         key={cleanedHtml ? `${cleanedHtml.length}_${cleanedHtml.substring(0, 32)}_${isEn ? 'en' : 'vi'}_${hasInteractiveAudio ? 'a1' : 'a0'}` : 'empty'}
          ref={iframeRef}
          srcDoc={iframeContent}
          style={{ width: '100%', height: isIframeOnly ? '100%' : `${iframeHeight}px`, border: 'none', overflow: 'hidden' }}
@@ -3582,7 +3953,8 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
   prevProps.html === nextProps.html &&
   prevProps.fontScale === nextProps.fontScale &&
   prevProps.isIframeOnly === nextProps.isIframeOnly &&
-  prevProps.isEn === nextProps.isEn
+  prevProps.isEn === nextProps.isEn &&
+  prevProps.hasInteractiveAudio === nextProps.hasInteractiveAudio
 ));
 
 
@@ -6573,6 +6945,7 @@ export default function LectureViewer({
                            isIframeOnly={isIframeOnly}
                            fontScale={lectureFontScale}
                            isEn={isEn}
+                           hasInteractiveAudio={Boolean(activeLectureId && (currentPage === 1 || currentPage === 2) && LECTURE_MANIFEST_MAP[activeLectureId])}
                            onOpenPopup={setPopupUrl} 
                            onOpenDict={triggerDictionary} 
                            onCloseDict={() => { window.dispatchEvent(new CustomEvent('tony-close-quick-dictionary')); }} 
