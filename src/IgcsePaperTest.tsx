@@ -20,9 +20,12 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
           raw = saved ? JSON.parse(saved) : null;
       }
       if (!raw) return null;
-      // Normalize: ensure json_config.questions exists from either json_config or content_json
+      // Normalize: ensure json_config.questions and insert_pdf_url exist from either top-level or content_json
       if (!raw.json_config?.questions && raw.content_json?.questions) {
           raw.json_config = { ...(raw.json_config || {}), questions: raw.content_json.questions, timeLimit: raw.content_json?.basicInfo?.timeLimit || raw.json_config?.timeLimit || 120 };
+      }
+      if (!raw.insert_pdf_url) {
+          raw.insert_pdf_url = raw.pdf_url || raw.content_json?.basicInfo?.insert_pdf_url || raw.content_json?.basicInfo?.pdf_url || raw.content_json?.pdf_url || raw.json_config?.insert_pdf_url || raw.json_config?.pdf_url || null;
       }
       return raw;
   });

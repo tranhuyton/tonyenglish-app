@@ -162,6 +162,15 @@ def upsert_test(course_id, folder_id, title, test_type, order_index, content_jso
         'is_published': True,
         'content_json': content_json,
     }
+    if isinstance(content_json, dict):
+        pdf_u = (content_json.get('basicInfo') or {}).get('insert_pdf_url')
+        if pdf_u:
+            payload['insert_pdf_url'] = pdf_u
+        if content_json.get('questions'):
+            payload['json_config'] = {
+                'timeLimit': int((content_json.get('basicInfo') or {}).get('timeLimit') or 120),
+                'questions': content_json['questions'],
+            }
 
     if existing_id:
         sb_patch(f'tests?id=eq.{existing_id}', payload)

@@ -31,6 +31,8 @@ import {
   AlertTriangle,
   Maximize2,
   Minimize2,
+  PenTool,
+  Columns2,
 } from 'lucide-react';
 import { supabase, isTonyEnglishAuthUser, isTonyEnglishAdmin } from './supabase';
 import AssignmentCalendar from './AssignmentCalendar';
@@ -88,9 +90,57 @@ const checkTestHasAudio = (test: any) => {
   return false;
 };
 
-const getTestSkillConfig = (test: any) => {
+const getTestSkillConfig = (test: any, isEn = false): {
+  icon: React.ReactNode;
+  bg: string;
+  text: string;
+  border: string;
+  isDirectDraw?: boolean;
+  modeBadge?: {
+    icon: React.ReactNode;
+    label: string;
+    tooltip: string;
+    badgeClass: string;
+  };
+} => {
   const type = String(test.test_type || '').toLowerCase();
   const title = String(test.title || '').toLowerCase();
+
+  if (type === 'igcse-direct') {
+      return {
+        icon: <PenTool className="w-5 h-5 text-violet-600" />,
+        bg: 'bg-violet-50',
+        text: 'text-violet-700',
+        border: 'border-violet-200',
+        isDirectDraw: true,
+        modeBadge: {
+          icon: <PenTool className="w-3 h-3 shrink-0" />,
+          label: isEn ? 'Draw on PDF • Stylus' : 'Vẽ trực tiếp PDF • iPad',
+          tooltip: isEn
+            ? 'Write or draw directly on the PDF exam paper using iPad / Apple Pencil or mouse, graded by AI'
+            : 'Chế độ viết/vẽ trực tiếp bằng bút cảm ứng (iPad/Apple Pencil) hoặc chuột ngay trên tờ đề PDF, AI tự chấm bài',
+          badgeClass: 'bg-violet-50 text-violet-700 border border-violet-200/90',
+        },
+      };
+  }
+
+  if (type.includes('igcse')) {
+      return {
+        icon: <Columns2 className="w-5 h-5 text-[#0a5482]" />,
+        bg: 'bg-sky-50',
+        text: 'text-[#0a5482]',
+        border: 'border-sky-200',
+        isDirectDraw: false,
+        modeBadge: {
+          icon: <Columns2 className="w-3 h-3 shrink-0" />,
+          label: isEn ? 'PDF + Answer Sheet' : 'PDF + Phiếu trả lời',
+          tooltip: isEn
+            ? 'Split screen: Cambridge PDF paper on the left, typed/photo Answer Sheet on the right'
+            : 'Chia đôi màn hình: Đề PDF bên trái và Phiếu nhập đáp án / chụp ảnh bài làm bên phải',
+          badgeClass: 'bg-sky-50 text-[#0a5482] border border-sky-200/90',
+        },
+      };
+  }
 
   if (type === 'standard-listening' && !checkTestHasAudio(test)) {
       return { icon: '📖', bg: 'bg-blue-50', text: 'text-blue-600', border: 'border-blue-200' };
@@ -329,6 +379,10 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   const [searchTest, setSearchTest] = useState('');
   const [sortTest, setSortTest] = useState('name-asc');
   const [filterType, setFilterType] = useState('all');
+  const [paperModeFilter, setPaperModeFilter] = useState<'all' | 'direct' | 'split'>('all');
+  useEffect(() => {
+    setPaperModeFilter('all');
+  }, [currentFolderId, selectedCourseId]);
   const [folderPage, setFolderPage] = useState(() => parseInt(sessionStorage.getItem('portal_folder_page') || '1', 10) || 1);
   const [testPage, setTestPage] = useState(() => parseInt(sessionStorage.getItem('portal_test_page') || '1', 10) || 1);
 
@@ -1414,16 +1468,31 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
       return courseTests.filter(t => t.folder_id === validFolderId);
   }, [courseTests, currentFolderId, courseFolders]);
 
+  const { directPaperCount, nonDirectPaperCount, hasMixedPaperModes } = useMemo(() => {
+      let direct = 0;
+      let nonDirect = 0;
+      currentTests.forEach((t: any) => {
+          if (String(t.test_type || '').toLowerCase() === 'igcse-direct') direct++;
+          else nonDirect++;
+      });
+      return { directPaperCount: direct, nonDirectPaperCount: nonDirect, hasMixedPaperModes: direct > 0 && nonDirect > 0 };
+  }, [currentTests]);
+
   const processedTests = useMemo(() => {
       return currentTests.filter(t => (t.title || '').toLowerCase().includes(searchTest.toLowerCase()))
                          .filter(t => filterType === 'all' || t.content_json?.basicInfo?.category === filterType)
+                         .filter(t => {
+                             if (paperModeFilter === 'all') return true;
+                             const isDirect = String(t.test_type || '').toLowerCase() === 'igcse-direct';
+                             return paperModeFilter === 'direct' ? isDirect : !isDirect;
+                         })
                          .sort((a, b) => {
                              if (sortTest === 'name-asc') return (a.title || '').localeCompare(b.title || '', undefined, { numeric: true, sensitivity: 'base' });
                              if (sortTest === 'name-desc') return (b.title || '').localeCompare(a.title || '', undefined, { numeric: true, sensitivity: 'base' });
                              if (sortTest === 'date-desc') return new Date(b.created_at || 0).getTime() - new Date(a.created_at || 0).getTime();
                              return new Date(a.created_at || 0).getTime() - new Date(b.created_at || 0).getTime();
                          });
-  }, [currentTests, searchTest, filterType, sortTest]);
+  }, [currentTests, searchTest, filterType, paperModeFilter, sortTest]);
 
   const upcomingDeadlines = useMemo(() => {
     const enrolledCourseIds = new Set(courses.map(c => c.id));
@@ -3295,6 +3364,52 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                     </div>
                   </div>
 
+                  {/* Smart Paper Mode Filter Bar (shown when folder mixes Draw-on-PDF and Split-Screen papers) */}
+                  {hasMixedPaperModes && (
+                    <div className="px-5 sm:px-7 py-3 bg-slate-50/80 border-b border-slate-200/80 flex flex-wrap items-center gap-2">
+                      <span className="text-[11px] font-extrabold text-slate-500 uppercase tracking-wider mr-1">
+                        {isEn ? 'Exam Mode:' : 'Chế độ làm bài:'}
+                      </span>
+                      <button
+                        type="button"
+                        onClick={() => { setPaperModeFilter('all'); setTestPage(1); }}
+                        className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold transition-all cursor-pointer border ${
+                          paperModeFilter === 'all'
+                            ? 'bg-[#0a5482] text-white border-[#0a5482] shadow-xs'
+                            : 'bg-white text-slate-600 border-slate-200 hover:border-slate-300'
+                        }`}
+                      >
+                        {isEn ? 'All' : 'Tất cả'} ({currentTests.length})
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => { setPaperModeFilter('direct'); setTestPage(1); }}
+                        className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold transition-all cursor-pointer border ${
+                          paperModeFilter === 'direct'
+                            ? 'bg-violet-600 text-white border-violet-600 shadow-xs'
+                            : 'bg-violet-50/80 text-violet-700 border-violet-200 hover:bg-violet-100'
+                        }`}
+                      >
+                        <PenTool className="w-3.5 h-3.5 shrink-0" />
+                        <span>{isEn ? 'Draw on PDF (iPad / Stylus)' : 'Vẽ trực tiếp trên PDF (iPad / Bút)'}</span>
+                        <span className="opacity-80">({directPaperCount})</span>
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => { setPaperModeFilter('split'); setTestPage(1); }}
+                        className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold transition-all cursor-pointer border ${
+                          paperModeFilter === 'split'
+                            ? 'bg-[#0284c7] text-white border-[#0284c7] shadow-xs'
+                            : 'bg-sky-50/80 text-[#0a5482] border-sky-200 hover:bg-sky-100'
+                        }`}
+                      >
+                        <Columns2 className="w-3.5 h-3.5 shrink-0" />
+                        <span>{isEn ? 'PDF + Answer Sheet' : 'PDF + Phiếu trả lời'}</span>
+                        <span className="opacity-80">({nonDirectPaperCount})</span>
+                      </button>
+                    </div>
+                  )}
+
                   {/* Tests List */}
                   <div className="p-5 sm:p-7 bg-slate-50/60">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
@@ -3303,7 +3418,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                         const isTestLocked = isTrialCourseView && !(testPage === 1 && testIdx < 2);
                         const inProgress = !isTestLocked && inProgressIds.has(String(test.id));
                         const isCompleted = !isTestLocked && completedTestIdsSet.has(String(test.id));
-                        const skillConfig = getTestSkillConfig(test);
+                        const skillConfig = getTestSkillConfig(test, isEn);
 
                         let isOverdue = false;
                         let deadlineLabel = '';
@@ -3377,9 +3492,14 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                                     ? 'bg-white shadow-2xs hover:shadow-xl hover:-translate-y-0.5 border-amber-300'
                                     : isTrialCourseView
                                       ? 'bg-white shadow-2xs hover:shadow-xl hover:-translate-y-0.5 border-amber-300/90 hover:border-amber-400'
-                                      : 'bg-white shadow-2xs hover:shadow-xl hover:-translate-y-0.5 border-slate-200/90 hover:border-[#2ab4e8]'
+                                      : skillConfig.isDirectDraw
+                                        ? 'bg-white shadow-2xs hover:shadow-xl hover:-translate-y-0.5 border-violet-200/90 hover:border-violet-400'
+                                        : 'bg-white shadow-2xs hover:shadow-xl hover:-translate-y-0.5 border-slate-200/90 hover:border-[#2ab4e8]'
                             }`}
                           >
+                            {skillConfig.isDirectDraw && !isTestLocked && (
+                              <div className="absolute top-0 inset-x-0 h-[3px] bg-gradient-to-r from-violet-500 via-purple-500 to-indigo-500" />
+                            )}
                             
                             <div>
                               <div className="flex justify-between items-start mb-3.5">
@@ -3391,11 +3511,20 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                                 </span>
                               </div>
                               
-                              <h3 className={`font-extrabold text-[15.5px] transition-colors mb-2.5 line-clamp-2 leading-snug min-h-[42px] ${isTestLocked ? 'text-slate-500' : 'text-slate-800 group-hover:text-[#0a5482]'}`}>
+                              <h3 className={`font-extrabold text-[15.5px] transition-colors mb-2.5 line-clamp-2 leading-snug min-h-[42px] ${isTestLocked ? 'text-slate-500' : skillConfig.isDirectDraw ? 'text-slate-800 group-hover:text-violet-700' : 'text-slate-800 group-hover:text-[#0a5482]'}`}>
                                   {test.title}
                               </h3>
                               
                               <div className="flex flex-wrap items-center gap-1.5 mb-2">
+                                  {skillConfig.modeBadge && (
+                                      <span
+                                          className={`text-[10.5px] px-2 py-0.5 rounded-md font-bold tracking-tight inline-flex items-center gap-1 ${isTestLocked ? 'bg-slate-200 text-slate-500 border border-slate-300' : skillConfig.modeBadge.badgeClass}`}
+                                          title={skillConfig.modeBadge.tooltip}
+                                      >
+                                          {skillConfig.modeBadge.icon}
+                                          <span>{skillConfig.modeBadge.label}</span>
+                                      </span>
+                                  )}
                                   {(test.content_json?.guide_videos?.length > 0 || test.content_json?.basicInfo?.guide_video_url || test.content_json?.guide_video_url) && (
                                       <span className={`text-[10px] px-2 py-0.5 rounded-md font-bold tracking-wider flex items-center gap-1 ${isTestLocked ? 'bg-slate-200 text-slate-500 border border-slate-300' : 'bg-red-50 text-red-600 border border-red-100'}`} title={isEn ? 'Includes solution & walkthrough video' : 'Có video hướng dẫn & giải đề'}>
                                           🎬 {isEn ? 'Solution Video' : 'Video giải đề'}{test.content_json?.guide_videos?.length > 1 ? ` (${test.content_json.guide_videos.length})` : ''}

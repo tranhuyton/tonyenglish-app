@@ -4032,6 +4032,11 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                                    <input type="number" defaultValue={t.order_index || 0} onBlur={e => handleUpdateTestOrder(t.id, parseInt(e.target.value) || 0)} className="w-8 md:w-10 h-6 text-center text-[10px] md:text-[11px] font-bold border border-slate-200 rounded outline-none focus:border-[#2ab4e8] shrink-0" title="Thứ tự hiển thị" />
                                    <div className="flex flex-col min-w-0">
                                         <span className="font-bold text-[13px] md:text-[14px] text-slate-700 truncate">{t.title}</span>
+                                        {String(t.test_type || '').toLowerCase() === 'igcse-direct' ? (
+                                          <span className="inline-flex items-center gap-1 w-fit mt-1 px-1.5 py-0.5 rounded text-[10px] font-bold bg-violet-50 text-violet-700 border border-violet-200">✏️ Vẽ trực tiếp PDF</span>
+                                        ) : String(t.test_type || '').toLowerCase().includes('igcse') ? (
+                                          <span className="inline-flex items-center gap-1 w-fit mt-1 px-1.5 py-0.5 rounded text-[10px] font-bold bg-sky-50 text-[#0a5482] border border-sky-200">📄 PDF + Phiếu trả lời</span>
+                                        ) : null}
                                    </div>
                                  </div>
                                  <div className="flex gap-2 md:gap-3 shrink-0">
@@ -4249,7 +4254,13 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                                <div className="text-[10px] md:text-[11px] text-slate-400 mt-1 font-medium uppercase tracking-tight">{test.folder_id ? `Đã gán: ${allFolders.find(f => f.id === test.folder_id)?.title || 'Thư mục khác'}` : 'Chưa gán thư mục'}</div>
                             </td>
                             <td className="px-4 md:px-6 py-4 md:py-5">{test.course_id ? <span className="px-2 py-1 bg-slate-100 border border-slate-200 rounded text-[10px] md:text-[11px] font-bold text-slate-600">{getCourseNameForTest(test.course_id)}</span> : <span className="text-[10px] md:text-[11px] italic text-slate-400">-- Chung --</span>}</td>
-                            <td className="px-4 md:px-6 py-4 md:py-5"><span className="px-2 py-1 bg-indigo-50 border border-indigo-200 text-indigo-700 rounded text-[10px] md:text-[11px] font-bold whitespace-nowrap">{test.test_type || '---'}</span></td>
+                            <td className="px-4 md:px-6 py-4 md:py-5">
+                              {String(test.test_type || '').toLowerCase() === 'igcse-direct' ? (
+                                <span className="px-2 py-1 bg-violet-50 border border-violet-200 text-violet-700 rounded text-[10px] md:text-[11px] font-bold whitespace-nowrap">✏️ IGCSE-Direct (Vẽ PDF)</span>
+                              ) : (
+                                <span className="px-2 py-1 bg-indigo-50 border border-indigo-200 text-indigo-700 rounded text-[10px] md:text-[11px] font-bold whitespace-nowrap">{test.test_type || '---'}</span>
+                              )}
+                            </td>
                             <td className="px-4 md:px-6 py-4 md:py-5"><div className="text-[10px] md:text-[11px] text-slate-500 font-medium">{formatDateTime(test.created_at)}</div></td>
                             <td className="px-4 md:px-6 py-4 md:py-5 text-center"><button onClick={() => handleToggleTestVisibility(test)} className={`text-[10px] md:text-[12px] font-bold px-2 md:px-3 py-1 rounded transition-colors ${test.is_published ? 'text-emerald-600 bg-emerald-50 hover:bg-emerald-100' : 'text-slate-500 bg-slate-100 hover:bg-slate-200'}`}>{test.is_published ? 'Hiển thị' : 'Đang ẩn'}</button></td>
                             <td className="px-4 md:px-6 py-4 md:py-5 text-center"><input type="number" defaultValue={test.order_index || 0} onBlur={e => handleUpdateTestOrder(test.id, parseInt(e.target.value) || 0)} className="w-10 md:w-12 text-center text-[12px] md:text-[13px] font-bold border border-slate-200 rounded py-1 outline-none focus:border-[#2ab4e8]" /></td>
