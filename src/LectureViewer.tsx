@@ -2533,7 +2533,7 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
          };
          window.playaudio = function(w) {
            if (w) {
-             var clean = w.replace(/.*[\/\\]([^\/\\]+)\.mp3$/i, '$1').replace(/[^a-zA-Z]/g, '');
+             var clean = w.replace(/.*[\\/\\\\]([^\\/\\\\]+)\\.mp3$/i, '$1').replace(/[^a-zA-Z]/g, '');
              window.parent.postMessage({ type: 'LECTURE_PLAY_WORD', word: clean || w }, '*');
            }
          };
@@ -2722,7 +2722,7 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
              if (cs.borderRadius === '50%' || parseFloat(cs.borderRadius) >= 999) continue;
 
              var inlineStyle = box.getAttribute('style') || '';
-             var isAspectBox = (box.style.height === '0px' || box.style.height === '0' || /padding-bottom\s*:\s*[\d.]+%/i.test(inlineStyle));
+             var isAspectBox = (box.style.height === '0px' || box.style.height === '0' || /padding-bottom\\s*:\\s*[\\d.]+%/i.test(inlineStyle));
              if (isAspectBox) continue;
 
              if (!isFramedBox(box)) {
@@ -2870,7 +2870,7 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
               var localUrl = '/audio/communication/sentences/' + audioKey + '.mp3';
               var cloudUrl = 'https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/test_assets/audio/communication/sentences/' + audioKey + '.mp3';
 
-              var words = (sentence || '').trim().split(/\s+/).filter(Boolean).length;
+              var words = (sentence || '').trim().split(/\\s+/).filter(Boolean).length;
               // Tính thời lượng nói thoải mái cho học viên:
               // - Tốc độ đọc tự nhiên của học viên: ~900ms / từ
               // - 3.5s đệm cho quan sát, lấy hơi và khoảng lặng phản xạ
@@ -3646,7 +3646,7 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
                 var gradedMap = e.data.gradedMap || {};
                 document.querySelectorAll('.btn-wt2-pillar-trigger').forEach(function(btn) {
                    var rawTopic = btn.getAttribute('data-topic') || '';
-                   var normKey = rawTopic.replace(/\s+/g, ' ').trim().toLowerCase();
+                   var normKey = rawTopic.replace(/\\s+/g, ' ').trim().toLowerCase();
                    if (!normKey || !gradedMap[normKey]) return;
                    var info = gradedMap[normKey];
                    if (!btn.hasAttribute('data-orig-label')) {
@@ -3680,7 +3680,7 @@ CRITICAL: Return ONLY valid JSON in this exact structure without markdown or bac
              var hasAudioPlayer = ${hasInteractiveAudio ? 'true' : 'false'};
              if (!hasAudioPlayer) return;
 
-             var visibleText = (wrapper.innerText || wrapper.textContent || '').replace(/🎧[^\n]{0,50}/g, '');
+             var visibleText = (wrapper.innerText || wrapper.textContent || '').replace(/🎧[^\\n]{0,50}/g, '');
              var viMatches = visibleText.match(/[àáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ]/gi);
              var isPageVi = !!(viMatches && viMatches.length >= 25);
 
