@@ -27,7 +27,70 @@ import {
   GraduationCap,
   Lightbulb,
   MonitorPlay,
+  CalendarClock,
+  Check,
+  RotateCcw,
 } from 'lucide-react';
+
+// Academic Luxury (Option C) subtle identity accent — synced 100% with StudentPortal.tsx
+const getCoachCourseAccent = (courseTitle?: string | null) => {
+  const t = (courseTitle || '').toLowerCase();
+  if (t.includes('ielts') || (t.includes('esl') && !t.includes('igcse'))) {
+    return {
+      stripe: 'from-rose-600 via-rose-500 to-rose-400',
+      dot: 'bg-rose-500',
+      pill: 'bg-rose-500/20 border-rose-300/40 text-rose-100',
+    };
+  }
+  if (t.includes('sat')) {
+    return {
+      stripe: 'from-amber-500 via-amber-400 to-yellow-400',
+      dot: 'bg-amber-400',
+      pill: 'bg-amber-500/20 border-amber-300/45 text-amber-100',
+    };
+  }
+  if (
+    t.includes('igcse') ||
+    t.includes('a-level') ||
+    t.includes('biology') ||
+    t.includes('chemistry') ||
+    t.includes('physics') ||
+    t.includes('geography') ||
+    t.includes('science') ||
+    t.includes('0580') ||
+    t.includes('0606') ||
+    t.includes('math') ||
+    t.includes('econ') ||
+    t.includes('business')
+  ) {
+    return {
+      stripe: 'from-emerald-600 via-emerald-500 to-teal-400',
+      dot: 'bg-emerald-500',
+      pill: 'bg-emerald-500/20 border-emerald-300/40 text-emerald-100',
+    };
+  }
+  if (
+    t.includes('pronunciation') ||
+    t.includes('phát âm') ||
+    t.includes('reflex') ||
+    t.includes('phản ứng') ||
+    t.includes('phản xạ') ||
+    t.includes('tình huống') ||
+    t.includes('communication') ||
+    t.includes('giao tiếp')
+  ) {
+    return {
+      stripe: 'from-sky-500 via-[#0284c7] to-cyan-400',
+      dot: 'bg-sky-400',
+      pill: 'bg-sky-500/20 border-sky-300/40 text-sky-100',
+    };
+  }
+  return {
+    stripe: 'from-indigo-600 via-indigo-500 to-sky-400',
+    dot: 'bg-indigo-400',
+    pill: 'bg-indigo-500/20 border-indigo-300/40 text-indigo-100',
+  };
+};
 
 export interface StudyCoachProps {
   courseId: string;
@@ -225,6 +288,11 @@ export default function CourseStudyCoach({
     return courseId === '239a64f0-c106-40e5-a6e2-4e685a0d70fb' || t.includes('ielts');
   }, [courseId, courseTitle]);
 
+  const isSat = useMemo(() => {
+    const t = (courseTitle || '').toLowerCase();
+    return !isIelts && t.includes('sat');
+  }, [isIelts, courseTitle]);
+
   const isIgcse0654 = useMemo(() => {
     const t = (courseTitle || '').toLowerCase();
     return (
@@ -234,14 +302,61 @@ export default function CourseStudyCoach({
     );
   }, [courseId, courseTitle]);
 
+  const isIgcseSubject = useMemo(() => {
+    const t = (courseTitle || '').toLowerCase();
+    return (
+      !isIelts &&
+      !isSat &&
+      !isIgcse0654 &&
+      (t.includes('igcse') ||
+        t.includes('a-level') ||
+        t.includes('biology') ||
+        t.includes('chemistry') ||
+        t.includes('physics') ||
+        t.includes('geography') ||
+        t.includes('science') ||
+        t.includes('0580') ||
+        t.includes('0606') ||
+        t.includes('math') ||
+        t.includes('econ') ||
+        t.includes('business'))
+    );
+  }, [isIelts, isSat, isIgcse0654, courseTitle]);
+
+  const isCommCourse = useMemo(() => {
+    const t = (courseTitle || '').toLowerCase();
+    return (
+      !isIelts &&
+      !isSat &&
+      !isIgcse0654 &&
+      !isIgcseSubject &&
+      (t.includes('văn phòng') ||
+        t.includes('office') ||
+        t.includes('thành ngữ') ||
+        t.includes('idiom') ||
+        t.includes('email') ||
+        t.includes('phỏng vấn') ||
+        t.includes('interview') ||
+        t.includes('pronunciation') ||
+        t.includes('phát âm') ||
+        t.includes('reflex') ||
+        t.includes('phản ứng') ||
+        t.includes('phản xạ') ||
+        t.includes('tình huống') ||
+        t.includes('communication') ||
+        t.includes('giao tiếp'))
+    );
+  }, [isIelts, isSat, isIgcse0654, isIgcseSubject, courseTitle]);
+
   const getCacheKey = (uid: string, cid: string, currentLang: string) =>
-    `tony_ai_coach_chat_v6_${uid}_${cid}_${currentLang}`;
+    `tony_ai_coach_chat_v7_${uid}_${cid}_${currentLang}`;
 
   const askTonyAIBrain = async (
     snap: GlobalStudentSnapshot,
     userQuestion: string,
     isInitialAutoDiagnosis = false,
-    imageBase64?: string | null
+    imageBase64?: string | null,
+    priorHistory: CoachMessage[] = []
   ) => {
     setIsAiThinking(true);
     try {
@@ -257,35 +372,56 @@ export default function CourseStudyCoach({
 - Sau khi giải xong bài trong ảnh, hãy đối chiếu với Bản đồ khóa học ở trên để gợi ý bài giảng lý thuyết hoặc thư mục đề luyện tập liên quan kèm mã nút bấm [[ACTION:...]].\n`
         : '';
 
+      // Multi-turn conversation memory (last 8 turns, compactly truncated)
+      const recentTurns = !isInitialAutoDiagnosis ? priorHistory.slice(-8) : [];
+      const historyBlock =
+        recentTurns.length > 0
+          ? isEn
+            ? `\n[CONVERSATION HISTORY IN THIS SESSION (remember context & earlier advice)]:\n${recentTurns
+                .map((m) => {
+                  const roleLabel = m.role === 'user' ? snap.studentName : 'Teacher Tony AI';
+                  const snippet = (m.text || '').replace(/\s+/g, ' ').trim().slice(0, 520);
+                  return `- ${roleLabel}: ${snippet}${m.text.length > 520 ? '...' : ''}`;
+                })
+                .join('\n')}\n`
+            : `\n[LỊCH SỬ HỘI THOẠI GẦN ĐÂY TRONG PHIÊN NÀY (hãy nhớ ngữ cảnh câu trước để trả lời liền mạch)]:\n${recentTurns
+                .map((m) => {
+                  const roleLabel = m.role === 'user' ? snap.studentName : 'Thầy Tony AI';
+                  const snippet = (m.text || '').replace(/\s+/g, ' ').trim().slice(0, 520);
+                  return `- ${roleLabel}: ${snippet}${m.text.length > 520 ? '...' : ''}`;
+                })
+                .join('\n')}\n`
+          : '';
+
       const systemPrompt = isEn
         ? `You are "Teacher Tony AI" — the lead mentor and personal academic coach at TonyEnglish.vn.
 [STRICT LANGUAGE RULE]: The student is using the ENGLISH interface. You MUST write your ENTIRE greeting, analysis, recommendations, AND ALL [[ACTION:...|Button Label]] labels exclusively in warm, clear, natural ENGLISH (unless the student explicitly requests Vietnamese). Address the student by first name ("${snap.studentName}") or "you".
 
 ${snap.promptContext}
-${imageInstruction}
+${historyBlock}${imageInstruction}
 [RESPONSE REQUIREMENTS]:
 1. ${
             imageBase64
               ? 'Focus first on solving and explaining the exercise/question in the uploaded image clearly step-by-step.'
-              : `Look directly at ${snap.studentName}'s real data above (recent test scores in this course, in-progress lectures on the Task Board, next lectures, and Cambridge Library progress).`
+              : `Look directly at ${snap.studentName}'s real data above (overdue/today Study Calendar deadlines first, recent test scores in this course, in-progress lectures on the Task Board, next lectures, and Library progress if applicable).`
           }
-2. Assign or suggest specific, concrete next steps (citing exact lecture titles, practice folders, or Library resources).
-3. ALWAYS append 1 to 4 clickable action tags using the exact syntax [[ACTION:OPEN_LECTURE:<ID>|<English Label>]], [[ACTION:OPEN_FOLDER:<ID>|<English Label>]], [[ACTION:OPEN_LIBRARY:<URL>|<English Label>]], [[ACTION:OPEN_AI_ROOM:<speaking|task1|task2>|<English Label>]], or [[ACTION:OPEN_TAB:<board|analytics>|<English Label>]] at the end of your reply.
+2. Assign or suggest specific, concrete next steps (citing exact lecture titles, practice folders, or calendar deadlines). Keep continuity with the conversation history above if the student is asking a follow-up question.
+3. ALWAYS append 1 to 4 clickable action tags using the exact syntax [[ACTION:OPEN_LECTURE:<ID>|<English Label>]], [[ACTION:OPEN_FOLDER:<ID>|<English Label>]], [[ACTION:OPEN_LIBRARY:<URL>|<English Label>]], [[ACTION:OPEN_AI_ROOM:<speaking|task1|task2>|<English Label>]], or [[ACTION:OPEN_TAB:<calendar|board|analytics>|<English Label>]] at the end of your reply.
 
 Student's current request: "${userQuestion}"`
         : `Bạn là "Thầy Tony AI" — người thầy chủ nhiệm kiêm gia sư trưởng trực tiếp dẫn dắt học viên tại TonyEnglish.vn.
 Luôn xưng "Thầy" và gọi học viên bằng tên ("${snap.studentName}") hoặc "em". Giọng văn sống động, ấm áp, sát sao, đi thẳng vào dữ liệu thực tế của học viên (TUYỆT ĐỐI KHÔNG nói chung chung sáo rỗng, KHÔNG xưng con).
 
 ${snap.promptContext}
-${imageInstruction}
+${historyBlock}${imageInstruction}
 [YÊU CẦU TRẢ LỜI]:
 1. ${
             imageBase64
               ? 'Ưu tiên giải quyết thật chi tiết, cặn kẽ bài tập/câu hỏi trong hình ảnh mà học viên vừa gửi lên.'
-              : `Nhìn thẳng vào số liệu thực tế của ${snap.studentName} ở trên (điểm các bài test gần nhất của khóa học này, bài giảng đang làm dở trên Bảng công việc, bài giảng tiếp theo chưa học, và tiến độ đọc Bài dịch Cambridge trong Thư viện).`
+              : `Nhìn thẳng vào số liệu thực tế của ${snap.studentName} ở trên (ưu tiên hàng đầu các bài QUÁ HẠN / HẠN HÔM NAY trên Lịch báo bài nếu có, sau đó tới điểm test gần nhất, bài giảng đang làm dở trên Bảng công việc, bài giảng tiếp theo chưa học, và tiến độ Thư viện nếu là IELTS).`
           }
-2. Giao hoặc gợi ý các công việc cụ thể tiếp theo cần làm (viết rõ tên bài giảng, tên bộ đề hoặc tên mục Thư viện).
-3. BẮT BUỘC chèn từ 1 đến 4 mã nút bấm hành động theo đúng cú pháp [[ACTION:OPEN_LECTURE:<ID>|<Nhãn nút>]], [[ACTION:OPEN_FOLDER:<ID>|<Nhãn nút>]], [[ACTION:OPEN_LIBRARY:<URL>|<Nhãn nút>]], [[ACTION:OPEN_AI_ROOM:<speaking|task1|task2>|<Nhãn nút>]], hoặc [[ACTION:OPEN_TAB:<board|analytics>|<Nhãn nút>]] ở cuối câu trả lời để học sinh bấm 1 click là mở thẳng bài đó.
+2. Giao hoặc gợi ý các công việc cụ thể tiếp theo cần làm (viết rõ tên bài giảng, tên bộ đề hoặc deadline cần xử lý). Nếu học viên đang hỏi nối tiếp tin nhắn trước, hãy bám sát lịch sử hội thoại ở trên để trả lời liền mạch.
+3. BẮT BUỘC chèn từ 1 đến 4 mã nút bấm hành động theo đúng cú pháp [[ACTION:OPEN_LECTURE:<ID>|<Nhãn nút>]], [[ACTION:OPEN_FOLDER:<ID>|<Nhãn nút>]], [[ACTION:OPEN_LIBRARY:<URL>|<Nhãn nút>]], [[ACTION:OPEN_AI_ROOM:<speaking|task1|task2>|<Nhãn nút>]], hoặc [[ACTION:OPEN_TAB:<calendar|board|analytics>|<Nhãn nút>]] ở cuối câu trả lời để học sinh bấm 1 click là mở thẳng bài đó.
 
 Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
 
@@ -320,12 +456,20 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
         return next;
       });
     } catch (err: any) {
-      // Fallback thông minh từ dữ liệu thật nếu mạng/API chập chờn
+      // Fallback thông minh từ dữ liệu thật theo đúng hệ khóa học nếu mạng/API chập chờn
       const fallbackActions: TutorActionItem[] = [];
       const firstInProg = snap.taskProgress.inProgressLectures[0];
       const firstNextUp = snap.taskProgress.nextUpLectures[0];
       const targetLec = firstInProg || firstNextUp;
+      const urgentCount = (snap.deadlines?.overdue?.length || 0) + (snap.deadlines?.dueToday?.length || 0);
 
+      if (urgentCount > 0) {
+        fallbackActions.push({
+          type: 'OPEN_TAB',
+          target: 'calendar',
+          label: isEn ? `📅 View ${urgentCount} Urgent Deadlines` : `📅 Xem ${urgentCount} bài đến hạn trên Lịch`,
+        });
+      }
       if (targetLec) {
         fallbackActions.push({
           type: 'OPEN_LECTURE',
@@ -339,17 +483,37 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
           target: '/news/category/cambridge-ielts-reading-translation',
           label: isEn ? '📚 Open Library: Cambridge Reading' : '📚 Mở Thư viện: Bài dịch đọc Cambridge',
         });
-        fallbackActions.push({
-          type: 'OPEN_LIBRARY',
-          target: '/news/category/cambridge-ielts-listening-translation',
-          label: isEn ? '🎧 Open Library: Cambridge Listening' : '🎧 Mở Thư viện: Bài dịch nghe Cambridge',
-        });
       }
       fallbackActions.push({
         type: 'OPEN_TAB',
         target: 'board',
         label: isEn ? '📋 Open Task Board' : '📋 Mở Bảng Công Việc',
       });
+
+      const courseSpecificTailVi = snap.isIelts
+        ? ' và kết hợp đọc thêm bài dịch song ngữ trong Thư viện Cambridge nhé!'
+        : snap.isSat
+        ? ' rồi vào Kho đề Digital SAT luyện Reading & Writing / Math 1500+ nhé!'
+        : snap.isIgcse0654 || snap.isIgcseSubject
+        ? ' rồi làm bài Past Papers tương ứng trong Kho đề để nắm chắc Marking Scheme nhé!'
+        : ' rồi thực hành bài tập ứng dụng tương ứng trong Kho đề nhé!';
+
+      const courseSpecificTailEn = snap.isIelts
+        ? ' and read Cambridge bilingual translations in the Library!'
+        : snap.isSat
+        ? ' and practice Reading & Writing / Math 1500+ in the SAT Test Bank!'
+        : snap.isIgcse0654 || snap.isIgcseSubject
+        ? ' and practice topical Past Papers to master the Cambridge Marking Scheme!'
+        : ' and complete the matching practice set in the Test Bank!';
+
+      const urgentLineVi =
+        urgentCount > 0
+          ? `\n\n⚠️ Em đang có **${urgentCount} nhiệm vụ quá hạn / hạn hôm nay** trên Lịch báo bài — nhớ xử lý trước tiên nhé.`
+          : '';
+      const urgentLineEn =
+        urgentCount > 0
+          ? `\n\n⚠️ You have **${urgentCount} overdue or due-today tasks** on your Study Calendar — let's clear those first.`
+          : '';
 
       const fallbackMsg: CoachMessage = {
         role: 'ai',
@@ -358,16 +522,16 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
               snap.recentTests[0]
                 ? `, and your latest test **${snap.recentTests[0].title}** scored **${snap.recentTests[0].scoreLabel}**`
                 : ''
-            }.\n\nFor today's study session, let's prioritize finishing **${
+            }.${urgentLineEn}\n\nFor today's study session, let's prioritize finishing **${
               targetLec ? targetLec.title : 'your next lesson in the roadmap'
-            }** and practicing in the Test Bank!`
+            }**${courseSpecificTailEn}`
           : `Chào **${snap.studentName}**! Thầy đã kiểm tra hồ sơ học tập của em: hiện tại em đã hoàn thành **${snap.taskProgress.completedTasks}/${snap.taskProgress.totalTasks} đầu việc (${snap.taskProgress.percent}%)** trên Bảng công việc${
               snap.recentTests[0]
                 ? ` và bài kiểm tra gần nhất **${snap.recentTests[0].title}** đạt **${snap.recentTests[0].scoreLabel}**`
                 : ''
-            }.\n\nHôm nay thầy giao cho em ưu tiên hoàn thành bài giảng **${
+            }.${urgentLineVi}\n\nHôm nay thầy giao cho em ưu tiên hoàn thành bài giảng **${
               targetLec ? targetLec.title : 'tiếp theo trong lộ trình'
-            }** và kết hợp đọc bài dịch song ngữ trong Thư viện nhé!`,
+            }**${courseSpecificTailVi}`,
         actions: fallbackActions,
       };
 
@@ -463,207 +627,319 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
       imageUrl: imgToSend || undefined,
       timestamp: new Date().toLocaleTimeString(isEn ? 'en-US' : 'vi-VN', { hour: '2-digit', minute: '2-digit' }),
     };
-    setMessages((prev) => [...prev, userMsg]);
+    const priorSnapshot = [...messages, userMsg];
+    setMessages(priorSnapshot);
     setTimeout(() => {
       chatBottomRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }, 80);
 
-    await askTonyAIBrain(snapshot, q, false, imgToSend);
+    await askTonyAIBrain(snapshot, q, false, imgToSend, messages);
     setTimeout(() => {
       chatBottomRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }, 120);
   };
 
+  const handleResetChatSession = () => {
+    if (!snapshot || isAiThinking) return;
+    try {
+      sessionStorage.removeItem(getCacheKey(snapshot.userId, courseId, lang));
+    } catch {}
+    handleRefreshDiagnosis();
+  };
+
   if (!courseId || courseId === 'all') return null;
 
   const localizedCourseName = getLocalizedCourseTitle(cleanTitle(courseTitle), lang);
+  const courseAccent = getCoachCourseAccent(courseTitle);
 
   const quickPrompts = isIelts
     ? isEn
       ? [
           {
-            icon: '🎯',
             label: "Today's Top Priorities",
             prompt:
-              'Based on my latest test scores, in-progress lectures on my Task Board, and companion Grammar & Vocabulary course, what should I prioritize studying today?',
+              'Based on my urgent deadlines, latest test scores, in-progress lectures on my Task Board, and companion Grammar & Vocabulary course, what should I prioritize studying today?',
           },
           {
-            icon: '📚',
-            label: 'Grammar & Vocabulary Boost',
+            label: 'Grammar & Vocab Boost',
             prompt:
               'Please review my current level and assign suitable exercises from Grammar and Vocabulary (such as 4000 English Words, Vocabulary Organiser, Expand Vocabulary Through Reading, or Grammar drills) with quick-open buttons!',
           },
           {
-            icon: '🎧',
-            label: 'Focus on Listening Today',
+            label: 'Listening Focus',
             prompt:
               'Today I want to focus on Listening. Please check my Listening scores and Cambridge Listening translation progress, then assign specific tasks with quick-open buttons!',
           },
           {
-            icon: '📖',
-            label: 'Focus on Reading Today',
+            label: 'Reading Focus',
             prompt:
               'Today I want to focus on Reading. Please check my Reading scores, Cambridge Reading translation progress, and vocabulary, then assign specific tasks with quick-open buttons!',
           },
           {
-            icon: '✍️',
-            label: 'Writing Practice Plan',
+            label: 'Writing Plan',
             prompt:
               'Today I want to practice Writing (Task 1 & Task 2). Please check my Writing progress on the Task Board and assign my next lesson plus the AI Writing Grader!',
           },
           {
-            icon: '🎙️',
-            label: 'Speaking Practice Plan',
+            label: 'Speaking Plan',
             prompt:
               'Today I want to practice Speaking. Please check which Main Blocks / Plugin Blocks lessons I finished and assign the next lesson plus the IELTS Speaking AI Room!',
           },
         ]
       : [
           {
-            icon: '🎯',
             label: 'Giao việc ưu tiên hôm nay',
             prompt:
-              'Dựa vào điểm test gần nhất, các bài đang làm dở trên Bảng công việc và khóa bổ trợ Grammar & Vocabulary của em, hôm nay em nên ưu tiên làm những việc nào nhất hả thầy?',
+              'Dựa vào bài đến hạn trên Lịch báo bài, điểm test gần nhất, các bài đang làm dở trên Bảng công việc và khóa bổ trợ Grammar & Vocabulary của em, hôm nay em nên ưu tiên làm những việc nào nhất hả thầy?',
           },
           {
-            icon: '📚',
-            label: 'Bổ trợ Grammar & Vocabulary',
+            label: 'Bổ trợ Grammar & Vocab',
             prompt:
-              'Thầy kiểm tra lực học hiện tại của em và sai em làm thêm các bài tập phù hợp trong khóa Grammar and Vocabulary (như 4000 English Words, Vocabulary Organiser, Expand Vocabulary Through Reading hoặc bài tập Grammar) kèm nút mở bài để em tăng cường từ vựng và ngữ pháp phục vụ IELTS nhé!',
+              'Thầy kiểm tra lực học hiện tại của em và giao thêm các bài tập phù hợp trong khóa Grammar and Vocabulary (như 4000 English Words, Vocabulary Organiser, Expand Vocabulary Through Reading hoặc bài tập Grammar) kèm nút mở bài để em tăng cường từ vựng và ngữ pháp phục vụ IELTS nhé!',
           },
           {
-            icon: '🎧',
-            label: 'Hôm nay em muốn cày Listening',
+            label: 'Cày Listening hôm nay',
             prompt:
               'Hôm nay em muốn tập trung luyện kỹ năng Listening. Thầy xem điểm Listening và tiến độ đọc Bài dịch nghe Cambridge của em rồi giao bài cụ thể kèm nút mở bài giúp em nhé!',
           },
           {
-            icon: '📖',
-            label: 'Hôm nay em muốn cày Reading',
+            label: 'Cày Reading hôm nay',
             prompt:
               'Hôm nay em muốn tập trung luyện kỹ năng Reading. Thầy xem điểm Reading, tiến độ đọc Bài dịch đọc Cambridge và từ vựng của em rồi giao bài cụ thể kèm nút mở bài giúp em nhé!',
           },
           {
-            icon: '✍️',
-            label: 'Hướng dẫn luyện Writing hôm nay',
+            label: 'Luyện Writing hôm nay',
             prompt:
               'Hôm nay em muốn học Writing (Task 1 & Task 2). Thầy xem trên Bảng công việc em đã học tới bài Writing nào rồi và giao bài học tiếp theo kèm phòng chấm AI cho em nhé!',
           },
           {
-            icon: '🎙️',
-            label: 'Hướng dẫn luyện Speaking hôm nay',
+            label: 'Luyện Speaking hôm nay',
             prompt:
               'Hôm nay em muốn luyện Speaking. Thầy kiểm tra xem trong học phần Luyện thi Nói (Main Blocks / Plugin Blocks) em đã làm xong bài nào rồi và giao bài kế tiếp kèm phòng luyện Speaking AI cho em nhé!',
+          },
+        ]
+    : isSat
+    ? isEn
+      ? [
+          {
+            label: "Today's SAT Priorities",
+            prompt:
+              'Based on my Digital SAT 1500+ progress, deadlines, and recent scores, what should I prioritize studying today to push past 1500+?',
+          },
+          {
+            label: 'Reading & Writing (R&W)',
+            prompt:
+              'Today I want to focus on Digital SAT Reading & Writing (Craft & Structure, Information & Ideas, Standard English Conventions). Please check my progress and assign the next lesson + practice folder!',
+          },
+          {
+            label: 'Math 1500+ & Desmos',
+            prompt:
+              'Today I want to sharpen Digital SAT Math (Algebra, Advanced Math, Geometry & Desmos speed tricks). Please assign the right lesson and practice folder!',
+          },
+          {
+            label: 'Hard M2 Boss Drills',
+            prompt:
+              'Am I ready for Hard Module 2 Boss Drills (750–800 level)? Please check my recent scores and recommend the best strategy + folder!',
+          },
+          {
+            label: 'Real Past Exams Strategy',
+            prompt:
+              'Please recommend which Real Past Exam (2024–2025) I should attempt next and give me pacing tips for Module 1 & Module 2!',
+          },
+        ]
+      : [
+          {
+            label: 'Ưu tiên SAT 1500+ hôm nay',
+            prompt:
+              'Dựa vào tiến độ khóa Digital SAT 1500+, lịch báo bài và điểm kiểm tra gần nhất của em, hôm nay em nên ưu tiên học và luyện phần nào để bứt phá lên 1500+ hả thầy?',
+          },
+          {
+            label: 'Luyện Reading & Writing',
+            prompt:
+              'Hôm nay em muốn tập trung luyện Reading & Writing (Craft & Structure, Information & Ideas, Standard English Conventions). Thầy kiểm tra tiến độ và giao bài giảng + thư mục đề phù hợp cho em nhé!',
+          },
+          {
+            label: 'Luyện Math 1500+ & Desmos',
+            prompt:
+              'Hôm nay em muốn cày Math 1500+ (Algebra, Advanced Math, Geometry và mẹo bấm nhanh Desmos). Thầy giao bài giảng và thư mục đề phù hợp giúp em nhé!',
+          },
+          {
+            label: 'Chiến Hard M2 Boss Drills',
+            prompt:
+              'Lực học hiện tại của em đã đủ vào bộ Hard M2 Boss Drills (120 Câu Trùm Cuối 750–800) chưa hả thầy? Thầy phân tích điểm số và chỉ đường cho em nhé!',
+          },
+          {
+            label: 'Chiến thuật Real Past Exams',
+            prompt:
+              'Thầy tư vấn cho em lịch làm đề Real Past Exams (2024–2025) và cách phân bổ thời gian Module 1 / Module 2 để không bị mất điểm đáng tiếc nhé!',
           },
         ]
     : isIgcse0654
     ? isEn
       ? [
           {
-            icon: '🎯',
             label: "Today's Top Priorities",
             prompt:
-              'Based on my progress across Biology, Chemistry, Physics and my latest test scores, which chapter and practice exercises should I study next today?',
+              'Based on my deadlines, progress across Biology, Chemistry, Physics, and latest test scores, which chapter and practice exercises should I study next today?',
           },
           {
-            icon: '🧬',
-            label: 'Study Biology (B1–B19)',
+            label: 'Biology (B1–B19)',
             prompt:
               'Today I want to study Biology (B1–B19). Please check which chapter I am on and assign the matching theory lecture + Topic Paper practice!',
           },
           {
-            icon: '🧪',
-            label: 'Study Chemistry (C1–C12)',
+            label: 'Chemistry (C1–C12)',
             prompt:
               'Today I want to study Chemistry (C1–C12). Please check which chapter I am on and assign the matching theory lecture + Topic Paper practice!',
           },
           {
-            icon: '⚡',
-            label: 'Study Physics (P1–P6)',
+            label: 'Physics (P1–P6)',
             prompt:
               'Today I want to study Physics (P1–P6). Please check which chapter I am on and assign the matching theory lecture + Topic Paper practice!',
           },
           {
-            icon: '📄',
-            label: 'Past Papers Strategy (Paper 2, 4, 6)',
+            label: 'Past Papers (P2, P4, P6)',
             prompt:
               'Please recommend which Past Paper (Paper 2 Multiple Choice, Paper 4 Extended, or Paper 6 Practical) I should practice today based on my current performance!',
           },
         ]
       : [
           {
-            icon: '🎯',
             label: 'Giao việc ưu tiên hôm nay',
             prompt:
-              'Dựa vào tiến độ các chương Biology, Chemistry, Physics và điểm test gần nhất của em, hôm nay em nên học chương nào và làm bài tập nào tiếp theo hả thầy?',
+              'Dựa vào lịch báo bài, tiến độ các chương Biology, Chemistry, Physics và điểm test gần nhất của em, hôm nay em nên học chương nào và làm bài tập nào tiếp theo hả thầy?',
           },
           {
-            icon: '🧬',
-            label: 'Hôm nay em học Biology (B1–B19)',
+            label: 'Học Biology (B1–B19)',
             prompt:
               'Hôm nay em muốn học phân môn Biology (B1–B19). Thầy kiểm tra xem em đã học tới chương B mấy rồi và giao bài giảng + bộ đề Topic Paper tương ứng cho em nhé!',
           },
           {
-            icon: '🧪',
-            label: 'Hôm nay em học Chemistry (C1–C12)',
+            label: 'Học Chemistry (C1–C12)',
             prompt:
               'Hôm nay em muốn học phân môn Chemistry (C1–C12). Thầy kiểm tra xem em đã học tới chương C mấy rồi và giao bài giảng + bộ đề Topic Paper tương ứng cho em nhé!',
           },
           {
-            icon: '⚡',
-            label: 'Hôm nay em học Physics (P1–P6)',
+            label: 'Học Physics (P1–P6)',
             prompt:
               'Hôm nay em muốn học phân môn Physics (P1–P6). Thầy kiểm tra xem em đã học tới chương P mấy rồi và giao bài giảng + bộ đề Topic Paper tương ứng cho em nhé!',
           },
           {
-            icon: '📄',
-            label: 'Tư vấn luyện Past Papers (Paper 2, 4, 6)',
+            label: 'Luyện Past Papers (P2, P4, P6)',
             prompt:
               'Thầy tư vấn giúp em hôm nay nên luyện đề Past Paper nào (Paper 2 Multiple Choice, Paper 4 Extended hay Paper 6 Practical) dựa trên lực học hiện tại của em nhé!',
+          },
+        ]
+    : isIgcseSubject
+    ? isEn
+      ? [
+          {
+            label: "Today's A* Priorities",
+            prompt: `Based on my deadlines, progress, and recent test scores in ${localizedCourseName}, which topic and past paper should I prioritize today to aim for A/A*?`,
+          },
+          {
+            label: 'Continue Theory Chapter',
+            prompt: `Please check my Task Board in ${localizedCourseName} for any in-progress or next syllabus chapter and assign it with a quick-open button!`,
+          },
+          {
+            label: 'Marking Scheme & Command Words',
+            prompt: `Please explain the most important Cambridge Marking Scheme keywords and command words (State, Describe, Explain, Evaluate/Calculate) for my current topic in ${localizedCourseName}!`,
+          },
+          {
+            label: 'Topical & Past Papers',
+            prompt: `Please recommend the best Past Paper / Topical practice folder in ${localizedCourseName} for me to attempt today!`,
+          },
+        ]
+      : [
+          {
+            label: 'Lộ trình A/A* hôm nay',
+            prompt: `Dựa vào lịch báo bài, tiến độ bài giảng và điểm gần nhất của em trong môn ${cleanTitle(courseTitle)}, hôm nay em nên ưu tiên học chương nào và luyện đề nào để hướng tới điểm A/A*?`,
+          },
+          {
+            label: 'Học tiếp chương Lý thuyết',
+            prompt: `Thầy kiểm tra Bảng công việc môn ${cleanTitle(courseTitle)} xem em đang học dở hoặc cần học tiếp chương nào theo Syllabus rồi giao bài kèm nút mở nhanh giúp em nhé!`,
+          },
+          {
+            label: 'Từ khóa Marking Scheme ăn điểm',
+            prompt: `Thầy nhắc giúp em những từ khóa Marking Scheme và Command Words (State, Describe, Explain, Evaluate/Calculate) dễ mất điểm nhất ở chuyên đề em đang học trong môn ${cleanTitle(courseTitle)} nhé!`,
+          },
+          {
+            label: 'Chọn đề Topical / Past Papers',
+            prompt: `Thầy chọn giúp em thư mục đề Topical hoặc Past Papers phù hợp nhất trong Kho đề môn ${cleanTitle(courseTitle)} để em luyện tay hôm nay nhé!`,
+          },
+        ]
+    : isCommCourse
+    ? isEn
+      ? [
+          {
+            label: "Today's Practice Plan",
+            prompt: `Based on my progress and deadlines in ${localizedCourseName}, which lesson and practical exercise should I focus on today?`,
+          },
+          {
+            label: 'Live Roleplay with Teacher Tony',
+            prompt: `Let's do a realistic 1-on-1 roleplay right here in this chat based on my current topic in ${localizedCourseName}! You start with the first prompt/question and correct my English after each reply.`,
+          },
+          {
+            label: 'Natural Expressions & Phrases',
+            prompt: `Give me 5 high-impact, natural British/International English expressions related to my current lesson in ${localizedCourseName}, with clear workplace/real-life examples!`,
+          },
+          {
+            label: 'Next Lesson & Drills',
+            prompt: `Check my Task Board in ${localizedCourseName} and assign my next theory lecture plus practice folder with quick-open buttons!`,
+          },
+        ]
+      : [
+          {
+            label: 'Kế hoạch luyện hôm nay',
+            prompt: `Dựa vào tiến độ và lịch báo bài trong khóa ${cleanTitle(courseTitle)}, hôm nay em nên học bài giảng nào và thực hành phần nào tiếp theo hả thầy?`,
+          },
+          {
+            label: 'Đóng vai thực chiến cùng Thầy',
+            prompt: `Thầy ơi mình tập đóng vai (roleplay) thực tế theo đúng chủ đề em đang học trong khóa ${cleanTitle(courseTitle)} ngay tại đây nhé! Thầy mở lời tình huống / đặt câu hỏi trước rồi sửa cách diễn đạt cho em thật tự nhiên nhé.`,
+          },
+          {
+            label: '5 mẫu câu / cụm từ đắt giá',
+            prompt: `Thầy cho em 5 mẫu câu / cụm từ tự nhiên và chuyên nghiệp nhất gắn với bài em đang học trong khóa ${cleanTitle(courseTitle)} kèm ví dụ ứng dụng thực tế nhé!`,
+          },
+          {
+            label: 'Mở bài học & Bài tập tiếp theo',
+            prompt: `Thầy kiểm tra Bảng công việc khóa ${cleanTitle(courseTitle)} rồi gửi nút mở nhanh bài giảng kế tiếp và bài thực hành trong Kho đề cho em nhé!`,
           },
         ]
     : isEn
     ? [
         {
-          icon: '🎯',
           label: "Today's Top Priorities",
-          prompt: `Based on my learning progress and latest test scores in ${localizedCourseName}, which lecture and practice exercises should I prioritize today?`,
+          prompt: `Based on my deadlines, learning progress, and latest test scores in ${localizedCourseName}, which lecture and practice exercises should I prioritize today?`,
         },
         {
-          icon: '📖',
           label: 'Continue Theory Lecture',
           prompt: `Please check my Task Board in ${localizedCourseName} for any in-progress or next theory lecture and assign it with a quick-open button!`,
         },
         {
-          icon: '📝',
-          label: 'Pick Practice Tests Today',
+          label: 'Pick Practice Tests',
           prompt: `Please recommend the best practice test folder in ${localizedCourseName} for me to work on today!`,
         },
         {
-          icon: '📊',
-          label: 'Analyze Weak Areas & Review Plan',
+          label: 'Analyze Weak Areas',
           prompt: `Please analyze my recent test scores in ${localizedCourseName}, identify my weakest topics, and tell me which lessons to review!`,
         },
       ]
     : [
         {
-          icon: '🎯',
           label: 'Giao việc ưu tiên hôm nay',
-          prompt: `Dựa vào tiến độ học tập và điểm kiểm tra gần nhất của em trong khóa ${cleanTitle(courseTitle)}, hôm nay em nên ưu tiên học bài giảng nào và làm bài tập nào tiếp theo hả thầy?`,
+          prompt: `Dựa vào lịch báo bài, tiến độ học tập và điểm kiểm tra gần nhất của em trong khóa ${cleanTitle(courseTitle)}, hôm nay em nên ưu tiên học bài giảng nào và làm bài tập nào tiếp theo hả thầy?`,
         },
         {
-          icon: '📖',
           label: 'Học tiếp bài giảng lý thuyết',
           prompt: `Thầy kiểm tra trên Bảng công việc của khóa ${cleanTitle(courseTitle)} xem em đang làm dở hoặc cần học tiếp bài giảng lý thuyết nào rồi giao việc kèm nút mở bài cho em nhé!`,
         },
         {
-          icon: '📝',
           label: 'Chọn đề luyện tập hôm nay',
           prompt: `Thầy tư vấn và chọn giúp em thư mục đề luyện tập phù hợp nhất trong Kho đề của khóa ${cleanTitle(courseTitle)} để em làm bài hôm nay nhé!`,
         },
         {
-          icon: '📊',
-          label: 'Phân tích điểm yếu & Cách ôn tập',
+          label: 'Phân tích điểm yếu & Ôn tập',
           prompt: `Thầy phân tích giúp em kết quả các bài kiểm tra gần đây trong khóa ${cleanTitle(courseTitle)} xem em đang yếu ở chuyên đề nào và cần ôn lại bài giảng nào nhé!`,
         },
       ];
@@ -674,6 +950,11 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
     snapshot?.taskProgress?.inProgressLectures?.[0] ||
     snapshot?.taskProgress?.nextUpLectures?.[0] ||
     null;
+  const overdueList = snapshot?.deadlines?.overdue || [];
+  const dueTodayList = snapshot?.deadlines?.dueToday || [];
+  const upcomingSoonList = snapshot?.deadlines?.upcomingSoon || [];
+  const urgentDeadlineCount = overdueList.length + dueTodayList.length;
+  const canSwitchCourses = Boolean(availableCourses && availableCourses.length > 1 && onSwitchCourse);
 
   return (
     <div
@@ -681,13 +962,23 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
         onClose ? '' : 'mb-8'
       } rounded-2xl sm:rounded-3xl border border-slate-200/90 ring-1 ring-[#0a5482]/10 bg-white shadow-lg transition-all`}
     >
-      {/* TOP HEADER BAR OF AI STUDY COACH */}
+      {/* TOP HEADER BAR OF AI STUDY COACH (Academic Luxury Option C + Course Identity Hairline & Interactive Course Switcher) */}
       <div
-        className={`bg-gradient-to-r from-[#073b5c] via-[#0a5482] to-[#0f172a] px-4 sm:px-5 py-2.5 sm:py-3 text-white flex flex-wrap items-center justify-between gap-2.5 rounded-t-[15px] sm:rounded-t-[23px] ${
+        className={`relative bg-gradient-to-r from-[#073b5c] via-[#0a5482] to-[#0f172a] px-4 sm:px-5 py-3 sm:py-3.5 text-white flex flex-wrap items-center justify-between gap-2.5 rounded-t-[15px] sm:rounded-t-[23px] ${
           isWindowCollapsed ? 'rounded-b-[15px] sm:rounded-b-[23px]' : ''
         }`}
       >
-        <div className="flex items-center gap-2 sm:gap-2.5 min-w-0 flex-wrap">
+        {/* Clipped Decorative Layer (Course Identity Hairline + Subtle Ambient Glow) */}
+        <div
+          className={`absolute inset-0 overflow-hidden rounded-t-[15px] sm:rounded-t-[23px] pointer-events-none ${
+            isWindowCollapsed ? 'rounded-b-[15px] sm:rounded-b-[23px]' : ''
+          }`}
+        >
+          <div className={`absolute top-0 inset-x-0 h-[3.5px] bg-gradient-to-r ${courseAccent.stripe}`} />
+          <div className="absolute -top-16 -right-12 w-56 h-56 bg-[#2ab4e8]/15 blur-3xl rounded-full" />
+        </div>
+
+        <div className="relative z-20 flex items-center gap-2 sm:gap-2.5 min-w-0 flex-wrap">
           <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-amber-400/15 border border-amber-300/35 text-amber-300 flex items-center justify-center shadow-sm shrink-0">
             <Sparkles className="w-5 h-5" />
           </div>
@@ -701,13 +992,78 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
               )}
             </span>
           </span>
-          <span className="bg-white/10 text-sky-100 border border-white/15 text-[11px] sm:text-xs font-bold px-2.5 py-1 rounded-xl flex items-center gap-1.5 max-w-[200px] sm:max-w-[260px] truncate">
-            <GraduationCap className="w-3.5 h-3.5 text-sky-300 shrink-0" />
-            <span className="truncate">{localizedCourseName}</span>
-          </span>
+
+          {/* INTERACTIVE COURSE SWITCHER DROPDOWN */}
+          {canSwitchCourses ? (
+            <div className="relative">
+              <button
+                type="button"
+                onClick={() => setIsCourseDropdownOpen((prev) => !prev)}
+                className={`bg-white/12 hover:bg-white/20 text-white border border-white/25 text-[11px] sm:text-xs font-extrabold px-2.5 sm:px-3 py-1.5 rounded-xl flex items-center gap-1.5 max-w-[215px] sm:max-w-[290px] transition cursor-pointer shadow-2xs`}
+                title={isEn ? 'Switch course to get tailored coaching' : 'Bấm để chuyển nhanh sang khóa học khác cần Thầy tư vấn'}
+              >
+                <span className={`w-2 h-2 rounded-full ${courseAccent.dot} shrink-0 ring-2 ring-white/30`} />
+                <GraduationCap className="w-3.5 h-3.5 text-sky-200 shrink-0 hidden sm:block" />
+                <span className="truncate">{localizedCourseName}</span>
+                <ChevronDown
+                  className={`w-3.5 h-3.5 text-sky-200 shrink-0 transition-transform duration-200 ${
+                    isCourseDropdownOpen ? 'rotate-180' : ''
+                  }`}
+                />
+              </button>
+
+              {isCourseDropdownOpen && (
+                <>
+                  <div
+                    className="fixed inset-0 z-40"
+                    onClick={() => setIsCourseDropdownOpen(false)}
+                  />
+                  <div className="absolute left-0 top-full mt-2 w-72 sm:w-80 max-h-80 overflow-y-auto bg-white text-slate-800 rounded-2xl shadow-2xl border border-slate-200/95 p-1.5 z-50 animate-in fade-in slide-in-from-top-2 duration-150 custom-scrollbar">
+                    <div className="px-3 py-1.5 text-[10.5px] font-black uppercase tracking-wider text-slate-400 border-b border-slate-100 mb-1 flex items-center justify-between">
+                      <span>{isEn ? 'Switch Course Advisor' : 'Chuyển khóa học tư vấn'}</span>
+                      <span className="text-slate-400 font-bold">{availableCourses!.length}</span>
+                    </div>
+                    {availableCourses!.map((c) => {
+                      const isActive = String(c.id) === String(courseId);
+                      const itemAccent = getCoachCourseAccent(c.title);
+                      return (
+                        <button
+                          key={c.id}
+                          type="button"
+                          onClick={() => {
+                            setIsCourseDropdownOpen(false);
+                            if (!isActive && onSwitchCourse) {
+                              onSwitchCourse(String(c.id));
+                            }
+                          }}
+                          className={`w-full text-left px-3 py-2 rounded-xl text-xs font-bold flex items-center justify-between gap-2 transition cursor-pointer ${
+                            isActive
+                              ? 'bg-sky-50 text-[#0a5482] font-extrabold'
+                              : 'text-slate-700 hover:bg-slate-50 hover:text-[#0a5482]'
+                          }`}
+                        >
+                          <div className="flex items-center gap-2 min-w-0">
+                            <span className={`w-2 h-2 rounded-full ${itemAccent.dot} shrink-0`} />
+                            <span className="truncate">{getLocalizedCourseTitle(cleanTitle(c.title), lang)}</span>
+                          </div>
+                          {isActive && <Check className="w-3.5 h-3.5 text-[#0a5482] shrink-0" />}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </>
+              )}
+            </div>
+          ) : (
+            <span className="bg-white/10 text-sky-100 border border-white/15 text-[11px] sm:text-xs font-bold px-2.5 py-1 rounded-xl flex items-center gap-1.5 max-w-[200px] sm:max-w-[260px] truncate">
+              <span className={`w-2 h-2 rounded-full ${courseAccent.dot} shrink-0`} />
+              <GraduationCap className="w-3.5 h-3.5 text-sky-300 shrink-0" />
+              <span className="truncate">{localizedCourseName}</span>
+            </span>
+          )}
         </div>
 
-        <div className="flex items-center gap-2 shrink-0 flex-wrap">
+        <div className="relative z-10 flex items-center gap-2 shrink-0 flex-wrap">
           {!isWindowCollapsed && (
             <button
               type="button"
@@ -750,7 +1106,47 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
 
       {!isWindowCollapsed && (
         <div className="p-3 sm:p-4 space-y-3.5 bg-gradient-to-b from-slate-50/80 to-white rounded-b-[15px] sm:rounded-b-[23px]">
-          {/* 1. REAL-TIME STUDENT X-RAY RADAR (4 THẺ DỮ LIỆU TỔNG THỂ THỰC TẾ) */}
+          {/* URGENT STUDY CALENDAR DEADLINES ALERT STRIP */}
+          {!isStatsCollapsed && snapshot && urgentDeadlineCount > 0 && (
+            <div
+              onClick={() =>
+                executeTutorAction(
+                  { type: 'OPEN_TAB', target: 'calendar', label: isEn ? 'Study Calendar' : 'Lịch báo bài' },
+                  courseId,
+                  { onOpenLecture, onSelectFolder, onNavigate }
+                )
+              }
+              className="bg-rose-50/80 hover:bg-rose-50 border border-rose-200/90 border-l-4 border-l-rose-500 rounded-xl sm:rounded-2xl px-3.5 py-2.5 flex flex-wrap items-center justify-between gap-2.5 cursor-pointer transition shadow-2xs"
+            >
+              <div className="flex items-center gap-2.5 min-w-0">
+                <div className="w-8 h-8 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center shrink-0">
+                  <CalendarClock className="w-4 h-4" />
+                </div>
+                <div className="min-w-0">
+                  <div className="text-xs font-extrabold text-rose-900 flex items-center gap-2 flex-wrap">
+                    <span>
+                      {isEn
+                        ? `${overdueList.length > 0 ? `${overdueList.length} overdue` : ''}${overdueList.length > 0 && dueTodayList.length > 0 ? ' • ' : ''}${dueTodayList.length > 0 ? `${dueTodayList.length} due today` : ''} on Study Calendar`
+                        : `${overdueList.length > 0 ? `${overdueList.length} bài quá hạn` : ''}${overdueList.length > 0 && dueTodayList.length > 0 ? ' • ' : ''}${dueTodayList.length > 0 ? `${dueTodayList.length} bài hạn hôm nay` : ''} trên Lịch báo bài`}
+                    </span>
+                    {upcomingSoonList.length > 0 && (
+                      <span className="text-[10.5px] font-bold bg-amber-100 text-amber-800 px-2 py-0.5 rounded-full">
+                        +{upcomingSoonList.length} {isEn ? 'upcoming' : 'sắp đến hạn'}
+                      </span>
+                    )}
+                  </div>
+                  <div className="text-[11.5px] text-rose-700/90 font-semibold truncate">
+                    {(overdueList[0] || dueTodayList[0])?.title}
+                  </div>
+                </div>
+              </div>
+              <span className="text-[11px] font-extrabold text-rose-700 bg-white border border-rose-200 px-2.5 py-1 rounded-lg shrink-0">
+                {isEn ? 'Open Calendar →' : 'Mở Lịch báo bài →'}
+              </span>
+            </div>
+          )}
+
+          {/* 1. REAL-TIME STUDENT X-RAY RADAR (4 THẺ DỮ LIỆU TỔNG THỂ THỰC TẾ — BORDER ACCENT OPTION C) */}
           {!isStatsCollapsed && snapshot && (
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3 animate-in fade-in duration-150">
               {/* Card 1: Bảng công việc */}
@@ -762,7 +1158,7 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
                     { onOpenLecture, onSelectFolder, onNavigate }
                   )
                 }
-                className="bg-white hover:bg-sky-50/50 border border-slate-200/90 hover:border-[#0a5482]/50 rounded-xl sm:rounded-2xl p-2.5 sm:p-3.5 shadow-2xs transition cursor-pointer flex flex-col justify-between"
+                className="bg-white hover:bg-sky-50/50 border border-slate-200/90 border-l-[3.5px] border-l-[#0a5482] hover:border-[#0a5482]/50 rounded-xl sm:rounded-2xl p-2.5 sm:p-3.5 shadow-2xs transition cursor-pointer flex flex-col justify-between"
               >
                 <div className="flex items-center justify-between gap-2">
                   <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
@@ -800,7 +1196,7 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
                     );
                   }
                 }}
-                className="bg-white hover:bg-emerald-50/50 border border-slate-200/90 hover:border-emerald-400 rounded-2xl p-3.5 shadow-2xs transition cursor-pointer flex flex-col justify-between"
+                className="bg-white hover:bg-emerald-50/50 border border-slate-200/90 border-l-[3.5px] border-l-emerald-500 hover:border-emerald-400 rounded-xl sm:rounded-2xl p-2.5 sm:p-3.5 shadow-2xs transition cursor-pointer flex flex-col justify-between"
               >
                 <div className="flex items-center justify-between gap-2">
                   <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
@@ -832,7 +1228,7 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
                     { onOpenLecture, onSelectFolder, onNavigate }
                   )
                 }
-                className="bg-white hover:bg-amber-50/50 border border-slate-200/90 hover:border-amber-400 rounded-2xl p-3.5 shadow-2xs transition cursor-pointer flex flex-col justify-between"
+                className="bg-white hover:bg-amber-50/50 border border-slate-200/90 border-l-[3.5px] border-l-amber-500 hover:border-amber-400 rounded-xl sm:rounded-2xl p-2.5 sm:p-3.5 shadow-2xs transition cursor-pointer flex flex-col justify-between"
               >
                 <div className="flex items-center justify-between gap-2">
                   <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
@@ -843,7 +1239,7 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
                     <span
                       className={`text-[10.5px] font-black px-2 py-0.5 rounded-full border ${
                         latestTest.isLow
-                          ? 'bg-amber-50 text-amber-800 border-amber-200'
+                          ? 'bg-rose-50 text-rose-700 border-rose-200'
                           : 'bg-emerald-50 text-emerald-700 border-emerald-200'
                       }`}
                     >
@@ -877,7 +1273,7 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
                       { onOpenLecture, onSelectFolder, onNavigate }
                     )
                   }
-                  className="bg-white hover:bg-indigo-50/50 border border-slate-200/90 hover:border-indigo-400 rounded-2xl p-3.5 shadow-2xs transition cursor-pointer flex flex-col justify-between"
+                  className="bg-white hover:bg-indigo-50/50 border border-slate-200/90 border-l-[3.5px] border-l-indigo-500 hover:border-indigo-400 rounded-xl sm:rounded-2xl p-2.5 sm:p-3.5 shadow-2xs transition cursor-pointer flex flex-col justify-between"
                 >
                   <div className="flex items-center justify-between gap-2">
                     <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
@@ -907,15 +1303,15 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
                       { onOpenLecture, onSelectFolder, onNavigate }
                     )
                   }
-                  className="bg-white hover:bg-indigo-50/50 border border-slate-200/90 hover:border-indigo-400 rounded-2xl p-3.5 shadow-2xs transition cursor-pointer flex flex-col justify-between"
+                  className="bg-white hover:bg-indigo-50/50 border border-slate-200/90 border-l-[3.5px] border-l-indigo-500 hover:border-indigo-400 rounded-xl sm:rounded-2xl p-2.5 sm:p-3.5 shadow-2xs transition cursor-pointer flex flex-col justify-between"
                 >
                   <div className="flex items-center justify-between gap-2">
                     <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
                       <BarChart3 className="w-3.5 h-3.5 text-indigo-600 shrink-0" />
                       <span>{isEn ? 'Total Tests' : 'Tổng số bài thi'}</span>
                     </span>
-                    <span className="text-[10.5px] font-black text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full border border-indigo-200 truncate max-w-[110px]">
-                      {isIgcse0654 ? 'IGCSE 0654' : (isEn ? 'Test Bank' : 'Kho đề & Thi')}
+                    <span className="text-[10.5px] font-black text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full border border-indigo-200 truncate max-w-[115px]">
+                      {isSat ? 'SAT 1500+' : isIgcse0654 ? 'IGCSE 0654' : isIgcseSubject ? 'IGCSE A*' : (isEn ? 'Test Bank' : 'Kho đề & Thi')}
                     </span>
                   </div>
                   <div className="mt-2">
@@ -942,6 +1338,18 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
                 </span>
               </div>
               <div className="flex items-center gap-2 flex-wrap">
+                {messages.length > 1 && (
+                  <button
+                    type="button"
+                    onClick={handleResetChatSession}
+                    disabled={isAiThinking || isLoadingSnapshot}
+                    className="text-[11px] font-bold text-slate-600 hover:text-rose-700 hover:bg-rose-50 bg-white border border-slate-200 hover:border-rose-200 px-2.5 py-1 rounded-lg transition cursor-pointer flex items-center gap-1 disabled:opacity-50"
+                    title={isEn ? 'Clear chat history and start fresh' : 'Làm mới cuộc trò chuyện cho khóa này'}
+                  >
+                    <RotateCcw className="w-3 h-3" />
+                    <span>{isEn ? 'New Chat' : 'Đoạn chat mới'}</span>
+                  </button>
+                )}
                 <button
                   type="button"
                   onClick={handleRefreshDiagnosis}
@@ -1036,6 +1444,8 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
                                     ? 'bg-amber-500 hover:bg-amber-600 text-slate-950'
                                     : act.type === 'OPEN_AI_ROOM'
                                     ? 'bg-indigo-600 hover:bg-indigo-700 text-white'
+                                    : act.type === 'OPEN_TAB' && act.target === 'calendar'
+                                    ? 'bg-rose-600 hover:bg-rose-700 text-white'
                                     : 'bg-sky-100 hover:bg-sky-200 text-[#0a5482] border border-sky-300';
 
                                 return (
@@ -1107,9 +1517,9 @@ Yêu cầu hiện tại từ học viên: "${userQuestion}"`;
                     type="button"
                     disabled={isAiThinking}
                     onClick={() => handleSendUserQuestion(qp.prompt)}
-                    className="bg-white hover:bg-[#0a5482] text-[#0a5482] hover:text-white border border-sky-200 hover:border-[#0a5482] text-xs font-extrabold px-3 py-1.5 rounded-xl transition shadow-2xs cursor-pointer disabled:opacity-50 flex items-center gap-1.5"
+                    className="bg-white hover:bg-[#0a5482] text-[#0a5482] hover:text-white border border-slate-200 hover:border-[#0a5482] text-xs font-extrabold px-3 py-1.5 rounded-xl transition shadow-2xs cursor-pointer disabled:opacity-50 flex items-center gap-1.5"
                   >
-                    <span>{qp.icon}</span>
+                    <span className={`w-1.5 h-1.5 rounded-full ${courseAccent.dot} shrink-0`} />
                     <span>{qp.label}</span>
                   </button>
                 ))}

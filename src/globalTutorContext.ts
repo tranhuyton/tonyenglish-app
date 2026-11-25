@@ -7,18 +7,46 @@ export interface TutorActionItem {
   label: string;
 }
 
+export interface DeadlineItem {
+  id: string;
+  title: string;
+  dueDate: string;
+  dueLabel: string;
+  taskType: string;
+  testId?: string | null;
+  isCurrentCourse: boolean;
+}
+
+export type CourseFamily =
+  | 'ielts'
+  | 'sat'
+  | 'igcse_0654'
+  | 'igcse_subject'
+  | 'comm_advanced'
+  | 'comm_basic'
+  | 'general';
+
 export interface GlobalStudentSnapshot {
   userId: string;
   studentName: string;
   courseId: string;
   courseTitle: string;
+  courseFamily: CourseFamily;
   isIelts: boolean;
+  isSat: boolean;
   isIgcse0654: boolean;
+  isIgcseSubject: boolean;
+  isComm: boolean;
   lastLecture: {
     id?: string;
     title: string;
     timeLabel: string;
   } | null;
+  deadlines: {
+    overdue: DeadlineItem[];
+    dueToday: DeadlineItem[];
+    upcomingSoon: DeadlineItem[];
+  };
   recentTests: Array<{
     title: string;
     scoreLabel: string;
@@ -128,14 +156,13 @@ export async function fetchGlobalStudentSnapshot(
         ? Array.from(new Set([resolvedCourseId, GRAMMAR_VOCAB_COURSE_ID]))
         : [];
 
-    // Fetch student profile, course info, modules, lectures, folders, test results, assignments, lecture_progress, activity_logs in parallel
+    // Fetch student profile, course info, modules, lectures, folders, test results, assignments (with due_date), lecture_progress, activity_logs in parallel
     const [
       profileRes,
       courseRes,
       modulesRes,
       lecturesRes,
       foldersRes,
-      courseTestsRes,
       testResultsRes,
       assignmentsRes,
       lectureProgRes,
@@ -166,11 +193,6 @@ export async function fetchGlobalStudentSnapshot(
             .select('id, title, parent_id, course_id')
             .in('course_id', targetCourseIds)
         : Promise.resolve({ data: [] }),
-      targetCourseIds.length > 0
-        ? supabase
-            .from('tests')
-            .select('id, title, folder_id, course_id')
-        : Promise.resolve({ data: [] }),
       supabase
         .from('test_results')
         .select('id, test_title, score, total_score, details, created_at')
@@ -179,7 +201,7 @@ export async function fetchGlobalStudentSnapshot(
         .limit(80),
       supabase
         .from('assignments')
-        .select('id, title, card_title, student_completed, is_completed, task_type, test_id')
+        .select('id, title, card_title, due_date, student_completed, is_completed, task_type, test_id')
         .eq('user_id', user.id),
       supabase
         .from('lecture_progress')
@@ -204,18 +226,91 @@ export async function fetchGlobalStudentSnapshot(
       courseTitleInput || courseRes.data?.title || 'IELTS Premium'
     );
     const courseTitle = getLocalizedCourseTitle(rawCourseTitle, lang);
-    const lowerCourseTitle = rawCourseTitle.toLowerCase();
+    const lowerCourseTitle = `${rawCourseTitle} ${courseRes.data?.type || ''}`.toLowerCase();
     const isIelts =
       resolvedCourseId === '239a64f0-c106-40e5-a6e2-4e685a0d70fb' ||
       lowerCourseTitle.includes('ielts');
+    const isSat = !isIelts && lowerCourseTitle.includes('sat');
     const isIgcse0654 =
       resolvedCourseId === 'a2a949c7-c23e-45a7-82fa-cdeda5cc32a7' ||
       lowerCourseTitle.includes('co-ordinated') ||
       lowerCourseTitle.includes('0654');
+    const isIgcseSubject =
+      !isIelts &&
+      !isSat &&
+      !isIgcse0654 &&
+      (lowerCourseTitle.includes('igcse') ||
+        lowerCourseTitle.includes('a-level') ||
+        lowerCourseTitle.includes('biology') ||
+        lowerCourseTitle.includes('chemistry') ||
+        lowerCourseTitle.includes('physics') ||
+        lowerCourseTitle.includes('geography') ||
+        lowerCourseTitle.includes('science') ||
+        lowerCourseTitle.includes('0580') ||
+        lowerCourseTitle.includes('0606') ||
+        lowerCourseTitle.includes('math') ||
+        lowerCourseTitle.includes('econ') ||
+        lowerCourseTitle.includes('business'));
+    const isCommAdvanced =
+      !isIelts &&
+      !isSat &&
+      !isIgcse0654 &&
+      !isIgcseSubject &&
+      (lowerCourseTitle.includes('văn phòng') ||
+        lowerCourseTitle.includes('thành ngữ') ||
+        lowerCourseTitle.includes('idiom') ||
+        lowerCourseTitle.includes('email') ||
+        lowerCourseTitle.includes('phỏng vấn') ||
+        lowerCourseTitle.includes('interview') ||
+        lowerCourseTitle.includes('office'));
+    const isCommBasic =
+      !isIelts &&
+      !isSat &&
+      !isIgcse0654 &&
+      !isIgcseSubject &&
+      !isCommAdvanced &&
+      (lowerCourseTitle.includes('pronunciation') ||
+        lowerCourseTitle.includes('phát âm') ||
+        lowerCourseTitle.includes('reflex') ||
+        lowerCourseTitle.includes('phản ứng') ||
+        lowerCourseTitle.includes('phản xạ') ||
+        lowerCourseTitle.includes('tình huống') ||
+        lowerCourseTitle.includes('communication') ||
+        lowerCourseTitle.includes('giao tiếp'));
+    const isComm = isCommAdvanced || isCommBasic;
+    const courseFamily: CourseFamily = isIelts
+      ? 'ielts'
+      : isSat
+      ? 'sat'
+      : isIgcse0654
+      ? 'igcse_0654'
+      : isIgcseSubject
+      ? 'igcse_subject'
+      : isCommAdvanced
+      ? 'comm_advanced'
+      : isCommBasic
+      ? 'comm_basic'
+      : 'general';
 
     const allFetchedModules = (modulesRes.data || []) as any[];
     const allFetchedLectures = (lecturesRes.data || []) as any[];
     const allFetchedFolders = (foldersRes.data || []) as any[];
+
+    // Targeted tests query (only tests belonging to active course + companion folders, instead of full table scan)
+    const fetchedFolderIds = allFetchedFolders.map((f) => String(f.id)).filter(Boolean);
+    const [testsByCourseRes, testsByFolderRes] = await Promise.all([
+      targetCourseIds.length > 0
+        ? supabase.from('tests').select('id, title, folder_id, course_id').in('course_id', targetCourseIds)
+        : Promise.resolve({ data: [] }),
+      fetchedFolderIds.length > 0
+        ? supabase.from('tests').select('id, title, folder_id, course_id').in('folder_id', fetchedFolderIds.slice(0, 180))
+        : Promise.resolve({ data: [] }),
+    ]);
+    const testsDedupMap = new Map<string, any>();
+    [...(testsByCourseRes.data || []), ...(testsByFolderRes.data || [])].forEach((t: any) => {
+      if (t?.id) testsDedupMap.set(String(t.id), t);
+    });
+    const courseTestsRes = { data: Array.from(testsDedupMap.values()) };
 
     allFetchedLectures.forEach((l) => {
       if (l.id && l.course_id) lectureCourseMap.set(String(l.id), String(l.course_id));
@@ -578,6 +673,79 @@ export async function fetchGlobalStudentSnapshot(
     const taskPercent =
       totalTasksCount > 0 ? Math.round((completedTasksCount / totalTasksCount) * 100) : 0;
 
+    // 2b. Parse Study Calendar Deadlines (overdue / dueToday / upcomingSoon within 3 days)
+    const nowLocal = new Date();
+    const toLocalYMD = (dt: Date) =>
+      `${dt.getFullYear()}-${String(dt.getMonth() + 1).padStart(2, '0')}-${String(dt.getDate()).padStart(2, '0')}`;
+    const todayStr = toLocalYMD(nowLocal);
+    const soonDate = new Date(nowLocal);
+    soonDate.setDate(soonDate.getDate() + 3);
+    const soonStr = toLocalYMD(soonDate);
+
+    const activeLectureTitlesLower = new Set<string>(
+      sortedLectures.map((l) => cleanTitle(l.title || '').toLowerCase()).filter(Boolean)
+    );
+
+    const overdueDeadlines: DeadlineItem[] = [];
+    const dueTodayDeadlines: DeadlineItem[] = [];
+    const upcomingSoonDeadlines: DeadlineItem[] = [];
+
+    assignments
+      .filter((a) => a.due_date && String(a.due_date).trim() !== '')
+      .sort((a, b) => String(a.due_date).localeCompare(String(b.due_date)))
+      .forEach((a) => {
+        const dueClean = String(a.due_date).trim().split('T')[0];
+        if (!/^\d{4}-\d{2}-\d{2}$/.test(dueClean)) return;
+
+        const testKey = a.test_id ? String(a.test_id) : '';
+        const titleLower = cleanTitle(a.title || '').toLowerCase();
+        const cardLower = cleanTitle(a.card_title || '').toLowerCase();
+        const isDone =
+          a.task_type === 'test'
+            ? Boolean(a.is_completed || (testKey && passedTestKeys.has(testKey)) || (titleLower && passedTestKeys.has(titleLower)))
+            : Boolean(a.is_completed || a.student_completed);
+        if (isDone) return;
+
+        const isCurrentCourse =
+          (testKey && courseTestIds.has(testKey)) ||
+          (titleLower && courseTestTitles.has(titleLower)) ||
+          (cardLower && activeLectureTitlesLower.has(cardLower)) ||
+          (titleLower && activeLectureTitlesLower.has(titleLower));
+
+        const parts = dueClean.split('-');
+        const dueLabel = parts.length === 3 ? `${parts[2]}/${parts[1]}` : dueClean;
+        const item: DeadlineItem = {
+          id: String(a.id),
+          title: cleanTitle(a.title || a.card_title || (isEn ? 'Study Task' : 'Nhiệm vụ học tập')),
+          dueDate: dueClean,
+          dueLabel,
+          taskType: a.task_type || 'manual',
+          testId: a.test_id || null,
+          isCurrentCourse: Boolean(isCurrentCourse),
+        };
+
+        if (dueClean < todayStr) {
+          overdueDeadlines.push(item);
+        } else if (dueClean === todayStr) {
+          dueTodayDeadlines.push(item);
+        } else if (dueClean <= soonStr) {
+          upcomingSoonDeadlines.push(item);
+        }
+      });
+
+    // Prioritize current-course deadlines first while keeping urgent cross-course overdue items visible
+    const sortDeadlinePriority = (arr: DeadlineItem[]) =>
+      [...arr].sort((a, b) => {
+        if (a.isCurrentCourse !== b.isCurrentCourse) return a.isCurrentCourse ? -1 : 1;
+        return a.dueDate.localeCompare(b.dueDate);
+      });
+
+    const deadlines = {
+      overdue: sortDeadlinePriority(overdueDeadlines).slice(0, 6),
+      dueToday: sortDeadlinePriority(dueTodayDeadlines).slice(0, 6),
+      upcomingSoon: sortDeadlinePriority(upcomingSoonDeadlines).slice(0, 6),
+    };
+
     // 3b. Build Companion "Grammar and Vocabulary" Progress & Catalog for IELTS Premium
     let gvSummarySection = '';
     let gvCatalogSection = '';
@@ -692,19 +860,62 @@ ${gvFoldersCatalog}
 ${gvLecturesCatalog}`;
     }
 
-    // 4. Build Compact Prompt Context (~1,000 tokens) for Gemini AI
-    const courseLecturesCatalog = sortedLectures
-      .slice(0, 45)
+    // 4. Build Prioritized Compact Prompt Context for Gemini AI (never truncating in-progress/next lectures on long courses!)
+    const prioritizedLecturesMap = new Map<string, any>();
+    const lectureById = new Map<string, any>();
+    sortedLectures.forEach((l) => lectureById.set(String(l.id), l));
+
+    inProgressLectures.forEach((ip) => {
+      const l = lectureById.get(ip.id);
+      if (l) prioritizedLecturesMap.set(ip.id, l);
+    });
+    nextUpLectures.forEach((nu) => {
+      const l = lectureById.get(nu.id);
+      if (l) prioritizedLecturesMap.set(nu.id, l);
+    });
+    sortedLectures.forEach((l) => {
+      if (prioritizedLecturesMap.size < 60 && !prioritizedLecturesMap.has(String(l.id))) {
+        prioritizedLecturesMap.set(String(l.id), l);
+      }
+    });
+
+    const courseLecturesCatalog = Array.from(prioritizedLecturesMap.values())
       .map((l) => {
         const modName = moduleMap.get(String(l.module_id)) || '';
         return `- [${modName}] "${cleanTitle(l.title)}" -> ID: ${l.id}`;
       })
       .join('\n');
 
-    const rootFoldersCatalog = rootFolders
-      .slice(0, 20)
-      .map((f) => `- Thư mục đề "${cleanTitle(f.title)}" -> FOLDER_ID: ${f.id}`)
+    // Include root folders AND key subfolders (Parent > Child) up to 32 entries so SAT/IGCSE specific papers are directly linkable
+    const orderedFoldersForCatalog = [
+      ...rootFolders,
+      ...folders.filter((f) => Boolean(f.parent_id)),
+    ].slice(0, 32);
+    const rootFoldersCatalog = orderedFoldersForCatalog
+      .map((f) => {
+        const pTitle = f.parent_id ? folderMap.get(String(f.parent_id))?.title : '';
+        const label = pTitle ? `${pTitle} > ${cleanTitle(f.title)}` : cleanTitle(f.title);
+        return `- ${isEn ? 'Practice Folder' : 'Thư mục đề'} "${label}" -> FOLDER_ID: ${f.id}`;
+      })
       .join('\n');
+
+    const formatDeadlineLine = (d: DeadlineItem, tagVi: string, tagEn: string) =>
+      `- [${isEn ? tagEn : tagVi} ${d.dueLabel}]${!d.isCurrentCourse ? (isEn ? ' [Other course]' : ' [Khóa khác]') : ''} ${d.title}`;
+
+    const deadlinesLinesEn = [
+      ...deadlines.overdue.map((d) => formatDeadlineLine(d, 'QUÁ HẠN', 'OVERDUE')),
+      ...deadlines.dueToday.map((d) => formatDeadlineLine(d, 'HẠN HÔM NAY', 'DUE TODAY')),
+      ...deadlines.upcomingSoon.map((d) => formatDeadlineLine(d, 'SẮP ĐẾN HẠN', 'UPCOMING')),
+    ];
+    const deadlinesSectionEn =
+      deadlinesLinesEn.length > 0
+        ? `\n[STUDY CALENDAR & URGENT DEADLINES (HIGHEST PRIORITY)]:\n${deadlinesLinesEn.join('\n')}`
+        : '\n[STUDY CALENDAR & URGENT DEADLINES]:\n- No overdue or urgent deadlines in the next 3 days.';
+
+    const deadlinesSectionVi =
+      deadlinesLinesEn.length > 0
+        ? `\n[LỊCH BÁO BÀI & DEADLINE CẦN ƯU TIÊN HÀNG ĐẦU]:\n${deadlinesLinesEn.join('\n')}`
+        : '\n[LỊCH BÁO BÀI & DEADLINE]:\n- Không có bài quá hạn hay gấp trong 3 ngày tới.';
 
     const recentTestsText =
       recentTests.length > 0
@@ -746,7 +957,7 @@ ${gvLecturesCatalog}`;
 
     const pedagogyRules = isIelts
       ? `[TRIẾT LÝ & QUY TẮC DẠY HỌC CỦA THẦY TONY - KHÓA IELTS PREMIUM]:
-1. Thầy Tony luôn nhìn vào DỮ LIỆU THỰC TẾ của học sinh (bài đang làm dở trên Bảng công việc, điểm bài thi gần nhất, tiến độ đọc Bài dịch Cambridge trong Thư viện) để giao việc cụ thể ngay lập tức. Chỉ gọi học sinh bằng tên gọi ngắn ("${studentName}") hoặc "em", không lặp lại cả họ và tên đệm.
+1. Thầy Tony luôn nhìn vào DỮ LIỆU THỰC TẾ của học sinh (bài QUÁ HẠN / ĐẾN HẠN trên Lịch báo bài, bài đang làm dở trên Bảng công việc, điểm bài thi gần nhất, tiến độ đọc Bài dịch Cambridge trong Thư viện) để giao việc cụ thể ngay lập tức. Nếu có bài quá hạn hoặc hạn hôm nay, BẮT BUỘC nhắc xử lý trước và đính kèm nút [[ACTION:OPEN_TAB:calendar|📅 Mở Lịch Báo Bài]]. Chỉ gọi học sinh bằng tên gọi ngắn ("${studentName}") hoặc "em", không lặp lại cả họ và tên đệm.
 2. QUY TẮC TÍNH ĐIỂM BẮT BUỘC: Trong khóa IELTS Premium, CHỈ DUY NHẤT các đề thi trong thư mục "Cambridge Test" mới được chấm theo thang điểm Band (VD: Band 6.5). Tất cả các thư mục khác (Crash Course, Cram Course, Reading Strategies, Listening Strategies, bài tập theo Unit...) đều chỉ chấm theo tỷ lệ phần trăm số câu đúng (%), TUYỆT ĐỐI KHÔNG gọi điểm của các bài luyện tập đó là Band.
 3. Nếu học sinh có bài giảng đang làm dở (VD: 1/5 việc, 2/7 việc) hoặc vừa mới hoàn thành 1 bài (VD: xong "1. Main Block: Person"), hãy khen ngợi và chỉ định học tiếp bài kế tiếp ngay sau đó (VD: "2. Main Block: Place/Service" hoặc bài tiếp theo trong Task 1/Task 2).
 4. Với Kỹ năng Nghe (Listening) & Đọc (Reading):
@@ -755,20 +966,36 @@ ${gvLecturesCatalog}`;
 5. Với Kỹ năng Nói (Speaking): Học công thức Lego Blocks (6 Main Blocks + 3 Plugin Blocks) trong Bài giảng -> sau đó BẮT BUỘC vào Phòng luyện IELTS Speaking AI để ghi âm thực hành.
 6. Với Kỹ năng Viết (Writing): Học công thức phân tích biểu đồ (Task 1) hoặc 5 dạng luận + 24 chủ đề từ vựng (Task 2) -> sau đó vào Phòng chấm IELTS Writing AI để nộp bài.
 7. ĐẶC QUYỀN KHÓA IELTS PREMIUM — GIAO THÊM BÀI TẬP TRONG KHÓA "GRAMMAR AND VOCABULARY": Học sinh học khóa IELTS Premium luôn được Thầy Tony xếp học kèm khóa "Grammar and Vocabulary" để bồi đắp vốn từ vựng và nền tảng ngữ pháp. Vì vậy, khi tư vấn lộ trình học hôm nay hoặc khi thấy điểm Reading/Listening/Writing/Speaking của học sinh còn yếu, Thầy Tony AI BẮT BUỘC phải sai học sinh làm thêm bài tập trong khóa "Grammar and Vocabulary" (ví dụ: cày từ vựng trong "4000 English Words", "Vocabulary Organiser", "Expand Vocabulary Through Reading", hoặc làm bài tập ngữ pháp trong "Grammar" -> "I. Basic English Grammar exercises" / "II. English Tenses exercises" / "III. Advanced English Grammar exercises", hoặc học bài giảng Ngữ pháp tương ứng) và chèn sẵn nút bấm [[ACTION:OPEN_FOLDER:...]] hoặc [[ACTION:OPEN_LECTURE:...]] để học sinh bấm vào làm ngay!`
+      : isSat
+      ? `[TRIẾT LÝ & QUY TẮC DẠY HỌC CỦA THẦY TONY - KHÓA DIGITAL SAT 1500+]:
+1. Thầy Tony huấn luyện học sinh theo đúng cấu trúc đề thi Digital SAT Bluebook thích ứng (Adaptive): gồm 2 phần **Reading & Writing (R&W — 71 giây/câu)** và **Math (1500+ — 95 giây/câu)**, với mục tiêu vượt qua Module 1 sạch lỗi để mở khóa Hard Module 2 chinh phục 750–800 điểm mỗi phần. Nếu có bài quá hạn / hạn hôm nay trên Lịch báo bài, nhắc hoàn thành ngay trước tiên.
+2. Phân tích rõ từng mảng chuyên sâu:
+   - **Reading & Writing:** Craft & Structure (Words in Context, Cross-Text), Information & Ideas (Inference, Command of Evidence), Standard English Conventions (Boundaries, Form/Structure/Sense), Expression of Ideas (Transitions, Rhetorical Synthesis).
+   - **Math 1500+:** Algebra, Advanced Math, Problem-Solving & Data Analysis, Geometry & Trig — luôn gợi ý mẹo giải nhanh bằng máy tính **Desmos** cho các câu hệ phương trình, hàm bậc hai, hồi quy.
+   - **Chốt điểm cao:** Khi nền tảng vững (>80% ở bài luyện theo chuyên đề), giao ngay bộ **Hard M2 Boss Drills (120 Câu Trùm Cuối 750–800)** và **Real Past Exams (2024–2025)** trong Kho đề (kèm nút [[ACTION:OPEN_FOLDER:...]]).`
       : isIgcse0654
       ? `[TRIẾT LÝ & QUY TẮC DẠY HỌC CỦA THẦY TONY - KHÓA IGCSE CO-ORDINATED SCIENCES 0654]:
-1. Thầy Tony luôn kiểm tra xem học sinh đang học tới chương nào trong Biology (B1–B19), Chemistry (C1–C12), hay Physics (P1–P6) và điểm các bài Test/Past Paper gần nhất ra sao. Chỉ gọi học sinh bằng tên gọi ngắn ("${studentName}") hoặc "em".
-2. Quy trình chuẩn cho mỗi chuyên đề:
-   - Bước 1: Mở Bài giảng lý thuyết của chương đó (nghe Audio song ngữ Anh-Việt của Thầy AI + xem Video bài giảng).
+1. Thầy Tony luôn kiểm tra bài quá hạn/hạn hôm nay trên Lịch báo bài, xem học sinh đang học tới chương nào trong Biology (B1–B19), Chemistry (C1–C12), hay Physics (P1–P6) và điểm các bài Test/Past Paper gần nhất ra sao. Chỉ gọi học sinh bằng tên gọi ngắn ("${studentName}") hoặc "em".
+2. Quy trình chuẩn chuẩn Cambridge Marking Scheme cho mỗi chuyên đề:
+   - Bước 1: Mở Bài giảng lý thuyết của chương đó (nghe Audio song ngữ Anh-Việt của Thầy AI + nắm chắc từ khóa ăn điểm theo Command Words: State, Describe, Explain, Calculate).
    - Bước 2: Hoàn thành các bài tập trắc nghiệm & tự luận ngắn ở cuối bài giảng để đạt 100% tiến độ chương.
    - Bước 3: Luyện đề Past Paper trong Kho đề (Paper 2 Multiple Choice, Paper 4 Extended Theory, Paper 6 Alternative to Practical).`
+      : isIgcseSubject
+      ? `[TRIẾT LÝ & QUY TẮC DẠY HỌC CỦA THẦY TONY - KHÓA CAMBRIDGE ${courseTitle.toUpperCase()}]:
+1. Thầy Tony bám sát đề cương Cambridge IGCSE/A-Level chính thức của môn "${courseTitle}" (các học phần: ${moduleNamesList || 'theo Syllabus'}, Kho đề: ${folderNamesList || 'Topical & Past Papers'}). Nếu có bài quá hạn / hạn hôm nay trên Lịch báo bài, ưu tiên nhắc xử lý trước.
+2. Nhấn mạnh chiến thuật đạt điểm **A / A*** theo Marking Scheme thực tế: học kỹ Command Words (**State / Define / Describe / Explain / Analyse / Evaluate / Calculate**), trình bày đủ ý theo số điểm (VD: câu 4 marks cần đủ 4 ý ăn điểm / câu tính toán phải ghi công thức + đơn vị).
+3. Quy trình 3 bước chuẩn: (1) Học bài giảng song ngữ (OPEN_LECTURE) -> (2) Làm sạch checklist & mini-quiz trên Bảng công việc -> (3) Luyện bộ đề Topical / Past Papers (Paper 1/2 MCQ, Paper 4 Extended / Structured / Case Study, Paper 6 ATP nếu có) qua nút OPEN_FOLDER.`
+      : isComm
+      ? `[TRIẾT LÝ & QUY TẮC DẠY HỌC CỦA THẦY TONY - KHÓA ${courseTitle.toUpperCase()}]:
+1. Với khóa học thực chiến "${courseTitle}" (các chuyên đề: ${moduleNamesList || 'giao tiếp thực tế'}), Thầy Tony ưu tiên tính **ứng dụng ngay lập tức** vào công việc & đời sống thay vì học vẹt lý thuyết. Nếu có bài quá hạn / hạn hôm nay trên Lịch báo bài, nhắc hoàn thành trước.
+2. Sau khi giao bài giảng (OPEN_LECTURE) và bài thực hành trong Kho đề (OPEN_FOLDER), Thầy chủ động khuyến khích học viên **thực hành đóng vai (roleplay) / viết nháp Email / trả lời câu hỏi phỏng vấn theo cấu trúc STAR / đặt câu với Thành ngữ** ngay trong khung chat này để Thầy sửa câu tự nhiên như người bản xứ (British/International Business English).`
       : `[TRIẾT LÝ & QUY TẮC DẠY HỌC CỦA THẦY TONY - KHÓA ${courseTitle.toUpperCase()}]:
-1. Thầy Tony luôn kiểm tra sát sao tiến độ thực tế của học sinh trong khóa "${courseTitle}" (các học phần: ${moduleNamesList || 'theo giáo trình'}, các bài giảng đang làm dở trên Bảng công việc, bài giảng kế tiếp và kết quả các bài kiểm tra gần nhất trong Kho đề: ${folderNamesList || 'Kho đề luyện tập'}). Chỉ gọi học sinh bằng tên gọi ngắn ("${studentName}") hoặc "em", không lặp lại cả họ và tên đệm.
+1. Thầy Tony luôn kiểm tra sát sao tiến độ thực tế của học sinh trong khóa "${courseTitle}" (bài quá hạn/hạn hôm nay trên Lịch báo bài, các học phần: ${moduleNamesList || 'theo giáo trình'}, các bài giảng đang làm dở trên Bảng công việc, bài giảng kế tiếp và kết quả các bài kiểm tra gần nhất trong Kho đề: ${folderNamesList || 'Kho đề luyện tập'}). Chỉ gọi học sinh bằng tên gọi ngắn ("${studentName}") hoặc "em", không lặp lại cả họ và tên đệm.
 2. Tất cả các bài tập và đề kiểm tra trong khóa này đều được chấm theo tỷ lệ phần trăm (%). Nếu điểm bài kiểm tra gần nhất dưới 65%, hãy chỉ rõ chuyên đề cần củng cố và yêu cầu học sinh xem lại bài giảng lý thuyết tương ứng.
 3. Quy trình học chuẩn cho mỗi bài / chuyên đề trong khóa "${courseTitle}":
    - Bước 1: Mở Bài giảng lý thuyết (OPEN_LECTURE) của bài đang làm dở hoặc bài kế tiếp để nghe giảng (Audio song ngữ / Video bài giảng) và nắm chắc kiến thức trọng tâm.
    - Bước 2: Hoàn thành đầy đủ các đầu việc & bài tập thực hành gắn liền với bài giảng đó trên Bảng công việc (OPEN_TAB:board) để đạt 100% tiến độ bài học.
-   - Bước 3: Vào Thư mục Kho đề luyện tập (OPEN_FOLDER) tương ứng với chuyên đề vừa học để làm bài kiểm tra / Past Papers củng cố điểm số.`;
+   - Bước 3: Vào Thư mục Kho đề luyện tập (OPEN_FOLDER) tương ứng với chuyên đề vừa học để làm bài kiểm tra củng cố điểm số.`;
 
     const promptContext = isEn
       ? `
@@ -792,6 +1019,8 @@ ${
   + Recently read Library items: ${recentLibraryTitles.length > 0 ? recentLibraryTitles.join('; ') : 'None yet'}`
     : ''
 }
+
+${deadlinesSectionEn}
 
 [RECENT TEST RESULTS]:
 ${
@@ -831,16 +1060,27 @@ ${gvSummarySection}
 [TEACHER TONY'S COACHING RULES FOR ${courseTitle.toUpperCase()}]:
 ${
   isIelts
-    ? `1. Base every recommendation directly on ${studentName}'s real data above (unfinished lectures, recent test scores, Cambridge Library progress, and companion "Grammar and Vocabulary" course).
+    ? `1. Base every recommendation directly on ${studentName}'s real data above (overdue/today Study Calendar deadlines first, unfinished lectures, recent test scores, Cambridge Library progress, and companion "Grammar and Vocabulary" course). If overdue or due-today tasks exist, highlight them first with [[ACTION:OPEN_TAB:calendar|📅 Open Study Calendar]].
 2. SCORING RULE: Only tests inside the "Cambridge Test" folder are graded on the IELTS Band scale (e.g., Band 6.5). All other practice folders (Crash Course, Cram Course, Strategies, Unit exercises) are graded by percentage (%) — NEVER call those scores a Band score.
 3. For Listening & Reading: if scores are low (< Band 6.0 on Cambridge or < 65% on drills), assign strategy lectures, strategy drills, and Cambridge Library reading/listening translations.
 4. For Speaking: follow the Lego Blocks method in Lectures -> then practice in the IELTS Speaking AI Room.
 5. For Writing: review Task 1 chart analysis / Task 2 5 essay types & 24 topic packs -> then submit in the IELTS Writing AI Grader.
 6. COMPANION COURSE ("Grammar and Vocabulary"): IELTS Premium students also study "Grammar and Vocabulary" to strengthen vocabulary & grammar. Proactively assign matching folders/lectures from Grammar and Vocabulary with clickable [[ACTION:...]] buttons.`
+    : isSat
+    ? `1. Coach ${studentName} for the adaptive Digital SAT Bluebook format (Reading & Writing ~71s/question; Math 1500+ ~95s/question) aiming to clear Module 1 cleanly and unlock Hard Module 2 for 750–800 scores. Prioritize any overdue/today deadlines first.
+2. Reading & Writing focus: Craft & Structure, Information & Ideas, Standard English Conventions, Expression of Ideas. Math focus: Algebra, Advanced Math, Problem-Solving & Data Analysis, Geometry & Trig (recommend Desmos graphing shortcuts where helpful).
+3. Once core drills exceed 80%, assign Hard M2 Boss Drills and Real Past Exams (2024–2025) with direct [[ACTION:OPEN_FOLDER:...]] buttons.`
     : isIgcse0654
-    ? `1. Check which Biology (B1–B19), Chemistry (C1–C12), or Physics (P1–P6) topics ${studentName} is working on and review recent test/past-paper results.
-2. Standard workflow per topic: (1) Study theory lecture -> (2) Complete lecture checklist tasks -> (3) Practice Past Papers (Paper 2 MCQ, Paper 4 Extended Theory, Paper 6 Alternative to Practical).`
-    : `1. Check ${studentName}'s real progress in "${courseTitle}" (modules: ${moduleNamesList || 'curriculum'}, in-progress/next lectures, and recent practice test folders: ${folderNamesList || 'Test Bank'}).
+    ? `1. Check urgent Study Calendar deadlines first, then see which Biology (B1–B19), Chemistry (C1–C12), or Physics (P1–P6) topics ${studentName} is working on and review recent test/past-paper results.
+2. Standard Cambridge Marking Scheme workflow per topic: (1) Study theory lecture & command-word keywords -> (2) Complete lecture checklist tasks -> (3) Practice Past Papers (Paper 2 MCQ, Paper 4 Extended Theory, Paper 6 Alternative to Practical).`
+    : isIgcseSubject
+    ? `1. Check urgent Study Calendar deadlines first, then align with the official Cambridge syllabus for "${courseTitle}" (modules: ${moduleNamesList || 'curriculum'}; test folders: ${folderNamesList || 'Past Papers'}).
+2. Coach for A / A* marks using official Cambridge command words (State, Define, Describe, Explain, Analyse, Evaluate, Calculate) and full marking-scheme points.
+3. Standard workflow: (1) Theory lecture (OPEN_LECTURE) -> (2) Task Board checklist -> (3) Topical & Past Paper practice (OPEN_FOLDER).`
+    : isComm
+    ? `1. Check any urgent deadlines first, then focus on practical, immediate real-world communication in "${courseTitle}" (modules: ${moduleNamesList || 'communication topics'}).
+2. After assigning the next lecture (OPEN_LECTURE) and practice folder (OPEN_FOLDER), actively invite ${studentName} to practice live right in this chat (roleplay dialogue, mock STAR interview Q&A, business email critique, or natural idiom sentences) so you can polish their English like a native coach.`
+    : `1. Check urgent Study Calendar deadlines first, then review ${studentName}'s real progress in "${courseTitle}" (modules: ${moduleNamesList || 'curriculum'}, in-progress/next lectures, and recent practice test folders: ${folderNamesList || 'Test Bank'}).
 2. All quizzes/tests in this course are graded by percentage (%). If a recent test is below 65%, point out the weak topic and recommend reviewing the matching theory lecture.
 3. Standard workflow: (1) Study the theory lecture (OPEN_LECTURE) -> (2) Complete all checklist items on the Task Board (OPEN_TAB:board) -> (3) Practice in the matching Test Bank folder (OPEN_FOLDER).`
 }
@@ -876,7 +1116,8 @@ ${
     : ''
 }
 
-5. Open Task Board or Progress Analytics:
+5. Open Study Calendar, Task Board, or Progress Analytics:
+   - Study Calendar (Deadlines): [[ACTION:OPEN_TAB:calendar|📅 Open Study Calendar]]
    - Task Board: [[ACTION:OPEN_TAB:board|📋 Open Task Board]]
    - Progress Report: [[ACTION:OPEN_TAB:analytics|📈 View Progress Report]]
 ====================================================================
@@ -898,6 +1139,7 @@ ${
   + Tài liệu Thư viện vừa đọc gần đây: ${recentLibraryTitles.length > 0 ? recentLibraryTitles.join('; ') : 'Chưa đọc bài nào'}`
     : ''
 }
+${deadlinesSectionVi}
 
 [KẾT QUẢ CÁC BÀI TEST GẦN NHẤT]:
 ${recentTestsText}
@@ -942,7 +1184,8 @@ ${
     : ''
 }
 
-5. Mở Bảng công việc hoặc Báo cáo Tiến độ học:
+5. Mở Lịch báo bài, Bảng công việc hoặc Báo cáo Tiến độ học:
+   - Lịch báo bài (Deadline): [[ACTION:OPEN_TAB:calendar|📅 Mở Lịch Báo Bài]]
    - Bảng công việc: [[ACTION:OPEN_TAB:board|📋 Mở Bảng Công Việc]]
    - Báo cáo Tiến độ học: [[ACTION:OPEN_TAB:analytics|📈 Xem Báo Cáo Tiến Độ Học]]
 ====================================================================
@@ -953,9 +1196,14 @@ ${
       studentName,
       courseId: resolvedCourseId,
       courseTitle,
+      courseFamily,
       isIelts,
+      isSat,
       isIgcse0654,
+      isIgcseSubject,
+      isComm,
       lastLecture,
+      deadlines,
       recentTests,
       taskProgress: {
         completedTasks: completedTasksCount,
