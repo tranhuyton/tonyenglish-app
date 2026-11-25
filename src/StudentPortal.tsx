@@ -142,49 +142,44 @@ const getCourseCover = (course: any) => {
 const getCourseIdentityTheme = (course: any) => {
   const t = `${course?.title || ''} ${course?.type || ''}`.toLowerCase();
 
-  // 1. IELTS — Crimson Red (đồng bộ tab Khóa Học)
+  // Academic Luxury (Option C): Unified Deep Ocean Navy frame, buttons & progress language;
+  // only the subtle badge, top 3px stripe & section accent bar carry the course family identity.
+  const base = {
+    headerBg: 'from-[#073b5c] via-[#0a5482] to-[#0f172a]',
+    orb1: 'bg-[#2ab4e8]/15',
+    orb2: 'bg-sky-300/10',
+    eyebrow: 'text-sky-300',
+    cardHover: 'hover:border-[#0a5482]/45',
+    pctText: 'text-[#0a5482]',
+    progressBar: 'from-[#073b5c] via-[#0a5482] to-[#0284c7]',
+    testPctText: 'text-[#0a5482]',
+    testBar: 'bg-[#0a5482]',
+    lecBtn: 'bg-white hover:bg-sky-50/80 text-slate-700 hover:text-[#0a5482] border-slate-200 hover:border-[#0a5482]/40 shadow-2xs',
+    primaryBtn: 'bg-[#0a5482] hover:bg-[#073b5c] shadow-[#0a5482]/15',
+    headerLectureBtn: 'bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 hover:from-amber-500 hover:to-yellow-500 text-slate-950',
+  };
+
+  // 1. IELTS — Crimson Red identity badge & hairline
   if (t.includes('ielts')) {
     return {
-      stripe: 'from-amber-400 via-yellow-300 to-rose-400',
-      headerBg: 'from-[#dc2626] via-[#b91c1c] to-[#7f1d1d]',
-      orb1: 'bg-amber-300/25',
-      orb2: 'bg-rose-300/20',
-      eyebrow: 'text-amber-200',
-      badgeBg: 'bg-rose-600/95 border-rose-200/35',
-      cardHover: 'hover:border-rose-300',
-      pctText: 'text-rose-600',
-      progressBar: 'from-rose-600 via-rose-500 to-amber-400',
-      testPctText: 'text-rose-600',
-      testBar: 'bg-rose-500',
-      lecBtn: 'bg-rose-50/85 hover:bg-rose-100 text-rose-700 border-rose-200/90',
-      primaryBtn: 'bg-rose-600 hover:bg-rose-700 shadow-rose-900/15',
+      ...base,
+      stripe: 'from-rose-600 via-rose-500 to-rose-400',
+      badgeBg: 'bg-rose-700/95 border-rose-300/30',
       accentBar: 'bg-rose-600',
-      headerLectureBtn: 'bg-amber-400 hover:bg-amber-300 text-slate-950',
     };
   }
 
-  // 2. Digital SAT 1500+ — Amber Gold
+  // 2. Digital SAT 1500+ — Warm Amber Gold identity badge & hairline
   if (t.includes('sat')) {
     return {
-      stripe: 'from-yellow-300 via-amber-400 to-rose-500',
-      headerBg: 'from-[#d97706] via-[#b45309] to-[#78350f]',
-      orb1: 'bg-yellow-200/30',
-      orb2: 'bg-orange-300/20',
-      eyebrow: 'text-yellow-100',
-      badgeBg: 'bg-amber-600/95 border-yellow-200/40',
-      cardHover: 'hover:border-amber-300',
-      pctText: 'text-amber-700',
-      progressBar: 'from-amber-600 via-amber-500 to-yellow-400',
-      testPctText: 'text-amber-700',
-      testBar: 'bg-amber-500',
-      lecBtn: 'bg-amber-50/85 hover:bg-amber-100 text-amber-800 border-amber-200/90',
-      primaryBtn: 'bg-amber-600 hover:bg-amber-700 shadow-amber-900/15',
+      ...base,
+      stripe: 'from-amber-500 via-amber-400 to-yellow-400',
+      badgeBg: 'bg-amber-600/95 border-amber-200/35',
       accentBar: 'bg-amber-500',
-      headerLectureBtn: 'bg-white hover:bg-amber-50 text-amber-900',
     };
   }
 
-  // 3. IGCSE / A-Level & Academic Sciences/Maths/Commerce — Emerald Green
+  // 3. IGCSE / A-Level & Academic Sciences/Maths/Commerce — Emerald identity badge & hairline
   if (
     t.includes('igcse') ||
     t.includes('a-level') ||
@@ -200,46 +195,24 @@ const getCourseIdentityTheme = (course: any) => {
     t.includes('business')
   ) {
     return {
-      stripe: 'from-emerald-300 via-amber-300 to-teal-300',
-      headerBg: 'from-[#059669] via-[#047857] to-[#064e3b]',
-      orb1: 'bg-amber-300/25',
-      orb2: 'bg-emerald-300/25',
-      eyebrow: 'text-amber-200',
-      badgeBg: 'bg-emerald-600/95 border-emerald-200/35',
-      cardHover: 'hover:border-emerald-300',
-      pctText: 'text-emerald-700',
-      progressBar: 'from-emerald-600 via-emerald-500 to-teal-400',
-      testPctText: 'text-emerald-700',
-      testBar: 'bg-teal-500',
-      lecBtn: 'bg-emerald-50/85 hover:bg-emerald-100 text-emerald-800 border-emerald-200/90',
-      primaryBtn: 'bg-emerald-600 hover:bg-emerald-700 shadow-emerald-900/15',
+      ...base,
+      stripe: 'from-emerald-600 via-emerald-500 to-teal-400',
+      badgeBg: 'bg-emerald-700/95 border-emerald-300/30',
       accentBar: 'bg-emerald-600',
-      headerLectureBtn: 'bg-amber-400 hover:bg-amber-300 text-slate-950',
     };
   }
 
-  // 4. ESL Program (non-IGCSE) — Crimson Red
+  // 4. ESL Program (non-IGCSE) — Crimson identity badge & hairline
   if (t.includes('esl')) {
     return {
-      stripe: 'from-amber-400 via-yellow-300 to-rose-400',
-      headerBg: 'from-[#dc2626] via-[#b91c1c] to-[#7f1d1d]',
-      orb1: 'bg-amber-300/25',
-      orb2: 'bg-rose-300/20',
-      eyebrow: 'text-amber-200',
-      badgeBg: 'bg-rose-600/95 border-rose-200/35',
-      cardHover: 'hover:border-rose-300',
-      pctText: 'text-rose-600',
-      progressBar: 'from-rose-600 via-rose-500 to-amber-400',
-      testPctText: 'text-rose-600',
-      testBar: 'bg-rose-500',
-      lecBtn: 'bg-rose-50/85 hover:bg-rose-100 text-rose-700 border-rose-200/90',
-      primaryBtn: 'bg-rose-600 hover:bg-rose-700 shadow-rose-900/15',
+      ...base,
+      stripe: 'from-rose-600 via-rose-500 to-rose-400',
+      badgeBg: 'bg-rose-700/95 border-rose-300/30',
       accentBar: 'bg-rose-600',
-      headerLectureBtn: 'bg-amber-400 hover:bg-amber-300 text-slate-950',
     };
   }
 
-  // 5. Giao tiếp Căn bản (Phát âm, Phản xạ, Tình huống) — Ocean Sky
+  // 5. Giao tiếp Căn bản (Phát âm, Phản xạ, Tình huống) — Ocean Sky identity badge & hairline
   if (
     t.includes('pronunciation') ||
     t.includes('phát âm') ||
@@ -251,41 +224,19 @@ const getCourseIdentityTheme = (course: any) => {
     t.includes('giao tiếp')
   ) {
     return {
-      stripe: 'from-sky-300 via-amber-300 to-emerald-400',
-      headerBg: 'from-[#0284c7] via-[#0369a1] to-[#0c4a6e]',
-      orb1: 'bg-amber-300/25',
-      orb2: 'bg-sky-300/25',
-      eyebrow: 'text-amber-200',
-      badgeBg: 'bg-sky-600/95 border-sky-200/35',
-      cardHover: 'hover:border-sky-300',
-      pctText: 'text-sky-700',
-      progressBar: 'from-sky-600 via-sky-500 to-cyan-400',
-      testPctText: 'text-sky-700',
-      testBar: 'bg-sky-500',
-      lecBtn: 'bg-sky-50/85 hover:bg-sky-100 text-sky-800 border-sky-200/90',
-      primaryBtn: 'bg-sky-600 hover:bg-sky-700 shadow-sky-900/15',
-      accentBar: 'bg-sky-600',
-      headerLectureBtn: 'bg-amber-400 hover:bg-amber-300 text-slate-950',
+      ...base,
+      stripe: 'from-sky-500 via-[#0284c7] to-cyan-400',
+      badgeBg: 'bg-[#0284c7]/95 border-sky-200/35',
+      accentBar: 'bg-[#0284c7]',
     };
   }
 
-  // 6. Giao tiếp Nâng cao, Tiếng Anh công sở & Ngữ pháp/Từ vựng — Indigo
+  // 6. Giao tiếp Nâng cao, Tiếng Anh công sở & Ngữ pháp/Từ vựng — Indigo identity badge & hairline
   return {
-    stripe: 'from-rose-400 via-amber-400 to-indigo-400',
-    headerBg: 'from-[#4f46e5] via-[#4338ca] to-[#312e81]',
-    orb1: 'bg-amber-300/25',
-    orb2: 'bg-fuchsia-300/20',
-    eyebrow: 'text-amber-200',
-    badgeBg: 'bg-indigo-600/95 border-indigo-200/35',
-    cardHover: 'hover:border-indigo-300',
-    pctText: 'text-indigo-700',
-    progressBar: 'from-indigo-600 via-indigo-500 to-sky-400',
-    testPctText: 'text-indigo-700',
-    testBar: 'bg-indigo-500',
-    lecBtn: 'bg-indigo-50/85 hover:bg-indigo-100 text-indigo-800 border-indigo-200/90',
-    primaryBtn: 'bg-indigo-600 hover:bg-indigo-700 shadow-indigo-900/15',
+    ...base,
+    stripe: 'from-indigo-600 via-indigo-500 to-sky-400',
+    badgeBg: 'bg-indigo-700/95 border-indigo-300/30',
     accentBar: 'bg-indigo-600',
-    headerLectureBtn: 'bg-amber-400 hover:bg-amber-300 text-slate-950',
   };
 };
 
@@ -2829,7 +2780,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                           <div className={`relative overflow-hidden bg-slate-900 cursor-pointer ${isSingle ? 'w-full md:w-[44%] h-[230px] md:h-auto min-h-[290px]' : 'w-full h-[190px] sm:h-[215px]'}`} onClick={() => handleOpenCourse(course)}>
                              <img src={cover.image} loading="lazy" alt={localizedTitle} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
                              <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/90 via-[#0f172a]/30 to-transparent"></div>
-                             <div className={`absolute top-0 inset-x-0 h-1 bg-gradient-to-r ${cTheme.stripe}`} />
+                             <div className={`absolute top-0 inset-x-0 h-[3px] bg-gradient-to-r ${cTheme.stripe}`} />
                              
                              <div className={`absolute top-4 left-4 ${cTheme.badgeBg} backdrop-blur-md text-white px-3 py-1 rounded-full text-[11px] font-extrabold uppercase tracking-wider border shadow-sm`}>
                                  {cover.badge}
@@ -2860,14 +2811,14 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                           {/* Content Bottom/Right Half */}
                           <div className={`flex-1 flex flex-col justify-center bg-white ${isSingle ? 'p-6 sm:p-8 md:p-10' : 'p-5 sm:p-7'}`}>
                             
-                            {/* Overall Progress */}
+                            {/* Overall Progress (Unified progress language: Navy/Sky in-progress → Emerald ≥ 80%) */}
                             <div className="mb-5">
                                 <div className="flex justify-between items-end mb-2">
                                     <span className="text-[12px] font-extrabold text-slate-500 uppercase tracking-wider">{isEn ? 'Overall Course Progress' : 'Tiến độ hoàn thành khóa học'}</span>
-                                    <span className={`text-[18px] font-black ${cTheme.pctText}`}>{overallProgress}%</span>
+                                    <span className={`text-[18px] font-black tabular-nums ${overallProgress >= 80 ? 'text-emerald-600' : cTheme.pctText}`}>{overallProgress}%</span>
                                 </div>
-                                <div className="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden border border-slate-200/60">
-                                    <div className={`h-full bg-gradient-to-r ${cTheme.progressBar} rounded-full transition-all duration-1000`} style={{ width: `${overallProgress}%` }}></div>
+                                <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden border border-slate-200/60">
+                                    <div className={`h-full bg-gradient-to-r ${overallProgress >= 80 ? 'from-emerald-600 to-teal-400' : cTheme.progressBar} rounded-full transition-all duration-1000`} style={{ width: `${overallProgress}%` }}></div>
                                 </div>
                             </div>
 
@@ -2875,23 +2826,23 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                             <div className="flex items-center gap-4 sm:gap-6 mb-6 bg-slate-50/90 p-4 rounded-2xl border border-slate-200/70">
                               <div className="flex-1">
                                   <div className="flex items-center justify-between mb-1">
-                                      <span className="flex items-center gap-1.5 text-[11px] font-extrabold text-slate-500 uppercase tracking-wider"><BookOpen className="w-3.5 h-3.5 text-emerald-600" /> {isEn ? 'Lectures' : 'Bài giảng'}</span>
-                                      <span className="font-black text-emerald-600 text-[12px]">{lecProgress}%</span>
+                                      <span className="flex items-center gap-1.5 text-[11px] font-extrabold text-slate-500 uppercase tracking-wider"><BookOpen className={`w-3.5 h-3.5 ${lecProgress >= 80 ? 'text-emerald-600' : 'text-[#0284c7]'}`} /> {isEn ? 'Lectures' : 'Bài giảng'}</span>
+                                      <span className={`font-black text-[12px] tabular-nums ${lecProgress >= 80 ? 'text-emerald-600' : 'text-[#0284c7]'}`}>{lecProgress}%</span>
                                   </div>
                                   <div className="font-black text-slate-800 text-[14px] mb-2">{stats.completedLecIds.size} / {stats.lecCount} <span className="text-[11px] font-semibold text-slate-500">{isEn ? 'lessons' : 'bài học'}</span></div>
                                   <div className="w-full h-1.5 bg-slate-200 rounded-full overflow-hidden">
-                                      <div className="h-full bg-emerald-500 rounded-full transition-all duration-1000" style={{ width: `${lecProgress}%` }}></div>
+                                      <div className={`h-full ${lecProgress >= 80 ? 'bg-emerald-500' : 'bg-[#0284c7]'} rounded-full transition-all duration-1000`} style={{ width: `${lecProgress}%` }}></div>
                                   </div>
                               </div>
                               <div className="w-px h-12 bg-slate-200"></div>
                               <div className="flex-1">
                                   <div className="flex items-center justify-between mb-1">
-                                      <span className="flex items-center gap-1.5 text-[11px] font-extrabold text-slate-500 uppercase tracking-wider"><FileText className="w-3.5 h-3.5 text-[#0a5482]" /> {isEn ? 'Test Bank' : 'Kho đề thi'}</span>
-                                      <span className={`font-black ${cTheme.testPctText} text-[12px]`}>{testProgress}%</span>
+                                      <span className="flex items-center gap-1.5 text-[11px] font-extrabold text-slate-500 uppercase tracking-wider"><FileText className={`w-3.5 h-3.5 ${testProgress >= 80 ? 'text-emerald-600' : 'text-[#0a5482]'}`} /> {isEn ? 'Test Bank' : 'Kho đề thi'}</span>
+                                      <span className={`font-black text-[12px] tabular-nums ${testProgress >= 80 ? 'text-emerald-600' : cTheme.testPctText}`}>{testProgress}%</span>
                                   </div>
                                   <div className="font-black text-slate-800 text-[14px] mb-2">{stats.completedTestIds.size} / {stats.testCount} <span className="text-[11px] font-semibold text-slate-500">{isEn ? 'tests' : 'đề luyện'}</span></div>
                                   <div className="w-full h-1.5 bg-slate-200 rounded-full overflow-hidden">
-                                      <div className={`h-full ${cTheme.testBar} rounded-full transition-all duration-1000`} style={{ width: `${testProgress}%` }}></div>
+                                      <div className={`h-full ${testProgress >= 80 ? 'bg-emerald-500' : cTheme.testBar} rounded-full transition-all duration-1000`} style={{ width: `${testProgress}%` }}></div>
                                   </div>
                               </div>
                             </div>
@@ -2915,7 +2866,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                                    <button
                                      type="button"
                                      onClick={() => handleOpenCourse(course)}
-                                     className="flex-[1.15] bg-[#0a5482] hover:bg-[#084266] text-white font-extrabold text-[12.5px] py-3 px-4 rounded-xl shadow-sm flex items-center justify-center gap-2 uppercase tracking-wider cursor-pointer active:scale-95 transition-all"
+                                     className="flex-[1.15] bg-[#0a5482] hover:bg-[#073b5c] text-white font-extrabold text-[12.5px] py-3 px-4 rounded-xl shadow-sm flex items-center justify-center gap-2 uppercase tracking-wider cursor-pointer active:scale-95 transition-all"
                                      title={isEn ? 'Try sample tests in the Test Bank' : 'Bấm để Làm thử Kho đề thi'}
                                    >
                                      <Zap className="w-4 h-4 text-amber-300 shrink-0" />
@@ -2932,7 +2883,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                                      }}
                                      className={`flex-1 ${cTheme.lecBtn} border font-extrabold text-[13px] py-3 px-4 rounded-xl transition-all flex items-center justify-center gap-2 uppercase tracking-wider cursor-pointer active:scale-95`}
                                    >
-                                     <BookOpen className="w-4 h-4 shrink-0" />
+                                     <BookOpen className="w-4 h-4 text-[#0a5482] shrink-0" />
                                      <span>{isEn ? 'Theory Lectures' : 'Bài giảng lý thuyết'}</span>
                                    </button>
                                    <button
@@ -3010,15 +2961,15 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               const selTheme = getCourseIdentityTheme(selectedCourse);
               return (
             <div className={`bg-gradient-to-r ${selTheme.headerBg} rounded-2xl sm:rounded-3xl px-5 sm:px-8 py-5 sm:py-6 text-white mb-6 sm:mb-8 shadow-md flex flex-col lg:flex-row lg:items-center justify-between gap-4 relative z-30 border border-white/15`}>
-              {/* Decorative Ribbon + Glow inside clipped layer so course dropdown never clips */}
+              {/* Decorative Single-Hue Accent Hairline + Subtle Glow inside clipped layer */}
               <div className="absolute inset-0 overflow-hidden rounded-2xl sm:rounded-3xl pointer-events-none">
-                <div className={`absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r ${selTheme.stripe}`} />
+                <div className={`absolute top-0 inset-x-0 h-1 bg-gradient-to-r ${selTheme.stripe}`} />
                 <div className={`absolute -top-20 -right-16 w-64 h-64 rounded-full blur-3xl ${selTheme.orb1}`} />
                 <div className={`absolute -bottom-20 left-1/3 w-52 h-52 rounded-full blur-3xl ${selTheme.orb2}`} />
               </div>
               <div className="min-w-0 relative z-10">
                 <div className={`text-[11px] sm:text-xs font-extrabold uppercase tracking-widest ${selTheme.eyebrow} mb-1 flex items-center gap-2 flex-wrap`}>
-                  <span>📚 TonyEnglish Course &amp; Test Library</span>
+                  <span className="inline-flex items-center gap-1.5"><Library className="w-3.5 h-3.5 shrink-0" /> TonyEnglish Course &amp; Test Library</span>
                   {(currentSubFolders.length > 0 || currentTests.length > 0) && (
                     <span className="bg-white/15 text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full border border-white/25 normal-case tracking-normal">
                       {currentSubFolders.length > 0 ? `${currentSubFolders.length} ${isEn ? 'folders' : 'danh mục'}` : ''}
@@ -3060,10 +3011,10 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 <button
                   type="button"
                   onClick={() => handleOpenStudyCoachModal(String(selectedCourse.id))}
-                  className="bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-300 hover:border-amber-400 font-extrabold text-xs sm:text-[13px] px-3.5 py-2 rounded-xl shadow-xs transition-all flex items-center justify-center gap-1.5 shrink-0 cursor-pointer active:scale-95"
+                  className="bg-amber-400/15 hover:bg-amber-400/25 text-amber-200 border border-amber-300/35 font-extrabold text-xs sm:text-[13px] px-3.5 py-2 rounded-xl shadow-xs transition-all flex items-center justify-center gap-1.5 shrink-0 cursor-pointer active:scale-95"
                   title={isEn ? 'Open Teacher Tony AI Advisor to analyze progress & daily plan' : 'Mở Trợ lý Thầy Tony AI phân tích tiến độ & giao việc hôm nay'}
                 >
-                  <span className="text-base">👨‍🏫</span>
+                  <Sparkles className="w-3.5 h-3.5 text-amber-300 shrink-0" />
                   <span>{isEn ? 'Teacher Tony AI' : 'Thầy Tony AI'}</span>
                 </button>
 
@@ -3074,12 +3025,12 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                     className="w-full bg-white hover:bg-sky-50 border border-white/20 rounded-xl px-3.5 py-2 flex items-center justify-between cursor-pointer shadow-xs transition-all"
                   >
                     <div className="flex items-center gap-2 min-w-0 pr-1.5">
-                      <span className="text-[#0a5482] text-xs">🎓</span>
+                      <GraduationCap className="w-4 h-4 text-[#0a5482] shrink-0" />
                       <span className="font-bold text-xs text-[#0a5482] truncate">
                         {selectedCourse ? getLocalizedCourseTitle(selectedCourse.title, lang) : (isEn ? 'Select course' : 'Chọn khóa học')}
                       </span>
                     </div>
-                    <span className={`text-[#2ab4e8] text-[10px] transition-transform duration-300 shrink-0 ${filterCourseDropdownOpen ? 'rotate-180' : ''}`}>▼</span>
+                    <ChevronDown className={`w-3.5 h-3.5 text-[#0284c7] transition-transform duration-300 shrink-0 ${filterCourseDropdownOpen ? 'rotate-180' : ''}`} />
                   </div>
                   
                   {filterCourseDropdownOpen && (
@@ -3094,9 +3045,10 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                             setSelectedCourseId(null);
                             setFilterCourseDropdownOpen(false);
                           }}
-                          className={`px-3.5 py-2 text-xs rounded-xl font-medium cursor-pointer transition-colors ${filterCourse === 'all' && !selectedCourse ? 'bg-sky-50 text-[#0a5482] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
+                          className={`px-3.5 py-2 text-xs rounded-xl font-medium cursor-pointer transition-colors flex items-center gap-2 ${filterCourse === 'all' && !selectedCourse ? 'bg-sky-50 text-[#0a5482] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
                         >
-                          🌟 {isEn ? 'All Courses (Dashboard)' : 'Tất cả khóa học (Góc học viên)'}
+                          <Library className="w-3.5 h-3.5 text-[#0a5482] shrink-0" />
+                          <span>{isEn ? 'All Courses (Dashboard)' : 'Tất cả khóa học (Góc học viên)'}</span>
                         </div>
                         {courses.map(course => (
                           <div 
@@ -3107,9 +3059,10 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                               setFilterCourseDropdownOpen(false);
                               handleOpenCourse(course);
                             }}
-                            className={`px-3.5 py-2 text-xs rounded-xl font-medium cursor-pointer transition-colors border-t border-slate-100 ${String(selectedCourse?.id) === String(course.id) ? 'bg-sky-50 text-[#0a5482] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
+                            className={`px-3.5 py-2 text-xs rounded-xl font-medium cursor-pointer transition-colors border-t border-slate-100 flex items-center gap-2 ${String(selectedCourse?.id) === String(course.id) ? 'bg-sky-50 text-[#0a5482] font-bold' : 'text-slate-600 hover:bg-slate-50'}`}
                           >
-                            📖 {getLocalizedCourseTitle(course.title, lang)}
+                            <BookOpen className="w-3.5 h-3.5 text-slate-400 shrink-0" />
+                            <span className="truncate">{getLocalizedCourseTitle(course.title, lang)}</span>
                           </div>
                         ))}
                       </div>
@@ -3125,7 +3078,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                   }} 
                   className={`w-full sm:w-auto ${selTheme.headerLectureBtn} font-black text-xs sm:text-[13px] px-4 py-2 rounded-xl transition-all flex items-center justify-center gap-2 shadow-sm uppercase tracking-wider shrink-0 cursor-pointer active:scale-95`}
                 >
-                  <span>📖</span> <span>{isEn ? 'Theory Lectures' : 'Bài Giảng Lý Thuyết'}</span>
+                  <BookOpen className="w-4 h-4 shrink-0" /> <span>{isEn ? 'Theory Lectures' : 'Bài Giảng Lý Thuyết'}</span>
                 </button>
               </div>
             </div>
@@ -3135,8 +3088,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             {isCourseTrial(selectedCourse.id) && (
               <div className="mb-6 bg-gradient-to-r from-amber-50 via-yellow-50/90 to-amber-50 border border-amber-300/90 rounded-2xl px-4 sm:px-6 py-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3.5 shadow-2xs">
                 <div className="flex items-start sm:items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-amber-400 text-slate-950 flex items-center justify-center text-xl font-black shrink-0 shadow-xs">
-                    🎁
+                  <div className="w-10 h-10 rounded-xl bg-amber-400 text-slate-950 flex items-center justify-center shrink-0 shadow-xs">
+                    <Gift className="w-5 h-5" />
                   </div>
                   <div>
                     <div className="flex items-center gap-2 flex-wrap">
@@ -3149,8 +3102,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                     </div>
                     <p className="text-xs text-slate-600 font-medium mt-1">
                       {isEn
-                        ? 'The first topics and practice tests are unlocked free for you to explore. Remaining items with a 🔒 icon are reserved for enrolled students.'
-                        : 'Các thư mục và đề đầu tiên đã được mở sáng miễn phí để bạn trải nghiệm. Các chuyên đề và đề còn lại có biểu tượng 🔒 dành cho học viên chính thức.'}
+                        ? 'The first topics and practice tests are unlocked free for you to explore. Remaining locked items are reserved for enrolled students.'
+                        : 'Các thư mục và đề đầu tiên đã được mở sáng miễn phí để bạn trải nghiệm. Các chuyên đề và đề còn lại có biểu tượng ổ khóa dành cho học viên chính thức.'}
                     </p>
                   </div>
                 </div>
@@ -3162,7 +3115,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                   }}
                   className="w-full sm:w-auto bg-gradient-to-r from-[#0a5482] to-[#0f172a] hover:from-[#084266] hover:to-slate-900 text-amber-300 font-black text-xs px-4 py-2.5 rounded-xl shadow-sm transition-all flex items-center justify-center gap-1.5 shrink-0 cursor-pointer active:scale-95"
                 >
-                  <span>🔓</span>
+                  <KeyRound className="w-3.5 h-3.5 shrink-0" />
                   <span>{isEn ? 'Unlock Full Course' : 'Mở khóa toàn bộ khóa học'}</span>
                 </button>
               </div>
