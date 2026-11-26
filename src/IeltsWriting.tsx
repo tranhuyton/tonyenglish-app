@@ -493,10 +493,10 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
           </main>
 
           {/* THANH FOOTER */}
-          <footer className="h-[60px] bg-white border-t border-slate-300 flex justify-between items-center px-4 sm:px-6 shrink-0 select-none">
+          <footer className="h-[60px] bg-white border-t border-slate-300 flex items-center gap-2 sm:gap-3 px-3 sm:px-6 shrink-0 select-none">
              
-             <div className="flex items-center h-full min-w-0">
-                <div className="flex items-center gap-2 h-full pr-4 sm:pr-6 border-r border-slate-200 shrink-0">
+             <div className="flex-1 flex items-center h-full min-w-0">
+                <div className="flex items-center gap-2 h-full pr-3 sm:pr-5 border-r border-slate-200 shrink-0">
                   <input 
                     type="checkbox" 
                     id="review" 

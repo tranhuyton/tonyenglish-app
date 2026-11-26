@@ -229,6 +229,8 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
   
   const [reviewFlags, setReviewFlags] = useState<Record<string, boolean>>({});
   const [activeQuestionId, setActiveQuestionId] = useState<string>('');
+  const navScrollRef = useRef<HTMLDivElement>(null);
+  const [navScrollState, setNavScrollState] = useState<{ left: boolean; right: boolean }>({ left: false, right: false });
   const [draggedOption, setDraggedOption] = useState<string | null>(null);
   const [showSettings, setShowSettings] = useState(false);
   const [fontSize, setFontSize] = useState<'S' | 'M' | 'L'>('M');
@@ -575,6 +577,46 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
          setActiveQuestionId(allQuestionIds[0]);
      }
   }, [allQuestionIds]);
+
+  const updateNavScrollState = () => {
+    const el = navScrollRef.current;
+    if (!el) return;
+    setNavScrollState({
+      left: el.scrollLeft > 4,
+      right: el.scrollLeft + el.clientWidth < el.scrollWidth - 4,
+    });
+  };
+
+  const scrollNavBy = (delta: number) => {
+    const el = navScrollRef.current;
+    if (!el) return;
+    el.scrollBy({ left: delta, behavior: 'smooth' });
+  };
+
+  useEffect(() => {
+    updateNavScrollState();
+    const el = navScrollRef.current;
+    if (!el) return;
+    const onResize = () => updateNavScrollState();
+    window.addEventListener('resize', onResize);
+    let ro: ResizeObserver | null = null;
+    if (typeof ResizeObserver !== 'undefined') {
+      ro = new ResizeObserver(() => updateNavScrollState());
+      ro.observe(el);
+    }
+    return () => {
+      window.removeEventListener('resize', onResize);
+      ro?.disconnect();
+    };
+  }, [allQuestionIds.length, testStarted, isReviewMode]);
+
+  useEffect(() => {
+    if (!activeQuestionId) return;
+    const navBtn = document.getElementById(`nav-${activeQuestionId}`);
+    if (navBtn && navScrollRef.current) {
+      navBtn.scrollIntoView({ behavior: 'smooth', inline: 'nearest', block: 'nearest' });
+    }
+  }, [activeQuestionId]);
 
   useEffect(() => {
     if (!testStarted || isReviewMode) return;
@@ -1405,7 +1447,14 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
               return (
                 <button 
                   key={index} 
-                  onClick={() => { setCurrentPartIndex(index); setShowTranslation(false); }} 
+                  onClick={() => {
+                    setCurrentPartIndex(index);
+                    setShowTranslation(false);
+                    const firstQId = allQuestionIds.find(qid => questionToPartMap[qid] === index);
+                    if (firstQId) {
+                      setActiveQuestionId(firstQId);
+                    }
+                  }} 
                   className={`px-3 py-2 text-[14px] font-bold transition-all whitespace-nowrap border-b-[3px] rounded-none ${isActive ? (isReviewMode ? 'text-[#064e3b] border-[#064e3b]' : 'text-black border-black') : 'text-slate-500 border-transparent hover:text-black'}`}
                 >
                   {p.title || `Part ${index + 1}`}
@@ -2236,9 +2285,9 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
 
           </main>
 
-          <footer className="h-[60px] bg-white border-t border-slate-400 flex justify-between items-center px-6 shrink-0 select-none font-sans">
+          <footer className="h-[60px] bg-white border-t border-slate-400 flex items-center gap-2 sm:gap-3 px-3 sm:px-5 shrink-0 select-none font-sans">
             
-            <div className="flex items-center gap-2 h-full pr-6 border-r border-slate-400 shrink-0 min-w-max">
+            <div className="flex items-center gap-2 h-full pr-3 sm:pr-5 border-r border-slate-300 shrink-0 min-w-max">
               <input 
                 type="checkbox" 
                 id="review" 
@@ -2247,120 +2296,155 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                 checked={!!reviewFlags[activeQuestionId]}
                 onChange={() => setReviewFlags(prev => ({...prev, [activeQuestionId]: !prev[activeQuestionId]}))}
               />
-              <label htmlFor="review" className="text-[14px] font-bold text-black cursor-pointer mt-0.5 whitespace-nowrap">Review</label>
+              <label htmlFor="review" className="text-[13px] sm:text-[14px] font-bold text-black cursor-pointer mt-0.5 whitespace-nowrap">Review</label>
             </div>
             
-            <div className="flex-1 flex justify-start sm:justify-center items-center gap-1.5 overflow-x-auto px-6 py-1 custom-scrollbar min-w-0">
-              {allQuestionIds.map(id => {
-                let isAnswered = answers[id] && answers[id].trim() !== '';
-                const isReview = reviewFlags[id];
-                const isActive = activeQuestionId === id;
-                
-                const shapeClass = isReview ? 'rounded-full' : 'rounded-none';
-                let btnClass = `w-8 h-8 flex items-center justify-center font-bold text-[13px] transition-all box-border shrink-0 ${shapeClass} `;
-                
-                const section = parts.reduce((acc: any[], p: any) => acc.concat(Array.isArray(p?.sections) ? p.sections : []), []).find((s:any) => {
-                    if ((Array.isArray(s?.questions) ? s.questions : []).some((sq:any)=>String(sq?.id)===id)) return true;
-                    if (s?.questionType === "Điền từ" || s?.questionType === "Kéo thả vào Part" || s?.questionType === "Kéo thả" || s?.questionType === "Matching" || s?.questionType === "Droplist") {
-                        let combinedContent = String(s?.content || '');
-                        if (Array.isArray(s?.questions)) {
-                            s.questions.forEach((q: any) => combinedContent += ' ' + String(q.content || ''));
+            <div className="flex-1 min-w-0 flex items-center gap-1">
+              {navScrollState.left && (
+                <button
+                  type="button"
+                  onClick={() => scrollNavBy(-260)}
+                  className="w-7 h-8 shrink-0 flex items-center justify-center bg-white hover:bg-slate-100 border border-slate-300 text-slate-700 hover:text-black font-bold text-base transition cursor-pointer"
+                  title={isEn ? 'Scroll left' : 'Cuộn sang trái'}
+                  aria-label="Scroll questions left"
+                >
+                  ‹
+                </button>
+              )}
+              <div
+                ref={navScrollRef}
+                onScroll={updateNavScrollState}
+                onWheel={(e) => {
+                  if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+                    e.currentTarget.scrollLeft += e.deltaY;
+                  }
+                }}
+                className="flex-1 min-w-0 overflow-x-auto px-1 py-1 custom-scrollbar"
+              >
+                <div className="flex items-center gap-1.5 mx-auto w-max">
+                  {allQuestionIds.map(id => {
+                    let isAnswered = answers[id] && answers[id].trim() !== '';
+                    const isReview = reviewFlags[id];
+                    const isActive = activeQuestionId === id;
+                    
+                    const shapeClass = isReview ? 'rounded-full' : 'rounded-none';
+                    let btnClass = `w-8 h-8 flex items-center justify-center font-bold text-[13px] transition-all box-border shrink-0 ${shapeClass} `;
+                    
+                    const section = parts.reduce((acc: any[], p: any) => acc.concat(Array.isArray(p?.sections) ? p.sections : []), []).find((s:any) => {
+                        if ((Array.isArray(s?.questions) ? s.questions : []).some((sq:any)=>String(sq?.id)===id)) return true;
+                        if (s?.questionType === "Điền từ" || s?.questionType === "Kéo thả vào Part" || s?.questionType === "Kéo thả" || s?.questionType === "Matching" || s?.questionType === "Droplist") {
+                            let combinedContent = String(s?.content || '');
+                            if (Array.isArray(s?.questions)) {
+                                s.questions.forEach((q: any) => combinedContent += ' ' + String(q.content || ''));
+                            }
+                            const matches = combinedContent.match(/\[\s*\d+\s*\]/g);
+                            if (matches && matches.some((m:string) => m.replace(/\D/g, '') === id)) return true;
                         }
-                        const matches = combinedContent.match(/\[\s*\d+\s*\]/g);
-                        if (matches && matches.some((m:string) => m.replace(/\D/g, '') === id)) return true;
+                        return false;
+                    });
+                    
+                    const qType = section?.questionType;
+                    
+                    if (!isReviewMode && qType === 'Checkbox') {
+                        const combos = buildCheckboxCombos(section?.questions);
+                        const myCombo = combos.find((c: any[]) => c.some((q:any) => String(q.id) === id));
+                        if (myCombo) {
+                            const comboIds = myCombo.map((q:any) => String(q.id));
+                            const userAnsArr = Array.from(new Set(comboIds.map(cid => answers[cid]).filter(v => v && v.trim() !== '').flatMap(x => x.split(',').map(v=>v.trim()))));
+                            const idxInCombo = comboIds.indexOf(id);
+                            isAnswered = idxInCombo < userAnsArr.length;
+                        }
                     }
-                    return false;
-                });
-                
-                const qType = section?.questionType;
-                
-                if (!isReviewMode && qType === 'Checkbox') {
-                    const combos = buildCheckboxCombos(section?.questions);
-                    const myCombo = combos.find((c: any[]) => c.some((q:any) => String(q.id) === id));
-                    if (myCombo) {
-                        const comboIds = myCombo.map((q:any) => String(q.id));
-                        const userAnsArr = Array.from(new Set(comboIds.map(cid => answers[cid]).filter(v => v && v.trim() !== '').flatMap(x => x.split(',').map(v=>v.trim()))));
-                        const idxInCombo = comboIds.indexOf(id);
-                        isAnswered = idxInCombo < userAnsArr.length;
-                    }
-                }
 
-                if (isReviewMode) {
-                  if (qType === 'Checkbox') {
-                     const combos: any[][] = [];
-                     parts.forEach((p:any) => {
-                         (Array.isArray(p?.sections) ? p.sections : []).forEach((sec: any) => {
-                             if (sec?.questionType === 'Checkbox') {
-                                const c = buildCheckboxCombos(sec.questions);
-                                combos.push(...c);
-                             }
-                         });
-                     });
-                     
-                     const myCombo = combos.find((c: any[]) => c.some((q:any) => String(q.id) === id)) || [];
-                     if (myCombo.length > 0) {
-                         const comboIds = myCombo.map((q:any) => String(q.id));
-                         const userAnsSet = new Set(comboIds.map(cid => answers[cid]).filter(v => v && v.trim() !== '').flatMap(x => x.split(',').map(v=>v.trim().toUpperCase())));
-                         const correctAnsSet = new Set(myCombo.flatMap((q:any)=>String(q.correctAnswer || '').split(',').map((x:string)=>x.trim().toUpperCase()).filter(Boolean)));
-                         
-                         let pts = 0;
-                         userAnsSet.forEach((v:string) => { 
-                             let isMatched = false;
-                             correctAnsSet.forEach(c => {
-                                 if (isAnswerCorrect(v, c)) isMatched = true;
+                    if (isReviewMode) {
+                      if (qType === 'Checkbox') {
+                         const combos: any[][] = [];
+                         parts.forEach((p:any) => {
+                             (Array.isArray(p?.sections) ? p.sections : []).forEach((sec: any) => {
+                                 if (sec?.questionType === 'Checkbox') {
+                                    const c = buildCheckboxCombos(sec.questions);
+                                    combos.push(...c);
+                                 }
                              });
-                             if (isMatched) pts++; 
                          });
                          
-                         const idxInCombo = comboIds.indexOf(id);
-                         if (idxInCombo < pts) {
-                             btnClass += 'bg-emerald-200 border border-emerald-600 text-emerald-900';
+                         const myCombo = combos.find((c: any[]) => c.some((q:any) => String(q.id) === id)) || [];
+                         if (myCombo.length > 0) {
+                             const comboIds = myCombo.map((q:any) => String(q.id));
+                             const userAnsSet = new Set(comboIds.map(cid => answers[cid]).filter(v => v && v.trim() !== '').flatMap(x => x.split(',').map(v=>v.trim().toUpperCase())));
+                             const correctAnsSet = new Set(myCombo.flatMap((q:any)=>String(q.correctAnswer || '').split(',').map((x:string)=>x.trim().toUpperCase()).filter(Boolean)));
+                             
+                             let pts = 0;
+                             userAnsSet.forEach((v:string) => { 
+                                 let isMatched = false;
+                                 correctAnsSet.forEach(c => {
+                                     if (isAnswerCorrect(v, c)) isMatched = true;
+                                 });
+                                 if (isMatched) pts++; 
+                             });
+                             
+                             const idxInCombo = comboIds.indexOf(id);
+                             if (idxInCombo < pts) {
+                                 btnClass += 'bg-emerald-200 border border-emerald-600 text-emerald-900';
+                             } else {
+                                 btnClass += 'bg-red-200 border border-red-600 text-red-900';
+                             }
                          } else {
                              btnClass += 'bg-red-200 border border-red-600 text-red-900';
                          }
-                     } else {
-                         btnClass += 'bg-red-200 border border-red-600 text-red-900';
-                     }
-                  } else {
-                     let qCorrectAns = '';
-                     parts.forEach((p: any) => {
-                        (Array.isArray(p?.sections) ? p.sections : []).forEach((s: any) => {
-                           const q = (Array.isArray(s?.questions) ? s.questions : []).find((sq: any) => String(sq?.id) === String(id));
-                           if (q) {
-                               qCorrectAns = String(q.correctAnswer || '');
-                           }
-                        });
-                     });
-                     
-                     const isCorrect = isAnswerCorrect(answers[id], qCorrectAns) && qCorrectAns !== '';
-                     btnClass += isCorrect ? 'bg-emerald-200 border border-emerald-600 text-emerald-900' : 'bg-red-200 border border-red-600 text-red-900';
-                  }
-                } else { 
-                  if (isActive) {
-                     btnClass += 'bg-slate-900 text-white border border-black shadow-inner';
-                  } else if (isAnswered) {
-                     btnClass += 'bg-slate-800 text-white border border-black cursor-pointer'; 
-                  } else {
-                     btnClass += 'bg-white border border-slate-400 text-black cursor-pointer hover:bg-slate-200'; 
-                  }
-                }
-                
-                return (
-                    <button key={id} id={`nav-${id}`} onClick={() => scrollToQuestion(id)} className={btnClass}>
-                        {questionIndexMap[id]}
-                    </button>
-                );
-              })}
+                      } else {
+                         let qCorrectAns = '';
+                         parts.forEach((p: any) => {
+                            (Array.isArray(p?.sections) ? p.sections : []).forEach((s: any) => {
+                               const q = (Array.isArray(s?.questions) ? s.questions : []).find((sq: any) => String(sq?.id) === String(id));
+                               if (q) {
+                                   qCorrectAns = String(q.correctAnswer || '');
+                               }
+                            });
+                         });
+                         
+                         const isCorrect = isAnswerCorrect(answers[id], qCorrectAns) && qCorrectAns !== '';
+                         btnClass += isCorrect ? 'bg-emerald-200 border border-emerald-600 text-emerald-900' : 'bg-red-200 border border-red-600 text-red-900';
+                      }
+                    } else { 
+                      if (isActive) {
+                         btnClass += 'bg-slate-900 text-white border border-black shadow-inner';
+                      } else if (isAnswered) {
+                         btnClass += 'bg-slate-800 text-white border border-black cursor-pointer'; 
+                      } else {
+                         btnClass += 'bg-white border border-slate-400 text-black cursor-pointer hover:bg-slate-200'; 
+                      }
+                    }
+                    
+                    return (
+                        <button key={id} id={`nav-${id}`} onClick={() => scrollToQuestion(id)} className={btnClass}>
+                            {questionIndexMap[id]}
+                        </button>
+                    );
+                  })}
+                </div>
+              </div>
+              {navScrollState.right && (
+                <button
+                  type="button"
+                  onClick={() => scrollNavBy(260)}
+                  className="w-7 h-8 shrink-0 flex items-center justify-center bg-white hover:bg-slate-100 border border-slate-300 text-slate-700 hover:text-black font-bold text-base transition cursor-pointer"
+                  title={isEn ? 'Scroll right' : 'Cuộn sang phải'}
+                  aria-label="Scroll questions right"
+                >
+                  ›
+                </button>
+              )}
             </div>
 
-            <div className="flex items-center gap-4 shrink-0 pl-6 border-l border-slate-400">
-               <div className="flex items-center gap-2 hidden sm:flex">
+            <div className="flex items-center gap-2 sm:gap-3 shrink-0 pl-3 sm:pl-5 border-l border-slate-300">
+               <div className="hidden sm:flex items-center gap-1.5">
                   <button 
                       onClick={() => {
                          const currIdx = allQuestionIds.indexOf(activeQuestionId);
                          if (currIdx > 0) scrollToQuestion(allQuestionIds[currIdx - 1]);
                       }} 
-                      className="w-8 h-8 flex items-center justify-center text-black hover:bg-slate-200 border border-slate-400 bg-white rounded-none transition"
+                      className="w-8 h-8 flex items-center justify-center text-black hover:bg-slate-200 border border-slate-400 bg-white rounded-none transition cursor-pointer"
                   >
                       ←
                   </button>
@@ -2369,7 +2453,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                          const currIdx = allQuestionIds.indexOf(activeQuestionId);
                          if (currIdx < allQuestionIds.length - 1) scrollToQuestion(allQuestionIds[currIdx + 1]);
                       }} 
-                      className="w-8 h-8 flex items-center justify-center text-black hover:bg-slate-200 border border-slate-400 bg-white rounded-none transition"
+                      className="w-8 h-8 flex items-center justify-center text-black hover:bg-slate-200 border border-slate-400 bg-white rounded-none transition cursor-pointer"
                   >
                       →
                   </button>
@@ -2393,16 +2477,16 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                           sessionStorage.setItem('tony_auto_start', 'true');
                           window.dispatchEvent(new CustomEvent('tony-navigate', { detail: 'live-test' }));
                         }}
-                        className="bg-emerald-600 hover:bg-emerald-500 text-white px-4 sm:px-6 py-2 rounded-none text-[13px] sm:text-[14px] font-bold transition uppercase tracking-wide shadow-sm flex items-center gap-2"
+                        className="bg-emerald-600 hover:bg-emerald-500 text-white px-3.5 sm:px-5 py-2 rounded-none text-[13px] sm:text-[14px] font-bold transition uppercase tracking-wide shadow-sm flex items-center gap-2 whitespace-nowrap cursor-pointer"
                      >
                          {isEn ? '📞 Call Tutor' : '📞 Gọi Gia Sư'}
                      </button>
-                     <button onClick={handleExit} className="bg-[#064e3b] hover:bg-[#047857] text-white px-4 sm:px-6 py-2 rounded-none text-[13px] sm:text-[14px] font-bold transition uppercase tracking-wide">
+                     <button onClick={handleExit} className="bg-[#064e3b] hover:bg-[#047857] text-white px-3.5 sm:px-5 py-2 rounded-none text-[13px] sm:text-[14px] font-bold transition uppercase tracking-wide whitespace-nowrap cursor-pointer">
                          {isEn ? 'Exit' : 'Thoát'}
                      </button>
                  </div>
                ) : (
-                 <button onClick={() => handleFinish(false)} className="bg-slate-900 hover:bg-black text-white px-6 py-2 rounded-none text-[14px] font-bold transition ml-2 uppercase tracking-wide">
+                 <button onClick={() => handleFinish(false)} className="bg-slate-900 hover:bg-black text-white px-4 sm:px-6 py-2 rounded-none text-[13px] sm:text-[14px] font-bold transition uppercase tracking-wide whitespace-nowrap cursor-pointer">
                      {isEn ? 'Submit' : 'Nộp bài'}
                  </button>
                )}

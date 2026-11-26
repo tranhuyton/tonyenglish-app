@@ -2808,9 +2808,17 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
          </main>
 
          {!isListening && (
-             <footer className="w-full h-[64px] bg-white border-t border-slate-200 shadow-[0_-4px_20px_rgba(0,0,0,0.03)] flex justify-between items-center px-6 shrink-0 select-none font-sans relative z-30">
-               <div className="flex-1 flex justify-start items-center gap-1.5 overflow-x-auto py-1 custom-scrollbar min-w-0">
-                 {allQuestionIds.map(id => {
+             <footer className="w-full h-[64px] bg-white border-t border-slate-200 shadow-[0_-4px_20px_rgba(0,0,0,0.03)] flex items-center gap-2 sm:gap-3 px-3 sm:px-6 shrink-0 select-none font-sans relative z-30">
+               <div
+                 onWheel={(e) => {
+                   if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+                     e.currentTarget.scrollLeft += e.deltaY;
+                   }
+                 }}
+                 className="flex-1 min-w-0 overflow-x-auto py-1 custom-scrollbar"
+               >
+                 <div className="flex items-center gap-1.5 mx-auto w-max">
+                   {allQuestionIds.map(id => {
                     let isAns = answers[id] && answers[id].trim() !== '';
                     const isMarked = marked[id];
                     let btnClass = 'w-8 h-8 flex items-center justify-center font-bold text-[13px] transition-all box-border shrink-0 rounded-none border ';
@@ -2879,10 +2887,11 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
                             {questionIndexMap[id]}
                         </button>
                     );
-                 })}
+                   })}
+                 </div>
                </div>
 
-               <div className="flex items-center gap-4 shrink-0 pl-6 border-l border-slate-200">
+               <div className="flex items-center gap-2 sm:gap-4 shrink-0 pl-3 sm:pl-6 border-l border-slate-200">
                   {isReviewMode ? (
                     <div className="flex items-center gap-2">
                         <button 

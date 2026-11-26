@@ -927,59 +927,66 @@ export default function IeltsSpeaking({
           </main>
 
           {/* Footer Navigation */}
-          <footer className="h-[60px] bg-white border-t border-slate-300 flex justify-between items-center px-4 sm:px-6 shrink-0 select-none overflow-x-auto custom-scrollbar">
+          <footer className="h-[60px] bg-white border-t border-slate-300 flex items-center gap-2 sm:gap-3 px-3 sm:px-6 shrink-0 select-none">
              
-             <div className="flex items-center h-full shrink-0">
-                <label className="flex items-center gap-2 cursor-pointer h-full pr-4 sm:pr-6 border-r border-slate-200">
-                   <input 
-                     type="checkbox" 
-                     className="w-4 h-4 cursor-pointer accent-[#0a5482]" 
-                     checked={!!reviewFlags[currentQIndex]}
-                     onChange={handleReviewToggle}
-                   />
-                   <span className="text-[13px] sm:text-[14px] font-bold text-slate-700 whitespace-nowrap">Review</span>
-                </label>
-                
-                <div className="flex items-center gap-2 h-full pl-4 sm:pl-6">
-                   {allQuestions.map((q, idx) => {
-                      const isActive = idx === currentQIndex;
-                      const isReview = reviewFlags[idx];
-                      const isAnswered = !!recordedBlobs[q.id];
-                      
-                      const shapeClass = isReview ? 'rounded-full' : 'rounded-lg';
-                      
-                      let bgClass = 'bg-white text-slate-700 border-slate-300 hover:bg-slate-100';
-                      if (isActive) {
-                          bgClass = 'bg-[#0a5482] text-white border-[#0a5482] shadow-sm';
-                      } else if (isAnswered) {
-                          bgClass = 'bg-emerald-100 text-emerald-800 border-emerald-400 font-black';
-                      }
+             <label className="flex items-center gap-2 cursor-pointer h-full pr-3 sm:pr-5 border-r border-slate-200 shrink-0">
+                <input 
+                  type="checkbox" 
+                  className="w-4 h-4 cursor-pointer accent-[#0a5482]" 
+                  checked={!!reviewFlags[currentQIndex]}
+                  onChange={handleReviewToggle}
+                />
+                <span className="text-[13px] sm:text-[14px] font-bold text-slate-700 whitespace-nowrap">Review</span>
+             </label>
+             
+             <div
+               onWheel={(e) => {
+                 if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+                   e.currentTarget.scrollLeft += e.deltaY;
+                 }
+               }}
+               className="flex-1 min-w-0 overflow-x-auto px-2 py-1 custom-scrollbar"
+             >
+                <div className="flex items-center gap-2 mx-auto w-max">
+                  {allQuestions.map((q, idx) => {
+                     const isActive = idx === currentQIndex;
+                     const isReview = reviewFlags[idx];
+                     const isAnswered = !!recordedBlobs[q.id];
+                     
+                     const shapeClass = isReview ? 'rounded-full' : 'rounded-lg';
+                     
+                     let bgClass = 'bg-white text-slate-700 border-slate-300 hover:bg-slate-100';
+                     if (isActive) {
+                         bgClass = 'bg-[#0a5482] text-white border-[#0a5482] shadow-sm';
+                     } else if (isAnswered) {
+                         bgClass = 'bg-emerald-100 text-emerald-800 border-emerald-400 font-black';
+                     }
 
-                      return (
-                        <button 
-                          key={q.id}
-                          type="button"
-                          onClick={() => goToQuestion(idx)}
-                          className={`w-8 h-9 flex items-center justify-center font-bold text-[13px] border transition-all cursor-pointer ${shapeClass} ${bgClass}`}
-                          title={`Part ${q.partIndex + 1} - Question ${idx + 1}`}
-                        >
-                          {idx + 1}
-                        </button>
-                      )
-                   })}
+                     return (
+                       <button 
+                         key={q.id}
+                         type="button"
+                         onClick={() => goToQuestion(idx)}
+                         className={`w-8 h-9 shrink-0 flex items-center justify-center font-bold text-[13px] border transition-all cursor-pointer ${shapeClass} ${bgClass}`}
+                         title={`Part ${q.partIndex + 1} - Question ${idx + 1}`}
+                       >
+                         {idx + 1}
+                       </button>
+                     )
+                  })}
                 </div>
              </div>
 
-             <div className="flex items-center gap-3 sm:gap-5 shrink-0 pl-4">
-                <div className="flex items-center gap-2">
-                   <button type="button" onClick={goToPrev} disabled={currentQIndex === 0} className="w-9 h-9 flex items-center justify-center text-slate-700 hover:bg-slate-100 border border-slate-300 bg-white rounded-lg transition disabled:opacity-30 cursor-pointer">←</button>
-                   <button type="button" onClick={goToNext} disabled={currentQIndex === totalQuestions - 1} className="w-9 h-9 flex items-center justify-center text-slate-700 hover:bg-slate-100 border border-slate-300 bg-white rounded-lg transition disabled:opacity-30 cursor-pointer">→</button>
+             <div className="flex items-center gap-2 sm:gap-4 shrink-0 pl-3 sm:pl-4 border-l border-slate-200">
+                <div className="hidden sm:flex items-center gap-1.5">
+                   <button type="button" onClick={goToPrev} disabled={currentQIndex === 0} className="w-8 h-8 flex items-center justify-center text-slate-700 hover:bg-slate-100 border border-slate-300 bg-white rounded-lg transition disabled:opacity-30 cursor-pointer">←</button>
+                   <button type="button" onClick={goToNext} disabled={currentQIndex === totalQuestions - 1} className="w-8 h-8 flex items-center justify-center text-slate-700 hover:bg-slate-100 border border-slate-300 bg-white rounded-lg transition disabled:opacity-30 cursor-pointer">→</button>
                 </div>
                 
                 <button 
                   type="button"
                   onClick={() => handleFinalSubmit(false)}
-                  className="bg-[#0a5482] hover:bg-[#084266] text-white px-6 sm:px-7 py-2 rounded-xl text-[13px] sm:text-[14px] font-black transition active:scale-95 uppercase tracking-wide shadow-sm cursor-pointer"
+                  className="bg-[#0a5482] hover:bg-[#084266] text-white px-4 sm:px-6 py-2 rounded-xl text-[13px] sm:text-[14px] font-black transition active:scale-95 uppercase tracking-wide shadow-sm cursor-pointer whitespace-nowrap"
                 >
                   {isEn ? 'Submit' : 'Nộp bài'}
                 </button>

@@ -2078,10 +2078,10 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
       </main>
 
       {/* FOOTER (Câu hỏi) */}
-      <footer className="bg-white border-t border-gray-300 px-4 py-3 flex items-center shadow-[0_-2px_10px_rgba(0,0,0,0.05)] z-20 shrink-0 font-sans">
+      <footer className="bg-white border-t border-gray-300 px-3 sm:px-4 py-3 flex items-center gap-2 sm:gap-3 shadow-[0_-2px_10px_rgba(0,0,0,0.05)] z-20 shrink-0 font-sans">
         
         {/* Review Toggle */}
-        <div className="flex items-center gap-2 h-full pr-6 border-r border-gray-300 shrink-0 min-w-max">
+        <div className="flex items-center gap-2 h-full pr-3 sm:pr-5 border-r border-gray-300 shrink-0 min-w-max">
           <input 
             type="checkbox" 
             id="review" 
@@ -2090,11 +2090,19 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
             checked={!!reviewFlags[activeQuestionId]}
             onChange={() => setReviewFlags(prev => ({...prev, [activeQuestionId]: !prev[activeQuestionId]}))}
           />
-          <label htmlFor="review" className="text-[14px] font-bold text-gray-700 cursor-pointer mt-0.5 whitespace-nowrap">{isEn ? 'Flag' : 'Đánh dấu'}</label>
+          <label htmlFor="review" className="text-[13px] sm:text-[14px] font-bold text-gray-700 cursor-pointer mt-0.5 whitespace-nowrap">{isEn ? 'Flag' : 'Đánh dấu'}</label>
         </div>
 
-        <div className="flex-1 flex gap-2 overflow-x-auto px-4 py-1 custom-scrollbar justify-start items-center min-h-[44px]">
-          {allQuestionIds.map(id => {
+        <div
+          onWheel={(e) => {
+            if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+              e.currentTarget.scrollLeft += e.deltaY;
+            }
+          }}
+          className="flex-1 min-w-0 overflow-x-auto px-2 py-1 custom-scrollbar"
+        >
+          <div className="flex gap-2 items-center min-h-[44px] mx-auto w-max">
+            {allQuestionIds.map(id => {
             let isAnswered = answers[id] && answers[id].trim() !== '';
             const isReview = reviewFlags[id];
             const isActive = activeQuestionId === id;
@@ -2175,11 +2183,12 @@ const handleFinish = async (forceAutoSubmit: any = false) => {
             }
             
             return (<button key={id} onClick={() => scrollToQuestion(id)} className={btnClass}>{questionIndexMap[id]}</button>)
-          })}
+            })}
+          </div>
         </div>
 
-        <div className="ml-4 shrink-0 flex items-center gap-3 border-l border-gray-300 pl-4">
-          <button onClick={() => handleFinish(false)} className={`font-bold text-sm px-8 py-2.5 rounded shadow-md transition ${isReviewMode ? 'bg-emerald-600 hover:bg-emerald-500 text-white' : 'bg-blue-600 hover:bg-blue-500 text-white'}`}>
+        <div className="shrink-0 flex items-center gap-3 border-l border-gray-300 pl-3 sm:pl-4">
+          <button onClick={() => handleFinish(false)} className={`font-bold text-sm px-4 sm:px-8 py-2.5 rounded shadow-md transition whitespace-nowrap ${isReviewMode ? 'bg-emerald-600 hover:bg-emerald-500 text-white' : 'bg-blue-600 hover:bg-blue-500 text-white'}`}>
             {isReviewMode ? (isEn ? 'Exit' : 'Thoát') : (isEn ? 'Submit Test' : 'Nộp Bài Thi')}
           </button>
         </div>
