@@ -7,6 +7,7 @@ import {
   GlobalStudentSnapshot,
 } from './globalTutorContext';
 import { useLmsLang, getLocalizedCourseTitle } from './utils/lmsI18n';
+import { checkAndConsumeAiQuota } from './utils/lmsSecurity';
 
 interface AITutorProps {
   isOpen: boolean;
@@ -711,6 +712,16 @@ Câu hỏi của học sinh: "${userMsg}"`;
              prompt: systemPrompt, 
              taskType: 'tutor' 
          }; 
+      }
+
+      // 🛡️ KIỂM TRA HẠN MỨC AI THÁNG (áp dụng cho tài khoản học viên Online / Học thử; miễn trừ Admin & Offline)
+      if (mode !== 'parent_mode') {
+        const quotaCheck = await checkAndConsumeAiQuota({ isEn });
+        if (!quotaCheck.allowed) {
+          setMessages(prev => [...prev, { role: 'ai', text: quotaCheck.errorMessage || 'Hết hạn mức AI tháng này.', isError: true }]);
+          setIsTyping(false);
+          return;
+        }
       }
 
       const { data, error } = await supabase.functions.invoke(endpoint, { body: payload });

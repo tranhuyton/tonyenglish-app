@@ -704,6 +704,11 @@ export default function StudentManagement({ mode = 'offline', onStartTest, autoS
       return;
     }
 
+    const rawExpires = (formData.get('expiresAt') as string) || '';
+    const rawAiLimit = formData.get('aiMonthlyLimit') as string;
+    const rawMaxDevices = formData.get('maxDevices') as string;
+    const resetDevicesFlag = formData.get('resetDevices') === 'on';
+
     try {
       const { error } = await supabase.rpc('update_user_profile', {
           target_user_id: editingUser.id,
@@ -713,11 +718,30 @@ export default function StudentManagement({ mode = 'offline', onStartTest, autoS
       });
       
       if (error) throw error;
+
+      // Cập nhật cấu hình bảo mật (hạn sử dụng, giới hạn AI tháng, giới hạn & reset thiết bị) vào avatar_url JSON
+      const prevMeta = parseStudentMeta(editingUser);
+      const prevSec = prevMeta.security && typeof prevMeta.security === 'object' ? prevMeta.security : {};
+      const nextExpiresAt = rawExpires.trim()
+        ? new Date(`${rawExpires.trim()}T23:59:59+07:00`).toISOString()
+        : null;
+      const parsedAiLimit = Number(rawAiLimit);
+      const parsedMaxDev = Number(rawMaxDevices);
+
+      const nextSec = {
+        ...prevSec,
+        expires_at: nextExpiresAt,
+        ai_monthly_limit: Number.isFinite(parsedAiLimit) && parsedAiLimit >= 0 ? parsedAiLimit : (prevSec.ai_monthly_limit ?? 0),
+        max_devices: Number.isFinite(parsedMaxDev) && parsedMaxDev >= 1 ? parsedMaxDev : (prevSec.max_devices ?? 2),
+        ...(resetDevicesFlag ? { devices: [], active_session_token: undefined } : {}),
+      };
+      const nextAvatarUrl = JSON.stringify({ ...prevMeta, security: nextSec });
+      await supabase.from('profiles').update({ avatar_url: nextAvatarUrl }).eq('id', editingUser.id);
       
-      alert("✅ Đã cập nhật thông tin thành công!");
+      alert("✅ Đã cập nhật thông tin & cấu hình bảo mật thành công!");
       
       if (selectedStudent && selectedStudent.id === editingUser.id) {
-         setSelectedStudent({ ...selectedStudent, full_name: fullName, role: role, phone: phone });
+         setSelectedStudent({ ...selectedStudent, full_name: fullName, role: role, phone: phone, avatar_url: nextAvatarUrl });
       }
       
       setEditingUser(null);
@@ -2519,6 +2543,102 @@ export default function StudentManagement({ mode = 'offline', onStartTest, autoS
                     </label>
                   </div>
                 </div>
+
+                {/* CẤU HÌNH BẢO MẬT, HẠN SỬ DỤNG & HẠN MỨC AI */}
+                {(() => {
+                  const meta = parseStudentMeta(editingUser);
+                  const sec = meta.security || {};
+                  const expVal = sec.expires_at ? new Date(sec.expires_at).toISOString().slice(0, 10) : '';
+                  const devList = Array.isArray(sec.devices) ? sec.devices : [];
+                  const aiUsed = sec.ai_usage?.count || 0;
+                  const aiMonth = sec.ai_usage?.month || '';
+                  const setQuickExpiry = (days: number | null) => {
+                    const inputEl = document.getElementById('edit-user-expires-input') as HTMLInputElement | null;
+                    if (!inputEl) return;
+                    if (days === null) {
+                      inputEl.value = '';
+                    } else {
+                      const d = new Date(Date.now() + days * 24 * 60 * 60 * 1000);
+                      inputEl.value = d.toISOString().slice(0, 10);
+                    }
+                  };
+                  return (
+                    <div className="pt-3 border-t border-slate-200 space-y-3 bg-slate-50/80 -mx-2 px-3 py-3 rounded-2xl">
+                      <div className="text-[11px] font-black text-[#0a5482] uppercase tracking-wider">
+                        🛡️ Hạn Sử Dụng, Thiết Bị &amp; Hạn Mức AI
+                      </div>
+
+                      <div>
+                        <label className="text-[11px] font-bold text-slate-500 uppercase block mb-1">
+                          Ngày hết hạn tài khoản (để trống = Vô thời hạn)
+                        </label>
+                        <input
+                          id="edit-user-expires-input"
+                          name="expiresAt"
+                          type="date"
+                          defaultValue={expVal}
+                          className="w-full border border-slate-300 bg-white rounded-xl px-3 py-2 text-xs font-bold text-slate-800 outline-none focus:ring-2 focus:ring-[#0a5482]"
+                        />
+                        <div className="flex flex-wrap gap-1.5 mt-1.5">
+                          <button type="button" onClick={() => setQuickExpiry(7)} className="text-[10px] font-bold px-2 py-1 rounded-lg bg-amber-100 text-amber-900 hover:bg-amber-200 cursor-pointer">+7N Học thử</button>
+                          <button type="button" onClick={() => setQuickExpiry(90)} className="text-[10px] font-bold px-2 py-1 rounded-lg bg-sky-100 text-sky-900 hover:bg-sky-200 cursor-pointer">+90N (3 tháng)</button>
+                          <button type="button" onClick={() => setQuickExpiry(365)} className="text-[10px] font-bold px-2 py-1 rounded-lg bg-emerald-100 text-emerald-900 hover:bg-emerald-200 cursor-pointer">+365N (1 năm)</button>
+                          <button type="button" onClick={() => setQuickExpiry(null)} className="text-[10px] font-bold px-2 py-1 rounded-lg bg-slate-200 text-slate-700 hover:bg-slate-300 cursor-pointer">Vô thời hạn</button>
+                        </div>
+                      </div>
+
+                      <div className="grid grid-cols-2 gap-2.5">
+                        <div>
+                          <label className="text-[11px] font-bold text-slate-500 uppercase block mb-1">
+                            AI / tháng (0 = KGH)
+                          </label>
+                          <input
+                            name="aiMonthlyLimit"
+                            type="number"
+                            min={0}
+                            max={5000}
+                            defaultValue={typeof sec.ai_monthly_limit === 'number' ? sec.ai_monthly_limit : (meta.account_type === 'online' ? 80 : 0)}
+                            className="w-full border border-slate-300 bg-white rounded-xl px-3 py-2 text-xs font-bold text-slate-800 outline-none focus:ring-2 focus:ring-[#0a5482]"
+                          />
+                          {aiMonth && (
+                            <p className="text-[10px] text-slate-500 mt-0.5 font-medium">
+                              Đã dùng {aiMonth}: <b>{aiUsed}</b> lượt
+                            </p>
+                          )}
+                        </div>
+                        <div>
+                          <label className="text-[11px] font-bold text-slate-500 uppercase block mb-1">
+                            Tối đa thiết bị
+                          </label>
+                          <input
+                            name="maxDevices"
+                            type="number"
+                            min={1}
+                            max={10}
+                            defaultValue={typeof sec.max_devices === 'number' ? sec.max_devices : (meta.account_type === 'online' ? 2 : 3)}
+                            className="w-full border border-slate-300 bg-white rounded-xl px-3 py-2 text-xs font-bold text-slate-800 outline-none focus:ring-2 focus:ring-[#0a5482]"
+                          />
+                          <p className="text-[10px] text-slate-500 mt-0.5 font-medium">
+                            Đang gắn: <b>{devList.length}</b> máy
+                          </p>
+                        </div>
+                      </div>
+
+                      {devList.length > 0 && (
+                        <div className="text-[10.5px] text-slate-600 bg-white border border-slate-200 rounded-xl p-2.5 space-y-1">
+                          <div className="font-bold text-slate-700">Thiết bị đã ghi nhận:</div>
+                          {devList.map((d: any, i: number) => (
+                            <div key={d.id || i} className="truncate">• {d.label || 'Device'} ({String(d.lastSeen || '').slice(0, 10)})</div>
+                          ))}
+                          <label className="flex items-center gap-2 pt-1.5 text-rose-700 font-bold cursor-pointer">
+                            <input type="checkbox" name="resetDevices" className="rounded" />
+                            <span>🔄 Reset danh sách thiết bị (cho phép đăng nhập máy mới)</span>
+                          </label>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })()}
               </div>
 
               <div className="flex gap-4">

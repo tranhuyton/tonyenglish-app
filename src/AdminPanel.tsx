@@ -2009,6 +2009,11 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                                                 : ` 🎯 vừa hoàn thành luyện tập Thư viện: "${notif.details?.item_title || notif.details?.article_title}"`
                                             )}
                                             {notif.action_type === 'request_unlock_course' && ` 🔥 vừa yêu cầu mở khóa IGCSE: "${notif.details?.course_title}" (SĐT: ${notif.details?.phone || '--'})`}
+                                            {notif.action_type === 'security_alert' && (
+                                              <span className="text-rose-700 font-extrabold">
+                                                {` 🚨 CẢNH BÁO BẢO MẬT: ${notif.details?.message || notif.details?.alert_type || 'Phát hiện truy cập bất thường'}`}
+                                              </span>
+                                            )}
                                         </p>
                                         <span className="text-[10px] text-slate-400 mt-1 block font-bold">{formatDateTime(notif.created_at)}</span>
                                     </div>

@@ -6,6 +6,7 @@ import ResetPasswordModal from './ResetPasswordModal';
 import DictionaryWidget from './DictionaryWidget';
 import { lazyWithRetry, AppErrorBoundary } from './chunkReload';
 import { getLmsLang } from './utils/lmsI18n';
+import { installLmsContentGuard } from './utils/lmsSecurity';
 
 // 🚀 CODE SPLITTING: Lazy load các component nặng có cơ chế tự động phục hồi khi có bản cập nhật mới
 const ComputerTest = lazyWithRetry(() => import('./ComputerTest'));
@@ -187,6 +188,32 @@ export default function App() {
   
   // 🔐 RESET PASSWORD MODAL STATE (Khi học sinh bấm link khôi phục mật khẩu từ email)
   const [showResetPasswordModal, setShowResetPasswordModal] = useState(false);
+
+  // 🛡️ BẢO VỆ NỘI DUNG LMS (chặn copy đoạn dài > 35 ký tự, chặn in PDF & tải audio — GIỮ NGUYÊN click đúp tra từ điển)
+  useEffect(() => {
+    if (!STUDENT_LMS_VIEWS.includes(currentView)) return;
+    let cleanup: (() => void) | null = null;
+    let cancelled = false;
+
+    const setupGuard = async () => {
+      try {
+        const { data: { session } } = await supabase.auth.getSession();
+        const user = session?.user;
+        if (!user || cancelled) return;
+        const { data: prof } = await supabase.from('profiles').select('role').eq('id', user.id).maybeSingle();
+        if (cancelled || isTonyEnglishAdmin(user, prof)) return;
+        cleanup = installLmsContentGuard(getLmsLang() === 'en');
+      } catch {
+        // ignore
+      }
+    };
+    setupGuard();
+
+    return () => {
+      cancelled = true;
+      if (cleanup) cleanup();
+    };
+  }, [currentView]);
 
   useEffect(() => {
     const handleGlobalClick = (e: MouseEvent) => {

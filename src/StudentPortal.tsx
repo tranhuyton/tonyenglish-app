@@ -43,6 +43,13 @@ import { parseClassConfig } from './classConfigUtils';
 import { ensureCourseBoardAssignedToUser, ensureCourseBoardsAssignedForUser } from './boardLectureSync';
 import { useLmsLang, LmsLangToggle, getLocalizedCourseTitle } from './utils/lmsI18n';
 import IgcseModeSelectionModal, { hasIgcsePaperPdf } from './IgcseModeSelectionModal';
+import {
+  verifyAndRegisterLmsSession,
+  startSingleSessionWatcher,
+  trackLmsContentAccessBurst,
+  getRemainingDays,
+  RegisteredDeviceInfo,
+} from './utils/lmsSecurity';
 
 const SUBFOLDER_PALETTES = [
   { gradient: 'from-[#073b5c] via-[#0a5482] to-[#136f9f]', accent: 'text-sky-200', pill: 'bg-sky-50 text-[#0a5482] border-sky-200/80' },
@@ -342,6 +349,23 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   const [unlockPhone, setUnlockPhone] = useState<string>('');
   const [isSendingUnlockReq, setIsSendingUnlockReq] = useState<boolean>(false);
   const [unlockReqSuccess, setUnlockReqSuccess] = useState<boolean>(false);
+  const [securityBlock, setSecurityBlock] = useState<{
+    reason: 'expired' | 'device_limit';
+    expiresAt?: string | null;
+    devices?: RegisteredDeviceInfo[];
+    maxDevices?: number;
+  } | null>(null);
+  const [accountExpiresAt, setAccountExpiresAt] = useState<string | null>(null);
+  const sessionWatcherCleanupRef = useRef<(() => void) | null>(null);
+
+  useEffect(() => {
+    return () => {
+      if (sessionWatcherCleanupRef.current) {
+        sessionWatcherCleanupRef.current();
+        sessionWatcherCleanupRef.current = null;
+      }
+    };
+  }, []);
   
   const [courseTargets, setCourseTargets] = useState<Record<string, string>>(() => {
       try {
@@ -709,6 +733,61 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             .then()
             .catch(() => {});
         }
+
+        // 🛡️ BẢO MẬT PHIÊN HỌC (Single Session + Giới hạn 2 thiết bị + Tự động khóa hết hạn học thử 7 ngày / hết hạn gói)
+        const isOnlineTrialOnly = isOnlineUser && enrolledIds.length === 0 && studentClassList.length === 0;
+        const secCheck = await verifyAndRegisterLmsSession({
+          userId: user.id,
+          userEmail: user.email || resolvedProfile?.email || '',
+          userFullName: resolvedProfile?.full_name || '',
+          existingMeta: parsedAvatarObj,
+          isAdmin: isUserAdmin,
+          isOnlineTrialOnly,
+          isOnlineStudent: isOnlineUser,
+          createdAt: resolvedProfile?.created_at || user.created_at || null,
+        });
+
+        if (!secCheck.ok) {
+          setSecurityBlock({
+            reason: secCheck.reason,
+            expiresAt: secCheck.expiresAt,
+            devices: secCheck.devices,
+            maxDevices: secCheck.maxDevices,
+          });
+          setUserProfile(resolvedProfile);
+          setIsLoading(false);
+          return;
+        }
+
+        setSecurityBlock(null);
+        setAccountExpiresAt(secCheck.expiresAt || null);
+        parsedAvatarObj = secCheck.updatedMeta;
+        resolvedProfile = { ...resolvedProfile, avatar_url: JSON.stringify(parsedAvatarObj) };
+
+        if (sessionWatcherCleanupRef.current) {
+          sessionWatcherCleanupRef.current();
+          sessionWatcherCleanupRef.current = null;
+        }
+        sessionWatcherCleanupRef.current = startSingleSessionWatcher({
+          userId: user.id,
+          sessionToken: secCheck.sessionToken,
+          isAdmin: isUserAdmin,
+          onKicked: async (reason) => {
+            if (reason === 'another_device') {
+              await supabase.auth.signOut();
+              alert(
+                '⛔ Tài khoản của bạn vừa được đăng nhập từ một thiết bị khác.\n\nMỗi tài khoản TonyEnglish chỉ cho phép học trên 01 thiết bị tại cùng thời điểm để bảo vệ quyền lợi học viên.'
+              );
+              if (onNavigate) onNavigate('home');
+            } else if (reason === 'expired') {
+              setSecurityBlock({ reason: 'expired', expiresAt: secCheck.expiresAt });
+            } else if (reason === 'inactive') {
+              await supabase.auth.signOut();
+              alert('⛔ Tài khoản học của bạn hiện đang tạm dừng. Vui lòng liên hệ Thầy Tony (0935 058 688).');
+              if (onNavigate) onNavigate('home');
+            }
+          },
+        });
 
         setUserProfile(resolvedProfile);
         if (resolvedProfile) {
@@ -1127,6 +1206,21 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
           },
         },
       ]);
+      // Gửi email thông báo tức thì cho Thầy Tony qua /api/notify-lead
+      fetch('/api/notify-lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        keepalive: true,
+        body: JSON.stringify({
+          name: userProfile?.full_name || currentUser.email || 'Học viên Online',
+          phone: cleanPhone,
+          email: currentUser.email || '',
+          course: `${unlockModalCourse.title} (Yêu cầu mở khóa từ Góc Học Viên)`,
+          note: `Học viên gửi yêu cầu mở khóa trực tiếp từ Góc Học Viên (ID: ${currentUser.id})`,
+          pageUrl: typeof window !== 'undefined' ? window.location.href : 'https://tonyenglish.vn/lms',
+          sourceType: 'UnlockModal',
+        }),
+      }).catch(() => {});
       setUnlockReqSuccess(true);
     } catch (err) {
       console.error('Error requesting course unlock:', err);
@@ -1234,6 +1328,13 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
       targetCourseId = filterCourse !== 'all' ? filterCourse : (selectedCourseId || courses[0]?.id);
     }
     if (targetCourseId && onOpenLecture) {
+      trackLmsContentAccessBurst({
+        userId: currentUser?.id,
+        isAdmin: isTonyEnglishAdmin(currentUser, userProfile),
+        itemType: 'lecture',
+        itemId: String(lectureId || targetCourseId),
+        itemTitle: courses.find(c => String(c.id) === String(targetCourseId))?.title || String(targetCourseId),
+      });
       resetWorkspaceAndChat();
       onOpenLecture(targetCourseId, lectureId);
     } else {
@@ -1266,6 +1367,13 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
   const handleStartTestClick = async (test: any) => {
     if (!onStartTest) return;
+    trackLmsContentAccessBurst({
+      userId: currentUser?.id,
+      isAdmin: isTonyEnglishAdmin(currentUser, userProfile),
+      itemType: 'test',
+      itemId: String(test.id),
+      itemTitle: test.title || String(test.id),
+    });
     
     sessionStorage.setItem('portal_scroll_y', window.scrollY.toString());
 
@@ -2306,8 +2414,105 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
     </div>
   );
 
+  if (securityBlock) {
+    const isExpiredBlock = securityBlock.reason === 'expired';
+    return (
+      <div className="min-h-[100dvh] bg-slate-950/95 flex items-center justify-center p-4 font-sans">
+        <div className="bg-white rounded-3xl max-w-lg w-full overflow-hidden shadow-2xl border border-slate-200">
+          <div className={`px-6 py-6 text-white ${isExpiredBlock ? 'bg-gradient-to-r from-[#0a5482] to-slate-900' : 'bg-gradient-to-r from-rose-700 to-slate-900'}`}>
+            <span className="inline-flex items-center gap-1.5 bg-amber-400 text-slate-950 text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded-full mb-2">
+              {isExpiredBlock ? '⏳ HẾT HẠN HỌC THỬ / GÓI HỌC' : '🛡️ GIỚI HẠN THIẾT BỊ'}
+            </span>
+            <h2 className="text-xl sm:text-2xl font-black leading-tight">
+              {isExpiredBlock
+                ? isEn
+                  ? 'Your Free Trial / Course Plan Has Expired'
+                  : 'Thời Gian Học Thử / Gói Học Đã Hết Hạn'
+                : isEn
+                  ? 'Maximum Registered Devices Reached'
+                  : 'Tài Khoản Đã Đạt Giới Hạn Thiết Bị Đăng Nhập'}
+            </h2>
+            <p className="text-xs sm:text-sm text-sky-100 mt-1.5 font-medium">
+              {isExpiredBlock
+                ? isEn
+                  ? 'Upgrade to keep unlimited access to 100% of Bilingual Lectures, 600+ Past Papers & AI Marking Scheme Grading.'
+                  : 'Đăng ký mở khóa chính thức để tiếp tục truy cập 100% Bài giảng song ngữ, Kho 600+ đề Past Papers & AI chấm chuẩn Marking Scheme.'
+                : isEn
+                  ? `Each TonyEnglish account is locked to a maximum of ${securityBlock.maxDevices || 2} personal devices to protect course materials.`
+                  : `Mỗi tài khoản TonyEnglish chỉ được gắn tối đa ${securityBlock.maxDevices || 2} thiết bị cá nhân (VD: 1 Laptop + 1 iPad/Điện thoại) để bảo mật giáo án.`}
+            </p>
+          </div>
+
+          <div className="p-6 space-y-4">
+            {isExpiredBlock ? (
+              <div className="rounded-2xl bg-amber-50 border border-amber-200 p-4 text-xs sm:text-sm text-amber-950 font-medium leading-relaxed">
+                {isEn
+                  ? 'Your trial / learning period on TonyEnglish has ended. Please contact Mr. Tony via Zalo or Hotline below to continue your study roadmap.'
+                  : 'Thời gian học thử / sử dụng tài khoản học tập của bạn đã kết thúc. Vui lòng liên hệ trực tiếp Thầy Tony qua Zalo hoặc Hotline bên dưới để được tư vấn và gia hạn lộ trình học tiếp nhé!'}
+              </div>
+            ) : (
+              <div className="rounded-2xl bg-slate-50 border border-slate-200 p-4 text-xs text-slate-700 space-y-1.5">
+                <div className="font-black text-slate-800 uppercase text-[11px]">Thiết bị đang gắn với tài khoản ({userProfile?.email || currentUser?.email}):</div>
+                {(securityBlock.devices || []).map((d, i) => (
+                  <div key={d.id || i} className="font-semibold">• {d.label} (lần cuối: {String(d.lastSeen || '').slice(0, 10)})</div>
+                ))}
+                <p className="text-[11px] text-slate-500 pt-1">
+                  Nếu em mới đổi máy tính/điện thoại, hãy nhắn Zalo Thầy Tony để reset thiết bị miễn phí trong 1 phút nhé!
+                </p>
+              </div>
+            )}
+
+            <div className="flex flex-col sm:flex-row gap-2.5">
+              <a
+                href="https://zalo.me/0935058688"
+                target="_blank"
+                rel="noreferrer"
+                className="flex-1 py-3 px-4 rounded-xl bg-[#0068ff] hover:bg-[#0057d6] text-white font-black text-sm text-center shadow-md transition"
+              >
+                💬 Nhắn Zalo Thầy Tony: 0935 058 688
+              </a>
+              <a
+                href="tel:0935058688"
+                className="py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-black text-sm text-center transition"
+              >
+                📞 Gọi ngay
+              </a>
+            </div>
+
+            <button
+              type="button"
+              onClick={handleLogout}
+              className="w-full py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 font-bold text-xs cursor-pointer transition"
+            >
+              Đăng xuất &amp; Quay về Trang chủ
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  const remainingExpiryDays = getRemainingDays(accountExpiresAt);
+
   return (
     <div className="bg-slate-50 font-sans text-slate-800 overscroll-none w-full flex flex-col pb-16 lg:pb-0 min-h-[100dvh]">
+      {remainingExpiryDays !== null && remainingExpiryDays <= 14 && remainingExpiryDays > 0 && (
+        <div className="bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-500 text-slate-950 text-xs font-extrabold px-4 py-2 text-center flex flex-wrap items-center justify-center gap-2 shadow-xs">
+          <span>
+            ⏳ {isEn
+              ? `Your trial / course access has ${remainingExpiryDays} day(s) remaining.`
+              : `Tài khoản học thử / gói học của bạn còn ${remainingExpiryDays} ngày sử dụng.`}
+          </span>
+          <a
+            href="https://zalo.me/0935058688"
+            target="_blank"
+            rel="noreferrer"
+            className="bg-slate-950 text-amber-300 hover:bg-slate-800 px-3 py-0.5 rounded-full text-[11px] font-black transition"
+          >
+            {isEn ? 'Contact Mr. Tony to Continue →' : 'Liên hệ Thầy Tony gia hạn →'}
+          </a>
+        </div>
+      )}
       {/* UNIFIED MODERN GLASSMORPHIC LMS HEADER (Single-Bar Clean App Workspace) */}
       <header className="bg-white/90 backdrop-blur-lg border-b border-slate-200/80 sticky top-0 z-40 shadow-2xs shrink-0">
         <div className="max-w-7xl w-full mx-auto px-3.5 sm:px-6 h-16 sm:h-[72px] flex items-center justify-between gap-2 sm:gap-4 transition-all">
